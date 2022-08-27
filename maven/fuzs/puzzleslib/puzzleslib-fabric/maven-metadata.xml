@@ -3,8 +3,8 @@
   <groupId>fuzs.puzzleslib</groupId>
   <artifactId>puzzleslib-fabric</artifactId>
   <versioning>
-    <latest>4.2.9</latest>
-    <release>4.2.9</release>
+    <latest>4.2.10</latest>
+    <release>4.2.10</release>
     <versions>
       <version>4.0.0</version>
       <version>4.0.1</version>
@@ -43,7 +43,8 @@
       <version>4.2.7</version>
       <version>4.2.8</version>
       <version>4.2.9</version>
+      <version>4.2.10</version>
     </versions>
-    <lastUpdated>20220827095000</lastUpdated>
+    <lastUpdated>20220827095349</lastUpdated>
   </versioning>
 </metadata>
