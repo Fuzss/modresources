@@ -3,9 +3,9 @@
     "promos": {
         "1.19-latest": "4.0.1",
         "1.19-recommended": "4.0.1",
-        "1.19.1-latest": "4.2.0",
-        "1.19.1-recommended": "4.2.0",
-        "1.19.2-latest": "4.2.0",
-        "1.19.2-recommended": "4.2.0"
+        "1.19.1-latest": "4.2.1",
+        "1.19.1-recommended": "4.2.1",
+        "1.19.2-latest": "4.2.1",
+        "1.19.2-recommended": "4.2.1"
     }
 }
