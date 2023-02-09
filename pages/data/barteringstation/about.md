@@ -1,0 +1,1 @@
+Bartering Station adds one brand new utility block: Put in all your gold ingots, they'll be given to the piglins in the area. All the goodies they return will automatically be collected in the station block. Now add some hoppers for inserting even more gold and extracting your returns. Profit has never been this easy!
