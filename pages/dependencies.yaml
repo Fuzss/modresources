@@ -2,29 +2,29 @@ puzzleslib:
   name: Puzzles Lib
   curseforge: puzzles-lib
   modrinth: puzzles-lib
-  loader:
+  loaders:
     - forge
     - fabric
 fabricapi:
   name: Fabric Api
   curseforge: fabric-api
   modrinth: fabric-api
-  loader:
+  loaders:
     - fabric
 forgeconfigapiport:
   name: Forge Config API Port
   curseforge: forge-config-api-port-fabric
   modrinth: forge-config-api-port
-  loader:
+  loaders:
     - fabric
 curiosapi:
   name: Curios API
   curseforge: curios
-  loader:
+  loaders:
     - forge
 trinkets:
   name: Trinkets
   curseforge: trinkets
   modrinth: trinkets
-  loader:
+  loaders:
     - fabric
