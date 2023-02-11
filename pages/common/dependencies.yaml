@@ -1,0 +1,30 @@
+puzzleslib:
+  name: Puzzles Lib
+  curseforge: puzzles-lib
+  modrinth: puzzles-lib
+  loader:
+    - forge
+    - fabric
+fabricapi:
+  name: Fabric Api
+  curseforge: fabric-api
+  modrinth: fabric-api
+  loader:
+    - fabric
+forgeconfigapiport:
+  name: Forge Config API Port
+  curseforge: forge-config-api-port-fabric
+  modrinth: forge-config-api-port
+  loader:
+    - fabric
+curiosapi:
+  name: Curios API
+  curseforge: curios
+  loader:
+    - forge
+trinkets:
+  name: Trinkets
+  curseforge: trinkets
+  modrinth: trinkets
+  loader:
+    - fabric

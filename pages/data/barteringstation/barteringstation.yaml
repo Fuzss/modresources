@@ -1,0 +1,10 @@
+installation:
+  - client: required
+  - server: required
+loaders:
+  - forge
+  - fabric
+dependencies:
+  - puzzeslib: required
+  - fabricapi: required
+  - forgeconfigapiport: required
