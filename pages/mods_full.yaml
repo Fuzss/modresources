@@ -1,0 +1,120 @@
+stylisheffects:
+  weight: 25
+  curseforge: stylish-effects
+  modrinth: stylish-effects
+betteranimationscollection:
+  weight: 40
+  curseforge: better-animations-collection
+  modrinth: better-animations-collection
+tradingpost:
+  weight: 40
+  curseforge: trading-post
+  modrinth: trading-post
+universalenchants:
+  weight: 20
+  curseforge: universal-enchants-forge
+  modrinth: universal-enchants
+easyshulkerboxes:
+  weight: 30
+  curseforge: easy-shulker-boxes
+  modrinth: easy-shulker-boxes
+bagofholding:
+  weight: 15
+  curseforge: bag-of-holding
+  modrinth: bag-of-holding
+magnumtorch:
+  weight: 20
+  curseforge: magnum-torch-forge
+  modrinth: magnum-torch
+blockrunner:
+  weight: 10
+  curseforge: block-runner-forge
+  modrinth: block-runner
+pickupnotifier:
+  weight: 50
+  curseforge: pick-up-notifier
+  modrinth: pick-up-notifier
+easymagic:
+  weight: 40
+  curseforge: easy-magic
+  modrinth: easy-magic
+diagonalfences:
+  weight: 35
+  curseforge: diagonal-fences
+  modrinth: diagonal-fences
+airhop:
+  weight: 15
+  curseforge: air-hop
+  modrinth: air-hop
+enchantinginfuser:
+  weight: 50
+  curseforge: enchanting-infuser-forge
+  modrinth: enchanting-infuser
+universalbonemeal:
+  weight: 25
+  curseforge: universal-bonemeal-forge
+  modrinth: universal-bonemeal
+tinyskeletons:
+  weight: 20
+  curseforge: tiny-skeletons-forge
+  modrinth: tiny-skeletons
+deathfinder:
+  weight: 5
+  curseforge: death-finder
+  modrinth: death-finder
+visualworkbench:
+  weight: 50
+  curseforge: visual-workbench
+  modrinth: visual-workbench
+barteringstation:
+  weight: 35
+  curseforge: bartering-station
+  modrinth: bartering-station
+bettertridents:
+  weight: 35
+  curseforge: better-tridents
+  modrinth: better-tridents
+horseexpert:
+  weight: 20
+  curseforge: horse-expert
+  modrinth: horse-expert
+spikyspikes:
+  weight: 25
+  curseforge: spiky-spikes
+  modrinth: spiky-spikes
+strawstatues:
+  weight: 40
+  curseforge: straw-statues
+  modrinth: straw-statues
+armorstatues:
+  weight: 30
+  curseforge: armor-statues
+  modrinth: armor-statues
+distinguishedpotions:
+  weight: 15
+  curseforge: distinguished-potions
+  modrinth: distinguished-potions
+easyanvils:
+  weight: 25
+  curseforge: easy-anvils
+  modrinth: easy-anvils
+portablehole:
+  weight: 20
+  curseforge: portable-hole
+  modrinth: portable-hole
+slotcycler:
+  weight: 15
+  curseforge: slot-cycler
+  modrinth: slot-cycler
+leavesbegone:
+  weight: 15
+  curseforge: leaves-be-gone
+  modrinth: leaves-be-gone
+mobplaques:
+  weight: 15
+  curseforge: mob-plaques
+  modrinth: mob-plaques
+leavemybarsalone:
+  weight: 15
+  curseforge: leave-my-bars-alone
+  modrinth: leave-my-bars-alone
