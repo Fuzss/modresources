@@ -1,6 +1,10 @@
 cd "$(dirname "$0")"
 for i in *
 do
+if [ ! -d $i ]
+then
+continue
+fi
 cd $i
 if [ -f ./banner.png ]
 then
