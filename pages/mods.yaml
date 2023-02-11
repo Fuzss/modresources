@@ -1,24 +1,30 @@
 tradingpost:
   weight: 40
-  curseforge: trading-post
-  modrinth: trading-post
+  distributions:
+    curseforge: trading-post
+    modrinth: trading-post
 pickupnotifier:
   weight: 50
-  curseforge: pick-up-notifier
-  modrinth: pick-up-notifier
+  distributions:
+    curseforge: pick-up-notifier
+    modrinth: pick-up-notifier
 easymagic:
   weight: 40
-  curseforge: easy-magic
-  modrinth: easy-magic
+  distributions:
+    curseforge: easy-magic
+    modrinth: easy-magic
 enchantinginfuser:
   weight: 50
-  curseforge: enchanting-infuser-forge
-  modrinth: enchanting-infuser
+  distributions:
+    curseforge: enchanting-infuser-forge
+    modrinth: enchanting-infuser
 barteringstation:
   weight: 35
-  curseforge: bartering-station
-  modrinth: bartering-station
+  distributions:
+    curseforge: bartering-station
+    modrinth: bartering-station
 easyanvils:
   weight: 25
-  curseforge: easy-anvils
-  modrinth: easy-anvils
+  distributions:
+    curseforge: easy-anvils
+    modrinth: easy-anvils

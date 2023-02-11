@@ -1,1 +1,1 @@
-Thanks to [Vazkii](https://www.curseforge.com/members/vazkii) for the floating gold ingot code, which is taken from the matrix enchanting table renderer in their [Quark](https://www.curseforge.com/minecraft/mc-mods/quark) mod.
++ Thanks to [Vazkii](https://www.curseforge.com/members/vazkii) for the floating gold ingot code, which is taken from the matrix enchanting table renderer in their [Quark](https://www.curseforge.com/minecraft/mc-mods/quark) mod.
