@@ -20,6 +20,7 @@ forgeconfigapiport:
 curiosapi:
   name: Curios API
   curseforge: curios
+  modrinth: curios
   loaders:
     - forge
 trinkets:
