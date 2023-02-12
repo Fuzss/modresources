@@ -1,3 +1,1 @@
-Puzzles Lib is the core library that all my mods need to run. What does it do you ask? Most importantly it offers a bunch of abstractions for mod loader-specific code, which makes it very easy for me to develop all of my mods on both multiple mod loader simultaneously. Note that Puzzles Lib is specifically designed for my own needs, it is not intended to be used by other developers.
-
-Puzzles Lib doesn't do anything on its own, so install it only when you also intend on using another one of my mods.
+Puzzles Lib is the core library that all my mods need to run. What does it do you ask? Most importantly it offers a bunch of abstractions for mod loader-specific code, which makes it very easy for me to develop all of my mods on multiple mod loader simultaneously. Note that Puzzles Lib is specifically designed for my own needs, it is not intended to be used by other developers.
