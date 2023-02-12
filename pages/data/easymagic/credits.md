@@ -1,0 +1,4 @@
++ Thanks to [csb987](https://www.curseforge.com/members/Forge_User_41096743) for the idea of storing items in the enchantment table from their [Lapis Stays in the Enchanting Table ](https://www.curseforge.com/minecraft/mc-mods/lapis-stays-in-the-enchanting-table) mod.
++ Thanks to [Vazkii](https://www.curseforge.com/members/vazkii) for the floating inventory contents rendering code taken from the runic alter renderer in their [Botania](https://www.curseforge.com/minecraft/mc-mods/botania) mod.
++ Thanks to [Draylar](https://www.curseforge.com/members/draylar1) for the idea of locking enchantment rerolls behind a certain cost from their [Reroll](https://www.curseforge.com/minecraft/mc-mods/reroll) mod.
++ Thanks to [JohnSmith_474](https://www.curseforge.com/members/johnsmith_474) for inspiring the design of the reroll button from their awesome [Enchanting Overhauled](https://www.curseforge.com/minecraft/mc-mods/enchanting-overhauled) mod.

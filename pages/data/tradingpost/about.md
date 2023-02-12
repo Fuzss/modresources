@@ -1,0 +1,1 @@
+Trading Post adds one simple block, which when used allows you to trade with all villagers in a configurable area at once in a single interface. The table looks really fancy and includes a neat animation when you come close!

@@ -1,0 +1,2 @@
++ Thanks to [RWTema](https://www.curseforge.com/members/rwtema) for inspiring this mod from the trading post block found in old versions of their [Extra Utilities](https://www.curseforge.com/minecraft/mc-mods/extra-utilities) mod.
++ Thanks to [Vazkii](https://www.curseforge.com/members/vazkii) for the floating emerald rendering code taken from the matrix enchanting table renderer in their [Quark](https://www.curseforge.com/minecraft/mc-mods/quark) mod.

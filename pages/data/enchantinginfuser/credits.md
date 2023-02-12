@@ -1,0 +1,4 @@
++ Thanks to [Freyadono](https://www.curseforge.com/members/freyadono) for making their original [Enchanting Plus](https://www.curseforge.com/minecraft/mc-mods/enchanting-plus) mod, which I personally loved to play with so many years ago, and which obviously bears heavy influences on this project.
++ Thanks to [releaseHUN](https://www.curseforge.com/members/releasehun) for making these awesome textures.
++ Thanks to [LordDeatHunter](https://www.curseforge.com/members/lorddeathunter) for their [Fabric Waystones](https://www.curseforge.com/minecraft/mc-mods/fabric-waystones) mod, which inspired the interface of the infuser to some extend.
++ Thanks to [SHXRKIIIE](https://www.curseforge.com/members/shxrkiiie) for being a great help in bringing this project together.

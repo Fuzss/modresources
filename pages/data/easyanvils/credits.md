@@ -1,0 +1,3 @@
++ Thanks to [tfarecnim](https://www.curseforge.com/members/tfarecnim) and their [Anvil Tweaks](https://www.curseforge.com/minecraft/mc-mods/anvil-tweaks), [Anvil Repair](https://www.curseforge.com/minecraft/mc-mods/anvil-repair), and [Nametags Without Anvils](https://www.curseforge.com/minecraft/mc-mods/nametags-without-anvils) mods, which this mod is largely based upon.
++ Thanks to [elhertz](https://www.curseforge.com/members/elhertz) for suggesting the anvil max enchantment level fix.
++ Thanks to [Illios42](https://github.com/Illios42) for suggesting the feature for allowing text to be stylized using Minecraft's formatting codes in the anvil and name tag interface.

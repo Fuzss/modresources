@@ -1,0 +1,1 @@
+Easy Anvils makes working with anvils much more enjoyable. Not only do items stay inside the interface after closing, also some annoying restrictions are removed. Also name tags can be renamed without even using an anvil. And don't forget about using formatting codes when renaming something: Stylize text as you like!

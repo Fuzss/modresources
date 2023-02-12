@@ -1,0 +1,1 @@
+Easy Magic makes it so that items stay in an enchanting table after you close the interface. The items are also rendered floating around the table block. Additionally the enchanting interface includes a button for rerolling the currently offered enchantments for a very low cost.

@@ -1,0 +1,1 @@
++ Thanks to [TeamCoFH](https://www.curseforge.com/members/teamcofh) for the original idea of this mod in a very old version of their [CoFH Core](https://www.curseforge.com/minecraft/mc-mods/cofh-core) mod (1.6 era of modded Minecraft)!

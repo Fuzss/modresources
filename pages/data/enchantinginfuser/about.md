@@ -1,0 +1,1 @@
+Enchanting Infuser adds a brand new block for enchanting your equipment. Say goodbye to wasting your well earned levels on random enchants, and welcome a world of choice with fair costs for you hard-working Minecrafters.
