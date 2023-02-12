@@ -60,8 +60,6 @@ gradle-app.setting
 ### Other ###
 run
 .DS_Store
-*.txt
-!maven/**/*.jar
 
 # Log file
 *.log
