@@ -1,0 +1,3 @@
+Night Config Fixes exists for the sole purpose of implementing a workaround for the rather common `com.electronwill.nightconfig.core.io.ParsingException: Not enough data available` issue related to config loading when using the [Night Config](https://github.com/TheElectronWill/night-config) library (used by Forge's config system, as well as many mods on Fabric).
+
+There have been daily reports mentioning this issue for the Better Minecraft mod packs, which feels common enough to provide a dedicated workaround mod.
