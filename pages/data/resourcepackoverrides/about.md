@@ -1,0 +1,1 @@
+Resource Pack Overrides exists to help mod pack makers with managing pre-installed resource packs. It's especially useful for making sure important resource packs always stay enabled no matter what and also allows for cleaning up the resource pack selection screen to give users less of a chance to accidentially mess with important packs.

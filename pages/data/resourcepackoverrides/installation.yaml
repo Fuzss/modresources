@@ -1,0 +1,5 @@
+environments:
+  client: required
+loaders:
+  - forge
+  - fabric
