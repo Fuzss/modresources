@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>fuzs.bettermodsbutton</groupId>
+  <artifactId>bettermodsbutton-forge</artifactId>
+  <version>5.0.0</version>
+  <name>Better Mods Button [Forge]</name>
+  <description>Your mods button, your way. Placed where you want it, customized how you want it!</description>
+  <url>https://github.com/Fuzss/bettermodsbutton</url>
+  <licenses>
+    <license>
+      <name>MPL-2</name>
+      <url>https://www.mozilla.org/en-US/MPL/2.0/</url>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <id>fuzs</id>
+      <name>Fuzs</name>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:git:git://github.com/Fuzss/bettermodsbutton.git</connection>
+    <developerConnection>scm:git:git@github.com:Fuzss/bettermodsbutton.git</developerConnection>
+    <url>https://github.com/Fuzss/bettermodsbutton</url>
+  </scm>
+  <issueManagement>
+    <system>github</system>
+    <url>https://github.com/Fuzss/bettermodsbutton/issues</url>
+  </issueManagement>
+  <dependencies/>
+</project>
