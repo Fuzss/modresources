@@ -1,14 +1,14 @@
 {
     "homepage": "https://github.com/Fuzss/nightconfigfixes",
     "promos": {
-        "1.19.3-latest": "4.0.5",
-        "1.19.3-recommended": "4.0.5",
-        "1.19.2-latest": "4.0.5",
-        "1.19.2-recommended": "4.0.5",
-        "1.19.1-latest": "4.0.5",
-        "1.19.1-recommended": "4.0.5",
-        "1.19-latest": "4.0.5",
-        "1.19-recommended": "4.0.5",
+        "1.19.3-latest": "4.0.7",
+        "1.19.3-recommended": "4.0.7",
+        "1.19.2-latest": "4.0.7",
+        "1.19.2-recommended": "4.0.7",
+        "1.19.1-latest": "4.0.7",
+        "1.19.1-recommended": "4.0.7",
+        "1.19-latest": "4.0.7",
+        "1.19-recommended": "4.0.7",
         "1.16.5-latest": "1.0.3",
         "1.16.5-recommended": "1.0.3",
         "1.16.4-latest": "1.0.3",
@@ -24,6 +24,8 @@
         "1.18.1-latest": "3.0.2",
         "1.18.1-recommended": "3.0.2",
         "1.18-latest": "3.0.2",
-        "1.18-recommended": "3.0.2"
+        "1.18-recommended": "3.0.2",
+        "1.19.4-latest": "4.0.7",
+        "1.19.4-recommended": "4.0.7"
     }
 }
