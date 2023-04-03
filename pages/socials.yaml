@@ -1,0 +1,73 @@
+discord:
+  message: Discord
+  width: 117
+  height: 28
+  color: ECEBE6
+  labelColor: 2F4858
+  logoColor: white
+  logo: discord
+  link: https://lunapixel.studio/discord
+twitter:
+  message: Twitter
+  width: 116
+  height: 28
+  color: ECEBE6
+  labelColor: 2F4858
+  logoColor: white
+  logo: twitter
+  link: https://twitter.com/Fusseel
+youtube:
+  message: YouTube
+  width: 118
+  height: 28
+  color: ECEBE6
+  labelColor: 2F4858
+  logoColor: white
+  logo: youtube
+  link: https://www.youtube.com/channel/UC2l26SuCmCNSCPefpfbCX7Q
+patreon:
+  message: Patreon
+  width: 118
+  height: 28
+  color: ECEBE6
+  labelColor: 2F4858
+  logoColor: white
+  logo: patreon
+  link: https://www.patreon.com/heyitsfuzs
+reddit:
+  message: Reddit
+  width: 107
+  height: 28
+  color: ECEBE6
+  labelColor: 2F4858
+  logoColor: white
+  logo: reddit
+  link: https://www.reddit.com/user/Fusseel
+github:
+  message: GitHub
+  width: 108
+  height: 28
+  color: ECEBE6
+  labelColor: 2F4858
+  logoColor: white
+  logo: github
+  link: https://github.com/Fuzss
+curseforge:
+  message: CurseForge
+  width: 143
+  height: 28
+  color: ECEBE6
+  labelColor: 2F4858
+  logoColor: white
+  logo: curseforge
+  link: https://www.curseforge.com/members/fuzs_/projects
+paypal:
+  message: PayPal
+  width: 107
+  height: 28
+  color: ECEBE6
+  labelColor: 2F4858
+  logoColor: white
+  logo: paypal
+  link: https://www.paypal.com/donate/?hosted_button_id=TYG7QUSWMVSNG
+  
