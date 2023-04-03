@@ -60,3 +60,13 @@ curseforge:
   logoColor: white
   logo: curseforge
   link: https://www.curseforge.com/members/fuzs_/projects
+paypal:
+  message: PayPal
+  width: 107
+  height: 28
+  color: ECEBE6
+  labelColor: 2F4858
+  logoColor: white
+  logo: paypal
+  link: https://www.paypal.com/donate/?hosted_button_id=TYG7QUSWMVSNG
+  
