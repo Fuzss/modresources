@@ -1,0 +1,3 @@
++ Thanks to [Prototik](https://www.curseforge.com/members/prototik) for the original idea and most of the rendering code from their [RealBench](https://www.curseforge.com/minecraft/mc-mods/realbench) mod.
++ Thanks to [Tfarecnim](https://www.curseforge.com/members/tfarecnim) for the Just Enough Items plugin code from their [Crafting Station](https://www.curseforge.com/minecraft/mc-mods/crafting-station) mod.
++ Thanks to **Daomephsta** from the Fabric Discord for pointing me into the right direction for supporting modded crafting tables on Fabric.
