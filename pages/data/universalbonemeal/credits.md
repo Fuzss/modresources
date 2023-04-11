@@ -1,4 +1,4 @@
 + Thanks to [Pifou](https://www.curseforge.com/members/Forge_User_52183994) for inspiring a few behaviors from their [Improving Minecraft](https://www.curseforge.com/minecraft/mc-mods/improving-minecraft) mod.
 + Thanks to [Josephcsible](https://www.curseforge.com/members/josephcsible) for inspiring a few behaviors from their [ExpandedBonemeal](https://www.curseforge.com/minecraft/mc-mods/expandedbonemeal) mod.
 + Thanks to [Pepperoni Jabroni](https://www.curseforge.com/members/pepperoni__jabroni__) for inspiring the coral behavior from their [Complete Bone Meal](https://www.curseforge.com/minecraft/mc-mods/complete-bone-meal) mod.
-+ Thanks to [A Reddit thread](https://www.reddit.com/r/minecraftsuggestions/comments/ujh9bu/using_bonemeal_on_taiga_grass_should_have_a/) for inspiring the sweet berry bush behavior.
++ Thanks to [a Reddit thread](https://www.reddit.com/r/minecraftsuggestions/comments/ujh9bu/using_bonemeal_on_taiga_grass_should_have_a/) for inspiring the sweet berry bush behavior.

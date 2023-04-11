@@ -1,0 +1,1 @@
+Block Runner also uses an additional custom json config file. You can find it at `.minecraft/config/blockrunner.json` and add or remove your own custom speed values for blocks and block tags. To reload the config in-game run `/reload` (the same command that also reloads data packs).
