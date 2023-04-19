@@ -26,7 +26,7 @@ easyshulkerboxes:
 bagofholding:
   weight: 15
   distributions:
-    curseforge: bag-of-holding
+    curseforge: bag-of-holding-forge
     modrinth: bag-of-holding
 magnumtorch:
   weight: 20
@@ -119,7 +119,7 @@ distinguishedpotions:
     curseforge: distinguished-potions
     modrinth: distinguished-potions
 easyanvils:
-  weight: 25
+  weight: 35
   distributions:
     curseforge: easy-anvils
     modrinth: easy-anvils
@@ -148,3 +148,8 @@ leavemybarsalone:
   distributions:
     curseforge: leave-my-bars-alone
     modrinth: leave-my-bars-alone
+overflowingbars:
+  weight: 40
+  distributions:
+    curseforge: overflowing-bars
+    modrinth: overflowing-bars
