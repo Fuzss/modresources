@@ -1,0 +1,2 @@
++ Thanks to [Burack](https://www.curseforge.com/members/zburack_) for making all those textures for me to use.
++ Thanks to [ShadowClaimer](https://www.curseforge.com/members/shadowclaimer) and their [Masonry](https://www.curseforge.com/minecraft/mc-mods/masonry) mod for inspiring this project.

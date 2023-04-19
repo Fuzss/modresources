@@ -1,0 +1,1 @@
+Stoneworks fills in all the missing gaps when it comes to building with various vanilla stone blocks! Finally there are cobbled versions, bricks, tiles, pillars, shingles and so much more for all stone variants. And there is more: most variations can even be crafted into stairs, slabs and walls. Everything is crafted in a stonecutter. What are you waiting for? Let's get building!
