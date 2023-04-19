@@ -1,0 +1,1 @@
+Overflowing Bars is here to bring an end to all health / armor / toughness overlay / extension mods! Get proper, nice and compact health, armor and armor toughness bars in just this single mod!

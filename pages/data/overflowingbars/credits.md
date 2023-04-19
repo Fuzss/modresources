@@ -1,0 +1,4 @@
++ Thanks to [LocusWay](https://www.curseforge.com/members/locusway) and their [Overpowered Armor Bar](https://www.curseforge.com/minecraft/mc-mods/overpowered-armor-bar) mod for inspiring the layered armor bar.
++ Thanks to [Vazkii](https://www.curseforge.com/members/Vazkii) and their [Quark](https://www.curseforge.com/minecraft/mc-mods/quark) mod for inspiring the armor and toughness overlay icon.
++ Thanks to [cadaverous_queen](https://www.curseforge.com/members/cadaverous_queen) and their [Rustic](https://www.curseforge.com/minecraft/mc-mods/rustic) mod for the armor toughness icon and the original idea for that bar.
++ Thanks to [mDiyo](https://www.curseforge.com/members/mdiyo) and their [Mantle](https://www.curseforge.com/minecraft/mc-mods/mantle) mod for originally coming up with the stacking hearts display.
