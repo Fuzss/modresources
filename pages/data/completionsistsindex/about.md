@@ -1,0 +1,1 @@
+Completionists Index adds a neat little client-side list of all the items you have already collected in your world. Sorted by different mods, you can carefully check as you slowly collect every single item in the game becoming a true master of hoarding. Button position and a blacklist can be accessed in the config.

@@ -1,0 +1,7 @@
++ Battle the Mutant Zombie, be careful of his smash attacks! And quickly burn the corpse, or it will awaken again. Your victory will be rewarded with a mystical hammer unleashing a unique power when used on the ground beneath you...
++ Fight the Mutant Skeleton, the most skilled archer you will ever encounter. If you manage to defeat this foe, you may be able to utilize its skeleton parts for your own protection...
++ The Mutant Creeper is a true nightmare, wreaking havoc whereever it goes. Just make sure to keep it away from anything you hold dear! But finally it leaves behind a mysterious egg. It won't hatch for a long time, but when it does, you'll be in for quite a surprise to be sure.
++ The Mutant Enderman is by far the most powerful mutant. It won't just fight by fair means, using ender-magic, the terrain and much more, anything is possible. What's in it for you then? Maybe you'll be able to cut off one of its hands, and the mutant's power to use the terrain will be yours.
++ Mutants are very strong, time to get some help: The Mutant Snowgolem is here to help. Throwing not just tiny snowballs, but entire chunks of ice it's a true ally.
++ And finally there is something odd: Pigs suddenly seem attracted to Fermented Spider Eyes... Feeding one, then splashing some Chemical X... Oh no, what abomination have I created!
++ Also check out the amazing [Mutant More](https://www.curseforge.com/minecraft/mc-mods/new-mutant-more) mod by [alexandersfunandgames](https://www.curseforge.com/members/alexandersfunandgames) with even more and even scarier mutations.

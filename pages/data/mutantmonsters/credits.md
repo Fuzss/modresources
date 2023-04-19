@@ -1,0 +1,2 @@
++ Huge thanks to [Shcott21](https://www.curseforge.com/members/shcott21) who originally published this mod as the [Mutant Creatures](https://www.curseforge.com/minecraft/mc-mods/mutant-creatures-mod) so many years ago. Most of the work and most of all the amazing models were all done by him.
++ Thanks to [Chumbanotz](https://www.curseforge.com/members/chumbanotz) for being the first to bring the mutants to modern Minecraft in the form of their [Mutant Beasts](https://www.curseforge.com/minecraft/mc-mods/mutant-beasts) mod, laying the ground work for this final revival.

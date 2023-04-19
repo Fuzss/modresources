@@ -1,0 +1,1 @@
+Permanent Sponges adds some neat new sponges that don't just remove liquids, but also keep them away permanently! Ready to build some crazy underwater cities without ceilings?

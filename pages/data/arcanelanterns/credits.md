@@ -1,0 +1,1 @@
++ Thanks a lot to [Playelectro](https://www.curseforge.com/members/Playelectro) for originally creating this mod as [Magical Lanterns](https://www.curseforge.com/minecraft/mc-mods/magical-lanterns). Arcane Lanterns is a port to modern Minecraft with many small improvements, fixes and overhauls.

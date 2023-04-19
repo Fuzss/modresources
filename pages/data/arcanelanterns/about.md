@@ -1,0 +1,1 @@
+Arcane Lanterns allows you to use the power of light! Fabricate special types of lanterns using a Lantern Maker with various effects to help around your base. What are you waiting for, get ready for the magic!

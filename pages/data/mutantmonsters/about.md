@@ -1,0 +1,1 @@
+The mutants are back! The original returns, be ready to fight mutated variants of a lot of the old Minecraft monsters. No longer will battles be quick and easy, now you'll be seriously challenged by those new foes.
