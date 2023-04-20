@@ -1,1 +1,2 @@
 + Thanks to [Jackyy](https://www.curseforge.com/members/jackyy) and their [Simple Sponges](https://www.curseforge.com/minecraft/mc-mods/simple-sponge) mod for inspiring this one.
++ Thanks to [Nyffuuuh23](https://www.curseforge.com/members/nyffuuuh23) for creating those dandy textures!

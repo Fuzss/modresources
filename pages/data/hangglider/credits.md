@@ -1,0 +1,1 @@
++ Big thanks to [gr8pefish](https://www.curseforge.com/members/gr8pefish) who is the original author of the [Open Glider](https://www.curseforge.com/minecraft/mc-mods/open-glider) mod, which Hang Glider is mostly a port of. Also all assets are used from the original mod.

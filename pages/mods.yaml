@@ -178,3 +178,23 @@ arcanelanterns:
   distributions:
     curseforge: arcane-lanterns
     modrinth: arcane-lanterns
+hangglider:
+  weight: 30
+  distributions:
+    curseforge: hang-glider
+    modrinth: hang-glider
+mindfuldarkness:
+  weight: 30
+  distributions:
+    curseforge: mindful-darkness
+    modrinth: mindful-darkness
+moblassos:
+  weight: 20
+  distributions:
+    curseforge: mob-lassos
+    modrinth: mob-lassos
+helditemtooltips:
+  weight: 25
+  distributions:
+    curseforge: held-item-tooltips
+    modrinth: held-item-tooltips

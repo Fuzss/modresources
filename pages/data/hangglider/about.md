@@ -1,0 +1,1 @@
+Hang Glider adds a hang glider (surprise!) to soar through the skies! Just jump off a cliff and let your glider do the rest. Features very fluid and natural flight controls and nice models. And when you wanna go even quicker reinforce your glider!

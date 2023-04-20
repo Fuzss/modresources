@@ -1,0 +1,1 @@
+Held Item Tooltips is a simple mod: The tooltips shown above your hotbar when switching items now include much more information! Such as tool durability, enchantments, shulker box contents, potion effects, rocket durations and so much more. Fully customizable: Change font colors, order, number of lines, activate additional info and so much more!

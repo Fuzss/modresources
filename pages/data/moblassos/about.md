@@ -1,0 +1,1 @@
+Mob Lassos adds some neat utilities when moving mobs: Now you can simply craft a lasso to transport most mobs elsewhere in your inventory! No leads or animal food required!

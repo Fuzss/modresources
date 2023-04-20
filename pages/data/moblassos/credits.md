@@ -1,0 +1,2 @@
++ Thanks to [RWTema](https://www.curseforge.com/members/rwtema) for inspiring this mod from the mob lassos found in their [Extra Utilities](https://www.curseforge.com/minecraft/mc-mods/extra-utilities) mod, also the villager contract was inspired by that mod.
++ Thanks to [Eng1N33R](https://www.curseforge.com/members/eng1n33r) and their [Mob Ropes](https://www.curseforge.com/minecraft/mc-mods/mob-ropes) which also heaviuly inspired Mob Lassos.

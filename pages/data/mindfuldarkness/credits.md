@@ -1,0 +1,1 @@
++ Thanks to [Buuz135](https://www.curseforge.com/members/Buuz135) and their [Dark Mode Everywhere](https://www.curseforge.com/minecraft/mc-mods/dark-mode-everywhere) mod, which I stole the idea for changing the font color from.

@@ -1,0 +1,1 @@
+Mindful Darkness adds a fully automatic dark mode to your game! Darkens all guis without any texture changes required. Can be quickly turned on and off directly in-game. You can also choose from different algorithm and control the darkness intensity with ease. Also includes a simple system allowing you to control which textures are affected (see Configuration).
