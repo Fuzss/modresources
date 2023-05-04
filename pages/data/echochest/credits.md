@@ -1,0 +1,1 @@
++ Thanks a lot to Paridox#6969 for creating the awesome echo chest texture!

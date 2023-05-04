@@ -1,0 +1,2 @@
++ Thanks a lot to [Myrathi](https://www.curseforge.com/members/myrathi) and their old [ObsidiPlates](https://www.curseforge.com/minecraft/mc-mods/obsidiplates) mod which I loved and which served as main inspiration for this mod.
++ Thanks also to [Covert_Jaguar](https://www.curseforge.com/members/covert_jaguar) and their [Railcraft](https://www.curseforge.com/minecraft/mc-mods/railcraft) mod, most pressure plate types are based on the detectors from Railcraft.

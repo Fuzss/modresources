@@ -198,3 +198,28 @@ helditemtooltips:
   distributions:
     curseforge: held-item-tooltips
     modrinth: held-item-tooltips
+echochest:
+  weight: 35
+  distributions:
+    curseforge: echo-chest
+    modrinth: echo-chest
+netherchest:
+  weight: 35
+  distributions:
+    curseforge: new-nether-chest
+    modrinth: nether-chest
+paperdoll:
+  weight: 15
+  distributions:
+    curseforge: new-paper-doll
+    modrinth: paper-doll
+plentyplates:
+  weight: 20
+  distributions:
+    curseforge: plenty-plates
+    modrinth: plenty-plates
+enderzoology:
+  weight: 40
+  distributions:
+    curseforge: ender-zoology
+    modrinth: ender-zoology
