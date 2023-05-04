@@ -1,0 +1,1 @@
+Ender Zoology adds a lot new mostly ender themed monsters to spawn at night in the overworld. Most of them are not your usual light hitting vanilla monsters, so be ready to face a new challenge at night!
