@@ -211,7 +211,7 @@ netherchest:
 paperdoll:
   weight: 15
   distributions:
-    curseforge: paper-doll
+    curseforge: new-paper-doll
     modrinth: paper-doll
 plentyplates:
   weight: 20
