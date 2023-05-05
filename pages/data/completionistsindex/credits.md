@@ -1,2 +1,2 @@
 + Thanks to [GentlemanCheesy](https://www.curseforge.com/members/gentlemancheesy) for continuous help with testing the mod and for letting me use their button icon.
-+ Big thanks to [idrae_](https://www.curseforge.com/members/idrae_) for inspiring this project from their [Traveler's Index](https://www.curseforge.com/minecraft/mc-mods/travelers-index) mod.
++ Big thanks to [idrae_](https://www.curseforge.com/members/idrae_) for inspiring this project from their [Traveler's Index](https://www.curseforge.com/minecraft/mc-mods/travelers-index) mod. A few simple assets are reused from the old mod.
