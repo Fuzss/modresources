@@ -1,1 +1,1 @@
-Plenty Plates is a mod all about pressure! Well, pressure plates to be exact. There are multiple new types of pressure plates for detecting all sorts of entities. But that's not all! You can greatly configure each plate afetr placing it, like making it silent or shrouded.
+Plenty Plates is a mod all about pressure! Well, pressure plates to be exact. There are multiple new types of pressure plates for detecting all sorts of entities. But that's not all! You can greatly configure each plate after placing it, like making it silent or shrouded.

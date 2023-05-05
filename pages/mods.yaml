@@ -207,7 +207,7 @@ netherchest:
   weight: 35
   distributions:
     curseforge: new-nether-chest
-    modrinth: nether-chest
+    modrinth: new-nether-chest
 paperdoll:
   weight: 15
   distributions:
