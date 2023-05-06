@@ -3,8 +3,8 @@
   <groupId>fuzs.puzzleslib</groupId>
   <artifactId>puzzleslib-common</artifactId>
   <versioning>
-    <latest>5.0.19</latest>
-    <release>5.0.19</release>
+    <latest>5.0.20</latest>
+    <release>5.0.20</release>
     <versions>
       <version>4.0.0</version>
       <version>4.0.1</version>
@@ -114,7 +114,8 @@
       <version>5.0.17</version>
       <version>5.0.18</version>
       <version>5.0.19</version>
+      <version>5.0.20</version>
     </versions>
-    <lastUpdated>20230328090829</lastUpdated>
+    <lastUpdated>20230506144537</lastUpdated>
   </versioning>
 </metadata>
