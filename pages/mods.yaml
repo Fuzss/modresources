@@ -223,3 +223,8 @@ enderzoology:
   distributions:
     curseforge: ender-zoology
     modrinth: ender-zoology
+respawninganimals:
+  weight: 0
+  distributions:
+    curseforge: respawning-animals
+    modrinth: respawning-animals
