@@ -1,2 +1,2 @@
-+ Thanks a lot to [cadaverous_queen](https://www.curseforge.com/members/cadaverous_queen) for the original idea for this mod with their own [Nether Chest](https://www.curseforge.com/minecraft/mc-mods/nether-chest) mod. The chest texture has been reused from the original mod.
++ Thanks a lot to [cadaverous_queen](https://www.curseforge.com/members/cadaverous_queen) for the original idea for this mod with their old [Nether Chest](https://www.curseforge.com/minecraft/mc-mods/nether-chest) mod. The chest texture has been reused from the original mod.
 + Thanks to TyIer#8369 for inspiring the chest interface.
