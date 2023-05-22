@@ -1,7 +1,9 @@
 {
     "homepage": "https://github.com/Fuzss/mindfuldarkness",
     "promos": {
-        "1.19.2-latest": "4.0.6",
-        "1.19.2-recommended": "4.0.6"
+        "1.19.2-latest": "4.0.7",
+        "1.19.2-recommended": "4.0.7",
+        "1.19.3-latest": "5.0.0",
+        "1.19.3-recommended": "5.0.0"
     }
 }
