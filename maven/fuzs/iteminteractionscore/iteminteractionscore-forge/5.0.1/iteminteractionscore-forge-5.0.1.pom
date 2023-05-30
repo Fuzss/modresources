@@ -28,12 +28,5 @@
     <system>github</system>
     <url>https://github.com/Fuzss/iteminteractionscore/issues</url>
   </issueManagement>
-  <dependencies>
-    <dependency>
-      <groupId>fuzs.puzzleslib</groupId>
-      <artifactId>puzzleslib-forge</artifactId>
-      <version>5.0.25</version>
-      <scope>runtime</scope>
-    </dependency>
-  </dependencies>
+  <dependencies/>
 </project>
