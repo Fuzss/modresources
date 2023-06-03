@@ -28,12 +28,5 @@
     <system>github</system>
     <url>https://github.com/Fuzss/puzzleslib/issues</url>
   </issueManagement>
-  <dependencies>
-    <dependency>
-      <groupId>curse.maven</groupId>
-      <artifactId>better-mods-button-541584</artifactId>
-      <version>3963200</version>
-      <scope>runtime</scope>
-    </dependency>
-  </dependencies>
+  <dependencies/>
 </project>
