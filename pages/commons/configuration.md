@@ -1,4 +1,4 @@
-Configuration is easily possible directly from in-game using the mod menu (requires [Mod Menu](https://www.curseforge.com/minecraft/mc-mods/modmenu) by [Prospector](https://www.curseforge.com/members/prospectordev) to be installed on Fabric) by installing either [Configured](https://www.curseforge.com/minecraft/mc-mods/configured) or [Configured (Fabric)](https://www.curseforge.com/minecraft/mc-mods/configured-fabric) by [MrCrayfish](https://www.curseforge.com/members/mrcrayfish).
+Configuration is easily possible directly from in-game using the mod menu (requires [Mod Menu](https://modrinth.com/mod/modmenu) by [Prospector](https://modrinth.com/user/Prospector) to be installed on Fabric) by installing [Forge Config Screens](https://www.curseforge.com/minecraft/mc-mods/config-menus-forge).
 
 When it comes to manual configuration all files are found at `.minecraft/config`, named as `MOD_ID-client.toml`, `MOD_ID-common.toml`, or `MOD_ID-server.toml` depending on the type of config. Not all types might exist for this mod if any.
 

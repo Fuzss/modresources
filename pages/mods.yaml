@@ -228,3 +228,8 @@ respawninganimals:
   distributions:
     curseforge: respawning-animals
     modrinth: respawning-animals
+thinair:
+  weight: 0
+  distributions:
+    curseforge: new-thin-air
+    modrinth: thin-air
