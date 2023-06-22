@@ -1,0 +1,93 @@
+[versions]
+
+# Common
+minecraft = "1.20"
+resources = "15"
+data = "15"
+parchment-version = "2023.03.12"
+parchment-minecraft = "1.19.3"
+puzzleslib-version = "7.0.3"
+puzzleslib-min = "7.0.2"
+
+# Fabric
+fabricloader-version = "0.14.21"
+fabricloader-min = "0.14.21"
+fabricapi-version = "0.83.0+1.20"
+fabricapi-min = "0.83.0"
+
+# Forge
+forge-version = "1.20-46.0.10"
+forge-min = "46.0.0"
+
+# Quilt
+quiltloader-version = "0.19.0-beta.18"
+quiltloader-min = "0.19.0"
+qsl-version = "6.0.1+1.20"
+qsl-min = "6.0.1"
+
+# Mods
+modmenu = "7.0.1"
+bettermodsbutton = "7.0.0"
+forgeconfigscreens = "7.0.0"
+cardinalcomponents = "5.2.0"
+forgeconfigapiport = "7.0.0"
+extensibleenums = "7.0.0"
+iteminteractionscore = "7.0.0"
+appleskin = "mc1.20-2.5.0"
+jei = "14.0.0.4"
+cloth = "11.0.99"
+architectury = "9.0.8"
+rei = "12.0.624"
+curios = "5.2.0-beta.2+1.20"
+trinkets = "3.7.0"
+
+[libraries]
+
+# Common
+puzzleslib-common = { module = "fuzs.puzzleslib:puzzleslib-common", version.ref = "puzzleslib-version" }
+jeiapi-common = { module = "mezz.jei:jei-1.20-common-api", version.ref = "jei" }
+jeilibs-common = { module = "mezz.jei:jei-1.20-lib", version.ref = "jei" }
+rei-common = { module = "me.shedaniel:RoughlyEnoughItems-api", version.ref = "rei" }
+reidefaultplugin-common = { module = "me.shedaniel:RoughlyEnoughItems-default-plugin", version.ref = "rei" }
+
+# Fabric
+fabricloader-fabric = { module = "net.fabricmc:fabric-loader", version.ref = "fabricloader-version" }
+fabricapi-fabric = { module = "net.fabricmc.fabric-api:fabric-api", version.ref = "fabricapi-version" }
+puzzleslib-fabric = { module = "fuzs.puzzleslib:puzzleslib-fabric", version.ref = "puzzleslib-version" }
+modmenu-fabric = { module = "com.terraformersmc:modmenu", version.ref = "modmenu" }
+forgeconfigscreens-fabric = { module = "fuzs.forgeconfigscreens:forgeconfigscreens-fabric", version.ref = "forgeconfigscreens" }
+extensibleenums-fabric = { module = "fuzs.extensibleenums:extensibleenums-fabric", version.ref = "extensibleenums" }
+cardinalcomponentsbase-fabric = { module = "dev.onyxstudios.cardinal-components-api:cardinal-components-base", version.ref = "cardinalcomponents" }
+cardinalcomponentsentity-fabric = { module = "dev.onyxstudios.cardinal-components-api:cardinal-components-entity", version.ref = "cardinalcomponents" }
+cardinalcomponentsblock-fabric = { module = "dev.onyxstudios.cardinal-components-api:cardinal-components-block", version.ref = "cardinalcomponents" }
+cardinalcomponentschunk-fabric = { module = "dev.onyxstudios.cardinal-components-api:cardinal-components-chunk", version.ref = "cardinalcomponents" }
+cardinalcomponentsworld-fabric = { module = "dev.onyxstudios.cardinal-components-api:cardinal-components-world", version.ref = "cardinalcomponents" }
+jeiapi-fabric = { module = "mezz.jei:jei-1.20-fabric-api", version.ref = "jei" }
+jei-fabric = { module = "mezz.jei:jei-1.20-fabric", version.ref = "jei" }
+cloth-fabric = { module = "me.shedaniel.cloth:cloth-config-fabric", version.ref = "cloth" }
+architectury-fabric = { module = "dev.architectury:architectury-fabric", version.ref = "architectury" }
+reiapi-fabric = { module = "me.shedaniel:RoughlyEnoughItems-api-fabric", version.ref = "rei" }
+reidefaultplugin-fabric = { module = "me.shedaniel:RoughlyEnoughItems-default-plugin-fabric", version.ref = "rei" }
+rei-fabric = { module = "me.shedaniel:RoughlyEnoughItems-fabric", version.ref = "rei" }
+trinkets-fabric = { module = "dev.emi:trinkets", version.ref = "trinkets" }
+
+# Forge
+puzzleslib-forge = { module = "fuzs.puzzleslib:puzzleslib-forge", version.ref = "puzzleslib-version" }
+bettermodsbutton-forge = { module = "fuzs.bettermodsbutton:bettermodsbutton-forge", version.ref = "bettermodsbutton" }
+forgeconfigscreens-forge = { module = "fuzs.forgeconfigscreens:forgeconfigscreens-forge", version.ref = "forgeconfigscreens" }
+jeiapi-forge = { module = "mezz.jei:jei-1.20-forge-api", version.ref = "jei" }
+jei-forge = { module = "mezz.jei:jei-1.20-forge", version.ref = "jei" }
+cloth-forge = { module = "me.shedaniel.cloth:cloth-config-forge", version.ref = "cloth" }
+architectury-forge = { module = "dev.architectury:architectury-forge", version.ref = "architectury" }
+rei-forge = { module = "me.shedaniel:RoughlyEnoughItems-forge", version.ref = "rei" }
+curios-forge = { module = "top.theillusivec4.curios:curios-forge", version.ref = "curios" }
+
+[plugins]
+
+loom = { id = "fabric-loom", version = "1.2.+" }
+quiltflower = { id = "io.github.juuxel.loom-quiltflower", version = "1.+" }
+cursegradle = { id = "me.hypherionmc.cursegradle", version = "2.+" }
+minotaur = { id = "com.modrinth.minotaur", version = "2.+" }
+forgegradle = { id = "net.minecraftforge.gradle", version = "6.0.+" }
+mixin = { id = "org.spongepowered.mixin", version = "0.7.+" }
+librarian = { id = "org.parchmentmc.librarian.forgegradle", version = "1.+" }
