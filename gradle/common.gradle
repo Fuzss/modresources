@@ -2,7 +2,7 @@ apply plugin: 'fabric-loom'
 apply plugin: 'io.github.juuxel.loom-quiltflower'
 
 archivesBaseName = rootProject.name
-version = "v${modVersion}-${libs.versions.minecraft.get()}-Common"
+version = "v${modVersion}-Common"
 group = modMavenGroup
 
 dependencies {

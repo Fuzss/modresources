@@ -5,7 +5,7 @@ apply plugin: 'me.hypherionmc.cursegradle'
 apply plugin: 'com.modrinth.minotaur'
 
 archivesBaseName = rootProject.name
-version = "v${modVersion}-${libs.versions.minecraft.get()}-Forge"
+version = "v${modVersion}-Forge"
 group = modMavenGroup
 
 minecraft {
