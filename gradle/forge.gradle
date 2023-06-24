@@ -233,7 +233,7 @@ curseforge {
         addGameVersion 'Forge'
         addGameVersion libs.versions.minecraft.get()
         mainArtifact(tasks.jarJar) {
-            displayName = "[FORGE] [${libs.versions.minecraft.get()}] ${rootProject.name}-v${modVersion}"
+            displayName = "[FORGE] [${libs.versions.minecraft.get()}] ${archivesBaseName}-v${modVersion}"
             if (project.hasProperty("dependenciesRequiredForgeCurseForge") || project.hasProperty("dependenciesEmbeddedForgeCurseForge") || project.hasProperty("dependenciesOptionalForgeCurseForge")) {
                 relations {
                     if (project.hasProperty("dependenciesRequiredForgeCurseForge")) {
@@ -269,7 +269,7 @@ modrinth {
     token = project.hasProperty('modrinthApiToken') ? project.findProperty('modrinthApiToken') : ''
     projectId = projectModrinthId
     versionNumber = project.version
-    versionName = "[FORGE] [${libs.versions.minecraft.get()}] ${rootProject.name}-v${modVersion}"
+    versionName = "[FORGE] [${libs.versions.minecraft.get()}] ${archivesBaseName}-v${modVersion}"
     changelog = file('../CHANGELOG.md').text
     versionType = projectReleaseType
     uploadFile = tasks.jarJar

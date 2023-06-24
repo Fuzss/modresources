@@ -88,8 +88,8 @@ processResources {
     inputs.property "minPuzzlesVersion", libs.versions.puzzleslib.min.get()
     inputs.property "resourcePackFormat", libs.versions.resources.get()
     inputs.property "dataPackFormat", libs.versions.data.get()
-    inputs.property "mainEntryPoint", "${project.group}.${rootProject.name}Fabric"
-    inputs.property "clientEntryPoint", "${project.group}.client.${rootProject.name}FabricClient"
+    inputs.property "mainEntryPoint", "${project.group}.${archivesBaseName}Fabric"
+    inputs.property "clientEntryPoint", "${project.group}.client.${archivesBaseName}FabricClient"
     inputs.property "modFabricEnvironment", modFabricEnvironment
 
     // replace stuff in fabric.mod.json
@@ -108,8 +108,8 @@ processResources {
                 'minFabricApiVersion': libs.versions.fabricapi.min.get(),
                 'minecraftVersion': libs.versions.minecraft.get(),
                 "minPuzzlesVersion": libs.versions.puzzleslib.min.get(),
-                "mainEntryPoint": "${project.group}.${rootProject.name}Fabric",
-                "clientEntryPoint": "${project.group}.client.${rootProject.name}FabricClient",
+                "mainEntryPoint": "${project.group}.${archivesBaseName}Fabric",
+                "clientEntryPoint": "${project.group}.client.${archivesBaseName}FabricClient",
                 "modFabricEnvironment": modFabricEnvironment
         )
     }
@@ -195,7 +195,7 @@ curseforge {
         addGameVersion 'Fabric'
         addGameVersion libs.versions.minecraft.get()
         mainArtifact(remapJar) {
-            displayName = "[FABRIC] [${libs.versions.minecraft.get()}] ${rootProject.name}-v${modVersion}"
+            displayName = "[FABRIC] [${libs.versions.minecraft.get()}] ${archivesBaseName}-v${modVersion}"
             if (project.hasProperty("dependenciesRequiredFabricCurseForge") || project.hasProperty("dependenciesEmbeddedFabricCurseForge") || project.hasProperty("dependenciesOptionalFabricCurseForge")) {
                 relations {
                     if (project.hasProperty("dependenciesRequiredFabricCurseForge")) {
@@ -231,7 +231,7 @@ modrinth {
     token = project.hasProperty('modrinthApiToken') ? project.findProperty('modrinthApiToken') : ''
     projectId = projectModrinthId
     versionNumber = project.version
-    versionName = "[FABRIC] [${libs.versions.minecraft.get()}] ${rootProject.name}-v${modVersion}"
+    versionName = "[FABRIC] [${libs.versions.minecraft.get()}] ${archivesBaseName}-v${modVersion}"
     changelog = file('../CHANGELOG.md').text
     versionType = projectReleaseType
     uploadFile = remapJar
