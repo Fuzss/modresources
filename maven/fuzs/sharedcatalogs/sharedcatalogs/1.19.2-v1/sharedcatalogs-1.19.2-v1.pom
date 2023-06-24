@@ -9,7 +9,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>fuzs.sharedcatalogs</groupId>
   <artifactId>sharedcatalogs</artifactId>
-  <version>1.19-v1</version>
+  <version>1.19.2-v1</version>
   <packaging>toml</packaging>
   <name>Shared Catalogs</name>
   <description>Shared gradle version catalogs for all projects.</description>

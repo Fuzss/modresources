@@ -3,7 +3,7 @@
   "component": {
     "group": "fuzs.sharedcatalogs",
     "module": "sharedcatalogs",
-    "version": "1.18-v1",
+    "version": "1.18.2-v1",
     "attributes": {
       "org.gradle.status": "release"
     }
@@ -22,8 +22,8 @@
       },
       "files": [
         {
-          "name": "sharedcatalogs-1.18-v1.toml",
-          "url": "sharedcatalogs-1.18-v1.toml",
+          "name": "sharedcatalogs-1.18.2-v1.toml",
+          "url": "sharedcatalogs-1.18.2-v1.toml",
           "size": 5773,
           "sha512": "3efd6720ae6d2cbe9617052b04c6a66953fc984ea7ba25a5a82beaf0a29f769f3394e1129c73a98749c57f20f4d703b2b1554af1b013d93267a84220f5701ca4",
           "sha256": "248bbb973f89d1e0dc494e7e33352fb8311f2784996c0027133f12181538a94c",
