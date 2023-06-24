@@ -1,0 +1,346 @@
+apply plugin: 'net.minecraftforge.gradle'
+apply plugin: 'org.spongepowered.mixin'
+apply plugin: 'org.parchmentmc.librarian.forgegradle'
+apply plugin: 'me.hypherionmc.cursegradle'
+apply plugin: 'com.modrinth.minotaur'
+
+archivesBaseName = rootProject.name
+version = "v${modVersion}-${libs.versions.minecraft.get()}-Forge"
+group = modMavenGroup
+
+minecraft {
+//    mappings channel: 'parchment', version: "${parchmentMappingsVersion}-${parchmentMinecraftVersion}"
+    mappings channel: 'official', version: "${libs.versions.minecraft.get()}"
+
+    runs {
+        configureEach {
+            workingDirectory project.file('../run')
+            jvmArgs '-Xms1G', '-Xmx4G'
+            if (project(":Common").file("src/main/resources/${modId}.common.mixins.json").exists()) {
+                arg "-mixin.config=${modId}.common.mixins.json"
+            }
+            if (project.file("src/main/resources/${modId}.forge.mixins.json").exists()) {
+                arg "-mixin.config=${modId}.forge.mixins.json"
+            }
+            ideaModule "${rootProject.name}.${project.name}.main"
+            property 'terminal.ansi', 'true'
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+            property 'mixin.debug.export', 'true'
+            mods {
+                "${modId}" {
+                    source sourceSets.main
+                    source project(":Common").sourceSets.main
+                }
+            }
+        }
+        client {
+            taskName 'Client'
+            property 'fml.earlyprogresswindow', 'false'
+        }
+
+        server {
+            taskName 'Server'
+            arg 'nogui'
+        }
+
+        data {
+            taskName 'Data'
+            args '--mod', modId, '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+        }
+    }
+}
+
+dependencies {
+    // Common Project
+    compileOnly(project(":Common")) {
+        transitive = false
+    }
+
+    // Minecraft
+    minecraft "net.minecraftforge:forge:${libs.versions.forge.version.get()}"
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+}
+
+mixin {
+    if (project.file("src/main/resources/${modId}.forge.mixins.json").exists() || project(":Common").file("src/main/resources/${modId}.common.mixins.json").exists()) {
+        add project(":Common").sourceSets.main, "${modId}.refmap.json"
+    }
+    if (project(":Common").file("src/main/resources/${modId}.common.mixins.json").exists()) {
+        config "${modId}.common.mixins.json"
+    }
+    if (project.file("src/main/resources/${modId}.forge.mixins.json").exists()) {
+        config "${modId}.forge.mixins.json"
+    }
+}
+
+processResources {
+    from(project(":Common").sourceSets.main.resources)
+    from(file('src/generated/resources')) {
+        exclude('.cache/')
+    }
+
+    duplicatesStrategy DuplicatesStrategy.INCLUDE
+
+    // this will ensure that this task is redone when a value changes
+    inputs.property "modId", modId
+    inputs.property "modName", modName
+    inputs.property "modVersion", modVersion
+    inputs.property "modDescription", modDescription
+    inputs.property "modGroup", project.group
+    inputs.property "modPageUrl", modSourceUrl
+    inputs.property "modUpdateUrl", modUpdateUrl
+    inputs.property "modIssueUrl", modIssueUrl
+    inputs.property "modAuthor", modAuthor
+    inputs.property "modLicense", modLicense
+    inputs.property "minFMLVersion", libs.versions.forge.min.get().replaceAll("\\..*", "")
+    inputs.property "minForgeVersion", libs.versions.forge.min.get()
+    inputs.property "minecraftVersion", libs.versions.minecraft.get()
+    inputs.property "minPuzzlesVersion", libs.versions.puzzleslib.min.get()
+    inputs.property "resourcePackFormat", libs.versions.resources.get()
+    inputs.property "dataPackFormat", libs.versions.data.get()
+    inputs.property "modForgeDisplayTest", modForgeDisplayTest
+
+    // replace stuff in mods.toml
+    filesMatching('META-INF/mods.toml') {
+        expand(
+                'modId': modId,
+                'modName': modName,
+                'modVersion': modVersion,
+                'modDescription': modDescription,
+                'modGroup': project.group,
+                'modPageUrl': modSourceUrl,
+                'modUpdateUrl': modUpdateUrl,
+                'modIssueUrl': modIssueUrl,
+                'modAuthor': modAuthor,
+                'modLicense': modLicense,
+                'minFMLVersion': libs.versions.forge.min.get().replaceAll("\\..*", ""),
+                'minForgeVersion': libs.versions.forge.min.get(),
+                'minecraftVersion': libs.versions.minecraft.get(),
+                'minPuzzlesVersion': libs.versions.puzzleslib.min.get(),
+                'modForgeDisplayTest': modForgeDisplayTest
+        )
+    }
+
+    // replace stuff in pack.mcmeta
+    filesMatching('pack.mcmeta') {
+        expand(
+                'modDescription': modDescription,
+                "resourcePackFormat": libs.versions.resources.get(),
+                "dataPackFormat": libs.versions.data.get()
+        )
+    }
+}
+
+jar {
+    archiveClassifier.set("slim")
+}
+
+tasks.jarJar.configure {
+    archiveClassifier.set("")
+}
+
+jarJar {
+    enable()
+}
+
+compileJava {
+    source project(":Common").sourceSets.main.allSource
+}
+
+sourcesJar {
+    from project(":Common").sourceSets.main.allJava
+}
+
+javadoc {
+    source project(":Common").sourceSets.main.allJava
+}
+
+// important: the task may not run before 'compileJava', otherwise overridden/shadowed fields and methods in mixin classes will not be reobfuscated
+jar.finalizedBy("configureReobfTaskForReobfJar")
+jar.finalizedBy('reobfJar')
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifactId = "${modId}-forge"
+            version = modVersion
+            from components.java
+            // strip Forge dependency from POM
+            fg.component(it)
+            pom {
+                name = "${modName} [Forge]"
+                description = "${modDescription}"
+                url = "${modSourceUrl}"
+                scm {
+                    url = "${modSourceUrl}"
+                    connection = "${modSourceUrl}".replace("https", "scm:git:git").concat(".git")
+                    developerConnection = "${modSourceUrl}".replace("https://github.com/", "scm:git:git@github.com:").concat(".git")
+                }
+                issueManagement {
+                    system = 'github'
+                    url = "${modIssueUrl}"
+                }
+                licenses {
+                    license {
+                        name = "${modLicense}"
+                        url = "https://spdx.org/licenses/${modLicense}.html"
+                    }
+                }
+                developers {
+                    developer {
+                        id = "${modAuthor}".toLowerCase()
+                        name = "${modAuthor}"
+                    }
+                }
+            }
+            afterEvaluate {
+                // exclude certain dependencies when publishing to maven
+                // from https://stackoverflow.com/a/50121790
+                pom.withXml {
+                    asNode().dependencies.dependency.each { dep ->
+                        // use this approach to make excluding dependencies from Curse Maven more convenient
+                        if (["curse.maven:", "fuzs.bettermodsbutton:bettermodsbutton-forge"].stream().anyMatch(mod -> "${dep.groupId.last().value().last()}:${dep.artifactId.last().value().last()}".startsWith(mod))) {
+                            assert dep.parent().remove(dep)
+                        }
+                    }
+                }
+            }
+        }
+    }
+    repositories {
+        maven {
+            name = 'FuzsModResources'
+            url "file://" + project.hasProperty('modResources') ? "${project.findProperty('modResources')}/maven" : System.getenv('local_maven')
+        }
+    }
+}
+
+signing {
+    sign publishing.publications.mavenJava
+}
+
+curseforge {
+    if (!file('../CHANGELOG.md').canRead()) {
+        throw new FileNotFoundException("Could not read changelog file")
+    }
+    apiKey = project.hasProperty('curseApiToken') ? project.findProperty('curseApiToken') : ''
+    project {
+        id = projectCurseForgeId
+        changelogType = 'markdown'
+        changelog = file('../CHANGELOG.md')
+        releaseType = projectReleaseType
+        addGameVersion 'Forge'
+        addGameVersion libs.versions.minecraft.get()
+        mainArtifact(tasks.jarJar) {
+            displayName = "[FORGE] [${libs.versions.minecraft.get()}] ${rootProject.name}-v${modVersion}"
+            if (project.hasProperty("dependenciesRequiredForgeCurseForge") || project.hasProperty("dependenciesEmbeddedForgeCurseForge") || project.hasProperty("dependenciesOptionalForgeCurseForge")) {
+                relations {
+                    if (project.hasProperty("dependenciesRequiredForgeCurseForge")) {
+                        (project.findProperty("dependenciesRequiredForgeCurseForge") as String).split(",").each {
+                            requiredDependency it.trim()
+                        }
+                    }
+                    if (project.hasProperty("dependenciesEmbeddedForgeCurseForge")) {
+                        (project.findProperty("dependenciesEmbeddedForgeCurseForge") as String).split(",").each {
+                            embeddedLibrary it.trim()
+                        }
+                    }
+                    if (project.hasProperty("dependenciesOptionalForgeCurseForge")) {
+                        (project.findProperty("dependenciesOptionalForgeCurseForge") as String).split(",").each {
+                            optionalDependency it.trim()
+                        }
+                    }
+                }
+            }
+        }
+    }
+    options {
+        debug = true
+        javaVersionAutoDetect = false
+        forgeGradleIntegration = false
+    }
+}
+
+modrinth {
+    if (!file('../CHANGELOG.md').canRead()) {
+        throw new FileNotFoundException("Could not read changelog file")
+    }
+    token = project.hasProperty('modrinthApiToken') ? project.findProperty('modrinthApiToken') : ''
+    projectId = projectModrinthId
+    versionNumber = project.version
+    versionName = "[FORGE] [${libs.versions.minecraft.get()}] ${rootProject.name}-v${modVersion}"
+    changelog = file('../CHANGELOG.md').text
+    versionType = projectReleaseType
+    uploadFile = tasks.jarJar
+    loaders.add 'forge'
+    gameVersions.add libs.versions.minecraft.get()
+    if (project.hasProperty("dependenciesRequiredForgeModrinth") || project.hasProperty("dependenciesEmbeddedForgeModrinth") || project.hasProperty("dependenciesOptionalForgeModrinth")) {
+        dependencies {
+            if (project.hasProperty("dependenciesRequiredForgeModrinth")) {
+                (project.findProperty("dependenciesRequiredForgeModrinth") as String).split(",").each {
+                    required.project it.trim()
+                }
+            }
+            if (project.hasProperty("dependenciesEmbeddedForgeModrinth")) {
+                (project.findProperty("dependenciesEmbeddedForgeModrinth") as String).split(",").each {
+                    embedded.project it.trim()
+                }
+            }
+            if (project.hasProperty("dependenciesOptionalForgeModrinth")) {
+                (project.findProperty("dependenciesOptionalForgeModrinth") as String).split(",").each {
+                    optional.project it.trim()
+                }
+            }
+        }
+    }
+//	debugMode = true
+}
+
+import groovy.json.JsonBuilder
+import groovy.json.JsonOutput
+import groovy.json.JsonSlurper
+
+task copyJarToDir(type: Copy) {
+    onlyIf { project.hasProperty('buildJarOutputDir') && project.hasProperty('uniqueBuildNumber') }
+    if (project.findProperty('copyBuildJar').toBoolean()) {
+        from tasks.jarJar
+        into project.findProperty('buildJarOutputDir')
+        // add build number to be able to distinguish jars when testing thorough official launcher
+        // build number is stored in global gradle.properties
+        rename { fileName -> fileName.replace("v${modVersion}", "v${modVersion}.${uniqueBuildNumber}") }
+    }
+}
+
+task refreshUpdateJson {
+    onlyIf { project.hasProperty('modResources') }
+    doLast {
+        def updateFile = file(project.findProperty('modResources').concat(File.separator).concat('update').concat(File.separator).concat("${modId}").concat('.json'))
+        def updateJson
+        if (updateFile.exists() && updateFile.canRead()) {
+            updateJson = new JsonSlurper().parseText(updateFile.text)
+            updateJson['promos']["${libs.versions.minecraft.get()}-latest"] = "${modVersion}"
+            // alpha and beta releases will contain 'a' or 'b' char respectively, don't update recommended for those
+            if ("${modVersion}".matches("[^a-zA-Z]+")) {
+                updateJson['promos']["${libs.versions.minecraft.get()}-recommended"] = "${modVersion}"
+            }
+        } else {
+            def builder = new JsonBuilder()
+            updateJson = builder {
+                homepage "${modSourceUrl}"
+                promos {
+                    "${libs.versions.minecraft.get()}-latest" "${modVersion}"
+                    // alpha and beta releases will contain 'a' or 'b' char respectively, don't update recommended for those
+                    if ("${modVersion}".matches("[^a-zA-Z]+")) {
+                        "${libs.versions.minecraft.get()}-recommended" "${modVersion}"
+                    }
+                }
+            }
+        }
+        def output = new JsonOutput()
+        updateFile.write(output.prettyPrint(output.toJson(updateJson)))
+    }
+}
+
+build.finalizedBy project.tasks.copyJarToDir, rootProject.tasks.incrementBuildNumber
+[tasks.modrinth, tasks.curseforge].each { it.finalizedBy project.tasks.refreshUpdateJson }
