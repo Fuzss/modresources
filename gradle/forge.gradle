@@ -35,17 +35,17 @@ minecraft {
             }
         }
         client {
-            taskName 'Client'
+            taskName "Client [${libs.versions.minecraft.get()}]"
             property 'fml.earlyprogresswindow', 'false'
         }
 
         server {
-            taskName 'Server'
+            taskName "Server [${libs.versions.minecraft.get()}]"
             arg 'nogui'
         }
 
         data {
-            taskName 'Data'
+            taskName "Data [${libs.versions.minecraft.get()}]"
             args '--mod', modId, '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
         }
     }
