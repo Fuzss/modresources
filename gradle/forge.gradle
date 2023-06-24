@@ -4,8 +4,8 @@ apply plugin: 'org.parchmentmc.librarian.forgegradle'
 apply plugin: 'me.hypherionmc.cursegradle'
 apply plugin: 'com.modrinth.minotaur'
 
-archivesBaseName = rootProject.name
-version = "v${modVersion}-Forge"
+archivesBaseName = "${modName.replaceAll("[^a-zA-Z]", "")}"
+version = "v${modVersion}-${libs.versions.minecraft.get()}-Forge"
 group = modMavenGroup
 
 minecraft {

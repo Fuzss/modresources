@@ -3,8 +3,8 @@ apply plugin: 'io.github.juuxel.loom-quiltflower'
 apply plugin: 'me.hypherionmc.cursegradle'
 apply plugin: 'com.modrinth.minotaur'
 
-archivesBaseName = rootProject.name
-version = "v${modVersion}-Fabric"
+archivesBaseName = "${modName.replaceAll("[^a-zA-Z]", "")}"
+version = "v${modVersion}-${libs.versions.minecraft.get()}-Fabric"
 group = modMavenGroup
 
 repositories {
