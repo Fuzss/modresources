@@ -87,8 +87,8 @@ subprojects {
     }
 
     tasks.withType(Jar).configureEach {
-        from rootProject.file("LICENSE.md")
-        from rootProject.file("LICENSE-ASSETS.md")
+        from rootProject.file("../LICENSE.md")
+        from rootProject.file("../LICENSE-ASSETS.md")
         from rootProject.file("CHANGELOG.md")
         manifest {
             attributes([
