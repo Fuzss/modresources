@@ -50,11 +50,11 @@ loom {
         }
         client {
             client()
-            setConfigName("Fabric Client [${libs.versions.minecraft.get()}]")
+            setConfigName("Fabric Client-${libs.versions.minecraft.get()}")
         }
         server {
             server()
-            setConfigName("Fabric Server [${libs.versions.minecraft.get()}]")
+            setConfigName("Fabric Server-${libs.versions.minecraft.get()}")
         }
     }
 }

@@ -35,17 +35,17 @@ minecraft {
             }
         }
         client {
-            taskName "Client [${libs.versions.minecraft.get()}]"
+            taskName "Client-${libs.versions.minecraft.get()}"
             property 'fml.earlyprogresswindow', 'false'
         }
 
         server {
-            taskName "Server [${libs.versions.minecraft.get()}]"
+            taskName "Server-${libs.versions.minecraft.get()}"
             arg 'nogui'
         }
 
         data {
-            taskName "Data [${libs.versions.minecraft.get()}]"
+            taskName "Data-${libs.versions.minecraft.get()}"
             args '--mod', modId, '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
         }
     }
