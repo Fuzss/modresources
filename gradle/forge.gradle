@@ -166,6 +166,7 @@ publishing {
             artifactId = "${modId}-forge"
             version = modVersion
             from components.java
+            artifact tasks.jarJar
             // strip Forge dependency from POM
             fg.component(it)
             pom {
