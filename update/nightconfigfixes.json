@@ -26,6 +26,8 @@
         "1.18-latest": "3.0.2",
         "1.18-recommended": "3.0.2",
         "1.19.4-latest": "4.0.7",
-        "1.19.4-recommended": "4.0.7"
+        "1.19.4-recommended": "4.0.7",
+        "1.20.1-latest": "8.0.0",
+        "1.20.1-recommended": "8.0.0"
     }
 }

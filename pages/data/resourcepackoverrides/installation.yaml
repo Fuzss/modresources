@@ -3,3 +3,5 @@ environments:
 loaders:
   - forge
   - fabric
+dependencies:
+  fabricapi: required
