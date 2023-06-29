@@ -159,6 +159,8 @@ javadoc {
 // important: the task may not run before 'compileJava', otherwise overridden/shadowed fields and methods in mixin classes will not be reobfuscated
 jar.finalizedBy("configureReobfTaskForReobfJar")
 jar.finalizedBy('reobfJar')
+tasks.jarJar.finalizedBy("configureReobfTaskForReobfJarJar")
+tasks.jarJar.finalizedBy('reobfJarJar')
 
 publishing {
     publications {
