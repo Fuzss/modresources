@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>fuzs.puzzlesaccessapi</groupId>
+  <artifactId>puzzlesaccessapi-common</artifactId>
+  <version>8.0.5</version>
+  <name>Puzzles Access Api [Common]</name>
+  <description>A small collection of a few vanilla classes made extensible via access transformers / wideners.</description>
+  <url>https://github.com/Fuzss/puzzlesaccessapi</url>
+  <licenses>
+    <license>
+      <name>MPL-2.0</name>
+      <url>https://spdx.org/licenses/MPL-2.0.html</url>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <id>fuzs</id>
+      <name>Fuzs</name>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:git:git://github.com/Fuzss/puzzlesaccessapi.git</connection>
+    <developerConnection>scm:git:git@github.com:Fuzss/puzzlesaccessapi.git</developerConnection>
+    <url>https://github.com/Fuzss/puzzlesaccessapi</url>
+  </scm>
+  <issueManagement>
+    <system>github</system>
+    <url>https://github.com/Fuzss/puzzlesaccessapi/issues</url>
+  </issueManagement>
+</project>
