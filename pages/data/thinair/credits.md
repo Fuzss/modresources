@@ -1,2 +1,2 @@
-+ Thanks a lot to [Petrak](https://www.curseforge.com/members/petrak_at) for originally creating this mod as [Miner's Lung](https://www.curseforge.com/minecraft/mc-mods/miners-lung). Thin Air is a simple port of the original project to modern Minecraft versions.
++ Thanks a lot to [Petra](https://www.curseforge.com/members/petrak_at) for originally creating this mod as [Miner's Lung](https://www.curseforge.com/minecraft/mc-mods/miners-lung). Thin Air is a simple port of the original project to modern Minecraft versions.
 + Thanks a lot to [AlphaMode](https://www.curseforge.com/members/thatguynamedalpha) for porting Miner's Lung to Minecraft 1.19.2, providing the basis for Thin Air.
