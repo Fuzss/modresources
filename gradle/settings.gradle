@@ -15,10 +15,10 @@ dependencyResolutionManagement {
                 version("puzzleslib-min", settings.ext.find("dependenciesMinPuzzlesLibVersion"))
             }
             if (settings.ext.has("dependenciesPuzzlesApiVersion")) {
-                version("puzzleslib-version", settings.ext.find("dependenciesPuzzlesApiVersion"))
+                version("puzzlesapi-version", settings.ext.find("dependenciesPuzzlesApiVersion"))
             }
             if (settings.ext.has("dependenciesMinPuzzlesApiVersion")) {
-                version("puzzleslib-min", settings.ext.find("dependenciesMinPuzzlesApiVersion"))
+                version("puzzlesapi-min", settings.ext.find("dependenciesMinPuzzlesApiVersion"))
             }
         }
     }
