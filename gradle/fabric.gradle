@@ -13,11 +13,11 @@ repositories {
         url = "https://maven.modmuss50.me/"
     }
     maven {
-        name = "ladysnake"
-        url = 'https://ladysnake.jfrog.io/artifactory/mods'
+        name = 'Ladysnake'
+        url = 'https://maven.ladysnake.org/releases'
     }
     maven {
-        name = "jamieswhiteshirt"
+        name = "JamiesWhiteShirt"
         url = "https://maven.jamieswhiteshirt.com/libs-release/"
     }
 }
