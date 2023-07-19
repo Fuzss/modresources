@@ -54,7 +54,6 @@ task allBuild(type: GradleBuild) {
             ':Common:clean',
             ':Forge:clean',
             ':Fabric:clean',
-            ':Common:build',
             ':Forge:build',
             ':Fabric:build'
     ]
