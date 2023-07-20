@@ -1,0 +1,3 @@
++ Huge thanks to [Dricky](https://github.com/OhDricky) who originally created the amazing Illager Expansion mod. Illager Invasion is a faithful continuation of their work, with many additions, improvements, overhauls, and bug fixes.
++ Thanks to [ZekeSmith](https://modrinth.com/user/ZekeSmith) who found the original Illager Expansion source code after it was deleted by Dricky, making this port possible under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
++ Thanks to [safrodev](https://www.curseforge.com/members/safrodev) for working on the 1.19.2 version of Illager Expansion, the Horn of Sight texture is taken from there.

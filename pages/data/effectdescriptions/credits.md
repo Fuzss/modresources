@@ -1,0 +1,1 @@
++ Thanks a lot to [Darkhax](https://www.curseforge.com/members/DarkhaxDev) and their [Enchantment Descriptions](https://www.curseforge.com/minecraft/mc-mods/enchantment-descriptions) mod for inspiring parts of this project.

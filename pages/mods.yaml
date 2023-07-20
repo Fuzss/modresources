@@ -229,7 +229,32 @@ respawninganimals:
     curseforge: respawning-animals
     modrinth: respawning-animals
 thinair:
-  weight: 0
+  weight: 15
   distributions:
     curseforge: new-thin-air
     modrinth: thin-air
+illagerinvasion:
+  weight: 50
+  distributions:
+    curseforge: illager-invasion
+    modrinth: illager-invasion
+metalbundles:
+  weight: 15
+  distributions:
+    curseforge: metal-bundles
+    modrinth: metal-bundles
+diagonalwindows:
+  weight: 35
+  distributions:
+    curseforge: diagonal-windows
+    modrinth: diagonal-windows
+miniumstone:
+  weight: 20
+  distributions:
+    curseforge: minium-stone
+    modrinth: minium-stone
+effectdescriptions:
+  weight: 25
+  distributions:
+    curseforge: effect-descriptions
+    modrinth: effect-descriptions

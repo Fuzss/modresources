@@ -1,0 +1,1 @@
++ Thanks a lot to [Release](https://www.curseforge.com/members/releasehun) for providing bundle textures.
