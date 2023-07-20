@@ -256,5 +256,5 @@ miniumstone:
 effectdescriptions:
   weight: 25
   distributions:
-    curseforge: effect-descriptions
+    curseforge: new-effect-descriptions
     modrinth: effect-descriptions
