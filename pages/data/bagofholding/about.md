@@ -1,0 +1,1 @@
+Bag Of Holding adds three different tiers of bags to help with your inventory storage problems. Simply open a your bag's inventory by right-clicking the item from your hotbar. But that's not the only way to interact! Simply use the bags from within every inventory, similar to Minecraft's bundles (but much better actually).

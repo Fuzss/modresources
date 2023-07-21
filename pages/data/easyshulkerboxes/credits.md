@@ -1,0 +1,3 @@
++ Thanks to [Kir_Antipov](https://www.curseforge.com/members/kir_antipov) for inspiring the ender chest feature from their [Packed Inventory](https://www.curseforge.com/minecraft/mc-mods/packed-inventory) mod.
++ Big thanks to [Grend_G](https://www.curseforge.com/members/grend_g) for inspiring the way the tooltip of the currently selected item inside of another item's tooltip is shown from their [Equipment Compare](https://www.curseforge.com/minecraft/mc-mods/equipment-compare) mod.
++ Thanks to [MrNiddala](https://www.curseforge.com/members/mrniddala) for inspiring the feature allowing you to insert items to or extract items from a container item via dragging that item accross different slots in your inventory.

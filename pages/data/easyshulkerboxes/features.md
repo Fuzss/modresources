@@ -1,0 +1,8 @@
++ Like with the vanilla's bundles, click other items on a shulker box item in your inventory or the other way around to insert and extract contents to / from the shulker box.
++ Nicely see what's inside a shulker box item on the tooltip. Hold the `Alt` key to force the shulker box tooltip to render, even when your cursor is carrying another item or the shulker box itself. Great when interacting to keep track of the shulker box contents you are inserting into / extracting from.
++ While hovering over a shulker box item, use your scroll wheel to select to slot you want to interact with. You are no longer bound to extracting the last item first.
++ When scrolling through the shulker box tooltip like that, a second tooltip will appear to the left side of the shulker box item for the slot in the shulker box tooltip you have currently selected. Great for e.g. distinguishing enchanted tools from each other!
++ While carrying a shulker box item with your cursor, right-click + drag across multiple slots to insert items into the shulker box or extract items from it when the dragged across slots are empty.
++ Hold the `Ctrl` key (`Cmd` on Mac) to enter precision mode; instead of inserting / extracting whole stacks only a single item will be moved. Use the scroll wheel to quickly get to a specific amount.
++ Observe a tiny indicator on shulker box items when your cursor is holding an item, telling you if the item can be added and if the shulker box already contains items of that type.
++ Check out the GitHub repository to learn how to add all those unique item interactions to any item from any mod you like, such as backpacks and modded shulker boxes!
