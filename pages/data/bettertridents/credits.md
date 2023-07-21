@@ -1,0 +1,3 @@
++ [SimplySarc](https://www.youtube.com/c/SimplySarc) for inspiring the trident crafting mechanic from their video on [Improving The Update Aquatic](https://www.youtube.com/watch?v=KNwi8gPengY&t=74s).
++ [releaseHUN](https://www.curseforge.com/members/releasehun) for creating that dandy trident fragment texture.
++ [Zero_DSRS_VX](https://www.curseforge.com/members/zero_dsrs_vx) for the idea of repairing tridents in an anvil using prismarien shards from their [Repairable Tridents](https://www.curseforge.com/minecraft/mc-mods/repairable-tridents-fabric) mod.
