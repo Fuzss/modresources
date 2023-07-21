@@ -1,1 +1,3 @@
-Minium Stone adds a unqie item by the same name to your game! Crafted from shards rarely dropped by monsters, this stone allows you to transmute materials into other materials either by crafting them together with the stone (the minium stone will loose durability), or by interacting with blocks in the world. A reimplementation of the old Philosopher's Stone from Equivalent Exchange 2, rebalanced and made more vanilla friendly for modern Minecraft.
+Minium Stone adds a unqie item by the same name to your game! This unique stone allows you to transmute materials into others either by crafting them together with the stone, or by interacting with blocks in the world.
+
+A reimplementation of the old Philosopher's Stone from Equivalent Exchange 2, reimagined for modern Minecraft.
