@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>fuzs.forgeconfigscreens</groupId>
+  <artifactId>forgeconfigscreens-common</artifactId>
+  <version>8.0.0</version>
+  <name>Forge Config Screens [Common]</name>
+  <description>Allows Forge's configs to be configured directly in-game. Quick and easy with a beautiful design!</description>
+  <url>https://github.com/Fuzss/forgeconfigscreens</url>
+  <licenses>
+    <license>
+      <name>MPL-2.0</name>
+      <url>https://spdx.org/licenses/MPL-2.0.html</url>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <id>fuzs</id>
+      <name>Fuzs</name>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:git:git://github.com/Fuzss/forgeconfigscreens.git</connection>
+    <developerConnection>scm:git:git@github.com:Fuzss/forgeconfigscreens.git</developerConnection>
+    <url>https://github.com/Fuzss/forgeconfigscreens</url>
+  </scm>
+  <issueManagement>
+    <system>github</system>
+    <url>https://github.com/Fuzss/forgeconfigscreens/issues</url>
+  </issueManagement>
+  <dependencies>
+    <dependency>
+      <groupId>fuzs.forgeconfigapiport</groupId>
+      <artifactId>forgeconfigapiport-common</artifactId>
+      <version>8.0.0</version>
+      <scope>compile</scope>
+    </dependency>
+  </dependencies>
+</project>
