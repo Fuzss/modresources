@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>fuzs.puzzlesapi</groupId>
+  <artifactId>puzzlesapi-common</artifactId>
+  <version>8.1.2</version>
+  <name>Puzzles Api [Common]</name>
+  <description>A collection of shared code for various mods. An extension to Puzzles Lib.</description>
+  <url>https://github.com/Fuzss/puzzlesapi</url>
+  <licenses>
+    <license>
+      <name>MPL-2.0</name>
+      <url>https://spdx.org/licenses/MPL-2.0.html</url>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <id>fuzs</id>
+      <name>Fuzs</name>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:git:git://github.com/Fuzss/puzzlesapi.git</connection>
+    <developerConnection>scm:git:git@github.com:Fuzss/puzzlesapi.git</developerConnection>
+    <url>https://github.com/Fuzss/puzzlesapi</url>
+  </scm>
+  <issueManagement>
+    <system>github</system>
+    <url>https://github.com/Fuzss/puzzlesapi/issues</url>
+  </issueManagement>
+  <dependencies>
+    <dependency>
+      <groupId>fuzs.puzzlesaccessapi</groupId>
+      <artifactId>puzzlesaccessapi-common</artifactId>
+      <version>8.0.5</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>fuzs.puzzleslib</groupId>
+      <artifactId>puzzleslib-common</artifactId>
+      <version>8.0.13</version>
+      <scope>compile</scope>
+    </dependency>
+  </dependencies>
+</project>
