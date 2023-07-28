@@ -1,0 +1,1 @@
+Leaves Be Gone makes leaves decay extremly rapid after cutting down the logs on a tree. All leaves are gone after about one second (configurable). Additionally Leaves Be Gone is extremely efficient compared to similar mods and works great with leaves added by other mods!
