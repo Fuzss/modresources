@@ -1,0 +1,3 @@
++ Thanks to [Daveyx0](https://www.curseforge.com/members/daveyx0) for inspiring the baby skeleton's combat behavior with the skeleton warrior from their [Primitive Mobs](https://www.curseforge.com/minecraft/mc-mods/primitive-mobs) mod.
++ Thanks to [Globox_Z](https://www.curseforge.com/members/globox_z) for some of the code for rendering items on the back of baby skeletons from their [BackSlot](https://www.curseforge.com/minecraft/mc-mods/backslot) mod.
++ Thanks to [Furgle](https://www.curseforge.com/members/furgle) for inspiring baby wither skeletons carrying skulls from their [Baby Mobs](https://www.curseforge.com/minecraft/mc-mods/baby-mobs) mod.
