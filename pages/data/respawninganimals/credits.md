@@ -1,0 +1,1 @@
++ Thanks to [B3spectacled](https://www.curseforge.com/members/b3spectacled) for inspiring the idea behind this project with their [Custom Spawns](https://www.curseforge.com/minecraft/mc-mods/custom-spawns) mod.

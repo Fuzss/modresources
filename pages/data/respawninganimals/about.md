@@ -1,0 +1,1 @@
+Respawnable Animals changes the spawning mechanics for all animals to be similar to Bedrock Edition: Animals will now vanish and appear again whereever you go, they no longer stay in the world forever from being spawned in during world generation. And just like Bedrock Edition; animals that have e.g. been bred or tamed will of course stay with you!
