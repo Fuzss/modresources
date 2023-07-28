@@ -1,0 +1,1 @@
++ Thanks to [Areuthreateningme](https://www.curseforge.com/members/areuthreateningme) and their [Inventory Hotswap](https://www.curseforge.com/minecraft/mc-mods/inventory-hotswap) mod, which thaught me how to swap inventory items fully client-side.
