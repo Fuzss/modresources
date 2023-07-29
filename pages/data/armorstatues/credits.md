@@ -1,0 +1,4 @@
++ Huge thanks to the [VanillaTweaks Team](https://vanillatweaks.net/) for their Armor Statues data pack, which heavily inspired this whole mod, and provided some values for certain features such as the alignments screen and a lot of the built-in poses.
++ Thanks to [Forge_User_41096743](https://www.curseforge.com/members/Forge_User_41096743) and their [Armor Stand Configurator](https://www.curseforge.com/minecraft/mc-mods/armor-stand-configurator) mod for being the main inspiration behind this mod.
++ Thanks to [AUTOMATIC_MAIDEN](https://www.minecraftforum.net/members/AUTOMATIC_MAIDEN) and their [Statues](https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/1292646-statues) mod which the rotations screen is heavily based upon
++ Thanks to [Finalbossblues](https://itch.io/profile/finalbossblues) for their amazing icons available over on [itch.io](https://finalbossblues.itch.io/icons)
