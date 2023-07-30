@@ -1,1 +1,3 @@
 Nether Chested adds a very unique new chest: Not only has this single chest as many slots as a full double chest, but it can also store way more items in each slot! Every slot can hold up to 8 times as many items as normal of every stackable item. So where any other inventory just stores 64 items in a slot, your new nether chest can store a total of 512.
+
+Additionally install the [Stxck](https://www.curseforge.com/minecraft/mc-mods/staaaaaaaaaaaack) mod by [frankv_](https://www.curseforge.com/members/frankv_) to reduce lag from item entities spawned on breaking a nether chest with many items inside, allowing you to safely increase the stack size multiplier in the config if desired.
