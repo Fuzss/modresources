@@ -15,8 +15,8 @@
         "1.18-recommended": "3.2.1",
         "1.18.1-latest": "3.2.1",
         "1.18.1-recommended": "3.2.1",
-        "1.18.2-latest": "3.4.7",
-        "1.18.2-recommended": "3.4.7",
+        "1.18.2-latest": "3.5.2",
+        "1.18.2-recommended": "3.5.2",
         "1.19-latest": "4.0.18",
         "1.19-recommended": "4.0.18",
         "1.19.1-latest": "4.2.4",
@@ -29,7 +29,7 @@
         "1.19.4-recommended": "6.0.11",
         "1.20-latest": "7.0.9",
         "1.20-recommended": "7.0.9",
-        "1.20.1-latest": "8.0.18",
-        "1.20.1-recommended": "8.0.18"
+        "1.20.1-latest": "8.0.19",
+        "1.20.1-recommended": "8.0.19"
     }
 }
