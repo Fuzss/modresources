@@ -249,7 +249,7 @@ diagonalwindows:
     curseforge: diagonal-windows
     modrinth: diagonal-windows
 miniumstone:
-  weight: 20
+  weight: 10
   distributions:
     curseforge: minium-stone
     modrinth: minium-stone
@@ -258,3 +258,8 @@ effectdescriptions:
   distributions:
     curseforge: new-effect-descriptions
     modrinth: effect-descriptions
+goldenagecombat:
+  weight: 15
+  distributions:
+    curseforge: golden-age-combat
+    modrinth: golden-age-combat
