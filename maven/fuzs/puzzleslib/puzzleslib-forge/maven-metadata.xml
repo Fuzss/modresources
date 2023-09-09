@@ -3,8 +3,8 @@
   <groupId>fuzs.puzzleslib</groupId>
   <artifactId>puzzleslib-forge</artifactId>
   <versioning>
-    <latest>8.0.32</latest>
-    <release>8.0.32</release>
+    <latest>8.0.33</latest>
+    <release>8.0.33</release>
     <versions>
       <version>4.0.0</version>
       <version>4.0.1</version>
@@ -195,7 +195,8 @@
       <version>8.0.30</version>
       <version>8.0.31</version>
       <version>8.0.32</version>
+      <version>8.0.33</version>
     </versions>
-    <lastUpdated>20230908113941</lastUpdated>
+    <lastUpdated>20230909122955</lastUpdated>
   </versioning>
 </metadata>
