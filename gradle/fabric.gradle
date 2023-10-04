@@ -8,6 +8,28 @@ version = "v${modVersion}-${libs.versions.minecraft.get()}-Fabric"
 group = modMavenGroup
 
 repositories {
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = "CurseForge"
+                url = "https://cursemaven.com"
+            }
+        }
+        filter {
+            includeGroup "curse.maven"
+        }
+    }
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = "Modrinth"
+                url = "https://api.modrinth.com/maven"
+            }
+        }
+        filter {
+            includeGroup "maven.modrinth"
+        }
+    }
     maven {
         name = "Modmuss"
         url = "https://maven.modmuss50.me/"

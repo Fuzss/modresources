@@ -51,6 +51,33 @@ minecraft {
     }
 }
 
+repositories {
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = "CurseForge"
+                url = "https://cursemaven.com"
+            }
+        }
+        forRepositories(fg.repository)
+        filter {
+            includeGroup "curse.maven"
+        }
+    }
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = "Modrinth"
+                url = "https://api.modrinth.com/maven"
+            }
+        }
+        forRepositories(fg.repository)
+        filter {
+            includeGroup "maven.modrinth"
+        }
+    }
+}
+
 dependencies {
     // Common Project
     compileOnly(project(":Common")) {

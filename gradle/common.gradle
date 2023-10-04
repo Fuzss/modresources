@@ -5,6 +5,31 @@ archivesBaseName = "${modName.replaceAll("[^a-zA-Z]", "")}"
 version = "v${modVersion}-${libs.versions.minecraft.get()}-Common"
 group = modMavenGroup
 
+repositories {
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = "CurseForge"
+                url = "https://cursemaven.com"
+            }
+        }
+        filter {
+            includeGroup "curse.maven"
+        }
+    }
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = "Modrinth"
+                url = "https://api.modrinth.com/maven"
+            }
+        }
+        filter {
+            includeGroup "maven.modrinth"
+        }
+    }
+}
+
 dependencies {
     minecraft "com.mojang:minecraft:${libs.versions.minecraft.get()}"
     mappings loom.layered() {
