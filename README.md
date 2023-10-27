@@ -20,7 +20,7 @@ dependencies {
     api "fuzs.<modId>:<modId>-fabric:<modVersion>"
     // Fabric
     modApi "fuzs.<modId>:<modId>-fabric:<modVersion>"
-    // Fabric
+    // Forge
     api fg.deobf("fuzs.<modId>:<modId>-fabric:<modVersion>")
 }
 ```
