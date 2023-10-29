@@ -17,11 +17,11 @@ repositories {
 
 dependencies {
     // Common
-    api "fuzs.<modId>:<modId>-fabric:<modVersion>"
+    api "fuzs.<modId>:<modId>-common:<modVersion>"
     // Fabric
     modApi "fuzs.<modId>:<modId>-fabric:<modVersion>"
     // Forge
-    api fg.deobf("fuzs.<modId>:<modId>-fabric:<modVersion>")
+    api fg.deobf("fuzs.<modId>:<modId>-forge:<modVersion>")
 }
 ```
 
