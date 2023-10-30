@@ -263,3 +263,8 @@ goldenagecombat:
   distributions:
     curseforge: golden-age-combat
     modrinth: golden-age-combat
+configuredefaults:
+  weight: 0
+  distributions:
+    curseforge: configured-defaults
+    modrinth: configured-defaults
