@@ -1,0 +1,1 @@
+Combat Nouveau brings you some of the features from [Mojang's Combat Tests](https://minecraft.fandom.com/wiki/Java_Edition_Combat_Tests) right now. Experience refined combat mechanics and not just that! There are also many additional new changes and settings. And of course everything is fully customizable to your desires.
