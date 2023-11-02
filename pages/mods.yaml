@@ -49,7 +49,7 @@ easymagic:
     curseforge: easy-magic
     modrinth: easy-magic
 diagonalfences:
-  weight: 35
+  weight: 45
   distributions:
     curseforge: diagonal-fences
     modrinth: diagonal-fences
@@ -244,7 +244,7 @@ metalbundles:
     curseforge: metal-bundles
     modrinth: metal-bundles
 diagonalwindows:
-  weight: 35
+  weight: 30
   distributions:
     curseforge: diagonal-windows
     modrinth: diagonal-windows
@@ -268,3 +268,23 @@ configuredefaults:
   distributions:
     curseforge: configured-defaults
     modrinth: configured-defaults
+swordblockingmechanics:
+  weight: 25
+  distributions:
+    curseforge: sword-blocking-mechanics
+    modrinth: sword-blocking-mechanics
+combatnouveau:
+  weight: 35
+  distributions:
+    curseforge: combat-nouveau
+    modrinth: combat-nouveau
+diagonalwalls:
+  weight: 40
+  distributions:
+    curseforge: diagonal-walls
+    modrinth: diagonal-walls
+cutthrough:
+  weight: 15
+  distributions:
+    curseforge: cut-through
+    modrinth: cut-through

@@ -1,0 +1,1 @@
++ Thanks to [OrangeMarshall](https://www.curseforge.com/members/Forge_User_17820861) and their [Old Animations Mod](https://www.curseforge.com/minecraft/mc-mods/old-animations-mod) mod for remembering some old combat features brought back to life in Golden Age Combat!
