@@ -288,3 +288,8 @@ cutthrough:
   distributions:
     curseforge: cut-through
     modrinth: cut-through
+sneakycurses:
+  weight: 5
+  distributions:
+    curseforge: sneaky-curses-forge
+    modrinth: sneaky-curses
