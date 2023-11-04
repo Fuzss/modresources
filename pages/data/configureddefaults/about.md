@@ -2,4 +2,4 @@ Configured Defaults serves a a utility for mod packs for copying absent files to
 Most importantly this helps mod pack makers with providing default mod config files, especially when those mods have been added to the pack via an update and would otherwise generate their missing configs themselves.
 Any file and folder in the game directory is supported, so even files like `options.txt` can use a preset.
 
-Further instructions on how to use this mod are found in `configureddefaults/README.md`.
+Further instructions on how to use this mod are found in `configureddefaults/README.md` which generates after the game has run for the first time with the mod installed.
