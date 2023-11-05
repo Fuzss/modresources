@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>fuzs.thinair</groupId>
+  <artifactId>thinair-common</artifactId>
+  <version>8.1.0</version>
+  <name>Thin Air [Common]</name>
+  <description>The air is not always breathable in the depths of the earth and other dimensions.</description>
+  <url>https://github.com/Fuzss/thinair</url>
+  <licenses>
+    <license>
+      <name>MIT</name>
+      <url>https://spdx.org/licenses/MIT.html</url>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <id>petrak, alphamode, fuzs</id>
+      <name>Petrak, AlphaMode, Fuzs</name>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:git:git://github.com/Fuzss/thinair.git</connection>
+    <developerConnection>scm:git:git@github.com:Fuzss/thinair.git</developerConnection>
+    <url>https://github.com/Fuzss/thinair</url>
+  </scm>
+  <issueManagement>
+    <system>github</system>
+    <url>https://github.com/Fuzss/thinair/issues</url>
+  </issueManagement>
+  <dependencies>
+    <dependency>
+      <groupId>fuzs.puzzleslib</groupId>
+      <artifactId>puzzleslib-common</artifactId>
+      <version>8.1.7</version>
+      <scope>compile</scope>
+    </dependency>
+  </dependencies>
+</project>
