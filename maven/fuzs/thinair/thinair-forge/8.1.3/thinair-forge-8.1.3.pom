@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>fuzs.thinair</groupId>
+  <artifactId>thinair-forge</artifactId>
+  <version>8.1.3</version>
+  <name>Thin Air [Forge]</name>
+  <description>The air is not always breathable in the depths of the earth and other dimensions.</description>
+  <url>https://github.com/Fuzss/thinair</url>
+  <licenses>
+    <license>
+      <name>MIT</name>
+      <url>https://spdx.org/licenses/MIT.html</url>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <id>petrak, alphamode, fuzs</id>
+      <name>Petrak, AlphaMode, Fuzs</name>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:git:git://github.com/Fuzss/thinair.git</connection>
+    <developerConnection>scm:git:git@github.com:Fuzss/thinair.git</developerConnection>
+    <url>https://github.com/Fuzss/thinair</url>
+  </scm>
+  <issueManagement>
+    <system>github</system>
+    <url>https://github.com/Fuzss/thinair/issues</url>
+  </issueManagement>
+  <dependencies>
+    <dependency>
+      <groupId>fuzs.puzzleslib</groupId>
+      <artifactId>puzzleslib-forge</artifactId>
+      <version>8.1.7</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>top.theillusivec4.curios</groupId>
+      <artifactId>curios-forge</artifactId>
+      <version>5.2.0-beta.3+1.20.1</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>fuzs.forgeconfigscreens</groupId>
+      <artifactId>forgeconfigscreens-forge</artifactId>
+      <version>8.0.0</version>
+      <scope>runtime</scope>
+    </dependency>
+  </dependencies>
+</project>
