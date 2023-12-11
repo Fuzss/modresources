@@ -7,4 +7,4 @@
 + While carrying a bag item with your cursor, right-click + drag across multiple slots to insert items into the bag or extract items from it when the dragged across slots are empty.
 + Hold the `Ctrl` key (`Cmd` on Mac) to enter precision mode; instead of inserting / extracting whole stacks only a single item will be moved. Use the scroll wheel to quickly get to a specific amount.
 + Observe a tiny indicator on bag items when your cursor is holding an item, telling you if the item can be added and if the bag already contains items of that type.
-+ Enchant your bag with preservation to prevent it from dropping abd being lost on your death. The enchantment level is reduced by one each time.
++ Enchant your bag with preservation to prevent it from dropping and being lost on your death. The enchantment level is reduced by one each time.
