@@ -257,7 +257,7 @@ task allUploadEverywhere(type: GradleBuild) {
 task commonGenSources(type: GradleBuild) {
     group = "_main"
     tasks = [
-            ":Common:genSourcesWithQuiltflower"
+            ":Common:genSourcesWithVineflower"
     ]
 }
 
@@ -285,10 +285,10 @@ task forgeGenSources(type: GradleBuild) {
 task allGenSources(type: GradleBuild) {
     group = "_main"
     tasks = [
-            ":Common:genSourcesWithQuiltflower",
-            ":Fabric:genSourcesWithQuiltflower",
-            ":NeoForge:genSourcesWithQuiltflower",
-            ":Forge:genIntellijRuns"
+            ":Common:genSourcesWithVineflower",
+            ":Fabric:genSourcesWithVineflower",
+            ":NeoForge:genSourcesWithVineflower",
+            ":Forge:genSourcesWithVineflower"
     ]
 }
 
