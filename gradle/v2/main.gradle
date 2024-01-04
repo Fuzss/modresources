@@ -319,6 +319,40 @@ subprojects {
 //	debugMode = true
     }
 
+    task refreshUpdateJson {
+        onlyIf { project.hasProperty('modResources') }
+        doLast {
+            var updateFile = file(project.findProperty('modResources').concat(File.separator).concat('update').concat(File.separator).concat("${modId}").concat('.json'))
+            var updateJson
+            if (updateFile.exists() && updateFile.canRead()) {
+                updateJson = new groovy.json.JsonSlurper().parseText(updateFile.text)
+                "${projectGameVersions}".replaceAll(" ", "").split(",").each { version ->
+                    updateJson['promos']["${version}-latest"] = "${modVersion}"
+                    // alpha and beta releases will contain 'a' or 'b' char respectively, don't update recommended for those
+                    if ("${modVersion}".matches("[^a-zA-Z]+")) {
+                        updateJson['promos']["${version}-recommended"] = "${modVersion}"
+                    }
+                }
+            } else {
+                var builder = new groovy.json.JsonBuilder()
+                updateJson = builder {
+                    homepage "${modSourceUrl}"
+                    promos {
+                        "${projectGameVersions}".replaceAll(" ", "").split(",").each { version ->
+                            "${version}-latest" "${modVersion}"
+                            // alpha and beta releases will contain 'a' or 'b' char respectively, don't update recommended for those
+                            if ("${modVersion}".matches("[^a-zA-Z]+")) {
+                                "${version}-recommended" "${modVersion}"
+                            }
+                        }
+                    }
+                }
+            }
+            var output = new groovy.json.JsonOutput()
+            updateFile.write(output.prettyPrint(output.toJson(updateJson)))
+        }
+    }
+
     task copyJarToDir(type: Copy) {
         onlyIf { project.hasProperty('buildJarOutputDir') && project.hasProperty('uniqueBuildNumber') }
         if (project.findProperty('copyBuildJar').toBoolean()) {
