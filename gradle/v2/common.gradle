@@ -31,7 +31,3 @@ dependencies {
     api libs.mixinextras
     annotationProcessor libs.mixinextras
 }
-
-tasks.withType(net.fabricmc.loom.task.AbstractRemapJarTask).configureEach {
-    targetNamespace = "named"
-}
