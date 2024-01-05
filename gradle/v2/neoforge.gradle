@@ -56,6 +56,10 @@ dependencies {
     neoForge libs.neoforge.neoforge
 }
 
+tasks.withType(Jar).configureEach {
+    exclude "architectury.common.json"
+}
+
 shadowJar {
     configurations = [project.configurations.shadowCommon]
     archiveClassifier = "dev-shadow"
