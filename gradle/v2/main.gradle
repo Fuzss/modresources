@@ -156,6 +156,11 @@ subprojects {
     processResources {
         duplicatesStrategy DuplicatesStrategy.EXCLUDE
 
+        from(project(":Common").sourceSets.main.resources)
+        from(project(":Common").file("src/generated/resources")) {
+            exclude(".cache/")
+        }
+
         var resourceProperties = [
                 "modId": modId,
                 "modName": modName,
