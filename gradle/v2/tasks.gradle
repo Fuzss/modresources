@@ -1,12 +1,12 @@
 task commonClean(type: GradleBuild) {
-    group = "_main"
+    group = "_build"
     tasks = [
             ":Common:clean"
     ]
 }
 
 task fabricClean(type: GradleBuild) {
-    group = "_main"
+    group = "_build"
     tasks = [
             ":Common:clean",
             ":Fabric:clean"
@@ -14,7 +14,7 @@ task fabricClean(type: GradleBuild) {
 }
 
 task neoforgeClean(type: GradleBuild) {
-    group = "_main"
+    group = "_build"
     tasks = [
             ":Common:clean",
             ":NeoForge:clean"
@@ -22,7 +22,7 @@ task neoforgeClean(type: GradleBuild) {
 }
 
 task forgeClean(type: GradleBuild) {
-    group = "_main"
+    group = "_build"
     tasks = [
             ":Common:clean",
             ":Forge:clean"
@@ -30,7 +30,7 @@ task forgeClean(type: GradleBuild) {
 }
 
 task allClean(type: GradleBuild) {
-    group = "_main"
+    group = "_build"
     tasks = [
             ":Common:clean",
             ":Fabric:clean",
@@ -40,7 +40,7 @@ task allClean(type: GradleBuild) {
 }
 
 task fabricBuild(type: GradleBuild) {
-    group = "_main"
+    group = "_build"
     tasks = [
             ":Common:clean",
             ":Fabric:clean",
@@ -49,7 +49,7 @@ task fabricBuild(type: GradleBuild) {
 }
 
 task neoforgeBuild(type: GradleBuild) {
-    group = "_main"
+    group = "_build"
     tasks = [
             ":Common:clean",
             ":NeoForge:clean",
@@ -58,7 +58,7 @@ task neoforgeBuild(type: GradleBuild) {
 }
 
 task forgeBuild(type: GradleBuild) {
-    group = "_main"
+    group = "_build"
     tasks = [
             ":Common:clean",
             ":Forge:clean",
@@ -67,7 +67,7 @@ task forgeBuild(type: GradleBuild) {
 }
 
 task allBuild(type: GradleBuild) {
-    group = "_main"
+    group = "_build"
     tasks = [
             ":Common:clean",
             ":Forge:clean",
@@ -80,7 +80,7 @@ task allBuild(type: GradleBuild) {
 }
 
 task commonPublish(type: GradleBuild) {
-    group = "_main"
+    group = "_publish"
     tasks = [
             ":Common:clean",
             ":Common:publishMavenJavaPublicationToFuzsModResourcesRepository"
@@ -88,7 +88,7 @@ task commonPublish(type: GradleBuild) {
 }
 
 task fabricPublish(type: GradleBuild) {
-    group = "_main"
+    group = "_publish"
     tasks = [
             ":Common:clean",
             ":Fabric:clean",
@@ -97,7 +97,7 @@ task fabricPublish(type: GradleBuild) {
 }
 
 task neoforgePublish(type: GradleBuild) {
-    group = "_main"
+    group = "_publish"
     tasks = [
             ":Common:clean",
             ":NeoForge:clean",
@@ -106,7 +106,7 @@ task neoforgePublish(type: GradleBuild) {
 }
 
 task forgePublish(type: GradleBuild) {
-    group = "_main"
+    group = "_publish"
     tasks = [
             ":Common:clean",
             ":Forge:clean",
@@ -115,7 +115,7 @@ task forgePublish(type: GradleBuild) {
 }
 
 task allPublish(type: GradleBuild) {
-    group = "_main"
+    group = "_publish"
     tasks = [
             ":Common:clean",
             ":Fabric:clean",
@@ -129,7 +129,7 @@ task allPublish(type: GradleBuild) {
 }
 
 task fabricUploadCurseForge(type: GradleBuild) {
-    group = "_main"
+    group = "_upload"
     tasks = [
             ":Common:clean",
             ":Fabric:clean",
@@ -138,7 +138,7 @@ task fabricUploadCurseForge(type: GradleBuild) {
 }
 
 task neoforgeUploadCurseForge(type: GradleBuild) {
-    group = "_main"
+    group = "_upload"
     tasks = [
             ":Common:clean",
             ":NeoForge:clean",
@@ -147,7 +147,7 @@ task neoforgeUploadCurseForge(type: GradleBuild) {
 }
 
 task forgeUploadCurseForge(type: GradleBuild) {
-    group = "_main"
+    group = "_upload"
     tasks = [
             ":Common:clean",
             ":Forge:clean",
@@ -156,7 +156,7 @@ task forgeUploadCurseForge(type: GradleBuild) {
 }
 
 task allUploadCurseForge(type: GradleBuild) {
-    group = "_main"
+    group = "_upload"
     tasks = [
             ":Common:clean",
             ":Fabric:clean",
@@ -169,7 +169,7 @@ task allUploadCurseForge(type: GradleBuild) {
 }
 
 task fabricUploadModrinth(type: GradleBuild) {
-    group = "_main"
+    group = "_upload"
     tasks = [
             ":Common:clean",
             ":Fabric:clean",
@@ -178,7 +178,7 @@ task fabricUploadModrinth(type: GradleBuild) {
 }
 
 task neoforgeUploadModrinth(type: GradleBuild) {
-    group = "_main"
+    group = "_upload"
     tasks = [
             ":Common:clean",
             ":NeoForge:clean",
@@ -187,7 +187,7 @@ task neoforgeUploadModrinth(type: GradleBuild) {
 }
 
 task forgeUploadModrinth(type: GradleBuild) {
-    group = "_main"
+    group = "_upload"
     tasks = [
             ":Common:clean",
             ":Forge:clean",
@@ -196,7 +196,7 @@ task forgeUploadModrinth(type: GradleBuild) {
 }
 
 task allUploadModrinth(type: GradleBuild) {
-    group = "_main"
+    group = "_upload"
     tasks = [
             ":Common:clean",
             ":Fabric:clean",
@@ -209,7 +209,7 @@ task allUploadModrinth(type: GradleBuild) {
 }
 
 task fabricUploadEverywhere(type: GradleBuild) {
-    group = "_main"
+    group = "_upload"
     tasks = [
             ":Common:clean",
             ":Fabric:clean",
@@ -219,7 +219,7 @@ task fabricUploadEverywhere(type: GradleBuild) {
 }
 
 task neoforgeUploadEverywhere(type: GradleBuild) {
-    group = "_main"
+    group = "_upload"
     tasks = [
             ":Common:clean",
             ":NeoForge:clean",
@@ -229,7 +229,7 @@ task neoforgeUploadEverywhere(type: GradleBuild) {
 }
 
 task forgeUploadEverywhere(type: GradleBuild) {
-    group = "_main"
+    group = "_upload"
     tasks = [
             ":Common:clean",
             ":Forge:clean",
@@ -239,7 +239,7 @@ task forgeUploadEverywhere(type: GradleBuild) {
 }
 
 task allUploadEverywhere(type: GradleBuild) {
-    group = "_main"
+    group = "_upload"
     tasks = [
             ":Common:clean",
             ":Fabric:clean",
@@ -255,35 +255,35 @@ task allUploadEverywhere(type: GradleBuild) {
 }
 
 task commonGenSources(type: GradleBuild) {
-    group = "_main"
+    group = "_build"
     tasks = [
             ":Common:genSourcesWithVineflower"
     ]
 }
 
 task fabricGenSources(type: GradleBuild) {
-    group = "_main"
+    group = "_build"
     tasks = [
             ":Fabric:genSourcesWithVineflower"
     ]
 }
 
 task neoforgeGenSources(type: GradleBuild) {
-    group = "_main"
+    group = "_build"
     tasks = [
             ":NeoForge:genSourcesWithVineflower"
     ]
 }
 
 task forgeGenSources(type: GradleBuild) {
-    group = "_main"
+    group = "_build"
     tasks = [
             ":Forge:genSourcesWithVineflower"
     ]
 }
 
 task allGenSources(type: GradleBuild) {
-    group = "_main"
+    group = "_build"
     tasks = [
             ":Common:genSourcesWithVineflower",
             ":Fabric:genSourcesWithVineflower",
@@ -293,56 +293,56 @@ task allGenSources(type: GradleBuild) {
 }
 
 task fabricClient(type: GradleBuild) {
-    group = "_main"
+    group = "_run"
     tasks = [
             ":Fabric:runClient"
     ]
 }
 
 task neoforgeClient(type: GradleBuild) {
-    group = "_main"
+    group = "_run"
     tasks = [
             ":NeoForge:runClient"
     ]
 }
 
 task forgeClient(type: GradleBuild) {
-    group = "_main"
+    group = "_run"
     tasks = [
             ":Forge:runClient"
     ]
 }
 
 task fabricServer(type: GradleBuild) {
-    group = "_main"
+    group = "_run"
     tasks = [
             ":Fabric:runServer"
     ]
 }
 
 task neoforgeServer(type: GradleBuild) {
-    group = "_main"
+    group = "_run"
     tasks = [
             ":NeoForge:runServer"
     ]
 }
 
 task forgeServer(type: GradleBuild) {
-    group = "_main"
+    group = "_run"
     tasks = [
             ":Forge:runServer"
     ]
 }
 
 task neoforgeData(type: GradleBuild) {
-    group = "_main"
+    group = "_run"
     tasks = [
             ":NeoForge:runData"
     ]
 }
 
 task forgeData(type: GradleBuild) {
-    group = "_main"
+    group = "_run"
     tasks = [
             ":Forge:runData"
     ]
