@@ -39,6 +39,14 @@ task allClean(type: GradleBuild) {
     ]
 }
 
+task commonBuild(type: GradleBuild) {
+    group = "_build"
+    tasks = [
+            ":Common:clean",
+            ":Common:build"
+    ]
+}
+
 task fabricBuild(type: GradleBuild) {
     group = "_build"
     tasks = [
