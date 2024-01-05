@@ -280,7 +280,7 @@ subprojects {
             }
         }
         options {
-//        debug = true
+//          debug = true
             javaVersionAutoDetect = false
             forgeGradleIntegration = false
         }
@@ -290,7 +290,7 @@ subprojects {
         if (!file('../CHANGELOG.md').canRead()) {
             throw new FileNotFoundException("Could not read changelog file")
         }
-        token = project.hasProperty('modrinthApiToken') ? project.findProperty('modrinthApiToken') : ''
+        token = project.hasProperty('modrinthPersonalAccessToken') ? project.findProperty('modrinthPersonalAccessToken') : ''
         projectId = projectModrinthId
         versionNumber = project.version
         versionName = "[${project.name.toUpperCase()}] [${libs.versions.minecraft.get()}] ${archivesBaseName}-v${modVersion}"
@@ -321,7 +321,7 @@ subprojects {
                 }
             }
         }
-//	debugMode = true
+//	    debugMode = true
     }
 
     task refreshUpdateJson {
@@ -331,24 +331,20 @@ subprojects {
             var updateJson
             if (updateFile.exists() && updateFile.canRead()) {
                 updateJson = new groovy.json.JsonSlurper().parseText(updateFile.text)
-                "${projectGameVersions}".replaceAll(" ", "").split(",").each { version ->
-                    updateJson['promos']["${version}-latest"] = "${modVersion}"
-                    // alpha and beta releases will contain 'a' or 'b' char respectively, don't update recommended for those
-                    if ("${modVersion}".matches("[^a-zA-Z]+")) {
-                        updateJson['promos']["${version}-recommended"] = "${modVersion}"
-                    }
+                updateJson['promos']["${libs.versions.minecraft.get()}-latest"] = "${modVersion}"
+                // alpha and beta releases will contain 'a' or 'b' char respectively, don't update recommended for those
+                if ("${modVersion}".matches("[^a-zA-Z]+")) {
+                    updateJson['promos']["${libs.versions.minecraft.get()}-recommended"] = "${modVersion}"
                 }
             } else {
                 var builder = new groovy.json.JsonBuilder()
                 updateJson = builder {
                     homepage "${modSourceUrl}"
                     promos {
-                        "${projectGameVersions}".replaceAll(" ", "").split(",").each { version ->
-                            "${version}-latest" "${modVersion}"
-                            // alpha and beta releases will contain 'a' or 'b' char respectively, don't update recommended for those
-                            if ("${modVersion}".matches("[^a-zA-Z]+")) {
-                                "${version}-recommended" "${modVersion}"
-                            }
+                        "${libs.versions.minecraft.get()}-latest" "${modVersion}"
+                        // alpha and beta releases will contain 'a' or 'b' char respectively, don't update recommended for those
+                        if ("${modVersion}".matches("[^a-zA-Z]+")) {
+                            "${libs.versions.minecraft.get()}-recommended" "${modVersion}"
                         }
                     }
                 }
