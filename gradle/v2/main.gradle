@@ -156,9 +156,11 @@ subprojects {
     processResources {
         duplicatesStrategy DuplicatesStrategy.EXCLUDE
 
-        from(project(":Common").sourceSets.main.resources)
+        from(project(":Common").sourceSets.main.resources) {
+            exclude "${modId}.common.mixins.json"
+        }
         from(project(":Common").file("src/generated/resources")) {
-            exclude(".cache/")
+            exclude ".cache/"
         }
 
         var resourceProperties = [
