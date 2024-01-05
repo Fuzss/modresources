@@ -70,9 +70,9 @@ task allBuild(type: GradleBuild) {
     group = "_build"
     tasks = [
             ":Common:clean",
-            ":Forge:clean",
             ":Fabric:clean",
-            ":Common:build",
+            ":NeoForge:clean",
+            ":Forge:clean",
             ":Fabric:build",
             ":NeoForge:build",
             ":Forge:build"
