@@ -293,3 +293,13 @@ sneakycurses:
   distributions:
     curseforge: sneaky-curses-forge
     modrinth: sneaky-curses
+resourcepackoverrides:
+  weight: 0
+  distributions:
+    curseforge: resource-pack-overrides
+    modrinth: resource-pack-overrides
+nightconfigfixes:
+  weight: 0
+  distributions:
+    curseforge: night-config-fixes
+    modrinth: night-config-fixes

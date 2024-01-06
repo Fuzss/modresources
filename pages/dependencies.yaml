@@ -4,8 +4,9 @@ puzzleslib:
     curseforge: puzzles-lib
     modrinth: puzzles-lib
   loaders:
-    - forge
     - fabric
+    - neoforge
+    - forge
 fabricapi:
   name: Fabric Api
   distributions:
@@ -20,12 +21,22 @@ forgeconfigapiport:
     modrinth: forge-config-api-port
   loaders:
     - fabric
+    - neoforge
+neoforgeconfigapiport:
+  name: NeoForge Config API Port
+  distributions:
+    curseforge: neoforge-config-api-port
+    modrinth: neoforge-config-api-port
+  loaders:
+    - fabric
+    - forge
 curiosapi:
   name: Curios API
   distributions:
     curseforge: curios
     modrinth: curios
   loaders:
+    - neoforge
     - forge
 trinkets:
   name: Trinkets

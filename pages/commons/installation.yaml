@@ -2,8 +2,9 @@ environments:
   client: required
   server: required
 loaders:
-  - forge
   - fabric
+  - neoforge
+  - forge
 dependencies:
   puzzleslib: required
   fabricapi: required
