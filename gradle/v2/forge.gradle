@@ -72,19 +72,15 @@ dependencies {
     api(include(libs.mixinextras.forge.get()))
 }
 
-tasks.withType(Jar).configureEach {
-    exclude "architectury.common.json"
-}
-
 shadowJar {
     configurations = [project.configurations.shadowCommon]
-    archiveClassifier = "dev-shadow"
+    archiveClassifier = "all"
 }
 
 remapJar {
     input.set shadowJar.archiveFile
     dependsOn shadowJar
-    archiveClassifier.set("")
+    archiveClassifier = ""
     atAccessWideners.add("${modId}.accesswidener")
 }
 
