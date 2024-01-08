@@ -59,7 +59,7 @@ dependencies {
 
 shadowJar {
     configurations = [project.configurations.shadowCommon]
-    archiveClassifier = "all"
+    archiveClassifier = "dev-shadow"
 }
 
 remapJar {
