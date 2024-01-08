@@ -57,24 +57,20 @@ dependencies {
     modApi libs.fabricloader.fabric
 }
 
-tasks.withType(Jar).configureEach {
-    exclude "architectury.common.json"
-}
-
 shadowJar {
     configurations = [project.configurations.shadowCommon]
-    archiveClassifier.set("dev-shadow")
+    archiveClassifier = "all"
 }
 
 remapJar {
     input.set shadowJar.archiveFile
     dependsOn shadowJar
-    archiveClassifier.set("")
+    archiveClassifier = ""
     injectAccessWidener = true
 }
 
 jar {
-    archiveClassifier.set("dev")
+    archiveClassifier = "dev"
 }
 
 sourcesJar {
