@@ -57,6 +57,10 @@ dependencies {
     modApi libs.fabricloader.fabric
 }
 
+tasks.withType(Jar).configureEach {
+    exclude "architectury.common.json"
+}
+
 shadowJar {
     configurations = [project.configurations.shadowCommon]
     archiveClassifier = "dev-shadow"
