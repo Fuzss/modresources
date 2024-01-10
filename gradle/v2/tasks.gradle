@@ -1,5 +1,5 @@
 var allSubprojects = rootProject.subprojects.name
-var modLoaderSubprojects = allSubprojects.findAll { it.toLowerCase() != "common" }
+var modLoaderSubprojects = allSubprojects.findAll { !it.contains("common") }
 
 allSubprojects.forEach { projectName ->
     tasks.register(projectName.toLowerCase() + "Clean", GradleBuild) {

@@ -1,5 +1,5 @@
 architectury {
-    common rootProject.subprojects.name.collect { it.toLowerCase() }.findAll { it.toLowerCase() != "common" }
+    common rootProject.subprojects.name.collect { it.toLowerCase() }.findAll { !it.contains("common") }
 }
 
 loom {
