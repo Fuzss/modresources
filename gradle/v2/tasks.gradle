@@ -1,8 +1,8 @@
 var allSubprojects = rootProject.subprojects.name
-var modLoaderSubprojects = allSubprojects.findAll { !it.contains("common") }
+var modLoaderSubprojects = allSubprojects.findAll { !it.toLowerCase().contains("common") }
 
 allSubprojects.forEach { projectName ->
-    tasks.register(projectName.toLowerCase() + "Clean", GradleBuild) {
+    tasks.register(projectName.substring(0, 1).toLowerCase() + projectName.substring(1).replaceAll("\\W", "") + "Clean", GradleBuild) {
         group = "_build"
         tasks = [":" + projectName + ":clean"]
     }
@@ -14,7 +14,7 @@ tasks.register("allClean", GradleBuild) {
 }
 
 allSubprojects.forEach { projectName ->
-    tasks.register(projectName.toLowerCase() + "Build", GradleBuild) {
+    tasks.register(projectName.substring(0, 1).toLowerCase() + projectName.substring(1).replaceAll("\\W", "") + "Build", GradleBuild) {
         group = "_build"
         tasks = [":Common:clean", ":" + projectName + ":clean", ":" + projectName + ":build"]
     }
@@ -26,7 +26,7 @@ tasks.register("allBuild", GradleBuild) {
 }
 
 allSubprojects.forEach { projectName ->
-    tasks.register(projectName.toLowerCase() + "Publish", GradleBuild) {
+    tasks.register(projectName.substring(0, 1).toLowerCase() + projectName.substring(1).replaceAll("\\W", "") + "Publish", GradleBuild) {
         group = "_publish"
         tasks = [":Common:clean", ":" + projectName + ":clean", ":" + projectName + ":publishMavenJavaPublicationToFuzsModResourcesRepository"]
     }
@@ -38,7 +38,7 @@ tasks.register("allPublish", GradleBuild) {
 }
 
 allSubprojects.forEach { projectName ->
-    tasks.register(projectName.toLowerCase() + "GenSources", GradleBuild) {
+    tasks.register(projectName.substring(0, 1).toLowerCase() + projectName.substring(1).replaceAll("\\W", "") + "GenSources", GradleBuild) {
         group = "_setup"
         tasks = [":" + projectName + ":genSourcesWithVineflower"]
     }
@@ -50,7 +50,7 @@ tasks.register("allGenSources", GradleBuild) {
 }
 
 modLoaderSubprojects.forEach { projectName ->
-    tasks.register(projectName.toLowerCase() + "UploadCurseForge", GradleBuild) {
+    tasks.register(projectName.substring(0, 1).toLowerCase() + projectName.substring(1).replaceAll("\\W", "") + "UploadCurseForge", GradleBuild) {
         group = "_upload"
         tasks = [":Common:clean", ":" + projectName + ":clean", ":" + projectName + ":curseforge"]
     }
@@ -62,7 +62,7 @@ tasks.register("allUploadCurseForge", GradleBuild) {
 }
 
 modLoaderSubprojects.forEach { projectName ->
-    tasks.register(projectName.toLowerCase() + "UploadModrinth", GradleBuild) {
+    tasks.register(projectName.substring(0, 1).toLowerCase() + projectName.substring(1).replaceAll("\\W", "") + "UploadModrinth", GradleBuild) {
         group = "_upload"
         tasks = [":Common:clean", ":" + projectName + ":clean", ":" + projectName + ":modrinth"]
     }
@@ -74,7 +74,7 @@ tasks.register("allUploadModrinth", GradleBuild) {
 }
 
 modLoaderSubprojects.forEach { projectName ->
-    tasks.register(projectName.toLowerCase() + "UploadEverywhere", GradleBuild) {
+    tasks.register(projectName.substring(0, 1).toLowerCase() + projectName.substring(1).replaceAll("\\W", "") + "UploadEverywhere", GradleBuild) {
         group = "_upload"
         tasks = [":Common:clean", ":" + projectName + ":clean", ":" + projectName + ":curseforge", ":" + projectName + ":modrinth"]
     }
@@ -86,14 +86,14 @@ tasks.register("allUploadEverywhere", GradleBuild) {
 }
 
 modLoaderSubprojects.forEach { projectName ->
-    tasks.register(projectName.toLowerCase() + "Client", GradleBuild) {
+    tasks.register(projectName.substring(0, 1).toLowerCase() + projectName.substring(1).replaceAll("\\W", "") + "Client", GradleBuild) {
         group = "_run"
         tasks = [":" + projectName + ":runClient"]
     }
 }
 
 modLoaderSubprojects.forEach { projectName ->
-    tasks.register(projectName.toLowerCase() + "Server", GradleBuild) {
+    tasks.register(projectName.substring(0, 1).toLowerCase() + projectName.substring(1).replaceAll("\\W", "") + "Server", GradleBuild) {
         group = "_run"
         tasks = [":" + projectName + ":runServer"]
     }
