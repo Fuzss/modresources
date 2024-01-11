@@ -21,14 +21,6 @@ forgeconfigapiport:
     modrinth: forge-config-api-port
   loaders:
     - fabric
-    - neoforge
-neoforgeconfigapiport:
-  name: NeoForge Config API Port
-  distributions:
-    curseforge: neoforge-config-api-port
-    modrinth: neoforge-config-api-port
-  loaders:
-    - fabric
     - forge
 curiosapi:
   name: Curios API
