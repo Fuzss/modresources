@@ -10,7 +10,7 @@ loom {
             ideConfigGenerated(false)
             // this should hopeful prevent an empty run directory being generated in common during initial project setup
             runDir("../run")
-            vmArgs '-Xms1G', '-Xmx4G', '-Dmixin.debug.export=true'
+            vmArgs "-Xms1G", "-Xmx4G", "-Dmixin.debug.export=true"
         }
         client {
             client()
