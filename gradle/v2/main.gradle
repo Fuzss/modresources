@@ -1,4 +1,4 @@
-println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
+println("Java: " + System.getProperty("java.version") + " JVM: " + System.getProperty("java.vm.version") + "(" + System.getProperty("java.vendor") + ") Arch: " + System.getProperty("os.arch"))
 
 allprojects {
     apply plugin: "architectury-plugin"
@@ -83,7 +83,7 @@ allprojects {
         // this fixes some edge cases with special characters not displaying correctly
         // see http://yodaconditions.net/blog/fix-for-java-file-encoding-problems-with-gradle.html
         // If Javadoc is generated, this must be specified in that task too.
-        options.encoding = 'UTF-8'
+        options.encoding = "UTF-8"
         options.release = 17
     }
 
@@ -93,8 +93,8 @@ allprojects {
         toolchain.languageVersion = JavaLanguageVersion.of(17)
     }
 
-    // silence missing javadoc comments, we just don't care
-    javadoc.options.addStringOption('Xdoclint:none', '-quiet')
+    // silence missing javadoc comments, we just don"t care
+    javadoc.options.addStringOption("Xdoclint:none", "-quiet")
 
     tasks.withType(Jar).configureEach {
         duplicatesStrategy DuplicatesStrategy.EXCLUDE
@@ -109,20 +109,20 @@ allprojects {
         manifest {
             attributes([
                     "Specification-Title"           : modName,
-                    'Specification-Version'         : modVersion,
+                    "Specification-Version"         : modVersion,
                     "Specification-Vendor"          : modAuthor,
-                    'Implementation-Title'          : modName,
-                    'Implementation-Version'        : modVersion,
-                    'Implementation-Vendor'         : modAuthor,
-                    'Implementation-Timestamp'      : new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
-                    'Implementation-Timestamp-Milli': System.currentTimeMillis(),
-                    'Implementation-URL'            : modSourceUrl,
-                    'Built-On-Java'                 : "${System.getProperty('java.vm.version')} (${System.getProperty('java.vm.vendor')})",
-                    'Built-On-Minecraft'            : libs.versions.minecraft.get()
+                    "Implementation-Title"          : modName,
+                    "Implementation-Version"        : modVersion,
+                    "Implementation-Vendor"         : modAuthor,
+                    "Implementation-Timestamp"      : new Date().format("yyyy-MM-dd"T"HH:mm:ssZ"),
+                    "Implementation-Timestamp-Milli": System.currentTimeMillis(),
+                    "Implementation-URL"            : modSourceUrl,
+                    "Built-On-Java"                 : "${System.getProperty("java.vm.version")} (${System.getProperty("java.vm.vendor")})",
+                    "Built-On-Minecraft"            : libs.versions.minecraft.get()
             ])
         }
 
-        group 'jar'
+        group "jar"
     }
 
     tasks.withType(GenerateModuleMetadata) {
@@ -213,7 +213,7 @@ subprojects {
                         developerConnection = "${modSourceUrl}".replace("https://github.com/", "scm:git:git@github.com:").concat(".git")
                     }
                     issueManagement {
-                        system = 'github'
+                        system = "github"
                         url = "${modIssueUrl}"
                     }
                     licenses {
@@ -233,8 +233,8 @@ subprojects {
         }
         repositories {
             maven {
-                name = 'FuzsModResources'
-                url "file://" + project.hasProperty('modResources') ? "${project.findProperty('modResources')}/maven" : System.getenv('local_maven')
+                name = "FuzsModResources"
+                url "file://" + project.hasProperty("modResources") ? "${project.findProperty("modResources")}/maven" : System.getenv("local_maven")
             }
         }
     }
@@ -244,14 +244,14 @@ subprojects {
     }
 
     curseforge {
-        if (!file('../CHANGELOG.md').canRead()) {
+        if (!file("../CHANGELOG.md").canRead()) {
             throw new FileNotFoundException("Could not read changelog file")
         }
-        apiKey = project.hasProperty('curseApiToken') ? project.findProperty('curseApiToken') : ''
+        apiKey = project.hasProperty("curseApiToken") ? project.findProperty("curseApiToken") : ""
         project {
             id = projectCurseForgeId
-            changelogType = 'markdown'
-            changelog = file('../CHANGELOG.md')
+            changelogType = "markdown"
+            changelog = file("../CHANGELOG.md")
             releaseType = projectReleaseType
             addGameVersion project.name
             addGameVersion libs.versions.minecraft.get()
@@ -291,14 +291,14 @@ subprojects {
     }
 
     modrinth {
-        if (!file('../CHANGELOG.md').canRead()) {
+        if (!file("../CHANGELOG.md").canRead()) {
             throw new FileNotFoundException("Could not read changelog file")
         }
-        token = project.hasProperty('modrinthPersonalAccessToken') ? project.findProperty('modrinthPersonalAccessToken') : ''
+        token = project.hasProperty("modrinthPersonalAccessToken") ? project.findProperty("modrinthPersonalAccessToken") : ""
         projectId = projectModrinthId
         versionNumber = project.version
         versionName = "[${project.name.toUpperCase()}] [${libs.versions.minecraft.get()}] ${archivesBaseName}-v${modVersion}"
-        changelog = file('../CHANGELOG.md').text
+        changelog = file("../CHANGELOG.md").text
         versionType = projectReleaseType
         uploadFile = remapJar
         loaders.add project.name.toLowerCase()
@@ -329,16 +329,16 @@ subprojects {
     }
 
     task refreshUpdateJson {
-        onlyIf { project.hasProperty('modResources') }
+        onlyIf { project.hasProperty("modResources") }
         doLast {
-            var updateFile = file(project.findProperty('modResources').concat(File.separator).concat('update').concat(File.separator).concat("${modId}").concat('.json'))
+            var updateFile = file(project.findProperty("modResources").concat(File.separator).concat("update").concat(File.separator).concat("${modId}").concat(".json"))
             var updateJson
             if (updateFile.exists() && updateFile.canRead()) {
                 updateJson = new groovy.json.JsonSlurper().parseText(updateFile.text)
-                updateJson['promos']["${libs.versions.minecraft.get()}-latest"] = "${modVersion}"
-                // alpha and beta releases will contain 'a' or 'b' char respectively, don't update recommended for those
+                updateJson["promos"]["${libs.versions.minecraft.get()}-latest"] = "${modVersion}"
+                // alpha and beta releases will contain "a" or "b" char respectively, don"t update recommended for those
                 if ("${modVersion}".matches("[^a-zA-Z]+")) {
-                    updateJson['promos']["${libs.versions.minecraft.get()}-recommended"] = "${modVersion}"
+                    updateJson["promos"]["${libs.versions.minecraft.get()}-recommended"] = "${modVersion}"
                 }
             } else {
                 var builder = new groovy.json.JsonBuilder()
@@ -346,7 +346,7 @@ subprojects {
                     homepage "${modSourceUrl}"
                     promos {
                         "${libs.versions.minecraft.get()}-latest" "${modVersion}"
-                        // alpha and beta releases will contain 'a' or 'b' char respectively, don't update recommended for those
+                        // alpha and beta releases will contain "a" or "b" char respectively, don"t update recommended for those
                         if ("${modVersion}".matches("[^a-zA-Z]+")) {
                             "${libs.versions.minecraft.get()}-recommended" "${modVersion}"
                         }
@@ -359,10 +359,10 @@ subprojects {
     }
 
     task copyJarToDir(type: Copy) {
-        onlyIf { project.hasProperty('buildJarOutputDir') && project.hasProperty('uniqueBuildNumber') }
-        if (project.findProperty('copyBuildJar').toBoolean()) {
+        onlyIf { project.hasProperty("buildJarOutputDir") && project.hasProperty("uniqueBuildNumber") }
+        if (project.findProperty("copyBuildJar").toBoolean()) {
             from remapJar
-            into project.findProperty('buildJarOutputDir')
+            into project.findProperty("buildJarOutputDir")
             // add build number to be able to distinguish jars when testing thorough official launcher
             // build number is stored in global gradle.properties
             rename { fileName -> fileName.replace("v${modVersion}", "v${modVersion}.${uniqueBuildNumber}") }
@@ -370,9 +370,9 @@ subprojects {
     }
 
     task incrementBuildNumber {
-        onlyIf { project.hasProperty('uniqueBuildNumber') }
+        onlyIf { project.hasProperty("uniqueBuildNumber") }
         doLast {
-            var propertiesName = 'gradle.properties'
+            var propertiesName = "gradle.properties"
             // build number is stored in global gradle.properties
             var propertiesFile = new File(project.gradle.gradleUserHomeDir, propertiesName)
             if (!propertiesFile.canRead()) { throw new FileNotFoundException("Could not read file ".concat(propertiesName)) }
