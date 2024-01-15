@@ -20,6 +20,8 @@ dependencies {
     api "fuzs.<modId>:<modId>-common:<modVersion>"
     // Fabric
     modApi "fuzs.<modId>:<modId>-fabric:<modVersion>"
+    // NeoForge
+    api "fuzs.<modId>:<modId>-neoforge:<modVersion>"
     // Forge
     api fg.deobf("fuzs.<modId>:<modId>-forge:<modVersion>")
 }
@@ -29,4 +31,4 @@ dependencies {
 Content for **@heyitsfuzs** mod pages found on [CurseForge](https://www.curseforge.com/members/fuzs/projects) and [Modrinth](https://modrinth.com/user/Fuzs). The full pages are generated from individual files using a private tool.
 
 ## `./update`
-Mod files for Forge's update checker system. The files are automatically refreshed locally from Gradle buildscripts whenever a new Forge release is published.
+Mod files for NeoForge's / Forge's update checker system. The files are automatically refreshed locally from Gradle buildscripts whenever a new NeoForge / Forge release is published.
