@@ -34,13 +34,6 @@ loom {
             server()
             setConfigName("Forge Server ${libs.versions.minecraft.get()}")
         }
-        data {
-            data()
-            setConfigName("Forge Data ${libs.versions.minecraft.get()}")
-            programArgs("--all", "--mod", modId)
-            programArgs("--existing", project(":Common").file("src/main/resources").absolutePath)
-            programArgs("--output", project(":Common").file("src/generated/resources").absolutePath)
-        }
     }
 }
 
