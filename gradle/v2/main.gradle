@@ -93,7 +93,7 @@ allprojects {
         toolchain.languageVersion = JavaLanguageVersion.of(17)
     }
 
-    // silence missing javadoc comments, we just don"t care
+    // silence missing javadoc comments, we just don't care
     javadoc.options.addStringOption("Xdoclint:none", "-quiet")
 
     tasks.withType(Jar).configureEach {
@@ -114,7 +114,7 @@ allprojects {
                     "Implementation-Title"          : modName,
                     "Implementation-Version"        : modVersion,
                     "Implementation-Vendor"         : modAuthor,
-                    "Implementation-Timestamp"      : new Date().format("yyyy-MM-dd"T"HH:mm:ssZ"),
+                    "Implementation-Timestamp"      : new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
                     "Implementation-Timestamp-Milli": System.currentTimeMillis(),
                     "Implementation-URL"            : modSourceUrl,
                     "Built-On-Java"                 : "${System.getProperty("java.vm.version")} (${System.getProperty("java.vm.vendor")})",
