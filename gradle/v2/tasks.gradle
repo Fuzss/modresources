@@ -105,3 +105,10 @@ if (modLoaderSubprojects.any { it.toLowerCase().equals("neoforge") }) {
         tasks = [":NeoForge:runData"]
     }
 }
+
+if (modLoaderSubprojects.any { it.toLowerCase().equals("forge") }) {
+    tasks.register("forgeData", GradleBuild) {
+        group = "_run"
+        tasks = [":Forge:runData"]
+    }
+}
