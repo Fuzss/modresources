@@ -21,6 +21,7 @@ loom {
         server {
             server()
             setConfigName("NeoForge Server ${libs.versions.minecraft.get()}")
+            programArgs("nogui")
         }
         data {
             data()
