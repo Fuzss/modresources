@@ -55,6 +55,20 @@ dependencies {
 
     // NeoForge
     neoForge libs.neoforge.neoforge
+
+    var versionCatalog = rootProject.extensions.getByType(VersionCatalogsExtension).named("libs")
+
+    // Quality of Life Mods
+    versionCatalog.findLibrary("bettermodsbutton.neoforge").ifPresent {
+        modLocalRuntime(it.get()) {
+            transitive = false
+        }
+    }
+    versionCatalog.findLibrary("forgeconfigscreens.neoforge").ifPresent {
+        modLocalRuntime(it.get()) {
+            transitive = false
+        }
+    }
 }
 
 tasks.withType(Jar).configureEach {

@@ -28,5 +28,5 @@ dependencies {
     modApi libs.fabricloader.fabric
 
     // Mixin Extras
-    api(annotationProcessor(libs.mixinextras.common.get()))
+    implementation(annotationProcessor(libs.mixinextras.common.get()))
 }

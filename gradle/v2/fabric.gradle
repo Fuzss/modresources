@@ -56,6 +56,20 @@ dependencies {
 
     // Fabric Loader
     modApi libs.fabricloader.fabric
+
+    var versionCatalog = rootProject.extensions.getByType(VersionCatalogsExtension).named("libs")
+
+    // Quality of Life Mods
+    versionCatalog.findLibrary("modmenu.fabric").ifPresent {
+        modLocalRuntime(it.get()) {
+            transitive = false
+        }
+    }
+    versionCatalog.findLibrary("forgeconfigscreens.fabric").ifPresent {
+        modLocalRuntime(it.get()) {
+            transitive = false
+        }
+    }
 }
 
 tasks.withType(Jar).configureEach {
