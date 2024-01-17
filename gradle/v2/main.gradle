@@ -191,7 +191,7 @@ subprojects {
 
         inputs.properties resourceProperties
 
-        filesMatching(["pack.mcmeta", "fabric.mod.json", "META-INF/mods.toml", "architectury.common.json", modId + ".common.mixins.json", modId + ".fabric.mixins.json", modId + ".neoforge.mixins.json", modId + ".forge.mixins.json"]) {
+        filesMatching(["pack.mcmeta", "fabric.mod.json", "META-INF/mods.toml", modId + ".common.mixins.json", modId + ".fabric.mixins.json", modId + ".neoforge.mixins.json", modId + ".forge.mixins.json"]) {
             expand resourceProperties + [project: project]
         }
     }

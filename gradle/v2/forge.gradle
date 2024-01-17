@@ -67,6 +67,23 @@ dependencies {
 
     // Minecraft Forge
     forge libs.minecraftforge.forge
+
+    // Mixin Extras
+    implementation(annotationProcessor(libs.mixinextras.common.get()))
+
+    var versionCatalog = rootProject.extensions.getByType(VersionCatalogsExtension).named("libs")
+
+    // Quality of Life Mods
+    versionCatalog.findLibrary("bettermodsbutton.forge").ifPresent {
+        modLocalRuntime(it.get()) {
+            transitive = false
+        }
+    }
+    versionCatalog.findLibrary("forgeconfigscreens.forge").ifPresent {
+        modLocalRuntime(it.get()) {
+            transitive = false
+        }
+    }
 }
 
 tasks.withType(Jar).configureEach {
