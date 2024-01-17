@@ -67,10 +67,6 @@ dependencies {
 
     // Minecraft Forge
     forge libs.minecraftforge.forge
-
-    // Mixin Extras
-    compileOnly(annotationProcessor(libs.mixinextras.common.get()))
-    api(include(libs.mixinextras.forge.get()))
 }
 
 tasks.withType(Jar).configureEach {
