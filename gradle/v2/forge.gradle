@@ -33,7 +33,6 @@ loom {
         server {
             server()
             setConfigName("Forge Server ${libs.versions.minecraft.get()}")
-            programArgs("nogui")
         }
         data {
             data()
