@@ -175,7 +175,7 @@ subprojects {
                 "modLicense": modLicense,
                 "minFabricVersion": libs.versions.fabricloader.min.get(),
                 "minFabricApiVersion": libs.versions.fabricapi.min.get(),
-                "minForgeFMLVersion": libs.versions.forge.min.get().replaceAll("\\..*", ""),
+                "minForgeFMLVersion": libs.versions.minecraftforge.min.get().replaceAll("\\..*", ""),
                 "minForgeVersion": libs.versions.minecraftforge.min.get(),
                 "minNeoForgeFMLVersion": "1",
                 "minNeoForgeVersion": libs.versions.neoforge.min.get(),
