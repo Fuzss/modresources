@@ -158,9 +158,19 @@ subprojects {
         from(project(":Common").sourceSets.main.resources) {
             exclude "${modId}.common.mixins.json"
         }
+
         from(project(":Common").file("src/generated/resources")) {
             exclude ".cache/"
         }
+
+        var fileNames = [
+                "^common.mixins.json\$": "${modId}.common.mixins.json",
+                "^fabric.mixins.json\$": "${modId}.fabric.mixins.json",
+                "^neoforge.mixins.json\$": "${modId}.neoforge.mixins.json",
+                "^forge.mixins.json\$": "${modId}.forge.mixins.json"
+        ]
+
+        fileNames.forEach {from, to -> rename from, to }
 
         var resourceProperties = [
                 "modId": modId,
@@ -191,7 +201,21 @@ subprojects {
 
         inputs.properties resourceProperties
 
-        filesMatching(["pack.mcmeta", "fabric.mod.json", "META-INF/mods.toml", modId + ".common.mixins.json", modId + ".fabric.mixins.json", modId + ".neoforge.mixins.json", modId + ".forge.mixins.json"]) {
+        var matchingFiles = [
+                "pack.mcmeta",
+                "fabric.mod.json",
+                "META-INF/mods.toml",
+                modId + ".common.mixins.json",
+                modId + ".fabric.mixins.json",
+                modId + ".neoforge.mixins.json",
+                modId + ".forge.mixins.json",
+                "common.mixins.json",
+                "fabric.mixins.json",
+                "neoforge.mixins.json",
+                "forge.mixins.json"
+        ]
+
+        filesMatching(matchingFiles) {
             expand resourceProperties + [project: project]
         }
     }
