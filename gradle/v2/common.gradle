@@ -4,23 +4,6 @@ architectury {
 
 loom {
     accessWidenerPath = file("src/main/resources/${modId}.accesswidener")
-
-    runs {
-        configureEach {
-            ideConfigGenerated(false)
-            // this should hopeful prevent an empty run directory being generated in common during initial project setup
-            runDir("../run")
-            vmArgs "-Xms1G", "-Xmx4G", "-Dmixin.debug.export=true"
-        }
-        client {
-            client()
-            setConfigName("Common Client ${libs.versions.minecraft.get()}")
-        }
-        server {
-            server()
-            setConfigName("Common Server ${libs.versions.minecraft.get()}")
-        }
-    }
 }
 
 dependencies {
