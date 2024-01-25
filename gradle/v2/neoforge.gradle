@@ -13,11 +13,11 @@ loom {
             ideConfigGenerated(true)
             runDir("../run")
             vmArgs("-Xms1G", "-Xmx4G", "-Dmixin.debug.export=true")
-            programArgs("--username", "Player####")
         }
         client {
             client()
             setConfigName("NeoForge Client ${libs.versions.minecraft.get()}")
+            programArgs("--username", "Player####")
         }
         server {
             server()
