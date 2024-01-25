@@ -24,7 +24,8 @@ loom {
         configureEach {
             ideConfigGenerated(true)
             runDir("../run")
-            vmArgs "-Xms1G", "-Xmx4G", "-Dmixin.debug.export=true"
+            vmArgs("-Xms1G", "-Xmx4G", "-Dmixin.debug.export=true")
+            programArgs("--username", "Player####")
         }
         client {
             client()
