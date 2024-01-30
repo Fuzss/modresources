@@ -152,7 +152,7 @@ subprojects {
         mappings loom.layered() {
             it.parchment("org.parchmentmc.data:parchment-${libs.versions.parchment.minecraft.get()}:${libs.versions.parchment.version.get()}")
             it.officialMojangMappings {
-                setNameSyntheticMembers(false)
+                setNameSyntheticMembers(true)
             }
         }
     }
