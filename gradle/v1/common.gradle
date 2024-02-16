@@ -1,5 +1,4 @@
 apply plugin: 'fabric-loom'
-apply plugin: 'io.github.juuxel.loom-quiltflower'
 
 archivesBaseName = "${modName.replaceAll("[^a-zA-Z]", "")}"
 version = "v${modVersion}-${libs.versions.minecraft.get()}-Common"
