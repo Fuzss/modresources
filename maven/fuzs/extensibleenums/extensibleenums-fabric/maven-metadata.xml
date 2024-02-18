@@ -3,15 +3,16 @@
   <groupId>fuzs.extensibleenums</groupId>
   <artifactId>extensibleenums-fabric</artifactId>
   <versioning>
-    <latest>20.4.0</latest>
-    <release>20.4.0</release>
+    <latest>20.4.1</latest>
+    <release>20.4.1</release>
     <versions>
       <version>4.0.0</version>
       <version>3.1.0</version>
       <version>7.0.0</version>
       <version>7.0.1</version>
       <version>20.4.0</version>
+      <version>20.4.1</version>
     </versions>
-    <lastUpdated>20240129074322</lastUpdated>
+    <lastUpdated>20240218083821</lastUpdated>
   </versioning>
 </metadata>
