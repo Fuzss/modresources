@@ -209,6 +209,7 @@ subprojects {
         var matchingFiles = [
                 "pack.mcmeta",
                 "fabric.mod.json",
+                "META-INF/neoforge.mods.toml",
                 "META-INF/mods.toml",
                 modId + ".common.mixins.json",
                 modId + ".fabric.mixins.json",
