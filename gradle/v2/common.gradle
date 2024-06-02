@@ -8,8 +8,8 @@ loom {
 
 dependencies {
     // Fabric Loader
-    modApi libs.fabricloader.fabric
+    compileOnly libs.fabricloader.fabric
 
     // Mixin Extras
-    implementation(annotationProcessor(libs.mixinextras.common.get()))
+    compileOnly(annotationProcessor(libs.mixinextras.common.get()))
 }
