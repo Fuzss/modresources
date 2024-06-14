@@ -195,7 +195,7 @@ subprojects {
                 "minNeoForgeFMLVersion": "1",
                 "minNeoForgeVersion": libs.versions.neoforge.min.get(),
                 "minecraftVersion": libs.versions.minecraft.get(),
-                "minPuzzlesVersion": libs.versions.puzzleslib.min.get(),
+                "minPuzzlesVersion": libs.versions.hasProperty("puzzleslib") && libs.versions.puzzleslib.hasProperty("min") ? libs.versions.puzzleslib.min.get() : "1",
                 "resourcePackFormat": libs.versions.resources.get(),
                 "dataPackFormat": libs.versions.data.get(),
                 "mainEntryPoint": "${project.group}.fabric.${archivesBaseName}Fabric",

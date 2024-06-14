@@ -56,18 +56,11 @@ dependencies {
     // Fabric Loader
     modApi libs.fabricloader.fabric
 
-    var versionCatalog = rootProject.extensions.getByType(VersionCatalogsExtension).named("libs")
-
-    // Quality of Life Mods
-    versionCatalog.findLibrary("modmenu.fabric").ifPresent {
-        modLocalRuntime(it.get()) {
-            transitive = false
-        }
+    if (libs.hasProperty("modmenu") && libs.modmenu.hasProperty("fabric")) {
+        modLocalRuntime(libs.modmenu.fabric) { transitive = false }
     }
-    versionCatalog.findLibrary("forgeconfigscreens.fabric").ifPresent {
-        modLocalRuntime(it.get()) {
-            transitive = false
-        }
+    if (libs.hasProperty("forgeconfigscreens") && libs.forgeconfigscreens.hasProperty("fabric")) {
+        modLocalRuntime(libs.forgeconfigscreens.fabric) { transitive = false }
     }
 }
 
