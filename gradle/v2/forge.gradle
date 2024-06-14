@@ -35,13 +35,13 @@ loom {
             server()
             setConfigName("Forge Server ${libs.versions.minecraft.get()}")
         }
-        data {
-            data()
-            setConfigName("Forge Data ${libs.versions.minecraft.get()}")
-            programArgs("--all", "--mod", modId)
-            programArgs("--existing", project(":Common").file("src/main/resources").absolutePath)
-            programArgs("--output", project(":Common").file("src/generated/resources").absolutePath)
-        }
+//        data {
+//            data()
+//            setConfigName("Forge Data ${libs.versions.minecraft.get()}")
+//            programArgs("--all", "--mod", modId)
+//            programArgs("--existing", project(":Common").file("src/main/resources").absolutePath)
+//            programArgs("--output", project(":Common").file("src/generated/resources").absolutePath)
+//        }
     }
 }
 
@@ -71,18 +71,11 @@ dependencies {
     // Mixin Extras
     implementation(annotationProcessor(libs.mixinextras.common.get()))
 
-    var versionCatalog = rootProject.extensions.getByType(VersionCatalogsExtension).named("libs")
-
-    // Quality of Life Mods
-    versionCatalog.findLibrary("bettermodsbutton.forge").ifPresent {
-        modLocalRuntime(it.get()) {
-            transitive = false
-        }
+    if (libs.hasProperty("bettermodsbutton") && libs.bettermodsbutton.hasProperty("forge")) {
+        modLocalRuntime(libs.bettermodsbutton.forge) { transitive = false }
     }
-    versionCatalog.findLibrary("forgeconfigscreens.forge").ifPresent {
-        modLocalRuntime(it.get()) {
-            transitive = false
-        }
+    if (libs.hasProperty("forgeconfigscreens") && libs.forgeconfigscreens.hasProperty("forge")) {
+        modLocalRuntime(libs.forgeconfigscreens.forge) { transitive = false }
     }
 }
 

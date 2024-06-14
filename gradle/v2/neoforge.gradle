@@ -56,18 +56,11 @@ dependencies {
     // NeoForge
     neoForge libs.neoforge.neoforge
 
-    var versionCatalog = rootProject.extensions.getByType(VersionCatalogsExtension).named("libs")
-
-    // Quality of Life Mods
-    versionCatalog.findLibrary("bettermodsbutton.neoforge").ifPresent {
-        modLocalRuntime(it.get()) {
-            transitive = false
-        }
+    if (libs.hasProperty("bettermodsbutton") && libs.bettermodsbutton.hasProperty("neoforge")) {
+        modLocalRuntime(libs.bettermodsbutton.neoforge) { transitive = false }
     }
-    versionCatalog.findLibrary("forgeconfigscreens.neoforge").ifPresent {
-        modLocalRuntime(it.get()) {
-            transitive = false
-        }
+    if (libs.hasProperty("forgeconfigscreens") && libs.forgeconfigscreens.hasProperty("neoforge")) {
+        modLocalRuntime(libs.forgeconfigscreens.neoforge) { transitive = false }
     }
 }
 
