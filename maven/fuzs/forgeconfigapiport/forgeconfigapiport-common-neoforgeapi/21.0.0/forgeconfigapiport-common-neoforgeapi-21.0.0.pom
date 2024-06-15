@@ -31,12 +31,6 @@
   </issueManagement>
   <dependencies>
     <dependency>
-      <groupId>io.github.llamalad7</groupId>
-      <artifactId>mixinextras-common</artifactId>
-      <version>0.3.6</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
       <groupId>com.electronwill.night-config</groupId>
       <artifactId>core</artifactId>
       <version>3.6.7</version>
@@ -46,12 +40,6 @@
       <groupId>com.electronwill.night-config</groupId>
       <artifactId>toml</artifactId>
       <version>3.6.7</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>net.fabricmc</groupId>
-      <artifactId>fabric-loader</artifactId>
-      <version>0.15.11</version>
       <scope>compile</scope>
     </dependency>
   </dependencies>
