@@ -118,8 +118,7 @@ allprojects {
                     "Implementation-Timestamp-Milli": System.currentTimeMillis(),
                     "Implementation-URL"            : modSourceUrl,
                     "Built-On-Java"                 : "${System.getProperty("java.vm.version")} (${System.getProperty("java.vm.vendor")})",
-                    "Built-On-Minecraft"            : libs.versions.minecraft.get(),
-                    "Fabric-Loom-Remap"             : true
+                    "Built-On-Minecraft"            : libs.versions.minecraft.get()
             ])
         }
 
