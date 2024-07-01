@@ -1,0 +1,15 @@
+architectury {
+    common rootProject.subprojects.name.collect { it.toLowerCase() }.findAll { !it.contains("common") }
+}
+
+loom {
+    accessWidenerPath = file("src/main/resources/${modId}.accesswidener")
+}
+
+dependencies {
+    // Fabric Loader
+    modCompileOnly libs.fabricloader.fabric
+
+    // Mixin Extras
+    compileOnly(annotationProcessor(libs.mixinextras.common.get()))
+}
