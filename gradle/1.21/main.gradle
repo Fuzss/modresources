@@ -43,10 +43,10 @@ allprojects {
             name = "Terraformers"
             url = "https://maven.terraformersmc.com/"
         }
-        maven {
-            name = "ModMaven"
-            url = "https://modmaven.dev"
-        }
+//        maven {
+//            name = "ModMaven"
+//            url = "https://modmaven.dev"
+//        }
         maven {
             name = "AppleSkin"
             url "https://maven.ryanliptak.com/"
