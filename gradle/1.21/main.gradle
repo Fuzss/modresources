@@ -1,9 +1,9 @@
 println("Java: " + System.getProperty("java.version") + " JVM: " + System.getProperty("java.vm.version") + "(" + System.getProperty("java.vendor") + ") Arch: " + System.getProperty("os.arch"))
 
 allprojects {
-    apply plugin: "architectury-plugin"
     apply plugin: "java"
     apply plugin: "java-library"
+    apply plugin: "architectury-plugin"
     apply plugin: "maven-publish"
     apply plugin: "signing"
     apply plugin: "idea"
@@ -88,9 +88,9 @@ allprojects {
     }
 
     java {
+        toolchain.languageVersion = JavaLanguageVersion.of(libs.versions.java.get())
         withSourcesJar()
         withJavadocJar()
-        toolchain.languageVersion = JavaLanguageVersion.of(libs.versions.java.get())
     }
 
     // silence missing javadoc comments, we just don't care
@@ -150,10 +150,10 @@ subprojects {
     dependencies {
         minecraft "com.mojang:minecraft:${libs.versions.minecraft.get()}"
         mappings loom.layered() {
-            parchment("org.parchmentmc.data:parchment-${libs.versions.parchment.minecraft.get()}:${libs.versions.parchment.version.get()}")
             officialMojangMappings {
                 setNameSyntheticMembers(true)
             }
+            parchment("org.parchmentmc.data:parchment-${libs.versions.parchment.minecraft.get()}:${libs.versions.parchment.version.get()}@zip")
         }
     }
 
