@@ -3,8 +3,8 @@
   <groupId>fuzs.bettermodsbutton</groupId>
   <artifactId>bettermodsbutton-forge</artifactId>
   <versioning>
-    <latest>21.0.1</latest>
-    <release>21.0.1</release>
+    <latest>21.0.2</latest>
+    <release>21.0.2</release>
     <versions>
       <version>4.0.0</version>
       <version>4.0.1</version>
@@ -26,7 +26,8 @@
       <version>8.0.2</version>
       <version>20.4.0</version>
       <version>21.0.1</version>
+      <version>21.0.2</version>
     </versions>
-    <lastUpdated>20240701195333</lastUpdated>
+    <lastUpdated>20240706143147</lastUpdated>
   </versioning>
 </metadata>
