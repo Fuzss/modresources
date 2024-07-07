@@ -3,15 +3,16 @@
   <groupId>fuzs.diagonalblocks</groupId>
   <artifactId>diagonalblocks-neoforge</artifactId>
   <versioning>
-    <latest>20.4.4</latest>
-    <release>20.4.4</release>
+    <latest>21.0.0</latest>
+    <release>21.0.0</release>
     <versions>
       <version>20.4.0</version>
       <version>20.4.1</version>
       <version>20.4.2</version>
       <version>20.4.3</version>
       <version>20.4.4</version>
+      <version>21.0.0</version>
     </versions>
-    <lastUpdated>20240406072444</lastUpdated>
+    <lastUpdated>20240707065604</lastUpdated>
   </versioning>
 </metadata>
