@@ -9,7 +9,4 @@ loom {
 dependencies {
     // Fabric Loader
     modCompileOnly libs.fabricloader.fabric
-
-    // Mixin Extras
-    compileOnly(annotationProcessor(libs.mixinextras.common.get()))
 }
