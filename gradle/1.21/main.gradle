@@ -85,6 +85,7 @@ allprojects {
         // If Javadoc is generated, this must be specified in that task too.
         options.encoding = "UTF-8"
         options.release = libs.versions.java.get() as Integer
+        options.warnings = false
     }
 
     java {
