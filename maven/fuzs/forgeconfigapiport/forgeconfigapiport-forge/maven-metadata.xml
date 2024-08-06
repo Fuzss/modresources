@@ -3,8 +3,8 @@
   <groupId>fuzs.forgeconfigapiport</groupId>
   <artifactId>forgeconfigapiport-forge</artifactId>
   <versioning>
-    <latest>21.0.7</latest>
-    <release>21.0.7</release>
+    <latest>21.0.8</latest>
+    <release>21.0.8</release>
     <versions>
       <version>20.4.1</version>
       <version>20.2.4</version>
@@ -21,7 +21,8 @@
       <version>21.0.5</version>
       <version>21.0.6</version>
       <version>21.0.7</version>
+      <version>21.0.8</version>
     </versions>
-    <lastUpdated>20240729121325</lastUpdated>
+    <lastUpdated>20240806134637</lastUpdated>
   </versioning>
 </metadata>
