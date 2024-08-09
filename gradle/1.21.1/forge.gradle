@@ -12,6 +12,8 @@ loom {
         convertAccessWideners = true
         extraAccessWideners.add loom.accessWidenerPath.get().asFile.name
 
+        useCustomMixin = false
+
         if (project(":Common").file("src/main/resources/${modId}.common.mixins.json").exists() || project(":Common").file("src/main/resources/common.mixins.json").exists()) {
             mixinConfig "${modId}.common.mixins.json"
         }
