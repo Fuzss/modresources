@@ -35,11 +35,15 @@ configurations {
 
 repositories {
     maven {
+        name = "Terraformers"
+        url = "https://maven.terraformersmc.com/"
+    }
+    maven {
         name = "Modmuss"
         url = "https://maven.modmuss50.me/"
     }
     maven {
-        name = "ladysnake"
+        name = "Ladysnake Libs"
         url = "https://maven.ladysnake.org/releases"
     }
     maven {

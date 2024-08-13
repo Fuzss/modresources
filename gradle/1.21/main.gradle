@@ -39,10 +39,6 @@ allprojects {
             name = "Fuzs Mod Resources"
             url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/"
         }
-        maven {
-            name = "Terraformers"
-            url = "https://maven.terraformersmc.com/"
-        }
 //        maven {
 //            name = "ModMaven"
 //            url = "https://modmaven.dev"
