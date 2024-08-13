@@ -46,6 +46,14 @@ repositories {
         name = "NeoForged"
         url = "https://maven.neoforged.net/releases/"
     }
+    maven {
+        name = "TheIllusiveC4"
+        url = "https://maven.theillusivec4.top/"
+    }
+    maven {
+        name = "OctoStudios"
+        url = "https://maven.octo-studios.com/releases/"
+    }
 }
 
 dependencies {
