@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>fuzs.puzzleslib</groupId>
+  <artifactId>puzzleslib-common</artifactId>
+  <version>21.0.21</version>
+  <name>Puzzles Lib [Common]</name>
+  <description>Why's it called Puzzles you ask? That's the puzzle!</description>
+  <url>https://github.com/Fuzss/puzzleslib</url>
+  <licenses>
+    <license>
+      <name>MPL-2.0</name>
+      <url>https://spdx.org/licenses/MPL-2.0.html</url>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <id>fuzs</id>
+      <name>Fuzs</name>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:git:git://github.com/Fuzss/puzzleslib.git</connection>
+    <developerConnection>scm:git:git@github.com:Fuzss/puzzleslib.git</developerConnection>
+    <url>https://github.com/Fuzss/puzzleslib</url>
+  </scm>
+  <issueManagement>
+    <system>github</system>
+    <url>https://github.com/Fuzss/puzzleslib/issues</url>
+  </issueManagement>
+  <dependencies>
+    <dependency>
+      <groupId>fuzs.forgeconfigapiport</groupId>
+      <artifactId>forgeconfigapiport-common-neoforgeapi</artifactId>
+      <version>21.0.8</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>net.fabricmc.fabric-api</groupId>
+      <artifactId>fabric-api-base</artifactId>
+      <version>0.4.42+6573ed8cd1</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>net.fabricmc.fabric-api</groupId>
+      <artifactId>fabric-transitive-access-wideners-v1</artifactId>
+      <version>6.1.0+176f9036d1</version>
+      <scope>compile</scope>
+    </dependency>
+  </dependencies>
+</project>
