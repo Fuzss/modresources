@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>fuzs.diagonalblocks</groupId>
+  <artifactId>diagonalblocks-neoforge</artifactId>
+  <version>21.1.0</version>
+  <name>Diagonal Blocks [NeoForge]</name>
+  <description>The core library behind the diagonal blocks mod series!</description>
+  <url>https://github.com/Fuzss/diagonalblocks</url>
+  <licenses>
+    <license>
+      <name>MPL-2.0</name>
+      <url>https://spdx.org/licenses/MPL-2.0.html</url>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <id>fuzs, xfacthd</id>
+      <name>Fuzs, XFactHD</name>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:git:git://github.com/Fuzss/diagonalblocks.git</connection>
+    <developerConnection>scm:git:git@github.com:Fuzss/diagonalblocks.git</developerConnection>
+    <url>https://github.com/Fuzss/diagonalblocks</url>
+  </scm>
+  <issueManagement>
+    <system>github</system>
+    <url>https://github.com/Fuzss/diagonalblocks/issues</url>
+  </issueManagement>
+  <dependencies>
+    <dependency>
+      <groupId>fuzs.puzzleslib</groupId>
+      <artifactId>puzzleslib-neoforge</artifactId>
+      <version>21.1.7</version>
+      <scope>compile</scope>
+    </dependency>
+  </dependencies>
+</project>
