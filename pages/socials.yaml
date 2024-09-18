@@ -8,14 +8,14 @@ discord:
   logo: discord
   link: https://lunapixel.studio/discord
 twitter:
-  message: Twitter
-  width: 116
+  message: X%20%28Twitter%29
+  width: 143
   height: 28
   color: ECEBE6
   labelColor: 2F4858
   logoColor: white
-  logo: twitter
-  link: https://twitter.com/Fusseel
+  logo: x
+  link: https://x.com/Fusseel
 youtube:
   message: YouTube
   width: 118
@@ -61,6 +61,15 @@ curseforge:
   logoColor: white
   logo: curseforge
   link: https://www.curseforge.com/members/fuzs_/projects
+modrinth:
+  message: Modrinth
+  width: 129
+  height: 28
+  color: ECEBE6
+  labelColor: 2F4858
+  logoColor: white
+  logo: modrinth
+  link: https://modrinth.com/user/Fuzs
 paypal:
   message: PayPal
   width: 107
