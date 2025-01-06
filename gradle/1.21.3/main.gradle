@@ -39,10 +39,14 @@ allprojects {
             name = "Fuzs Mod Resources"
             url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/"
         }
-//        maven {
-//            name = "ModMaven"
-//            url = "https://modmaven.dev"
-//        }
+        maven {
+            name = "Wisp Forest"
+            url "https://maven.wispforest.io/releases"
+        }
+        maven {
+            name = "Su5eD"
+            url "https://maven.su5ed.dev/releases"
+        }
         maven {
             name = "AppleSkin"
             url "https://maven.ryanliptak.com/"
