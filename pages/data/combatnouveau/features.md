@@ -11,8 +11,8 @@
 + A very brief delay is added to throwing eggs and snowballs.
 + Eating and drinking are interrupted when being attacked.
 + Shields become usable after activation without any delay (it is usally 0.25 seconds in vanilla).
-+ Shield protection arc is decreased to 100 degress.
++ Shield protection arc is decreased to 100 degrees.
 + Being hit by a projectile no longer grants brief damage immunity.
 + Sprinting does not stop when hitting a target, especially nice when fighting while swimming (since swimming is just sprinting, but in water).
-+ Certain items such as totems of undying can be hidden when passivly held in the offhand.
++ Certain items such as totems of undying can be hidden when passively held in the offhand.
 + Using a shield shows an indicator similar to the attack cooldown indicator.
