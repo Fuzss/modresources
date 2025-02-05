@@ -3,8 +3,8 @@
   <groupId>fuzs.statuemenus</groupId>
   <artifactId>statuemenus-fabric</artifactId>
   <versioning>
-    <latest>21.3.2</latest>
-    <release>21.3.2</release>
+    <latest>21.4.0</latest>
+    <release>21.4.0</release>
     <versions>
       <version>20.4.0</version>
       <version>20.4.1</version>
@@ -15,7 +15,8 @@
       <version>21.3.0</version>
       <version>21.3.1</version>
       <version>21.3.2</version>
+      <version>21.4.0</version>
     </versions>
-    <lastUpdated>20241216132435</lastUpdated>
+    <lastUpdated>20250205074317</lastUpdated>
   </versioning>
 </metadata>
