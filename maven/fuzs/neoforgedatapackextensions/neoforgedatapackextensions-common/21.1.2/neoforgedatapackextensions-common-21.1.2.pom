@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>fuzs.neoforgedatapackextensions</groupId>
+  <artifactId>neoforgedatapackextensions-common</artifactId>
+  <version>21.1.2</version>
+  <name>NeoForge Data Pack Extensions [Common]</name>
+  <description>Support for NeoForge's data maps and tag removals on other mod loaders.</description>
+  <url>https://github.com/Fuzss/neoforgedatapackextensions</url>
+  <licenses>
+    <license>
+      <name>MPL-2.0</name>
+      <url>https://spdx.org/licenses/MPL-2.0.html</url>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <id>fuzs</id>
+      <name>Fuzs</name>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:git:git://github.com/Fuzss/neoforgedatapackextensions.git</connection>
+    <developerConnection>scm:git:git@github.com:Fuzss/neoforgedatapackextensions.git</developerConnection>
+    <url>https://github.com/Fuzss/neoforgedatapackextensions</url>
+  </scm>
+  <issueManagement>
+    <system>github</system>
+    <url>https://github.com/Fuzss/neoforgedatapackextensions/issues</url>
+  </issueManagement>
+</project>
