@@ -37,3 +37,11 @@ trinkets:
     modrinth: trinkets
   loaders:
     - fabric
+accessories:
+  name: Accessories
+  distributions:
+    curseforge: accessories
+    modrinth: accessories
+  loaders:
+    - neoforge
+    - fabric

@@ -4,7 +4,6 @@ environments:
 loaders:
   - fabric
   - neoforge
-  - forge
 dependencies:
   puzzleslib: required
   fabricapi: required
