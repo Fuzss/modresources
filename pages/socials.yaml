@@ -8,8 +8,8 @@ discord:
   logo: discord
   link: https://lunapixel.studio/discord
 twitter:
-  message: X%20%28Twitter%29
-  width: 143
+  message: Twitter
+  width: 116
   height: 28
   color: ECEBE6
   labelColor: 2F4858
