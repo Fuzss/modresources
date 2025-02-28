@@ -1,0 +1,1 @@
++ Thanks to [MehVahdJukaar](https://www.curseforge.com/members/mehvahdjukaar) for inspiring this project with their [Fast Paintings](https://www.curseforge.com/minecraft/mc-mods/fast-paintings) mod.

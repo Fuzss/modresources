@@ -303,3 +303,8 @@ nightconfigfixes:
   distributions:
     curseforge: night-config-fixes
     modrinth: night-config-fixes
+fastitemframes:
+  weight: 15
+  distributions:
+    curseforge: fast-item-frames
+    modrinth: fast-item-frames
