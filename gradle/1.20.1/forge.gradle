@@ -83,12 +83,10 @@ dependencies {
     implementation(annotationProcessor(libs.mixinextras.common.get()))
 
     if (libs.hasProperty("bettermodsbutton") && libs.bettermodsbutton.hasProperty("forge")) {
-        // This should be modLocalRuntime, but it is currently broken for Forge.
-        localRuntime(libs.bettermodsbutton.forge) { transitive = false }
+        modLocalRuntime(libs.bettermodsbutton.forge) { transitive = false }
     }
     if (libs.hasProperty("forgeconfigscreens") && libs.forgeconfigscreens.hasProperty("forge")) {
-        // This should be modLocalRuntime, but it is currently broken for Forge.
-        localRuntime(libs.forgeconfigscreens.forge) { transitive = false }
+        modLocalRuntime(libs.forgeconfigscreens.forge) { transitive = false }
     }
 }
 
