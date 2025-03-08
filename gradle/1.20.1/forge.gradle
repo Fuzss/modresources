@@ -80,7 +80,8 @@ dependencies {
     forge libs.minecraftforge.forge
 
     // Mixin Extras
-    api(annotationProcessor(libs.mixinextras.common.get()))
+    compileOnly(annotationProcessor(libs.mixinextras.common.get()))
+    implementation libs.mixinextras.forge
 
     if (libs.hasProperty("bettermodsbutton") && libs.bettermodsbutton.hasProperty("forge")) {
         modLocalRuntime(libs.bettermodsbutton.forge) { transitive = false }
