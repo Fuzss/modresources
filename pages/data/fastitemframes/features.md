@@ -1,9 +1,17 @@
-<span style="color:red">⚠️ VANILLA ITEM FRAME ENTITIES ARE CONVERTED PERMANENTLY, THEY WILL NOT RETURN AFTER UNINSTALLING THE MOD ⚠️</span>
-+ Item Frames are now blocks instead of entities, improving performance.
-+ Reduced lag when rendering and updating. Having many frames in one place no longer lowers FPS as much.
-+ Proper breaking particles now show, and item frames work with block-related commands like `/setblock`.
-+ Item frames instantly react when their supporting block is broken or when interacting with pistons.
-+ No downsides: You can still place multiple frames in the same block space.
-+ Easily add the mod to existing worlds: Vanilla item frame entities automatically change into blocks when loaded.
-+ You can dye item frames like leather items, with access to 5,713,438 unique colors.
-+ Shift + right-click with an empty hand to make an item frame vanish, leaving only the item inside visible.
+<span style="color:red">⚠️⚠️ WARNING: VANILLA ITEM FRAME ENTITIES ARE CONVERTED PERMANENTLY — THEY WILL NOT RETURN AFTER UNINSTALLING THE MOD ⚠️⚠️</span>
+
+🧱 Item Frames are now blocks, not entities — better performance!
+
+🚀 Reduced lag when rendering and updating — big FPS improvements in areas with many frames.
+
+💥 Proper breaking particles and compatibility with commands like `/setblock`.
+
+⚡ Instant reactions when the supporting block is broken or moved by pistons.
+
+➕ No downsides — still supports multiple frames in the same block space.
+
+🌍 Seamlessly works in existing worlds — vanilla frames auto-convert on load.
+
+🎨 Dye item frames like leather armor — unlock 5,713,438 unique colors!
+
+🫥 Shift + right-click with empty hand to make frame invisible, leaving only the item.
