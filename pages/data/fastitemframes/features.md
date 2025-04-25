@@ -1,3 +1,4 @@
+<span style="color:red">⚠️ VANILLA ITEM FRAME ENTITIES ARE CONVERTED PERMANENTLY, THEY WILL NOT RETURN AFTER UNINSTALLING THE MOD ⚠️</span>
 + Item Frames are now blocks instead of entities, improving performance.
 + Reduced lag when rendering and updating. Having many frames in one place no longer lowers FPS as much.
 + Proper breaking particles now show, and item frames work with block-related commands like `/setblock`.
