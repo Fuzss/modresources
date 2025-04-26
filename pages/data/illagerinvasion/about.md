@@ -1,1 +1,3 @@
-Illager Invasion brings Minecraft's illagers to the next level! Almost a dozen new illagers are added, all with unique mechanics and abilities. You will find those illagers in various places throughout your world. Some spawn in remote structures you will have to conquer, will others are just now getting ready to join in on village raids to significantly increase the challenge they represent. But why make your life harder with all those new foes? You'll be rewarded with lots of fun while playing and uniqe new items, that's for sure!
+Illager Invasion takes Minecraft's Illagers to the next level! Nearly a dozen new Illagers with unique abilities now roam your world. Some hide in dangerous new structures, while others join village raids to make them even harder. 
+
+Fight smarter enemies, find powerful loot, and discover secret places. New challenges mean new rewards—and lots of fun along the way!

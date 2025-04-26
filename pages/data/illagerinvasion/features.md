@@ -1,16 +1,25 @@
-+ The Alchemist for sure knows how to use a bow, and if you annoy him for too long, he will quickly chuck a lingering potion at you, so make sure to keep your distance! You'll find this illager joining in on village raids and in a secret underground structure...
-+ The Archivist is a defensive illager found in village raids, and is mainly there to buff up any of his allies nearby by enchanting their gear. He will run from you, and when fearing for his life will also cast a mean spell on you...
-+ The Basher is quite the bully! Waiting around peacefully most of the time, when he spots you he pulls out a shield and starts bumping into you. Not cool! You can find him as part of raids and in various structures thoughout the world.
-+ The Marauder is yet another ranged illager, but instead of shooting arrows at you, he throws a hatchet. Maybe you can steal it from him? This illager appears commonly in structures and village raids.
-+ The Provoker attacks using his bow and can also perform a basic buff spell. Not the craziest illager out there, but also not to be underestimated! This illager appears commonly in structures and village raids.
-+ The Sorcerer is tricky to fight. He will constantly run away, and when he stops he casts his vile spells. He can summon purple fire, which won't spread, but deals a ton of damage, so be careful! He joins in on village raids in later waves and is also found in that secret underground structure...
-+ The Necromancer is a dangerous foe, playing with the undead should never be taken lightly! He performs various spells to make your life much harder. He joins in on village raids in later waves and is also found in that secret underground structure...
-+ The Inquisitor is a beast of an illager, nothing to take to lightly. You may better be of running from him when you encounter one in a village raid or in the illager fortress. if you do decide to fight, make sure to take out the shield first before you can deal proper damage. But for your bravery you will be rewarded...
-+ The Firecaller is very mysterious and lives in a remote place of the world. From further away he seems like an old illager you have nothing to fear from, walking about with his walking stick in hand. But don't turn your back! This sneaky illager has some evil magic in store for you!
-+ The Invoker is the strongest of all illagers: A single one spawning in every woodland mansions, evokers are a joke compared to this guy. Make sure to come prepared! From his drop you can craft the imbuiing table, a unique new device that allows you to upgrade some enchantments on your gear one level beyond what they can normally go to, provided you have also managed to find a Hallowed Gem.
-+ Lastly the Illusioner is properly introduced into survival Minecraft, receiving a small number of bugfixes and a new skin from Minecraft: Dungeons. You will find him in a unique structure, the Illusioner Tower, and also as part of village raids.
-+ Some illagers will drop platinum chunks, when combined into sheets those can be used as new armor trims. But all the trouble for just a new fancy look? Opposed to vanilla's armor trims, each platinum trim depending on the kind of armor piece gives a different buff!
-+ The insight effect grants 20% more experience from every mob killed.
-+ The agility effect allows mining blocks 50% faster if you don't have the correct tool in your hand.
-+ The endurance effect makes it so you consume 50% less food for everything you do.
-+ The feather weight effect prevents trampling crops and farmland.
+**🏹 New Illagers**
+- 🧪 **Alchemist**: Expert archer who throws lingering potions when provoked.
+- 📚 **Archivist**: Buffs nearby Illagers with enchantments. Runs and casts spells when scared.
+- 🛡️ **Basher**: Shield-wielding bully who charges into players.
+- 🪓 **Marauder**: Ranged Illager who hurls deadly hatchets—steal the **Platinum Infused Hatchet** from him!
+- 🏹 **Provoker**: Bow-using Illager with basic buff spells.
+- 🔮 **Sorcerer**: Elusive spellcaster who summons dangerous purple fire. Drops **Unusual Dust**.
+- 🧟 **Necromancer**: Master of the undead, summoning spells to overwhelm players.
+- 🛡️ **Inquisitor**: Mighty Illager warrior with a powerful shield—break the shield first to defeat him!
+- 🔥 **Firecaller**: Mysterious mage appearing harmless—until he unleashes devastating magic.
+- 🧙 **Invoker**: The most powerful Illager! Drops the **Hallowed Gem** needed to upgrade enchantments with the **Imbuing Table**.
+- 🎭 **Illusioner**: Now in survival with a new appearance! Drops **Illusionary Dust**.
+
+**🏰 New Structures**
+- 🏠 **Firecaller Hut**: Small house with farms. Found in badlands.
+- 🏰 **Illager Fort**: Fortified outpost with walls, a tower, and strong Illagers. Found in taigas.
+- 🗼 **Illusioner Tower**: Multi-floor tower packed with Illagers and an Illusioner fight at the top. Found in taigas and dark forests.
+- 🧩 **Labyrinth**: Massive underground maze filled with lots of loot, and even more Illagers. Look for the stone temple entrance! Found in most forest biomes.
+- 🛖 **Sorcerer Hut**: Small house structure. Found in dark forests.
+
+**🛠️ New Gear and Items**
+- 🔔 **Imbuing Table**: Upgrade enchantments beyond normal limits! Needs a **Hallowed Gem** each time to use.
+- 🪓 **Platinum Infused Hatchet**: Throwable axe-like weapon rarely dropped by Marauders.
+- 🕯️ **Lost Candle**: Helps locate nearby ores by revealing their locations.
+- 📯 **Horn of Sight**: Makes nearby monsters glow to find them faster!
