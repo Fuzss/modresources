@@ -308,3 +308,8 @@ fastitemframes:
   distributions:
     curseforge: fast-item-frames
     modrinth: fast-item-frames
+eternalnether:
+  weight: 50
+  distributions:
+    curseforge: eternal-nether
+    modrinth: eternal-nether

@@ -1,0 +1,2 @@
++ Huge thanks to [Izofar](https://www.curseforge.com/members/izofar) who originally created the amazing [Bygone Nether](https://www.curseforge.com/minecraft/mc-mods/bygone-nether) mod. This mod is a faithful continuation of their work, with some additions, improvements, overhauls, and bug fixes.
++ Thanks to [Tamlighter](https://www.curseforge.com/members/tamlighter) for creating many amazing new textures.
