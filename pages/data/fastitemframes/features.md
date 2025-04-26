@@ -8,7 +8,7 @@
 
 ⚡ Instant reactions when the supporting block is broken or moved by pistons.
 
-➕ No downsides — still supports multiple frames in the same block space.
+✅ No downsides — still supports multiple frames in the same block space.
 
 🌍 Seamlessly works in existing worlds — vanilla frames auto-convert on load.
 
