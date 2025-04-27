@@ -1,3 +1,3 @@
-Brave the depths of the Nether with massive new structures, powerful mobs, and ancient relics!
+Eternal Nether cranks up the heat in Minecraft's hottest dimension - transforming the fiery underworld into a whole new battleground! Explore the fortress-like Piglin Manor, the towering Citadel, and the haunted Catacombs, each crawling with fierce new mobs and powerful treasures hidden in the ashes.
 
-A new age of Nether exploration awaits. Will you conquer the haunted dungeons—or be lost forever?
+Rescue allies, defeat corrupted enemies, and shape your destiny in a Nether that's more alive - and more deadly - than ever before. New mobs, new loot, new blocks - and of course, way too much lava. Bring your best gear, your sharpest reflexes, and maybe a few extra fire resistance potions... you're gonna need them!
