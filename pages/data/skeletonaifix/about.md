@@ -1,0 +1,3 @@
+Skeleton AI Fix removes the frustrating and buggy strafing behavior of Skeletons. No longer will they walk backwards, fall off cliffs, or get stuck in small corners. Instead, they’ll stand their ground, focusing on shooting you with deadly precision, firing faster the closer you get. Forget awkward movements—just a real challenge where their aim sharpens as you approach.
+
+All Skeletons that use a bow, from the classic to the Stray, will now stay focused and provide a smoother, more intense battle. Get ready for faster arrows and an enemy that isn’t distracted by the terrain. Whether you choose to charge or keep your distance, you’ll face a tense and thrilling shootout.
