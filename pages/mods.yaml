@@ -313,3 +313,8 @@ eternalnether:
   distributions:
     curseforge: eternal-nether
     modrinth: eternal-nether
+skeletonaifix:
+  weight: 10
+  distributions:
+    curseforge: skeleton-ai-fix
+    modrinth: skeleton-ai-fix

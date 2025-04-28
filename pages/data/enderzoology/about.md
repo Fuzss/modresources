@@ -1,1 +1,3 @@
-Ender Zoology adds a lot new mostly ender themed monsters to spawn at night in the overworld. Most of them are not your usual light hitting vanilla monsters, so be ready to face a new challenge after sunset!
+Ender Zoology brings a new layer of excitement and danger to your world in thrilling ways! Face off against fierce new mobs like the cunning Enderminy, deadly Fallen Knights, and the twisted Wither Witches—each bringing their own brand of chaos. Explore snow-filled forests hunted by Dire Wolves, and wield the power of Owls to rise above the dangers below.
+
+Craft teleportation explosives, brew cursed potions, and unlock game-changing enchantments like Soulbound and Repellent to protect yourself from these hostile new threats. With new mobs, deadly loot, and mind-bending effects, every corner of your world holds something terrifying—and every adventure promises new challenges. Get ready for a world where danger doesn't just watch you... it’s on the move.
