@@ -318,3 +318,8 @@ skeletonaifix:
   distributions:
     curseforge: skeleton-ai-fix
     modrinth: skeleton-ai-fix
+sheepvariety:
+  weight: 20
+  distributions:
+    curseforge: sheep-variety
+    modrinth: sheep-variety

@@ -1,0 +1,3 @@
+Sheep Variety is here to fix a great injustice! Chickens, pigs, and cows got fancy biome variants in vanilla — but sheep? Left behind! No more. At last, sheep gain brand-new models and textures based on the biome they live in. Woolly sheep for cold places, horned sheep for warm climates — now your flocks finally fit their homes!
+
+No gameplay changes — just better-looking sheep wherever you go. From chilly mountains to warm badlands, every climate gets a little more personality. Explore, discover, and meet sheep that actually look like they belong (and look a lot more fashionable). It's finally sheep’s time to shine!
