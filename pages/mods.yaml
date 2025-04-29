@@ -323,3 +323,8 @@ sheepvariety:
   distributions:
     curseforge: sheep-variety
     modrinth: sheep-variety
+dyedflames:
+  weight: 15
+  distributions:
+    curseforge: dyed-flames
+    modrinth: dyed-flames
