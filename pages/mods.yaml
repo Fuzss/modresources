@@ -328,3 +328,8 @@ dyedflames:
   distributions:
     curseforge: dyed-flames
     modrinth: dyed-flames
+hoppergadgetry:
+  weight: 40
+  distributions:
+    curseforge: hopper-gadgetry
+    modrinth: hopper-gadgetry
