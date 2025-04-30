@@ -1,2 +1,3 @@
 + Thanks to the incredibly talended [Mim1q](https://www.curseforge.com/members/mim1q) for creating all those amazing textures.
 + Thanks to [FyberOptic](https://www.curseforge.com/members/fyberoptic) for inspiring this project with their [Hopper Ducts](https://www.curseforge.com/minecraft/mc-mods/hopper-ducts) mod.
++ Thanks to [Sargunv](https://www.curseforge.com/members/sargunv) for inspiring this project with their [Composable Automation](https://www.curseforge.com/minecraft/mc-mods/composable-automation) mod.
