@@ -224,12 +224,12 @@ enderzoology:
     curseforge: ender-zoology
     modrinth: ender-zoology
 respawninganimals:
-  weight: 0
+  weight: 5
   distributions:
     curseforge: respawning-animals
     modrinth: respawning-animals
 thinair:
-  weight: 15
+  weight: 0
   distributions:
     curseforge: new-thin-air
     modrinth: thin-air
@@ -333,3 +333,8 @@ hoppergadgetry:
   distributions:
     curseforge: hopper-gadgetry
     modrinth: hopper-gadgetry
+climaterivers:
+  weight: 15
+  distributions:
+    curseforge: climate-rivers
+    modrinth: climate-rivers

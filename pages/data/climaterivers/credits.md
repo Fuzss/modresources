@@ -1,0 +1,1 @@
++ Thanks to [SuperCoder79](https://www.curseforge.com/members/jasmine) for inspiring parts of the implementation for this project with their [River Redux](https://www.curseforge.com/minecraft/mc-mods/river-redux) mod.
