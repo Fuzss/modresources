@@ -26,7 +26,8 @@ loom {
         configureEach {
             ideConfigGenerated(true)
             runDir("../run")
-            vmArgs("-Xms1G", "-Xmx4G", "-Dmixin.debug.export=true", "-Dterminal.ansi=true", "-Dlog4j2.configurationFile=${file(".gradle/loom-cache/log4j.xml")}")
+            vmArgs("-Xms1G", "-Xmx4G", "-Dmixin.debug.export=true", "-Dmixin.debug.countInjections=true")
+            vmArgs("-Dlog4j2.configurationFile=https://raw.githubusercontent.com/Fuzss/modresources/main/gradle/${libs.versions.minecraft.get()}/log4j.xml")
             vmArgs("-Dpuzzleslib.isDevelopmentEnvironment=true", "-D${modId}.isDevelopmentEnvironment=true")
         }
         client {
