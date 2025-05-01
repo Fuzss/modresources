@@ -19,22 +19,22 @@ universalenchants:
     curseforge: universal-enchants-forge
     modrinth: universal-enchants
 easyshulkerboxes:
-  weight: 30
+  weight: 50
   distributions:
     curseforge: easy-shulker-boxes
     modrinth: easy-shulker-boxes
 bagofholding:
-  weight: 15
+  weight: 20
   distributions:
     curseforge: bag-of-holding-forge
     modrinth: bag-of-holding
 magnumtorch:
-  weight: 20
+  weight: 30
   distributions:
     curseforge: magnum-torch-forge
     modrinth: magnum-torch
 blockrunner:
-  weight: 10
+  weight: 15
   distributions:
     curseforge: block-runner-forge
     modrinth: block-runner
@@ -44,12 +44,12 @@ pickupnotifier:
     curseforge: pick-up-notifier
     modrinth: pick-up-notifier
 easymagic:
-  weight: 40
+  weight: 50
   distributions:
     curseforge: easy-magic
     modrinth: easy-magic
 diagonalfences:
-  weight: 45
+  weight: 50
   distributions:
     curseforge: diagonal-fences
     modrinth: diagonal-fences
@@ -59,7 +59,7 @@ airhop:
     curseforge: air-hop
     modrinth: air-hop
 enchantinginfuser:
-  weight: 50
+  weight: 60
   distributions:
     curseforge: enchanting-infuser-forge
     modrinth: enchanting-infuser
@@ -69,7 +69,7 @@ universalbonemeal:
     curseforge: universal-bone-meal-forge
     modrinth: universal-bonemeal
 tinyskeletons:
-  weight: 20
+  weight: 25
   distributions:
     curseforge: tiny-skeletons-forge
     modrinth: tiny-skeletons
@@ -79,7 +79,7 @@ deathfinder:
     curseforge: death-finder
     modrinth: death-finder
 visualworkbench:
-  weight: 50
+  weight: 70
   distributions:
     curseforge: visual-workbench
     modrinth: visual-workbench
@@ -89,17 +89,17 @@ barteringstation:
     curseforge: bartering-station
     modrinth: bartering-station
 bettertridents:
-  weight: 35
+  weight: 30
   distributions:
     curseforge: better-tridents
     modrinth: better-tridents
 horseexpert:
-  weight: 20
+  weight: 25
   distributions:
     curseforge: horse-expert
     modrinth: horse-expert
 spikyspikes:
-  weight: 25
+  weight: 20
   distributions:
     curseforge: spiky-spikes
     modrinth: spiky-spikes
@@ -109,42 +109,42 @@ strawstatues:
     curseforge: straw-statues
     modrinth: straw-statues
 armorstatues:
-  weight: 30
+  weight: 25
   distributions:
     curseforge: armor-statues
     modrinth: armor-statues
 distinguishedpotions:
-  weight: 15
+  weight: 5
   distributions:
     curseforge: distinguished-potions
     modrinth: distinguished-potions
 easyanvils:
-  weight: 35
+  weight: 50
   distributions:
     curseforge: easy-anvils
     modrinth: easy-anvils
 portablehole:
-  weight: 20
+  weight: 10
   distributions:
     curseforge: portable-hole
     modrinth: portable-hole
 slotcycler:
-  weight: 15
+  weight: 20
   distributions:
     curseforge: slot-cycler
     modrinth: slot-cycler
 leavesbegone:
-  weight: 15
+  weight: 35
   distributions:
     curseforge: leaves-be-gone
     modrinth: leaves-be-gone
 mobplaques:
-  weight: 15
+  weight: 20
   distributions:
     curseforge: mob-plaques
     modrinth: mob-plaques
 leavemybarsalone:
-  weight: 15
+  weight: 10
   distributions:
     curseforge: leave-my-bars-alone
     modrinth: leave-my-bars-alone
@@ -154,7 +154,7 @@ overflowingbars:
     curseforge: overflowing-bars
     modrinth: overflowing-bars
 stoneworks:
-  weight: 25
+  weight: 35
   distributions:
     curseforge: stoneworks
     modrinth: stoneworks
@@ -174,17 +174,17 @@ completionistsindex:
     curseforge: completionists-index
     modrinth: completionists-index
 arcanelanterns:
-  weight: 20
+  weight: 15
   distributions:
     curseforge: arcane-lanterns
     modrinth: arcane-lanterns
 hangglider:
-  weight: 30
+  weight: 25
   distributions:
     curseforge: hang-glider
     modrinth: hang-glider
 mindfuldarkness:
-  weight: 30
+  weight: 5
   distributions:
     curseforge: mindful-darkness
     modrinth: mindful-darkness
@@ -199,27 +199,27 @@ helditemtooltips:
     curseforge: held-item-tooltips
     modrinth: held-item-tooltips
 echochest:
-  weight: 35
+  weight: 20
   distributions:
     curseforge: echo-chest
     modrinth: echo-chest
 netherchest:
-  weight: 35
+  weight: 30
   distributions:
     curseforge: new-nether-chest
     modrinth: new-nether-chest
 paperdoll:
-  weight: 15
+  weight: 20
   distributions:
     curseforge: new-paper-doll
     modrinth: paper-doll
 plentyplates:
-  weight: 20
+  weight: 10
   distributions:
     curseforge: plenty-plates
     modrinth: plenty-plates
 enderzoology:
-  weight: 40
+  weight: 25
   distributions:
     curseforge: ender-zoology
     modrinth: ender-zoology
@@ -239,7 +239,7 @@ illagerinvasion:
     curseforge: illager-invasion
     modrinth: illager-invasion
 metalbundles:
-  weight: 15
+  weight: 20
   distributions:
     curseforge: metal-bundles
     modrinth: metal-bundles
@@ -269,12 +269,12 @@ configuredefaults:
     curseforge: configured-defaults
     modrinth: configured-defaults
 swordblockingmechanics:
-  weight: 25
+  weight: 15
   distributions:
     curseforge: sword-blocking-mechanics
     modrinth: sword-blocking-mechanics
 combatnouveau:
-  weight: 35
+  weight: 30
   distributions:
     curseforge: combat-nouveau
     modrinth: combat-nouveau
@@ -284,7 +284,7 @@ diagonalwalls:
     curseforge: diagonal-walls
     modrinth: diagonal-walls
 cutthrough:
-  weight: 15
+  weight: 35
   distributions:
     curseforge: cut-through
     modrinth: cut-through
@@ -304,7 +304,7 @@ nightconfigfixes:
     curseforge: night-config-fixes
     modrinth: night-config-fixes
 fastitemframes:
-  weight: 15
+  weight: 25
   distributions:
     curseforge: fast-item-frames
     modrinth: fast-item-frames
@@ -324,7 +324,7 @@ sheepvariety:
     curseforge: sheep-variety
     modrinth: sheep-variety
 dyedflames:
-  weight: 15
+  weight: 25
   distributions:
     curseforge: dyed-flames
     modrinth: dyed-flames

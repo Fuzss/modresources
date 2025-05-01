@@ -22,6 +22,24 @@ forgeconfigapiport:
   loaders:
     - fabric
     - forge
+accessories:
+  name: Accessories
+  distributions:
+    curseforge: accessories
+    modrinth: accessories
+  loaders:
+    - fabric
+    - neoforge
+    - forge
+terrablender:
+  name: TerraBlender
+  distributions:
+    curseforge: terrablender-fabric
+    modrinth: terrablender
+  loaders:
+    - fabric
+    - neoforge
+    - forge
 curiosapi:
   name: Curios API
   distributions:
@@ -36,12 +54,4 @@ trinkets:
     curseforge: trinkets
     modrinth: trinkets
   loaders:
-    - fabric
-accessories:
-  name: Accessories
-  distributions:
-    curseforge: accessories
-    modrinth: accessories
-  loaders:
-    - neoforge
     - fabric

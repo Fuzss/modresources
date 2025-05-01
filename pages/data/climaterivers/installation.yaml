@@ -7,3 +7,4 @@ dependencies:
   puzzleslib: required
   fabricapi: required
   forgeconfigapiport: required
+  terrablender: required
