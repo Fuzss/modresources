@@ -1,0 +1,13 @@
+{
+    "homepage": "https://github.com/Fuzss/linkedchests",
+    "promos": {
+        "1.21.1-latest": "21.1.0",
+        "1.21.1-recommended": "21.1.0",
+        "1.21.3-latest": "21.3.0",
+        "1.21.3-recommended": "21.3.0",
+        "1.21.4-latest": "21.4.0",
+        "1.21.4-recommended": "21.4.0",
+        "1.21.5-latest": "21.5.0",
+        "1.21.5-recommended": "21.5.0"
+    }
+}
