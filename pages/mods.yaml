@@ -338,3 +338,8 @@ climaterivers:
   distributions:
     curseforge: climate-rivers
     modrinth: climate-rivers
+linkedchests:
+  weight: 20
+  distributions:
+    curseforge: linked-chests
+    modrinth: linked-chests

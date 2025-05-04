@@ -1,0 +1,3 @@
++ Thanks to [Kyrptonaught](https://www.curseforge.com/members/kyrptonaught) and their [Linked Storage](https://www.curseforge.com/minecraft/mc-mods/linked-storage) mod for serving as a founding for this project. Linked Chests originally started out as a port, but has since turned into a complete standalone rewrite.
++ Thanks to [Chicken_Bones](https://www.curseforge.com/members/chicken_bones) for inspiring this project with their [Ender Storage](https://www.curseforge.com/minecraft/mc-mods/ender-storage) mod.
++ Thanks to the incredibly talended [Mim1q](https://www.curseforge.com/members/mim1q) for creating all those amazing textures.
