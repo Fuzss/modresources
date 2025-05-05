@@ -343,3 +343,8 @@ linkedchests:
   distributions:
     curseforge: linked-chests
     modrinth: linked-chests
+convenienteffects:
+  weight: 20
+  distributions:
+    curseforge: convenient-effects
+    modrinth: convenient-effects

@@ -1,0 +1,1 @@
++ Thanks to [Raltsmc](https://www.curseforge.com/members/raltsmc) for inspiring the blindness tweaks with their [Mob Blindness](https://www.curseforge.com/minecraft/mc-mods/mob-blindness) mod.
