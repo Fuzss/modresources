@@ -1,0 +1,2 @@
++ Huge thanks to [RiciJak](https://www.minecraftforum.net/members/riciJak) for creating the original [Ztones](https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/2221070-ztones-v-2-2-1-decorative-blocks-16x) mod with all those amazing textures.
++ Huge thanks to [TehNut](https://www.curseforge.com/members/tehnut) for picking up the mod as [Xtones](https://www.curseforge.com/minecraft/mc-mods/xtones) and polishing it for modern Minecraft versions.

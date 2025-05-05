@@ -348,3 +348,8 @@ convenienteffects:
   distributions:
     curseforge: convenient-effects
     modrinth: convenient-effects
+ytones:
+  weight: 35
+  distributions:
+    curseforge: ytones
+    modrinth: ytones
