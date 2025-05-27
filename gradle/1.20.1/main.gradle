@@ -50,6 +50,9 @@ allprojects {
         maven {
             name = "AppleSkin"
             url "https://maven.ryanliptak.com/"
+            content {
+                includeGroup("squeek.appleskin")
+            }
         }
         maven {
             name = "Minecraft Forge"
