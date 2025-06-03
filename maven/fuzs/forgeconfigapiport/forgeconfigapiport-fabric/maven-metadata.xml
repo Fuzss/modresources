@@ -3,8 +3,8 @@
   <groupId>fuzs.forgeconfigapiport</groupId>
   <artifactId>forgeconfigapiport-fabric</artifactId>
   <versioning>
-    <latest>21.5.1</latest>
-    <release>21.5.1</release>
+    <latest>21.6.0</latest>
+    <release>21.6.0</release>
     <versions>
       <version>5.0.0</version>
       <version>5.0.1</version>
@@ -59,7 +59,8 @@
       <version>8.0.2</version>
       <version>21.5.0</version>
       <version>21.5.1</version>
+      <version>21.6.0</version>
     </versions>
-    <lastUpdated>20250327201358</lastUpdated>
+    <lastUpdated>20250603080327</lastUpdated>
   </versioning>
 </metadata>
