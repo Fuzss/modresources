@@ -58,6 +58,10 @@ allprojects {
             name = "Minecraft Forge"
             url "https://maven.minecraftforge.net/"
         }
+        maven {
+            name "KosmX"
+            url "https://maven.kosmx.dev/"
+        }
         flatDir {
             dirs "libs"
         }
