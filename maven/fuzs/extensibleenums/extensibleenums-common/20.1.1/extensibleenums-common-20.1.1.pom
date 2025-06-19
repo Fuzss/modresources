@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>fuzs.extensibleenums</groupId>
+  <artifactId>extensibleenums-common</artifactId>
+  <version>20.1.1</version>
+  <name>Extensible Enums [Common]</name>
+  <description>Extending enums (including abstract enum classes) since 2022.</description>
+  <url>https://github.com/Fuzss/extensibleenums</url>
+  <licenses>
+    <license>
+      <name>MPL-2.0</name>
+      <url>https://spdx.org/licenses/MPL-2.0.html</url>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <id>fuzs</id>
+      <name>Fuzs</name>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:git:git://github.com/Fuzss/extensibleenums.git</connection>
+    <developerConnection>scm:git:git@github.com:Fuzss/extensibleenums.git</developerConnection>
+    <url>https://github.com/Fuzss/extensibleenums</url>
+  </scm>
+  <issueManagement>
+    <system>github</system>
+    <url>https://github.com/Fuzss/extensibleenums/issues</url>
+  </issueManagement>
+</project>
