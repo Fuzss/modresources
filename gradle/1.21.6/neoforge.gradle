@@ -49,13 +49,6 @@ repositories {
         url = "https://maven.neoforged.net/releases/"
     }
     maven {
-        name "NeoForged PR #2297"
-        url "https://prmaven.neoforged.net/NeoForge/pr2297"
-        content {
-            includeModule("net.neoforged", "neoforge")
-        }
-    }
-    maven {
         name = "TheIllusiveC4"
         url = "https://maven.theillusivec4.top/"
     }
