@@ -1,3 +1,4 @@
+apply plugin: "dev.architectury.loom"
 apply plugin: "com.github.johnrengelman.shadow"
 
 architectury {
@@ -74,9 +75,7 @@ dependencies {
     }
 }
 
-import net.fabricmc.loom.task.AbstractRunTask
-
-tasks.withType(AbstractRunTask).configureEach {
+tasks.withType(net.fabricmc.loom.task.AbstractRunTask).configureEach {
     doFirst {
         // Step 1: Generate a filtered classpath file
         def originalClasspath = file(".gradle/loom-cache/forge_minecraft_classpath.txt")
