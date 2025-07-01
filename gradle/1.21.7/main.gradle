@@ -365,6 +365,36 @@ subprojects {
 //	    debugMode = true
     }
 
+    tasks.register("refreshUpdateJson") {
+        onlyIf { project.hasProperty("modResources") }
+        doLast {
+            var updateFile = file(project.findProperty("modResources").concat(File.separator).concat("update").concat(File.separator).concat("${modId}").concat(".json"))
+            var updateJson
+            if (updateFile.exists() && updateFile.canRead()) {
+                updateJson = new groovy.json.JsonSlurper().parseText(updateFile.text)
+                updateJson["promos"]["${libs.versions.minecraft.get()}-latest"] = "${modVersion}"
+                // alpha and beta releases will contain "a" or "b" char respectively, don"t update recommended for those
+                if ("${modVersion}".matches("[^a-zA-Z]+")) {
+                    updateJson["promos"]["${libs.versions.minecraft.get()}-recommended"] = "${modVersion}"
+                }
+            } else {
+                var builder = new groovy.json.JsonBuilder()
+                updateJson = builder {
+                    homepage "${modSourceUrl}"
+                    promos {
+                        "${libs.versions.minecraft.get()}-latest" "${modVersion}"
+                        // alpha and beta releases will contain "a" or "b" char respectively, don"t update recommended for those
+                        if ("${modVersion}".matches("[^a-zA-Z]+")) {
+                            "${libs.versions.minecraft.get()}-recommended" "${modVersion}"
+                        }
+                    }
+                }
+            }
+            var output = new groovy.json.JsonOutput()
+            updateFile.write(output.prettyPrint(output.toJson(updateJson)))
+        }
+    }
+
     tasks.register("copyJarToDir", Copy) {
         onlyIf { project.hasProperty("buildJarOutputDir") && project.hasProperty("uniqueBuildNumber" && project.findProperty("copyBuildJar").toBoolean()) }
         doLast {
