@@ -75,7 +75,9 @@ dependencies {
     }
 }
 
-tasks.withType("net.fabricmc.loom.task.AbstractRunTask").configureEach {
+import net.fabricmc.loom.task.AbstractRunTask
+
+tasks.withType(AbstractRunTask).configureEach {
     doFirst {
         // Step 1: Generate a filtered classpath file
         def originalClasspath = file(".gradle/loom-cache/forge_minecraft_classpath.txt")
