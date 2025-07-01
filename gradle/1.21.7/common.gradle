@@ -12,8 +12,3 @@ dependencies {
     // Fabric Loader
     modCompileOnly libs.fabricloader.fabric
 }
-
-def clazz = this.class.classLoader.loadClass("net.fabricmc.loom.task.AbstractRemapJarTask")
-tasks.withType(clazz).configureEach {
-    targetNamespace = "named"
-}
