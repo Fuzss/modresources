@@ -424,13 +424,13 @@ subprojects {
     build.finalizedBy project.tasks.copyJarToDir, project.tasks.incrementBuildNumber
 
     if (project.path == ":Common") {
-        tasks.withType(net.fabricmc.loom.task.AbstractRemapJarTask).configureEach {
+        tasks.withType("net.fabricmc.loom.task.AbstractRemapJarTask").configureEach {
             targetNamespace = "named"
         }
     }
 
     if (project.path == ":NeoForge") {
-        tasks.withType(net.fabricmc.loom.task.AbstractRunTask).configureEach {
+        tasks.withType("net.fabricmc.loom.task.AbstractRunTask").configureEach {
             doFirst {
                 // Step 1: Generate a filtered classpath file
                 def originalClasspath = file(".gradle/loom-cache/forge_minecraft_classpath.txt")
