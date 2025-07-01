@@ -365,36 +365,6 @@ subprojects {
 //	    debugMode = true
     }
 
-    tasks.register("refreshUpdateJson") {
-        onlyIf { project.hasProperty("modResources") }
-        doLast {
-            var updateFile = file(project.findProperty("modResources").concat(File.separator).concat("update").concat(File.separator).concat("${modId}").concat(".json"))
-            var updateJson
-            if (updateFile.exists() && updateFile.canRead()) {
-                updateJson = new groovy.json.JsonSlurper().parseText(updateFile.text)
-                updateJson["promos"]["${libs.versions.minecraft.get()}-latest"] = "${modVersion}"
-                // alpha and beta releases will contain "a" or "b" char respectively, don"t update recommended for those
-                if ("${modVersion}".matches("[^a-zA-Z]+")) {
-                    updateJson["promos"]["${libs.versions.minecraft.get()}-recommended"] = "${modVersion}"
-                }
-            } else {
-                var builder = new groovy.json.JsonBuilder()
-                updateJson = builder {
-                    homepage "${modSourceUrl}"
-                    promos {
-                        "${libs.versions.minecraft.get()}-latest" "${modVersion}"
-                        // alpha and beta releases will contain "a" or "b" char respectively, don"t update recommended for those
-                        if ("${modVersion}".matches("[^a-zA-Z]+")) {
-                            "${libs.versions.minecraft.get()}-recommended" "${modVersion}"
-                        }
-                    }
-                }
-            }
-            var output = new groovy.json.JsonOutput()
-            updateFile.write(output.prettyPrint(output.toJson(updateJson)))
-        }
-    }
-
     tasks.register("copyJarToDir", Copy) {
         onlyIf { project.hasProperty("buildJarOutputDir") && project.hasProperty("uniqueBuildNumber" && project.findProperty("copyBuildJar").toBoolean()) }
         doLast {
@@ -419,27 +389,6 @@ subprojects {
             var propertiesContent = buildNumberMatcher.replaceAll("uniqueBuildNumber=" + ++versionCode)
             propertiesFile.write(propertiesContent)
         }
-    }
-
-    tasks.register("patchLaunchCfg") {
-        // Step 1: Generate a filtered classpath file
-        def originalClasspath = file(".gradle/loom-cache/forge_minecraft_classpath.txt")
-        // We don't need this since we are using Mojmap
-        def filtered = originalClasspath.readLines().findAll { !it.contains("unprotect") }
-
-        def customClasspathFile = file("$buildDir/forge_minecraft_classpath.txt")
-        customClasspathFile.text = filtered.join(System.lineSeparator())
-
-        // Step 2: Patch launch.cfg
-        def launchCfgFile = file(".gradle/loom-cache/launch.cfg")
-        def lines = launchCfgFile.readLines().collect { line ->
-            if (line.contains("legacyClassPath.file=")) {
-                return line.replaceFirst(/(?<=legacyClassPath\.file=).*/, customClasspathFile.absolutePath.replace('\\', '/'))
-            }
-            return line
-        }
-        launchCfgFile.text = lines.join(System.lineSeparator())
-        println "Patched launch.cfg to use custom classpath file"
     }
 
     build.finalizedBy project.tasks.copyJarToDir, project.tasks.incrementBuildNumber
