@@ -13,6 +13,6 @@ dependencies {
     modCompileOnly libs.fabricloader.fabric
 }
 
-tasks.withType(net.fabricmc.loom.task.AbstractRemapJarTask).configureEach {
+tasks.withType("net.fabricmc.loom.task.AbstractRemapJarTask").configureEach {
     targetNamespace = "named"
 }
