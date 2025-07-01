@@ -1,5 +1,3 @@
-apply plugin: "dev.architectury.loom"
-
 architectury {
     common rootProject.subprojects.name.collect { it.toLowerCase() }.findAll { !it.contains("common") }
 }
