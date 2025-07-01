@@ -365,7 +365,7 @@ subprojects {
 //	    debugMode = true
     }
 
-    task refreshUpdateJson {
+    tasks.register("refreshUpdateJson") {
         onlyIf { project.hasProperty("modResources") }
         doLast {
             var updateFile = file(project.findProperty("modResources").concat(File.separator).concat("update").concat(File.separator).concat("${modId}").concat(".json"))
@@ -395,9 +395,9 @@ subprojects {
         }
     }
 
-    task copyJarToDir(type: Copy) {
-        onlyIf { project.hasProperty("buildJarOutputDir") && project.hasProperty("uniqueBuildNumber") }
-        if (project.findProperty("copyBuildJar").toBoolean()) {
+    tasks.register("copyJarToDir", Copy) {
+        onlyIf { project.hasProperty("buildJarOutputDir") && project.hasProperty("uniqueBuildNumber" && project.findProperty("copyBuildJar").toBoolean()) }
+        doLast {
             from remapJar
             into project.findProperty("buildJarOutputDir")
             // add build number to be able to distinguish jars when testing thorough official launcher
@@ -406,7 +406,7 @@ subprojects {
         }
     }
 
-    task incrementBuildNumber {
+    tasks.register("incrementBuildNumber") {
         onlyIf { project.hasProperty("uniqueBuildNumber") }
         doLast {
             var propertiesName = "gradle.properties"
@@ -419,6 +419,27 @@ subprojects {
             var propertiesContent = buildNumberMatcher.replaceAll("uniqueBuildNumber=" + ++versionCode)
             propertiesFile.write(propertiesContent)
         }
+    }
+
+    tasks.register("patchLaunchCfg") {
+        // Step 1: Generate a filtered classpath file
+        def originalClasspath = file(".gradle/loom-cache/forge_minecraft_classpath.txt")
+        // We don't need this since we are using Mojmap
+        def filtered = originalClasspath.readLines().findAll { !it.contains("unprotect") }
+
+        def customClasspathFile = file("$buildDir/forge_minecraft_classpath.txt")
+        customClasspathFile.text = filtered.join(System.lineSeparator())
+
+        // Step 2: Patch launch.cfg
+        def launchCfgFile = file(".gradle/loom-cache/launch.cfg")
+        def lines = launchCfgFile.readLines().collect { line ->
+            if (line.contains("legacyClassPath.file=")) {
+                return line.replaceFirst(/(?<=legacyClassPath\.file=).*/, customClasspathFile.absolutePath.replace('\\', '/'))
+            }
+            return line
+        }
+        launchCfgFile.text = lines.join(System.lineSeparator())
+        println "Patched launch.cfg to use custom classpath file"
     }
 
     build.finalizedBy project.tasks.copyJarToDir, project.tasks.incrementBuildNumber
