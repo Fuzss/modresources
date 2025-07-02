@@ -114,7 +114,7 @@ armorstatues:
     curseforge: armor-statues
     modrinth: armor-statues
 distinguishedpotions:
-  weight: 5
+  weight: 0
   distributions:
     curseforge: distinguished-potions
     modrinth: distinguished-potions
@@ -214,7 +214,7 @@ paperdoll:
     curseforge: new-paper-doll
     modrinth: paper-doll
 plentyplates:
-  weight: 10
+  weight: 0
   distributions:
     curseforge: plenty-plates
     modrinth: plenty-plates
@@ -249,7 +249,7 @@ diagonalwindows:
     curseforge: diagonal-windows
     modrinth: diagonal-windows
 miniumstone:
-  weight: 10
+  weight: 0
   distributions:
     curseforge: minium-stone
     modrinth: minium-stone
@@ -289,7 +289,7 @@ cutthrough:
     curseforge: cut-through
     modrinth: cut-through
 sneakycurses:
-  weight: 5
+  weight: 0
   distributions:
     curseforge: sneaky-curses-forge
     modrinth: sneaky-curses
