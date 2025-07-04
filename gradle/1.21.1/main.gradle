@@ -16,10 +16,6 @@ allprojects {
         mavenCentral()
         mavenLocal()
         maven {
-            name = "Sponge"
-            url = "https://repo.spongepowered.org/repository/maven-public/"
-        }
-        maven {
             name = "Jared"
             url = "https://maven.blamejared.com/"
         }
@@ -62,8 +58,9 @@ allprojects {
             name "KosmX"
             url "https://maven.kosmx.dev/"
         }
-        flatDir {
-            dirs "libs"
+        maven {
+            name = "Terraformers"
+            url = "https://maven.terraformersmc.com/"
         }
         exclusiveContent {
             forRepository {
@@ -142,6 +139,15 @@ allprojects {
         // metadata includes mapped dependencies which are not reasonably consumable by
         // other mod developers.
         enabled = false
+    }
+
+    // IDEA no longer automatically downloads sources / javadoc jars for dependencies, 
+    // so we need to explicitly enable the behavior.
+    idea {
+        module {
+            downloadSources = true
+            downloadJavadoc = true
+        }
     }
 }
 
@@ -369,7 +375,7 @@ subprojects {
 //	    debugMode = true
     }
 
-    task refreshUpdateJson {
+    tasks.register("refreshUpdateJson") {
         onlyIf { project.hasProperty("modResources") }
         doLast {
             var updateFile = file(project.findProperty("modResources").concat(File.separator).concat("update").concat(File.separator).concat("${modId}").concat(".json"))
@@ -399,9 +405,9 @@ subprojects {
         }
     }
 
-    task copyJarToDir(type: Copy) {
-        onlyIf { project.hasProperty("buildJarOutputDir") && project.hasProperty("uniqueBuildNumber") }
-        if (project.findProperty("copyBuildJar").toBoolean()) {
+    tasks.register("copyJarToDir", Copy) {
+        onlyIf { project.hasProperty("buildJarOutputDir") && project.hasProperty("uniqueBuildNumber" && project.findProperty("copyBuildJar").toBoolean()) }
+        doLast {
             from remapJar
             into project.findProperty("buildJarOutputDir")
             // add build number to be able to distinguish jars when testing thorough official launcher
@@ -410,7 +416,7 @@ subprojects {
         }
     }
 
-    task incrementBuildNumber {
+    tasks.register("incrementBuildNumber") {
         onlyIf { project.hasProperty("uniqueBuildNumber") }
         doLast {
             var propertiesName = "gradle.properties"
