@@ -38,10 +38,6 @@ configurations {
 
 repositories {
     maven {
-        name = "Terraformers"
-        url = "https://maven.terraformersmc.com/"
-    }
-    maven {
         name = "Modmuss"
         url = "https://maven.modmuss50.me/"
     }

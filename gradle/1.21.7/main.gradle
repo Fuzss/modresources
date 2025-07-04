@@ -58,6 +58,10 @@ allprojects {
             name "KosmX"
             url "https://maven.kosmx.dev/"
         }
+        maven {
+            name = "Terraformers"
+            url = "https://maven.terraformersmc.com/"
+        }
         exclusiveContent {
             forRepository {
                 maven {
