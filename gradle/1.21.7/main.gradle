@@ -58,9 +58,6 @@ allprojects {
             name "KosmX"
             url "https://maven.kosmx.dev/"
         }
-        flatDir {
-            dirs "libs"
-        }
         exclusiveContent {
             forRepository {
                 maven {
@@ -138,6 +135,15 @@ allprojects {
         // metadata includes mapped dependencies which are not reasonably consumable by
         // other mod developers.
         enabled = false
+    }
+
+    // IDEA no longer automatically downloads sources / javadoc jars for dependencies, 
+    // so we need to explicitly enable the behavior.
+    idea {
+        module {
+            downloadSources = true
+            downloadJavadoc = true
+        }
     }
 }
 
