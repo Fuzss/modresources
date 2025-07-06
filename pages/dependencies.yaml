@@ -31,11 +31,11 @@ accessories:
     - fabric
     - neoforge
     - forge
-terrablender:
-  name: TerraBlender
+biolith:
+  name: Biolith
   distributions:
-    curseforge: terrablender-fabric
-    modrinth: terrablender
+    curseforge: biolith
+    modrinth: biolith
   loaders:
     - fabric
     - neoforge
