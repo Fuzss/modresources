@@ -103,3 +103,7 @@ components.java {
 }
 
 [tasks.modrinth, tasks.curseforge].each { it.finalizedBy project.tasks.refreshUpdateJson }
+
+ext.patchLaunchCfg = {
+    // NO-OP
+}
