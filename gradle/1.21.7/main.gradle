@@ -407,13 +407,11 @@ subprojects {
 
     tasks.register("copyJarToDir", Copy) {
         onlyIf { project.hasProperty("buildJarOutputDir") && project.hasProperty("uniqueBuildNumber") && project.findProperty("copyBuildJar").toBoolean() }
-        doLast {
-            from remapJar
-            into project.findProperty("buildJarOutputDir")
-            // add build number to be able to distinguish jars when testing thorough official launcher
-            // build number is stored in global gradle.properties
-            rename { fileName -> fileName.replace("v${modVersion}", "v${modVersion}.${uniqueBuildNumber}") }
-        }
+        from remapJar
+        into project.findProperty("buildJarOutputDir")
+        // add build number to be able to distinguish jars when testing thorough official launcher
+        // build number is stored in global gradle.properties
+        rename { fileName -> fileName.replace("v${modVersion}", "v${modVersion}.${uniqueBuildNumber}") }
     }
 
     tasks.register("incrementBuildNumber") {
