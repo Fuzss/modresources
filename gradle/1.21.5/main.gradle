@@ -406,7 +406,7 @@ subprojects {
     }
 
     tasks.register("copyJarToDir", Copy) {
-        onlyIf { project.hasProperty("buildJarOutputDir") && project.hasProperty("uniqueBuildNumber" && project.findProperty("copyBuildJar").toBoolean()) }
+        onlyIf { project.hasProperty("buildJarOutputDir") && project.hasProperty("uniqueBuildNumber") && project.findProperty("copyBuildJar").toBoolean() }
         doLast {
             from remapJar
             into project.findProperty("buildJarOutputDir")
