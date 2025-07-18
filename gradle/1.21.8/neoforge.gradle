@@ -70,9 +70,6 @@ dependencies {
     if (libs.hasProperty("bettermodsbutton") && libs.bettermodsbutton.hasProperty("neoforge")) {
         modLocalRuntime(libs.bettermodsbutton.neoforge) { transitive = false }
     }
-    if (libs.hasProperty("forgeconfigscreens") && libs.forgeconfigscreens.hasProperty("neoforge")) {
-        modLocalRuntime(libs.forgeconfigscreens.neoforge) { transitive = false }
-    }
 }
 
 tasks.withType(Jar).configureEach {
