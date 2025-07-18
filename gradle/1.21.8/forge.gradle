@@ -94,10 +94,6 @@ dependencies {
         // This should be modLocalRuntime, but it is currently broken for Forge.
         localRuntime(libs.bettermodsbutton.forge) { transitive = false }
     }
-    if (libs.hasProperty("forgeconfigscreens") && libs.forgeconfigscreens.hasProperty("forge")) {
-        // This should be modLocalRuntime, but it is currently broken for Forge.
-        localRuntime(libs.forgeconfigscreens.forge) { transitive = false }
-    }
 }
 
 tasks.withType(Jar).configureEach {

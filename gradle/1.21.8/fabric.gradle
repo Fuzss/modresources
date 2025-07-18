@@ -62,9 +62,6 @@ dependencies {
     if (libs.hasProperty("modmenu") && libs.modmenu.hasProperty("fabric")) {
         modLocalRuntime(libs.modmenu.fabric) { transitive = false }
     }
-    if (libs.hasProperty("forgeconfigscreens") && libs.forgeconfigscreens.hasProperty("fabric")) {
-        modLocalRuntime(libs.forgeconfigscreens.fabric) { transitive = false }
-    }
 }
 
 tasks.withType(Jar).configureEach {
