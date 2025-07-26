@@ -1,5 +1,5 @@
 + Use the Lantern Maker to infuse a normal vanilla lantern with some special powers. Place the catalysts onto the maker, then finally place the vanilla lantern block on top and your new lantern will be created.
-+ Recipes and information about each lantern is found in [JEI](https://www.curseforge.com/minecraft/mc-mods/jei) (REI is not supported).
++ Recipes and information about each lantern is found in [JEI](https://www.curseforge.com/minecraft/mc-mods/jei) and [REI](https://www.curseforge.com/minecraft/mc-mods/roughly-enough-items).
 + Life Lantern: Makes crops around the lantern grow faster. Catalysts: Egg, Melon, Golden Apple, Sugar Cane, Bone Meal
 + Feral Lantern: Lights up a giant area around it by spawning sparks. When the area is lit up and enough sparks have been spawned the lantern vanishes. Catalysts: Glowstone, Jack o' Lantern, Fire Charge, Blaze Powder, Gold Ingot
 + Love Lantern: Makes nearby mobs fall in love. Catalysts: Diamond, Rabbit Foot, Golden Carrot, Beetroot, Life Lantern, Honey Bottle

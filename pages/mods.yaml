@@ -113,11 +113,11 @@ armorstatues:
   distributions:
     curseforge: armor-statues
     modrinth: armor-statues
-distinguishedpotions:
+puzzleslib:
   weight: 0
   distributions:
-    curseforge: distinguished-potions
-    modrinth: distinguished-potions
+    curseforge: puzzles-lib
+    modrinth: puzzles-lib
 easyanvils:
   weight: 50
   distributions:
@@ -213,11 +213,6 @@ paperdoll:
   distributions:
     curseforge: new-paper-doll
     modrinth: paper-doll
-plentyplates:
-  weight: 0
-  distributions:
-    curseforge: plenty-plates
-    modrinth: plenty-plates
 enderzoology:
   weight: 25
   distributions:
@@ -248,11 +243,11 @@ diagonalwindows:
   distributions:
     curseforge: diagonal-windows
     modrinth: diagonal-windows
-miniumstone:
+bettermodsbutton:
   weight: 0
   distributions:
-    curseforge: minium-stone
-    modrinth: minium-stone
+    curseforge: better-mods-button
+    modrinth: better-mods-button
 effectdescriptions:
   weight: 25
   distributions:
