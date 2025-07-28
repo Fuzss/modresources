@@ -24,7 +24,7 @@ youtube:
   labelColor: 2F4858
   logoColor: white
   logo: youtube
-  link: https://www.youtube.com/channel/UC2l26SuCmCNSCPefpfbCX7Q
+  link: https://www.youtube.com/@heyitsfuzs
 patreon:
   message: Patreon
   width: 118
@@ -60,7 +60,7 @@ curseforge:
   labelColor: 2F4858
   logoColor: white
   logo: curseforge
-  link: https://www.curseforge.com/members/fuzs_/projects
+  link: https://www.curseforge.com/members/fuzs_
 modrinth:
   message: Modrinth
   width: 129
@@ -70,13 +70,4 @@ modrinth:
   logoColor: white
   logo: modrinth
   link: https://modrinth.com/user/Fuzs
-paypal:
-  message: PayPal
-  width: 107
-  height: 28
-  color: ECEBE6
-  labelColor: 2F4858
-  logoColor: white
-  logo: paypal
-  link: https://www.paypal.com/donate/?hosted_button_id=TYG7QUSWMVSNG
   

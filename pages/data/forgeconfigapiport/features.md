@@ -3,4 +3,3 @@
 + Built for a multiloader architecture: Simply setup your configs in a common module!
 + Users don't need to install any additional library on the mod loader the chosen config system is native to (NeoForge / Forge), everything is built in there!
 + Check out the developer wiki for instructions on how to use Forge Config API Port in your project!
-+ Install [Forge Config Screens](https://legacy.curseforge.com/minecraft/mc-mods/config-menus-forge) for in-game configuration!
