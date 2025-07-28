@@ -8,6 +8,11 @@ arcanelanterns:
   distributions:
     curseforge: arcane-lanterns
     modrinth: arcane-lanterns
+armorstatues:
+  weight: 25
+  distributions:
+    curseforge: armor-statues
+    modrinth: armor-statues
 bagofholding:
   weight: 20
   distributions:
@@ -53,7 +58,7 @@ completionistsindex:
   distributions:
     curseforge: completionists-index
     modrinth: completionists-index
-configuredefaults:
+configureddefaults:
   weight: 0
   distributions:
     curseforge: configured-defaults
@@ -73,16 +78,16 @@ deathfinder:
   distributions:
     curseforge: death-finder
     modrinth: death-finder
-diagonalwalls:
-  weight: 40
-  distributions:
-    curseforge: diagonal-walls
-    modrinth: diagonal-walls
 diagonalfences:
   weight: 50
   distributions:
     curseforge: diagonal-fences
     modrinth: diagonal-fences
+diagonalwalls:
+  weight: 40
+  distributions:
+    curseforge: diagonal-walls
+    modrinth: diagonal-walls
 diagonalwindows:
   weight: 30
   distributions:
@@ -293,11 +298,6 @@ spikyspikes:
   distributions:
     curseforge: spiky-spikes
     modrinth: spiky-spikes
-stylisheffects:
-  weight: 25
-  distributions:
-    curseforge: stylish-effects
-    modrinth: stylish-effects
 stoneworks:
   weight: 35
   distributions:
@@ -308,6 +308,11 @@ strawstatues:
   distributions:
     curseforge: straw-statues
     modrinth: straw-statues
+stylisheffects:
+  weight: 25
+  distributions:
+    curseforge: stylish-effects
+    modrinth: stylish-effects
 swordblockingmechanics:
   weight: 15
   distributions:
@@ -328,16 +333,16 @@ tradingpost:
   distributions:
     curseforge: trading-post
     modrinth: trading-post
-universalenchants:
-  weight: 20
-  distributions:
-    curseforge: universal-enchants
-    modrinth: universal-enchants
 universalbonemeal:
   weight: 25
   distributions:
     curseforge: universal-bone-meal
     modrinth: universal-bonemeal
+universalenchants:
+  weight: 20
+  distributions:
+    curseforge: universal-enchants
+    modrinth: universal-enchants
 visualworkbench:
   weight: 70
   distributions:
