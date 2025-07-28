@@ -192,7 +192,7 @@ linkedchests:
   weight: 20
   distributions:
     curseforge: linked-chests
-    modrinth: linked-chests
+    modrinth: new-linked-chests
 magnumtorch:
   weight: 30
   distributions:
@@ -337,7 +337,7 @@ universalbonemeal:
   weight: 25
   distributions:
     curseforge: universal-bone-meal
-    modrinth: universal-bonemeal
+    modrinth: universal-bone-meal
 universalenchants:
   weight: 20
   distributions:
