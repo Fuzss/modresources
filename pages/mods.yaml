@@ -118,11 +118,11 @@ easyshulkerboxes:
   distributions:
     curseforge: easy-shulker-boxes
     modrinth: easy-shulker-boxes
-effectdescriptions:
+effectinsights:
   weight: 25
   distributions:
-    curseforge: new-effect-descriptions
-    modrinth: effect-descriptions
+    curseforge: effect-insights
+    modrinth: effect-insights
 enchantinginfuser:
   weight: 60
   distributions:
@@ -146,7 +146,7 @@ fastitemframes:
 forgeconfigapiport:
   weight: 0
   distributions:
-    curseforge: forge-config-api-port
+    curseforge: forge-config-api-port-fabric
     modrinth: forge-config-api-port
 goldenagecombat:
   weight: 15
