@@ -3,13 +3,14 @@
   <groupId>fuzs.tooltipinsights</groupId>
   <artifactId>tooltipinsights-fabric</artifactId>
   <versioning>
-    <latest>21.8.2</latest>
-    <release>21.8.2</release>
+    <latest>21.8.3</latest>
+    <release>21.8.3</release>
     <versions>
       <version>21.8.0</version>
       <version>21.8.1</version>
       <version>21.8.2</version>
+      <version>21.8.3</version>
     </versions>
-    <lastUpdated>20250729225607</lastUpdated>
+    <lastUpdated>20250730134612</lastUpdated>
   </versioning>
 </metadata>
