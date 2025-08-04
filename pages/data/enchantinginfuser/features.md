@@ -1,5 +1,5 @@
 + Select which enchantments you want to put on your gear, no more randomness involved!
-+ Offers all enchantments you would find at an enchanting table, treasure enchantments like mending are not available.
++ Offers all enchantments you would find at an enchanting table, treasure enchantments like mending can be enabled via a built-in data pack.
 + Use the basic enchanting infuser to choose which enchantments to put on your gear.
 + Use the advanced enchanting infuser to additionally modify enchantments on already enchanted items. Also supports repairing an item using levels instead of materials. Costs are considerably lower compared to the basic infuser.
 + Receive back experience points when disenchanting gear on the advanced infuser, similar to vanilla's gindstone.
