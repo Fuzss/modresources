@@ -19,6 +19,11 @@ allprojects {
             name = "Fuzs Mod Resources"
             url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/"
         }
+        // Normal maven repo — makes it globally visible
+        maven {
+            name = "Parchment"
+            url = "https://maven.parchmentmc.org"
+        }
         maven {
             name = "Jared"
             url = "https://maven.blamejared.com/"
@@ -47,6 +52,7 @@ allprojects {
             name = "Terraformers"
             url = "https://maven.terraformersmc.com/"
         }
+        // Exclusive filter — restricts normal resolution
         exclusiveContent {
             forRepository {
                 maven {
