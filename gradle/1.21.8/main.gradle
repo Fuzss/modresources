@@ -23,6 +23,9 @@ allprojects {
         maven {
             name = "Parchment"
             url = "https://maven.parchmentmc.org"
+            content {
+                includeGroup("org.parchmentmc")
+            }
         }
         maven {
             name = "Jared"
