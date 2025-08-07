@@ -12,7 +12,7 @@ loom {
         configureEach {
             ideConfigGenerated(true)
             runDir("../run")
-            vmArgs("-Xms1G", "-Xmx4G", "-Dmixin.debug.export=true", "-Dmixin.debug.countInjections=true")
+            vmArgs("-Xms1G", "-Xmx4G", "-Dmixin.debug.export=true")
             vmArgs("-Dlog4j2.configurationFile=https://raw.githubusercontent.com/Fuzss/modresources/main/gradle/${libs.versions.minecraft.get()}/log4j.xml")
             vmArgs("-Dpuzzleslib.isDevelopmentEnvironment=true", "-D${modId}.isDevelopmentEnvironment=true")
         }
@@ -68,9 +68,6 @@ dependencies {
 
     if (libs.hasProperty("bettermodsbutton") && libs.bettermodsbutton.hasProperty("neoforge")) {
         modLocalRuntime(libs.bettermodsbutton.neoforge) { transitive = false }
-    }
-    if (libs.hasProperty("forgeconfigscreens") && libs.forgeconfigscreens.hasProperty("neoforge")) {
-        modLocalRuntime(libs.forgeconfigscreens.neoforge) { transitive = false }
     }
 }
 
