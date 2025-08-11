@@ -19,13 +19,9 @@ allprojects {
             name = "Fuzs Mod Resources"
             url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/"
         }
-        // Normal maven repo — makes it globally visible
         maven {
             name = "Parchment"
             url = "https://maven.parchmentmc.org"
-            content {
-                includeGroup("org.parchmentmc")
-            }
         }
         maven {
             name = "Jared"
@@ -54,18 +50,6 @@ allprojects {
         maven {
             name = "Terraformers"
             url = "https://maven.terraformersmc.com/"
-        }
-        // Exclusive filter — restricts normal resolution
-        exclusiveContent {
-            forRepository {
-                maven {
-                    name = "Parchment"
-                    url = "https://maven.parchmentmc.org/"
-                }
-            }
-            filter {
-                includeGroup("org.parchmentmc")
-            }
         }
         exclusiveContent {
             forRepository {
