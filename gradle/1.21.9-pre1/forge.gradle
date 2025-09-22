@@ -1,0 +1,135 @@
+apply plugin: "com.github.johnrengelman.shadow"
+
+architectury {
+    platformSetupLoomIde()
+    forge()
+}
+
+loom {
+    accessWidenerPath = project(":Common").loom.accessWidenerPath
+
+    forge {
+        convertAccessWideners = true
+        extraAccessWideners.add loom.accessWidenerPath.get().asFile.name
+
+        useCustomMixin = false
+
+        if (project(":Common").file("src/main/resources/${modId}.common.mixins.json").exists() || project(":Common").file("src/main/resources/common.mixins.json").exists()) {
+            mixinConfig "${modId}.common.mixins.json"
+        }
+        if (project.file("src/main/resources/${modId}.forge.mixins.json").exists() || project.file("src/main/resources/forge.mixins.json").exists()) {
+            mixinConfig "${modId}.forge.mixins.json"
+        }
+    }
+
+    runs {
+        configureEach {
+            ideConfigGenerated(true)
+            runDir("../run")
+            vmArgs("-Xms1G", "-Xmx4G", "-Dmixin.debug.export=true")
+            vmArgs("-Dlog4j2.configurationFile=https://raw.githubusercontent.com/Fuzss/modresources/main/gradle/${libs.versions.minecraft.get()}/log4j.xml")
+            vmArgs("-Dpuzzleslib.isDevelopmentEnvironment=true", "-D${modId}.isDevelopmentEnvironment=true")
+        }
+        client {
+            client()
+            setConfigName("Forge Client ${libs.versions.minecraft.get()}")
+            programArgs("--username", "Player####")
+        }
+        server {
+            server()
+            setConfigName("Forge Server ${libs.versions.minecraft.get()}")
+        }
+        data {
+            data()
+            setConfigName("Forge Data ${libs.versions.minecraft.get()}")
+            programArgs("--all", "--mod", modId)
+            programArgs("--existing", project(":Common").file("src/main/resources").absolutePath)
+            programArgs("--output", project(":Common").file("src/generated/resources").absolutePath)
+        }
+    }
+}
+
+configurations {
+    common
+    shadowCommon
+    compileClasspath.extendsFrom common
+    runtimeClasspath.extendsFrom common
+    developmentForge.extendsFrom common
+}
+
+// Force this version of jopt-simple as does Forge, otherwise client configuration is unable to launch.
+configurations.configureEach {
+    resolutionStrategy {
+        force "net.sf.jopt-simple:jopt-simple:5.0.4"
+    }
+}
+
+repositories {
+    maven {
+        name = "Minecraft Forge"
+        url = "https://maven.minecraftforge.net/"
+    }
+    maven {
+        name = "TheIllusiveC4"
+        url = "https://maven.theillusivec4.top/"
+    }
+    maven {
+        name = "OctoStudios"
+        url = "https://maven.octo-studios.com/releases/"
+    }
+}
+
+dependencies {
+    // Common Project
+    common(project(path: ":Common", configuration: "namedElements")) { transitive false }
+    shadowCommon(project(path: ":Common", configuration: "transformProductionForge")) { transitive = false }
+
+    // Minecraft Forge
+    forge libs.minecraftforge.forge
+
+    // Mixin Extras
+    implementation(annotationProcessor(libs.mixinextras.common.get()))
+
+    if (libs.hasProperty("bettermodsbutton") && libs.bettermodsbutton.hasProperty("forge")) {
+        // This should be modLocalRuntime, but it is currently broken for Forge.
+        localRuntime(libs.bettermodsbutton.forge) { transitive = false }
+    }
+}
+
+tasks.withType(Jar).configureEach {
+    exclude "architectury.common.json"
+}
+
+// Merge the classes and resources into the same directory, as Java expects modules to be in a single directory.
+// Aims to avoid issues with classes from the Forge (not Common) subproject occasionally not being included at runtime.
+sourceSets.each {
+    var dir = layout.buildDirectory.dir("sourcesSets/${it.name}")
+    it.java.destinationDirectory = dir
+    it.output.resourcesDir = dir
+}
+
+shadowJar {
+    configurations = [project.configurations.shadowCommon]
+    archiveClassifier = "dev-shadow"
+}
+
+remapJar {
+    input.set shadowJar.archiveFile
+    dependsOn shadowJar
+    archiveClassifier = ""
+    atAccessWideners.add("${modId}.accesswidener")
+}
+
+sourcesJar {
+    def commonSources = project(":Common").sourcesJar
+    dependsOn commonSources
+    from commonSources.archiveFile.map { zipTree(it) }
+}
+
+components.java {
+    withVariantsFromConfiguration(project.configurations.shadowRuntimeElements) {
+        skip()
+    }
+}
+
+[tasks.modrinth, tasks.curseforge].each { it.finalizedBy project.tasks.refreshUpdateJson }
