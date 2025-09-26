@@ -11,10 +11,9 @@
 				<RegexFilter regex="^Failed to fetch user properties$" onMatch="DENY" onMismatch="NEUTRAL"/>
 				<RegexFilter regex="^Couldn't connect to realms$" onMatch="DENY" onMismatch="NEUTRAL"/>
 				<RegexFilter regex="^Failed to fetch Realms feature flags$" onMatch="DENY" onMismatch="NEUTRAL"/>
-				<RegexFilter regex="^Couldn't look up profile properties for .*$" onMatch="DENY" onMismatch="NEUTRAL"/>
+				<RegexFilter regex="^Couldn't look up profile properties for .*" onMatch="DENY" onMismatch="NEUTRAL"/>
 				<RegexFilter regex="^Failed to request yggdrasil public key$" onMatch="DENY" onMismatch="NEUTRAL"/>
 				<RegexFilter regex="^Resizing Dynamic Transforms UBO, capacity limit of \d+ reached during a single frame\. New capacity will be \d+\.$" onMatch="DENY" onMismatch="NEUTRAL"/>
-				<RegexFilter regex="^Info log when linking program containing VS minecraft:core/.*Log output: WARNING:.*" onMatch="DENY" onMismatch="NEUTRAL"/>
 			</Filters>
 			<PatternLayout>
 				<LoggerNamePatternSelector defaultPattern="%style{[%d{HH:mm:ss}]}{blue} %highlight{[%t/%level]}{FATAL=red, ERROR=red, WARN=yellow, INFO=green, DEBUG=green, TRACE=blue} %style{(%logger{1})}{cyan} %highlight{%msg%n}{FATAL=red, ERROR=red, WARN=normal, INFO=normal, DEBUG=normal, TRACE=normal}" disableAnsi="${sys:fabric.log.disableAnsi:-true}">
@@ -62,6 +61,7 @@
 
 		</RollingRandomAccessFile>
 	</Appenders>
+	
 	<Loggers>
 		<Logger level="${sys:fabric.log.level:-info}" name="net.minecraft"/>
 		<Logger level="warn" name="cpw.mods.modlauncher.ClassTransformer"/>
