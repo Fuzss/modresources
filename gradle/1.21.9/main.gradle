@@ -210,8 +210,10 @@ subprojects {
 
     ext.incrementPatchVersion = { String version ->
         String[] parts = version.split("\\.")
-        if (parts.length < 3) {
-            throw new IllegalArgumentException("Version must have MAJOR.MINOR.PATCH")
+        if (parts.length == 2) {
+            parts = [parts[0], parts[1], "0"] as String[]
+        } else if (parts.length < 2) {
+            throw new IllegalArgumentException("Version must have at least MAJOR.MINOR")
         }
 
         int patch = parts[2].toInteger() + 1
