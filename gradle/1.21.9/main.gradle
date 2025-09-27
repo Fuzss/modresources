@@ -208,6 +208,17 @@ subprojects {
         }
     }
 
+    ext.incrementPatchVersion = { String version ->
+        String[] parts = version.split("\\.")
+        if (parts.length < 3) {
+            throw new IllegalArgumentException("Version must have MAJOR.MINOR.PATCH")
+        }
+
+        int patch = parts[2].toInteger() + 1
+        parts[2] = Integer.toString(patch)
+        return parts.join(".")
+    }
+
     processResources {
         duplicatesStrategy DuplicatesStrategy.EXCLUDE
 
@@ -246,7 +257,7 @@ subprojects {
                 "minNeoForgeFMLVersion": "1",
                 "minNeoForgeVersion": libs.versions.hasProperty("neoforge") && libs.versions.neoforge.hasProperty("min") ? libs.versions.neoforge.min.get() : "1",
                 "minecraftVersion": libs.versions.minecraft.get(),
-                "gameVersion": libs.versions.game.get(),
+                "upcomingMinecraftVersion": incrementPatchVersion(libs.versions.minecraft.get()),
                 "minPuzzlesVersion": libs.versions.hasProperty("puzzleslib") && libs.versions.puzzleslib.hasProperty("min") ? libs.versions.puzzleslib.min.get() : "1",
                 "mainEntryPoint": "${project.group}.fabric.${archivesBaseName}Fabric",
                 "clientEntryPoint": "${project.group}.fabric.client.${archivesBaseName}FabricClient",
