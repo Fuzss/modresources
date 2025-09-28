@@ -8,7 +8,7 @@ allprojects {
     apply plugin: "signing"
     apply plugin: "idea"
 
-    archivesBaseName = "${modName.replaceAll("[^a-zA-Z]", "")}"
+    base.archivesName = "${modName.replaceAll("[^a-zA-Z]", "")}"
     version = "v${modVersion}-${libs.versions.minecraft.get()}-${project.name}"
     group = modMavenGroup
 
@@ -261,8 +261,8 @@ subprojects {
                 "minecraftVersion": libs.versions.minecraft.get(),
                 "upcomingMinecraftVersion": incrementPatchVersion(libs.versions.minecraft.get()),
                 "minPuzzlesVersion": libs.versions.hasProperty("puzzleslib") && libs.versions.puzzleslib.hasProperty("min") ? libs.versions.puzzleslib.min.get() : "1",
-                "mainEntryPoint": "${project.group}.fabric.${archivesBaseName}Fabric",
-                "clientEntryPoint": "${project.group}.fabric.client.${archivesBaseName}FabricClient",
+                "mainEntryPoint": "${project.group}.fabric.${base.archivesName}Fabric",
+                "clientEntryPoint": "${project.group}.fabric.client.${base.archivesName}FabricClient",
                 "modFabricEnvironment": modFabricEnvironment,
                 "modForgeDisplayTest": modForgeDisplayTest
         ]
@@ -347,7 +347,7 @@ subprojects {
             addGameVersion project.name
             addGameVersion libs.versions.minecraft.get()
             mainArtifact(remapJar) {
-                displayName = "[${project.name.toUpperCase()}] [${libs.versions.minecraft.get()}] ${archivesBaseName}-v${modVersion}"
+                displayName = "[${project.name.toUpperCase()}] [${libs.versions.minecraft.get()}] ${base.archivesName}-v${modVersion}"
                 var requiredDependencies = "dependenciesRequired${project.name}CurseForge"
                 var embeddedDependencies = "dependenciesEmbedded${project.name}CurseForge"
                 var optionalDependencies = "dependenciesOptional${project.name}CurseForge"
@@ -388,7 +388,7 @@ subprojects {
         token = project.hasProperty("modrinthPersonalAccessToken") ? project.findProperty("modrinthPersonalAccessToken") : ""
         projectId = projectModrinthId
         versionNumber = project.version
-        versionName = "[${project.name.toUpperCase()}] [${libs.versions.minecraft.get()}] ${archivesBaseName}-v${modVersion}"
+        versionName = "[${project.name.toUpperCase()}] [${libs.versions.minecraft.get()}] ${base.archivesName}-v${modVersion}"
         changelog = file("../CHANGELOG.md").text
         versionType = projectReleaseType
         uploadFile = remapJar
