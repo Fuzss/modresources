@@ -294,9 +294,12 @@ subprojects {
                 artifactId = "${modId}-${project.name.toLowerCase()}"
                 version = modVersion
 
-                artifact tasks.named("remapJar")
-                artifact tasks.named("sourcesJar")
-                artifact tasks.named("javadocJar")
+                from components.java
+                setArtifacts([
+                        tasks.named("remapJar").get(),
+                        tasks.named("sourcesJar").get(),
+                        tasks.named("javadocJar").get()
+                ])
 
                 pom {
                     name = "${modName} [${project.name}]"
