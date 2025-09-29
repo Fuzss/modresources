@@ -293,26 +293,34 @@ subprojects {
             mavenJava(MavenPublication) {
                 artifactId = "${modId}-${project.name.toLowerCase()}"
                 version = modVersion
-                from components.java
+
+                artifact tasks.named("jar")
+                artifact tasks.named("sourcesJar")
+                artifact tasks.named("javadocJar")
+
                 pom {
                     name = "${modName} [${project.name}]"
                     description = "${modDescription}"
                     url = "${modSourceUrl}"
+
                     scm {
                         url = "${modSourceUrl}"
-                        connection = "${modSourceUrl}".replace("https", "scm:git:git").concat(".git")
-                        developerConnection = "${modSourceUrl}".replace("https://github.com/", "scm:git:git@github.com:").concat(".git")
+                        connection = "${modSourceUrl}".replace("https", "scm:git:git") + ".git"
+                        developerConnection = "${modSourceUrl}".replace("https://github.com/", "scm:git:git@github.com:") + ".git"
                     }
+
                     issueManagement {
                         system = "github"
                         url = "${modIssueUrl}"
                     }
+
                     licenses {
                         license {
                             name = "${modLicense}"
                             url = "https://spdx.org/licenses/${modLicense}.html"
                         }
                     }
+
                     developers {
                         developer {
                             id = "${modAuthor}".toLowerCase()
@@ -325,7 +333,9 @@ subprojects {
         repositories {
             maven {
                 name = "FuzsModResources"
-                url "file://" + project.hasProperty("modResources") ? "${project.findProperty("modResources")}/maven" : System.getenv("local_maven")
+                url = uri(project.hasProperty("modResources") ?
+                    "${project.findProperty("modResources")}/maven" :
+                    System.getenv("local_maven"))
             }
         }
     }
