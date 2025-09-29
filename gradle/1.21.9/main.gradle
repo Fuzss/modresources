@@ -294,7 +294,7 @@ subprojects {
                 artifactId = "${modId}-${project.name.toLowerCase()}"
                 version = modVersion
 
-                artifact tasks.named("jar")
+                artifact tasks.named("remapJar")
                 artifact tasks.named("sourcesJar")
                 artifact tasks.named("javadocJar")
 
