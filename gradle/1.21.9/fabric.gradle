@@ -68,15 +68,15 @@ tasks.withType(Jar).configureEach {
     exclude "architectury.common.json"
 }
 
-shadowJar {
+tasks.named("shadowJar") {
     configurations = [project.configurations.shadowCommon]
-    archiveClassifier = "dev-shadow"
+    archiveClassifier.set("dev-shadow")
 }
 
 remapJar {
-    input.set shadowJar.archiveFile
-    dependsOn shadowJar
-    archiveClassifier = ""
+    from(shadowJar.archiveFile)
+    dependsOn(shadowJar)
+    archiveClassifier.set("")
     injectAccessWidener = true
 }
 
@@ -86,12 +86,6 @@ jar {
 
 sourcesJar {
     def commonSources = project(":Common").sourcesJar
-    dependsOn commonSources
+    dependsOn(commonSources)
     from commonSources.archiveFile.map { zipTree(it) }
-}
-
-components.java {
-    withVariantsFromConfiguration(project.configurations.shadowRuntimeElements) {
-        skip()
-    }
 }
