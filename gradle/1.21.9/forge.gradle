@@ -114,10 +114,14 @@ tasks.named("shadowJar") {
 }
 
 remapJar {
-    from(shadowJar.archiveFile)
     dependsOn(shadowJar)
+    input.set(shadowJar.archiveFile)
     archiveClassifier.set("")
     atAccessWideners.add("${modId}.accesswidener")
+}
+
+jar {
+    archiveClassifier.set("dev")
 }
 
 sourcesJar {
