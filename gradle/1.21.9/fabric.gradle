@@ -74,14 +74,14 @@ tasks.named("shadowJar") {
 }
 
 remapJar {
-    from(shadowJar.archiveFile)
     dependsOn(shadowJar)
+    input.set(shadowJar.archiveFile)
     archiveClassifier.set("")
-    injectAccessWidener = true
+    injectAccessWidener.set(true)
 }
 
 jar {
-    archiveClassifier = "dev"
+    archiveClassifier.set("dev")
 }
 
 sourcesJar {
