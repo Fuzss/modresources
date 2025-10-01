@@ -52,37 +52,49 @@ tasks.register("allGenSources", GradleBuild) {
 modLoaderSubprojects.forEach { projectName ->
     tasks.register(projectName.substring(0, 1).toLowerCase() + projectName.substring(1).replaceAll("\\W", "") + "UploadCurseForge", GradleBuild) {
         group = "_upload"
-        tasks = [":Common:clean", ":" + projectName + ":clean", ":" + projectName + ":curseforge"]
+        tasks = [":Common:clean", ":" + projectName + ":clean", ":" + projectName + ":publishCurseforge"]
     }
 }
 
 tasks.register("allUploadCurseForge", GradleBuild) {
     group = "_upload"
-    tasks = allSubprojects.collect { ":" + it + ":clean" } + modLoaderSubprojects.collect { ":" + it + ":curseforge" }
+    tasks = allSubprojects.collect { ":" + it + ":clean" } + modLoaderSubprojects.collect { ":" + it + ":publishCurseforge" }
 }
 
 modLoaderSubprojects.forEach { projectName ->
     tasks.register(projectName.substring(0, 1).toLowerCase() + projectName.substring(1).replaceAll("\\W", "") + "UploadModrinth", GradleBuild) {
         group = "_upload"
-        tasks = [":Common:clean", ":" + projectName + ":clean", ":" + projectName + ":modrinth"]
+        tasks = [":Common:clean", ":" + projectName + ":clean", ":" + projectName + ":publishModrinth"]
     }
 }
 
 tasks.register("allUploadModrinth", GradleBuild) {
     group = "_upload"
-    tasks = allSubprojects.collect { ":" + it + ":clean" } + modLoaderSubprojects.collect { ":" + it + ":modrinth" }
+    tasks = allSubprojects.collect { ":" + it + ":clean" } + modLoaderSubprojects.collect { ":" + it + ":publishModrinth" }
+}
+
+modLoaderSubprojects.forEach { projectName ->
+    tasks.register(projectName.substring(0, 1).toLowerCase() + projectName.substring(1).replaceAll("\\W", "") + "UploadGithub", GradleBuild) {
+        group = "_upload"
+        tasks = [":Common:clean", ":" + projectName + ":clean", ":" + projectName + ":publishGithub"]
+    }
+}
+
+tasks.register("allUploadGithub", GradleBuild) {
+    group = "_upload"
+    tasks = allSubprojects.collect { ":" + it + ":clean" } + modLoaderSubprojects.collect { ":" + it + ":publishGithub" }
 }
 
 modLoaderSubprojects.forEach { projectName ->
     tasks.register(projectName.substring(0, 1).toLowerCase() + projectName.substring(1).replaceAll("\\W", "") + "UploadEverywhere", GradleBuild) {
         group = "_upload"
-        tasks = [":Common:clean", ":" + projectName + ":clean", ":" + projectName + ":curseforge", ":" + projectName + ":modrinth"]
+        tasks = [":Common:clean", ":" + projectName + ":clean", ":" + projectName + ":publishCurseforge", ":" + projectName + ":publishModrinth", ":" + projectName + ":publishGithub"]
     }
 }
 
 tasks.register("allUploadEverywhere", GradleBuild) {
     group = "_upload"
-    tasks = allSubprojects.collect { ":" + it + ":clean" } + modLoaderSubprojects.collect { ":" + it + ":curseforge" } + modLoaderSubprojects.collect { ":" + it + ":modrinth" }
+    tasks = allSubprojects.collect { ":" + it + ":clean" } + modLoaderSubprojects.collect { ":" + it + ":publishCurseforge" } + modLoaderSubprojects.collect { ":" + it + ":publishModrinth" } + modLoaderSubprojects.collect { ":" + it + ":publishGithub" }
 }
 
 modLoaderSubprojects.forEach { projectName ->
