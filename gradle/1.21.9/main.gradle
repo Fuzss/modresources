@@ -371,21 +371,19 @@ subprojects {
             var embeddedDependencies = "dependenciesEmbedded${project.name}CurseForge"
             var optionalDependencies = "dependenciesOptional${project.name}CurseForge"
             if (project.hasProperty(requiredDependencies) || project.hasProperty(embeddedDependencies) || project.hasProperty(optionalDependencies)) {
-                relations {
-                    if (project.hasProperty(requiredDependencies)) {
-                        (project.findProperty(requiredDependencies) as String).split(",").each {
-                            requires it.trim()
-                        }
+                if (project.hasProperty(requiredDependencies)) {
+                    (project.findProperty(requiredDependencies) as String).split(",").each {
+                        requires it.trim()
                     }
-                    if (project.hasProperty(embeddedDependencies)) {
-                        (project.findProperty(embeddedDependencies) as String).split(",").each {
-                            embeds it.trim()
-                        }
+                }
+                if (project.hasProperty(embeddedDependencies)) {
+                    (project.findProperty(embeddedDependencies) as String).split(",").each {
+                        embeds it.trim()
                     }
-                    if (project.hasProperty(optionalDependencies)) {
-                        (project.findProperty(optionalDependencies) as String).split(",").each {
-                            optional it.trim()
-                        }
+                }
+                if (project.hasProperty(optionalDependencies)) {
+                    (project.findProperty(optionalDependencies) as String).split(",").each {
+                        optional it.trim()
                     }
                 }
             }
@@ -399,21 +397,19 @@ subprojects {
             var embeddedDependencies = "dependenciesEmbedded${project.name}Modrinth"
             var optionalDependencies = "dependenciesOptional${project.name}Modrinth"
             if (project.hasProperty(requiredDependencies) || project.hasProperty(embeddedDependencies) || project.hasProperty(optionalDependencies)) {
-                dependencies {
-                    if (project.hasProperty(requiredDependencies)) {
-                        (project.findProperty(requiredDependencies) as String).split(",").each {
-                            requires it.trim()
-                        }
+                if (project.hasProperty(requiredDependencies)) {
+                    (project.findProperty(requiredDependencies) as String).split(",").each {
+                        requires it.trim()
                     }
-                    if (project.hasProperty(embeddedDependencies)) {
-                        (project.findProperty(embeddedDependencies) as String).split(",").each {
-                            embeds it.trim()
-                        }
+                }
+                if (project.hasProperty(embeddedDependencies)) {
+                    (project.findProperty(embeddedDependencies) as String).split(",").each {
+                        embeds it.trim()
                     }
-                    if (project.hasProperty(optionalDependencies)) {
-                        (project.findProperty(optionalDependencies) as String).split(",").each {
-                            optional it.trim()
-                        }
+                }
+                if (project.hasProperty(optionalDependencies)) {
+                    (project.findProperty(optionalDependencies) as String).split(",").each {
+                        optional it.trim()
                     }
                 }
             }
