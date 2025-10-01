@@ -104,4 +104,4 @@ sourcesJar {
     from commonSources.archiveFile.map { zipTree(it) }
 }
 
-tasks.withType(me.modmuss50.mpp.PublishModTask).configureEach { finalizedBy(tasks.named("refreshUpdateJson")) }
+tasks.withType(Class.forName("me.modmuss50.mpp.PublishModTask", true, project.buildscript.classLoader)).configureEach { finalizedBy(tasks.named("refreshUpdateJson")) }
