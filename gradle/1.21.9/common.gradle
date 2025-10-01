@@ -12,3 +12,7 @@ dependencies {
     // Fabric Loader
     modCompileOnly libs.fabricloader.fabric
 }
+
+tasks.withType(Class.forName("net.fabricmc.loom.task.AbstractRemapJarTask", true, project.buildscript.classLoader)).configureEach {
+    targetNamespace = "named"
+}
