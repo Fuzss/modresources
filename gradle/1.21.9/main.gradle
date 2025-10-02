@@ -498,6 +498,38 @@ architectury {
     minecraft = libs.versions.game.get()
 }
 
+def parseChangelogFields() {
+    def changelog = file("CHANGELOG.md").text
+    // Extract most recent section (everything until next "## " or EOF)
+    def matcher = (changelog =~ /## \[.*?] - \d{4}-\d{2}-\d{2}\r?\n(?s)(.*?)(?=\r?\n## |$)/)
+    def latestSection = matcher ? matcher[0][1].trim() : ""
+
+    // Map section titles to emojis
+    def emojiMap = [
+            "Added"     : "✨",
+            "Changed"   : "🔧",
+            "Deprecated": "📉",
+            "Removed"   : "🗑️",
+            "Fixed"     : "🐞",
+            "Security"  : "🔒"
+    ]
+
+    def changelogFields = []
+    def sectionRegex = ~/### (.*?)\r?\n(?s)(.*?)(?=\r?\n### |$)/
+
+    (latestSection =~ sectionRegex).each { sec ->
+        def title = sec[1].trim()
+        def body = sec[2].trim()
+        def emoji = emojiMap.get(title, "📌")
+        def formattedBody = body.readLines()
+                .collect { it.replaceFirst(/^- /, "• ") }
+                .join("\n")
+        changelogFields << [title: "$emoji $title".trim(), body: formattedBody]
+    }
+
+    return changelogFields
+}
+
 sendDiscordWebhook {
     def modUrl = "https://raw.githubusercontent.com/Fuzss/modresources/main/mods/${project.modId}.json"
     def json
