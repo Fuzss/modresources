@@ -346,17 +346,22 @@ subprojects {
         sign publishing.publications.mavenJava
     }
 
+    tasks.withType(Class.forName("me.modmuss50.mpp.PublishModTask", true, project.buildscript.classLoader)).configureEach {
+        doFirst {
+            def changelogFile = file("../CHANGELOG.md")
+            if (!changelogFile.canRead()) {
+                throw new FileNotFoundException("Could not read changelog file")
+            }
+
+            if (!changelogFile.text.contains("v${modVersion}-${libs.versions.minecraft.get()}")) {
+                throw new IllegalStateException("Missing changelog version: v${modVersion}-${libs.versions.minecraft.get()}")
+            }
+        }
+    }
+
     publishMods {
-        if (!file("../CHANGELOG.md").canRead()) {
-            throw new FileNotFoundException("Could not read changelog file")
-        }
-
-        changelog = file("../CHANGELOG.md").text
-        if (!changelog.get().contains("v${modVersion}-${libs.versions.minecraft.get()}")) {
-            throw new IllegalStateException("Missing changelog version: v${modVersion}-${libs.versions.minecraft.get()}")
-        }
-
         file = remapJar.archiveFile
+        changelog = file("../CHANGELOG.md").text
         type = STABLE
         version = modVersion
         displayName = "[${project.name.toUpperCase()}] [${libs.versions.minecraft.get()}] ${base.archivesName.get()} v${modVersion}"
