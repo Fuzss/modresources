@@ -1,0 +1,28 @@
+{
+    "dependencies": {
+        "fabricapi": "required",
+        "forgeconfigapiport": "required",
+        "puzzleslib": "required"
+    },
+    "distributions": {
+        "curseforge": {
+            "id": "548647",
+            "slug": "tiny-skeletons"
+        },
+        "github": {
+            "slug": "tinyskeletons"
+        },
+        "modrinth": {
+            "id": "A2xcMSUn",
+            "slug": "tiny-skeletons"
+        }
+    },
+    "environments": {
+        "client": "required",
+        "server": "required"
+    },
+    "loaders": [
+        "fabric",
+        "neoforge"
+    ]
+}

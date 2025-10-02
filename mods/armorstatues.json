@@ -1,0 +1,28 @@
+{
+    "dependencies": {
+        "fabricapi": "required",
+        "forgeconfigapiport": "required",
+        "puzzleslib": "required"
+    },
+    "distributions": {
+        "curseforge": {
+            "id": "682566",
+            "slug": "armor-statues"
+        },
+        "github": {
+            "slug": "armorstatues"
+        },
+        "modrinth": {
+            "id": "bbGCtEvb",
+            "slug": "armor-statues"
+        }
+    },
+    "environments": {
+        "client": "required",
+        "server": "optional"
+    },
+    "loaders": [
+        "neoforge",
+        "fabric"
+    ]
+}

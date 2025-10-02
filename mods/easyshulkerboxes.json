@@ -1,0 +1,28 @@
+{
+    "dependencies": {
+        "fabricapi": "required",
+        "forgeconfigapiport": "required",
+        "puzzleslib": "required"
+    },
+    "distributions": {
+        "curseforge": {
+            "id": "594006",
+            "slug": "easy-shulker-boxes"
+        },
+        "github": {
+            "slug": "easyshulkerboxes"
+        },
+        "modrinth": {
+            "id": "gA5euN8S",
+            "slug": "easy-shulker-boxes"
+        }
+    },
+    "environments": {
+        "client": "required",
+        "server": "required"
+    },
+    "loaders": [
+        "fabric",
+        "neoforge"
+    ]
+}

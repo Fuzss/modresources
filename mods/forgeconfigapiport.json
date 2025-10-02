@@ -1,0 +1,25 @@
+{
+    "dependencies": {
+        "fabricapi": "required"
+    },
+    "distributions": {
+        "curseforge": {
+            "id": "547434",
+            "slug": "forge-config-api-port-fabric"
+        },
+        "github": {
+            "slug": "forgeconfigapiport"
+        },
+        "modrinth": {
+            "id": "ohNO6lps",
+            "slug": "forge-config-api-port"
+        }
+    },
+    "environments": {
+        "client": "required",
+        "server": "required"
+    },
+    "loaders": [
+        "fabric"
+    ]
+}

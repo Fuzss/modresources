@@ -1,0 +1,27 @@
+{
+    "dependencies": {
+        "fabricapi": "required",
+        "forgeconfigapiport": "required"
+    },
+    "distributions": {
+        "curseforge": {
+            "id": "495476",
+            "slug": "puzzles-lib"
+        },
+        "github": {
+            "slug": "puzzleslib"
+        },
+        "modrinth": {
+            "id": "QAGBst4M",
+            "slug": "puzzles-lib"
+        }
+    },
+    "environments": {
+        "client": "required",
+        "server": "required"
+    },
+    "loaders": [
+        "neoforge",
+        "fabric"
+    ]
+}

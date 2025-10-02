@@ -1,0 +1,28 @@
+{
+    "dependencies": {
+        "fabricapi": "required",
+        "forgeconfigapiport": "required",
+        "puzzleslib": "required"
+    },
+    "distributions": {
+        "curseforge": {
+            "id": "852665",
+            "slug": "mutant-monsters"
+        },
+        "github": {
+            "slug": "mutantmonsters"
+        },
+        "modrinth": {
+            "id": "derP0ten",
+            "slug": "mutant-monsters"
+        }
+    },
+    "environments": {
+        "client": "required",
+        "server": "required"
+    },
+    "loaders": [
+        "fabric",
+        "neoforge"
+    ]
+}

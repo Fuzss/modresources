@@ -1,0 +1,27 @@
+{
+    "dependencies": {
+        "fabricapi": "required",
+        "forgeconfigapiport": "required",
+        "puzzleslib": "required"
+    },
+    "distributions": {
+        "curseforge": {
+            "id": "322765",
+            "slug": "respawning-animals"
+        },
+        "github": {
+            "slug": "respawninganimals"
+        },
+        "modrinth": {
+            "id": "WnwcSeWc",
+            "slug": "respawning-animals"
+        }
+    },
+    "environments": {
+        "server": "required"
+    },
+    "loaders": [
+        "neoforge",
+        "fabric"
+    ]
+}

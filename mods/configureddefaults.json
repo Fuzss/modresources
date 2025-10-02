@@ -1,0 +1,23 @@
+{
+    "distributions": {
+        "curseforge": {
+            "id": "930131",
+            "slug": "configured-defaults"
+        },
+        "github": {
+            "slug": "configureddefaults"
+        },
+        "modrinth": {
+            "id": "SISoSFPP",
+            "slug": "configured-defaults"
+        }
+    },
+    "environments": {
+        "client": "optional",
+        "server": "optional"
+    },
+    "loaders": [
+        "neoforge",
+        "fabric"
+    ]
+}

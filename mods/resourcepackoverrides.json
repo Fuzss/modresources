@@ -1,0 +1,26 @@
+{
+    "dependencies": {
+        "fabricapi": "required"
+    },
+    "distributions": {
+        "curseforge": {
+            "id": "832644",
+            "slug": "resource-pack-overrides"
+        },
+        "github": {
+            "slug": "resourcepackoverrides"
+        },
+        "modrinth": {
+            "id": "YsFycamt",
+            "slug": "resource-pack-overrides"
+        }
+    },
+    "environments": {
+        "client": "required"
+    },
+    "loaders": [
+        "fabric",
+        "neoforge",
+        "neoforge"
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "dependencies": {
+        "fabricapi": "required",
+        "forgeconfigapiport": "required",
+        "puzzleslib": "required"
+    },
+    "distributions": {
+        "curseforge": {
+            "id": "458048",
+            "slug": "diagonal-fences"
+        },
+        "github": {
+            "slug": "diagonalfences"
+        },
+        "modrinth": {
+            "id": "IKARgflD",
+            "slug": "diagonal-fences"
+        }
+    },
+    "environments": {
+        "client": "required",
+        "server": "required"
+    },
+    "loaders": [
+        "fabric",
+        "neoforge"
+    ]
+}
