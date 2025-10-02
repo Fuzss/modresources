@@ -124,3 +124,8 @@ if (modLoaderSubprojects.any { it.toLowerCase().equals("forge") }) {
         tasks = [":Forge:runData"]
     }
 }
+
+tasks.register("notifyDiscord", GradleBuild) {
+    group = "_upload"
+    tasks = [":sendDiscordWebhook"]
+}

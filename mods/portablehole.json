@@ -1,0 +1,28 @@
+{
+    "dependencies": {
+        "fabricapi": "required",
+        "forgeconfigapiport": "required",
+        "puzzleslib": "required"
+    },
+    "distributions": {
+        "curseforge": {
+            "id": "682568",
+            "slug": "portable-hole"
+        },
+        "github": {
+            "slug": "portablehole"
+        },
+        "modrinth": {
+            "id": "jckrUoUe",
+            "slug": "portable-hole"
+        }
+    },
+    "environments": {
+        "client": "required",
+        "server": "required"
+    },
+    "loaders": [
+        "fabric",
+        "neoforge"
+    ]
+}

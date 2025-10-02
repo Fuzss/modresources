@@ -1,0 +1,28 @@
+{
+    "dependencies": {
+        "fabricapi": "required",
+        "forgeconfigapiport": "required",
+        "puzzleslib": "required"
+    },
+    "distributions": {
+        "curseforge": {
+            "id": "891324",
+            "slug": "illager-invasion"
+        },
+        "github": {
+            "slug": "illagerinvasion"
+        },
+        "modrinth": {
+            "id": "jSV9w0J5",
+            "slug": "illager-invasion"
+        }
+    },
+    "environments": {
+        "client": "required",
+        "server": "required"
+    },
+    "loaders": [
+        "fabric",
+        "neoforge"
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "dependencies": {
+        "fabricapi": "required",
+        "forgeconfigapiport": "required",
+        "puzzleslib": "required"
+    },
+    "distributions": {
+        "curseforge": {
+            "id": "666942",
+            "slug": "horse-expert"
+        },
+        "github": {
+            "slug": "horseexpert"
+        },
+        "modrinth": {
+            "id": "24CSPS1E",
+            "slug": "horse-expert"
+        }
+    },
+    "environments": {
+        "client": "required",
+        "server": "required"
+    },
+    "loaders": [
+        "fabric",
+        "neoforge"
+    ]
+}

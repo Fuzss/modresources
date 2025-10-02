@@ -1,0 +1,28 @@
+{
+    "dependencies": {
+        "fabricapi": "required",
+        "forgeconfigapiport": "required",
+        "puzzleslib": "required"
+    },
+    "distributions": {
+        "curseforge": {
+            "id": "351441",
+            "slug": "pick-up-notifier"
+        },
+        "github": {
+            "slug": "pickupnotifier"
+        },
+        "modrinth": {
+            "id": "ZX66K16c",
+            "slug": "pick-up-notifier"
+        }
+    },
+    "environments": {
+        "client": "required",
+        "server": "optional"
+    },
+    "loaders": [
+        "neoforge",
+        "fabric"
+    ]
+}

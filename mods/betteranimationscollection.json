@@ -1,0 +1,28 @@
+{
+    "dependencies": {
+        "fabricapi": "required",
+        "forgeconfigapiport": "required",
+        "puzzleslib": "required"
+    },
+    "distributions": {
+        "curseforge": {
+            "id": "323976",
+            "slug": "better-animations-collection"
+        },
+        "github": {
+            "slug": "betteranimationscollection"
+        },
+        "modrinth": {
+            "id": "OoOVj3J3",
+            "slug": "better-animations-collection"
+        }
+    },
+    "environments": {
+        "client": "required",
+        "server": "required"
+    },
+    "loaders": [
+        "fabric",
+        "neoforge"
+    ]
+}

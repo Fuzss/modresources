@@ -1,0 +1,28 @@
+{
+    "dependencies": {
+        "fabricapi": "required",
+        "forgeconfigapiport": "required",
+        "puzzleslib": "required"
+    },
+    "distributions": {
+        "curseforge": {
+            "id": "1210171",
+            "slug": "fast-item-frames"
+        },
+        "github": {
+            "slug": "fastitemframes"
+        },
+        "modrinth": {
+            "id": "FsoeTIV0",
+            "slug": "fast-item-frames"
+        }
+    },
+    "environments": {
+        "client": "required",
+        "server": "required"
+    },
+    "loaders": [
+        "fabric",
+        "neoforge"
+    ]
+}

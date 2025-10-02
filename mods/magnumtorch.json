@@ -1,0 +1,28 @@
+{
+    "dependencies": {
+        "fabricapi": "required",
+        "forgeconfigapiport": "required",
+        "puzzleslib": "required"
+    },
+    "distributions": {
+        "curseforge": {
+            "id": "593981",
+            "slug": "magnum-torch"
+        },
+        "github": {
+            "slug": "magnumtorch"
+        },
+        "modrinth": {
+            "id": "jorDmSKv",
+            "slug": "magnum-torch"
+        }
+    },
+    "environments": {
+        "client": "required",
+        "server": "required"
+    },
+    "loaders": [
+        "fabric",
+        "neoforge"
+    ]
+}

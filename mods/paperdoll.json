@@ -1,0 +1,27 @@
+{
+    "dependencies": {
+        "fabricapi": "required",
+        "forgeconfigapiport": "required",
+        "puzzleslib": "required"
+    },
+    "distributions": {
+        "curseforge": {
+            "id": "857970",
+            "slug": "new-paper-doll"
+        },
+        "github": {
+            "slug": "paperdoll"
+        },
+        "modrinth": {
+            "id": "hD0W2Wde",
+            "slug": "paper-doll"
+        }
+    },
+    "environments": {
+        "client": "required"
+    },
+    "loaders": [
+        "neoforge",
+        "fabric"
+    ]
+}

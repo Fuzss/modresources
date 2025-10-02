@@ -1,0 +1,27 @@
+{
+    "dependencies": {
+        "fabricapi": "required",
+        "forgeconfigapiport": "required",
+        "puzzleslib": "required"
+    },
+    "distributions": {
+        "curseforge": {
+            "id": "852662",
+            "slug": "overflowing-bars"
+        },
+        "github": {
+            "slug": "overflowingbars"
+        },
+        "modrinth": {
+            "id": "XD7XOrAF",
+            "slug": "overflowing-bars"
+        }
+    },
+    "environments": {
+        "client": "required"
+    },
+    "loaders": [
+        "neoforge",
+        "fabric"
+    ]
+}

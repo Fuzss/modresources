@@ -1,0 +1,28 @@
+{
+    "dependencies": {
+        "fabricapi": "required",
+        "forgeconfigapiport": "required",
+        "puzzleslib": "required"
+    },
+    "distributions": {
+        "curseforge": {
+            "id": "852670",
+            "slug": "mob-lassos"
+        },
+        "github": {
+            "slug": "moblassos"
+        },
+        "modrinth": {
+            "id": "ftOBbnu8",
+            "slug": "mob-lassos"
+        }
+    },
+    "environments": {
+        "client": "required",
+        "server": "required"
+    },
+    "loaders": [
+        "fabric",
+        "neoforge"
+    ]
+}

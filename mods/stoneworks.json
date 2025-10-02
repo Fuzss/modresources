@@ -1,0 +1,28 @@
+{
+    "dependencies": {
+        "fabricapi": "required",
+        "forgeconfigapiport": "required",
+        "puzzleslib": "required"
+    },
+    "distributions": {
+        "curseforge": {
+            "id": "852663",
+            "slug": "stoneworks"
+        },
+        "github": {
+            "slug": "stoneworks"
+        },
+        "modrinth": {
+            "id": "FzyTKtVF",
+            "slug": "stoneworks"
+        }
+    },
+    "environments": {
+        "client": "required",
+        "server": "required"
+    },
+    "loaders": [
+        "fabric",
+        "neoforge"
+    ]
+}

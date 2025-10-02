@@ -1,0 +1,132 @@
+import groovy.json.JsonOutput
+
+class DiscordWebhookExtension {
+    String channel
+    String token
+    String content
+    List<Map<String, Object>> embeds = []
+    int flags
+    boolean debug = false
+
+    void embed(Closure<?> closure) {
+        closure.delegate = new EmbedBuilder()
+        closure.resolveStrategy = Closure.DELEGATE_FIRST
+        closure.call()
+        embeds.add(closure.delegate.build())
+    }
+
+    static class EmbedBuilder {
+        String title
+        String description
+        String url
+        String timestamp
+        Integer color
+        Map footer
+        Map image
+        Map thumbnail
+        Map author
+        List<Map> fields = []
+
+        void addImage(String url) {
+            this.image = [url: url]
+        }
+
+        void addThumbnail(String url) {
+            this.thumbnail = [url: url]
+        }
+
+        void addFooter(List<String> parts) {
+            this.footer = [text: parts.findAll { it }.join(" • ")]
+        }
+
+        void addField(String name, String value, boolean inline = false) {
+            fields.add([name: name, value: value, inline: inline])
+        }
+
+        Map build() {
+            return [
+                    title      : title,
+                    description: description,
+                    url        : url,
+                    timestamp  : timestamp,
+                    color      : color,
+                    footer     : footer,
+                    image      : image,
+                    thumbnail  : thumbnail,
+                    author     : author,
+                    fields     : fields
+            ].findAll { it.value != null }
+        }
+    }
+}
+
+extensions.create("sendDiscordWebhook", DiscordWebhookExtension)
+
+tasks.register("sendDiscordWebhook") {
+    doLast {
+        def ext = project.extensions.findByType(DiscordWebhookExtension)
+        if (!ext.channel || !ext.token) {
+            throw new GradleException("DiscordWebhookExtension: Not properly configured")
+        }
+
+        def payload = [:]
+        if (ext.content?.trim()) payload.content = ext.content
+        if (ext.embeds) payload.embeds = ext.embeds
+        if (ext.flags) payload.flags = ext.flags
+
+        if (!payload) {
+            throw new GradleException("DiscordWebhookExtension: Payload is empty")
+        }
+
+        def json = JsonOutput.toJson(payload)
+        def url = "https://discord.com/api/webhooks/${ext.channel}/${ext.token}"
+
+        if (ext.debug) {
+            println "Discord Webhook payload (debug mode):"
+            println groovy.json.JsonOutput.prettyPrint(json)
+        } else {
+            def connection = new URL(url).openConnection() as HttpURLConnection
+            connection.setRequestMethod("POST")
+            connection.setDoOutput(true)
+            connection.setRequestProperty("Content-Type", "application/json")
+            connection.outputStream.withWriter("UTF-8") { it << json }
+
+            println "Discord response: ${connection.responseCode} ${connection.responseMessage}"
+            if (connection.responseCode >= 400) {
+                println connection.errorStream.text
+            }
+        }
+    }
+}
+
+def parseChangelogFields() {
+    def changelog = file("CHANGELOG.md").text
+    // Extract most recent section (everything until next "## " or EOF)
+    def matcher = (changelog =~ /## \[.*?] - \d{4}-\d{2}-\d{2}\r?\n(?s)(.*?)(?=\r?\n## |$)/)
+    def latestSection = matcher ? matcher[0][1].trim() : ""
+
+    // Map section titles to emojis
+    def emojiMap = [
+            "Added"     : "✨",
+            "Changed"   : "🔧",
+            "Deprecated": "📉",
+            "Removed"   : "🗑️",
+            "Fixed"     : "🐞",
+            "Security"  : "🔒"
+    ]
+
+    def changelogFields = []
+    def sectionRegex = ~/### (.*?)\r?\n(?s)(.*?)(?=\r?\n### |$)/
+
+    (latestSection =~ sectionRegex).each { sec ->
+        def title = sec[1].trim()
+        def body = sec[2].trim()
+        def emoji = emojiMap.get(title, "📌")
+        def formattedBody = body.readLines()
+                .collect { it.replaceFirst(/^- /, "• ") }
+                .join("\n")
+        changelogFields << [title: "$emoji $title".trim(), body: formattedBody]
+    }
+
+    return changelogFields
+}

@@ -1,0 +1,28 @@
+{
+    "dependencies": {
+        "fabricapi": "required",
+        "forgeconfigapiport": "required",
+        "puzzleslib": "required"
+    },
+    "distributions": {
+        "curseforge": {
+            "id": "1252482",
+            "slug": "eternal-nether"
+        },
+        "github": {
+            "slug": "eternalnether"
+        },
+        "modrinth": {
+            "id": "s6R4jmL8",
+            "slug": "eternal-nether"
+        }
+    },
+    "environments": {
+        "client": "required",
+        "server": "required"
+    },
+    "loaders": [
+        "fabric",
+        "neoforge"
+    ]
+}

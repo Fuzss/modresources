@@ -348,20 +348,21 @@ subprojects {
 
     tasks.withType(Class.forName("me.modmuss50.mpp.PublishModTask", true, project.buildscript.classLoader)).configureEach {
         doFirst {
-            def changelogFile = file("../CHANGELOG.md")
-            if (!changelogFile.canRead()) {
-                throw new FileNotFoundException("Could not read changelog file")
-            }
-
-            if (!changelogFile.text.contains("v${modVersion}-${libs.versions.minecraft.get()}")) {
+            if (!file("../CHANGELOG.md").text.contains("v${modVersion}-${libs.versions.minecraft.get()}")) {
                 throw new IllegalStateException("Missing changelog version: v${modVersion}-${libs.versions.minecraft.get()}")
             }
         }
     }
 
     publishMods {
+        def changelogFile = file("../CHANGELOG.md")
+        if (!changelogFile.canRead()) {
+            println("Publish Mods: ${new FileNotFoundException("Could not read changelog file")}")
+            return
+        }
+
         file = remapJar.archiveFile
-        changelog = file("../CHANGELOG.md").text
+        changelog = changelogFile.text
         type = STABLE
         version = modVersion
         displayName = "[${project.name.toUpperCase()}] [${libs.versions.minecraft.get()}] ${base.archivesName.get()} v${modVersion}"
@@ -490,8 +491,49 @@ subprojects {
     build.finalizedBy project.tasks.copyJarToDir, project.tasks.incrementBuildNumber
 }
 
+apply from: "https://raw.githubusercontent.com/Fuzss/modresources/main/gradle/${libs.versions.minecraft.get()}/tasks.gradle"
+apply from: "https://raw.githubusercontent.com/Fuzss/modresources/main/gradle/${libs.versions.minecraft.get()}/discord.gradle"
+
 architectury {
     minecraft = libs.versions.game.get()
 }
 
-apply from: "https://raw.githubusercontent.com/Fuzss/modresources/main/gradle/${libs.versions.minecraft.get()}/tasks.gradle"
+sendDiscordWebhook {
+    def modUrl = "https://raw.githubusercontent.com/Fuzss/modresources/main/mods/${project.modId}.json"
+    def json
+    try {
+        def jsonText = new URL(modUrl).text
+        json = new groovy.json.JsonSlurper().parseText(jsonText)
+    } catch (Exception exception) {
+        println "Discord Webhook: ${exception}"
+        return
+    }
+
+    channel = project.findProperty("discordWebhookChannelId") ?: ""
+    token = project.findProperty("discordWebhookToken") ?: ""
+    def epochSeconds = System.currentTimeMillis() / 1000 as long
+    content = "<@&875862844829208626> <t:${epochSeconds}:R>"
+//    debug = true
+
+    embed {
+        title = "[${libs.versions.minecraft.get()}] ${project.modName} v${project.modVersion}"
+        description = project.modDescription
+        url = "https://www.curseforge.com/minecraft/mc-mods/${json.distributions.curseforge?.slug}"
+        timestamp = Instant.now().toString()
+        color = 5814783
+        addFooter([project.modName, "v${project.modVersion}", libs.versions.minecraft.get()])
+        addImage("https://raw.githubusercontent.com/Fuzss/modresources/main/pages/data/${project.modId}/banner.png")
+        addThumbnail("https://raw.githubusercontent.com/Fuzss/modresources/main/pages/data/${project.modId}/banner.png")
+        author = [
+                name    : "Fuzs",
+                url     : "https://www.curseforge.com/members/fuzs",
+                icon_url: "https://raw.githubusercontent.com/Fuzss/modresources/main/pages/commons/avatar.png"
+        ]
+
+        def changelogFields = parseChangelogFields()
+        changelogFields.each { addField(it.title, it.body) }
+        addField("\uD83D\uDCE5 Downloads", "<:CurseForge:893088361634471948> [CurseForge](https://www.curseforge.com/minecraft/mc-mods/${json.distributions.curseforge?.slug})\n<:modrinth:1176378033578459206> [Modrinth](https://modrinth.com/mod/${json.distributions.modrinth?.slug})", true)
+        addField("<:github:1422695832951455814> GitHub", "\uD83D\uDC68\u200D\uD83D\uDCBB [Source](https://github.com/Fuzss/${json.distributions.github?.slug})\n\u26A0\uFE0F [Issues](https://github.com/Fuzss/${json.distributions.github?.slug}/issues)", true)
+        addField("\uD83D\uDCAC Support", "<:Fuzs:993195872131235881> <#917550806922846299>", true)
+    }
+}

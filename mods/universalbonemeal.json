@@ -1,0 +1,28 @@
+{
+    "dependencies": {
+        "fabricapi": "required",
+        "forgeconfigapiport": "required",
+        "puzzleslib": "required"
+    },
+    "distributions": {
+        "curseforge": {
+            "id": "594013",
+            "slug": "universal-bone-meal"
+        },
+        "github": {
+            "slug": "universalbonemeal-forge"
+        },
+        "modrinth": {
+            "id": "66VIiT1y",
+            "slug": "universal-bone-meal"
+        }
+    },
+    "environments": {
+        "client": "required",
+        "server": "required"
+    },
+    "loaders": [
+        "fabric",
+        "neoforge"
+    ]
+}
