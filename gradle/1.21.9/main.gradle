@@ -260,8 +260,8 @@ subprojects {
                 "minecraftVersion": libs.versions.minecraft.get(),
                 "upcomingMinecraftVersion": incrementPatchVersion(libs.versions.minecraft.get()),
                 "minPuzzlesVersion": libs.versions.hasProperty("puzzleslib") && libs.versions.puzzleslib.hasProperty("min") ? libs.versions.puzzleslib.min.get() : "1",
-                "mainEntryPoint": "${project.group}.fabric.${base.archivesName}Fabric",
-                "clientEntryPoint": "${project.group}.fabric.client.${base.archivesName}FabricClient",
+                "mainEntryPoint": "${project.group}.fabric.${base.archivesName.get()}Fabric",
+                "clientEntryPoint": "${project.group}.fabric.client.${base.archivesName.get()}FabricClient",
                 "modFabricEnvironment": modFabricEnvironment,
                 "modForgeDisplayTest": modForgeDisplayTest
         ]

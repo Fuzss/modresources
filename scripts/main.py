@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import shutil
 import sys
 import os
@@ -32,6 +33,7 @@ def parse_args():
     parser.add_argument('--commit', default=False, action="store_true", help="Commit to GitHub.")
     parser.add_argument('--upload', default=None, nargs="*", metavar=("MOD_LOADER", "WEBSITE"), help="Upload to CurseForge or Modrinth. Format: --upload MOD_LOADER WEBSITE.")
     parser.add_argument('--publish', default=False, action="store_true", help="Publish to Maven.")
+    parser.add_argument('--notify', default=False, action="store_true", help="Notify via Discord webhook.")
     parser.add_argument("--changelog", default=None, action="append", nargs=2, metavar=("SECTION", "LINE"), help="Add a changelog line. Format: --changelog SECTION LINE. Can be used multiple times.")
 
     args = parser.parse_args()
@@ -476,6 +478,40 @@ def prepare_new_version(args, root_path, project_path):
         git_push_all(f"{root_path}", args.id, f"prepare {args.minecraft} port")
         print("Committed new version preparations")
 
+def replace_text_block(file_path, pattern, replacement):
+    with open(file_path, "r", encoding="utf-8") as file:
+        text = file.read()
+
+    new_text = re.sub(pattern, replacement, text, flags=re.DOTALL | re.VERBOSE | re.MULTILINE)
+    if text != new_text:
+        with open(file_path, "w", encoding="utf-8") as file:
+            file.write(new_text)
+
+    print(f"Updated {file_path}")
+
+def add_line_after_target(file_path, target_text, new_text):
+    """
+    Adds new_text after the first occurrence of target_text in gradle_file,
+    matching indentation. Does nothing if new_text already exists.
+    """
+    with open(file_path, "r", encoding="utf-8") as f:
+        lines = f.readlines()
+
+    for i, line in enumerate(lines):
+        stripped = line.strip()
+        if stripped == new_text:
+            # already present, nothing to do
+            return
+        if stripped == target_text:
+            indent = line[:line.index(stripped)]
+            lines.insert(i + 1, f"{indent}{new_text}\n")
+            break
+
+    with open(file_path, "w", encoding="utf-8") as f:
+        f.writelines(lines)
+
+    print(f"Updated {file_path}")
+
 def run_workspace_upgrade(args, base_path, root_path, project_path):
     template_path = f"{base_path}/multiloader-workspace-template"
     copy_from_template(f"{template_path}/.gitignore", f"{root_path}/.gitignore")
@@ -501,6 +537,18 @@ def run_workspace_upgrade(args, base_path, root_path, project_path):
         "versionRange": '"[${minecraftVersion},${upcomingMinecraftVersion})"',
         "catalogueImageIcon": None
     })
+
+    replace_text_block(f"{project_path}/Common/build.gradle", r"""
+^[ \t]*tasks\.withType\(net\.fabricmc\.loom\.task\.AbstractRemapJarTask\)\.configureEach\s*\{
+[^}]*?
+\}[ \t]*\n?
+""", "")
+    
+    add_line_after_target(
+        f"{project_path}/build.gradle", 
+        "alias libs.plugins.minotaur apply false", 
+        "alias libs.plugins.modpublishplugin apply false"
+    )
 
     if args.commit:
         git_push_all(f"{root_path}", args.id, f"upgrade {args.minecraft} workspace")
@@ -577,6 +625,10 @@ def main():
     if args.version and upload_parameters:
         info2(f"Uploading version v{args.version}{f" for {upload_parameters[0]}" if upload_parameters[0] else ""}{f" to {upload_parameters[1]}" if upload_parameters[1] else ""}...")
         run_upload(upload_parameters[0], upload_parameters[1], project_path)
+
+    if args.version and args.notify:
+        info2(f"Notifying version v{args.version}...")
+        subprocess.run(["./gradlew", "notifyDiscord"], cwd=project_path, check=True)
 
     if args.version and args.commit:
         info2(f"Commiting version v{args.version}...")

@@ -1,0 +1,27 @@
+{
+    "dependencies": {
+        "fabricapi": "required",
+        "forgeconfigapiport": "required",
+        "puzzleslib": "required"
+    },
+    "distributions": {
+        "curseforge": {
+            "slug": "pro-placer",
+            "id": "368320"
+        },
+        "github": {
+            "slug": "proplacer"
+        },
+        "modrinth": {
+            "slug": "pro-placer",
+            "id": "LhK0LkWd"
+        }
+    },
+    "environments": {
+        "client": "required"
+    },
+    "loaders": [
+        "fabric",
+        "neoforge"
+    ]
+}

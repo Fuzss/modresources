@@ -1,16 +1,18 @@
 {
-    "curseforge": {
-        "slug": "night-config-fixes"
+    "distributions": {
+        "curseforge": {
+            "slug": "night-config-fixes"
+        },
+        "modrinth": {
+            "slug": "night-config-fixes"
+        }
     },
     "environments": {
         "client": "optional",
         "server": "optional"
     },
     "loaders": [
-        "neoforge",
-        "fabric"
-    ],
-    "modrinth": {
-        "slug": "night-config-fixes"
-    }
+        "fabric",
+        "neoforge"
+    ]
 }
