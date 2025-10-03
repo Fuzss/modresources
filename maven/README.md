@@ -3652,6 +3652,7 @@
 - [21.6.3](./fuzs/statuemenus/statuemenus-common/21.6.3)
 - [21.7.0](./fuzs/statuemenus/statuemenus-common/21.7.0)
 - [21.8.1](./fuzs/statuemenus/statuemenus-common/21.8.1)
+- [21.9.0](./fuzs/statuemenus/statuemenus-common/21.9.0)
 </details>
 
 <details>
@@ -3674,6 +3675,7 @@
 - [21.7.0](./fuzs/statuemenus/statuemenus-common/21.7.0)
 - [21.8.0](./fuzs/statuemenus/statuemenus-common/21.8.0)
 - [21.8.1](./fuzs/statuemenus/statuemenus-common/21.8.1)
+- [21.9.0](./fuzs/statuemenus/statuemenus-common/21.9.0)
 </details>
 
 ### [`statuemenus-fabric`](./fuzs/statuemenus/statuemenus-fabric)
@@ -3689,6 +3691,7 @@
 - [21.6.3](./fuzs/statuemenus/statuemenus-fabric/21.6.3)
 - [21.7.0](./fuzs/statuemenus/statuemenus-fabric/21.7.0)
 - [21.8.1](./fuzs/statuemenus/statuemenus-fabric/21.8.1)
+- [21.9.0](./fuzs/statuemenus/statuemenus-fabric/21.9.0)
 </details>
 
 <details>
@@ -3711,6 +3714,7 @@
 - [21.7.0](./fuzs/statuemenus/statuemenus-fabric/21.7.0)
 - [21.8.0](./fuzs/statuemenus/statuemenus-fabric/21.8.0)
 - [21.8.1](./fuzs/statuemenus/statuemenus-fabric/21.8.1)
+- [21.9.0](./fuzs/statuemenus/statuemenus-fabric/21.9.0)
 </details>
 
 ### [`statuemenus-forge`](./fuzs/statuemenus/statuemenus-forge)
@@ -3741,6 +3745,7 @@
 - [21.6.3](./fuzs/statuemenus/statuemenus-neoforge/21.6.3)
 - [21.7.0](./fuzs/statuemenus/statuemenus-neoforge/21.7.0)
 - [21.8.1](./fuzs/statuemenus/statuemenus-neoforge/21.8.1)
+- [21.9.0](./fuzs/statuemenus/statuemenus-neoforge/21.9.0)
 </details>
 
 <details>
@@ -3763,6 +3768,7 @@
 - [21.7.0](./fuzs/statuemenus/statuemenus-neoforge/21.7.0)
 - [21.8.0](./fuzs/statuemenus/statuemenus-neoforge/21.8.0)
 - [21.8.1](./fuzs/statuemenus/statuemenus-neoforge/21.8.1)
+- [21.9.0](./fuzs/statuemenus/statuemenus-neoforge/21.9.0)
 </details>
 
 </details>
