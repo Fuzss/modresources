@@ -74,13 +74,13 @@ tasks.register("allUploadModrinth", GradleBuild) {
 }
 
 modLoaderSubprojects.forEach { projectName ->
-    tasks.register(projectName.substring(0, 1).toLowerCase() + projectName.substring(1).replaceAll("\\W", "") + "UploadGithub", GradleBuild) {
+    tasks.register(projectName.substring(0, 1).toLowerCase() + projectName.substring(1).replaceAll("\\W", "") + "UploadGitHub", GradleBuild) {
         group = "_upload"
         tasks = [":Common:clean", ":" + projectName + ":clean", ":" + projectName + ":publishGithub"]
     }
 }
 
-tasks.register("allUploadGithub", GradleBuild) {
+tasks.register("allUploadGitHub", GradleBuild) {
     group = "_upload"
     tasks = allSubprojects.collect { ":" + it + ":clean" } + modLoaderSubprojects.collect { ":" + it + ":publishGithub" }
 }
