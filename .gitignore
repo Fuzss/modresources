@@ -5,6 +5,7 @@
 .mtj.tmp/
 
 # Package Files
+*.jar
 *.war
 *.nar
 *.ear
@@ -31,7 +32,7 @@ classes
 *.ipr
 *.iws
 *.iml
-.idea
+**/.idea/*
 
 ### NetBeans ###
 nbproject/private/
@@ -59,7 +60,7 @@ gradle-app.setting
 ### Other ###
 run
 .DS_Store
-!maven/**/*.jar
+*.txt
 
 # Log file
 *.log

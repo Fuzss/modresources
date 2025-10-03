@@ -555,7 +555,7 @@ sendDiscordWebhook {
         color = 5814783
         addFooter([project.modName, "v${project.modVersion}", libs.versions.minecraft.get()])
         addImage("https://raw.githubusercontent.com/Fuzss/modresources/main/pages/data/${project.modId}/banner.png")
-        addThumbnail("https://raw.githubusercontent.com/Fuzss/modresources/main/pages/data/${project.modId}/banner.png")
+        addThumbnail("https://raw.githubusercontent.com/Fuzss/modresources/main/pages/data/${project.modId}/logo.png")
         author = [
                 name    : "Fuzs",
                 url     : "https://www.curseforge.com/members/fuzs",

@@ -1,0 +1,29 @@
+name: Generate Maven Repository Index
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - "maven/**"
+
+jobs:
+  generate-index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Run index generator
+        run: python3 scripts/generate_index.py
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add maven/**/README.md
+          git commit -m "Update index [skip ci]" || echo "No changes"
+          git push
