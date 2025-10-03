@@ -28,6 +28,8 @@
 <details open>
 <summary>Versions</summary>
 
+- [3.2.4](./bettermodsbutton-forge/3.2.4)
+- [3.2.5](./bettermodsbutton-forge/3.2.5)
 - [4.0.0](./bettermodsbutton-forge/4.0.0)
 - [4.0.1](./bettermodsbutton-forge/4.0.1)
 - [4.1.0](./bettermodsbutton-forge/4.1.0)
@@ -35,16 +37,14 @@
 - [4.1.2](./bettermodsbutton-forge/4.1.2)
 - [4.2.0](./bettermodsbutton-forge/4.2.0)
 - [4.2.1](./bettermodsbutton-forge/4.2.1)
+- [4.2.2](./bettermodsbutton-forge/4.2.2)
+- [4.2.3](./bettermodsbutton-forge/4.2.3)
+- [4.2.4](./bettermodsbutton-forge/4.2.4)
 - [5.0.0](./bettermodsbutton-forge/5.0.0)
 - [6.0.0](./bettermodsbutton-forge/6.0.0)
 - [7.0.0](./bettermodsbutton-forge/7.0.0)
-- [3.2.4](./bettermodsbutton-forge/3.2.4)
-- [4.2.2](./bettermodsbutton-forge/4.2.2)
 - [8.0.0](./bettermodsbutton-forge/8.0.0)
 - [8.0.1](./bettermodsbutton-forge/8.0.1)
-- [4.2.3](./bettermodsbutton-forge/4.2.3)
-- [3.2.5](./bettermodsbutton-forge/3.2.5)
-- [4.2.4](./bettermodsbutton-forge/4.2.4)
 - [8.0.2](./bettermodsbutton-forge/8.0.2)
 - [20.4.0](./bettermodsbutton-forge/20.4.0)
 - [21.0.1](./bettermodsbutton-forge/21.0.1)
