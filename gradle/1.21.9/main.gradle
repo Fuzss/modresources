@@ -544,7 +544,7 @@ sendDiscordWebhook {
     channel = project.findProperty("discordWebhookChannelId") ?: ""
     token = project.findProperty("discordWebhookToken") ?: ""
     def epochSeconds = System.currentTimeMillis() / 1000 as long
-    content = "<@&875862844829208626> <t:${epochSeconds}:R>"
+    content = "<t:${epochSeconds}:R>"
 //    debug = true
 
     embed {

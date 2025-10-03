@@ -13,9 +13,9 @@ from datetime import datetime
 _GRADLE_PROPS = None
 ORDERED_CHANGELOG_SECTIONS = ["Added", "Changed", "Deprecated", "Removed", "Fixed", "Security"]
 VALID_CHANGELOG_SECTIONS = set(ORDERED_CHANGELOG_SECTIONS)
-MOD_LOADERS = {"Fabric", "Neoforge"}
+MOD_LOADERS = {"Fabric", "NeoForge"}
 DISTRIBUTIONS = {"Client", "Server"}
-UPLOADING_SITES = {"Curseforge", "Modrinth"}
+UPLOADING_SITES = {"CurseForge", "Modrinth", "GitHub"}
 
 def parse_args():
     parser = argparse.ArgumentParser()
@@ -31,7 +31,7 @@ def parse_args():
     parser.add_argument('--data', default=False, action="store_true", help="Generate data.")
     parser.add_argument('--launch', default=[], action="append", nargs="*", metavar=("MOD_LOADER", "DISTRIBUTION"), help="Launch the game. Format: --launch MOD_LOADER DISTRIBUTION. Can be used multiple times.")
     parser.add_argument('--commit', default=False, action="store_true", help="Commit to GitHub.")
-    parser.add_argument('--upload', default=None, nargs="*", metavar=("MOD_LOADER", "WEBSITE"), help="Upload to CurseForge or Modrinth. Format: --upload MOD_LOADER WEBSITE.")
+    parser.add_argument('--upload', default=None, nargs="*", metavar=("MOD_LOADER", "WEBSITE"), help="Upload to CurseForge, Modrinth, or GitHub. Format: --upload MOD_LOADER WEBSITE.")
     parser.add_argument('--publish', default=False, action="store_true", help="Publish to Maven.")
     parser.add_argument('--notify', default=False, action="store_true", help="Notify via Discord webhook.")
     parser.add_argument("--changelog", default=None, action="append", nargs=2, metavar=("SECTION", "LINE"), help="Add a changelog line. Format: --changelog SECTION LINE. Can be used multiple times.")
@@ -272,7 +272,7 @@ def run_launch(mod_loader, distribution, project_path):
             subprocess.run(["./gradlew", "fabricServer"], cwd=project_path, check=True)
         else:
             error2(f"Unsupported argument: {distribution}")
-    elif mod_loader == "Neoforge":
+    elif mod_loader == "NeoForge":
         if distribution == "Client":
             subprocess.run(["./gradlew", "neoForgeClient"], cwd=project_path, check=True)
         elif distribution == "Server":
@@ -284,24 +284,30 @@ def run_launch(mod_loader, distribution, project_path):
 
 def run_upload(mod_loader, website, project_path):
     if mod_loader == "Fabric":
-        if website == "Curseforge":
+        if website == "CurseForge":
             subprocess.run(["./gradlew", "fabricUploadCurseForge"], cwd=project_path, check=True)
         elif website == "Modrinth":
             subprocess.run(["./gradlew", "fabricUploadModrinth"], cwd=project_path, check=True)
+        elif website == "GitHub":
+            subprocess.run(["./gradlew", "fabricUploadGitHub"], cwd=project_path, check=True)
         else:
             subprocess.run(["./gradlew", "fabricUploadEverywhere"], cwd=project_path, check=True)
-    elif mod_loader == "Neoforge":
-        if website == "Curseforge":
+    elif mod_loader == "NeoForge":
+        if website == "CurseForge":
             subprocess.run(["./gradlew", "neoForgeUploadCurseForge"], cwd=project_path, check=True)
         elif website == "Modrinth":
             subprocess.run(["./gradlew", "neoForgeUploadModrinth"], cwd=project_path, check=True)
+        elif website == "GitHub":
+            subprocess.run(["./gradlew", "neoForgeUploadGitHub"], cwd=project_path, check=True)
         else:
             subprocess.run(["./gradlew", "neoForgeUploadEverywhere"], cwd=project_path, check=True)
     else:
-        if website == "Curseforge":
+        if website == "CurseForge":
             subprocess.run(["./gradlew", "allUploadCurseForge"], cwd=project_path, check=True)
         elif website == "Modrinth":
             subprocess.run(["./gradlew", "allUploadModrinth"], cwd=project_path, check=True)
+        elif website == "GitHub":
+            subprocess.run(["./gradlew", "allUploadGitHub"], cwd=project_path, check=True)
         else:
             subprocess.run(["./gradlew", "allUploadEverywhere"], cwd=project_path, check=True)
 
@@ -618,6 +624,10 @@ def main():
         info2(f"Launching {parameter_set[0]} {parameter_set[1]}...")
         run_launch(parameter_set[0], parameter_set[1], project_path)
 
+    if args.version and args.commit:
+        info2(f"Commiting version v{args.version}...")
+        git_push_all(f"{root_path}", args.id, f"release v{args.version}")
+
     if args.version and args.publish:
         info2(f"Publishing version v{args.version}...")
         subprocess.run(["./gradlew", "allPublish"], cwd=project_path, check=True)
@@ -629,10 +639,6 @@ def main():
     if args.version and args.notify:
         info2(f"Notifying version v{args.version}...")
         subprocess.run(["./gradlew", "notifyDiscord"], cwd=project_path, check=True)
-
-    if args.version and args.commit:
-        info2(f"Commiting version v{args.version}...")
-        git_push_all(f"{root_path}", args.id, f"release v{args.version}")
 
 if __name__ == "__main__":
     main()
