@@ -34,7 +34,7 @@ Data for individual mods regarding distributions and installation information.
 Content for **@heyitsfuzs** mod pages found on [CurseForge](https://www.curseforge.com/members/fuzs/projects) and [Modrinth](https://modrinth.com/user/Fuzs). The full pages are generated from individual files using a private tool.
 
 ## `./scripts`
-Collection of Python scripts for maintaining **@heyitsfuzs** mods.
+Collection of Python scripts for various modding related tasks, including porting and deploying of individual projects.
 
 ## `./update`
 Mod files for NeoForge's / Forge's update checker system. The files are automatically refreshed locally from Gradle buildscripts whenever a new NeoForge / Forge release is published.
