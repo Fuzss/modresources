@@ -11,17 +11,18 @@ from datetime import date
 from datetime import datetime
 
 _GRADLE_PROPS = None
-ORDERED_CHANGELOG_SECTIONS = ["Added", "Changed", "Deprecated", "Removed", "Fixed", "Security"]
+ORDERED_CHANGELOG_SECTIONS = ["added", "changed", "deprecated", "removed", "fixed", "security"]
 VALID_CHANGELOG_SECTIONS = set(ORDERED_CHANGELOG_SECTIONS)
-MOD_LOADERS = {"Fabric", "NeoForge"}
-DISTRIBUTIONS = {"Client", "Server"}
-UPLOADING_SITES = {"CurseForge", "Modrinth", "GitHub"}
+ENVIRONMENTS = {"finder", "idea"}
+MOD_LOADERS = {"fabric", "neoforge"}
+DISTRIBUTIONS = {"client", "server"}
+UPLOADING_SITES = {"curseforge", "modrinth", "github"}
 
 def parse_args():
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('--copy', type=str, default=None, metavar="VERSION", help="Copy from existing game version. Example: --copy 1.21.5.")
-    parser.add_argument('--move', type=str, default=None, metavar="VERSION", help="Move existing game version. Example: --move 1.21.7.")
+    parser.add_argument('--copy', type=str, default=None, metavar="LEGACY_GAME_VERSION", help="Copy from existing game version. Example: --copy 1.21.5.")
+    parser.add_argument('--move', type=str, default=None, metavar="LEGACY_GAME_VERSION", help="Move existing game version. Example: --move 1.21.7.")
     parser.add_argument('--upgrade', default=False, action="store_true", help="Run workspace upgrade.")
     parser.add_argument('--gradle', type=str, default=None, metavar="GRADLE_VERSION", help="Gradle wrapper version. Example: --gradle 8.14.3.")
     parser.add_argument('--id', type=str, required=True, metavar="MOD_ID", help="Mod id. Example: --id examplemod.")
@@ -32,6 +33,7 @@ def parse_args():
     parser.add_argument('--launch', default=[], action="append", nargs="*", metavar=("MOD_LOADER", "DISTRIBUTION"), help="Launch the game. Format: --launch MOD_LOADER DISTRIBUTION. Can be used multiple times.")
     parser.add_argument('--commit', default=False, action="store_true", help="Commit to GitHub.")
     parser.add_argument('--upload', default=None, nargs="*", metavar=("MOD_LOADER", "WEBSITE"), help="Upload to CurseForge, Modrinth, or GitHub. Format: --upload MOD_LOADER WEBSITE.")
+    parser.add_argument('--open', default=None, nargs="*", metavar="ENVIRONMENT", help="Open in Finder, or Idea. Format: --open ENVIRONMENT.")
     parser.add_argument('--publish', default=False, action="store_true", help="Publish to Maven.")
     parser.add_argument('--notify', default=False, action="store_true", help="Notify via Discord webhook.")
     parser.add_argument("--changelog", default=None, action="append", nargs=2, metavar=("SECTION", "LINE"), help="Add a changelog line. Format: --changelog SECTION LINE. Can be used multiple times.")
@@ -48,13 +50,18 @@ def parse_args():
 
     return args
 
-def info2(message):
+def log2(level, color, message):
     now = datetime.now().strftime("%H:%M:%S")
-    print(f"\033[1;36m[{now}] [INFO] {message}\033[0m")
+    print(f"\033[1;{color}m[{now}] [{level}] {message}\033[0m")
+
+def info2(message):
+    log2("INFO", "36", message)   # cyan
+
+def warn2(message):
+    log2("WARN", "33", message)   # yellow
 
 def error2(message):
-    now = datetime.now().strftime("%H:%M:%S")
-    print(f"\033[1;31m[{now}] [ERROR] {message}\033[0m")
+    log2("ERROR", "31", message)   # red
     sys.exit(1)
 
 def copy_from_template(source_path, destination_path):
@@ -154,6 +161,16 @@ def is_valid_parameter(value, allowed_values):
     if value not in allowed_values:
         error2(f"Invalid parameter '{value}'. Must be one of: {', '.join(allowed_values)}")
 
+def validate_open_parameters(parameters, fallback_parameter):
+    if parameters is None:
+        return None
+    elif len(parameters) == 0:
+        return fallback_parameter
+    
+    environment = parameters[0].lower()
+    is_valid_parameter(environment, ENVIRONMENTS)
+    return environment
+
 def validate_launch_parameters(parameters, fallback_parameters):
     if parameters is None:
         return None
@@ -162,8 +179,8 @@ def validate_launch_parameters(parameters, fallback_parameters):
     elif len(parameters) == 1:
         parameters = (parameters[0], fallback_parameters[1])
 
-    mod_loader = parameters[0].capitalize()
-    other_argument = parameters[1].capitalize()
+    mod_loader = parameters[0].lower()
+    other_argument = parameters[1].lower()
     is_valid_parameter(mod_loader, MOD_LOADERS)
     is_valid_parameter(other_argument, DISTRIBUTIONS)
     return (mod_loader, other_argument)
@@ -174,14 +191,14 @@ def validate_upload_parameters(parameters):
     elif len(parameters) == 0:
         return (None, None)
     elif len(parameters) == 1:
-        parameter = parameters[0].capitalize()
+        parameter = parameters[0].lower()
         if parameter in MOD_LOADERS:
             return (parameter, None)
         elif parameter in UPLOADING_SITES:
             return (None, parameter)
 
-    mod_loader = parameters[0].capitalize()
-    other_argument = parameters[1].capitalize()
+    mod_loader = parameters[0].lower()
+    other_argument = parameters[1].lower()
     is_valid_parameter(mod_loader, MOD_LOADERS)
     is_valid_parameter(other_argument, UPLOADING_SITES)
     return (mod_loader, other_argument)
@@ -193,7 +210,7 @@ def parse_changelog_sections(section_pairs):
     changelog_section_data = defaultdict(list)
 
     for raw_header, line in section_pairs:
-        header = raw_header.strip().capitalize()
+        header = raw_header.strip().lower()
         is_valid_parameter(header, VALID_CHANGELOG_SECTIONS)
         changelog_section_data[header].append(f"- {line.strip()}")
 
@@ -206,7 +223,7 @@ def generate_changelog_block(full_version, changelog_section_data):
 
     for section in ORDERED_CHANGELOG_SECTIONS:
         if section in changelog_section_data:
-            body.append(f"### {section}")
+            body.append(f"### {section.capitalize()}")
             body.append("")
             body.extend(changelog_section_data[section])
             body.append("")
@@ -265,17 +282,17 @@ def create_gradle_properties(mod_version, minecraft_version, version_catalog):
     return gradle_properties
 
 def run_launch(mod_loader, distribution, project_path):
-    if mod_loader == "Fabric":
-        if distribution == "Client":
+    if mod_loader == "fabric":
+        if distribution == "client":
             subprocess.run(["./gradlew", "fabricClient"], cwd=project_path, check=True)
-        elif distribution == "Server":
+        elif distribution == "server":
             subprocess.run(["./gradlew", "fabricServer"], cwd=project_path, check=True)
         else:
             error2(f"Unsupported argument: {distribution}")
-    elif mod_loader == "NeoForge":
-        if distribution == "Client":
+    elif mod_loader == "neoforge":
+        if distribution == "client":
             subprocess.run(["./gradlew", "neoForgeClient"], cwd=project_path, check=True)
-        elif distribution == "Server":
+        elif distribution == "server":
             subprocess.run(["./gradlew", "neoForgeServer"], cwd=project_path, check=True)
         else:
             error2(f"Unsupported argument: {distribution}")
@@ -283,30 +300,30 @@ def run_launch(mod_loader, distribution, project_path):
         error2(f"Unsupported argument: {mod_loader}")
 
 def run_upload(mod_loader, website, project_path):
-    if mod_loader == "Fabric":
-        if website == "CurseForge":
+    if mod_loader == "fabric":
+        if website == "curseforge":
             subprocess.run(["./gradlew", "fabricUploadCurseForge"], cwd=project_path, check=True)
-        elif website == "Modrinth":
+        elif website == "modrinth":
             subprocess.run(["./gradlew", "fabricUploadModrinth"], cwd=project_path, check=True)
-        elif website == "GitHub":
+        elif website == "github":
             subprocess.run(["./gradlew", "fabricUploadGitHub"], cwd=project_path, check=True)
         else:
             subprocess.run(["./gradlew", "fabricUploadEverywhere"], cwd=project_path, check=True)
-    elif mod_loader == "NeoForge":
-        if website == "CurseForge":
+    elif mod_loader == "neoforge":
+        if website == "curseforge":
             subprocess.run(["./gradlew", "neoForgeUploadCurseForge"], cwd=project_path, check=True)
-        elif website == "Modrinth":
+        elif website == "modrinth":
             subprocess.run(["./gradlew", "neoForgeUploadModrinth"], cwd=project_path, check=True)
-        elif website == "GitHub":
+        elif website == "github":
             subprocess.run(["./gradlew", "neoForgeUploadGitHub"], cwd=project_path, check=True)
         else:
             subprocess.run(["./gradlew", "neoForgeUploadEverywhere"], cwd=project_path, check=True)
     else:
-        if website == "CurseForge":
+        if website == "curseforge":
             subprocess.run(["./gradlew", "allUploadCurseForge"], cwd=project_path, check=True)
-        elif website == "Modrinth":
+        elif website == "modrinth":
             subprocess.run(["./gradlew", "allUploadModrinth"], cwd=project_path, check=True)
-        elif website == "GitHub":
+        elif website == "github":
             subprocess.run(["./gradlew", "allUploadGitHub"], cwd=project_path, check=True)
         else:
             subprocess.run(["./gradlew", "allUploadEverywhere"], cwd=project_path, check=True)
@@ -565,6 +582,7 @@ def main():
     base_path = find_gradle_property("modRoot")
     root_path = f"{base_path}/{args.id}"
     project_path = f"{root_path}/{args.minecraft}"
+    environment = validate_open_parameters(args.open, "finder")
     changelog_section_data = parse_changelog_sections(args.changelog)
     launch_parameters = [ 
         validate_launch_parameters(launch, ("fabric", "client")) 
@@ -579,8 +597,18 @@ def main():
     if not os.path.isdir(project_path):
         error2(f"Directory not found: {project_path}")
 
+    if environment:
+        info2(f"Opening in {environment.capitalize()}...")
+        if environment == "finder":
+            subprocess.Popen(["open", project_path], cwd=project_path)
+        elif environment == "idea":
+            try:
+                subprocess.Popen(["/Applications/IntelliJ IDEA.app/Contents/MacOS/idea", project_path], cwd=project_path)
+            except FileNotFoundError as e:
+                warn2("Could not launch IntelliJ:", e)
+
     if args.upgrade:
-        info2(f"Upgrading workspace...")
+        info2("Upgrading workspace...")
         run_workspace_upgrade(args, base_path, root_path, project_path)
 
     if args.version:
@@ -621,7 +649,7 @@ def main():
         subprocess.run(["./gradlew", "neoForgeData"], cwd=project_path, check=True)
 
     for parameter_set in launch_parameters:
-        info2(f"Launching {parameter_set[0]} {parameter_set[1]}...")
+        info2(f"Launching {parameter_set[0].capitalize()} {parameter_set[1].capitalize()}...")
         run_launch(parameter_set[0], parameter_set[1], project_path)
 
     if args.version and args.commit:
@@ -633,7 +661,7 @@ def main():
         subprocess.run(["./gradlew", "allPublish"], cwd=project_path, check=True)
 
     if args.version and upload_parameters:
-        info2(f"Uploading version v{args.version}{f" for {upload_parameters[0]}" if upload_parameters[0] else ""}{f" to {upload_parameters[1]}" if upload_parameters[1] else ""}...")
+        info2(f"Uploading version v{args.version}{f" for {upload_parameters[0].capitalize()}" if upload_parameters[0].capitalize() else ""}{f" to {upload_parameters[1].capitalize()}" if upload_parameters[1].capitalize() else ""}...")
         run_upload(upload_parameters[0], upload_parameters[1], project_path)
 
     if args.version and args.notify:
