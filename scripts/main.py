@@ -661,7 +661,7 @@ def main():
         subprocess.run(["./gradlew", "allPublish"], cwd=project_path, check=True)
 
     if args.version and upload_parameters:
-        info2(f"Uploading version v{args.version}{f" for {upload_parameters[0].capitalize()}" if upload_parameters[0].capitalize() else ""}{f" to {upload_parameters[1].capitalize()}" if upload_parameters[1].capitalize() else ""}...")
+        info2(f"Uploading version v{args.version}{f" for {upload_parameters[0].capitalize()}" if upload_parameters[0] else ""}{f" to {upload_parameters[1].capitalize()}" if upload_parameters[1] else ""}...")
         run_upload(upload_parameters[0], upload_parameters[1], project_path)
 
     if args.version and args.notify:
