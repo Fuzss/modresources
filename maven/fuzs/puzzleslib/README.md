@@ -5,6 +5,33 @@
 
 ### [`puzzleslib-common`](./puzzleslib-common)
 <details open>
+<summary>Latest</summary>
+
+- [3.4.7](./puzzleslib-common/3.4.7)
+- [3.5.10](./puzzleslib-common/3.5.10)
+- [4.0.18](./puzzleslib-common/4.0.18)
+- [4.1.8](./puzzleslib-common/4.1.8)
+- [4.2.17](./puzzleslib-common/4.2.17)
+- [4.3.44](./puzzleslib-common/4.3.44)
+- [4.4.4](./puzzleslib-common/4.4.4)
+- [5.0.33](./puzzleslib-common/5.0.33)
+- [6.0.10](./puzzleslib-common/6.0.10)
+- [7.0.10](./puzzleslib-common/7.0.10)
+- [8.0.41](./puzzleslib-common/8.0.41)
+- [8.1.33](./puzzleslib-common/8.1.33)
+- [20.4.52](./puzzleslib-common/20.4.52)
+- [21.0.28](./puzzleslib-common/21.0.28)
+- [21.1.38](./puzzleslib-common/21.1.38)
+- [21.3.24](./puzzleslib-common/21.3.24)
+- [21.4.13](./puzzleslib-common/21.4.13)
+- [21.5.12](./puzzleslib-common/21.5.12)
+- [21.6.6](./puzzleslib-common/21.6.6)
+- [21.7.6](./puzzleslib-common/21.7.6)
+- [21.8.8](./puzzleslib-common/21.8.8)
+- [21.9.1](./puzzleslib-common/21.9.1)
+</details>
+
+<details open>
 <summary>Versions</summary>
 
 - [3.4.0](./puzzleslib-common/3.4.0)
@@ -438,6 +465,33 @@
 </details>
 
 ### [`puzzleslib-fabric`](./puzzleslib-fabric)
+<details open>
+<summary>Latest</summary>
+
+- [3.4.7](./puzzleslib-fabric/3.4.7)
+- [3.5.10](./puzzleslib-fabric/3.5.10)
+- [4.0.18](./puzzleslib-fabric/4.0.18)
+- [4.1.8](./puzzleslib-fabric/4.1.8)
+- [4.2.17](./puzzleslib-fabric/4.2.17)
+- [4.3.44](./puzzleslib-fabric/4.3.44)
+- [4.4.4](./puzzleslib-fabric/4.4.4)
+- [5.0.33](./puzzleslib-fabric/5.0.33)
+- [6.0.10](./puzzleslib-fabric/6.0.10)
+- [7.0.10](./puzzleslib-fabric/7.0.10)
+- [8.0.41](./puzzleslib-fabric/8.0.41)
+- [8.1.33](./puzzleslib-fabric/8.1.33)
+- [20.4.52](./puzzleslib-fabric/20.4.52)
+- [21.0.28](./puzzleslib-fabric/21.0.28)
+- [21.1.38](./puzzleslib-fabric/21.1.38)
+- [21.3.24](./puzzleslib-fabric/21.3.24)
+- [21.4.13](./puzzleslib-fabric/21.4.13)
+- [21.5.12](./puzzleslib-fabric/21.5.12)
+- [21.6.6](./puzzleslib-fabric/21.6.6)
+- [21.7.6](./puzzleslib-fabric/21.7.6)
+- [21.8.8](./puzzleslib-fabric/21.8.8)
+- [21.9.1](./puzzleslib-fabric/21.9.1)
+</details>
+
 <details open>
 <summary>Versions</summary>
 
@@ -873,6 +927,24 @@
 
 ### [`puzzleslib-forge`](./puzzleslib-forge)
 <details open>
+<summary>Latest</summary>
+
+- [3.4.7](./puzzleslib-forge/3.4.7)
+- [3.5.10](./puzzleslib-forge/3.5.10)
+- [4.0.18](./puzzleslib-forge/4.0.18)
+- [4.1.8](./puzzleslib-forge/4.1.8)
+- [4.2.17](./puzzleslib-forge/4.2.17)
+- [4.3.44](./puzzleslib-forge/4.3.44)
+- [4.4.4](./puzzleslib-forge/4.4.4)
+- [5.0.33](./puzzleslib-forge/5.0.33)
+- [6.0.10](./puzzleslib-forge/6.0.10)
+- [7.0.10](./puzzleslib-forge/7.0.10)
+- [8.0.41](./puzzleslib-forge/8.0.41)
+- [8.1.33](./puzzleslib-forge/8.1.33)
+- [20.4.52](./puzzleslib-forge/20.4.52)
+</details>
+
+<details open>
 <summary>Versions</summary>
 
 - [3.4.0](./puzzleslib-forge/3.4.0)
@@ -1163,6 +1235,21 @@
 </details>
 
 ### [`puzzleslib-neoforge`](./puzzleslib-neoforge)
+<details open>
+<summary>Latest</summary>
+
+- [20.4.52](./puzzleslib-neoforge/20.4.52)
+- [21.0.28](./puzzleslib-neoforge/21.0.28)
+- [21.1.38](./puzzleslib-neoforge/21.1.38)
+- [21.3.24](./puzzleslib-neoforge/21.3.24)
+- [21.4.13](./puzzleslib-neoforge/21.4.13)
+- [21.5.12](./puzzleslib-neoforge/21.5.12)
+- [21.6.6](./puzzleslib-neoforge/21.6.6)
+- [21.7.6](./puzzleslib-neoforge/21.7.6)
+- [21.8.8](./puzzleslib-neoforge/21.8.8)
+- [21.9.1](./puzzleslib-neoforge/21.9.1)
+</details>
+
 <details open>
 <summary>Versions</summary>
 

@@ -5,6 +5,12 @@
 
 ### [`easyanvils-common`](./easyanvils-common)
 <details open>
+<summary>Latest</summary>
+
+- [4.0.5](./easyanvils-common/4.0.5)
+</details>
+
+<details open>
 <summary>Versions</summary>
 
 - [4.0.3](./easyanvils-common/4.0.3)
@@ -14,6 +20,12 @@
 
 ### [`easyanvils-fabric`](./easyanvils-fabric)
 <details open>
+<summary>Latest</summary>
+
+- [4.0.5](./easyanvils-fabric/4.0.5)
+</details>
+
+<details open>
 <summary>Versions</summary>
 
 - [4.0.3](./easyanvils-fabric/4.0.3)
@@ -22,6 +34,12 @@
 </details>
 
 ### [`easyanvils-forge`](./easyanvils-forge)
+<details open>
+<summary>Latest</summary>
+
+- [4.0.5](./easyanvils-forge/4.0.5)
+</details>
+
 <details open>
 <summary>Versions</summary>
 

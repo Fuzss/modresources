@@ -5,6 +5,13 @@
 
 ### [`puzzlesaccessapi-common`](./puzzlesaccessapi-common)
 <details open>
+<summary>Latest</summary>
+
+- [8.0.9](./puzzlesaccessapi-common/8.0.9)
+- [20.1.1](./puzzlesaccessapi-common/20.1.1)
+</details>
+
+<details open>
 <summary>Versions</summary>
 
 - [8.0.0](./puzzlesaccessapi-common/8.0.0)
@@ -23,6 +30,13 @@
 
 ### [`puzzlesaccessapi-fabric`](./puzzlesaccessapi-fabric)
 <details open>
+<summary>Latest</summary>
+
+- [8.0.9](./puzzlesaccessapi-fabric/8.0.9)
+- [20.1.1](./puzzlesaccessapi-fabric/20.1.1)
+</details>
+
+<details open>
 <summary>Versions</summary>
 
 - [8.0.0](./puzzlesaccessapi-fabric/8.0.0)
@@ -40,6 +54,13 @@
 </details>
 
 ### [`puzzlesaccessapi-forge`](./puzzlesaccessapi-forge)
+<details open>
+<summary>Latest</summary>
+
+- [8.0.9](./puzzlesaccessapi-forge/8.0.9)
+- [20.1.1](./puzzlesaccessapi-forge/20.1.1)
+</details>
+
 <details open>
 <summary>Versions</summary>
 

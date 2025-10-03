@@ -5,6 +5,20 @@
 
 ### [`iteminteractions-common`](./iteminteractions-common)
 <details open>
+<summary>Latest</summary>
+
+- [20.4.5](./iteminteractions-common/20.4.5)
+- [21.0.5](./iteminteractions-common/21.0.5)
+- [21.1.4](./iteminteractions-common/21.1.4)
+- [21.3.3](./iteminteractions-common/21.3.3)
+- [21.4.2](./iteminteractions-common/21.4.2)
+- [21.5.0](./iteminteractions-common/21.5.0)
+- [21.6.2](./iteminteractions-common/21.6.2)
+- [21.7.0](./iteminteractions-common/21.7.0)
+- [21.8.3](./iteminteractions-common/21.8.3)
+</details>
+
+<details open>
 <summary>Versions</summary>
 
 - [20.4.0](./iteminteractions-common/20.4.0)
@@ -43,6 +57,20 @@
 </details>
 
 ### [`iteminteractions-fabric`](./iteminteractions-fabric)
+<details open>
+<summary>Latest</summary>
+
+- [20.4.5](./iteminteractions-fabric/20.4.5)
+- [21.0.5](./iteminteractions-fabric/21.0.5)
+- [21.1.4](./iteminteractions-fabric/21.1.4)
+- [21.3.3](./iteminteractions-fabric/21.3.3)
+- [21.4.2](./iteminteractions-fabric/21.4.2)
+- [21.5.0](./iteminteractions-fabric/21.5.0)
+- [21.6.2](./iteminteractions-fabric/21.6.2)
+- [21.7.0](./iteminteractions-fabric/21.7.0)
+- [21.8.3](./iteminteractions-fabric/21.8.3)
+</details>
+
 <details open>
 <summary>Versions</summary>
 
@@ -83,6 +111,12 @@
 
 ### [`iteminteractions-forge`](./iteminteractions-forge)
 <details open>
+<summary>Latest</summary>
+
+- [20.4.5](./iteminteractions-forge/20.4.5)
+</details>
+
+<details open>
 <summary>Versions</summary>
 
 - [20.4.0](./iteminteractions-forge/20.4.0)
@@ -94,6 +128,20 @@
 </details>
 
 ### [`iteminteractions-neoforge`](./iteminteractions-neoforge)
+<details open>
+<summary>Latest</summary>
+
+- [20.4.5](./iteminteractions-neoforge/20.4.5)
+- [21.0.5](./iteminteractions-neoforge/21.0.5)
+- [21.1.4](./iteminteractions-neoforge/21.1.4)
+- [21.3.3](./iteminteractions-neoforge/21.3.3)
+- [21.4.2](./iteminteractions-neoforge/21.4.2)
+- [21.5.0](./iteminteractions-neoforge/21.5.0)
+- [21.6.2](./iteminteractions-neoforge/21.6.2)
+- [21.7.0](./iteminteractions-neoforge/21.7.0)
+- [21.8.3](./iteminteractions-neoforge/21.8.3)
+</details>
+
 <details open>
 <summary>Versions</summary>
 

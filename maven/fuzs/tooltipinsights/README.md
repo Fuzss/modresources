@@ -5,6 +5,12 @@
 
 ### [`tooltipinsights-common`](./tooltipinsights-common)
 <details open>
+<summary>Latest</summary>
+
+- [21.8.3](./tooltipinsights-common/21.8.3)
+</details>
+
+<details open>
 <summary>Versions</summary>
 
 - [21.8.0](./tooltipinsights-common/21.8.0)
@@ -15,6 +21,12 @@
 
 ### [`tooltipinsights-fabric`](./tooltipinsights-fabric)
 <details open>
+<summary>Latest</summary>
+
+- [21.8.3](./tooltipinsights-fabric/21.8.3)
+</details>
+
+<details open>
 <summary>Versions</summary>
 
 - [21.8.0](./tooltipinsights-fabric/21.8.0)
@@ -24,6 +36,12 @@
 </details>
 
 ### [`tooltipinsights-neoforge`](./tooltipinsights-neoforge)
+<details open>
+<summary>Latest</summary>
+
+- [21.8.3](./tooltipinsights-neoforge/21.8.3)
+</details>
+
 <details open>
 <summary>Versions</summary>
 

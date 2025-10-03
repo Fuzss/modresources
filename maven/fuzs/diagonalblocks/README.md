@@ -5,6 +5,21 @@
 
 ### [`diagonalblocks-common`](./diagonalblocks-common)
 <details open>
+<summary>Latest</summary>
+
+- [8.0.6](./diagonalblocks-common/8.0.6)
+- [20.4.4](./diagonalblocks-common/20.4.4)
+- [21.0.1](./diagonalblocks-common/21.0.1)
+- [21.1.2](./diagonalblocks-common/21.1.2)
+- [21.3.0](./diagonalblocks-common/21.3.0)
+- [21.4.0](./diagonalblocks-common/21.4.0)
+- [21.5.0](./diagonalblocks-common/21.5.0)
+- [21.6.0](./diagonalblocks-common/21.6.0)
+- [21.7.0](./diagonalblocks-common/21.7.0)
+- [21.8.1](./diagonalblocks-common/21.8.1)
+</details>
+
+<details open>
 <summary>Versions</summary>
 
 - [8.0.0](./diagonalblocks-common/8.0.0)
@@ -34,6 +49,21 @@
 </details>
 
 ### [`diagonalblocks-fabric`](./diagonalblocks-fabric)
+<details open>
+<summary>Latest</summary>
+
+- [8.0.6](./diagonalblocks-fabric/8.0.6)
+- [20.4.4](./diagonalblocks-fabric/20.4.4)
+- [21.0.1](./diagonalblocks-fabric/21.0.1)
+- [21.1.2](./diagonalblocks-fabric/21.1.2)
+- [21.3.0](./diagonalblocks-fabric/21.3.0)
+- [21.4.0](./diagonalblocks-fabric/21.4.0)
+- [21.5.0](./diagonalblocks-fabric/21.5.0)
+- [21.6.0](./diagonalblocks-fabric/21.6.0)
+- [21.7.0](./diagonalblocks-fabric/21.7.0)
+- [21.8.1](./diagonalblocks-fabric/21.8.1)
+</details>
+
 <details open>
 <summary>Versions</summary>
 
@@ -65,6 +95,13 @@
 
 ### [`diagonalblocks-forge`](./diagonalblocks-forge)
 <details open>
+<summary>Latest</summary>
+
+- [8.0.6](./diagonalblocks-forge/8.0.6)
+- [20.4.4](./diagonalblocks-forge/20.4.4)
+</details>
+
+<details open>
 <summary>Versions</summary>
 
 - [8.0.0](./diagonalblocks-forge/8.0.0)
@@ -82,6 +119,20 @@
 </details>
 
 ### [`diagonalblocks-neoforge`](./diagonalblocks-neoforge)
+<details open>
+<summary>Latest</summary>
+
+- [20.4.4](./diagonalblocks-neoforge/20.4.4)
+- [21.0.1](./diagonalblocks-neoforge/21.0.1)
+- [21.1.2](./diagonalblocks-neoforge/21.1.2)
+- [21.3.0](./diagonalblocks-neoforge/21.3.0)
+- [21.4.0](./diagonalblocks-neoforge/21.4.0)
+- [21.5.0](./diagonalblocks-neoforge/21.5.0)
+- [21.6.0](./diagonalblocks-neoforge/21.6.0)
+- [21.7.0](./diagonalblocks-neoforge/21.7.0)
+- [21.8.1](./diagonalblocks-neoforge/21.8.1)
+</details>
+
 <details open>
 <summary>Versions</summary>
 

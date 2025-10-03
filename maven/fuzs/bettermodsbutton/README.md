@@ -5,6 +5,20 @@
 
 ### [`bettermodsbutton-common`](./bettermodsbutton-common)
 <details open>
+<summary>Latest</summary>
+
+- [21.0.2](./bettermodsbutton-common/21.0.2)
+- [21.1.0](./bettermodsbutton-common/21.1.0)
+- [21.3.0](./bettermodsbutton-common/21.3.0)
+- [21.4.1](./bettermodsbutton-common/21.4.1)
+- [21.5.0](./bettermodsbutton-common/21.5.0)
+- [21.6.0](./bettermodsbutton-common/21.6.0)
+- [21.7.0](./bettermodsbutton-common/21.7.0)
+- [21.8.0](./bettermodsbutton-common/21.8.0)
+- [21.9.5](./bettermodsbutton-common/21.9.5)
+</details>
+
+<details open>
 <summary>Versions</summary>
 
 - [21.0.2](./bettermodsbutton-common/21.0.2)
@@ -25,6 +39,24 @@
 </details>
 
 ### [`bettermodsbutton-forge`](./bettermodsbutton-forge)
+<details open>
+<summary>Latest</summary>
+
+- [3.2.5](./bettermodsbutton-forge/3.2.5)
+- [4.0.1](./bettermodsbutton-forge/4.0.1)
+- [4.1.2](./bettermodsbutton-forge/4.1.2)
+- [4.2.4](./bettermodsbutton-forge/4.2.4)
+- [5.0.0](./bettermodsbutton-forge/5.0.0)
+- [6.0.0](./bettermodsbutton-forge/6.0.0)
+- [7.0.0](./bettermodsbutton-forge/7.0.0)
+- [8.0.2](./bettermodsbutton-forge/8.0.2)
+- [20.4.0](./bettermodsbutton-forge/20.4.0)
+- [21.0.2](./bettermodsbutton-forge/21.0.2)
+- [21.1.0](./bettermodsbutton-forge/21.1.0)
+- [21.3.0](./bettermodsbutton-forge/21.3.0)
+- [21.4.0](./bettermodsbutton-forge/21.4.0)
+</details>
+
 <details open>
 <summary>Versions</summary>
 
@@ -55,6 +87,21 @@
 </details>
 
 ### [`bettermodsbutton-neoforge`](./bettermodsbutton-neoforge)
+<details open>
+<summary>Latest</summary>
+
+- [20.4.0](./bettermodsbutton-neoforge/20.4.0)
+- [21.0.2](./bettermodsbutton-neoforge/21.0.2)
+- [21.1.0](./bettermodsbutton-neoforge/21.1.0)
+- [21.3.0](./bettermodsbutton-neoforge/21.3.0)
+- [21.4.1](./bettermodsbutton-neoforge/21.4.1)
+- [21.5.0](./bettermodsbutton-neoforge/21.5.0)
+- [21.6.0](./bettermodsbutton-neoforge/21.6.0)
+- [21.7.0](./bettermodsbutton-neoforge/21.7.0)
+- [21.8.0](./bettermodsbutton-neoforge/21.8.0)
+- [21.9.5](./bettermodsbutton-neoforge/21.9.5)
+</details>
+
 <details open>
 <summary>Versions</summary>
 

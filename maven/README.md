@@ -7,6 +7,20 @@
 
 ### [`bettermodsbutton-common`](./fuzs/bettermodsbutton/bettermodsbutton-common)
 <details>
+<summary>Latest</summary>
+
+- [21.0.2](./fuzs/bettermodsbutton/bettermodsbutton-common/21.0.2)
+- [21.1.0](./fuzs/bettermodsbutton/bettermodsbutton-common/21.1.0)
+- [21.3.0](./fuzs/bettermodsbutton/bettermodsbutton-common/21.3.0)
+- [21.4.1](./fuzs/bettermodsbutton/bettermodsbutton-common/21.4.1)
+- [21.5.0](./fuzs/bettermodsbutton/bettermodsbutton-common/21.5.0)
+- [21.6.0](./fuzs/bettermodsbutton/bettermodsbutton-common/21.6.0)
+- [21.7.0](./fuzs/bettermodsbutton/bettermodsbutton-common/21.7.0)
+- [21.8.0](./fuzs/bettermodsbutton/bettermodsbutton-common/21.8.0)
+- [21.9.5](./fuzs/bettermodsbutton/bettermodsbutton-common/21.9.5)
+</details>
+
+<details>
 <summary>Versions</summary>
 
 - [21.0.2](./fuzs/bettermodsbutton/bettermodsbutton-common/21.0.2)
@@ -27,6 +41,24 @@
 </details>
 
 ### [`bettermodsbutton-forge`](./fuzs/bettermodsbutton/bettermodsbutton-forge)
+<details>
+<summary>Latest</summary>
+
+- [3.2.5](./fuzs/bettermodsbutton/bettermodsbutton-forge/3.2.5)
+- [4.0.1](./fuzs/bettermodsbutton/bettermodsbutton-forge/4.0.1)
+- [4.1.2](./fuzs/bettermodsbutton/bettermodsbutton-forge/4.1.2)
+- [4.2.4](./fuzs/bettermodsbutton/bettermodsbutton-forge/4.2.4)
+- [5.0.0](./fuzs/bettermodsbutton/bettermodsbutton-forge/5.0.0)
+- [6.0.0](./fuzs/bettermodsbutton/bettermodsbutton-forge/6.0.0)
+- [7.0.0](./fuzs/bettermodsbutton/bettermodsbutton-forge/7.0.0)
+- [8.0.2](./fuzs/bettermodsbutton/bettermodsbutton-forge/8.0.2)
+- [20.4.0](./fuzs/bettermodsbutton/bettermodsbutton-forge/20.4.0)
+- [21.0.2](./fuzs/bettermodsbutton/bettermodsbutton-forge/21.0.2)
+- [21.1.0](./fuzs/bettermodsbutton/bettermodsbutton-forge/21.1.0)
+- [21.3.0](./fuzs/bettermodsbutton/bettermodsbutton-forge/21.3.0)
+- [21.4.0](./fuzs/bettermodsbutton/bettermodsbutton-forge/21.4.0)
+</details>
+
 <details>
 <summary>Versions</summary>
 
@@ -57,6 +89,21 @@
 </details>
 
 ### [`bettermodsbutton-neoforge`](./fuzs/bettermodsbutton/bettermodsbutton-neoforge)
+<details>
+<summary>Latest</summary>
+
+- [20.4.0](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/20.4.0)
+- [21.0.2](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/21.0.2)
+- [21.1.0](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/21.1.0)
+- [21.3.0](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/21.3.0)
+- [21.4.1](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/21.4.1)
+- [21.5.0](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/21.5.0)
+- [21.6.0](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/21.6.0)
+- [21.7.0](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/21.7.0)
+- [21.8.0](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/21.8.0)
+- [21.9.5](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/21.9.5)
+</details>
+
 <details>
 <summary>Versions</summary>
 
@@ -89,6 +136,21 @@
 
 ### [`diagonalblocks-common`](./fuzs/diagonalblocks/diagonalblocks-common)
 <details>
+<summary>Latest</summary>
+
+- [8.0.6](./fuzs/diagonalblocks/diagonalblocks-common/8.0.6)
+- [20.4.4](./fuzs/diagonalblocks/diagonalblocks-common/20.4.4)
+- [21.0.1](./fuzs/diagonalblocks/diagonalblocks-common/21.0.1)
+- [21.1.2](./fuzs/diagonalblocks/diagonalblocks-common/21.1.2)
+- [21.3.0](./fuzs/diagonalblocks/diagonalblocks-common/21.3.0)
+- [21.4.0](./fuzs/diagonalblocks/diagonalblocks-common/21.4.0)
+- [21.5.0](./fuzs/diagonalblocks/diagonalblocks-common/21.5.0)
+- [21.6.0](./fuzs/diagonalblocks/diagonalblocks-common/21.6.0)
+- [21.7.0](./fuzs/diagonalblocks/diagonalblocks-common/21.7.0)
+- [21.8.1](./fuzs/diagonalblocks/diagonalblocks-common/21.8.1)
+</details>
+
+<details>
 <summary>Versions</summary>
 
 - [8.0.0](./fuzs/diagonalblocks/diagonalblocks-common/8.0.0)
@@ -118,6 +180,21 @@
 </details>
 
 ### [`diagonalblocks-fabric`](./fuzs/diagonalblocks/diagonalblocks-fabric)
+<details>
+<summary>Latest</summary>
+
+- [8.0.6](./fuzs/diagonalblocks/diagonalblocks-fabric/8.0.6)
+- [20.4.4](./fuzs/diagonalblocks/diagonalblocks-fabric/20.4.4)
+- [21.0.1](./fuzs/diagonalblocks/diagonalblocks-fabric/21.0.1)
+- [21.1.2](./fuzs/diagonalblocks/diagonalblocks-fabric/21.1.2)
+- [21.3.0](./fuzs/diagonalblocks/diagonalblocks-fabric/21.3.0)
+- [21.4.0](./fuzs/diagonalblocks/diagonalblocks-fabric/21.4.0)
+- [21.5.0](./fuzs/diagonalblocks/diagonalblocks-fabric/21.5.0)
+- [21.6.0](./fuzs/diagonalblocks/diagonalblocks-fabric/21.6.0)
+- [21.7.0](./fuzs/diagonalblocks/diagonalblocks-fabric/21.7.0)
+- [21.8.1](./fuzs/diagonalblocks/diagonalblocks-fabric/21.8.1)
+</details>
+
 <details>
 <summary>Versions</summary>
 
@@ -149,6 +226,13 @@
 
 ### [`diagonalblocks-forge`](./fuzs/diagonalblocks/diagonalblocks-forge)
 <details>
+<summary>Latest</summary>
+
+- [8.0.6](./fuzs/diagonalblocks/diagonalblocks-forge/8.0.6)
+- [20.4.4](./fuzs/diagonalblocks/diagonalblocks-forge/20.4.4)
+</details>
+
+<details>
 <summary>Versions</summary>
 
 - [8.0.0](./fuzs/diagonalblocks/diagonalblocks-forge/8.0.0)
@@ -166,6 +250,20 @@
 </details>
 
 ### [`diagonalblocks-neoforge`](./fuzs/diagonalblocks/diagonalblocks-neoforge)
+<details>
+<summary>Latest</summary>
+
+- [20.4.4](./fuzs/diagonalblocks/diagonalblocks-neoforge/20.4.4)
+- [21.0.1](./fuzs/diagonalblocks/diagonalblocks-neoforge/21.0.1)
+- [21.1.2](./fuzs/diagonalblocks/diagonalblocks-neoforge/21.1.2)
+- [21.3.0](./fuzs/diagonalblocks/diagonalblocks-neoforge/21.3.0)
+- [21.4.0](./fuzs/diagonalblocks/diagonalblocks-neoforge/21.4.0)
+- [21.5.0](./fuzs/diagonalblocks/diagonalblocks-neoforge/21.5.0)
+- [21.6.0](./fuzs/diagonalblocks/diagonalblocks-neoforge/21.6.0)
+- [21.7.0](./fuzs/diagonalblocks/diagonalblocks-neoforge/21.7.0)
+- [21.8.1](./fuzs/diagonalblocks/diagonalblocks-neoforge/21.8.1)
+</details>
+
 <details>
 <summary>Versions</summary>
 
@@ -197,6 +295,12 @@
 
 ### [`easyanvils-common`](./fuzs/easyanvils/easyanvils-common)
 <details>
+<summary>Latest</summary>
+
+- [4.0.5](./fuzs/easyanvils/easyanvils-common/4.0.5)
+</details>
+
+<details>
 <summary>Versions</summary>
 
 - [4.0.3](./fuzs/easyanvils/easyanvils-common/4.0.3)
@@ -206,6 +310,12 @@
 
 ### [`easyanvils-fabric`](./fuzs/easyanvils/easyanvils-fabric)
 <details>
+<summary>Latest</summary>
+
+- [4.0.5](./fuzs/easyanvils/easyanvils-fabric/4.0.5)
+</details>
+
+<details>
 <summary>Versions</summary>
 
 - [4.0.3](./fuzs/easyanvils/easyanvils-fabric/4.0.3)
@@ -214,6 +324,12 @@
 </details>
 
 ### [`easyanvils-forge`](./fuzs/easyanvils/easyanvils-forge)
+<details>
+<summary>Latest</summary>
+
+- [4.0.5](./fuzs/easyanvils/easyanvils-forge/4.0.5)
+</details>
+
 <details>
 <summary>Versions</summary>
 
@@ -231,6 +347,13 @@
 
 ### [`enchantinginfuser-common`](./fuzs/enchantinginfuser/enchantinginfuser-common)
 <details>
+<summary>Latest</summary>
+
+- [4.1.1](./fuzs/enchantinginfuser/enchantinginfuser-common/4.1.1)
+- [4.2.1](./fuzs/enchantinginfuser/enchantinginfuser-common/4.2.1)
+</details>
+
+<details>
 <summary>Versions</summary>
 
 - [4.1.1](./fuzs/enchantinginfuser/enchantinginfuser-common/4.1.1)
@@ -240,6 +363,13 @@
 
 ### [`enchantinginfuser-fabric`](./fuzs/enchantinginfuser/enchantinginfuser-fabric)
 <details>
+<summary>Latest</summary>
+
+- [4.1.1](./fuzs/enchantinginfuser/enchantinginfuser-fabric/4.1.1)
+- [4.2.1](./fuzs/enchantinginfuser/enchantinginfuser-fabric/4.2.1)
+</details>
+
+<details>
 <summary>Versions</summary>
 
 - [4.1.1](./fuzs/enchantinginfuser/enchantinginfuser-fabric/4.1.1)
@@ -248,6 +378,13 @@
 </details>
 
 ### [`enchantinginfuser-forge`](./fuzs/enchantinginfuser/enchantinginfuser-forge)
+<details>
+<summary>Latest</summary>
+
+- [4.1.1](./fuzs/enchantinginfuser/enchantinginfuser-forge/4.1.1)
+- [4.2.1](./fuzs/enchantinginfuser/enchantinginfuser-forge/4.2.1)
+</details>
+
 <details>
 <summary>Versions</summary>
 
@@ -265,6 +402,12 @@
 
 ### [`enchantmentcontrol-common`](./fuzs/enchantmentcontrol/enchantmentcontrol-common)
 <details>
+<summary>Latest</summary>
+
+- [20.4.4](./fuzs/enchantmentcontrol/enchantmentcontrol-common/20.4.4)
+</details>
+
+<details>
 <summary>Versions</summary>
 
 - [20.4.0](./fuzs/enchantmentcontrol/enchantmentcontrol-common/20.4.0)
@@ -275,6 +418,12 @@
 </details>
 
 ### [`enchantmentcontrol-fabric`](./fuzs/enchantmentcontrol/enchantmentcontrol-fabric)
+<details>
+<summary>Latest</summary>
+
+- [20.4.4](./fuzs/enchantmentcontrol/enchantmentcontrol-fabric/20.4.4)
+</details>
+
 <details>
 <summary>Versions</summary>
 
@@ -287,6 +436,12 @@
 
 ### [`enchantmentcontrol-forge`](./fuzs/enchantmentcontrol/enchantmentcontrol-forge)
 <details>
+<summary>Latest</summary>
+
+- [20.4.4](./fuzs/enchantmentcontrol/enchantmentcontrol-forge/20.4.4)
+</details>
+
+<details>
 <summary>Versions</summary>
 
 - [20.4.0](./fuzs/enchantmentcontrol/enchantmentcontrol-forge/20.4.0)
@@ -297,6 +452,12 @@
 </details>
 
 ### [`enchantmentcontrol-neoforge`](./fuzs/enchantmentcontrol/enchantmentcontrol-neoforge)
+<details>
+<summary>Latest</summary>
+
+- [20.4.4](./fuzs/enchantmentcontrol/enchantmentcontrol-neoforge/20.4.4)
+</details>
+
 <details>
 <summary>Versions</summary>
 
@@ -316,6 +477,17 @@
 
 ### [`extensibleenums-common`](./fuzs/extensibleenums/extensibleenums-common)
 <details>
+<summary>Latest</summary>
+
+- [20.1.1](./fuzs/extensibleenums/extensibleenums-common/20.1.1)
+- [20.4.1](./fuzs/extensibleenums/extensibleenums-common/20.4.1)
+- [21.0.0](./fuzs/extensibleenums/extensibleenums-common/21.0.0)
+- [21.1.1](./fuzs/extensibleenums/extensibleenums-common/21.1.1)
+- [21.3.0](./fuzs/extensibleenums/extensibleenums-common/21.3.0)
+- [21.4.0](./fuzs/extensibleenums/extensibleenums-common/21.4.0)
+</details>
+
+<details>
 <summary>Versions</summary>
 
 - [20.1.0](./fuzs/extensibleenums/extensibleenums-common/20.1.0)
@@ -330,6 +502,20 @@
 </details>
 
 ### [`extensibleenums-fabric`](./fuzs/extensibleenums/extensibleenums-fabric)
+<details>
+<summary>Latest</summary>
+
+- [3.1.0](./fuzs/extensibleenums/extensibleenums-fabric/3.1.0)
+- [4.0.0](./fuzs/extensibleenums/extensibleenums-fabric/4.0.0)
+- [7.0.1](./fuzs/extensibleenums/extensibleenums-fabric/7.0.1)
+- [20.1.1](./fuzs/extensibleenums/extensibleenums-fabric/20.1.1)
+- [20.4.1](./fuzs/extensibleenums/extensibleenums-fabric/20.4.1)
+- [21.0.0](./fuzs/extensibleenums/extensibleenums-fabric/21.0.0)
+- [21.1.1](./fuzs/extensibleenums/extensibleenums-fabric/21.1.1)
+- [21.3.0](./fuzs/extensibleenums/extensibleenums-fabric/21.3.0)
+- [21.4.0](./fuzs/extensibleenums/extensibleenums-fabric/21.4.0)
+</details>
+
 <details>
 <summary>Versions</summary>
 
@@ -350,6 +536,13 @@
 
 ### [`extensibleenums-forge`](./fuzs/extensibleenums/extensibleenums-forge)
 <details>
+<summary>Latest</summary>
+
+- [20.1.1](./fuzs/extensibleenums/extensibleenums-forge/20.1.1)
+- [20.4.1](./fuzs/extensibleenums/extensibleenums-forge/20.4.1)
+</details>
+
+<details>
 <summary>Versions</summary>
 
 - [20.1.0](./fuzs/extensibleenums/extensibleenums-forge/20.1.0)
@@ -359,6 +552,16 @@
 </details>
 
 ### [`extensibleenums-neoforge`](./fuzs/extensibleenums/extensibleenums-neoforge)
+<details>
+<summary>Latest</summary>
+
+- [20.4.1](./fuzs/extensibleenums/extensibleenums-neoforge/20.4.1)
+- [21.0.0](./fuzs/extensibleenums/extensibleenums-neoforge/21.0.0)
+- [21.1.1](./fuzs/extensibleenums/extensibleenums-neoforge/21.1.1)
+- [21.3.0](./fuzs/extensibleenums/extensibleenums-neoforge/21.3.0)
+- [21.4.0](./fuzs/extensibleenums/extensibleenums-neoforge/21.4.0)
+</details>
+
 <details>
 <summary>Versions</summary>
 
@@ -379,6 +582,29 @@
 <summary>Artifacts</summary>
 
 ### [`forgeconfigapiport-common`](./fuzs/forgeconfigapiport/forgeconfigapiport-common)
+<details>
+<summary>Latest</summary>
+
+- [5.0.11](./fuzs/forgeconfigapiport/forgeconfigapiport-common/5.0.11)
+- [6.0.2](./fuzs/forgeconfigapiport/forgeconfigapiport-common/6.0.2)
+- [7.0.0](./fuzs/forgeconfigapiport/forgeconfigapiport-common/7.0.0)
+- [8.0.2](./fuzs/forgeconfigapiport/forgeconfigapiport-common/8.0.2)
+- [9.0.0](./fuzs/forgeconfigapiport/forgeconfigapiport-common/9.0.0)
+- [9.1.2](./fuzs/forgeconfigapiport/forgeconfigapiport-common/9.1.2)
+- [20.2.6](./fuzs/forgeconfigapiport/forgeconfigapiport-common/20.2.6)
+- [20.4.3](./fuzs/forgeconfigapiport/forgeconfigapiport-common/20.4.3)
+- [20.6.1](./fuzs/forgeconfigapiport/forgeconfigapiport-common/20.6.1)
+- [21.0.8](./fuzs/forgeconfigapiport/forgeconfigapiport-common/21.0.8)
+- [21.1.4](./fuzs/forgeconfigapiport/forgeconfigapiport-common/21.1.4)
+- [21.3.4](./fuzs/forgeconfigapiport/forgeconfigapiport-common/21.3.4)
+- [21.4.2](./fuzs/forgeconfigapiport/forgeconfigapiport-common/21.4.2)
+- [21.5.1](./fuzs/forgeconfigapiport/forgeconfigapiport-common/21.5.1)
+- [21.6.4](./fuzs/forgeconfigapiport/forgeconfigapiport-common/21.6.4)
+- [21.7.0](./fuzs/forgeconfigapiport/forgeconfigapiport-common/21.7.0)
+- [21.8.1](./fuzs/forgeconfigapiport/forgeconfigapiport-common/21.8.1)
+- [21.9.7](./fuzs/forgeconfigapiport/forgeconfigapiport-common/21.9.7)
+</details>
+
 <details>
 <summary>Versions</summary>
 
@@ -457,6 +683,23 @@
 
 ### [`forgeconfigapiport-common-forgeapi`](./fuzs/forgeconfigapiport/forgeconfigapiport-common-forgeapi)
 <details>
+<summary>Latest</summary>
+
+- [20.2.6](./fuzs/forgeconfigapiport/forgeconfigapiport-common-forgeapi/20.2.6)
+- [20.4.3](./fuzs/forgeconfigapiport/forgeconfigapiport-common-forgeapi/20.4.3)
+- [20.6.1](./fuzs/forgeconfigapiport/forgeconfigapiport-common-forgeapi/20.6.1)
+- [21.0.8](./fuzs/forgeconfigapiport/forgeconfigapiport-common-forgeapi/21.0.8)
+- [21.1.4](./fuzs/forgeconfigapiport/forgeconfigapiport-common-forgeapi/21.1.4)
+- [21.3.4](./fuzs/forgeconfigapiport/forgeconfigapiport-common-forgeapi/21.3.4)
+- [21.4.2](./fuzs/forgeconfigapiport/forgeconfigapiport-common-forgeapi/21.4.2)
+- [21.5.1](./fuzs/forgeconfigapiport/forgeconfigapiport-common-forgeapi/21.5.1)
+- [21.6.4](./fuzs/forgeconfigapiport/forgeconfigapiport-common-forgeapi/21.6.4)
+- [21.7.0](./fuzs/forgeconfigapiport/forgeconfigapiport-common-forgeapi/21.7.0)
+- [21.8.1](./fuzs/forgeconfigapiport/forgeconfigapiport-common-forgeapi/21.8.1)
+- [21.9.7](./fuzs/forgeconfigapiport/forgeconfigapiport-common-forgeapi/21.9.7)
+</details>
+
+<details>
 <summary>Versions</summary>
 
 - [20.2.4](./fuzs/forgeconfigapiport/forgeconfigapiport-common-forgeapi/20.2.4)
@@ -511,6 +754,23 @@
 
 ### [`forgeconfigapiport-common-neoforgeapi`](./fuzs/forgeconfigapiport/forgeconfigapiport-common-neoforgeapi)
 <details>
+<summary>Latest</summary>
+
+- [20.2.6](./fuzs/forgeconfigapiport/forgeconfigapiport-common-neoforgeapi/20.2.6)
+- [20.4.3](./fuzs/forgeconfigapiport/forgeconfigapiport-common-neoforgeapi/20.4.3)
+- [20.6.1](./fuzs/forgeconfigapiport/forgeconfigapiport-common-neoforgeapi/20.6.1)
+- [21.0.8](./fuzs/forgeconfigapiport/forgeconfigapiport-common-neoforgeapi/21.0.8)
+- [21.1.4](./fuzs/forgeconfigapiport/forgeconfigapiport-common-neoforgeapi/21.1.4)
+- [21.3.4](./fuzs/forgeconfigapiport/forgeconfigapiport-common-neoforgeapi/21.3.4)
+- [21.4.2](./fuzs/forgeconfigapiport/forgeconfigapiport-common-neoforgeapi/21.4.2)
+- [21.5.1](./fuzs/forgeconfigapiport/forgeconfigapiport-common-neoforgeapi/21.5.1)
+- [21.6.4](./fuzs/forgeconfigapiport/forgeconfigapiport-common-neoforgeapi/21.6.4)
+- [21.7.0](./fuzs/forgeconfigapiport/forgeconfigapiport-common-neoforgeapi/21.7.0)
+- [21.8.1](./fuzs/forgeconfigapiport/forgeconfigapiport-common-neoforgeapi/21.8.1)
+- [21.9.7](./fuzs/forgeconfigapiport/forgeconfigapiport-common-neoforgeapi/21.9.7)
+</details>
+
+<details>
 <summary>Versions</summary>
 
 - [20.2.4](./fuzs/forgeconfigapiport/forgeconfigapiport-common-neoforgeapi/20.2.4)
@@ -564,6 +824,29 @@
 </details>
 
 ### [`forgeconfigapiport-fabric`](./fuzs/forgeconfigapiport/forgeconfigapiport-fabric)
+<details>
+<summary>Latest</summary>
+
+- [5.0.11](./fuzs/forgeconfigapiport/forgeconfigapiport-fabric/5.0.11)
+- [6.0.2](./fuzs/forgeconfigapiport/forgeconfigapiport-fabric/6.0.2)
+- [7.0.0](./fuzs/forgeconfigapiport/forgeconfigapiport-fabric/7.0.0)
+- [8.0.2](./fuzs/forgeconfigapiport/forgeconfigapiport-fabric/8.0.2)
+- [9.0.0](./fuzs/forgeconfigapiport/forgeconfigapiport-fabric/9.0.0)
+- [9.1.2](./fuzs/forgeconfigapiport/forgeconfigapiport-fabric/9.1.2)
+- [20.2.6](./fuzs/forgeconfigapiport/forgeconfigapiport-fabric/20.2.6)
+- [20.4.3](./fuzs/forgeconfigapiport/forgeconfigapiport-fabric/20.4.3)
+- [20.6.1](./fuzs/forgeconfigapiport/forgeconfigapiport-fabric/20.6.1)
+- [21.0.8](./fuzs/forgeconfigapiport/forgeconfigapiport-fabric/21.0.8)
+- [21.1.4](./fuzs/forgeconfigapiport/forgeconfigapiport-fabric/21.1.4)
+- [21.3.4](./fuzs/forgeconfigapiport/forgeconfigapiport-fabric/21.3.4)
+- [21.4.2](./fuzs/forgeconfigapiport/forgeconfigapiport-fabric/21.4.2)
+- [21.5.1](./fuzs/forgeconfigapiport/forgeconfigapiport-fabric/21.5.1)
+- [21.6.4](./fuzs/forgeconfigapiport/forgeconfigapiport-fabric/21.6.4)
+- [21.7.0](./fuzs/forgeconfigapiport/forgeconfigapiport-fabric/21.7.0)
+- [21.8.1](./fuzs/forgeconfigapiport/forgeconfigapiport-fabric/21.8.1)
+- [21.9.7](./fuzs/forgeconfigapiport/forgeconfigapiport-fabric/21.9.7)
+</details>
+
 <details>
 <summary>Versions</summary>
 
@@ -643,6 +926,23 @@
 
 ### [`forgeconfigapiport-forge`](./fuzs/forgeconfigapiport/forgeconfigapiport-forge)
 <details>
+<summary>Latest</summary>
+
+- [20.2.6](./fuzs/forgeconfigapiport/forgeconfigapiport-forge/20.2.6)
+- [20.4.3](./fuzs/forgeconfigapiport/forgeconfigapiport-forge/20.4.3)
+- [20.6.1](./fuzs/forgeconfigapiport/forgeconfigapiport-forge/20.6.1)
+- [21.0.8](./fuzs/forgeconfigapiport/forgeconfigapiport-forge/21.0.8)
+- [21.1.4](./fuzs/forgeconfigapiport/forgeconfigapiport-forge/21.1.4)
+- [21.3.4](./fuzs/forgeconfigapiport/forgeconfigapiport-forge/21.3.4)
+- [21.4.2](./fuzs/forgeconfigapiport/forgeconfigapiport-forge/21.4.2)
+- [21.5.1](./fuzs/forgeconfigapiport/forgeconfigapiport-forge/21.5.1)
+- [21.6.4](./fuzs/forgeconfigapiport/forgeconfigapiport-forge/21.6.4)
+- [21.7.0](./fuzs/forgeconfigapiport/forgeconfigapiport-forge/21.7.0)
+- [21.8.1](./fuzs/forgeconfigapiport/forgeconfigapiport-forge/21.8.1)
+- [21.9.7](./fuzs/forgeconfigapiport/forgeconfigapiport-forge/21.9.7)
+</details>
+
+<details>
 <summary>Versions</summary>
 
 - [20.2.4](./fuzs/forgeconfigapiport/forgeconfigapiport-forge/20.2.4)
@@ -683,6 +983,23 @@
 </details>
 
 ### [`forgeconfigapiport-neoforge`](./fuzs/forgeconfigapiport/forgeconfigapiport-neoforge)
+<details>
+<summary>Latest</summary>
+
+- [20.2.6](./fuzs/forgeconfigapiport/forgeconfigapiport-neoforge/20.2.6)
+- [20.4.3](./fuzs/forgeconfigapiport/forgeconfigapiport-neoforge/20.4.3)
+- [20.6.1](./fuzs/forgeconfigapiport/forgeconfigapiport-neoforge/20.6.1)
+- [21.0.8](./fuzs/forgeconfigapiport/forgeconfigapiport-neoforge/21.0.8)
+- [21.1.4](./fuzs/forgeconfigapiport/forgeconfigapiport-neoforge/21.1.4)
+- [21.3.4](./fuzs/forgeconfigapiport/forgeconfigapiport-neoforge/21.3.4)
+- [21.4.2](./fuzs/forgeconfigapiport/forgeconfigapiport-neoforge/21.4.2)
+- [21.5.1](./fuzs/forgeconfigapiport/forgeconfigapiport-neoforge/21.5.1)
+- [21.6.4](./fuzs/forgeconfigapiport/forgeconfigapiport-neoforge/21.6.4)
+- [21.7.0](./fuzs/forgeconfigapiport/forgeconfigapiport-neoforge/21.7.0)
+- [21.8.1](./fuzs/forgeconfigapiport/forgeconfigapiport-neoforge/21.8.1)
+- [21.9.7](./fuzs/forgeconfigapiport/forgeconfigapiport-neoforge/21.9.7)
+</details>
+
 <details>
 <summary>Versions</summary>
 
@@ -745,6 +1062,13 @@
 
 ### [`forgeconfigscreens-common`](./fuzs/forgeconfigscreens/forgeconfigscreens-common)
 <details>
+<summary>Latest</summary>
+
+- [7.0.0](./fuzs/forgeconfigscreens/forgeconfigscreens-common/7.0.0)
+- [8.0.2](./fuzs/forgeconfigscreens/forgeconfigscreens-common/8.0.2)
+</details>
+
+<details>
 <summary>Versions</summary>
 
 - [7.0.0](./fuzs/forgeconfigscreens/forgeconfigscreens-common/7.0.0)
@@ -754,6 +1078,13 @@
 
 ### [`forgeconfigscreens-fabric`](./fuzs/forgeconfigscreens/forgeconfigscreens-fabric)
 <details>
+<summary>Latest</summary>
+
+- [7.0.0](./fuzs/forgeconfigscreens/forgeconfigscreens-fabric/7.0.0)
+- [8.0.2](./fuzs/forgeconfigscreens/forgeconfigscreens-fabric/8.0.2)
+</details>
+
+<details>
 <summary>Versions</summary>
 
 - [7.0.0](./fuzs/forgeconfigscreens/forgeconfigscreens-fabric/7.0.0)
@@ -762,6 +1093,13 @@
 </details>
 
 ### [`forgeconfigscreens-forge`](./fuzs/forgeconfigscreens/forgeconfigscreens-forge)
+<details>
+<summary>Latest</summary>
+
+- [7.0.0](./fuzs/forgeconfigscreens/forgeconfigscreens-forge/7.0.0)
+- [8.0.2](./fuzs/forgeconfigscreens/forgeconfigscreens-forge/8.0.2)
+</details>
+
 <details>
 <summary>Versions</summary>
 
@@ -778,6 +1116,20 @@
 <summary>Artifacts</summary>
 
 ### [`hotbarslotcycling-common`](./fuzs/hotbarslotcycling/hotbarslotcycling-common)
+<details>
+<summary>Latest</summary>
+
+- [20.4.2](./fuzs/hotbarslotcycling/hotbarslotcycling-common/20.4.2)
+- [21.0.0](./fuzs/hotbarslotcycling/hotbarslotcycling-common/21.0.0)
+- [21.1.1](./fuzs/hotbarslotcycling/hotbarslotcycling-common/21.1.1)
+- [21.3.0](./fuzs/hotbarslotcycling/hotbarslotcycling-common/21.3.0)
+- [21.4.0](./fuzs/hotbarslotcycling/hotbarslotcycling-common/21.4.0)
+- [21.5.0](./fuzs/hotbarslotcycling/hotbarslotcycling-common/21.5.0)
+- [21.6.0](./fuzs/hotbarslotcycling/hotbarslotcycling-common/21.6.0)
+- [21.7.0](./fuzs/hotbarslotcycling/hotbarslotcycling-common/21.7.0)
+- [21.8.0](./fuzs/hotbarslotcycling/hotbarslotcycling-common/21.8.0)
+</details>
+
 <details>
 <summary>Versions</summary>
 
@@ -797,6 +1149,20 @@
 
 ### [`hotbarslotcycling-fabric`](./fuzs/hotbarslotcycling/hotbarslotcycling-fabric)
 <details>
+<summary>Latest</summary>
+
+- [20.4.2](./fuzs/hotbarslotcycling/hotbarslotcycling-fabric/20.4.2)
+- [21.0.0](./fuzs/hotbarslotcycling/hotbarslotcycling-fabric/21.0.0)
+- [21.1.1](./fuzs/hotbarslotcycling/hotbarslotcycling-fabric/21.1.1)
+- [21.3.0](./fuzs/hotbarslotcycling/hotbarslotcycling-fabric/21.3.0)
+- [21.4.0](./fuzs/hotbarslotcycling/hotbarslotcycling-fabric/21.4.0)
+- [21.5.0](./fuzs/hotbarslotcycling/hotbarslotcycling-fabric/21.5.0)
+- [21.6.0](./fuzs/hotbarslotcycling/hotbarslotcycling-fabric/21.6.0)
+- [21.7.0](./fuzs/hotbarslotcycling/hotbarslotcycling-fabric/21.7.0)
+- [21.8.0](./fuzs/hotbarslotcycling/hotbarslotcycling-fabric/21.8.0)
+</details>
+
+<details>
 <summary>Versions</summary>
 
 - [20.4.0](./fuzs/hotbarslotcycling/hotbarslotcycling-fabric/20.4.0)
@@ -815,6 +1181,12 @@
 
 ### [`hotbarslotcycling-forge`](./fuzs/hotbarslotcycling/hotbarslotcycling-forge)
 <details>
+<summary>Latest</summary>
+
+- [20.4.2](./fuzs/hotbarslotcycling/hotbarslotcycling-forge/20.4.2)
+</details>
+
+<details>
 <summary>Versions</summary>
 
 - [20.4.0](./fuzs/hotbarslotcycling/hotbarslotcycling-forge/20.4.0)
@@ -823,6 +1195,20 @@
 </details>
 
 ### [`hotbarslotcycling-neoforge`](./fuzs/hotbarslotcycling/hotbarslotcycling-neoforge)
+<details>
+<summary>Latest</summary>
+
+- [20.4.2](./fuzs/hotbarslotcycling/hotbarslotcycling-neoforge/20.4.2)
+- [21.0.0](./fuzs/hotbarslotcycling/hotbarslotcycling-neoforge/21.0.0)
+- [21.1.1](./fuzs/hotbarslotcycling/hotbarslotcycling-neoforge/21.1.1)
+- [21.3.0](./fuzs/hotbarslotcycling/hotbarslotcycling-neoforge/21.3.0)
+- [21.4.0](./fuzs/hotbarslotcycling/hotbarslotcycling-neoforge/21.4.0)
+- [21.5.0](./fuzs/hotbarslotcycling/hotbarslotcycling-neoforge/21.5.0)
+- [21.6.0](./fuzs/hotbarslotcycling/hotbarslotcycling-neoforge/21.6.0)
+- [21.7.0](./fuzs/hotbarslotcycling/hotbarslotcycling-neoforge/21.7.0)
+- [21.8.0](./fuzs/hotbarslotcycling/hotbarslotcycling-neoforge/21.8.0)
+</details>
+
 <details>
 <summary>Versions</summary>
 
@@ -848,6 +1234,20 @@
 <summary>Artifacts</summary>
 
 ### [`iteminteractions-common`](./fuzs/iteminteractions/iteminteractions-common)
+<details>
+<summary>Latest</summary>
+
+- [20.4.5](./fuzs/iteminteractions/iteminteractions-common/20.4.5)
+- [21.0.5](./fuzs/iteminteractions/iteminteractions-common/21.0.5)
+- [21.1.4](./fuzs/iteminteractions/iteminteractions-common/21.1.4)
+- [21.3.3](./fuzs/iteminteractions/iteminteractions-common/21.3.3)
+- [21.4.2](./fuzs/iteminteractions/iteminteractions-common/21.4.2)
+- [21.5.0](./fuzs/iteminteractions/iteminteractions-common/21.5.0)
+- [21.6.2](./fuzs/iteminteractions/iteminteractions-common/21.6.2)
+- [21.7.0](./fuzs/iteminteractions/iteminteractions-common/21.7.0)
+- [21.8.3](./fuzs/iteminteractions/iteminteractions-common/21.8.3)
+</details>
+
 <details>
 <summary>Versions</summary>
 
@@ -888,6 +1288,20 @@
 
 ### [`iteminteractions-fabric`](./fuzs/iteminteractions/iteminteractions-fabric)
 <details>
+<summary>Latest</summary>
+
+- [20.4.5](./fuzs/iteminteractions/iteminteractions-fabric/20.4.5)
+- [21.0.5](./fuzs/iteminteractions/iteminteractions-fabric/21.0.5)
+- [21.1.4](./fuzs/iteminteractions/iteminteractions-fabric/21.1.4)
+- [21.3.3](./fuzs/iteminteractions/iteminteractions-fabric/21.3.3)
+- [21.4.2](./fuzs/iteminteractions/iteminteractions-fabric/21.4.2)
+- [21.5.0](./fuzs/iteminteractions/iteminteractions-fabric/21.5.0)
+- [21.6.2](./fuzs/iteminteractions/iteminteractions-fabric/21.6.2)
+- [21.7.0](./fuzs/iteminteractions/iteminteractions-fabric/21.7.0)
+- [21.8.3](./fuzs/iteminteractions/iteminteractions-fabric/21.8.3)
+</details>
+
+<details>
 <summary>Versions</summary>
 
 - [20.4.0](./fuzs/iteminteractions/iteminteractions-fabric/20.4.0)
@@ -927,6 +1341,12 @@
 
 ### [`iteminteractions-forge`](./fuzs/iteminteractions/iteminteractions-forge)
 <details>
+<summary>Latest</summary>
+
+- [20.4.5](./fuzs/iteminteractions/iteminteractions-forge/20.4.5)
+</details>
+
+<details>
 <summary>Versions</summary>
 
 - [20.4.0](./fuzs/iteminteractions/iteminteractions-forge/20.4.0)
@@ -938,6 +1358,20 @@
 </details>
 
 ### [`iteminteractions-neoforge`](./fuzs/iteminteractions/iteminteractions-neoforge)
+<details>
+<summary>Latest</summary>
+
+- [20.4.5](./fuzs/iteminteractions/iteminteractions-neoforge/20.4.5)
+- [21.0.5](./fuzs/iteminteractions/iteminteractions-neoforge/21.0.5)
+- [21.1.4](./fuzs/iteminteractions/iteminteractions-neoforge/21.1.4)
+- [21.3.3](./fuzs/iteminteractions/iteminteractions-neoforge/21.3.3)
+- [21.4.2](./fuzs/iteminteractions/iteminteractions-neoforge/21.4.2)
+- [21.5.0](./fuzs/iteminteractions/iteminteractions-neoforge/21.5.0)
+- [21.6.2](./fuzs/iteminteractions/iteminteractions-neoforge/21.6.2)
+- [21.7.0](./fuzs/iteminteractions/iteminteractions-neoforge/21.7.0)
+- [21.8.3](./fuzs/iteminteractions/iteminteractions-neoforge/21.8.3)
+</details>
+
 <details>
 <summary>Versions</summary>
 
@@ -985,6 +1419,14 @@
 
 ### [`iteminteractionscore-common`](./fuzs/iteminteractionscore/iteminteractionscore-common)
 <details>
+<summary>Latest</summary>
+
+- [5.0.2](./fuzs/iteminteractionscore/iteminteractionscore-common/5.0.2)
+- [6.0.0](./fuzs/iteminteractionscore/iteminteractionscore-common/6.0.0)
+- [7.0.0](./fuzs/iteminteractionscore/iteminteractionscore-common/7.0.0)
+</details>
+
+<details>
 <summary>Versions</summary>
 
 - [5.0.0](./fuzs/iteminteractionscore/iteminteractionscore-common/5.0.0)
@@ -996,6 +1438,14 @@
 
 ### [`iteminteractionscore-fabric`](./fuzs/iteminteractionscore/iteminteractionscore-fabric)
 <details>
+<summary>Latest</summary>
+
+- [5.0.2](./fuzs/iteminteractionscore/iteminteractionscore-fabric/5.0.2)
+- [6.0.0](./fuzs/iteminteractionscore/iteminteractionscore-fabric/6.0.0)
+- [7.0.0](./fuzs/iteminteractionscore/iteminteractionscore-fabric/7.0.0)
+</details>
+
+<details>
 <summary>Versions</summary>
 
 - [5.0.0](./fuzs/iteminteractionscore/iteminteractionscore-fabric/5.0.0)
@@ -1006,6 +1456,14 @@
 </details>
 
 ### [`iteminteractionscore-forge`](./fuzs/iteminteractionscore/iteminteractionscore-forge)
+<details>
+<summary>Latest</summary>
+
+- [5.0.2](./fuzs/iteminteractionscore/iteminteractionscore-forge/5.0.2)
+- [6.0.0](./fuzs/iteminteractionscore/iteminteractionscore-forge/6.0.0)
+- [7.0.0](./fuzs/iteminteractionscore/iteminteractionscore-forge/7.0.0)
+</details>
+
 <details>
 <summary>Versions</summary>
 
@@ -1025,6 +1483,20 @@
 
 ### [`limitlesscontainers-common`](./fuzs/limitlesscontainers/limitlesscontainers-common)
 <details>
+<summary>Latest</summary>
+
+- [20.4.0](./fuzs/limitlesscontainers/limitlesscontainers-common/20.4.0)
+- [21.0.1](./fuzs/limitlesscontainers/limitlesscontainers-common/21.0.1)
+- [21.1.0](./fuzs/limitlesscontainers/limitlesscontainers-common/21.1.0)
+- [21.3.0](./fuzs/limitlesscontainers/limitlesscontainers-common/21.3.0)
+- [21.4.0](./fuzs/limitlesscontainers/limitlesscontainers-common/21.4.0)
+- [21.5.0](./fuzs/limitlesscontainers/limitlesscontainers-common/21.5.0)
+- [21.6.0](./fuzs/limitlesscontainers/limitlesscontainers-common/21.6.0)
+- [21.7.0](./fuzs/limitlesscontainers/limitlesscontainers-common/21.7.0)
+- [21.8.0](./fuzs/limitlesscontainers/limitlesscontainers-common/21.8.0)
+</details>
+
+<details>
 <summary>Versions</summary>
 
 - [20.4.0](./fuzs/limitlesscontainers/limitlesscontainers-common/20.4.0)
@@ -1040,6 +1512,20 @@
 </details>
 
 ### [`limitlesscontainers-fabric`](./fuzs/limitlesscontainers/limitlesscontainers-fabric)
+<details>
+<summary>Latest</summary>
+
+- [20.4.0](./fuzs/limitlesscontainers/limitlesscontainers-fabric/20.4.0)
+- [21.0.1](./fuzs/limitlesscontainers/limitlesscontainers-fabric/21.0.1)
+- [21.1.0](./fuzs/limitlesscontainers/limitlesscontainers-fabric/21.1.0)
+- [21.3.0](./fuzs/limitlesscontainers/limitlesscontainers-fabric/21.3.0)
+- [21.4.0](./fuzs/limitlesscontainers/limitlesscontainers-fabric/21.4.0)
+- [21.5.0](./fuzs/limitlesscontainers/limitlesscontainers-fabric/21.5.0)
+- [21.6.0](./fuzs/limitlesscontainers/limitlesscontainers-fabric/21.6.0)
+- [21.7.0](./fuzs/limitlesscontainers/limitlesscontainers-fabric/21.7.0)
+- [21.8.0](./fuzs/limitlesscontainers/limitlesscontainers-fabric/21.8.0)
+</details>
+
 <details>
 <summary>Versions</summary>
 
@@ -1057,12 +1543,32 @@
 
 ### [`limitlesscontainers-forge`](./fuzs/limitlesscontainers/limitlesscontainers-forge)
 <details>
+<summary>Latest</summary>
+
+- [20.4.0](./fuzs/limitlesscontainers/limitlesscontainers-forge/20.4.0)
+</details>
+
+<details>
 <summary>Versions</summary>
 
 - [20.4.0](./fuzs/limitlesscontainers/limitlesscontainers-forge/20.4.0)
 </details>
 
 ### [`limitlesscontainers-neoforge`](./fuzs/limitlesscontainers/limitlesscontainers-neoforge)
+<details>
+<summary>Latest</summary>
+
+- [20.4.0](./fuzs/limitlesscontainers/limitlesscontainers-neoforge/20.4.0)
+- [21.0.1](./fuzs/limitlesscontainers/limitlesscontainers-neoforge/21.0.1)
+- [21.1.0](./fuzs/limitlesscontainers/limitlesscontainers-neoforge/21.1.0)
+- [21.3.0](./fuzs/limitlesscontainers/limitlesscontainers-neoforge/21.3.0)
+- [21.4.0](./fuzs/limitlesscontainers/limitlesscontainers-neoforge/21.4.0)
+- [21.5.0](./fuzs/limitlesscontainers/limitlesscontainers-neoforge/21.5.0)
+- [21.6.0](./fuzs/limitlesscontainers/limitlesscontainers-neoforge/21.6.0)
+- [21.7.0](./fuzs/limitlesscontainers/limitlesscontainers-neoforge/21.7.0)
+- [21.8.0](./fuzs/limitlesscontainers/limitlesscontainers-neoforge/21.8.0)
+</details>
+
 <details>
 <summary>Versions</summary>
 
@@ -1087,6 +1593,18 @@
 
 ### [`neoforgedatapackextensions-common`](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-common)
 <details>
+<summary>Latest</summary>
+
+- [21.0.0](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-common/21.0.0)
+- [21.1.2](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-common/21.1.2)
+- [21.3.2](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-common/21.3.2)
+- [21.4.2](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-common/21.4.2)
+- [21.5.0](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-common/21.5.0)
+- [21.7.0](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-common/21.7.0)
+- [21.8.0](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-common/21.8.0)
+</details>
+
+<details>
 <summary>Versions</summary>
 
 - [21.0.0](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-common/21.0.0)
@@ -1106,6 +1624,18 @@
 
 ### [`neoforgedatapackextensions-fabric`](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-fabric)
 <details>
+<summary>Latest</summary>
+
+- [21.0.0](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-fabric/21.0.0)
+- [21.1.2](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-fabric/21.1.2)
+- [21.3.2](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-fabric/21.3.2)
+- [21.4.2](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-fabric/21.4.2)
+- [21.5.0](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-fabric/21.5.0)
+- [21.7.0](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-fabric/21.7.0)
+- [21.8.0](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-fabric/21.8.0)
+</details>
+
+<details>
 <summary>Versions</summary>
 
 - [21.0.0](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-fabric/21.0.0)
@@ -1124,6 +1654,18 @@
 </details>
 
 ### [`neoforgedatapackextensions-neoforge`](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-neoforge)
+<details>
+<summary>Latest</summary>
+
+- [21.0.0](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-neoforge/21.0.0)
+- [21.1.2](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-neoforge/21.1.2)
+- [21.3.2](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-neoforge/21.3.2)
+- [21.4.2](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-neoforge/21.4.2)
+- [21.5.0](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-neoforge/21.5.0)
+- [21.7.0](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-neoforge/21.7.0)
+- [21.8.0](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-neoforge/21.8.0)
+</details>
+
 <details>
 <summary>Versions</summary>
 
@@ -1151,6 +1693,13 @@
 
 ### [`puzzlesaccessapi-common`](./fuzs/puzzlesaccessapi/puzzlesaccessapi-common)
 <details>
+<summary>Latest</summary>
+
+- [8.0.9](./fuzs/puzzlesaccessapi/puzzlesaccessapi-common/8.0.9)
+- [20.1.1](./fuzs/puzzlesaccessapi/puzzlesaccessapi-common/20.1.1)
+</details>
+
+<details>
 <summary>Versions</summary>
 
 - [8.0.0](./fuzs/puzzlesaccessapi/puzzlesaccessapi-common/8.0.0)
@@ -1169,6 +1718,13 @@
 
 ### [`puzzlesaccessapi-fabric`](./fuzs/puzzlesaccessapi/puzzlesaccessapi-fabric)
 <details>
+<summary>Latest</summary>
+
+- [8.0.9](./fuzs/puzzlesaccessapi/puzzlesaccessapi-fabric/8.0.9)
+- [20.1.1](./fuzs/puzzlesaccessapi/puzzlesaccessapi-fabric/20.1.1)
+</details>
+
+<details>
 <summary>Versions</summary>
 
 - [8.0.0](./fuzs/puzzlesaccessapi/puzzlesaccessapi-fabric/8.0.0)
@@ -1186,6 +1742,13 @@
 </details>
 
 ### [`puzzlesaccessapi-forge`](./fuzs/puzzlesaccessapi/puzzlesaccessapi-forge)
+<details>
+<summary>Latest</summary>
+
+- [8.0.9](./fuzs/puzzlesaccessapi/puzzlesaccessapi-forge/8.0.9)
+- [20.1.1](./fuzs/puzzlesaccessapi/puzzlesaccessapi-forge/20.1.1)
+</details>
+
 <details>
 <summary>Versions</summary>
 
@@ -1212,6 +1775,13 @@
 
 ### [`puzzlesapi-common`](./fuzs/puzzlesapi/puzzlesapi-common)
 <details>
+<summary>Latest</summary>
+
+- [8.0.3](./fuzs/puzzlesapi/puzzlesapi-common/8.0.3)
+- [8.1.7](./fuzs/puzzlesapi/puzzlesapi-common/8.1.7)
+</details>
+
+<details>
 <summary>Versions</summary>
 
 - [8.0.0](./fuzs/puzzlesapi/puzzlesapi-common/8.0.0)
@@ -1229,6 +1799,13 @@
 
 ### [`puzzlesapi-fabric`](./fuzs/puzzlesapi/puzzlesapi-fabric)
 <details>
+<summary>Latest</summary>
+
+- [8.0.3](./fuzs/puzzlesapi/puzzlesapi-fabric/8.0.3)
+- [8.1.7](./fuzs/puzzlesapi/puzzlesapi-fabric/8.1.7)
+</details>
+
+<details>
 <summary>Versions</summary>
 
 - [8.0.0](./fuzs/puzzlesapi/puzzlesapi-fabric/8.0.0)
@@ -1245,6 +1822,13 @@
 </details>
 
 ### [`puzzlesapi-forge`](./fuzs/puzzlesapi/puzzlesapi-forge)
+<details>
+<summary>Latest</summary>
+
+- [8.0.3](./fuzs/puzzlesapi/puzzlesapi-forge/8.0.3)
+- [8.1.7](./fuzs/puzzlesapi/puzzlesapi-forge/8.1.7)
+</details>
+
 <details>
 <summary>Versions</summary>
 
@@ -1269,6 +1853,33 @@
 <summary>Artifacts</summary>
 
 ### [`puzzleslib-common`](./fuzs/puzzleslib/puzzleslib-common)
+<details>
+<summary>Latest</summary>
+
+- [3.4.7](./fuzs/puzzleslib/puzzleslib-common/3.4.7)
+- [3.5.10](./fuzs/puzzleslib/puzzleslib-common/3.5.10)
+- [4.0.18](./fuzs/puzzleslib/puzzleslib-common/4.0.18)
+- [4.1.8](./fuzs/puzzleslib/puzzleslib-common/4.1.8)
+- [4.2.17](./fuzs/puzzleslib/puzzleslib-common/4.2.17)
+- [4.3.44](./fuzs/puzzleslib/puzzleslib-common/4.3.44)
+- [4.4.4](./fuzs/puzzleslib/puzzleslib-common/4.4.4)
+- [5.0.33](./fuzs/puzzleslib/puzzleslib-common/5.0.33)
+- [6.0.10](./fuzs/puzzleslib/puzzleslib-common/6.0.10)
+- [7.0.10](./fuzs/puzzleslib/puzzleslib-common/7.0.10)
+- [8.0.41](./fuzs/puzzleslib/puzzleslib-common/8.0.41)
+- [8.1.33](./fuzs/puzzleslib/puzzleslib-common/8.1.33)
+- [20.4.52](./fuzs/puzzleslib/puzzleslib-common/20.4.52)
+- [21.0.28](./fuzs/puzzleslib/puzzleslib-common/21.0.28)
+- [21.1.38](./fuzs/puzzleslib/puzzleslib-common/21.1.38)
+- [21.3.24](./fuzs/puzzleslib/puzzleslib-common/21.3.24)
+- [21.4.13](./fuzs/puzzleslib/puzzleslib-common/21.4.13)
+- [21.5.12](./fuzs/puzzleslib/puzzleslib-common/21.5.12)
+- [21.6.6](./fuzs/puzzleslib/puzzleslib-common/21.6.6)
+- [21.7.6](./fuzs/puzzleslib/puzzleslib-common/21.7.6)
+- [21.8.8](./fuzs/puzzleslib/puzzleslib-common/21.8.8)
+- [21.9.1](./fuzs/puzzleslib/puzzleslib-common/21.9.1)
+</details>
+
 <details>
 <summary>Versions</summary>
 
@@ -1704,6 +2315,33 @@
 
 ### [`puzzleslib-fabric`](./fuzs/puzzleslib/puzzleslib-fabric)
 <details>
+<summary>Latest</summary>
+
+- [3.4.7](./fuzs/puzzleslib/puzzleslib-fabric/3.4.7)
+- [3.5.10](./fuzs/puzzleslib/puzzleslib-fabric/3.5.10)
+- [4.0.18](./fuzs/puzzleslib/puzzleslib-fabric/4.0.18)
+- [4.1.8](./fuzs/puzzleslib/puzzleslib-fabric/4.1.8)
+- [4.2.17](./fuzs/puzzleslib/puzzleslib-fabric/4.2.17)
+- [4.3.44](./fuzs/puzzleslib/puzzleslib-fabric/4.3.44)
+- [4.4.4](./fuzs/puzzleslib/puzzleslib-fabric/4.4.4)
+- [5.0.33](./fuzs/puzzleslib/puzzleslib-fabric/5.0.33)
+- [6.0.10](./fuzs/puzzleslib/puzzleslib-fabric/6.0.10)
+- [7.0.10](./fuzs/puzzleslib/puzzleslib-fabric/7.0.10)
+- [8.0.41](./fuzs/puzzleslib/puzzleslib-fabric/8.0.41)
+- [8.1.33](./fuzs/puzzleslib/puzzleslib-fabric/8.1.33)
+- [20.4.52](./fuzs/puzzleslib/puzzleslib-fabric/20.4.52)
+- [21.0.28](./fuzs/puzzleslib/puzzleslib-fabric/21.0.28)
+- [21.1.38](./fuzs/puzzleslib/puzzleslib-fabric/21.1.38)
+- [21.3.24](./fuzs/puzzleslib/puzzleslib-fabric/21.3.24)
+- [21.4.13](./fuzs/puzzleslib/puzzleslib-fabric/21.4.13)
+- [21.5.12](./fuzs/puzzleslib/puzzleslib-fabric/21.5.12)
+- [21.6.6](./fuzs/puzzleslib/puzzleslib-fabric/21.6.6)
+- [21.7.6](./fuzs/puzzleslib/puzzleslib-fabric/21.7.6)
+- [21.8.8](./fuzs/puzzleslib/puzzleslib-fabric/21.8.8)
+- [21.9.1](./fuzs/puzzleslib/puzzleslib-fabric/21.9.1)
+</details>
+
+<details>
 <summary>Versions</summary>
 
 - [3.4.0](./fuzs/puzzleslib/puzzleslib-fabric/3.4.0)
@@ -2138,6 +2776,24 @@
 
 ### [`puzzleslib-forge`](./fuzs/puzzleslib/puzzleslib-forge)
 <details>
+<summary>Latest</summary>
+
+- [3.4.7](./fuzs/puzzleslib/puzzleslib-forge/3.4.7)
+- [3.5.10](./fuzs/puzzleslib/puzzleslib-forge/3.5.10)
+- [4.0.18](./fuzs/puzzleslib/puzzleslib-forge/4.0.18)
+- [4.1.8](./fuzs/puzzleslib/puzzleslib-forge/4.1.8)
+- [4.2.17](./fuzs/puzzleslib/puzzleslib-forge/4.2.17)
+- [4.3.44](./fuzs/puzzleslib/puzzleslib-forge/4.3.44)
+- [4.4.4](./fuzs/puzzleslib/puzzleslib-forge/4.4.4)
+- [5.0.33](./fuzs/puzzleslib/puzzleslib-forge/5.0.33)
+- [6.0.10](./fuzs/puzzleslib/puzzleslib-forge/6.0.10)
+- [7.0.10](./fuzs/puzzleslib/puzzleslib-forge/7.0.10)
+- [8.0.41](./fuzs/puzzleslib/puzzleslib-forge/8.0.41)
+- [8.1.33](./fuzs/puzzleslib/puzzleslib-forge/8.1.33)
+- [20.4.52](./fuzs/puzzleslib/puzzleslib-forge/20.4.52)
+</details>
+
+<details>
 <summary>Versions</summary>
 
 - [3.4.0](./fuzs/puzzleslib/puzzleslib-forge/3.4.0)
@@ -2429,6 +3085,21 @@
 
 ### [`puzzleslib-neoforge`](./fuzs/puzzleslib/puzzleslib-neoforge)
 <details>
+<summary>Latest</summary>
+
+- [20.4.52](./fuzs/puzzleslib/puzzleslib-neoforge/20.4.52)
+- [21.0.28](./fuzs/puzzleslib/puzzleslib-neoforge/21.0.28)
+- [21.1.38](./fuzs/puzzleslib/puzzleslib-neoforge/21.1.38)
+- [21.3.24](./fuzs/puzzleslib/puzzleslib-neoforge/21.3.24)
+- [21.4.13](./fuzs/puzzleslib/puzzleslib-neoforge/21.4.13)
+- [21.5.12](./fuzs/puzzleslib/puzzleslib-neoforge/21.5.12)
+- [21.6.6](./fuzs/puzzleslib/puzzleslib-neoforge/21.6.6)
+- [21.7.6](./fuzs/puzzleslib/puzzleslib-neoforge/21.7.6)
+- [21.8.8](./fuzs/puzzleslib/puzzleslib-neoforge/21.8.8)
+- [21.9.1](./fuzs/puzzleslib/puzzleslib-neoforge/21.9.1)
+</details>
+
+<details>
 <summary>Versions</summary>
 
 - [20.4.0](./fuzs/puzzleslib/puzzleslib-neoforge/20.4.0)
@@ -2636,6 +3307,28 @@
 <summary>Artifacts</summary>
 
 ### [`sharedcatalogs`](./fuzs/sharedcatalogs/sharedcatalogs)
+<details>
+<summary>Latest</summary>
+
+- [1.18.2-v28](./fuzs/sharedcatalogs/sharedcatalogs/1.18.2-v28)
+- [1.19.2-v27](./fuzs/sharedcatalogs/sharedcatalogs/1.19.2-v27)
+- [1.20-3](./fuzs/sharedcatalogs/sharedcatalogs/1.20-3)
+- [1.20-v2](./fuzs/sharedcatalogs/sharedcatalogs/1.20-v2)
+- [1.20.1-v47](./fuzs/sharedcatalogs/sharedcatalogs/1.20.1-v47)
+- [1.20.2-v1](./fuzs/sharedcatalogs/sharedcatalogs/1.20.2-v1)
+- [1.20.4-v40](./fuzs/sharedcatalogs/sharedcatalogs/1.20.4-v40)
+- [1.20.6-v6](./fuzs/sharedcatalogs/sharedcatalogs/1.20.6-v6)
+- [1.21-v30](./fuzs/sharedcatalogs/sharedcatalogs/1.21-v30)
+- [1.21.1-v17](./fuzs/sharedcatalogs/sharedcatalogs/1.21.1-v17)
+- [1.21.3-v22](./fuzs/sharedcatalogs/sharedcatalogs/1.21.3-v22)
+- [1.21.4-v12](./fuzs/sharedcatalogs/sharedcatalogs/1.21.4-v12)
+- [1.21.5-v11](./fuzs/sharedcatalogs/sharedcatalogs/1.21.5-v11)
+- [1.21.6-v11](./fuzs/sharedcatalogs/sharedcatalogs/1.21.6-v11)
+- [1.21.7-v1](./fuzs/sharedcatalogs/sharedcatalogs/1.21.7-v1)
+- [1.21.8-v10](./fuzs/sharedcatalogs/sharedcatalogs/1.21.8-v10)
+- [1.21.9-v18](./fuzs/sharedcatalogs/sharedcatalogs/1.21.9-v18)
+</details>
+
 <details>
 <summary>Versions</summary>
 
@@ -2930,6 +3623,20 @@
 
 ### [`statuemenus-common`](./fuzs/statuemenus/statuemenus-common)
 <details>
+<summary>Latest</summary>
+
+- [20.4.2](./fuzs/statuemenus/statuemenus-common/20.4.2)
+- [21.0.2](./fuzs/statuemenus/statuemenus-common/21.0.2)
+- [21.1.0](./fuzs/statuemenus/statuemenus-common/21.1.0)
+- [21.3.2](./fuzs/statuemenus/statuemenus-common/21.3.2)
+- [21.4.0](./fuzs/statuemenus/statuemenus-common/21.4.0)
+- [21.5.0](./fuzs/statuemenus/statuemenus-common/21.5.0)
+- [21.6.3](./fuzs/statuemenus/statuemenus-common/21.6.3)
+- [21.7.0](./fuzs/statuemenus/statuemenus-common/21.7.0)
+- [21.8.1](./fuzs/statuemenus/statuemenus-common/21.8.1)
+</details>
+
+<details>
 <summary>Versions</summary>
 
 - [20.4.0](./fuzs/statuemenus/statuemenus-common/20.4.0)
@@ -2952,6 +3659,20 @@
 </details>
 
 ### [`statuemenus-fabric`](./fuzs/statuemenus/statuemenus-fabric)
+<details>
+<summary>Latest</summary>
+
+- [20.4.2](./fuzs/statuemenus/statuemenus-fabric/20.4.2)
+- [21.0.2](./fuzs/statuemenus/statuemenus-fabric/21.0.2)
+- [21.1.0](./fuzs/statuemenus/statuemenus-fabric/21.1.0)
+- [21.3.2](./fuzs/statuemenus/statuemenus-fabric/21.3.2)
+- [21.4.0](./fuzs/statuemenus/statuemenus-fabric/21.4.0)
+- [21.5.0](./fuzs/statuemenus/statuemenus-fabric/21.5.0)
+- [21.6.3](./fuzs/statuemenus/statuemenus-fabric/21.6.3)
+- [21.7.0](./fuzs/statuemenus/statuemenus-fabric/21.7.0)
+- [21.8.1](./fuzs/statuemenus/statuemenus-fabric/21.8.1)
+</details>
+
 <details>
 <summary>Versions</summary>
 
@@ -2976,6 +3697,12 @@
 
 ### [`statuemenus-forge`](./fuzs/statuemenus/statuemenus-forge)
 <details>
+<summary>Latest</summary>
+
+- [20.4.2](./fuzs/statuemenus/statuemenus-forge/20.4.2)
+</details>
+
+<details>
 <summary>Versions</summary>
 
 - [20.4.0](./fuzs/statuemenus/statuemenus-forge/20.4.0)
@@ -2984,6 +3711,20 @@
 </details>
 
 ### [`statuemenus-neoforge`](./fuzs/statuemenus/statuemenus-neoforge)
+<details>
+<summary>Latest</summary>
+
+- [20.4.2](./fuzs/statuemenus/statuemenus-neoforge/20.4.2)
+- [21.0.2](./fuzs/statuemenus/statuemenus-neoforge/21.0.2)
+- [21.1.0](./fuzs/statuemenus/statuemenus-neoforge/21.1.0)
+- [21.3.2](./fuzs/statuemenus/statuemenus-neoforge/21.3.2)
+- [21.4.0](./fuzs/statuemenus/statuemenus-neoforge/21.4.0)
+- [21.5.0](./fuzs/statuemenus/statuemenus-neoforge/21.5.0)
+- [21.6.3](./fuzs/statuemenus/statuemenus-neoforge/21.6.3)
+- [21.7.0](./fuzs/statuemenus/statuemenus-neoforge/21.7.0)
+- [21.8.1](./fuzs/statuemenus/statuemenus-neoforge/21.8.1)
+</details>
+
 <details>
 <summary>Versions</summary>
 
@@ -3015,6 +3756,18 @@
 
 ### [`stylisheffects-common`](./fuzs/stylisheffects/stylisheffects-common)
 <details>
+<summary>Latest</summary>
+
+- [4.1.3](./fuzs/stylisheffects/stylisheffects-common/4.1.3)
+- [4.2.0](./fuzs/stylisheffects/stylisheffects-common/4.2.0)
+- [4.3.0](./fuzs/stylisheffects/stylisheffects-common/4.3.0)
+- [8.0.0](./fuzs/stylisheffects/stylisheffects-common/8.0.0)
+- [20.4.2](./fuzs/stylisheffects/stylisheffects-common/20.4.2)
+- [21.1.1](./fuzs/stylisheffects/stylisheffects-common/21.1.1)
+- [21.4.0](./fuzs/stylisheffects/stylisheffects-common/21.4.0)
+</details>
+
+<details>
 <summary>Versions</summary>
 
 - [4.1.0](./fuzs/stylisheffects/stylisheffects-common/4.1.0)
@@ -3031,6 +3784,18 @@
 </details>
 
 ### [`stylisheffects-fabric`](./fuzs/stylisheffects/stylisheffects-fabric)
+<details>
+<summary>Latest</summary>
+
+- [4.1.3](./fuzs/stylisheffects/stylisheffects-fabric/4.1.3)
+- [4.2.0](./fuzs/stylisheffects/stylisheffects-fabric/4.2.0)
+- [4.3.0](./fuzs/stylisheffects/stylisheffects-fabric/4.3.0)
+- [8.0.0](./fuzs/stylisheffects/stylisheffects-fabric/8.0.0)
+- [20.4.2](./fuzs/stylisheffects/stylisheffects-fabric/20.4.2)
+- [21.1.1](./fuzs/stylisheffects/stylisheffects-fabric/21.1.1)
+- [21.4.0](./fuzs/stylisheffects/stylisheffects-fabric/21.4.0)
+</details>
+
 <details>
 <summary>Versions</summary>
 
@@ -3049,6 +3814,16 @@
 
 ### [`stylisheffects-forge`](./fuzs/stylisheffects/stylisheffects-forge)
 <details>
+<summary>Latest</summary>
+
+- [4.1.3](./fuzs/stylisheffects/stylisheffects-forge/4.1.3)
+- [4.2.0](./fuzs/stylisheffects/stylisheffects-forge/4.2.0)
+- [4.3.0](./fuzs/stylisheffects/stylisheffects-forge/4.3.0)
+- [8.0.0](./fuzs/stylisheffects/stylisheffects-forge/8.0.0)
+- [20.4.2](./fuzs/stylisheffects/stylisheffects-forge/20.4.2)
+</details>
+
+<details>
 <summary>Versions</summary>
 
 - [4.1.0](./fuzs/stylisheffects/stylisheffects-forge/4.1.0)
@@ -3062,6 +3837,14 @@
 </details>
 
 ### [`stylisheffects-neoforge`](./fuzs/stylisheffects/stylisheffects-neoforge)
+<details>
+<summary>Latest</summary>
+
+- [20.4.2](./fuzs/stylisheffects/stylisheffects-neoforge/20.4.2)
+- [21.1.1](./fuzs/stylisheffects/stylisheffects-neoforge/21.1.1)
+- [21.4.0](./fuzs/stylisheffects/stylisheffects-neoforge/21.4.0)
+</details>
+
 <details>
 <summary>Versions</summary>
 
@@ -3081,6 +3864,12 @@
 
 ### [`thinair-common`](./fuzs/thinair/thinair-common)
 <details>
+<summary>Latest</summary>
+
+- [8.1.3](./fuzs/thinair/thinair-common/8.1.3)
+</details>
+
+<details>
 <summary>Versions</summary>
 
 - [8.1.0](./fuzs/thinair/thinair-common/8.1.0)
@@ -3090,6 +3879,12 @@
 
 ### [`thinair-fabric`](./fuzs/thinair/thinair-fabric)
 <details>
+<summary>Latest</summary>
+
+- [8.1.3](./fuzs/thinair/thinair-fabric/8.1.3)
+</details>
+
+<details>
 <summary>Versions</summary>
 
 - [8.1.0](./fuzs/thinair/thinair-fabric/8.1.0)
@@ -3098,6 +3893,12 @@
 </details>
 
 ### [`thinair-forge`](./fuzs/thinair/thinair-forge)
+<details>
+<summary>Latest</summary>
+
+- [8.1.3](./fuzs/thinair/thinair-forge/8.1.3)
+</details>
+
 <details>
 <summary>Versions</summary>
 
@@ -3115,6 +3916,12 @@
 
 ### [`tooltipinsights-common`](./fuzs/tooltipinsights/tooltipinsights-common)
 <details>
+<summary>Latest</summary>
+
+- [21.8.3](./fuzs/tooltipinsights/tooltipinsights-common/21.8.3)
+</details>
+
+<details>
 <summary>Versions</summary>
 
 - [21.8.0](./fuzs/tooltipinsights/tooltipinsights-common/21.8.0)
@@ -3125,6 +3932,12 @@
 
 ### [`tooltipinsights-fabric`](./fuzs/tooltipinsights/tooltipinsights-fabric)
 <details>
+<summary>Latest</summary>
+
+- [21.8.3](./fuzs/tooltipinsights/tooltipinsights-fabric/21.8.3)
+</details>
+
+<details>
 <summary>Versions</summary>
 
 - [21.8.0](./fuzs/tooltipinsights/tooltipinsights-fabric/21.8.0)
@@ -3134,6 +3947,12 @@
 </details>
 
 ### [`tooltipinsights-neoforge`](./fuzs/tooltipinsights/tooltipinsights-neoforge)
+<details>
+<summary>Latest</summary>
+
+- [21.8.3](./fuzs/tooltipinsights/tooltipinsights-neoforge/21.8.3)
+</details>
+
 <details>
 <summary>Versions</summary>
 
@@ -3151,6 +3970,17 @@
 <summary>Artifacts</summary>
 
 ### [`forgeconfigapiport-fabric`](./net/minecraftforge/forgeconfigapiport-fabric)
+<details>
+<summary>Latest</summary>
+
+- [1.0.2](./net/minecraftforge/forgeconfigapiport-fabric/1.0.2)
+- [2.0.5](./net/minecraftforge/forgeconfigapiport-fabric/2.0.5)
+- [3.2.4](./net/minecraftforge/forgeconfigapiport-fabric/3.2.4)
+- [4.0.2](./net/minecraftforge/forgeconfigapiport-fabric/4.0.2)
+- [4.1.4](./net/minecraftforge/forgeconfigapiport-fabric/4.1.4)
+- [4.2.11](./net/minecraftforge/forgeconfigapiport-fabric/4.2.11)
+</details>
+
 <details>
 <summary>Versions</summary>
 

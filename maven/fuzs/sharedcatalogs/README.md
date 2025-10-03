@@ -5,6 +5,28 @@
 
 ### [`sharedcatalogs`](./sharedcatalogs)
 <details open>
+<summary>Latest</summary>
+
+- [1.18.2-v28](./sharedcatalogs/1.18.2-v28)
+- [1.19.2-v27](./sharedcatalogs/1.19.2-v27)
+- [1.20-3](./sharedcatalogs/1.20-3)
+- [1.20-v2](./sharedcatalogs/1.20-v2)
+- [1.20.1-v47](./sharedcatalogs/1.20.1-v47)
+- [1.20.2-v1](./sharedcatalogs/1.20.2-v1)
+- [1.20.4-v40](./sharedcatalogs/1.20.4-v40)
+- [1.20.6-v6](./sharedcatalogs/1.20.6-v6)
+- [1.21-v30](./sharedcatalogs/1.21-v30)
+- [1.21.1-v17](./sharedcatalogs/1.21.1-v17)
+- [1.21.3-v22](./sharedcatalogs/1.21.3-v22)
+- [1.21.4-v12](./sharedcatalogs/1.21.4-v12)
+- [1.21.5-v11](./sharedcatalogs/1.21.5-v11)
+- [1.21.6-v11](./sharedcatalogs/1.21.6-v11)
+- [1.21.7-v1](./sharedcatalogs/1.21.7-v1)
+- [1.21.8-v10](./sharedcatalogs/1.21.8-v10)
+- [1.21.9-v18](./sharedcatalogs/1.21.9-v18)
+</details>
+
+<details open>
 <summary>Versions</summary>
 
 - [1.18.2-v1](./sharedcatalogs/1.18.2-v1)

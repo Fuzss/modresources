@@ -5,6 +5,12 @@
 
 ### [`enchantmentcontrol-common`](./enchantmentcontrol-common)
 <details open>
+<summary>Latest</summary>
+
+- [20.4.4](./enchantmentcontrol-common/20.4.4)
+</details>
+
+<details open>
 <summary>Versions</summary>
 
 - [20.4.0](./enchantmentcontrol-common/20.4.0)
@@ -15,6 +21,12 @@
 </details>
 
 ### [`enchantmentcontrol-fabric`](./enchantmentcontrol-fabric)
+<details open>
+<summary>Latest</summary>
+
+- [20.4.4](./enchantmentcontrol-fabric/20.4.4)
+</details>
+
 <details open>
 <summary>Versions</summary>
 
@@ -27,6 +39,12 @@
 
 ### [`enchantmentcontrol-forge`](./enchantmentcontrol-forge)
 <details open>
+<summary>Latest</summary>
+
+- [20.4.4](./enchantmentcontrol-forge/20.4.4)
+</details>
+
+<details open>
 <summary>Versions</summary>
 
 - [20.4.0](./enchantmentcontrol-forge/20.4.0)
@@ -37,6 +55,12 @@
 </details>
 
 ### [`enchantmentcontrol-neoforge`](./enchantmentcontrol-neoforge)
+<details open>
+<summary>Latest</summary>
+
+- [20.4.4](./enchantmentcontrol-neoforge/20.4.4)
+</details>
+
 <details open>
 <summary>Versions</summary>
 
