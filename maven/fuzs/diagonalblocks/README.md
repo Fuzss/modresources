@@ -17,6 +17,7 @@
 - [21.6.0](./diagonalblocks-common/21.6.0)
 - [21.7.0](./diagonalblocks-common/21.7.0)
 - [21.8.1](./diagonalblocks-common/21.8.1)
+- [21.9.0](./diagonalblocks-common/21.9.0)
 </details>
 
 <details open>
@@ -46,6 +47,7 @@
 - [21.7.0](./diagonalblocks-common/21.7.0)
 - [21.8.0](./diagonalblocks-common/21.8.0)
 - [21.8.1](./diagonalblocks-common/21.8.1)
+- [21.9.0](./diagonalblocks-common/21.9.0)
 </details>
 
 ### [`diagonalblocks-fabric`](./diagonalblocks-fabric)
@@ -62,6 +64,7 @@
 - [21.6.0](./diagonalblocks-fabric/21.6.0)
 - [21.7.0](./diagonalblocks-fabric/21.7.0)
 - [21.8.1](./diagonalblocks-fabric/21.8.1)
+- [21.9.0](./diagonalblocks-fabric/21.9.0)
 </details>
 
 <details open>
@@ -91,6 +94,7 @@
 - [21.7.0](./diagonalblocks-fabric/21.7.0)
 - [21.8.0](./diagonalblocks-fabric/21.8.0)
 - [21.8.1](./diagonalblocks-fabric/21.8.1)
+- [21.9.0](./diagonalblocks-fabric/21.9.0)
 </details>
 
 ### [`diagonalblocks-forge`](./diagonalblocks-forge)
@@ -131,6 +135,7 @@
 - [21.6.0](./diagonalblocks-neoforge/21.6.0)
 - [21.7.0](./diagonalblocks-neoforge/21.7.0)
 - [21.8.1](./diagonalblocks-neoforge/21.8.1)
+- [21.9.0](./diagonalblocks-neoforge/21.9.0)
 </details>
 
 <details open>
@@ -153,6 +158,7 @@
 - [21.7.0](./diagonalblocks-neoforge/21.7.0)
 - [21.8.0](./diagonalblocks-neoforge/21.8.0)
 - [21.8.1](./diagonalblocks-neoforge/21.8.1)
+- [21.9.0](./diagonalblocks-neoforge/21.9.0)
 </details>
 
 </details>

@@ -16,6 +16,7 @@
 - [21.6.0](./hotbarslotcycling-common/21.6.0)
 - [21.7.0](./hotbarslotcycling-common/21.7.0)
 - [21.8.0](./hotbarslotcycling-common/21.8.0)
+- [21.9.0](./hotbarslotcycling-common/21.9.0)
 </details>
 
 <details open>
@@ -33,6 +34,7 @@
 - [21.6.0](./hotbarslotcycling-common/21.6.0)
 - [21.7.0](./hotbarslotcycling-common/21.7.0)
 - [21.8.0](./hotbarslotcycling-common/21.8.0)
+- [21.9.0](./hotbarslotcycling-common/21.9.0)
 </details>
 
 ### [`hotbarslotcycling-fabric`](./hotbarslotcycling-fabric)
@@ -48,6 +50,7 @@
 - [21.6.0](./hotbarslotcycling-fabric/21.6.0)
 - [21.7.0](./hotbarslotcycling-fabric/21.7.0)
 - [21.8.0](./hotbarslotcycling-fabric/21.8.0)
+- [21.9.0](./hotbarslotcycling-fabric/21.9.0)
 </details>
 
 <details open>
@@ -65,6 +68,7 @@
 - [21.6.0](./hotbarslotcycling-fabric/21.6.0)
 - [21.7.0](./hotbarslotcycling-fabric/21.7.0)
 - [21.8.0](./hotbarslotcycling-fabric/21.8.0)
+- [21.9.0](./hotbarslotcycling-fabric/21.9.0)
 </details>
 
 ### [`hotbarslotcycling-forge`](./hotbarslotcycling-forge)
@@ -95,6 +99,7 @@
 - [21.6.0](./hotbarslotcycling-neoforge/21.6.0)
 - [21.7.0](./hotbarslotcycling-neoforge/21.7.0)
 - [21.8.0](./hotbarslotcycling-neoforge/21.8.0)
+- [21.9.0](./hotbarslotcycling-neoforge/21.9.0)
 </details>
 
 <details open>
@@ -112,6 +117,7 @@
 - [21.6.0](./hotbarslotcycling-neoforge/21.6.0)
 - [21.7.0](./hotbarslotcycling-neoforge/21.7.0)
 - [21.8.0](./hotbarslotcycling-neoforge/21.8.0)
+- [21.9.0](./hotbarslotcycling-neoforge/21.9.0)
 </details>
 
 </details>
