@@ -5,6 +5,13 @@
 
 ### [`enchantinginfuser-common`](./enchantinginfuser-common)
 <details open>
+<summary>Latest</summary>
+
+- [4.1.1](./enchantinginfuser-common/4.1.1)
+- [4.2.1](./enchantinginfuser-common/4.2.1)
+</details>
+
+<details open>
 <summary>Versions</summary>
 
 - [4.1.1](./enchantinginfuser-common/4.1.1)
@@ -14,6 +21,13 @@
 
 ### [`enchantinginfuser-fabric`](./enchantinginfuser-fabric)
 <details open>
+<summary>Latest</summary>
+
+- [4.1.1](./enchantinginfuser-fabric/4.1.1)
+- [4.2.1](./enchantinginfuser-fabric/4.2.1)
+</details>
+
+<details open>
 <summary>Versions</summary>
 
 - [4.1.1](./enchantinginfuser-fabric/4.1.1)
@@ -22,6 +36,13 @@
 </details>
 
 ### [`enchantinginfuser-forge`](./enchantinginfuser-forge)
+<details open>
+<summary>Latest</summary>
+
+- [4.1.1](./enchantinginfuser-forge/4.1.1)
+- [4.2.1](./enchantinginfuser-forge/4.2.1)
+</details>
+
 <details open>
 <summary>Versions</summary>
 

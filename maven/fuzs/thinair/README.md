@@ -5,6 +5,12 @@
 
 ### [`thinair-common`](./thinair-common)
 <details open>
+<summary>Latest</summary>
+
+- [8.1.3](./thinair-common/8.1.3)
+</details>
+
+<details open>
 <summary>Versions</summary>
 
 - [8.1.0](./thinair-common/8.1.0)
@@ -14,6 +20,12 @@
 
 ### [`thinair-fabric`](./thinair-fabric)
 <details open>
+<summary>Latest</summary>
+
+- [8.1.3](./thinair-fabric/8.1.3)
+</details>
+
+<details open>
 <summary>Versions</summary>
 
 - [8.1.0](./thinair-fabric/8.1.0)
@@ -22,6 +34,12 @@
 </details>
 
 ### [`thinair-forge`](./thinair-forge)
+<details open>
+<summary>Latest</summary>
+
+- [8.1.3](./thinair-forge/8.1.3)
+</details>
+
 <details open>
 <summary>Versions</summary>
 

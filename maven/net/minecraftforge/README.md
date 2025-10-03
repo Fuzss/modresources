@@ -5,6 +5,17 @@
 
 ### [`forgeconfigapiport-fabric`](./forgeconfigapiport-fabric)
 <details open>
+<summary>Latest</summary>
+
+- [1.0.2](./forgeconfigapiport-fabric/1.0.2)
+- [2.0.5](./forgeconfigapiport-fabric/2.0.5)
+- [3.2.4](./forgeconfigapiport-fabric/3.2.4)
+- [4.0.2](./forgeconfigapiport-fabric/4.0.2)
+- [4.1.4](./forgeconfigapiport-fabric/4.1.4)
+- [4.2.11](./forgeconfigapiport-fabric/4.2.11)
+</details>
+
+<details open>
 <summary>Versions</summary>
 
 - [1.0.0](./forgeconfigapiport-fabric/1.0.0)

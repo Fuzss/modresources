@@ -5,6 +5,13 @@
 
 ### [`puzzlesapi-common`](./puzzlesapi-common)
 <details open>
+<summary>Latest</summary>
+
+- [8.0.3](./puzzlesapi-common/8.0.3)
+- [8.1.7](./puzzlesapi-common/8.1.7)
+</details>
+
+<details open>
 <summary>Versions</summary>
 
 - [8.0.0](./puzzlesapi-common/8.0.0)
@@ -22,6 +29,13 @@
 
 ### [`puzzlesapi-fabric`](./puzzlesapi-fabric)
 <details open>
+<summary>Latest</summary>
+
+- [8.0.3](./puzzlesapi-fabric/8.0.3)
+- [8.1.7](./puzzlesapi-fabric/8.1.7)
+</details>
+
+<details open>
 <summary>Versions</summary>
 
 - [8.0.0](./puzzlesapi-fabric/8.0.0)
@@ -38,6 +52,13 @@
 </details>
 
 ### [`puzzlesapi-forge`](./puzzlesapi-forge)
+<details open>
+<summary>Latest</summary>
+
+- [8.0.3](./puzzlesapi-forge/8.0.3)
+- [8.1.7](./puzzlesapi-forge/8.1.7)
+</details>
+
 <details open>
 <summary>Versions</summary>
 
