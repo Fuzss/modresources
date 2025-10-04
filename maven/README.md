@@ -3399,7 +3399,7 @@
 - [1.21.6-v11](./fuzs/sharedcatalogs/sharedcatalogs/1.21.6-v11)
 - [1.21.7-v1](./fuzs/sharedcatalogs/sharedcatalogs/1.21.7-v1)
 - [1.21.8-v10](./fuzs/sharedcatalogs/sharedcatalogs/1.21.8-v10)
-- [1.21.9-v18](./fuzs/sharedcatalogs/sharedcatalogs/1.21.9-v18)
+- [1.21.9-v19](./fuzs/sharedcatalogs/sharedcatalogs/1.21.9-v19)
 </details>
 
 <details>
@@ -3685,6 +3685,7 @@
 - [1.21.9-v16](./fuzs/sharedcatalogs/sharedcatalogs/1.21.9-v16)
 - [1.21.9-v17](./fuzs/sharedcatalogs/sharedcatalogs/1.21.9-v17)
 - [1.21.9-v18](./fuzs/sharedcatalogs/sharedcatalogs/1.21.9-v18)
+- [1.21.9-v19](./fuzs/sharedcatalogs/sharedcatalogs/1.21.9-v19)
 </details>
 
 </details>

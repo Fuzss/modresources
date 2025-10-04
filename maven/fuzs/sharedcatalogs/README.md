@@ -23,7 +23,7 @@
 - [1.21.6-v11](./sharedcatalogs/1.21.6-v11)
 - [1.21.7-v1](./sharedcatalogs/1.21.7-v1)
 - [1.21.8-v10](./sharedcatalogs/1.21.8-v10)
-- [1.21.9-v18](./sharedcatalogs/1.21.9-v18)
+- [1.21.9-v19](./sharedcatalogs/1.21.9-v19)
 </details>
 
 <details open>
@@ -309,6 +309,7 @@
 - [1.21.9-v16](./sharedcatalogs/1.21.9-v16)
 - [1.21.9-v17](./sharedcatalogs/1.21.9-v17)
 - [1.21.9-v18](./sharedcatalogs/1.21.9-v18)
+- [1.21.9-v19](./sharedcatalogs/1.21.9-v19)
 </details>
 
 </details>
