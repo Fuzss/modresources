@@ -15,7 +15,7 @@
 - [21.6.0](./bettermodsbutton-common/21.6.0)
 - [21.7.0](./bettermodsbutton-common/21.7.0)
 - [21.8.0](./bettermodsbutton-common/21.8.0)
-- [21.9.5](./bettermodsbutton-common/21.9.5)
+- [21.9.6](./bettermodsbutton-common/21.9.6)
 </details>
 
 <details open>
@@ -36,6 +36,7 @@
 - [21.9.3](./bettermodsbutton-common/21.9.3)
 - [21.9.4](./bettermodsbutton-common/21.9.4)
 - [21.9.5](./bettermodsbutton-common/21.9.5)
+- [21.9.6](./bettermodsbutton-common/21.9.6)
 </details>
 
 ### [`bettermodsbutton-forge`](./bettermodsbutton-forge)
@@ -99,7 +100,7 @@
 - [21.6.0](./bettermodsbutton-neoforge/21.6.0)
 - [21.7.0](./bettermodsbutton-neoforge/21.7.0)
 - [21.8.0](./bettermodsbutton-neoforge/21.8.0)
-- [21.9.5](./bettermodsbutton-neoforge/21.9.5)
+- [21.9.6](./bettermodsbutton-neoforge/21.9.6)
 </details>
 
 <details open>
@@ -123,6 +124,7 @@
 - [21.9.3](./bettermodsbutton-neoforge/21.9.3)
 - [21.9.4](./bettermodsbutton-neoforge/21.9.4)
 - [21.9.5](./bettermodsbutton-neoforge/21.9.5)
+- [21.9.6](./bettermodsbutton-neoforge/21.9.6)
 </details>
 
 </details>
