@@ -9,26 +9,28 @@
 <details>
 <summary>Latest</summary>
 
-- [21.9.0](./fuzs/archloomruntimefixes/archloomruntimefixes-common/21.9.0)
+- [21.9.1](./fuzs/archloomruntimefixes/archloomruntimefixes-common/21.9.1)
 </details>
 
 <details>
 <summary>Versions</summary>
 
 - [21.9.0](./fuzs/archloomruntimefixes/archloomruntimefixes-common/21.9.0)
+- [21.9.1](./fuzs/archloomruntimefixes/archloomruntimefixes-common/21.9.1)
 </details>
 
 ### [`archloomruntimefixes-neoforge`](./fuzs/archloomruntimefixes/archloomruntimefixes-neoforge)
 <details>
 <summary>Latest</summary>
 
-- [21.9.0](./fuzs/archloomruntimefixes/archloomruntimefixes-neoforge/21.9.0)
+- [21.9.1](./fuzs/archloomruntimefixes/archloomruntimefixes-neoforge/21.9.1)
 </details>
 
 <details>
 <summary>Versions</summary>
 
 - [21.9.0](./fuzs/archloomruntimefixes/archloomruntimefixes-neoforge/21.9.0)
+- [21.9.1](./fuzs/archloomruntimefixes/archloomruntimefixes-neoforge/21.9.1)
 </details>
 
 </details>
