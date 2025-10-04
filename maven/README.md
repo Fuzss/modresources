@@ -1,5 +1,38 @@
 # Maven Repository Index
 
+## [`fuzs/archloomruntimefixes`](./fuzs/archloomruntimefixes)
+
+<details>
+<summary>Artifacts</summary>
+
+### [`archloomruntimefixes-common`](./fuzs/archloomruntimefixes/archloomruntimefixes-common)
+<details>
+<summary>Latest</summary>
+
+- [21.9.0](./fuzs/archloomruntimefixes/archloomruntimefixes-common/21.9.0)
+</details>
+
+<details>
+<summary>Versions</summary>
+
+- [21.9.0](./fuzs/archloomruntimefixes/archloomruntimefixes-common/21.9.0)
+</details>
+
+### [`archloomruntimefixes-neoforge`](./fuzs/archloomruntimefixes/archloomruntimefixes-neoforge)
+<details>
+<summary>Latest</summary>
+
+- [21.9.0](./fuzs/archloomruntimefixes/archloomruntimefixes-neoforge/21.9.0)
+</details>
+
+<details>
+<summary>Versions</summary>
+
+- [21.9.0](./fuzs/archloomruntimefixes/archloomruntimefixes-neoforge/21.9.0)
+</details>
+
+</details>
+
 ## [`fuzs/bettermodsbutton`](./fuzs/bettermodsbutton)
 
 <details>
