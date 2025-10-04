@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>fuzs.archloomruntimefixes</groupId>
+  <artifactId>archloomruntimefixes-common</artifactId>
+  <version>21.9.0</version>
+  <name>ArchLoom Runtime Fixes [Common]</name>
+  <description>Mostly Mixin based workarounds for various quirks in Architectury Loom.</description>
+  <url>https://github.com/Fuzss/archloomruntimefixes</url>
+  <licenses>
+    <license>
+      <name>MPL-2.0</name>
+      <url>https://spdx.org/licenses/MPL-2.0.html</url>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <id>fuzs</id>
+      <name>Fuzs</name>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:git:git://github.com/Fuzss/archloomruntimefixes.git</connection>
+    <developerConnection>scm:git:git@github.com:Fuzss/archloomruntimefixes.git</developerConnection>
+    <url>https://github.com/Fuzss/archloomruntimefixes</url>
+  </scm>
+  <issueManagement>
+    <system>github</system>
+    <url>https://github.com/Fuzss/archloomruntimefixes/issues</url>
+  </issueManagement>
+</project>

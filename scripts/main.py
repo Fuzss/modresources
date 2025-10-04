@@ -21,6 +21,7 @@ UPLOADING_SITES = {"curseforge", "modrinth", "github"}
 def parse_args():
     parser = argparse.ArgumentParser()
 
+    parser.add_argument('--path', type=str, default=None, metavar="ROOT_PATH", help="Override default root path. Example: --path /absolute/path/to/project.")
     parser.add_argument('--copy', type=str, default=None, metavar="LEGACY_GAME_VERSION", help="Copy from existing game version. Example: --copy 1.21.5.")
     parser.add_argument('--move', type=str, default=None, metavar="LEGACY_GAME_VERSION", help="Move existing game version. Example: --move 1.21.7.")
     parser.add_argument('--upgrade', default=False, action="store_true", help="Run workspace upgrade.")
@@ -580,7 +581,7 @@ def run_workspace_upgrade(args, base_path, root_path, project_path):
 def main():
     args = parse_args()
     base_path = find_gradle_property("modRoot")
-    root_path = f"{base_path}/{args.id}"
+    root_path = args.path or f"{base_path}/{args.id}"
     project_path = f"{root_path}/{args.minecraft}"
     environment = validate_open_parameters(args.open, "finder")
     changelog_section_data = parse_changelog_sections(args.changelog)
