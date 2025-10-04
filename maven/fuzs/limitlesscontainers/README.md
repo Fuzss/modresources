@@ -16,6 +16,7 @@
 - [21.6.0](./limitlesscontainers-common/21.6.0)
 - [21.7.0](./limitlesscontainers-common/21.7.0)
 - [21.8.0](./limitlesscontainers-common/21.8.0)
+- [21.9.0](./limitlesscontainers-common/21.9.0)
 </details>
 
 <details open>
@@ -31,6 +32,7 @@
 - [21.6.0](./limitlesscontainers-common/21.6.0)
 - [21.7.0](./limitlesscontainers-common/21.7.0)
 - [21.8.0](./limitlesscontainers-common/21.8.0)
+- [21.9.0](./limitlesscontainers-common/21.9.0)
 </details>
 
 ### [`limitlesscontainers-fabric`](./limitlesscontainers-fabric)
@@ -46,6 +48,7 @@
 - [21.6.0](./limitlesscontainers-fabric/21.6.0)
 - [21.7.0](./limitlesscontainers-fabric/21.7.0)
 - [21.8.0](./limitlesscontainers-fabric/21.8.0)
+- [21.9.0](./limitlesscontainers-fabric/21.9.0)
 </details>
 
 <details open>
@@ -61,6 +64,7 @@
 - [21.6.0](./limitlesscontainers-fabric/21.6.0)
 - [21.7.0](./limitlesscontainers-fabric/21.7.0)
 - [21.8.0](./limitlesscontainers-fabric/21.8.0)
+- [21.9.0](./limitlesscontainers-fabric/21.9.0)
 </details>
 
 ### [`limitlesscontainers-forge`](./limitlesscontainers-forge)
@@ -89,6 +93,7 @@
 - [21.6.0](./limitlesscontainers-neoforge/21.6.0)
 - [21.7.0](./limitlesscontainers-neoforge/21.7.0)
 - [21.8.0](./limitlesscontainers-neoforge/21.8.0)
+- [21.9.0](./limitlesscontainers-neoforge/21.9.0)
 </details>
 
 <details open>
@@ -104,6 +109,7 @@
 - [21.6.0](./limitlesscontainers-neoforge/21.6.0)
 - [21.7.0](./limitlesscontainers-neoforge/21.7.0)
 - [21.8.0](./limitlesscontainers-neoforge/21.8.0)
+- [21.9.0](./limitlesscontainers-neoforge/21.9.0)
 </details>
 
 </details>
