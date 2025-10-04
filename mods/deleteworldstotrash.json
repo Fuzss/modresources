@@ -1,0 +1,23 @@
+{
+    "dependencies": {},
+    "distributions": {
+        "curseforge": {
+            "slug": "delete-worlds-to-trash-forge",
+            "id": "571076"
+        },
+        "github": {
+            "slug": "deleteworldstotrash"
+        },
+        "modrinth": {
+            "slug": "delete-worlds-to-trash",
+            "id": "7diJQfvM"
+        }
+    },
+    "environments": {
+        "client": "required"
+    },
+    "loaders": [
+        "fabric",
+        "neoforge"
+    ]
+}
