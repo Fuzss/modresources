@@ -73,6 +73,10 @@ dependencies {
     // NeoForge
     neoForge libs.neoforge.neoforge
 
+    if (libs.hasProperty("archloomruntimefixes") && libs.bettermodsbutton.hasProperty("neoforge")) {
+        modLocalRuntime(libs.archloomruntimefixes.neoforge) { transitive = false }
+    }
+
     if (libs.hasProperty("bettermodsbutton") && libs.bettermodsbutton.hasProperty("neoforge")) {
         modLocalRuntime(libs.bettermodsbutton.neoforge) { transitive = false }
     }
