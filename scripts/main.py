@@ -502,11 +502,15 @@ def prepare_new_version(args, root_path, project_path):
         git_push_all(f"{root_path}", args.id, f"prepare {args.minecraft} port")
         print("Committed new version preparations")
 
-def replace_text_block(file_path, pattern, replacement):
+def replace_text_block(file_path, pattern, replacement, use_regex=True):
     with open(file_path, "r", encoding="utf-8") as file:
         text = file.read()
 
-    new_text = re.sub(pattern, replacement, text, flags=re.DOTALL | re.VERBOSE | re.MULTILINE)
+    if use_regex:
+        new_text = re.sub(pattern, replacement, text, flags=re.DOTALL | re.VERBOSE | re.MULTILINE)
+    else:
+        new_text = text.replace(pattern, replacement)
+
     if text != new_text:
         with open(file_path, "w", encoding="utf-8") as file:
             file.write(new_text)
@@ -562,11 +566,19 @@ def run_workspace_upgrade(args, base_path, root_path, project_path):
         "catalogueImageIcon": None
     })
 
-    replace_text_block(f"{project_path}/Common/build.gradle", r"""
+    replace_text_block(
+        f"{project_path}/Common/build.gradle", 
+        r"""
 ^[ \t]*tasks\.withType\(net\.fabricmc\.loom\.task\.AbstractRemapJarTask\)\.configureEach\s*\{
 [^}]*?
 \}[ \t]*\n?
 """, "")
+    replace_text_block(
+        f"{project_path}/settings.gradle", 
+        "https://raw.githubusercontent.com/Fuzss/modresources/main/gradle/v2/settings.gradle", 
+        "https://raw.githubusercontent.com/Fuzss/modresources/main/gradle/v3/settings.gradle", 
+        False
+    )
     
     add_line_after_target(
         f"{project_path}/build.gradle", 
