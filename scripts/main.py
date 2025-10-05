@@ -619,6 +619,7 @@ def main():
                 subprocess.Popen(["/Applications/IntelliJ IDEA.app/Contents/MacOS/idea", project_path], cwd=project_path)
             except FileNotFoundError as e:
                 warn2("Could not launch IntelliJ:", e)
+        sys.exit(1)
 
     if args.upgrade:
         info2("Upgrading workspace...")
