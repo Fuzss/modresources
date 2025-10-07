@@ -2,6 +2,8 @@
     "homepage": "https://github.com/Fuzss/effectinsights",
     "promos": {
         "1.21.8-latest": "21.8.3",
-        "1.21.8-recommended": "21.8.3"
+        "1.21.8-recommended": "21.8.3",
+        "1.21.9-latest": "21.9.0",
+        "1.21.9-recommended": "21.9.0"
     }
 }
