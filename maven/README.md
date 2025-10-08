@@ -1206,6 +1206,7 @@
 - [21.7.0](./fuzs/hotbarslotcycling/hotbarslotcycling-common/21.7.0)
 - [21.8.0](./fuzs/hotbarslotcycling/hotbarslotcycling-common/21.8.0)
 - [21.9.0](./fuzs/hotbarslotcycling/hotbarslotcycling-common/21.9.0)
+- [21.10.0](./fuzs/hotbarslotcycling/hotbarslotcycling-common/21.10.0)
 </details>
 
 <details>
@@ -1224,6 +1225,7 @@
 - [21.7.0](./fuzs/hotbarslotcycling/hotbarslotcycling-common/21.7.0)
 - [21.8.0](./fuzs/hotbarslotcycling/hotbarslotcycling-common/21.8.0)
 - [21.9.0](./fuzs/hotbarslotcycling/hotbarslotcycling-common/21.9.0)
+- [21.10.0](./fuzs/hotbarslotcycling/hotbarslotcycling-common/21.10.0)
 </details>
 
 ### [`hotbarslotcycling-fabric`](./fuzs/hotbarslotcycling/hotbarslotcycling-fabric)
@@ -1240,6 +1242,7 @@
 - [21.7.0](./fuzs/hotbarslotcycling/hotbarslotcycling-fabric/21.7.0)
 - [21.8.0](./fuzs/hotbarslotcycling/hotbarslotcycling-fabric/21.8.0)
 - [21.9.0](./fuzs/hotbarslotcycling/hotbarslotcycling-fabric/21.9.0)
+- [21.10.0](./fuzs/hotbarslotcycling/hotbarslotcycling-fabric/21.10.0)
 </details>
 
 <details>
@@ -1258,6 +1261,7 @@
 - [21.7.0](./fuzs/hotbarslotcycling/hotbarslotcycling-fabric/21.7.0)
 - [21.8.0](./fuzs/hotbarslotcycling/hotbarslotcycling-fabric/21.8.0)
 - [21.9.0](./fuzs/hotbarslotcycling/hotbarslotcycling-fabric/21.9.0)
+- [21.10.0](./fuzs/hotbarslotcycling/hotbarslotcycling-fabric/21.10.0)
 </details>
 
 ### [`hotbarslotcycling-forge`](./fuzs/hotbarslotcycling/hotbarslotcycling-forge)
@@ -1289,6 +1293,7 @@
 - [21.7.0](./fuzs/hotbarslotcycling/hotbarslotcycling-neoforge/21.7.0)
 - [21.8.0](./fuzs/hotbarslotcycling/hotbarslotcycling-neoforge/21.8.0)
 - [21.9.0](./fuzs/hotbarslotcycling/hotbarslotcycling-neoforge/21.9.0)
+- [21.10.0](./fuzs/hotbarslotcycling/hotbarslotcycling-neoforge/21.10.0)
 </details>
 
 <details>
@@ -1307,6 +1312,7 @@
 - [21.7.0](./fuzs/hotbarslotcycling/hotbarslotcycling-neoforge/21.7.0)
 - [21.8.0](./fuzs/hotbarslotcycling/hotbarslotcycling-neoforge/21.8.0)
 - [21.9.0](./fuzs/hotbarslotcycling/hotbarslotcycling-neoforge/21.9.0)
+- [21.10.0](./fuzs/hotbarslotcycling/hotbarslotcycling-neoforge/21.10.0)
 </details>
 
 </details>
@@ -1330,6 +1336,7 @@
 - [21.7.0](./fuzs/iteminteractions/iteminteractions-common/21.7.0)
 - [21.8.3](./fuzs/iteminteractions/iteminteractions-common/21.8.3)
 - [21.9.0](./fuzs/iteminteractions/iteminteractions-common/21.9.0)
+- [21.10.0](./fuzs/iteminteractions/iteminteractions-common/21.10.0)
 </details>
 
 <details>
@@ -1369,6 +1376,7 @@
 - [21.8.2](./fuzs/iteminteractions/iteminteractions-common/21.8.2)
 - [21.8.3](./fuzs/iteminteractions/iteminteractions-common/21.8.3)
 - [21.9.0](./fuzs/iteminteractions/iteminteractions-common/21.9.0)
+- [21.10.0](./fuzs/iteminteractions/iteminteractions-common/21.10.0)
 </details>
 
 ### [`iteminteractions-fabric`](./fuzs/iteminteractions/iteminteractions-fabric)
@@ -1385,6 +1393,7 @@
 - [21.7.0](./fuzs/iteminteractions/iteminteractions-fabric/21.7.0)
 - [21.8.3](./fuzs/iteminteractions/iteminteractions-fabric/21.8.3)
 - [21.9.0](./fuzs/iteminteractions/iteminteractions-fabric/21.9.0)
+- [21.10.0](./fuzs/iteminteractions/iteminteractions-fabric/21.10.0)
 </details>
 
 <details>
@@ -1424,6 +1433,7 @@
 - [21.8.2](./fuzs/iteminteractions/iteminteractions-fabric/21.8.2)
 - [21.8.3](./fuzs/iteminteractions/iteminteractions-fabric/21.8.3)
 - [21.9.0](./fuzs/iteminteractions/iteminteractions-fabric/21.9.0)
+- [21.10.0](./fuzs/iteminteractions/iteminteractions-fabric/21.10.0)
 </details>
 
 ### [`iteminteractions-forge`](./fuzs/iteminteractions/iteminteractions-forge)
@@ -1458,6 +1468,7 @@
 - [21.7.0](./fuzs/iteminteractions/iteminteractions-neoforge/21.7.0)
 - [21.8.3](./fuzs/iteminteractions/iteminteractions-neoforge/21.8.3)
 - [21.9.0](./fuzs/iteminteractions/iteminteractions-neoforge/21.9.0)
+- [21.10.0](./fuzs/iteminteractions/iteminteractions-neoforge/21.10.0)
 </details>
 
 <details>
@@ -1497,6 +1508,7 @@
 - [21.8.2](./fuzs/iteminteractions/iteminteractions-neoforge/21.8.2)
 - [21.8.3](./fuzs/iteminteractions/iteminteractions-neoforge/21.8.3)
 - [21.9.0](./fuzs/iteminteractions/iteminteractions-neoforge/21.9.0)
+- [21.10.0](./fuzs/iteminteractions/iteminteractions-neoforge/21.10.0)
 </details>
 
 </details>
@@ -1584,6 +1596,7 @@
 - [21.7.0](./fuzs/limitlesscontainers/limitlesscontainers-common/21.7.0)
 - [21.8.0](./fuzs/limitlesscontainers/limitlesscontainers-common/21.8.0)
 - [21.9.0](./fuzs/limitlesscontainers/limitlesscontainers-common/21.9.0)
+- [21.10.0](./fuzs/limitlesscontainers/limitlesscontainers-common/21.10.0)
 </details>
 
 <details>
@@ -1600,6 +1613,7 @@
 - [21.7.0](./fuzs/limitlesscontainers/limitlesscontainers-common/21.7.0)
 - [21.8.0](./fuzs/limitlesscontainers/limitlesscontainers-common/21.8.0)
 - [21.9.0](./fuzs/limitlesscontainers/limitlesscontainers-common/21.9.0)
+- [21.10.0](./fuzs/limitlesscontainers/limitlesscontainers-common/21.10.0)
 </details>
 
 ### [`limitlesscontainers-fabric`](./fuzs/limitlesscontainers/limitlesscontainers-fabric)
@@ -1616,6 +1630,7 @@
 - [21.7.0](./fuzs/limitlesscontainers/limitlesscontainers-fabric/21.7.0)
 - [21.8.0](./fuzs/limitlesscontainers/limitlesscontainers-fabric/21.8.0)
 - [21.9.0](./fuzs/limitlesscontainers/limitlesscontainers-fabric/21.9.0)
+- [21.10.0](./fuzs/limitlesscontainers/limitlesscontainers-fabric/21.10.0)
 </details>
 
 <details>
@@ -1632,6 +1647,7 @@
 - [21.7.0](./fuzs/limitlesscontainers/limitlesscontainers-fabric/21.7.0)
 - [21.8.0](./fuzs/limitlesscontainers/limitlesscontainers-fabric/21.8.0)
 - [21.9.0](./fuzs/limitlesscontainers/limitlesscontainers-fabric/21.9.0)
+- [21.10.0](./fuzs/limitlesscontainers/limitlesscontainers-fabric/21.10.0)
 </details>
 
 ### [`limitlesscontainers-forge`](./fuzs/limitlesscontainers/limitlesscontainers-forge)
@@ -1661,6 +1677,7 @@
 - [21.7.0](./fuzs/limitlesscontainers/limitlesscontainers-neoforge/21.7.0)
 - [21.8.0](./fuzs/limitlesscontainers/limitlesscontainers-neoforge/21.8.0)
 - [21.9.0](./fuzs/limitlesscontainers/limitlesscontainers-neoforge/21.9.0)
+- [21.10.0](./fuzs/limitlesscontainers/limitlesscontainers-neoforge/21.10.0)
 </details>
 
 <details>
@@ -1677,6 +1694,7 @@
 - [21.7.0](./fuzs/limitlesscontainers/limitlesscontainers-neoforge/21.7.0)
 - [21.8.0](./fuzs/limitlesscontainers/limitlesscontainers-neoforge/21.8.0)
 - [21.9.0](./fuzs/limitlesscontainers/limitlesscontainers-neoforge/21.9.0)
+- [21.10.0](./fuzs/limitlesscontainers/limitlesscontainers-neoforge/21.10.0)
 </details>
 
 </details>
@@ -1698,6 +1716,7 @@
 - [21.7.0](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-common/21.7.0)
 - [21.8.0](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-common/21.8.0)
 - [21.9.3](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-common/21.9.3)
+- [21.10.0](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-common/21.10.0)
 </details>
 
 <details>
@@ -1720,6 +1739,7 @@
 - [21.9.1](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-common/21.9.1)
 - [21.9.2](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-common/21.9.2)
 - [21.9.3](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-common/21.9.3)
+- [21.10.0](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-common/21.10.0)
 </details>
 
 ### [`neoforgedatapackextensions-fabric`](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-fabric)
@@ -1734,6 +1754,7 @@
 - [21.7.0](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-fabric/21.7.0)
 - [21.8.0](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-fabric/21.8.0)
 - [21.9.3](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-fabric/21.9.3)
+- [21.10.0](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-fabric/21.10.0)
 </details>
 
 <details>
@@ -1756,6 +1777,7 @@
 - [21.9.1](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-fabric/21.9.1)
 - [21.9.2](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-fabric/21.9.2)
 - [21.9.3](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-fabric/21.9.3)
+- [21.10.0](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-fabric/21.10.0)
 </details>
 
 ### [`neoforgedatapackextensions-neoforge`](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-neoforge)
@@ -1770,6 +1792,7 @@
 - [21.7.0](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-neoforge/21.7.0)
 - [21.8.0](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-neoforge/21.8.0)
 - [21.9.3](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-neoforge/21.9.3)
+- [21.10.0](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-neoforge/21.10.0)
 </details>
 
 <details>
@@ -1792,6 +1815,7 @@
 - [21.9.1](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-neoforge/21.9.1)
 - [21.9.2](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-neoforge/21.9.2)
 - [21.9.3](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-neoforge/21.9.3)
+- [21.10.0](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-neoforge/21.10.0)
 </details>
 
 </details>
@@ -3768,6 +3792,7 @@
 - [21.7.0](./fuzs/statuemenus/statuemenus-common/21.7.0)
 - [21.8.1](./fuzs/statuemenus/statuemenus-common/21.8.1)
 - [21.9.0](./fuzs/statuemenus/statuemenus-common/21.9.0)
+- [21.10.0](./fuzs/statuemenus/statuemenus-common/21.10.0)
 </details>
 
 <details>
@@ -3791,6 +3816,7 @@
 - [21.8.0](./fuzs/statuemenus/statuemenus-common/21.8.0)
 - [21.8.1](./fuzs/statuemenus/statuemenus-common/21.8.1)
 - [21.9.0](./fuzs/statuemenus/statuemenus-common/21.9.0)
+- [21.10.0](./fuzs/statuemenus/statuemenus-common/21.10.0)
 </details>
 
 ### [`statuemenus-fabric`](./fuzs/statuemenus/statuemenus-fabric)
@@ -3807,6 +3833,7 @@
 - [21.7.0](./fuzs/statuemenus/statuemenus-fabric/21.7.0)
 - [21.8.1](./fuzs/statuemenus/statuemenus-fabric/21.8.1)
 - [21.9.0](./fuzs/statuemenus/statuemenus-fabric/21.9.0)
+- [21.10.0](./fuzs/statuemenus/statuemenus-fabric/21.10.0)
 </details>
 
 <details>
@@ -3830,6 +3857,7 @@
 - [21.8.0](./fuzs/statuemenus/statuemenus-fabric/21.8.0)
 - [21.8.1](./fuzs/statuemenus/statuemenus-fabric/21.8.1)
 - [21.9.0](./fuzs/statuemenus/statuemenus-fabric/21.9.0)
+- [21.10.0](./fuzs/statuemenus/statuemenus-fabric/21.10.0)
 </details>
 
 ### [`statuemenus-forge`](./fuzs/statuemenus/statuemenus-forge)
@@ -3861,6 +3889,7 @@
 - [21.7.0](./fuzs/statuemenus/statuemenus-neoforge/21.7.0)
 - [21.8.1](./fuzs/statuemenus/statuemenus-neoforge/21.8.1)
 - [21.9.0](./fuzs/statuemenus/statuemenus-neoforge/21.9.0)
+- [21.10.0](./fuzs/statuemenus/statuemenus-neoforge/21.10.0)
 </details>
 
 <details>
@@ -3884,6 +3913,7 @@
 - [21.8.0](./fuzs/statuemenus/statuemenus-neoforge/21.8.0)
 - [21.8.1](./fuzs/statuemenus/statuemenus-neoforge/21.8.1)
 - [21.9.0](./fuzs/statuemenus/statuemenus-neoforge/21.9.0)
+- [21.10.0](./fuzs/statuemenus/statuemenus-neoforge/21.10.0)
 </details>
 
 </details>
@@ -4059,6 +4089,7 @@
 
 - [21.8.3](./fuzs/tooltipinsights/tooltipinsights-common/21.8.3)
 - [21.9.0](./fuzs/tooltipinsights/tooltipinsights-common/21.9.0)
+- [21.10.0](./fuzs/tooltipinsights/tooltipinsights-common/21.10.0)
 </details>
 
 <details>
@@ -4069,6 +4100,7 @@
 - [21.8.2](./fuzs/tooltipinsights/tooltipinsights-common/21.8.2)
 - [21.8.3](./fuzs/tooltipinsights/tooltipinsights-common/21.8.3)
 - [21.9.0](./fuzs/tooltipinsights/tooltipinsights-common/21.9.0)
+- [21.10.0](./fuzs/tooltipinsights/tooltipinsights-common/21.10.0)
 </details>
 
 ### [`tooltipinsights-fabric`](./fuzs/tooltipinsights/tooltipinsights-fabric)
@@ -4077,6 +4109,7 @@
 
 - [21.8.3](./fuzs/tooltipinsights/tooltipinsights-fabric/21.8.3)
 - [21.9.0](./fuzs/tooltipinsights/tooltipinsights-fabric/21.9.0)
+- [21.10.0](./fuzs/tooltipinsights/tooltipinsights-fabric/21.10.0)
 </details>
 
 <details>
@@ -4087,6 +4120,7 @@
 - [21.8.2](./fuzs/tooltipinsights/tooltipinsights-fabric/21.8.2)
 - [21.8.3](./fuzs/tooltipinsights/tooltipinsights-fabric/21.8.3)
 - [21.9.0](./fuzs/tooltipinsights/tooltipinsights-fabric/21.9.0)
+- [21.10.0](./fuzs/tooltipinsights/tooltipinsights-fabric/21.10.0)
 </details>
 
 ### [`tooltipinsights-neoforge`](./fuzs/tooltipinsights/tooltipinsights-neoforge)
@@ -4095,6 +4129,7 @@
 
 - [21.8.3](./fuzs/tooltipinsights/tooltipinsights-neoforge/21.8.3)
 - [21.9.0](./fuzs/tooltipinsights/tooltipinsights-neoforge/21.9.0)
+- [21.10.0](./fuzs/tooltipinsights/tooltipinsights-neoforge/21.10.0)
 </details>
 
 <details>
@@ -4105,6 +4140,7 @@
 - [21.8.2](./fuzs/tooltipinsights/tooltipinsights-neoforge/21.8.2)
 - [21.8.3](./fuzs/tooltipinsights/tooltipinsights-neoforge/21.8.3)
 - [21.9.0](./fuzs/tooltipinsights/tooltipinsights-neoforge/21.9.0)
+- [21.10.0](./fuzs/tooltipinsights/tooltipinsights-neoforge/21.10.0)
 </details>
 
 </details>
