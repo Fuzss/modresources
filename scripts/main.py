@@ -525,6 +525,10 @@ def add_line_after_target(file_path, target_text, new_text):
     with open(file_path, "r", encoding="utf-8") as f:
         lines = f.readlines()
 
+    # Check if the line already exists anywhere (ignoring leading/trailing whitespace)
+    if any(line.strip() == new_text.strip() for line in lines):
+        return  # Already present, nothing to do
+
     for i, line in enumerate(lines):
         stripped = line.strip()
         if stripped == new_text:
