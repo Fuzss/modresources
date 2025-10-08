@@ -3,8 +3,8 @@
   <groupId>fuzs.hotbarslotcycling</groupId>
   <artifactId>hotbarslotcycling-neoforge</artifactId>
   <versioning>
-    <latest>21.9.0</latest>
-    <release>21.9.0</release>
+    <latest>21.10.0</latest>
+    <release>21.10.0</release>
     <versions>
       <version>20.4.0</version>
       <version>20.4.1</version>
@@ -19,7 +19,8 @@
       <version>21.7.0</version>
       <version>21.8.0</version>
       <version>21.9.0</version>
+      <version>21.10.0</version>
     </versions>
-    <lastUpdated>20251003183436</lastUpdated>
+    <lastUpdated>20251008090925</lastUpdated>
   </versioning>
 </metadata>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>fuzs.iteminteractions</groupId>
+  <artifactId>iteminteractions-neoforge</artifactId>
+  <version>21.10.0</version>
+  <name>Item Interactions [NeoForge]</name>
+  <description>A library for providing advanced inventory interactions for container items similar to bundles.</description>
+  <url>https://github.com/Fuzss/iteminteractions</url>
+  <licenses>
+    <license>
+      <name>MPL-2.0</name>
+      <url>https://spdx.org/licenses/MPL-2.0.html</url>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <id>fuzs</id>
+      <name>Fuzs</name>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:git:git://github.com/Fuzss/iteminteractions.git</connection>
+    <developerConnection>scm:git:git@github.com:Fuzss/iteminteractions.git</developerConnection>
+    <url>https://github.com/Fuzss/iteminteractions</url>
+  </scm>
+  <issueManagement>
+    <system>github</system>
+    <url>https://github.com/Fuzss/iteminteractions/issues</url>
+  </issueManagement>
+  <dependencies>
+    <dependency>
+      <groupId>fuzs.puzzleslib</groupId>
+      <artifactId>puzzleslib-neoforge</artifactId>
+      <version>21.10.0</version>
+      <scope>compile</scope>
+    </dependency>
+  </dependencies>
+</project>
