@@ -151,12 +151,31 @@ def git_push_all(repo_path, project_name, commit_message):
     remote_url = f"https://{token}@github.com/Fuzss/{project_name}.git"
     commands = [
         ["git", "remote", "set-url", "origin", remote_url],
-        ["git", "add", "."],
+        ["git", "add", "."]
+    ]
+
+    for cmd in commands:
+        subprocess.run(cmd, cwd=repo_path, check=True)
+
+    # Check if there are staged changes
+    result = subprocess.run(
+        ["git", "diff", "--cached", "--quiet"],
+        cwd=repo_path
+    )
+
+    if result.returncode == 0:
+        print("No changes to commit, skipping commit and push.")
+        return False
+    
+    commands = [
         ["git", "commit", "-m", commit_message],
         ["git", "push"]
     ]
+
     for cmd in commands:
         subprocess.run(cmd, cwd=repo_path, check=True)
+
+    return True
 
 def is_valid_parameter(value, allowed_values):
     if value not in allowed_values:
@@ -499,8 +518,8 @@ def prepare_new_version(args, root_path, project_path):
     remove_directory_or_file(f"{project_path}/CHANGELOG.md")
 
     if args.commit:
-        git_push_all(f"{root_path}", args.id, f"prepare {args.minecraft} port")
-        print("Committed new version preparations")
+        if git_push_all(f"{root_path}", args.id, f"prepare {args.minecraft} port"):
+            print("Committed new version preparations")
 
 def replace_text_block(file_path, pattern, replacement, use_regex=True):
     with open(file_path, "r", encoding="utf-8") as file:
@@ -591,8 +610,8 @@ def run_workspace_upgrade(args, base_path, root_path, project_path):
     )
 
     if args.commit:
-        git_push_all(f"{root_path}", args.id, f"upgrade {args.minecraft} workspace")
-        print("Committed workspace upgrades")
+        if git_push_all(f"{root_path}", args.id, f"upgrade {args.minecraft} workspace"):
+            print("Committed workspace upgrades")
 
 def main():
     args = parse_args()
@@ -620,7 +639,12 @@ def main():
             subprocess.Popen(["open", project_path], cwd=project_path)
         elif environment == "idea":
             try:
-                subprocess.Popen(["/Applications/IntelliJ IDEA.app/Contents/MacOS/idea", project_path], cwd=project_path)
+                subprocess.Popen(
+                    ["open", "-a", "IntelliJ IDEA", project_path],
+                    cwd=project_path,
+                    stdout=subprocess.DEVNULL,
+                    stderr=subprocess.DEVNULL
+                )
             except FileNotFoundError as e:
                 warn2("Could not launch IntelliJ:", e)
         sys.exit(1)
