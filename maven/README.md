@@ -57,7 +57,7 @@
 - [21.7.0](./fuzs/bettermodsbutton/bettermodsbutton-common/21.7.0)
 - [21.8.0](./fuzs/bettermodsbutton/bettermodsbutton-common/21.8.0)
 - [21.9.7](./fuzs/bettermodsbutton/bettermodsbutton-common/21.9.7)
-- [21.10.0](./fuzs/bettermodsbutton/bettermodsbutton-common/21.10.0)
+- [21.10.1](./fuzs/bettermodsbutton/bettermodsbutton-common/21.10.1)
 </details>
 
 <details>
@@ -81,6 +81,7 @@
 - [21.9.6](./fuzs/bettermodsbutton/bettermodsbutton-common/21.9.6)
 - [21.9.7](./fuzs/bettermodsbutton/bettermodsbutton-common/21.9.7)
 - [21.10.0](./fuzs/bettermodsbutton/bettermodsbutton-common/21.10.0)
+- [21.10.1](./fuzs/bettermodsbutton/bettermodsbutton-common/21.10.1)
 </details>
 
 ### [`bettermodsbutton-forge`](./fuzs/bettermodsbutton/bettermodsbutton-forge)
@@ -145,7 +146,7 @@
 - [21.7.0](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/21.7.0)
 - [21.8.0](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/21.8.0)
 - [21.9.7](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/21.9.7)
-- [21.10.0](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/21.10.0)
+- [21.10.1](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/21.10.1)
 </details>
 
 <details>
@@ -172,6 +173,7 @@
 - [21.9.6](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/21.9.6)
 - [21.9.7](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/21.9.7)
 - [21.10.0](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/21.10.0)
+- [21.10.1](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/21.10.1)
 </details>
 
 </details>
