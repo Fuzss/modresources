@@ -38,6 +38,7 @@ def parse_args():
     parser.add_argument('--publish', default=False, action="store_true", help="Publish to Maven.")
     parser.add_argument('--notify', default=False, action="store_true", help="Notify via Discord webhook.")
     parser.add_argument("--changelog", default=None, action="append", nargs=2, metavar=("SECTION", "LINE"), help="Add a changelog line. Format: --changelog SECTION LINE. Can be used multiple times.")
+    parser.add_argument("--properties", default=None, action="append", nargs=2, metavar=("KEY", "VALUE"), help="Set a gradle.properties value. Format: --properties KEY VALUE. Can be used multiple times.")
 
     args = parser.parse_args()
     
@@ -281,9 +282,8 @@ def string_in_file_if_exists(file_path, target):
     with open(file_path, 'r', encoding='utf-8') as f:
         return target in f.read()
 
-def create_gradle_properties(mod_version, minecraft_version, version_catalog):
+def create_gradle_properties(args):
     gradle_properties = {
-        "modVersion": mod_version,
         "dependenciesPuzzlesLibVersion": "#",
         "dependenciesMinPuzzlesLibVersion": "#",
         "dependenciesRequiredForgeCurseForge": None,
@@ -296,8 +296,15 @@ def create_gradle_properties(mod_version, minecraft_version, version_catalog):
         "dependenciesOptionalForgeModrinth": None
     }
 
-    if version_catalog is not None:
-        gradle_properties["dependenciesVersionCatalog"] = f"{minecraft_version}-{version_catalog}"
+    if args.version:
+        gradle_properties["modVersion"] = args.version
+
+    if args.catalog:
+        gradle_properties["dependenciesVersionCatalog"] = f"{args.minecraft}-{args.catalog}"
+
+    if args.properties:
+        for key, value in args.properties:
+            gradle_properties[key.strip()] = value.strip()
 
     return gradle_properties
 
@@ -664,10 +671,10 @@ def main():
         elif not string_in_file_if_exists(changelog_path, full_version):
             error2(f"Missing changelog version: {full_version}")
     
-    if args.version:
+    if args.version or args.properties:
         info2(f"Updating gradle.properties...")
         gradle_properties_path = f"{project_path}/gradle.properties"
-        gradle_properties = create_gradle_properties(args.version, args.minecraft, args.catalog)
+        gradle_properties = create_gradle_properties(args)
         update_gradle_properties(gradle_properties_path, gradle_properties)
 
     if args.gradle:
