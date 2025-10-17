@@ -1,0 +1,28 @@
+{
+    "dependencies": {
+        "fabricapi": "required",
+        "forgeconfigapiport": "required",
+        "puzzleslib": "required"
+    },
+    "distributions": {
+        "curseforge": {
+            "slug": "armor-quick-swap",
+            "id": "1367068"
+        },
+        "github": {
+            "slug": "armorquickswap"
+        },
+        "modrinth": {
+            "slug": "armor-quick-swap",
+            "id": "YxCEfYbF"
+        }
+    },
+    "environments": {
+        "client": "optional",
+        "server": "optional"
+    },
+    "loaders": [
+        "fabric",
+        "neoforge"
+    ]
+}
