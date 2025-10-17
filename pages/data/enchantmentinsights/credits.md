@@ -1,0 +1,3 @@
++ Huge thanks to [Darkhax](https://www.curseforge.com/members/DarkhaxDev) for the original [Enchantment Descriptions](https://www.curseforge.com/minecraft/mc-mods/enchantment-descriptions) mod. A great concept that’s been around for years and now shines again having been fully revamped for modern Minecraft.
++ Thanks to [Stal](https://www.curseforge.com/members/stal) for their stylish [Clean Tooltips](https://www.curseforge.com/minecraft/mc-mods/clean-tooltips) mod, which inspired the dyed enchantment names.  
++ Thanks to [gliscowo](https://www.curseforge.com/members/gliscowo) for [Idwtialsimmoedm](https://www.curseforge.com/minecraft/mc-mods/idwtialsimmoedm), which served as a foundation for the tooltip style.  

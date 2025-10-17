@@ -123,6 +123,11 @@ effectinsights:
   distributions:
     curseforge: effect-insights
     modrinth: effect-insights
+enchantmentinsights:
+  weight: 35
+  distributions:
+    curseforge: enchantment-insights
+    modrinth: enchantment-insights
 enchantinginfuser:
   weight: 60
   distributions:
