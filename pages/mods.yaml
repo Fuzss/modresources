@@ -8,6 +8,11 @@ arcanelanterns:
   distributions:
     curseforge: arcane-lanterns
     modrinth: arcane-lanterns
+armorquickswap:
+  weight: 10
+  distributions:
+    curseforge: armor-quick-swap
+    modrinth: armor-quick-swap
 armorstatues:
   weight: 25
   distributions:
@@ -123,16 +128,16 @@ effectinsights:
   distributions:
     curseforge: effect-insights
     modrinth: effect-insights
-enchantmentinsights:
-  weight: 35
-  distributions:
-    curseforge: enchantment-insights
-    modrinth: enchantment-insights
 enchantinginfuser:
   weight: 60
   distributions:
     curseforge: enchanting-infuser
     modrinth: enchanting-infuser
+enchantmentinsights:
+  weight: 35
+  distributions:
+    curseforge: enchantment-insights
+    modrinth: enchantment-insights
 enderzoology:
   weight: 25
   distributions:
