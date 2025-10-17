@@ -1,0 +1,27 @@
+{
+    "dependencies": {
+        "fabricapi": "required",
+        "forgeconfigapiport": "required",
+        "puzzleslib": "required"
+    },
+    "distributions": {
+        "curseforge": {
+            "slug": "enchantment-insights",
+            "id": "1366848"
+        },
+        "github": {
+            "slug": "enchantment-insights"
+        },
+        "modrinth": {
+            "slug": "enchantment-insights",
+            "id": "xLSpHE43"
+        }
+    },
+    "environments": {
+        "client": "required"
+    },
+    "loaders": [
+        "fabric",
+        "neoforge"
+    ]
+}
