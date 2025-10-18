@@ -53,6 +53,11 @@ blockrunner:
   distributions:
     curseforge: block-runner
     modrinth: block-runner
+bloomcraft:
+  weight: 30
+  distributions:
+    curseforge: bloomcraft
+    modrinth: bloomcraft
 climaterivers:
   weight: 15
   distributions:
@@ -294,7 +299,7 @@ respawninganimals:
     curseforge: respawning-animals
     modrinth: respawning-animals
 sheepvariety:
-  weight: 20
+  weight: 5
   distributions:
     curseforge: sheep-variety
     modrinth: sheep-variety
