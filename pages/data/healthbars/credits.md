@@ -1,0 +1,1 @@
++ Big thanks to [ToroCraft](https://www.curseforge.com/members/torocraft) for their timeless [ToroHealth Damage Indicators](https://www.curseforge.com/minecraft/mc-mods/torohealth-damage-indicators) mod, which served as the main inspiration for this project. As a solid foundation, it made it possible for this mod to grow far beyond with exciting new features.  

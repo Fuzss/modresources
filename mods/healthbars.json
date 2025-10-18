@@ -1,0 +1,28 @@
+{
+    "dependencies": {
+        "fabricapi": "required",
+        "forgeconfigapiport": "required",
+        "puzzleslib": "required"
+    },
+    "distributions": {
+        "curseforge": {
+            "slug": "health-bars",
+            "id": "1367734"
+        },
+        "github": {
+            "slug": "healthbars"
+        },
+        "modrinth": {
+            "slug": "new-health-bars",
+            "id": "A3VSiTms"
+        }
+    },
+    "environments": {
+        "client": "required",
+        "server": "required"
+    },
+    "loaders": [
+        "fabric",
+        "neoforge"
+    ]
+}

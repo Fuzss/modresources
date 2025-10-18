@@ -17,7 +17,7 @@ convenienteffects: 20
 cutthrough: 35
 deathfinder: 5
 diagonalfences: 50
-diagonalwalls: 40
+diagonalwalls: 30
 diagonalwindows: 30
 dyedflames: 25
 echochest: 20
@@ -33,6 +33,7 @@ fastitemframes: 25
 forgeconfigapiport: 0
 goldenagecombat: 15
 hangglider: 25
+healthbars: 40
 helditemtooltips: 25
 hoppergadgetry: 40
 horseexpert: 25
