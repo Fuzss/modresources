@@ -248,6 +248,11 @@ mutantmonsters:
   distributions:
     curseforge: mutant-monsters
     modrinth: mutant-monsters
+naturalwaters:
+  weight: 15
+  distributions:
+    curseforge: natural-waters
+    modrinth: natural-waters
 netherchested:
   weight: 30
   distributions:
