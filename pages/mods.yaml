@@ -94,7 +94,7 @@ diagonalfences:
     curseforge: diagonal-fences
     modrinth: diagonal-fences
 diagonalwalls:
-  weight: 40
+  weight: 30
   distributions:
     curseforge: diagonal-walls
     modrinth: diagonal-walls
@@ -173,6 +173,11 @@ hangglider:
   distributions:
     curseforge: hang-glider
     modrinth: hang-glider
+healthbars:
+  weight: 40
+  distributions:
+    curseforge: health-bars
+    modrinth: new-health-bars
 helditemtooltips:
   weight: 25
   distributions:
