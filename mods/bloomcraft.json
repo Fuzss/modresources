@@ -1,0 +1,28 @@
+{
+    "dependencies": {
+        "fabricapi": "required",
+        "forgeconfigapiport": "required",
+        "puzzleslib": "required"
+    },
+    "distributions": {
+        "curseforge": {
+            "slug": "bloomcraft",
+            "id": "1367782"
+        },
+        "github": {
+            "slug": "bloomcraft"
+        },
+        "modrinth": {
+            "slug": "bloomcraft",
+            "id": "i6w1VobP"
+        }
+    },
+    "environments": {
+        "client": "required",
+        "server": "required"
+    },
+    "loaders": [
+        "fabric",
+        "neoforge"
+    ]
+}
