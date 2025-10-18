@@ -1,0 +1,28 @@
+{
+    "dependencies": {
+        "fabricapi": "required",
+        "forgeconfigapiport": "required",
+        "puzzleslib": "required"
+    },
+    "distributions": {
+        "curseforge": {
+            "slug": "azalea-growth-control",
+            "id": "1367455"
+        },
+        "github": {
+            "slug": "azealeagrowthcontrol"
+        },
+        "modrinth": {
+            "slug": "azalea-growth-control",
+            "id": "XJPF1kgi"
+        }
+    },
+    "environments": {
+        "client": "required",
+        "server": "required"
+    },
+    "loaders": [
+        "fabric",
+        "neoforge"
+    ]
+}
