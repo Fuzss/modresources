@@ -18,11 +18,11 @@ armorstatues:
   distributions:
     curseforge: armor-statues
     modrinth: armor-statues
-azealeagrowthcontrol:
+azaleagrowthcontrol:
   weight: 5
   distributions:
-    curseforge: azealea-growth-control
-    modrinth: azealea-growth-control
+    curseforge: azalea-growth-control
+    modrinth: azalea-growth-control
 bagofholding:
   weight: 20
   distributions:
