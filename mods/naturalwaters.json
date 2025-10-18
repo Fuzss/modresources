@@ -1,0 +1,28 @@
+{
+    "dependencies": {
+        "fabricapi": "required",
+        "forgeconfigapiport": "required",
+        "puzzleslib": "required"
+    },
+    "distributions": {
+        "curseforge": {
+            "slug": "natural-waters",
+            "id": "1367853"
+        },
+        "github": {
+            "slug": "naturalwaters"
+        },
+        "modrinth": {
+            "slug": "natural-waters",
+            "id": "aYttCyCw"
+        }
+    },
+    "environments": {
+        "client": "required",
+        "server": "required"
+    },
+    "loaders": [
+        "fabric",
+        "neoforge"
+    ]
+}
