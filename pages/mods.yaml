@@ -288,6 +288,11 @@ pickupnotifier:
   distributions:
     curseforge: pick-up-notifier
     modrinth: pick-up-notifier
+pixelshot:
+  weight: 20
+  distributions:
+    curseforge: pixelshot
+    modrinth: pixelshot
 portablehole:
   weight: 10
   distributions:
