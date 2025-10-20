@@ -25,6 +25,7 @@ def parse_args():
     parser.add_argument('--copy', type=str, default=None, metavar="LEGACY_GAME_VERSION", help="Copy from existing game version. Example: --copy 1.21.5.")
     parser.add_argument('--move', type=str, default=None, metavar="LEGACY_GAME_VERSION", help="Move existing game version. Example: --move 1.21.7.")
     parser.add_argument('--upgrade', default=False, action="store_true", help="Run workspace upgrade.")
+    parser.add_argument('--sources', default=False, action="store_true", help="Generate common sources.")
     parser.add_argument('--gradle', type=str, default=None, metavar="GRADLE_VERSION", help="Gradle wrapper version. Example: --gradle 8.14.3.")
     parser.add_argument('--id', type=str, required=True, metavar="MOD_ID", help="Mod id. Example: --id examplemod.")
     parser.add_argument('--version', type=str, default=None, metavar="PROJECT_VERSION", help="Mod version. Example: --version 21.8.0.")
@@ -47,6 +48,8 @@ def parse_args():
             args.data = True
         if not args.upgrade:
             args.upgrade = True
+        if not args.sources:
+            args.sources = True
         if not args.changelog:
             args.changelog = [["changed", f"Update to Minecraft {args.minecraft}"]]
 
@@ -103,19 +106,24 @@ def update_gradle_properties(file_path, updates: dict):
     new_lines = []
 
     for line in lines:
-        stripped = line.strip()
-        if not stripped or stripped.startswith('#') or '=' not in line:
+        content = line.strip()
+        if not content or '=' not in line:
             new_lines.append(line)
             continue
 
-        key, _ = line.split('=', 1)
+        prefix = ""
+        if content.startswith('#'):
+            content = content[1:].strip()
+            prefix = "#"
+
+        key, _ = content.split('=', 1)
         key = key.strip()
         if key in updates:
             new_value = updates[key]
             if new_value == "#":
                 new_lines.append(f"#{line}")
             elif new_value is not None:
-                new_lines.append(f"{key}={new_value}\n")
+                new_lines.append(f"{prefix}{key}={new_value}\n")
         else:
             new_lines.append(line)
 
@@ -283,18 +291,21 @@ def string_in_file_if_exists(file_path, target):
         return target in f.read()
 
 def create_gradle_properties(args):
-    gradle_properties = {
-        "dependenciesPuzzlesLibVersion": "#",
-        "dependenciesMinPuzzlesLibVersion": "#",
-        "dependenciesRequiredForgeCurseForge": None,
-        "dependenciesRequiredForgeModrinth": None,
-        "dependenciesOptionalFabricCurseForge": None,
-        "dependenciesOptionalNeoForgeCurseForge": None,
-        "dependenciesOptionalForgeCurseForge": None,
-        "dependenciesOptionalFabricModrinth": None,
-        "dependenciesOptionalNeoForgeModrinth": None,
-        "dependenciesOptionalForgeModrinth": None
-    }
+    if args.upgrade:
+        gradle_properties = {
+            "dependenciesPuzzlesLibVersion": None,
+            "dependenciesMinPuzzlesLibVersion": None,
+            "dependenciesRequiredForgeCurseForge": None,
+            "dependenciesRequiredForgeModrinth": None,
+            "dependenciesOptionalFabricCurseForge": None,
+            "dependenciesOptionalNeoForgeCurseForge": None,
+            "dependenciesOptionalForgeCurseForge": None,
+            "dependenciesOptionalFabricModrinth": None,
+            "dependenciesOptionalNeoForgeModrinth": None,
+            "dependenciesOptionalForgeModrinth": None
+        }
+    else:
+        gradle_properties = {}
 
     if args.version:
         gradle_properties["modVersion"] = args.version
@@ -686,7 +697,7 @@ def main():
         info2("Refreshing project...")
         subprocess.run(["./gradlew", "wrapper", "--gradle-version", args.gradle], cwd=project_path, check=True)
 
-    if args.version and args.catalog:
+    if args.sources:
         info2("Generating sources...")
         subprocess.run(["./gradlew", "commonGenSources"], cwd=project_path, check=True)
     elif not args.gradle:

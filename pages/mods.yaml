@@ -148,6 +148,11 @@ enchantmentinsights:
   distributions:
     curseforge: enchantment-insights
     modrinth: enchantment-insights
+enchantmentswitch:
+  weight: 15
+  distributions:
+    curseforge: enchantment-switch
+    modrinth: enchantment-switch
 enderzoology:
   weight: 25
   distributions:
