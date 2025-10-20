@@ -3,6 +3,11 @@ airhop:
   distributions:
     curseforge: air-hop
     modrinth: air-hop
+alltheheads:
+  weight: 35
+  distributions:
+    curseforge: all-the-heads
+    modrinth: all-the-heads
 arcanelanterns:
   weight: 15
   distributions:

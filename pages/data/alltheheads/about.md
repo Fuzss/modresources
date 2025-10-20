@@ -1,0 +1,3 @@
+Ever wanted more than the few vanilla mob heads? **All The Heads** adds over 450 unique mob heads, covering every creature and its variants. Each head is fully modeled, accurately scaled, and even includes correct hitboxes and noteblock sounds. Built on a fully data-driven system, you can easily add, remove, or tweak any head without touching code. Perfect for modpack makers, server admins, or anyone who loves collecting.  
+
+All heads are wearable or placeable, letting you decorate, craft statues, or create custom trophies. Start collecting them all and show off your ultimate mob head collection!  
