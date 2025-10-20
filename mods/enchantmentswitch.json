@@ -1,0 +1,28 @@
+{
+    "dependencies": {
+        "fabricapi": "required",
+        "forgeconfigapiport": "required",
+        "puzzleslib": "required"
+    },
+    "distributions": {
+        "curseforge": {
+            "slug": "new-enchantment-switch",
+            "id": "1368895"
+        },
+        "github": {
+            "slug": "enchantmentswitch"
+        },
+        "modrinth": {
+            "slug": "enchantment-switch",
+            "id": "k0wqURes"
+        }
+    },
+    "environments": {
+        "client": "required",
+        "server": "required"
+    },
+    "loaders": [
+        "fabric",
+        "neoforge"
+    ]
+}
