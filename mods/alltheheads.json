@@ -1,0 +1,28 @@
+{
+    "dependencies": {
+        "fabricapi": "required",
+        "forgeconfigapiport": "required",
+        "puzzleslib": "required"
+    },
+    "distributions": {
+        "curseforge": {
+            "slug": "all-the-heads",
+            "id": "1369265"
+        },
+        "github": {
+            "slug": "alltheheads"
+        },
+        "modrinth": {
+            "slug": "all-the-heads",
+            "id": "Ax17wp3L"
+        }
+    },
+    "environments": {
+        "client": "required",
+        "server": "required"
+    },
+    "loaders": [
+        "fabric",
+        "neoforge"
+    ]
+}
