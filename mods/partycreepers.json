@@ -1,0 +1,28 @@
+{
+    "dependencies": {
+        "fabricapi": "required",
+        "forgeconfigapiport": "required",
+        "puzzleslib": "required"
+    },
+    "distributions": {
+        "curseforge": {
+            "slug": "party-creepers",
+            "id": "1369583"
+        },
+        "github": {
+            "slug": "partycreepers"
+        },
+        "modrinth": {
+            "slug": "party-creepers",
+            "id": "YiQCYsjo"
+        }
+    },
+    "environments": {
+        "client": "required",
+        "server": "required"
+    },
+    "loaders": [
+        "fabric",
+        "neoforge"
+    ]
+}
