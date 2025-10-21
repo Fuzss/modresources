@@ -1,0 +1,5 @@
++ Big shoutout to [LobsterJonn](https://www.curseforge.com/members/lobsterjonn) for [Jumpy Boats](https://www.curseforge.com/minecraft/mc-mods/jumpy-boats), which sparked the fun boat jumping mechanic in this mod.  
++ Thanks to [Cammie](https://www.curseforge.com/members/cammie) for [VehicleFix](https://www.curseforge.com/minecraft/mc-mods/vehiclefix), the inspiration behind properly implemented vehicle passenger collisions.  
++ Hats off to [legosteenjaap](https://www.curseforge.com/members/legosteenjaap) for [HorseInBoat](https://www.curseforge.com/minecraft/mc-mods/horseinboat), which gave the idea to finally let horses ride in boats.  
++ Thanks to [TeaJ4y](https://www.curseforge.com/members/teaj4y) for [Horse Stats Vanilla](https://www.curseforge.com/minecraft/mc-mods/horsestatsvanilla), inspiring the optional mount attribute display in your inventory.  
++ Special thanks to [CassieNya](https://modrinth.com/user/CassieNya) for [Horse Buff](https://modrinth.com/mod/horsebuff), which sparked creative features like translucent mounts.

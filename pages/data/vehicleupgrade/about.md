@@ -1,0 +1,3 @@
+**Vehicle Upgrade** supercharges every mount and vehicle across the game, adding tons of quality-of-life improvements for every ride. Saddled mounts no longer wander off, boats handle better on land, and you can open your player inventory even while riding. Small but powerful touches like translucent mounts when you look down and fixed passenger collisions that prevent you from getting stuck in blocks make traveling and working with vehicles feel seamless.  
+
+Let mounts swim through water, move through leaves, and keep full mining speed while riding. The mod brings polish, flexibility, and a big dose of fun, making every journey smoother and faster. And of course, everything is fully configurable to match your play style.  
