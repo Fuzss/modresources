@@ -1,0 +1,28 @@
+{
+    "dependencies": {
+        "fabricapi": "required",
+        "forgeconfigapiport": "required",
+        "puzzleslib": "required"
+    },
+    "distributions": {
+        "curseforge": {
+            "slug": "vehicle-upgrade",
+            "id": "1369699"
+        },
+        "github": {
+            "slug": "vehicleupgrade"
+        },
+        "modrinth": {
+            "slug": "vehicle-upgrade",
+            "id": "9B9c6QcJ"
+        }
+    },
+    "environments": {
+        "client": "required",
+        "server": "required"
+    },
+    "loaders": [
+        "fabric",
+        "neoforge"
+    ]
+}

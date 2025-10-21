@@ -393,6 +393,11 @@ universalenchants:
   distributions:
     curseforge: universal-enchants
     modrinth: universal-enchants
+vehicleupgrade:
+  weight: 40
+  distributions:
+    curseforge: vehicle-upgrade
+    modrinth: vehicle-upgrade
 visualworkbench:
   weight: 70
   distributions:
