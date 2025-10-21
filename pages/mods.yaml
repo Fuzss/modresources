@@ -13,6 +13,11 @@ arcanelanterns:
   distributions:
     curseforge: arcane-lanterns
     modrinth: arcane-lanterns
+armoredfoes:
+  weight: 25
+  distributions:
+    curseforge: armored-foes
+    modrinth: armored-foes
 armorquickswap:
   weight: 10
   distributions:

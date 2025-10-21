@@ -1,0 +1,28 @@
+{
+    "dependencies": {
+        "fabricapi": "required",
+        "forgeconfigapiport": "required",
+        "puzzleslib": "required"
+    },
+    "distributions": {
+        "curseforge": {
+            "slug": "armored-foes",
+            "id": "1369926"
+        },
+        "github": {
+            "slug": "armoredfoes"
+        },
+        "modrinth": {
+            "slug": "armored-foes",
+            "id": "ahTPKYtE"
+        }
+    },
+    "environments": {
+        "client": "required",
+        "server": "required"
+    },
+    "loaders": [
+        "fabric",
+        "neoforge"
+    ]
+}
