@@ -2014,7 +2014,7 @@
 - [21.7.6](./fuzs/puzzleslib/puzzleslib-common/21.7.6)
 - [21.8.8](./fuzs/puzzleslib/puzzleslib-common/21.8.8)
 - [21.9.5](./fuzs/puzzleslib/puzzleslib-common/21.9.5)
-- [21.10.4](./fuzs/puzzleslib/puzzleslib-common/21.10.4)
+- [21.10.5](./fuzs/puzzleslib/puzzleslib-common/21.10.5)
 </details>
 
 <details>
@@ -2457,6 +2457,7 @@
 - [21.10.2](./fuzs/puzzleslib/puzzleslib-common/21.10.2)
 - [21.10.3](./fuzs/puzzleslib/puzzleslib-common/21.10.3)
 - [21.10.4](./fuzs/puzzleslib/puzzleslib-common/21.10.4)
+- [21.10.5](./fuzs/puzzleslib/puzzleslib-common/21.10.5)
 </details>
 
 ### [`puzzleslib-fabric`](./fuzs/puzzleslib/puzzleslib-fabric)
@@ -2485,7 +2486,7 @@
 - [21.7.6](./fuzs/puzzleslib/puzzleslib-fabric/21.7.6)
 - [21.8.8](./fuzs/puzzleslib/puzzleslib-fabric/21.8.8)
 - [21.9.5](./fuzs/puzzleslib/puzzleslib-fabric/21.9.5)
-- [21.10.4](./fuzs/puzzleslib/puzzleslib-fabric/21.10.4)
+- [21.10.5](./fuzs/puzzleslib/puzzleslib-fabric/21.10.5)
 </details>
 
 <details>
@@ -2928,6 +2929,7 @@
 - [21.10.2](./fuzs/puzzleslib/puzzleslib-fabric/21.10.2)
 - [21.10.3](./fuzs/puzzleslib/puzzleslib-fabric/21.10.3)
 - [21.10.4](./fuzs/puzzleslib/puzzleslib-fabric/21.10.4)
+- [21.10.5](./fuzs/puzzleslib/puzzleslib-fabric/21.10.5)
 </details>
 
 ### [`puzzleslib-forge`](./fuzs/puzzleslib/puzzleslib-forge)
@@ -3253,7 +3255,7 @@
 - [21.7.6](./fuzs/puzzleslib/puzzleslib-neoforge/21.7.6)
 - [21.8.8](./fuzs/puzzleslib/puzzleslib-neoforge/21.8.8)
 - [21.9.5](./fuzs/puzzleslib/puzzleslib-neoforge/21.9.5)
-- [21.10.4](./fuzs/puzzleslib/puzzleslib-neoforge/21.10.4)
+- [21.10.5](./fuzs/puzzleslib/puzzleslib-neoforge/21.10.5)
 </details>
 
 <details>
@@ -3463,6 +3465,7 @@
 - [21.10.2](./fuzs/puzzleslib/puzzleslib-neoforge/21.10.2)
 - [21.10.3](./fuzs/puzzleslib/puzzleslib-neoforge/21.10.3)
 - [21.10.4](./fuzs/puzzleslib/puzzleslib-neoforge/21.10.4)
+- [21.10.5](./fuzs/puzzleslib/puzzleslib-neoforge/21.10.5)
 </details>
 
 </details>
