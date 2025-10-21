@@ -1,0 +1,3 @@
+Tired of Creepers ruining your builds? **Party Creepers** turns every explosion into a party instead of a disaster! When a Creeper blows up, it bursts into colorful confetti and fireworks, meaning you can keep your builds safe while still keeping the thrill of a Creeper encounter. No block damage, no mess, just fun.  
+
+You can still tweak how wild the party gets. Make explosions completely harmless, choose if explosions still hurt players or mobs, or mix confetti with real destruction for extra chaos with style. Everything is fully customizable and works with any Creeper you choose through a simple entity tag for full flexibility.  

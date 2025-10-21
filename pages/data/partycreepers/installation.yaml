@@ -1,0 +1,9 @@
+environments:
+  server: required
+loaders:
+  - fabric
+  - neoforge
+dependencies:
+  puzzleslib: required
+  fabricapi: required
+  forgeconfigapiport: required

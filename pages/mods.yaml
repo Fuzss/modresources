@@ -283,6 +283,11 @@ paperdoll:
   distributions:
     curseforge: new-paper-doll
     modrinth: paper-doll
+partycreepers:
+  weight: 10
+  distributions:
+    curseforge: party-creepers
+    modrinth: party-creepers
 permanentsponges:
   weight: 15
   distributions:

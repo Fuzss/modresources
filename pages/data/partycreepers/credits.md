@@ -1,0 +1,1 @@
++ Huge thanks to [SR2610](https://www.curseforge.com/members/sr2610) for their fun [Creeper Confetti](https://www.curseforge.com/minecraft/mc-mods/creeper-confetti) mod, which inspired the idea behind this project.  
