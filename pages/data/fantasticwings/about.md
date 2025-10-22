@@ -1,0 +1,3 @@
+**Fantastic Wings** lets you take to the skies with stunningly animated wings inspired by birds and insects. Craft a special potion to grow your own wings and feel the freedom of effortless flight across your world. Each wing type is lovingly animated to flutter, fold, and stretch naturally as you move, making every motion feel lively and magical.  
+
+Once your wings have grown, flying is simple and smooth. Press your flight key to toggle flight mode, move forward to speed up, jump to rise, and crouch to descend or land faster. Stop flying mid-air and drift safely down without a crash landing. Whether you prefer feathery grace or fluttering energy, every wing type brings a touch of magic to your adventures.  

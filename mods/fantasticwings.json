@@ -1,0 +1,28 @@
+{
+    "dependencies": {
+        "fabricapi": "required",
+        "forgeconfigapiport": "required",
+        "puzzleslib": "required"
+    },
+    "distributions": {
+        "curseforge": {
+            "slug": "fantastic-wings",
+            "id": "1370532"
+        },
+        "github": {
+            "slug": "fantasticwings"
+        },
+        "modrinth": {
+            "slug": "fantastic-wings",
+            "id": "iGEcTqwK"
+        }
+    },
+    "environments": {
+        "client": "required",
+        "server": "required"
+    },
+    "loaders": [
+        "fabric",
+        "neoforge"
+    ]
+}

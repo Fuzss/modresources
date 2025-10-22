@@ -173,6 +173,11 @@ eternalnether:
   distributions:
     curseforge: eternal-nether
     modrinth: eternal-nether
+fantasticwings:
+  weight: 40
+  distributions:
+    curseforge: fantastic-wings
+    modrinth: fantastic-wings
 fastitemframes:
   weight: 25
   distributions:
