@@ -1,0 +1,28 @@
+{
+    "dependencies": {
+        "fabricapi": "required",
+        "forgeconfigapiport": "required",
+        "puzzleslib": "required"
+    },
+    "distributions": {
+        "curseforge": {
+            "slug": "sea-life",
+            "id": "1370259"
+        },
+        "github": {
+            "slug": "sealife"
+        },
+        "modrinth": {
+            "slug": "new-sea-life",
+            "id": "2RxBOoXP"
+        }
+    },
+    "environments": {
+        "client": "required",
+        "server": "required"
+    },
+    "loaders": [
+        "fabric",
+        "neoforge"
+    ]
+}

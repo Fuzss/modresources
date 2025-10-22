@@ -328,6 +328,11 @@ respawninganimals:
   distributions:
     curseforge: respawning-animals
     modrinth: respawning-animals
+sealife:
+  weight: 35
+  distributions:
+    curseforge: sea-life
+    modrinth: sea-life
 sheepvariety:
   weight: 5
   distributions:
