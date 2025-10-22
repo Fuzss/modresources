@@ -1,0 +1,1 @@
+- Huge thanks to [pau101](https://www.curseforge.com/members/pau101) for the original [Wings](https://www.curseforge.com/minecraft/mc-mods/wings) mod. The incredible attention to detail and gorgeous animations serve as the foundation for this faithful continuation for modern Minecraft.  
