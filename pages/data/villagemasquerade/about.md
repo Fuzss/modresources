@@ -1,0 +1,3 @@
+Ever wanted to blend in with the locals? With **Village Masquerade**, you can walk among villagers dressed just like them. From the farmer’s dusty hat to the librarian’s fine toga, every profession has its own style. These outfits may not stop arrows, but they’ll win hearts and better deals at the trading table.
+
+Each piece gives a small discount when trading with matching villagers, and wearing more pieces makes the effect even stronger. Most outfits are obtained by trading with villagers at master level. Some sets are harder to find, dropped by illagers or iron golems, while others hide in village chests. Whether you’re collecting, cosplaying, or simply charming your favorite librarian, this mod makes every visit to town a little more fun.

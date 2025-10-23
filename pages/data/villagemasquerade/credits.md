@@ -1,0 +1,1 @@
++ Huge thanks to [EnderPreston](https://www.curseforge.com/members/enderpreston/projects) for the original [Village Employment](https://www.curseforge.com/minecraft/mc-mods/village-employment) mod, whose assets return here in this new mod which has been refined and renewed for modern Minecraft.  

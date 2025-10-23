@@ -413,6 +413,11 @@ vehicleupgrade:
   distributions:
     curseforge: vehicle-upgrade
     modrinth: vehicle-upgrade
+villagemasquerade:
+  weight: 25
+  distributions:
+    curseforge: village-masquerade
+    modrinth: village-masquerade
 visualworkbench:
   weight: 70
   distributions:
