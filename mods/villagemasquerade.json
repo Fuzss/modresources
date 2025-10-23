@@ -1,0 +1,28 @@
+{
+    "dependencies": {
+        "fabricapi": "required",
+        "forgeconfigapiport": "required",
+        "puzzleslib": "required"
+    },
+    "distributions": {
+        "curseforge": {
+            "slug": "village-masquerade",
+            "id": "1370923"
+        },
+        "github": {
+            "slug": "villagemasquerade"
+        },
+        "modrinth": {
+            "slug": "village-masquerade",
+            "id": "leFnAa7O"
+        }
+    },
+    "environments": {
+        "client": "required",
+        "server": "required"
+    },
+    "loaders": [
+        "fabric",
+        "neoforge"
+    ]
+}
