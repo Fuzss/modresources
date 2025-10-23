@@ -1,0 +1,28 @@
+{
+    "dependencies": {
+        "fabricapi": "required",
+        "forgeconfigapiport": "required",
+        "puzzleslib": "required"
+    },
+    "distributions": {
+        "curseforge": {
+            "slug": "new-shroomcraft",
+            "id": "1371092"
+        },
+        "github": {
+            "slug": "shroomcraft"
+        },
+        "modrinth": {
+            "slug": "new-shroomcraft",
+            "id": "ORxNgqTW"
+        }
+    },
+    "environments": {
+        "client": "required",
+        "server": "required"
+    },
+    "loaders": [
+        "fabric",
+        "neoforge"
+    ]
+}
