@@ -347,7 +347,7 @@ shroomcraft:
   weight: 40
   distributions:
     curseforge: new-shroomcraft
-    modrinth: new-shroomcraft
+    modrinth: shroomcraft
 skeletonaifix:
   weight: 5
   distributions:
