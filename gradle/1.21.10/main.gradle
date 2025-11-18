@@ -81,7 +81,7 @@ allprojects {
                 }
             }
             filter {
-                includeGroup("com.zigythebird.playeranim")
+                includeGroup("com.zigythebird")
             }
         }
         exclusiveContent {
