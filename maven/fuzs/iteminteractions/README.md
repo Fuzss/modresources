@@ -17,7 +17,7 @@
 - [21.7.0](./iteminteractions-common/21.7.0)
 - [21.8.3](./iteminteractions-common/21.8.3)
 - [21.9.0](./iteminteractions-common/21.9.0)
-- [21.10.0](./iteminteractions-common/21.10.0)
+- [21.10.1](./iteminteractions-common/21.10.1)
 </details>
 
 <details open>
@@ -58,6 +58,7 @@
 - [21.8.3](./iteminteractions-common/21.8.3)
 - [21.9.0](./iteminteractions-common/21.9.0)
 - [21.10.0](./iteminteractions-common/21.10.0)
+- [21.10.1](./iteminteractions-common/21.10.1)
 </details>
 
 ### [`iteminteractions-fabric`](./iteminteractions-fabric)
@@ -74,7 +75,7 @@
 - [21.7.0](./iteminteractions-fabric/21.7.0)
 - [21.8.3](./iteminteractions-fabric/21.8.3)
 - [21.9.0](./iteminteractions-fabric/21.9.0)
-- [21.10.0](./iteminteractions-fabric/21.10.0)
+- [21.10.1](./iteminteractions-fabric/21.10.1)
 </details>
 
 <details open>
@@ -115,6 +116,7 @@
 - [21.8.3](./iteminteractions-fabric/21.8.3)
 - [21.9.0](./iteminteractions-fabric/21.9.0)
 - [21.10.0](./iteminteractions-fabric/21.10.0)
+- [21.10.1](./iteminteractions-fabric/21.10.1)
 </details>
 
 ### [`iteminteractions-forge`](./iteminteractions-forge)
@@ -149,7 +151,7 @@
 - [21.7.0](./iteminteractions-neoforge/21.7.0)
 - [21.8.3](./iteminteractions-neoforge/21.8.3)
 - [21.9.0](./iteminteractions-neoforge/21.9.0)
-- [21.10.0](./iteminteractions-neoforge/21.10.0)
+- [21.10.1](./iteminteractions-neoforge/21.10.1)
 </details>
 
 <details open>
@@ -190,6 +192,7 @@
 - [21.8.3](./iteminteractions-neoforge/21.8.3)
 - [21.9.0](./iteminteractions-neoforge/21.9.0)
 - [21.10.0](./iteminteractions-neoforge/21.10.0)
+- [21.10.1](./iteminteractions-neoforge/21.10.1)
 </details>
 
 </details>
