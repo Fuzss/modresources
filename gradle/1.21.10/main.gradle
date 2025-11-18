@@ -76,6 +76,17 @@ allprojects {
         exclusiveContent {
             forRepository {
                 maven {
+                    name = "RedlanceMinecraft"
+                    url = "https://repo.redlance.org/public"
+                }
+            }
+            filter {
+                includeGroup("com.zigythebird.playeranim")
+            }
+        }
+        exclusiveContent {
+            forRepository {
+                maven {
                     name = "GeckoLib"
                     url = "https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/"
                 }
