@@ -81,7 +81,7 @@ allprojects {
                 }
             }
             filter {
-                includeGroupByRegex("com\\.zigythebird\\.[^.]+")
+                includeGroupByRegex("com\\.zigythebird(\\..+)?")
             }
         }
         exclusiveContent {
