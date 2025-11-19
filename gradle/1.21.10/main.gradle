@@ -3,7 +3,7 @@ println("Java: " + System.getProperty("java.version") + " JVM: " + System.getPro
 allprojects {
     apply plugin: "java"
     apply plugin: "java-library"
-    apply plugin: "architectury-plugin"
+    apply plugin: libs.plugins.architecturyplugin.id
     apply plugin: "maven-publish"
     apply plugin: "signing"
     apply plugin: "idea"
@@ -196,8 +196,8 @@ allprojects {
 }
 
 subprojects {
-    apply plugin: "dev.architectury.loom"
-    apply plugin: "me.modmuss50.mod-publish-plugin"
+    apply plugin: libs.plugins.architecturyloom.id
+    apply plugin: libs.plugins.modpublishplugin.id
 
     loom {
         silentMojangMappingsLicense()

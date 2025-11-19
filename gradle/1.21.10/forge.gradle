@@ -1,4 +1,4 @@
-apply plugin: "com.gradleup.shadow"
+apply plugin: libs.plugins.shadow.id
 
 architectury {
     platformSetupLoomIde()
