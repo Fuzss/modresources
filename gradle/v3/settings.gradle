@@ -9,18 +9,22 @@ dependencyResolutionManagement {
     versionCatalogs {
         libs {
             from("fuzs.sharedcatalogs:sharedcatalogs:${dependenciesVersionCatalog}")
-
             // Apply version overrides from gradle.properties
-            settings.ext.properties.each { propName, propValue ->
+            settings.ext.properties.each { key, value ->
+                // Extract catalog key: remove prefix and convert dots to dashes
+                // Then set the catalog value (creates or overrides when already existing)
+                switch (key) {
+                    case { it.startsWith("libs.versions.") }:
+                        version(key.substring("libs.versions.".length()).replace(".", "-"), value)
+                        break
 
-                // Ignore unrelated properties
-                if (propName.startsWith("libs.versions.")) {
+                    case { it.startsWith("libs.plugins.") }:
+                        plugin(key.substring("libs.plugins.".length()).replace(".", "-"), value)
+                        break
 
-                    // Extract catalog key: remove prefix and convert dots to dashes
-                    def catalogKey = propName.substring("libs.versions.".length()).replaceAll(/\./, "-")
-
-                    // Set the version (creates or overrides existing version)
-                    version(catalogKey, propValue)
+                    case { it.startsWith("libs.libraries.") }:
+                        library(key.substring("libs.libraries.".length()).replace(".", "-"), value)
+                        break
                 }
             }
         }
