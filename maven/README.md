@@ -3865,6 +3865,34 @@
 - [1.21.10-v6](./fuzs/sharedcatalogs/sharedcatalogs/1.21.10-v6)
 </details>
 
+### [`sharedcatalogs-libraries`](./fuzs/sharedcatalogs/sharedcatalogs-libraries)
+<details>
+<summary>Latest</summary>
+
+- [1.21.1-v20](./fuzs/sharedcatalogs/sharedcatalogs-libraries/1.21.1-v20)
+- [1.21.10-v7](./fuzs/sharedcatalogs/sharedcatalogs-libraries/1.21.10-v7)
+</details>
+
+<details>
+<summary>Versions</summary>
+
+- [1.21.1-v20](./fuzs/sharedcatalogs/sharedcatalogs-libraries/1.21.1-v20)
+- [1.21.10-v7](./fuzs/sharedcatalogs/sharedcatalogs-libraries/1.21.10-v7)
+</details>
+
+### [`sharedcatalogs-plugins`](./fuzs/sharedcatalogs/sharedcatalogs-plugins)
+<details>
+<summary>Latest</summary>
+
+- [3.0.0-v1](./fuzs/sharedcatalogs/sharedcatalogs-plugins/3.0.0-v1)
+</details>
+
+<details>
+<summary>Versions</summary>
+
+- [3.0.0-v1](./fuzs/sharedcatalogs/sharedcatalogs-plugins/3.0.0-v1)
+</details>
+
 </details>
 
 ## [`fuzs/statuemenus`](./fuzs/statuemenus)
