@@ -3884,13 +3884,14 @@
 <details>
 <summary>Latest</summary>
 
-- [3.0.0-v1](./fuzs/sharedcatalogs/sharedcatalogs-plugins/3.0.0-v1)
+- [3.0.0-v2](./fuzs/sharedcatalogs/sharedcatalogs-plugins/3.0.0-v2)
 </details>
 
 <details>
 <summary>Versions</summary>
 
 - [3.0.0-v1](./fuzs/sharedcatalogs/sharedcatalogs-plugins/3.0.0-v1)
+- [3.0.0-v2](./fuzs/sharedcatalogs/sharedcatalogs-plugins/3.0.0-v2)
 </details>
 
 </details>

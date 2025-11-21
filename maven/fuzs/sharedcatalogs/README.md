@@ -342,13 +342,14 @@
 <details open>
 <summary>Latest</summary>
 
-- [3.0.0-v1](./sharedcatalogs-plugins/3.0.0-v1)
+- [3.0.0-v2](./sharedcatalogs-plugins/3.0.0-v2)
 </details>
 
 <details open>
 <summary>Versions</summary>
 
 - [3.0.0-v1](./sharedcatalogs-plugins/3.0.0-v1)
+- [3.0.0-v2](./sharedcatalogs-plugins/3.0.0-v2)
 </details>
 
 </details>
