@@ -10,7 +10,7 @@
 + Drinking items such as potions, milk, and bottled liquids is much faster.
 + A very brief delay is added to throwing eggs and snowballs.
 + Eating and drinking are interrupted when being attacked.
-+ Shields become usable after activation without any delay (it is usally 0.25 seconds in vanilla).
++ Shields become usable after activation without any delay (it is usually 0.25 seconds in vanilla).
 + Shield protection arc is decreased to 100 degrees.
 + Being hit by a projectile no longer grants brief damage immunity.
 + Sprinting does not stop when hitting a target, especially nice when fighting while swimming (since swimming is just sprinting, but in water).
