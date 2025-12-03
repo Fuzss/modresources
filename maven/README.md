@@ -3556,7 +3556,6 @@
 
 - [1.18.2-v28](./fuzs/sharedcatalogs/sharedcatalogs/1.18.2-v28)
 - [1.19.2-v27](./fuzs/sharedcatalogs/sharedcatalogs/1.19.2-v27)
-- [1.20-3](./fuzs/sharedcatalogs/sharedcatalogs/1.20-3)
 - [1.20-v2](./fuzs/sharedcatalogs/sharedcatalogs/1.20-v2)
 - [1.20.1-v47](./fuzs/sharedcatalogs/sharedcatalogs/1.20.1-v47)
 - [1.20.2-v1](./fuzs/sharedcatalogs/sharedcatalogs/1.20.2-v1)
@@ -3571,6 +3570,7 @@
 - [1.21.7-v1](./fuzs/sharedcatalogs/sharedcatalogs/1.21.7-v1)
 - [1.21.8-v10](./fuzs/sharedcatalogs/sharedcatalogs/1.21.8-v10)
 - [1.21.9-v21](./fuzs/sharedcatalogs/sharedcatalogs/1.21.9-v21)
+- [1.21.10-SNAPSHOT](./fuzs/sharedcatalogs/sharedcatalogs/1.21.10-SNAPSHOT)
 - [1.21.10-v6](./fuzs/sharedcatalogs/sharedcatalogs/1.21.10-v6)
 </details>
 
@@ -3628,7 +3628,6 @@
 - [1.19.2-v25](./fuzs/sharedcatalogs/sharedcatalogs/1.19.2-v25)
 - [1.19.2-v26](./fuzs/sharedcatalogs/sharedcatalogs/1.19.2-v26)
 - [1.19.2-v27](./fuzs/sharedcatalogs/sharedcatalogs/1.19.2-v27)
-- [1.20-3](./fuzs/sharedcatalogs/sharedcatalogs/1.20-3)
 - [1.20-v1](./fuzs/sharedcatalogs/sharedcatalogs/1.20-v1)
 - [1.20-v2](./fuzs/sharedcatalogs/sharedcatalogs/1.20-v2)
 - [1.20.1-v1](./fuzs/sharedcatalogs/sharedcatalogs/1.20.1-v1)
@@ -3862,6 +3861,7 @@
 - [1.21.9-v19](./fuzs/sharedcatalogs/sharedcatalogs/1.21.9-v19)
 - [1.21.9-v20](./fuzs/sharedcatalogs/sharedcatalogs/1.21.9-v20)
 - [1.21.9-v21](./fuzs/sharedcatalogs/sharedcatalogs/1.21.9-v21)
+- [1.21.10-SNAPSHOT](./fuzs/sharedcatalogs/sharedcatalogs/1.21.10-SNAPSHOT)
 - [1.21.10-v1](./fuzs/sharedcatalogs/sharedcatalogs/1.21.10-v1)
 - [1.21.10-v2](./fuzs/sharedcatalogs/sharedcatalogs/1.21.10-v2)
 - [1.21.10-v3](./fuzs/sharedcatalogs/sharedcatalogs/1.21.10-v3)
@@ -3870,33 +3870,22 @@
 - [1.21.10-v6](./fuzs/sharedcatalogs/sharedcatalogs/1.21.10-v6)
 </details>
 
-### [`sharedcatalogs-libraries`](./fuzs/sharedcatalogs/sharedcatalogs-libraries)
+</details>
+
+## [`fuzs/sharedcatalogs/sharedcatalogs`](./fuzs/sharedcatalogs/sharedcatalogs)
+
+<details>
+<summary>Artifacts</summary>
+
+### [`1.21.10-SNAPSHOT`](./fuzs/sharedcatalogs/sharedcatalogs/1.21.10-SNAPSHOT)
 <details>
 <summary>Latest</summary>
 
-- [1.21.1-v20](./fuzs/sharedcatalogs/sharedcatalogs-libraries/1.21.1-v20)
-- [1.21.10-v7](./fuzs/sharedcatalogs/sharedcatalogs-libraries/1.21.10-v7)
 </details>
 
 <details>
 <summary>Versions</summary>
 
-- [1.21.1-v20](./fuzs/sharedcatalogs/sharedcatalogs-libraries/1.21.1-v20)
-- [1.21.10-v7](./fuzs/sharedcatalogs/sharedcatalogs-libraries/1.21.10-v7)
-</details>
-
-### [`sharedcatalogs-plugins`](./fuzs/sharedcatalogs/sharedcatalogs-plugins)
-<details>
-<summary>Latest</summary>
-
-- [3.0.0-v2](./fuzs/sharedcatalogs/sharedcatalogs-plugins/3.0.0-v2)
-</details>
-
-<details>
-<summary>Versions</summary>
-
-- [3.0.0-v1](./fuzs/sharedcatalogs/sharedcatalogs-plugins/3.0.0-v1)
-- [3.0.0-v2](./fuzs/sharedcatalogs/sharedcatalogs-plugins/3.0.0-v2)
 </details>
 
 </details>
