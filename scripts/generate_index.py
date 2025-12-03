@@ -53,7 +53,7 @@ def generate_artifacts_block(group_path, artifacts, header_level=2, details_open
         latest_versions = []
         base_versions = set()
         for version in sorted(versions, key=natural_key, reverse=True):
-            base = re.sub(r'(\d+)$', '', version)  # remove the last numeric part for "base"
+            base = re.sub(r'(\w+)$', '', version)  # remove the last part after any dash or dot for "base"
             if base not in base_versions:
                 latest_versions.append(version)
                 base_versions.add(base)
