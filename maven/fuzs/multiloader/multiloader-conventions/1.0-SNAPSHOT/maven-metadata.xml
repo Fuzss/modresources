@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>fuzs.multiloader</groupId>
+  <artifactId>multiloader-conventions</artifactId>
+  <versioning>
+    <lastUpdated>20251203105846</lastUpdated>
+    <snapshot>
+      <timestamp>20251203.105846</timestamp>
+      <buildNumber>1</buildNumber>
+    </snapshot>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>module</extension>
+        <value>1.0-20251203.105846-1</value>
+        <updated>20251203105846</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <classifier>sources</classifier>
+        <extension>jar</extension>
+        <value>1.0-20251203.105846-1</value>
+        <updated>20251203105846</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>jar</extension>
+        <value>1.0-20251203.105846-1</value>
+        <updated>20251203105846</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>1.0-20251203.105846-1</value>
+        <updated>20251203105846</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+  <version>1.0-SNAPSHOT</version>
+</metadata>

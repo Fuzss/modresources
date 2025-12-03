@@ -1,0 +1,121 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "fuzs.multiloader",
+    "module": "multiloader-conventions",
+    "version": "1.0.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.1.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "files": [
+        {
+          "name": "multiloader-conventions-1.0.0.jar",
+          "url": "multiloader-conventions-1.0.0.jar",
+          "size": 1027458,
+          "sha512": "aa362e17d9429426dfad74027b866a2b88eadcfd5b47839905e2163f7a412e00909c7f768d26e535a2cfcf0a139d81de010eb7515e4a1d231b505caf0c9dabf8",
+          "sha256": "69fb7d43e93e6e58b0c9189854cb40ef628b4737334bd74585b44adfea115269",
+          "sha1": "ebdf44a5143f32cd28cc8ffbd50220ce3ae085ae",
+          "md5": "6c5fa67552d742e555d698903b998ece"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "dev.architectury.loom",
+          "module": "dev.architectury.loom.gradle.plugin",
+          "version": {
+            "requires": "1.13-SNAPSHOT"
+          }
+        },
+        {
+          "group": "me.modmuss50.mod-publish-plugin",
+          "module": "me.modmuss50.mod-publish-plugin.gradle.plugin",
+          "version": {
+            "requires": "1.1.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-serialization-json",
+          "version": {
+            "requires": "1.9.0"
+          }
+        },
+        {
+          "group": "com.akuleshov7",
+          "module": "ktoml-core",
+          "version": {
+            "requires": "0.7.0"
+          }
+        },
+        {
+          "group": "org.gradle.toolchains.foojay-resolver-convention",
+          "module": "org.gradle.toolchains.foojay-resolver-convention.gradle.plugin",
+          "version": {
+            "requires": "1.0.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "multiloader-conventions-1.0.0.jar",
+          "url": "multiloader-conventions-1.0.0.jar",
+          "size": 1027458,
+          "sha512": "aa362e17d9429426dfad74027b866a2b88eadcfd5b47839905e2163f7a412e00909c7f768d26e535a2cfcf0a139d81de010eb7515e4a1d231b505caf0c9dabf8",
+          "sha256": "69fb7d43e93e6e58b0c9189854cb40ef628b4737334bd74585b44adfea115269",
+          "sha1": "ebdf44a5143f32cd28cc8ffbd50220ce3ae085ae",
+          "md5": "6c5fa67552d742e555d698903b998ece"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "multiloader-conventions-1.0.0-sources.jar",
+          "url": "multiloader-conventions-1.0.0-sources.jar",
+          "size": 311122,
+          "sha512": "65fc72dbb1f2478acbb5d872b9d5ecc46e389a06fffaba00f869f0b2f187e22cba684fa0c45a2b10eb619bb566d764c50ccb6b860c59fb3fd6d62686fd6811e1",
+          "sha256": "da86f2c2c22e36be69b3dfe575d0d216bc71cf5862e6f1430b36c5109a6bc335",
+          "sha1": "cd42b486fbca0e6523972b8ec66ed493621c2b80",
+          "md5": "31ab752c5e88284bcc0cb64d1544bb7c"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!-- This module was also published with a richer model, Gradle metadata,  -->
+  <!-- which should be used instead. Do not delete the following line which  -->
+  <!-- is to indicate to Gradle or any Gradle module metadata file consumer  -->
+  <!-- that they should prefer consuming it instead. -->
+  <!-- do_not_remove: published-with-gradle-metadata -->
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>fuzs.multiloader</groupId>
+  <artifactId>multiloader-conventions</artifactId>
+  <version>1.0.0</version>
+  <name>Multiloader Conventions</name>
+  <description>Shared Gradle plugin for all @heyitsfuzs mod projects.</description>
+  <url>https://github.com/Fuzss/multiloader-conventions</url>
+  <licenses>
+    <license>
+      <name>All Rights Reserved</name>
+      <url>https://spdx.org/licenses/All Rights Reserved.html</url>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <id>fuzs</id>
+      <name>Fuzs</name>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:git:git://github.com/Fuzss/multiloader-conventions.git</connection>
+    <developerConnection>scm:git:git@github.com:Fuzss/multiloader-conventions.git</developerConnection>
+    <url>https://github.com/Fuzss/multiloader-conventions</url>
+  </scm>
+  <issueManagement>
+    <system>github</system>
+    <url>https://github.com/Fuzss/multiloader-conventions/issues</url>
+  </issueManagement>
+  <dependencies>
+    <dependency>
+      <groupId>dev.architectury.loom</groupId>
+      <artifactId>dev.architectury.loom.gradle.plugin</artifactId>
+      <version>1.13-SNAPSHOT</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>me.modmuss50.mod-publish-plugin</groupId>
+      <artifactId>me.modmuss50.mod-publish-plugin.gradle.plugin</artifactId>
+      <version>1.1.0</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.jetbrains.kotlinx</groupId>
+      <artifactId>kotlinx-serialization-json-jvm</artifactId>
+      <version>1.9.0</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.akuleshov7</groupId>
+      <artifactId>ktoml-core-jvm</artifactId>
+      <version>0.7.0</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.gradle.toolchains.foojay-resolver-convention</groupId>
+      <artifactId>org.gradle.toolchains.foojay-resolver-convention.gradle.plugin</artifactId>
+      <version>1.0.0</version>
+      <scope>runtime</scope>
+    </dependency>
+  </dependencies>
+</project>
