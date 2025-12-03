@@ -3,9 +3,9 @@
   "component": {
     "group": "fuzs.multiloader",
     "module": "multiloader-conventions",
-    "version": "1.0.0",
+    "version": "1.0-SNAPSHOT",
     "attributes": {
-      "org.gradle.status": "release"
+      "org.gradle.status": "integration"
     }
   },
   "createdBy": {
@@ -27,8 +27,8 @@
       },
       "files": [
         {
-          "name": "multiloader-conventions-1.0.0.jar",
-          "url": "multiloader-conventions-1.0.0.jar",
+          "name": "multiloader-conventions-1.0-SNAPSHOT.jar",
+          "url": "multiloader-conventions-1.0-SNAPSHOT.jar",
           "size": 1028010,
           "sha512": "924c14fc589d3e954b6d97b413e18e13dcca88e5f6e2d2ec2a613ed25f7d1079188a557fdb6275b1b6f9d5085d86fe2fc2a2c4369cb8e9b10e7943885d42f41b",
           "sha256": "ecb98bd278c79423320e709edcdad30ada545cfb4270dc903143b271b5bda005",
@@ -87,8 +87,8 @@
       ],
       "files": [
         {
-          "name": "multiloader-conventions-1.0.0.jar",
-          "url": "multiloader-conventions-1.0.0.jar",
+          "name": "multiloader-conventions-1.0-SNAPSHOT.jar",
+          "url": "multiloader-conventions-1.0-SNAPSHOT.jar",
           "size": 1028010,
           "sha512": "924c14fc589d3e954b6d97b413e18e13dcca88e5f6e2d2ec2a613ed25f7d1079188a557fdb6275b1b6f9d5085d86fe2fc2a2c4369cb8e9b10e7943885d42f41b",
           "sha256": "ecb98bd278c79423320e709edcdad30ada545cfb4270dc903143b271b5bda005",
@@ -107,8 +107,8 @@
       },
       "files": [
         {
-          "name": "multiloader-conventions-1.0.0-sources.jar",
-          "url": "multiloader-conventions-1.0.0-sources.jar",
+          "name": "multiloader-conventions-1.0-SNAPSHOT-sources.jar",
+          "url": "multiloader-conventions-1.0-SNAPSHOT-sources.jar",
           "size": 311433,
           "sha512": "162494506c624d8de505e320c06167ee6feaba3ee3ca6ffc1c8879d4bd5d5fcd9893df362f3e1e5755a8a5f4da7024ce3008b0b7ea2b186c762a4c5507c60521",
           "sha256": "ed727cf4cb6ec38b6dc16e2402ea75e2f179a22f9eabdc1d04183a424b35e02f",
