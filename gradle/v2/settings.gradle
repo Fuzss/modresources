@@ -5,15 +5,41 @@ dependencyResolutionManagement {
             url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/"
         }
     }
+
     versionCatalogs {
         libs {
             from("fuzs.sharedcatalogs:sharedcatalogs:${dependenciesVersionCatalog}")
+            // Apply version overrides from gradle.properties
+            settings.ext.properties.each { key, value ->
+                // Extract catalog key: remove prefix and convert dots to dashes
+                // Then set the catalog value (creates or overrides when already existing)
+                switch (key) {
+                    case { it.startsWith("project.libs.versions.") }:
+                        version(key.substring("project.libs.versions.".length()).replace(".", "-"), value)
+                        break
+
+                    case { it.startsWith("project.libs.libraries.") }:
+                        library(key.substring("project.libs.libraries.".length()).replace(".", "-"), value)
+                        break
+
+                    case { it.startsWith("libs.versions.") }:
+                        version(key.substring("libs.versions.".length()).replace(".", "-"), value)
+                        break
+
+                    case { it.startsWith("libs.libraries.") }:
+                        library(key.substring("libs.libraries.".length()).replace(".", "-"), value)
+                        break
+                }
+            }
+
             if (settings.ext.has("dependenciesPuzzlesLibVersion")) {
                 version("puzzleslib-version", settings.ext.find("dependenciesPuzzlesLibVersion"))
             }
+
             if (settings.ext.has("dependenciesMinPuzzlesLibVersion")) {
                 version("puzzleslib-min", settings.ext.find("dependenciesMinPuzzlesLibVersion"))
             }
+            
             if (settings.ext.has("dependenciesPuzzlesApi")) {
                 version("puzzlesapi", settings.ext.find("dependenciesPuzzlesApi"))
             }
@@ -21,4 +47,4 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "${modName.replaceAll("[^a-zA-Z]", "")}-${dependenciesVersionCatalog.replaceAll("-v\\d+", "")}"
+rootProject.name = "${modName.replaceAll("[^a-zA-Z]", "")}-${dependenciesVersionCatalog.substring(0, dependenciesVersionCatalog.lastIndexOf('-'))}"
