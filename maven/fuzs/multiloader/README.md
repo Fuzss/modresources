@@ -1,0 +1,21 @@
+## [`fuzs/multiloader`](.)
+
+<details open>
+<summary>Artifacts</summary>
+
+### [`multiloader-conventions`](./multiloader-conventions)
+<details open>
+<summary>Latest</summary>
+
+- [1.0-SNAPSHOT](./multiloader-conventions/1.0-SNAPSHOT)
+- [1.0.0](./multiloader-conventions/1.0.0)
+</details>
+
+<details open>
+<summary>Versions</summary>
+
+- [1.0-SNAPSHOT](./multiloader-conventions/1.0-SNAPSHOT)
+- [1.0.0](./multiloader-conventions/1.0.0)
+</details>
+
+</details>
