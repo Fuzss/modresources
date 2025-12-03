@@ -9,7 +9,6 @@
 
 - [1.18.2-v28](./sharedcatalogs/1.18.2-v28)
 - [1.19.2-v27](./sharedcatalogs/1.19.2-v27)
-- [1.20-3](./sharedcatalogs/1.20-3)
 - [1.20-v2](./sharedcatalogs/1.20-v2)
 - [1.20.1-v47](./sharedcatalogs/1.20.1-v47)
 - [1.20.2-v1](./sharedcatalogs/1.20.2-v1)
@@ -24,6 +23,7 @@
 - [1.21.7-v1](./sharedcatalogs/1.21.7-v1)
 - [1.21.8-v10](./sharedcatalogs/1.21.8-v10)
 - [1.21.9-v21](./sharedcatalogs/1.21.9-v21)
+- [1.21.10-SNAPSHOT](./sharedcatalogs/1.21.10-SNAPSHOT)
 - [1.21.10-v6](./sharedcatalogs/1.21.10-v6)
 </details>
 
@@ -81,7 +81,6 @@
 - [1.19.2-v25](./sharedcatalogs/1.19.2-v25)
 - [1.19.2-v26](./sharedcatalogs/1.19.2-v26)
 - [1.19.2-v27](./sharedcatalogs/1.19.2-v27)
-- [1.20-3](./sharedcatalogs/1.20-3)
 - [1.20-v1](./sharedcatalogs/1.20-v1)
 - [1.20-v2](./sharedcatalogs/1.20-v2)
 - [1.20.1-v1](./sharedcatalogs/1.20.1-v1)
@@ -315,41 +314,13 @@
 - [1.21.9-v19](./sharedcatalogs/1.21.9-v19)
 - [1.21.9-v20](./sharedcatalogs/1.21.9-v20)
 - [1.21.9-v21](./sharedcatalogs/1.21.9-v21)
+- [1.21.10-SNAPSHOT](./sharedcatalogs/1.21.10-SNAPSHOT)
 - [1.21.10-v1](./sharedcatalogs/1.21.10-v1)
 - [1.21.10-v2](./sharedcatalogs/1.21.10-v2)
 - [1.21.10-v3](./sharedcatalogs/1.21.10-v3)
 - [1.21.10-v4](./sharedcatalogs/1.21.10-v4)
 - [1.21.10-v5](./sharedcatalogs/1.21.10-v5)
 - [1.21.10-v6](./sharedcatalogs/1.21.10-v6)
-</details>
-
-### [`sharedcatalogs-libraries`](./sharedcatalogs-libraries)
-<details open>
-<summary>Latest</summary>
-
-- [1.21.1-v20](./sharedcatalogs-libraries/1.21.1-v20)
-- [1.21.10-v7](./sharedcatalogs-libraries/1.21.10-v7)
-</details>
-
-<details open>
-<summary>Versions</summary>
-
-- [1.21.1-v20](./sharedcatalogs-libraries/1.21.1-v20)
-- [1.21.10-v7](./sharedcatalogs-libraries/1.21.10-v7)
-</details>
-
-### [`sharedcatalogs-plugins`](./sharedcatalogs-plugins)
-<details open>
-<summary>Latest</summary>
-
-- [3.0.0-v2](./sharedcatalogs-plugins/3.0.0-v2)
-</details>
-
-<details open>
-<summary>Versions</summary>
-
-- [3.0.0-v1](./sharedcatalogs-plugins/3.0.0-v1)
-- [3.0.0-v2](./sharedcatalogs-plugins/3.0.0-v2)
 </details>
 
 </details>
