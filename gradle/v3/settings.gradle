@@ -35,4 +35,4 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "${modName.replaceAll("[^a-zA-Z]", "")}-${dependenciesVersionCatalog.substring(0, value.lastIndexOf('-'))}"
+rootProject.name = "${modName.replaceAll("[^a-zA-Z]", "")}-${dependenciesVersionCatalog.substring(0, dependenciesVersionCatalog.lastIndexOf('-'))}"
