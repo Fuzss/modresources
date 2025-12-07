@@ -3,32 +3,32 @@
   <groupId>fuzs.multiloader</groupId>
   <artifactId>multiloader-conventions</artifactId>
   <versioning>
-    <lastUpdated>20251203111733</lastUpdated>
+    <lastUpdated>20251207192002</lastUpdated>
     <snapshot>
-      <timestamp>20251203.111733</timestamp>
-      <buildNumber>2</buildNumber>
+      <timestamp>20251207.192002</timestamp>
+      <buildNumber>3</buildNumber>
     </snapshot>
     <snapshotVersions>
       <snapshotVersion>
-        <extension>module</extension>
-        <value>1.0-20251203.111733-2</value>
-        <updated>20251203111733</updated>
+        <extension>jar</extension>
+        <value>1.0-20251207.192002-3</value>
+        <updated>20251207192002</updated>
       </snapshotVersion>
       <snapshotVersion>
-        <extension>jar</extension>
-        <value>1.0-20251203.111733-2</value>
-        <updated>20251203111733</updated>
+        <extension>module</extension>
+        <value>1.0-20251207.192002-3</value>
+        <updated>20251207192002</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>pom</extension>
-        <value>1.0-20251203.111733-2</value>
-        <updated>20251203111733</updated>
+        <value>1.0-20251207.192002-3</value>
+        <updated>20251207192002</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>sources</classifier>
         <extension>jar</extension>
-        <value>1.0-20251203.111733-2</value>
-        <updated>20251203111733</updated>
+        <value>1.0-20251207.192002-3</value>
+        <updated>20251207192002</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>
