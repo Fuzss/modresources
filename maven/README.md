@@ -1758,7 +1758,7 @@
 <summary>Latest</summary>
 
 - [1.0-SNAPSHOT](./fuzs/multiloader/multiloader-conventions/1.0-SNAPSHOT)
-- [1.0.1](./fuzs/multiloader/multiloader-conventions/1.0.1)
+- [1.0.2](./fuzs/multiloader/multiloader-conventions/1.0.2)
 </details>
 
 <details>
@@ -1767,6 +1767,7 @@
 - [1.0-SNAPSHOT](./fuzs/multiloader/multiloader-conventions/1.0-SNAPSHOT)
 - [1.0.0](./fuzs/multiloader/multiloader-conventions/1.0.0)
 - [1.0.1](./fuzs/multiloader/multiloader-conventions/1.0.1)
+- [1.0.2](./fuzs/multiloader/multiloader-conventions/1.0.2)
 </details>
 
 </details>
@@ -1780,7 +1781,7 @@
 <details>
 <summary>Latest</summary>
 
-- [1.0.1](./fuzs/multiloader/conventions-common/fuzs.multiloader.conventions-common.gradle.plugin/1.0.1)
+- [1.0.2](./fuzs/multiloader/conventions-common/fuzs.multiloader.conventions-common.gradle.plugin/1.0.2)
 </details>
 
 <details>
@@ -1788,6 +1789,7 @@
 
 - [1.0.0](./fuzs/multiloader/conventions-common/fuzs.multiloader.conventions-common.gradle.plugin/1.0.0)
 - [1.0.1](./fuzs/multiloader/conventions-common/fuzs.multiloader.conventions-common.gradle.plugin/1.0.1)
+- [1.0.2](./fuzs/multiloader/conventions-common/fuzs.multiloader.conventions-common.gradle.plugin/1.0.2)
 </details>
 
 </details>
@@ -1801,7 +1803,7 @@
 <details>
 <summary>Latest</summary>
 
-- [1.0.1](./fuzs/multiloader/conventions-core/fuzs.multiloader.conventions-core.gradle.plugin/1.0.1)
+- [1.0.2](./fuzs/multiloader/conventions-core/fuzs.multiloader.conventions-core.gradle.plugin/1.0.2)
 </details>
 
 <details>
@@ -1809,6 +1811,7 @@
 
 - [1.0.0](./fuzs/multiloader/conventions-core/fuzs.multiloader.conventions-core.gradle.plugin/1.0.0)
 - [1.0.1](./fuzs/multiloader/conventions-core/fuzs.multiloader.conventions-core.gradle.plugin/1.0.1)
+- [1.0.2](./fuzs/multiloader/conventions-core/fuzs.multiloader.conventions-core.gradle.plugin/1.0.2)
 </details>
 
 </details>
@@ -1822,7 +1825,7 @@
 <details>
 <summary>Latest</summary>
 
-- [1.0.1](./fuzs/multiloader/conventions-fabric/fuzs.multiloader.conventions-fabric.gradle.plugin/1.0.1)
+- [1.0.2](./fuzs/multiloader/conventions-fabric/fuzs.multiloader.conventions-fabric.gradle.plugin/1.0.2)
 </details>
 
 <details>
@@ -1830,6 +1833,7 @@
 
 - [1.0.0](./fuzs/multiloader/conventions-fabric/fuzs.multiloader.conventions-fabric.gradle.plugin/1.0.0)
 - [1.0.1](./fuzs/multiloader/conventions-fabric/fuzs.multiloader.conventions-fabric.gradle.plugin/1.0.1)
+- [1.0.2](./fuzs/multiloader/conventions-fabric/fuzs.multiloader.conventions-fabric.gradle.plugin/1.0.2)
 </details>
 
 </details>
@@ -1843,7 +1847,7 @@
 <details>
 <summary>Latest</summary>
 
-- [1.0.1](./fuzs/multiloader/conventions-neoforge/fuzs.multiloader.conventions-neoforge.gradle.plugin/1.0.1)
+- [1.0.2](./fuzs/multiloader/conventions-neoforge/fuzs.multiloader.conventions-neoforge.gradle.plugin/1.0.2)
 </details>
 
 <details>
@@ -1851,6 +1855,7 @@
 
 - [1.0.0](./fuzs/multiloader/conventions-neoforge/fuzs.multiloader.conventions-neoforge.gradle.plugin/1.0.0)
 - [1.0.1](./fuzs/multiloader/conventions-neoforge/fuzs.multiloader.conventions-neoforge.gradle.plugin/1.0.1)
+- [1.0.2](./fuzs/multiloader/conventions-neoforge/fuzs.multiloader.conventions-neoforge.gradle.plugin/1.0.2)
 </details>
 
 </details>
@@ -1864,7 +1869,7 @@
 <details>
 <summary>Latest</summary>
 
-- [1.0.1](./fuzs/multiloader/conventions-platform/fuzs.multiloader.conventions-platform.gradle.plugin/1.0.1)
+- [1.0.2](./fuzs/multiloader/conventions-platform/fuzs.multiloader.conventions-platform.gradle.plugin/1.0.2)
 </details>
 
 <details>
@@ -1872,6 +1877,7 @@
 
 - [1.0.0](./fuzs/multiloader/conventions-platform/fuzs.multiloader.conventions-platform.gradle.plugin/1.0.0)
 - [1.0.1](./fuzs/multiloader/conventions-platform/fuzs.multiloader.conventions-platform.gradle.plugin/1.0.1)
+- [1.0.2](./fuzs/multiloader/conventions-platform/fuzs.multiloader.conventions-platform.gradle.plugin/1.0.2)
 </details>
 
 </details>
@@ -1885,7 +1891,7 @@
 <details>
 <summary>Latest</summary>
 
-- [1.0.1](./fuzs/multiloader/conventions-root/fuzs.multiloader.conventions-root.gradle.plugin/1.0.1)
+- [1.0.2](./fuzs/multiloader/conventions-root/fuzs.multiloader.conventions-root.gradle.plugin/1.0.2)
 </details>
 
 <details>
@@ -1893,6 +1899,7 @@
 
 - [1.0.0](./fuzs/multiloader/conventions-root/fuzs.multiloader.conventions-root.gradle.plugin/1.0.0)
 - [1.0.1](./fuzs/multiloader/conventions-root/fuzs.multiloader.conventions-root.gradle.plugin/1.0.1)
+- [1.0.2](./fuzs/multiloader/conventions-root/fuzs.multiloader.conventions-root.gradle.plugin/1.0.2)
 </details>
 
 </details>
@@ -1906,7 +1913,7 @@
 <details>
 <summary>Latest</summary>
 
-- [1.0.1](./fuzs/multiloader/conventions-settings/fuzs.multiloader.conventions-settings.gradle.plugin/1.0.1)
+- [1.0.2](./fuzs/multiloader/conventions-settings/fuzs.multiloader.conventions-settings.gradle.plugin/1.0.2)
 </details>
 
 <details>
@@ -1914,6 +1921,7 @@
 
 - [1.0.0](./fuzs/multiloader/conventions-settings/fuzs.multiloader.conventions-settings.gradle.plugin/1.0.0)
 - [1.0.1](./fuzs/multiloader/conventions-settings/fuzs.multiloader.conventions-settings.gradle.plugin/1.0.1)
+- [1.0.2](./fuzs/multiloader/conventions-settings/fuzs.multiloader.conventions-settings.gradle.plugin/1.0.2)
 </details>
 
 </details>
