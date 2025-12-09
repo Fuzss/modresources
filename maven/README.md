@@ -1753,6 +1753,21 @@
 <details>
 <summary>Artifacts</summary>
 
+### [`multiloader-convention-plugins`](./fuzs/multiloader/multiloader-convention-plugins)
+<details>
+<summary>Latest</summary>
+
+- [1.0-SNAPSHOT](./fuzs/multiloader/multiloader-convention-plugins/1.0-SNAPSHOT)
+- [1.0.3](./fuzs/multiloader/multiloader-convention-plugins/1.0.3)
+</details>
+
+<details>
+<summary>Versions</summary>
+
+- [1.0-SNAPSHOT](./fuzs/multiloader/multiloader-convention-plugins/1.0-SNAPSHOT)
+- [1.0.3](./fuzs/multiloader/multiloader-convention-plugins/1.0.3)
+</details>
+
 ### [`multiloader-conventions`](./fuzs/multiloader/multiloader-conventions)
 <details>
 <summary>Latest</summary>
@@ -1922,6 +1937,304 @@
 - [1.0.0](./fuzs/multiloader/conventions-settings/fuzs.multiloader.conventions-settings.gradle.plugin/1.0.0)
 - [1.0.1](./fuzs/multiloader/conventions-settings/fuzs.multiloader.conventions-settings.gradle.plugin/1.0.1)
 - [1.0.2](./fuzs/multiloader/conventions-settings/fuzs.multiloader.conventions-settings.gradle.plugin/1.0.2)
+</details>
+
+</details>
+
+## [`fuzs/multiloader/multiloader-convention-plugins`](./fuzs/multiloader/multiloader-convention-plugins)
+
+<details>
+<summary>Artifacts</summary>
+
+### [`1.0-SNAPSHOT`](./fuzs/multiloader/multiloader-convention-plugins/1.0-SNAPSHOT)
+<details>
+<summary>Latest</summary>
+
+</details>
+
+<details>
+<summary>Versions</summary>
+
+</details>
+
+</details>
+
+## [`fuzs/multiloader/multiloader-convention-plugins-common`](./fuzs/multiloader/multiloader-convention-plugins-common)
+
+<details>
+<summary>Artifacts</summary>
+
+### [`fuzs.multiloader.multiloader-convention-plugins-common.gradle.plugin`](./fuzs/multiloader/multiloader-convention-plugins-common/fuzs.multiloader.multiloader-convention-plugins-common.gradle.plugin)
+<details>
+<summary>Latest</summary>
+
+- [1.0-SNAPSHOT](./fuzs/multiloader/multiloader-convention-plugins-common/fuzs.multiloader.multiloader-convention-plugins-common.gradle.plugin/1.0-SNAPSHOT)
+- [1.0.3](./fuzs/multiloader/multiloader-convention-plugins-common/fuzs.multiloader.multiloader-convention-plugins-common.gradle.plugin/1.0.3)
+</details>
+
+<details>
+<summary>Versions</summary>
+
+- [1.0-SNAPSHOT](./fuzs/multiloader/multiloader-convention-plugins-common/fuzs.multiloader.multiloader-convention-plugins-common.gradle.plugin/1.0-SNAPSHOT)
+- [1.0.3](./fuzs/multiloader/multiloader-convention-plugins-common/fuzs.multiloader.multiloader-convention-plugins-common.gradle.plugin/1.0.3)
+</details>
+
+</details>
+
+## [`fuzs/multiloader/multiloader-convention-plugins-common/fuzs.multiloader.multiloader-convention-plugins-common.gradle.plugin`](./fuzs/multiloader/multiloader-convention-plugins-common/fuzs.multiloader.multiloader-convention-plugins-common.gradle.plugin)
+
+<details>
+<summary>Artifacts</summary>
+
+### [`1.0-SNAPSHOT`](./fuzs/multiloader/multiloader-convention-plugins-common/fuzs.multiloader.multiloader-convention-plugins-common.gradle.plugin/1.0-SNAPSHOT)
+<details>
+<summary>Latest</summary>
+
+</details>
+
+<details>
+<summary>Versions</summary>
+
+</details>
+
+</details>
+
+## [`fuzs/multiloader/multiloader-convention-plugins-core`](./fuzs/multiloader/multiloader-convention-plugins-core)
+
+<details>
+<summary>Artifacts</summary>
+
+### [`fuzs.multiloader.multiloader-convention-plugins-core.gradle.plugin`](./fuzs/multiloader/multiloader-convention-plugins-core/fuzs.multiloader.multiloader-convention-plugins-core.gradle.plugin)
+<details>
+<summary>Latest</summary>
+
+- [1.0-SNAPSHOT](./fuzs/multiloader/multiloader-convention-plugins-core/fuzs.multiloader.multiloader-convention-plugins-core.gradle.plugin/1.0-SNAPSHOT)
+- [1.0.3](./fuzs/multiloader/multiloader-convention-plugins-core/fuzs.multiloader.multiloader-convention-plugins-core.gradle.plugin/1.0.3)
+</details>
+
+<details>
+<summary>Versions</summary>
+
+- [1.0-SNAPSHOT](./fuzs/multiloader/multiloader-convention-plugins-core/fuzs.multiloader.multiloader-convention-plugins-core.gradle.plugin/1.0-SNAPSHOT)
+- [1.0.3](./fuzs/multiloader/multiloader-convention-plugins-core/fuzs.multiloader.multiloader-convention-plugins-core.gradle.plugin/1.0.3)
+</details>
+
+</details>
+
+## [`fuzs/multiloader/multiloader-convention-plugins-core/fuzs.multiloader.multiloader-convention-plugins-core.gradle.plugin`](./fuzs/multiloader/multiloader-convention-plugins-core/fuzs.multiloader.multiloader-convention-plugins-core.gradle.plugin)
+
+<details>
+<summary>Artifacts</summary>
+
+### [`1.0-SNAPSHOT`](./fuzs/multiloader/multiloader-convention-plugins-core/fuzs.multiloader.multiloader-convention-plugins-core.gradle.plugin/1.0-SNAPSHOT)
+<details>
+<summary>Latest</summary>
+
+</details>
+
+<details>
+<summary>Versions</summary>
+
+</details>
+
+</details>
+
+## [`fuzs/multiloader/multiloader-convention-plugins-fabric`](./fuzs/multiloader/multiloader-convention-plugins-fabric)
+
+<details>
+<summary>Artifacts</summary>
+
+### [`fuzs.multiloader.multiloader-convention-plugins-fabric.gradle.plugin`](./fuzs/multiloader/multiloader-convention-plugins-fabric/fuzs.multiloader.multiloader-convention-plugins-fabric.gradle.plugin)
+<details>
+<summary>Latest</summary>
+
+- [1.0-SNAPSHOT](./fuzs/multiloader/multiloader-convention-plugins-fabric/fuzs.multiloader.multiloader-convention-plugins-fabric.gradle.plugin/1.0-SNAPSHOT)
+- [1.0.3](./fuzs/multiloader/multiloader-convention-plugins-fabric/fuzs.multiloader.multiloader-convention-plugins-fabric.gradle.plugin/1.0.3)
+</details>
+
+<details>
+<summary>Versions</summary>
+
+- [1.0-SNAPSHOT](./fuzs/multiloader/multiloader-convention-plugins-fabric/fuzs.multiloader.multiloader-convention-plugins-fabric.gradle.plugin/1.0-SNAPSHOT)
+- [1.0.3](./fuzs/multiloader/multiloader-convention-plugins-fabric/fuzs.multiloader.multiloader-convention-plugins-fabric.gradle.plugin/1.0.3)
+</details>
+
+</details>
+
+## [`fuzs/multiloader/multiloader-convention-plugins-fabric/fuzs.multiloader.multiloader-convention-plugins-fabric.gradle.plugin`](./fuzs/multiloader/multiloader-convention-plugins-fabric/fuzs.multiloader.multiloader-convention-plugins-fabric.gradle.plugin)
+
+<details>
+<summary>Artifacts</summary>
+
+### [`1.0-SNAPSHOT`](./fuzs/multiloader/multiloader-convention-plugins-fabric/fuzs.multiloader.multiloader-convention-plugins-fabric.gradle.plugin/1.0-SNAPSHOT)
+<details>
+<summary>Latest</summary>
+
+</details>
+
+<details>
+<summary>Versions</summary>
+
+</details>
+
+</details>
+
+## [`fuzs/multiloader/multiloader-convention-plugins-neoforge`](./fuzs/multiloader/multiloader-convention-plugins-neoforge)
+
+<details>
+<summary>Artifacts</summary>
+
+### [`fuzs.multiloader.multiloader-convention-plugins-neoforge.gradle.plugin`](./fuzs/multiloader/multiloader-convention-plugins-neoforge/fuzs.multiloader.multiloader-convention-plugins-neoforge.gradle.plugin)
+<details>
+<summary>Latest</summary>
+
+- [1.0-SNAPSHOT](./fuzs/multiloader/multiloader-convention-plugins-neoforge/fuzs.multiloader.multiloader-convention-plugins-neoforge.gradle.plugin/1.0-SNAPSHOT)
+- [1.0.3](./fuzs/multiloader/multiloader-convention-plugins-neoforge/fuzs.multiloader.multiloader-convention-plugins-neoforge.gradle.plugin/1.0.3)
+</details>
+
+<details>
+<summary>Versions</summary>
+
+- [1.0-SNAPSHOT](./fuzs/multiloader/multiloader-convention-plugins-neoforge/fuzs.multiloader.multiloader-convention-plugins-neoforge.gradle.plugin/1.0-SNAPSHOT)
+- [1.0.3](./fuzs/multiloader/multiloader-convention-plugins-neoforge/fuzs.multiloader.multiloader-convention-plugins-neoforge.gradle.plugin/1.0.3)
+</details>
+
+</details>
+
+## [`fuzs/multiloader/multiloader-convention-plugins-neoforge/fuzs.multiloader.multiloader-convention-plugins-neoforge.gradle.plugin`](./fuzs/multiloader/multiloader-convention-plugins-neoforge/fuzs.multiloader.multiloader-convention-plugins-neoforge.gradle.plugin)
+
+<details>
+<summary>Artifacts</summary>
+
+### [`1.0-SNAPSHOT`](./fuzs/multiloader/multiloader-convention-plugins-neoforge/fuzs.multiloader.multiloader-convention-plugins-neoforge.gradle.plugin/1.0-SNAPSHOT)
+<details>
+<summary>Latest</summary>
+
+</details>
+
+<details>
+<summary>Versions</summary>
+
+</details>
+
+</details>
+
+## [`fuzs/multiloader/multiloader-convention-plugins-platform`](./fuzs/multiloader/multiloader-convention-plugins-platform)
+
+<details>
+<summary>Artifacts</summary>
+
+### [`fuzs.multiloader.multiloader-convention-plugins-platform.gradle.plugin`](./fuzs/multiloader/multiloader-convention-plugins-platform/fuzs.multiloader.multiloader-convention-plugins-platform.gradle.plugin)
+<details>
+<summary>Latest</summary>
+
+- [1.0-SNAPSHOT](./fuzs/multiloader/multiloader-convention-plugins-platform/fuzs.multiloader.multiloader-convention-plugins-platform.gradle.plugin/1.0-SNAPSHOT)
+- [1.0.3](./fuzs/multiloader/multiloader-convention-plugins-platform/fuzs.multiloader.multiloader-convention-plugins-platform.gradle.plugin/1.0.3)
+</details>
+
+<details>
+<summary>Versions</summary>
+
+- [1.0-SNAPSHOT](./fuzs/multiloader/multiloader-convention-plugins-platform/fuzs.multiloader.multiloader-convention-plugins-platform.gradle.plugin/1.0-SNAPSHOT)
+- [1.0.3](./fuzs/multiloader/multiloader-convention-plugins-platform/fuzs.multiloader.multiloader-convention-plugins-platform.gradle.plugin/1.0.3)
+</details>
+
+</details>
+
+## [`fuzs/multiloader/multiloader-convention-plugins-platform/fuzs.multiloader.multiloader-convention-plugins-platform.gradle.plugin`](./fuzs/multiloader/multiloader-convention-plugins-platform/fuzs.multiloader.multiloader-convention-plugins-platform.gradle.plugin)
+
+<details>
+<summary>Artifacts</summary>
+
+### [`1.0-SNAPSHOT`](./fuzs/multiloader/multiloader-convention-plugins-platform/fuzs.multiloader.multiloader-convention-plugins-platform.gradle.plugin/1.0-SNAPSHOT)
+<details>
+<summary>Latest</summary>
+
+</details>
+
+<details>
+<summary>Versions</summary>
+
+</details>
+
+</details>
+
+## [`fuzs/multiloader/multiloader-convention-plugins-root`](./fuzs/multiloader/multiloader-convention-plugins-root)
+
+<details>
+<summary>Artifacts</summary>
+
+### [`fuzs.multiloader.multiloader-convention-plugins-root.gradle.plugin`](./fuzs/multiloader/multiloader-convention-plugins-root/fuzs.multiloader.multiloader-convention-plugins-root.gradle.plugin)
+<details>
+<summary>Latest</summary>
+
+- [1.0-SNAPSHOT](./fuzs/multiloader/multiloader-convention-plugins-root/fuzs.multiloader.multiloader-convention-plugins-root.gradle.plugin/1.0-SNAPSHOT)
+- [1.0.3](./fuzs/multiloader/multiloader-convention-plugins-root/fuzs.multiloader.multiloader-convention-plugins-root.gradle.plugin/1.0.3)
+</details>
+
+<details>
+<summary>Versions</summary>
+
+- [1.0-SNAPSHOT](./fuzs/multiloader/multiloader-convention-plugins-root/fuzs.multiloader.multiloader-convention-plugins-root.gradle.plugin/1.0-SNAPSHOT)
+- [1.0.3](./fuzs/multiloader/multiloader-convention-plugins-root/fuzs.multiloader.multiloader-convention-plugins-root.gradle.plugin/1.0.3)
+</details>
+
+</details>
+
+## [`fuzs/multiloader/multiloader-convention-plugins-root/fuzs.multiloader.multiloader-convention-plugins-root.gradle.plugin`](./fuzs/multiloader/multiloader-convention-plugins-root/fuzs.multiloader.multiloader-convention-plugins-root.gradle.plugin)
+
+<details>
+<summary>Artifacts</summary>
+
+### [`1.0-SNAPSHOT`](./fuzs/multiloader/multiloader-convention-plugins-root/fuzs.multiloader.multiloader-convention-plugins-root.gradle.plugin/1.0-SNAPSHOT)
+<details>
+<summary>Latest</summary>
+
+</details>
+
+<details>
+<summary>Versions</summary>
+
+</details>
+
+</details>
+
+## [`fuzs/multiloader/multiloader-convention-plugins-settings`](./fuzs/multiloader/multiloader-convention-plugins-settings)
+
+<details>
+<summary>Artifacts</summary>
+
+### [`fuzs.multiloader.multiloader-convention-plugins-settings.gradle.plugin`](./fuzs/multiloader/multiloader-convention-plugins-settings/fuzs.multiloader.multiloader-convention-plugins-settings.gradle.plugin)
+<details>
+<summary>Latest</summary>
+
+- [1.0-SNAPSHOT](./fuzs/multiloader/multiloader-convention-plugins-settings/fuzs.multiloader.multiloader-convention-plugins-settings.gradle.plugin/1.0-SNAPSHOT)
+- [1.0.3](./fuzs/multiloader/multiloader-convention-plugins-settings/fuzs.multiloader.multiloader-convention-plugins-settings.gradle.plugin/1.0.3)
+</details>
+
+<details>
+<summary>Versions</summary>
+
+- [1.0-SNAPSHOT](./fuzs/multiloader/multiloader-convention-plugins-settings/fuzs.multiloader.multiloader-convention-plugins-settings.gradle.plugin/1.0-SNAPSHOT)
+- [1.0.3](./fuzs/multiloader/multiloader-convention-plugins-settings/fuzs.multiloader.multiloader-convention-plugins-settings.gradle.plugin/1.0.3)
+</details>
+
+</details>
+
+## [`fuzs/multiloader/multiloader-convention-plugins-settings/fuzs.multiloader.multiloader-convention-plugins-settings.gradle.plugin`](./fuzs/multiloader/multiloader-convention-plugins-settings/fuzs.multiloader.multiloader-convention-plugins-settings.gradle.plugin)
+
+<details>
+<summary>Artifacts</summary>
+
+### [`1.0-SNAPSHOT`](./fuzs/multiloader/multiloader-convention-plugins-settings/fuzs.multiloader.multiloader-convention-plugins-settings.gradle.plugin/1.0-SNAPSHOT)
+<details>
+<summary>Latest</summary>
+
+</details>
+
+<details>
+<summary>Versions</summary>
+
 </details>
 
 </details>
