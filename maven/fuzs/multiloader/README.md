@@ -3,6 +3,21 @@
 <details open>
 <summary>Artifacts</summary>
 
+### [`multiloader-convention-plugins`](./multiloader-convention-plugins)
+<details open>
+<summary>Latest</summary>
+
+- [1.0-SNAPSHOT](./multiloader-convention-plugins/1.0-SNAPSHOT)
+- [1.0.3](./multiloader-convention-plugins/1.0.3)
+</details>
+
+<details open>
+<summary>Versions</summary>
+
+- [1.0-SNAPSHOT](./multiloader-convention-plugins/1.0-SNAPSHOT)
+- [1.0.3](./multiloader-convention-plugins/1.0.3)
+</details>
+
 ### [`multiloader-conventions`](./multiloader-conventions)
 <details open>
 <summary>Latest</summary>
