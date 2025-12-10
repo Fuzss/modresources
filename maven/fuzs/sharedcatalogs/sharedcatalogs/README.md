@@ -25,4 +25,15 @@
 
 </details>
 
+### [`1.21.11-SNAPSHOT`](./1.21.11-SNAPSHOT)
+<details open>
+<summary>Latest</summary>
+
+</details>
+
+<details open>
+<summary>Versions</summary>
+
+</details>
+
 </details>
