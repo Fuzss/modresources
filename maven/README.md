@@ -2266,12 +2266,14 @@
 <details>
 <summary>Latest</summary>
 
+- [21.1.0](./fuzs/multiloaderruntimefixes/multiloaderruntimefixes-common/21.1.0)
 - [21.10.1](./fuzs/multiloaderruntimefixes/multiloaderruntimefixes-common/21.10.1)
 </details>
 
 <details>
 <summary>Versions</summary>
 
+- [21.1.0](./fuzs/multiloaderruntimefixes/multiloaderruntimefixes-common/21.1.0)
 - [21.10.1](./fuzs/multiloaderruntimefixes/multiloaderruntimefixes-common/21.10.1)
 </details>
 
@@ -2279,12 +2281,14 @@
 <details>
 <summary>Latest</summary>
 
+- [21.1.0](./fuzs/multiloaderruntimefixes/multiloaderruntimefixes-neoforge/21.1.0)
 - [21.10.1](./fuzs/multiloaderruntimefixes/multiloaderruntimefixes-neoforge/21.10.1)
 </details>
 
 <details>
 <summary>Versions</summary>
 
+- [21.1.0](./fuzs/multiloaderruntimefixes/multiloaderruntimefixes-neoforge/21.1.0)
 - [21.10.1](./fuzs/multiloaderruntimefixes/multiloaderruntimefixes-neoforge/21.10.1)
 </details>
 
