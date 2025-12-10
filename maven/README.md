@@ -2257,6 +2257,39 @@
 
 </details>
 
+## [`fuzs/multiloaderruntimefixes`](./fuzs/multiloaderruntimefixes)
+
+<details>
+<summary>Artifacts</summary>
+
+### [`multiloaderruntimefixes-common`](./fuzs/multiloaderruntimefixes/multiloaderruntimefixes-common)
+<details>
+<summary>Latest</summary>
+
+- [21.10.1](./fuzs/multiloaderruntimefixes/multiloaderruntimefixes-common/21.10.1)
+</details>
+
+<details>
+<summary>Versions</summary>
+
+- [21.10.1](./fuzs/multiloaderruntimefixes/multiloaderruntimefixes-common/21.10.1)
+</details>
+
+### [`multiloaderruntimefixes-neoforge`](./fuzs/multiloaderruntimefixes/multiloaderruntimefixes-neoforge)
+<details>
+<summary>Latest</summary>
+
+- [21.10.1](./fuzs/multiloaderruntimefixes/multiloaderruntimefixes-neoforge/21.10.1)
+</details>
+
+<details>
+<summary>Versions</summary>
+
+- [21.10.1](./fuzs/multiloaderruntimefixes/multiloaderruntimefixes-neoforge/21.10.1)
+</details>
+
+</details>
+
 ## [`fuzs/neoforgedatapackextensions`](./fuzs/neoforgedatapackextensions)
 
 <details>
