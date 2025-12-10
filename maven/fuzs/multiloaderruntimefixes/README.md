@@ -7,12 +7,14 @@
 <details open>
 <summary>Latest</summary>
 
+- [21.1.0](./multiloaderruntimefixes-common/21.1.0)
 - [21.10.1](./multiloaderruntimefixes-common/21.10.1)
 </details>
 
 <details open>
 <summary>Versions</summary>
 
+- [21.1.0](./multiloaderruntimefixes-common/21.1.0)
 - [21.10.1](./multiloaderruntimefixes-common/21.10.1)
 </details>
 
@@ -20,12 +22,14 @@
 <details open>
 <summary>Latest</summary>
 
+- [21.1.0](./multiloaderruntimefixes-neoforge/21.1.0)
 - [21.10.1](./multiloaderruntimefixes-neoforge/21.10.1)
 </details>
 
 <details open>
 <summary>Versions</summary>
 
+- [21.1.0](./multiloaderruntimefixes-neoforge/21.1.0)
 - [21.10.1](./multiloaderruntimefixes-neoforge/21.10.1)
 </details>
 
