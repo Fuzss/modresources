@@ -2257,6 +2257,28 @@
 
 </details>
 
+## [`fuzs/multiloaderaccesswideners`](./fuzs/multiloaderaccesswideners)
+
+<details>
+<summary>Artifacts</summary>
+
+### [`multiloaderaccesswideners-common`](./fuzs/multiloaderaccesswideners/multiloaderaccesswideners-common)
+<details>
+<summary>Latest</summary>
+
+- [21.1.0](./fuzs/multiloaderaccesswideners/multiloaderaccesswideners-common/21.1.0)
+- [21.10.0](./fuzs/multiloaderaccesswideners/multiloaderaccesswideners-common/21.10.0)
+</details>
+
+<details>
+<summary>Versions</summary>
+
+- [21.1.0](./fuzs/multiloaderaccesswideners/multiloaderaccesswideners-common/21.1.0)
+- [21.10.0](./fuzs/multiloaderaccesswideners/multiloaderaccesswideners-common/21.10.0)
+</details>
+
+</details>
+
 ## [`fuzs/multiloaderruntimefixes`](./fuzs/multiloaderruntimefixes)
 
 <details>
