@@ -191,8 +191,8 @@ def main():
     names = ", ".join(os.path.basename(f) for f in sorted_paths)
 
     with open(output_path, "w") as writer:
-        writer.write("# " + names + "\n")
         writer.write(TAB.join(header).expandtabs(4) + "\n")
+        writer.write("# " + names + "\n")
         for entry in matches:
             writer.write(entry.to_line().expandtabs(4) + "\n")
 
