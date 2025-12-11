@@ -69,6 +69,47 @@ def error2(message):
     log2("ERROR", "31", message)   # red
     sys.exit(1)
 
+def parse_semver(version):
+    # split build metadata if present
+    version = version.split("+", 1)[0]
+
+    if "-" in version:
+        core, prerelease = version.split("-", 1)
+        prerelease_parts = prerelease.split(".")
+    else:
+        core = version
+        prerelease_parts = []
+
+    core_parts = [int(x) for x in core.split(".")]
+
+    def normalize_prerelease(parts):
+        out = []
+        for part in parts:
+            if part.isdigit():
+                out.append((0, int(part)))  # numeric identifiers sort lower
+            else:
+                out.append((1, part))       # textual identifiers sort higher
+        return out
+
+    return core_parts, normalize_prerelease(prerelease_parts)
+
+def semver_less(a, b):
+    ac, ap = parse_semver(a)
+    bc, bp = parse_semver(b)
+
+    # compare numeric core
+    if ac != bc:
+        return ac < bc
+
+    # final version is higher than prerelease
+    if not ap and bp:
+        return False
+    if ap and not bp:
+        return True
+
+    # compare prerelease
+    return ap < bp
+
 def copy_from_template(source_path, destination_path):
     if os.path.isfile(source_path):
         shutil.copy(source_path, destination_path)
@@ -156,7 +197,7 @@ def find_gradle_property(prop, default=None):
         error2(f"Missing property {prop} in ~/.gradle/gradle.properties")
 
 def git_push_all(repo_path, project_name, commit_message):
-    token = find_gradle_property("githubCommitToken")
+    token = find_gradle_property("fuzs.multiloader.project.github.token")
     remote_url = f"https://{token}@github.com/Fuzss/{project_name}.git"
     commands = [
         ["git", "remote", "set-url", "origin", remote_url],
@@ -291,7 +332,7 @@ def string_in_file_if_exists(file_path, target):
         return target in f.read()
 
 def create_gradle_properties(args):
-    if args.upgrade:
+    if args.upgrade and semver_less(args.minecraft, "1.21.11"):
         gradle_properties = {
             "dependenciesPuzzlesLibVersion": None,
             "dependenciesMinPuzzlesLibVersion": None,
@@ -322,16 +363,16 @@ def create_gradle_properties(args):
 def run_launch(mod_loader, distribution, project_path):
     if mod_loader == "fabric":
         if distribution == "client":
-            subprocess.run(["./gradlew", "fabricClient"], cwd=project_path, check=True)
+            subprocess.run(["./gradlew", "fabric-client"], cwd=project_path, check=True)
         elif distribution == "server":
-            subprocess.run(["./gradlew", "fabricServer"], cwd=project_path, check=True)
+            subprocess.run(["./gradlew", "fabric-server"], cwd=project_path, check=True)
         else:
             error2(f"Unsupported argument: {distribution}")
     elif mod_loader == "neoforge":
         if distribution == "client":
-            subprocess.run(["./gradlew", "neoForgeClient"], cwd=project_path, check=True)
+            subprocess.run(["./gradlew", "neoforge-client"], cwd=project_path, check=True)
         elif distribution == "server":
-            subprocess.run(["./gradlew", "neoForgeServer"], cwd=project_path, check=True)
+            subprocess.run(["./gradlew", "neoforge-server"], cwd=project_path, check=True)
         else:
             error2(f"Unsupported argument: {distribution}")
     else:
@@ -340,31 +381,31 @@ def run_launch(mod_loader, distribution, project_path):
 def run_upload(mod_loader, website, project_path):
     if mod_loader == "fabric":
         if website == "curseforge":
-            subprocess.run(["./gradlew", "fabricUploadCurseForge"], cwd=project_path, check=True)
+            subprocess.run(["./gradlew", "fabric-curseforge"], cwd=project_path, check=True)
         elif website == "modrinth":
-            subprocess.run(["./gradlew", "fabricUploadModrinth"], cwd=project_path, check=True)
+            subprocess.run(["./gradlew", "fabric-modrinth"], cwd=project_path, check=True)
         elif website == "github":
-            subprocess.run(["./gradlew", "fabricUploadGitHub"], cwd=project_path, check=True)
+            subprocess.run(["./gradlew", "fabric-github"], cwd=project_path, check=True)
         else:
-            subprocess.run(["./gradlew", "fabricUploadEverywhere"], cwd=project_path, check=True)
+            subprocess.run(["./gradlew", "fabric-all"], cwd=project_path, check=True)
     elif mod_loader == "neoforge":
         if website == "curseforge":
-            subprocess.run(["./gradlew", "neoForgeUploadCurseForge"], cwd=project_path, check=True)
+            subprocess.run(["./gradlew", "neoforge-curseforge"], cwd=project_path, check=True)
         elif website == "modrinth":
-            subprocess.run(["./gradlew", "neoForgeUploadModrinth"], cwd=project_path, check=True)
+            subprocess.run(["./gradlew", "neoforge-modrinth"], cwd=project_path, check=True)
         elif website == "github":
-            subprocess.run(["./gradlew", "neoForgeUploadGitHub"], cwd=project_path, check=True)
+            subprocess.run(["./gradlew", "neoforge-github"], cwd=project_path, check=True)
         else:
-            subprocess.run(["./gradlew", "neoForgeUploadEverywhere"], cwd=project_path, check=True)
+            subprocess.run(["./gradlew", "neoforge-all"], cwd=project_path, check=True)
     else:
         if website == "curseforge":
-            subprocess.run(["./gradlew", "allUploadCurseForge"], cwd=project_path, check=True)
+            subprocess.run(["./gradlew", "all-curseforge"], cwd=project_path, check=True)
         elif website == "modrinth":
-            subprocess.run(["./gradlew", "allUploadModrinth"], cwd=project_path, check=True)
+            subprocess.run(["./gradlew", "all-modrinth"], cwd=project_path, check=True)
         elif website == "github":
-            subprocess.run(["./gradlew", "allUploadGitHub"], cwd=project_path, check=True)
+            subprocess.run(["./gradlew", "all-github"], cwd=project_path, check=True)
         else:
-            subprocess.run(["./gradlew", "allUploadEverywhere"], cwd=project_path, check=True)
+            subprocess.run(["./gradlew", "all-all"], cwd=project_path, check=True)
 
 def update_json_object(edits: dict):
     def _update_json_object(match):
@@ -581,7 +622,19 @@ def add_line_after_target(file_path, target_text, new_text):
 
     print(f"Updated {file_path}")
 
-def run_workspace_upgrade(args, base_path, root_path, project_path):
+def run_1_21_11_upgrade(args, base_path, root_path, project_path):
+    remove_directory_or_file(f"{project_path}/Common/build.gradle")
+    remove_directory_or_file(f"{project_path}/Common/src/main/resources/common.mixins.json")
+    remove_directory_or_file(f"{project_path}/Fabric/build.gradle")
+    remove_directory_or_file(f"{project_path}/Fabric/src/main/resources/fabric.mod.json")
+    remove_directory_or_file(f"{project_path}/Fabric/src/main/resources/fabric.mixins.json")
+    remove_directory_or_file(f"{project_path}/NeoForge/build.gradle")
+    remove_directory_or_file(f"{project_path}/NeoForge/src/main/resources/META-INF/neoforge.mods.toml")
+    remove_directory_or_file(f"{project_path}/NeoForge/src/main/resources/neoforge.mixins.json")
+    remove_directory_or_file(f"{project_path}/build.gradle")
+    remove_directory_or_file(f"{project_path}/settings.gradle")
+
+def run_1_21_10_upgrade(args, base_path, root_path, project_path):
     template_path = f"{base_path}/multiloader-workspace-template"
     copy_from_template(f"{template_path}/.gitignore", f"{root_path}/.gitignore")
     copy_from_template(f"{template_path}/.github", f"{root_path}/.github")
@@ -633,7 +686,7 @@ def run_workspace_upgrade(args, base_path, root_path, project_path):
 
 def main():
     args = parse_args()
-    base_path = find_gradle_property("modRoot")
+    base_path = find_gradle_property("fuzs.multiloader.project.root")
     root_path = args.path or f"{base_path}/{args.id}"
     project_path = f"{root_path}/{args.minecraft}"
     environment = validate_open_parameters(args.open, "finder")
@@ -669,7 +722,10 @@ def main():
 
     if args.upgrade:
         info2("Upgrading workspace...")
-        run_workspace_upgrade(args, base_path, root_path, project_path)
+        if semver_less("1.21.10", args.minecraft):
+            run_1_21_11_upgrade(args, base_path, root_path, project_path)
+        elif semver_less(args.minecraft, "1.21.11"):
+            run_1_21_10_upgrade(args, base_path, root_path, project_path)
 
     if args.version:
         changelog_path = f"{project_path}/CHANGELOG.md"
@@ -699,14 +755,14 @@ def main():
 
     if args.sources:
         info2("Generating sources...")
-        subprocess.run(["./gradlew", "commonGenSources"], cwd=project_path, check=True)
+        subprocess.run(["./gradlew", "common-sources"], cwd=project_path, check=True)
     elif not args.gradle:
         info2("Refreshing project...")
         subprocess.run(["./gradlew"], cwd=project_path, check=True)
 
     if args.data:
         info2("Running data generation...")
-        subprocess.run(["./gradlew", "neoForgeData"], cwd=project_path, check=True)
+        subprocess.run(["./gradlew", "neoforge-data"], cwd=project_path, check=True)
 
     for parameter_set in launch_parameters:
         info2(f"Launching {parameter_set[0].capitalize()} {parameter_set[1].capitalize()}...")
@@ -718,7 +774,7 @@ def main():
 
     if args.version and args.publish:
         info2(f"Publishing version v{args.version}...")
-        subprocess.run(["./gradlew", "allPublish"], cwd=project_path, check=True)
+        subprocess.run(["./gradlew", "all-publish"], cwd=project_path, check=True)
 
     if args.version and upload_parameters:
         info2(f"Uploading version v{args.version}{f" for {upload_parameters[0].capitalize()}" if upload_parameters[0] else ""}{f" to {upload_parameters[1].capitalize()}" if upload_parameters[1] else ""}...")
@@ -726,7 +782,7 @@ def main():
 
     if args.version and args.notify:
         info2(f"Notifying version v{args.version}...")
-        subprocess.run(["./gradlew", "notifyDiscord"], cwd=project_path, check=True)
+        subprocess.run(["./gradlew", "all-discord"], cwd=project_path, check=True)
 
 if __name__ == "__main__":
     main()
