@@ -3,16 +3,16 @@
   <groupId>fuzs.multiloader.multiloader-convention-plugins-fabric</groupId>
   <artifactId>fuzs.multiloader.multiloader-convention-plugins-fabric.gradle.plugin</artifactId>
   <versioning>
-    <lastUpdated>20251210155053</lastUpdated>
+    <lastUpdated>20251211083235</lastUpdated>
     <snapshot>
-      <timestamp>20251210.155053</timestamp>
-      <buildNumber>2</buildNumber>
+      <timestamp>20251211.083235</timestamp>
+      <buildNumber>3</buildNumber>
     </snapshot>
     <snapshotVersions>
       <snapshotVersion>
         <extension>pom</extension>
-        <value>1.0-20251210.155053-2</value>
-        <updated>20251210155053</updated>
+        <value>1.0-20251211.083235-3</value>
+        <updated>20251211083235</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>
