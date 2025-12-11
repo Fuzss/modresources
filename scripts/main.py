@@ -624,6 +624,7 @@ def add_line_after_target(file_path, target_text, new_text):
 
 def run_1_21_11_upgrade(args, base_path, root_path, project_path):
     remove_directory_or_file(f"{project_path}/Common/build.gradle")
+    remove_directory_or_file(f"{project_path}/Common/src/main/resources/architectury.common.json")
     remove_directory_or_file(f"{project_path}/Common/src/main/resources/common.mixins.json")
     remove_directory_or_file(f"{project_path}/Fabric/build.gradle")
     remove_directory_or_file(f"{project_path}/Fabric/src/main/resources/fabric.mod.json")
