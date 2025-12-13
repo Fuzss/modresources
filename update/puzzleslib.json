@@ -1,5 +1,5 @@
 {
-    "homepage": "https://www.curseforge.com/minecraft/mc-mods/puzzles-lib",
+    "homepage": "https://modrinth.com/mod/puzzles-lib",
     "promos": {
         "1.16.2-latest": "1.0.15",
         "1.16.2-recommended": "1.0.15",
@@ -37,6 +37,10 @@
         "1.21-recommended": "21.0.28",
         "1.21.1-latest": "21.1.39",
         "1.21.1-recommended": "21.1.39",
+        "1.21.10-latest": "21.10.8",
+        "1.21.10-recommended": "21.10.8",
+        "1.21.11-latest": "21.11.1",
+        "1.21.11-recommended": "21.11.1",
         "1.21.3-latest": "21.3.25",
         "1.21.3-recommended": "21.3.25",
         "1.21.4-latest": "21.4.14",
@@ -50,8 +54,6 @@
         "1.21.8-latest": "21.8.9",
         "1.21.8-recommended": "21.8.9",
         "1.21.9-latest": "21.9.5",
-        "1.21.9-recommended": "21.9.5",
-        "1.21.10-latest": "21.10.8",
-        "1.21.10-recommended": "21.10.8"
+        "1.21.9-recommended": "21.9.5"
     }
 }
