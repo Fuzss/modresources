@@ -1,0 +1,128 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "fuzs.multiloader",
+    "module": "multiloader-convention-plugins",
+    "version": "1.0.11",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.2.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "files": [
+        {
+          "name": "multiloader-convention-plugins-1.0.11.jar",
+          "url": "multiloader-convention-plugins-1.0.11.jar",
+          "size": 1082271,
+          "sha512": "a0a6774cf2bc706b033b48b45853267d9015b69fe37a39b0e0aa402e6192945588055781ab5f864ad5b5069b584461c8ae5e6a6c2317d30f3cc95fb555f52d70",
+          "sha256": "a981a645da6e5d9b9f962eb94323cbc3eefaf8a95e004c2b5fb7e4429fa095db",
+          "sha1": "adb08de01c8f4fb3879474100e88147441352096",
+          "md5": "f6ea32b02cc5ff1e7a0f78a91e83ba77"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.gradle.toolchains.foojay-resolver-convention",
+          "module": "org.gradle.toolchains.foojay-resolver-convention.gradle.plugin",
+          "version": {
+            "requires": "1.0.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-serialization-json",
+          "version": {
+            "requires": "1.9.0"
+          }
+        },
+        {
+          "group": "com.akuleshov7",
+          "module": "ktoml-core",
+          "version": {
+            "requires": "0.7.0"
+          }
+        },
+        {
+          "group": "dev.architectury.loom",
+          "module": "dev.architectury.loom.gradle.plugin",
+          "version": {
+            "requires": "1.13-SNAPSHOT"
+          }
+        },
+        {
+          "group": "me.modmuss50.mod-publish-plugin",
+          "module": "me.modmuss50.mod-publish-plugin.gradle.plugin",
+          "version": {
+            "requires": "1.1.0"
+          }
+        },
+        {
+          "group": "com.diffplug.spotless",
+          "module": "com.diffplug.spotless.gradle.plugin",
+          "version": {
+            "requires": "8.1.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "multiloader-convention-plugins-1.0.11.jar",
+          "url": "multiloader-convention-plugins-1.0.11.jar",
+          "size": 1082271,
+          "sha512": "a0a6774cf2bc706b033b48b45853267d9015b69fe37a39b0e0aa402e6192945588055781ab5f864ad5b5069b584461c8ae5e6a6c2317d30f3cc95fb555f52d70",
+          "sha256": "a981a645da6e5d9b9f962eb94323cbc3eefaf8a95e004c2b5fb7e4429fa095db",
+          "sha1": "adb08de01c8f4fb3879474100e88147441352096",
+          "md5": "f6ea32b02cc5ff1e7a0f78a91e83ba77"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "multiloader-convention-plugins-1.0.11-sources.jar",
+          "url": "multiloader-convention-plugins-1.0.11-sources.jar",
+          "size": 323490,
+          "sha512": "18d41284c65829243bc008a5f0542a4dac25ba320f30a80284a6dfe9e0df7b8dbb44397fa2c0785e4b1d403851a550162181e6e7cba9b6ba28b3a59c9a730206",
+          "sha256": "fbd03a36c75e2d812c64f21d6042d02d22a15e0984f2fb44c16d1b5616380563",
+          "sha1": "6310069b78cf928dc90ae24f9e7a76f7963e8975",
+          "md5": "93ba2f2bca7519ddd2fedee27d790f3b"
+        }
+      ]
+    }
+  ]
+}
