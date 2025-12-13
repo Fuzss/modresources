@@ -6,6 +6,7 @@ import subprocess
 import argparse
 import re
 import json
+import migrate_mod_properties
 from collections import defaultdict
 from datetime import date
 from datetime import datetime
@@ -52,6 +53,8 @@ def parse_args():
             args.sources = True
         if not args.changelog:
             args.changelog = [["changed", f"Update to Minecraft {args.minecraft}"]]
+        if not args.catalog:
+            args.catalog = "SNAPSHOT"
 
     return args
 
@@ -110,16 +113,19 @@ def semver_less(a, b):
     # compare prerelease
     return ap < bp
 
-def copy_from_template(source_path, destination_path):
+def copy_from_template(source_path, destination_path, only_if_absent=False):
+    if only_if_absent and os.path.exists(destination_path):
+        return
+
     if os.path.isfile(source_path):
         shutil.copy(source_path, destination_path)
 
     elif os.path.isdir(source_path):
-
         if os.path.exists(destination_path):
             shutil.rmtree(destination_path)
 
         shutil.copytree(source_path, destination_path)
+
     else:
         error2(f"Not found: {source_path}")
 
@@ -130,8 +136,10 @@ def move_directory_or_file(source_path, destination_path):
         shutil.move(source_path, destination_path)
         print(f"Moved {source_path} -> {destination_path}")
 
-def remove_directory_or_file(file_path):
+def remove_directory_or_file(file_path, only_if_empty=False):
     if os.path.isdir(file_path):
+        if only_if_empty and os.listdir(file_path):
+            return
         shutil.rmtree(file_path)
     elif os.path.isfile(file_path):
         os.remove(file_path)
@@ -349,10 +357,10 @@ def create_gradle_properties(args):
         gradle_properties = {}
 
     if args.version:
-        gradle_properties["modVersion"] = args.version
+        gradle_properties["mod.version"] = args.version
 
     if args.catalog:
-        gradle_properties["dependenciesVersionCatalog"] = f"{args.minecraft}-{args.catalog}"
+        gradle_properties["project.libs"] = f"{args.minecraft}-{args.catalog}"
 
     if args.properties:
         for key, value in args.properties:
@@ -622,29 +630,35 @@ def add_line_after_target(file_path, target_text, new_text):
 
     print(f"Updated {file_path}")
 
-def run_1_21_11_upgrade(args, base_path, root_path, project_path):
+def run_1_21_11_upgrade(args, template_path, project_path):
+    remove_directory_or_file(f"{project_path}/settings.gradle")
+    remove_directory_or_file(f"{project_path}/build.gradle")
     remove_directory_or_file(f"{project_path}/Common/build.gradle")
     remove_directory_or_file(f"{project_path}/Common/src/main/resources/architectury.common.json")
     remove_directory_or_file(f"{project_path}/Common/src/main/resources/common.mixins.json")
+    remove_directory_or_file(f"{project_path}/Common/src/main/resources/{args.id}.common.mixins.json")
     remove_directory_or_file(f"{project_path}/Fabric/build.gradle")
     remove_directory_or_file(f"{project_path}/Fabric/src/main/resources/fabric.mod.json")
     remove_directory_or_file(f"{project_path}/Fabric/src/main/resources/fabric.mixins.json")
+    remove_directory_or_file(f"{project_path}/Fabric/src/main/resources/{args.id}.fabric.mixins.json")
     remove_directory_or_file(f"{project_path}/NeoForge/build.gradle")
     remove_directory_or_file(f"{project_path}/NeoForge/src/main/resources/META-INF/neoforge.mods.toml")
+    remove_directory_or_file(f"{project_path}/NeoForge/src/main/resources/META-INF", only_if_empty=True)
     remove_directory_or_file(f"{project_path}/NeoForge/src/main/resources/neoforge.mixins.json")
-    remove_directory_or_file(f"{project_path}/build.gradle")
-    remove_directory_or_file(f"{project_path}/settings.gradle")
+    remove_directory_or_file(f"{project_path}/NeoForge/src/main/resources/{args.id}.neoforge.mixins.json")
 
-def run_1_21_10_upgrade(args, base_path, root_path, project_path):
-    template_path = f"{base_path}/multiloader-workspace-template"
-    copy_from_template(f"{template_path}/.gitignore", f"{root_path}/.gitignore")
-    copy_from_template(f"{template_path}/.github", f"{root_path}/.github")
+    copy_from_template(f"{template_path}/settings.gradle.kts", f"{project_path}/settings.gradle.kts")
+    copy_from_template(f"{template_path}/build.gradle.kts", f"{project_path}/build.gradle.kts")
+    copy_from_template(f"{template_path}/Common/build.gradle.kts", f"{project_path}/Common/build.gradle.kts", only_if_absent=True)
+    copy_from_template(f"{template_path}/Common/gradle.properties", f"{project_path}/Common/gradle.properties")
+    copy_from_template(f"{template_path}/Fabric/build.gradle.kts", f"{project_path}/Fabric/build.gradle.kts", only_if_absent=True)
+    copy_from_template(f"{template_path}/Fabric/gradle.properties", f"{project_path}/Fabric/gradle.properties")
+    copy_from_template(f"{template_path}/NeoForge/build.gradle.kts", f"{project_path}/NeoForge/build.gradle.kts", only_if_absent=True)
+    copy_from_template(f"{template_path}/NeoForge/gradle.properties", f"{project_path}/NeoForge/gradle.properties")
 
-    update_license_year(f"{root_path}/LICENSE-ASSETS.md")
+    migrate_mod_properties.migrate_properties(f"{project_path}/gradle.properties", f"{project_path}/gradle.properties")
 
-    remove_directory_or_file(f"{project_path}/Common/src/main/resources/pack.mcmeta")
-    remove_directory_or_file(f"{project_path}/Common/src/main/resources/mod_banner.png")
-
+def run_1_21_10_upgrade(args, template_path, project_path):
     move_directory_or_file(f"{project_path}/Common/src/main/resources/{args.id}.common.mixins.json", f"{project_path}/Common/src/main/resources/common.mixins.json")
     move_directory_or_file(f"{project_path}/Fabric/src/main/resources/{args.id}.fabric.mixins.json", f"{project_path}/Fabric/src/main/resources/fabric.mixins.json")
     move_directory_or_file(f"{project_path}/NeoForge/src/main/resources/{args.id}.neoforge.mixins.json", f"{project_path}/NeoForge/src/main/resources/neoforge.mixins.json")
@@ -680,6 +694,21 @@ def run_1_21_10_upgrade(args, base_path, root_path, project_path):
         "alias libs.plugins.minotaur apply false", 
         "alias libs.plugins.modpublishplugin apply false"
     )
+
+def run_workspace_upgrade(args, base_path, root_path, project_path):
+    template_path = f"{base_path}/multiloader-workspace-template"
+    copy_from_template(f"{template_path}/.gitignore", f"{root_path}/.gitignore")
+    copy_from_template(f"{template_path}/.github", f"{root_path}/.github")
+    update_license_year(f"{root_path}/LICENSE-ASSETS.md")
+    remove_directory_or_file(f"{project_path}/Common/src/main/resources/pack.mcmeta")
+    remove_directory_or_file(f"{project_path}/Common/src/main/resources/mod_banner.png")
+
+    if semver_less("1.21.10", args.minecraft):
+        print("Running 1.21.11 workspace upgrades")
+        run_1_21_11_upgrade(args, f"{template_path}/{args.minecraft}", project_path)
+    elif semver_less(args.minecraft, "1.21.11"):
+        print("Running 1.21.10 workspace upgrades")
+        run_1_21_10_upgrade(args, f"{template_path}/{args.minecraft}", project_path)
 
     if args.commit:
         if git_push_all(f"{root_path}", args.id, f"upgrade {args.minecraft} workspace"):
@@ -723,10 +752,7 @@ def main():
 
     if args.upgrade:
         info2("Upgrading workspace...")
-        if semver_less("1.21.10", args.minecraft):
-            run_1_21_11_upgrade(args, base_path, root_path, project_path)
-        elif semver_less(args.minecraft, "1.21.11"):
-            run_1_21_10_upgrade(args, base_path, root_path, project_path)
+        run_workspace_upgrade(args, base_path, root_path, project_path)
 
     if args.version:
         changelog_path = f"{project_path}/CHANGELOG.md"
@@ -760,6 +786,13 @@ def main():
     elif not args.gradle:
         info2("Refreshing project...")
         subprocess.run(["./gradlew"], cwd=project_path, check=True)
+
+    if args.upgrade:
+        info2("Applying Spotless...")
+        if semver_less("1.21.10", args.minecraft) and semver_less(args.minecraft, "1.21.12"):
+            subprocess.run(["./gradlew", "all-mountsofmayhem-apply"], cwd=project_path, check=True)
+
+        subprocess.run(["./gradlew", "all-java-apply"], cwd=project_path, check=True)
 
     if args.data:
         info2("Running data generation...")

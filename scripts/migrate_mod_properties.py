@@ -79,21 +79,19 @@ def convert_distributions(props):
 
     return result
 
-def main():
-    if len(sys.argv) < 3:
-        print("Usage: python3 convert_gradle.py <input_file> <output_file>")
-        sys.exit(1)
-
-    input_file = sys.argv[1]
-    output_file = sys.argv[2]
-
-    # Main conversion
+def migrate_properties(input_file, output_file):
     props = parse_old_properties(input_file)
+
+    if "dependenciesVersionCatalog" not in props:
+        print(f"Nothing to migrate in {input_file}")
+        return
+
     with open(output_file, "w", encoding="utf-8") as file:
-        file.write("org.gradle.jvmargs=-Xmx4G\n")
-        file.write("org.gradle.parallel=true\n")
+        file.write("org.gradle.caching=true\n")
         file.write("org.gradle.configuration-cache=false\n")
-        file.write("org.gradle.vfs.watch=false\n")
+        file.write("org.gradle.daemon=true\n")
+        file.write("org.gradle.jvmargs=-Xmx2G\n")
+        file.write("org.gradle.parallel=true\n")
         file.write("loom.ignoreDependencyLoomVersionValidation=true\n\n")
         old_version = props.get("dependenciesVersionCatalog")  # e.g., "1.21.10-v1"
         base_version = old_version.split("-")[0]  # "1.21.10"
@@ -125,6 +123,15 @@ def main():
         env_client, env_server = ENV_MAPPING.get(props.get("modFabricEnvironment", "*"), ("required", "required"))
         file.write(f"environments.client={env_client}\n")
         file.write(f"environments.server={env_server}\n")
+
+    print(f"Successfully migrated properties in {input_file}")
+
+def main():
+    if len(sys.argv) < 3:
+        print("Usage: python3 convert_gradle.py <input_file> <output_file>")
+        sys.exit(1)
+
+    migrate_properties(sys.argv[1], sys.argv[2])
 
 if __name__ == "__main__":
     main()

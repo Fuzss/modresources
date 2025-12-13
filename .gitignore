@@ -59,6 +59,7 @@ gradle-app.setting
 ### Other ###
 run
 .DS_Store
+__pycache__
 *.txt
 
 # Log file
