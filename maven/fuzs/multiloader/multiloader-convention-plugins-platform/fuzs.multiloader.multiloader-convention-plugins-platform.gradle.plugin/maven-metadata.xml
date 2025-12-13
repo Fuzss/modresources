@@ -4,7 +4,7 @@
   <artifactId>fuzs.multiloader.multiloader-convention-plugins-platform.gradle.plugin</artifactId>
   <versioning>
     <latest>1.0-SNAPSHOT</latest>
-    <release>1.0.10</release>
+    <release>1.0.11</release>
     <versions>
       <version>1.0-SNAPSHOT</version>
       <version>1.0.3</version>
@@ -15,7 +15,8 @@
       <version>1.0.8</version>
       <version>1.0.9</version>
       <version>1.0.10</version>
+      <version>1.0.11</version>
     </versions>
-    <lastUpdated>20251213084343</lastUpdated>
+    <lastUpdated>20251213204758</lastUpdated>
   </versioning>
 </metadata>
