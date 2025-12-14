@@ -7,6 +7,7 @@ import argparse
 import re
 import json
 import migrate_mod_properties
+import migrate_mixins
 from collections import defaultdict
 from datetime import date
 from datetime import datetime
@@ -49,12 +50,10 @@ def parse_args():
             args.data = True
         if not args.upgrade:
             args.upgrade = True
-        if not args.sources:
-            args.sources = True
-        if not args.changelog:
-            args.changelog = [["changed", f"Update to Minecraft {args.minecraft}"]]
         if not args.catalog:
             args.catalog = "SNAPSHOT"
+        if not args.changelog:
+            args.changelog = [["changed", f"Update to Minecraft {args.minecraft}"]]
 
     return args
 
@@ -631,6 +630,20 @@ def add_line_after_target(file_path, target_text, new_text):
     print(f"Updated {file_path}")
 
 def run_1_21_11_upgrade(args, template_path, project_path):
+    copy_from_template(f"{template_path}/settings.gradle.kts", f"{project_path}/settings.gradle.kts")
+    copy_from_template(f"{template_path}/build.gradle.kts", f"{project_path}/build.gradle.kts")
+    copy_from_template(f"{template_path}/Common/build.gradle.kts", f"{project_path}/Common/build.gradle.kts", only_if_absent=True)
+    copy_from_template(f"{template_path}/Common/gradle.properties", f"{project_path}/Common/gradle.properties")
+    copy_from_template(f"{template_path}/Fabric/build.gradle.kts", f"{project_path}/Fabric/build.gradle.kts", only_if_absent=True)
+    copy_from_template(f"{template_path}/Fabric/gradle.properties", f"{project_path}/Fabric/gradle.properties")
+    copy_from_template(f"{template_path}/NeoForge/build.gradle.kts", f"{project_path}/NeoForge/build.gradle.kts", only_if_absent=True)
+    copy_from_template(f"{template_path}/NeoForge/gradle.properties", f"{project_path}/NeoForge/gradle.properties")
+
+    migrate_mixins.convert_mixins(f"{project_path}/Common/src/main/resources/common.mixins.json", f"{project_path}/Common/build.gradle.kts")
+    migrate_mixins.convert_mixins(f"{project_path}/Fabric/src/main/resources/fabric.mixins.json", f"{project_path}/Fabric/build.gradle.kts")
+    migrate_mixins.convert_mixins(f"{project_path}/NeoForge/src/main/resources/neoforge.mixins.json", f"{project_path}/NeoForge/build.gradle.kts")
+    migrate_mod_properties.migrate_properties(f"{project_path}/gradle.properties", f"{project_path}/gradle.properties")
+
     remove_directory_or_file(f"{project_path}/settings.gradle")
     remove_directory_or_file(f"{project_path}/build.gradle")
     remove_directory_or_file(f"{project_path}/Common/build.gradle")
@@ -646,17 +659,6 @@ def run_1_21_11_upgrade(args, template_path, project_path):
     remove_directory_or_file(f"{project_path}/NeoForge/src/main/resources/META-INF", only_if_empty=True)
     remove_directory_or_file(f"{project_path}/NeoForge/src/main/resources/neoforge.mixins.json")
     remove_directory_or_file(f"{project_path}/NeoForge/src/main/resources/{args.id}.neoforge.mixins.json")
-
-    copy_from_template(f"{template_path}/settings.gradle.kts", f"{project_path}/settings.gradle.kts")
-    copy_from_template(f"{template_path}/build.gradle.kts", f"{project_path}/build.gradle.kts")
-    copy_from_template(f"{template_path}/Common/build.gradle.kts", f"{project_path}/Common/build.gradle.kts", only_if_absent=True)
-    copy_from_template(f"{template_path}/Common/gradle.properties", f"{project_path}/Common/gradle.properties")
-    copy_from_template(f"{template_path}/Fabric/build.gradle.kts", f"{project_path}/Fabric/build.gradle.kts", only_if_absent=True)
-    copy_from_template(f"{template_path}/Fabric/gradle.properties", f"{project_path}/Fabric/gradle.properties")
-    copy_from_template(f"{template_path}/NeoForge/build.gradle.kts", f"{project_path}/NeoForge/build.gradle.kts", only_if_absent=True)
-    copy_from_template(f"{template_path}/NeoForge/gradle.properties", f"{project_path}/NeoForge/gradle.properties")
-
-    migrate_mod_properties.migrate_properties(f"{project_path}/gradle.properties", f"{project_path}/gradle.properties")
 
 def run_1_21_10_upgrade(args, template_path, project_path):
     move_directory_or_file(f"{project_path}/Common/src/main/resources/{args.id}.common.mixins.json", f"{project_path}/Common/src/main/resources/common.mixins.json")
@@ -777,15 +779,14 @@ def main():
         update_gradle_properties(gradle_wrapper_properties_path, {
             "distributionUrl": f"https\\://services.gradle.org/distributions/gradle-{args.gradle}-bin.zip"
         })
-        info2("Refreshing project...")
         subprocess.run(["./gradlew", "wrapper", "--gradle-version", args.gradle], cwd=project_path, check=True)
+
+    info2("Refreshing project...")
+    subprocess.run(["./gradlew", "all-validate"], cwd=project_path, check=True)
 
     if args.sources:
         info2("Generating sources...")
         subprocess.run(["./gradlew", "common-sources"], cwd=project_path, check=True)
-    elif not args.gradle:
-        info2("Refreshing project...")
-        subprocess.run(["./gradlew"], cwd=project_path, check=True)
 
     if args.upgrade:
         info2("Applying Spotless...")
