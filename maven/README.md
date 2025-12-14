@@ -1267,6 +1267,7 @@
 - [21.8.0](./fuzs/hotbarslotcycling/hotbarslotcycling-common/21.8.0)
 - [21.9.0](./fuzs/hotbarslotcycling/hotbarslotcycling-common/21.9.0)
 - [21.10.0](./fuzs/hotbarslotcycling/hotbarslotcycling-common/21.10.0)
+- [21.11.0](./fuzs/hotbarslotcycling/hotbarslotcycling-common/21.11.0)
 </details>
 
 <details>
@@ -1286,6 +1287,7 @@
 - [21.8.0](./fuzs/hotbarslotcycling/hotbarslotcycling-common/21.8.0)
 - [21.9.0](./fuzs/hotbarslotcycling/hotbarslotcycling-common/21.9.0)
 - [21.10.0](./fuzs/hotbarslotcycling/hotbarslotcycling-common/21.10.0)
+- [21.11.0](./fuzs/hotbarslotcycling/hotbarslotcycling-common/21.11.0)
 </details>
 
 ### [`hotbarslotcycling-fabric`](./fuzs/hotbarslotcycling/hotbarslotcycling-fabric)
@@ -1303,6 +1305,7 @@
 - [21.8.0](./fuzs/hotbarslotcycling/hotbarslotcycling-fabric/21.8.0)
 - [21.9.0](./fuzs/hotbarslotcycling/hotbarslotcycling-fabric/21.9.0)
 - [21.10.0](./fuzs/hotbarslotcycling/hotbarslotcycling-fabric/21.10.0)
+- [21.11.0](./fuzs/hotbarslotcycling/hotbarslotcycling-fabric/21.11.0)
 </details>
 
 <details>
@@ -1322,6 +1325,7 @@
 - [21.8.0](./fuzs/hotbarslotcycling/hotbarslotcycling-fabric/21.8.0)
 - [21.9.0](./fuzs/hotbarslotcycling/hotbarslotcycling-fabric/21.9.0)
 - [21.10.0](./fuzs/hotbarslotcycling/hotbarslotcycling-fabric/21.10.0)
+- [21.11.0](./fuzs/hotbarslotcycling/hotbarslotcycling-fabric/21.11.0)
 </details>
 
 ### [`hotbarslotcycling-forge`](./fuzs/hotbarslotcycling/hotbarslotcycling-forge)
@@ -1354,6 +1358,7 @@
 - [21.8.0](./fuzs/hotbarslotcycling/hotbarslotcycling-neoforge/21.8.0)
 - [21.9.0](./fuzs/hotbarslotcycling/hotbarslotcycling-neoforge/21.9.0)
 - [21.10.0](./fuzs/hotbarslotcycling/hotbarslotcycling-neoforge/21.10.0)
+- [21.11.0](./fuzs/hotbarslotcycling/hotbarslotcycling-neoforge/21.11.0)
 </details>
 
 <details>
@@ -1373,6 +1378,7 @@
 - [21.8.0](./fuzs/hotbarslotcycling/hotbarslotcycling-neoforge/21.8.0)
 - [21.9.0](./fuzs/hotbarslotcycling/hotbarslotcycling-neoforge/21.9.0)
 - [21.10.0](./fuzs/hotbarslotcycling/hotbarslotcycling-neoforge/21.10.0)
+- [21.11.0](./fuzs/hotbarslotcycling/hotbarslotcycling-neoforge/21.11.0)
 </details>
 
 </details>
@@ -4927,6 +4933,7 @@
 - [21.8.3](./fuzs/tooltipinsights/tooltipinsights-common/21.8.3)
 - [21.9.0](./fuzs/tooltipinsights/tooltipinsights-common/21.9.0)
 - [21.10.1](./fuzs/tooltipinsights/tooltipinsights-common/21.10.1)
+- [21.11.0](./fuzs/tooltipinsights/tooltipinsights-common/21.11.0)
 </details>
 
 <details>
@@ -4939,6 +4946,7 @@
 - [21.9.0](./fuzs/tooltipinsights/tooltipinsights-common/21.9.0)
 - [21.10.0](./fuzs/tooltipinsights/tooltipinsights-common/21.10.0)
 - [21.10.1](./fuzs/tooltipinsights/tooltipinsights-common/21.10.1)
+- [21.11.0](./fuzs/tooltipinsights/tooltipinsights-common/21.11.0)
 </details>
 
 ### [`tooltipinsights-fabric`](./fuzs/tooltipinsights/tooltipinsights-fabric)
@@ -4948,6 +4956,7 @@
 - [21.8.3](./fuzs/tooltipinsights/tooltipinsights-fabric/21.8.3)
 - [21.9.0](./fuzs/tooltipinsights/tooltipinsights-fabric/21.9.0)
 - [21.10.1](./fuzs/tooltipinsights/tooltipinsights-fabric/21.10.1)
+- [21.11.0](./fuzs/tooltipinsights/tooltipinsights-fabric/21.11.0)
 </details>
 
 <details>
@@ -4960,6 +4969,7 @@
 - [21.9.0](./fuzs/tooltipinsights/tooltipinsights-fabric/21.9.0)
 - [21.10.0](./fuzs/tooltipinsights/tooltipinsights-fabric/21.10.0)
 - [21.10.1](./fuzs/tooltipinsights/tooltipinsights-fabric/21.10.1)
+- [21.11.0](./fuzs/tooltipinsights/tooltipinsights-fabric/21.11.0)
 </details>
 
 ### [`tooltipinsights-neoforge`](./fuzs/tooltipinsights/tooltipinsights-neoforge)
@@ -4969,6 +4979,7 @@
 - [21.8.3](./fuzs/tooltipinsights/tooltipinsights-neoforge/21.8.3)
 - [21.9.0](./fuzs/tooltipinsights/tooltipinsights-neoforge/21.9.0)
 - [21.10.1](./fuzs/tooltipinsights/tooltipinsights-neoforge/21.10.1)
+- [21.11.0](./fuzs/tooltipinsights/tooltipinsights-neoforge/21.11.0)
 </details>
 
 <details>
@@ -4981,6 +4992,7 @@
 - [21.9.0](./fuzs/tooltipinsights/tooltipinsights-neoforge/21.9.0)
 - [21.10.0](./fuzs/tooltipinsights/tooltipinsights-neoforge/21.10.0)
 - [21.10.1](./fuzs/tooltipinsights/tooltipinsights-neoforge/21.10.1)
+- [21.11.0](./fuzs/tooltipinsights/tooltipinsights-neoforge/21.11.0)
 </details>
 
 </details>
