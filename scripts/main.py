@@ -781,19 +781,19 @@ def main():
         })
         subprocess.run(["./gradlew", "wrapper", "--gradle-version", args.gradle], cwd=project_path, check=True)
 
-    info2("Refreshing project...")
-    subprocess.run(["./gradlew", "all-validate"], cwd=project_path, check=True)
-
-    if args.sources:
-        info2("Generating sources...")
-        subprocess.run(["./gradlew", "common-sources"], cwd=project_path, check=True)
-
     if args.upgrade:
         info2("Applying Spotless...")
         if semver_less("1.21.10", args.minecraft) and semver_less(args.minecraft, "1.21.12"):
             subprocess.run(["./gradlew", "all-mountsofmayhem-apply"], cwd=project_path, check=True)
 
         subprocess.run(["./gradlew", "all-java-apply"], cwd=project_path, check=True)
+
+    info2("Refreshing project...")
+    subprocess.run(["./gradlew", "all-validate"], cwd=project_path, check=True)
+
+    if args.sources:
+        info2("Generating sources...")
+        subprocess.run(["./gradlew", "common-sources"], cwd=project_path, check=True)
 
     if args.data:
         info2("Running data generation...")
