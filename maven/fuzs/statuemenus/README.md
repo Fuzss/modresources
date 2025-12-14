@@ -18,6 +18,7 @@
 - [21.8.1](./statuemenus-common/21.8.1)
 - [21.9.0](./statuemenus-common/21.9.0)
 - [21.10.6](./statuemenus-common/21.10.6)
+- [21.11.0](./statuemenus-common/21.11.0)
 </details>
 
 <details open>
@@ -48,6 +49,7 @@
 - [21.10.4](./statuemenus-common/21.10.4)
 - [21.10.5](./statuemenus-common/21.10.5)
 - [21.10.6](./statuemenus-common/21.10.6)
+- [21.11.0](./statuemenus-common/21.11.0)
 </details>
 
 ### [`statuemenus-fabric`](./statuemenus-fabric)
@@ -65,6 +67,7 @@
 - [21.8.1](./statuemenus-fabric/21.8.1)
 - [21.9.0](./statuemenus-fabric/21.9.0)
 - [21.10.6](./statuemenus-fabric/21.10.6)
+- [21.11.0](./statuemenus-fabric/21.11.0)
 </details>
 
 <details open>
@@ -95,6 +98,7 @@
 - [21.10.4](./statuemenus-fabric/21.10.4)
 - [21.10.5](./statuemenus-fabric/21.10.5)
 - [21.10.6](./statuemenus-fabric/21.10.6)
+- [21.11.0](./statuemenus-fabric/21.11.0)
 </details>
 
 ### [`statuemenus-forge`](./statuemenus-forge)
@@ -127,6 +131,7 @@
 - [21.8.1](./statuemenus-neoforge/21.8.1)
 - [21.9.0](./statuemenus-neoforge/21.9.0)
 - [21.10.6](./statuemenus-neoforge/21.10.6)
+- [21.11.0](./statuemenus-neoforge/21.11.0)
 </details>
 
 <details open>
@@ -157,6 +162,7 @@
 - [21.10.4](./statuemenus-neoforge/21.10.4)
 - [21.10.5](./statuemenus-neoforge/21.10.5)
 - [21.10.6](./statuemenus-neoforge/21.10.6)
+- [21.11.0](./statuemenus-neoforge/21.11.0)
 </details>
 
 </details>
