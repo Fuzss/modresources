@@ -1,12 +1,14 @@
 {
-    "homepage": "https://github.com/Fuzss/partycreepers",
+    "homepage": "https://modrinth.com/mod/party-creepers",
     "promos": {
-        "1.21.10-latest": "21.10.1",
-        "1.21.10-recommended": "21.10.1",
         "1.20.4-latest": "20.4.0",
         "1.20.4-recommended": "20.4.0",
         "1.21.1-latest": "21.1.1",
         "1.21.1-recommended": "21.1.1",
+        "1.21.10-latest": "21.10.1",
+        "1.21.10-recommended": "21.10.1",
+        "1.21.11-latest": "21.11.0",
+        "1.21.11-recommended": "21.11.0",
         "1.21.3-latest": "21.3.0",
         "1.21.3-recommended": "21.3.0",
         "1.21.4-latest": "21.4.0",
