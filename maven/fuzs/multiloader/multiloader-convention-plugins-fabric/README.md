@@ -8,7 +8,7 @@
 <summary>Latest</summary>
 
 - [1.0-SNAPSHOT](./fuzs.multiloader.multiloader-convention-plugins-fabric.gradle.plugin/1.0-SNAPSHOT)
-- [1.0.12](./fuzs.multiloader.multiloader-convention-plugins-fabric.gradle.plugin/1.0.12)
+- [1.0.13](./fuzs.multiloader.multiloader-convention-plugins-fabric.gradle.plugin/1.0.13)
 </details>
 
 <details open>
@@ -25,6 +25,7 @@
 - [1.0.10](./fuzs.multiloader.multiloader-convention-plugins-fabric.gradle.plugin/1.0.10)
 - [1.0.11](./fuzs.multiloader.multiloader-convention-plugins-fabric.gradle.plugin/1.0.11)
 - [1.0.12](./fuzs.multiloader.multiloader-convention-plugins-fabric.gradle.plugin/1.0.12)
+- [1.0.13](./fuzs.multiloader.multiloader-convention-plugins-fabric.gradle.plugin/1.0.13)
 </details>
 
 </details>
