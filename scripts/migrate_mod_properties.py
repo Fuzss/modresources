@@ -3,9 +3,9 @@ import sys
 
 # Environment mapping
 ENV_MAPPING = {
-    "client": ("required", "unsupported"),
-    "server": ("unsupported", "required"),
-    "*": ("required", "required")
+    "IGNORE_ALL_VERSION": ("required", "unsupported"),
+    "IGNORE_SERVER_VERSION": ("unsupported", "required"),
+    "MATCH_VERSION": ("required", "required")
 }
 
 # Helper functions
@@ -120,7 +120,7 @@ def migrate_properties(input_file, output_file):
         if dists:
             file.write("\n")
         
-        env_client, env_server = ENV_MAPPING.get(props.get("modFabricEnvironment", "*"), ("required", "required"))
+        env_client, env_server = ENV_MAPPING.get(props.get("modForgeDisplayTest", "MATCH_VERSION"), ("required", "required"))
         file.write(f"environments.client={env_client}\n")
         file.write(f"environments.server={env_server}\n")
 
