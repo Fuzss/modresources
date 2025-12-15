@@ -4,7 +4,7 @@
   <artifactId>fuzs.multiloader.multiloader-convention-plugins-neoforge.gradle.plugin</artifactId>
   <versioning>
     <latest>1.0-SNAPSHOT</latest>
-    <release>1.0.13</release>
+    <release>1.0.14</release>
     <versions>
       <version>1.0-SNAPSHOT</version>
       <version>1.0.3</version>
@@ -18,7 +18,8 @@
       <version>1.0.11</version>
       <version>1.0.12</version>
       <version>1.0.13</version>
+      <version>1.0.14</version>
     </versions>
-    <lastUpdated>20251214090358</lastUpdated>
+    <lastUpdated>20251215135757</lastUpdated>
   </versioning>
 </metadata>
