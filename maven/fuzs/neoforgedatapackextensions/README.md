@@ -16,7 +16,7 @@
 - [21.8.0](./neoforgedatapackextensions-common/21.8.0)
 - [21.9.3](./neoforgedatapackextensions-common/21.9.3)
 - [21.10.0](./neoforgedatapackextensions-common/21.10.0)
-- [21.11.0](./neoforgedatapackextensions-common/21.11.0)
+- [21.11.1](./neoforgedatapackextensions-common/21.11.1)
 </details>
 
 <details open>
@@ -41,6 +41,7 @@
 - [21.9.3](./neoforgedatapackextensions-common/21.9.3)
 - [21.10.0](./neoforgedatapackextensions-common/21.10.0)
 - [21.11.0](./neoforgedatapackextensions-common/21.11.0)
+- [21.11.1](./neoforgedatapackextensions-common/21.11.1)
 </details>
 
 ### [`neoforgedatapackextensions-fabric`](./neoforgedatapackextensions-fabric)
@@ -56,7 +57,7 @@
 - [21.8.0](./neoforgedatapackextensions-fabric/21.8.0)
 - [21.9.3](./neoforgedatapackextensions-fabric/21.9.3)
 - [21.10.0](./neoforgedatapackextensions-fabric/21.10.0)
-- [21.11.0](./neoforgedatapackextensions-fabric/21.11.0)
+- [21.11.1](./neoforgedatapackextensions-fabric/21.11.1)
 </details>
 
 <details open>
@@ -81,6 +82,7 @@
 - [21.9.3](./neoforgedatapackextensions-fabric/21.9.3)
 - [21.10.0](./neoforgedatapackextensions-fabric/21.10.0)
 - [21.11.0](./neoforgedatapackextensions-fabric/21.11.0)
+- [21.11.1](./neoforgedatapackextensions-fabric/21.11.1)
 </details>
 
 ### [`neoforgedatapackextensions-neoforge`](./neoforgedatapackextensions-neoforge)
@@ -96,7 +98,7 @@
 - [21.8.0](./neoforgedatapackextensions-neoforge/21.8.0)
 - [21.9.3](./neoforgedatapackextensions-neoforge/21.9.3)
 - [21.10.0](./neoforgedatapackextensions-neoforge/21.10.0)
-- [21.11.0](./neoforgedatapackextensions-neoforge/21.11.0)
+- [21.11.1](./neoforgedatapackextensions-neoforge/21.11.1)
 </details>
 
 <details open>
@@ -121,6 +123,7 @@
 - [21.9.3](./neoforgedatapackextensions-neoforge/21.9.3)
 - [21.10.0](./neoforgedatapackextensions-neoforge/21.10.0)
 - [21.11.0](./neoforgedatapackextensions-neoforge/21.11.0)
+- [21.11.1](./neoforgedatapackextensions-neoforge/21.11.1)
 </details>
 
 </details>

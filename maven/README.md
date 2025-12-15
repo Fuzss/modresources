@@ -2479,7 +2479,7 @@
 - [21.8.0](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-common/21.8.0)
 - [21.9.3](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-common/21.9.3)
 - [21.10.0](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-common/21.10.0)
-- [21.11.0](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-common/21.11.0)
+- [21.11.1](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-common/21.11.1)
 </details>
 
 <details>
@@ -2504,6 +2504,7 @@
 - [21.9.3](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-common/21.9.3)
 - [21.10.0](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-common/21.10.0)
 - [21.11.0](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-common/21.11.0)
+- [21.11.1](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-common/21.11.1)
 </details>
 
 ### [`neoforgedatapackextensions-fabric`](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-fabric)
@@ -2519,7 +2520,7 @@
 - [21.8.0](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-fabric/21.8.0)
 - [21.9.3](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-fabric/21.9.3)
 - [21.10.0](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-fabric/21.10.0)
-- [21.11.0](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-fabric/21.11.0)
+- [21.11.1](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-fabric/21.11.1)
 </details>
 
 <details>
@@ -2544,6 +2545,7 @@
 - [21.9.3](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-fabric/21.9.3)
 - [21.10.0](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-fabric/21.10.0)
 - [21.11.0](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-fabric/21.11.0)
+- [21.11.1](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-fabric/21.11.1)
 </details>
 
 ### [`neoforgedatapackextensions-neoforge`](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-neoforge)
@@ -2559,7 +2561,7 @@
 - [21.8.0](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-neoforge/21.8.0)
 - [21.9.3](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-neoforge/21.9.3)
 - [21.10.0](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-neoforge/21.10.0)
-- [21.11.0](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-neoforge/21.11.0)
+- [21.11.1](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-neoforge/21.11.1)
 </details>
 
 <details>
@@ -2584,6 +2586,7 @@
 - [21.9.3](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-neoforge/21.9.3)
 - [21.10.0](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-neoforge/21.10.0)
 - [21.11.0](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-neoforge/21.11.0)
+- [21.11.1](./fuzs/neoforgedatapackextensions/neoforgedatapackextensions-neoforge/21.11.1)
 </details>
 
 </details>
