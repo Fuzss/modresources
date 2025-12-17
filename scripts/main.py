@@ -708,7 +708,7 @@ def run_workspace_upgrade(args, base_path, root_path, project_path):
     if semver_less("1.21.10", args.minecraft):
         print("Running 1.21.11 workspace upgrades")
         run_1_21_11_upgrade(args, f"{template_path}/{args.minecraft}", project_path)
-    elif semver_less(args.minecraft, "1.21.11"):
+    elif False and semver_less(args.minecraft, "1.21.11"):
         print("Running 1.21.10 workspace upgrades")
         run_1_21_10_upgrade(args, f"{template_path}/{args.minecraft}", project_path)
 
