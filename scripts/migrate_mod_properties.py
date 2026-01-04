@@ -90,7 +90,7 @@ def migrate_properties(input_file, output_file):
         file.write("org.gradle.caching=true\n")
         file.write("org.gradle.configuration-cache=false\n")
         file.write("org.gradle.daemon=true\n")
-        file.write("org.gradle.jvmargs=-Xmx2G\n")
+        file.write("org.gradle.jvmargs=-Xmx4G\n")
         file.write("org.gradle.parallel=true\n")
         file.write("loom.ignoreDependencyLoomVersionValidation=true\n\n")
         old_version = props.get("dependenciesVersionCatalog")  # e.g., "1.21.10-v1"
