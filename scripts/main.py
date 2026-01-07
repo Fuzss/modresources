@@ -27,6 +27,7 @@ def parse_args():
     parser.add_argument('--copy', type=str, default=None, metavar="LEGACY_GAME_VERSION", help="Copy from existing game version. Example: --copy 1.21.5.")
     parser.add_argument('--move', type=str, default=None, metavar="LEGACY_GAME_VERSION", help="Move existing game version. Example: --move 1.21.7.")
     parser.add_argument('--upgrade', default=False, action="store_true", help="Run workspace upgrade.")
+    parser.add_argument('--legacy', default=False, action="store_true", help="Use legacy Gradle task names.")
     parser.add_argument('--sources', default=False, action="store_true", help="Generate common sources.")
     parser.add_argument('--gradle', type=str, default=None, metavar="GRADLE_VERSION", help="Gradle wrapper version. Example: --gradle 8.14.3.")
     parser.add_argument('--id', type=str, required=True, metavar="MOD_ID", help="Mod id. Example: --id examplemod.")
@@ -356,10 +357,10 @@ def create_gradle_properties(args):
         gradle_properties = {}
 
     if args.version:
-        gradle_properties["mod.version"] = args.version
+        gradle_properties["modVersion" if args.legacy else "mod.version"] = args.version
 
     if args.catalog:
-        gradle_properties["project.libs"] = f"{args.minecraft}-{args.catalog}"
+        gradle_properties["dependenciesVersionCatalog" if args.legacy else "project.libs"] = f"{args.minecraft}-{args.catalog}"
 
     if args.properties:
         for key, value in args.properties:
@@ -367,52 +368,52 @@ def create_gradle_properties(args):
 
     return gradle_properties
 
-def run_launch(mod_loader, distribution, project_path):
+def run_launch(mod_loader, distribution, project_path, legacy_task_names=False):
     if mod_loader == "fabric":
         if distribution == "client":
-            subprocess.run(["./gradlew", "fabric-client"], cwd=project_path, check=True)
+            subprocess.run(["./gradlew", "fabricClient" if legacy_task_names else "fabric-client"], cwd=project_path, check=True)
         elif distribution == "server":
-            subprocess.run(["./gradlew", "fabric-server"], cwd=project_path, check=True)
+            subprocess.run(["./gradlew", "fabricServer" if legacy_task_names else "fabric-server"], cwd=project_path, check=True)
         else:
             error2(f"Unsupported argument: {distribution}")
     elif mod_loader == "neoforge":
         if distribution == "client":
-            subprocess.run(["./gradlew", "neoforge-client"], cwd=project_path, check=True)
+            subprocess.run(["./gradlew", "neoForgeClient" if legacy_task_names else "neoforge-client"], cwd=project_path, check=True)
         elif distribution == "server":
-            subprocess.run(["./gradlew", "neoforge-server"], cwd=project_path, check=True)
+            subprocess.run(["./gradlew", "neoForgeServer" if legacy_task_names else "neoforge-server"], cwd=project_path, check=True)
         else:
             error2(f"Unsupported argument: {distribution}")
     else:
         error2(f"Unsupported argument: {mod_loader}")
 
-def run_upload(mod_loader, website, project_path):
+def run_upload(mod_loader, website, project_path, legacy_task_names=False):
     if mod_loader == "fabric":
         if website == "curseforge":
-            subprocess.run(["./gradlew", "fabric-curseforge"], cwd=project_path, check=True)
+            subprocess.run(["./gradlew", "fabricUploadCurseForge" if legacy_task_names else "fabric-curseforge"], cwd=project_path, check=True)
         elif website == "modrinth":
-            subprocess.run(["./gradlew", "fabric-modrinth"], cwd=project_path, check=True)
+            subprocess.run(["./gradlew", "fabricUploadModrinth" if legacy_task_names else "fabric-modrinth"], cwd=project_path, check=True)
         elif website == "github":
-            subprocess.run(["./gradlew", "fabric-github"], cwd=project_path, check=True)
+            subprocess.run(["./gradlew", "fabricUploadGitHub" if legacy_task_names else "fabric-github"], cwd=project_path, check=True)
         else:
-            subprocess.run(["./gradlew", "fabric-all"], cwd=project_path, check=True)
+            subprocess.run(["./gradlew", "fabricUploadEverywhere" if legacy_task_names else "fabric-all"], cwd=project_path, check=True)
     elif mod_loader == "neoforge":
         if website == "curseforge":
-            subprocess.run(["./gradlew", "neoforge-curseforge"], cwd=project_path, check=True)
+            subprocess.run(["./gradlew", "neoForgeUploadCurseForge" if legacy_task_names else "neoforge-curseforge"], cwd=project_path, check=True)
         elif website == "modrinth":
-            subprocess.run(["./gradlew", "neoforge-modrinth"], cwd=project_path, check=True)
+            subprocess.run(["./gradlew", "neoForgeUploadModrinth" if legacy_task_names else "neoforge-modrinth"], cwd=project_path, check=True)
         elif website == "github":
-            subprocess.run(["./gradlew", "neoforge-github"], cwd=project_path, check=True)
+            subprocess.run(["./gradlew", "neoForgeUploadGitHub" if legacy_task_names else "neoforge-github"], cwd=project_path, check=True)
         else:
-            subprocess.run(["./gradlew", "neoforge-all"], cwd=project_path, check=True)
+            subprocess.run(["./gradlew", "neoForgeUploadEverywhere" if legacy_task_names else "neoforge-all"], cwd=project_path, check=True)
     else:
         if website == "curseforge":
-            subprocess.run(["./gradlew", "all-curseforge"], cwd=project_path, check=True)
+            subprocess.run(["./gradlew", "allUploadCurseForge" if legacy_task_names else "all-curseforge"], cwd=project_path, check=True)
         elif website == "modrinth":
-            subprocess.run(["./gradlew", "all-modrinth"], cwd=project_path, check=True)
+            subprocess.run(["./gradlew", "allUploadModrinth" if legacy_task_names else "all-modrinth"], cwd=project_path, check=True)
         elif website == "github":
-            subprocess.run(["./gradlew", "all-github"], cwd=project_path, check=True)
+            subprocess.run(["./gradlew", "allUploadGitHub" if legacy_task_names else "all-github"], cwd=project_path, check=True)
         else:
-            subprocess.run(["./gradlew", "all-all"], cwd=project_path, check=True)
+            subprocess.run(["./gradlew", "allUploadEverywhere" if legacy_task_names else "all-all"], cwd=project_path, check=True)
 
 def update_json_object(edits: dict):
     def _update_json_object(match):
@@ -789,19 +790,22 @@ def main():
         subprocess.run(["./gradlew", "all-java-apply"], cwd=project_path, check=True)
 
     info2("Refreshing project...")
-    subprocess.run(["./gradlew", "all-validate"], cwd=project_path, check=True)
+    if args.legacy:
+        subprocess.run(["./gradlew"], cwd=project_path, check=True)
+    else:
+        subprocess.run(["./gradlew", "all-validate"], cwd=project_path, check=True)
 
     if args.sources:
         info2("Generating sources...")
-        subprocess.run(["./gradlew", "common-sources"], cwd=project_path, check=True)
+        subprocess.run(["./gradlew", "commonGenSources" if args.legacy else "common-sources"], cwd=project_path, check=True)
 
     if args.data:
         info2("Running data generation...")
-        subprocess.run(["./gradlew", "neoforge-data"], cwd=project_path, check=True)
+        subprocess.run(["./gradlew", "neoForgeData" if args.legacy else "neoforge-data"], cwd=project_path, check=True)
 
     for parameter_set in launch_parameters:
         info2(f"Launching {parameter_set[0].capitalize()} {parameter_set[1].capitalize()}...")
-        run_launch(parameter_set[0], parameter_set[1], project_path)
+        run_launch(parameter_set[0], parameter_set[1], project_path, args.legacy)
 
     if args.version and args.commit:
         info2(f"Commiting version v{args.version}...")
@@ -809,15 +813,15 @@ def main():
 
     if args.version and args.publish:
         info2(f"Publishing version v{args.version}...")
-        subprocess.run(["./gradlew", "all-publish"], cwd=project_path, check=True)
+        subprocess.run(["./gradlew", "allPublish" if args.legacy else "all-publish"], cwd=project_path, check=True)
 
     if args.version and upload_parameters:
         info2(f"Uploading version v{args.version}{f" for {upload_parameters[0].capitalize()}" if upload_parameters[0] else ""}{f" to {upload_parameters[1].capitalize()}" if upload_parameters[1] else ""}...")
-        run_upload(upload_parameters[0], upload_parameters[1], project_path)
+        run_upload(upload_parameters[0], upload_parameters[1], project_path, args.legacy)
 
     if args.version and args.notify:
         info2(f"Notifying version v{args.version}...")
-        subprocess.run(["./gradlew", "all-discord"], cwd=project_path, check=True)
+        subprocess.run(["./gradlew", "notifyDiscord" if args.legacy else "all-discord"], cwd=project_path, check=True)
 
 if __name__ == "__main__":
     main()
