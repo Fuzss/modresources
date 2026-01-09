@@ -30,7 +30,7 @@
 - [21.8.9](./puzzleslib-common/21.8.9)
 - [21.9.5](./puzzleslib-common/21.9.5)
 - [21.10.8](./puzzleslib-common/21.10.8)
-- [21.11.5](./puzzleslib-common/21.11.5)
+- [21.11.6](./puzzleslib-common/21.11.6)
 </details>
 
 <details open>
@@ -489,6 +489,7 @@
 - [21.11.3](./puzzleslib-common/21.11.3)
 - [21.11.4](./puzzleslib-common/21.11.4)
 - [21.11.5](./puzzleslib-common/21.11.5)
+- [21.11.6](./puzzleslib-common/21.11.6)
 </details>
 
 ### [`puzzleslib-fabric`](./puzzleslib-fabric)
@@ -518,7 +519,7 @@
 - [21.8.9](./puzzleslib-fabric/21.8.9)
 - [21.9.5](./puzzleslib-fabric/21.9.5)
 - [21.10.8](./puzzleslib-fabric/21.10.8)
-- [21.11.5](./puzzleslib-fabric/21.11.5)
+- [21.11.6](./puzzleslib-fabric/21.11.6)
 </details>
 
 <details open>
@@ -977,6 +978,7 @@
 - [21.11.3](./puzzleslib-fabric/21.11.3)
 - [21.11.4](./puzzleslib-fabric/21.11.4)
 - [21.11.5](./puzzleslib-fabric/21.11.5)
+- [21.11.6](./puzzleslib-fabric/21.11.6)
 </details>
 
 ### [`puzzleslib-forge`](./puzzleslib-forge)
@@ -1304,7 +1306,7 @@
 - [21.8.9](./puzzleslib-neoforge/21.8.9)
 - [21.9.5](./puzzleslib-neoforge/21.9.5)
 - [21.10.8](./puzzleslib-neoforge/21.10.8)
-- [21.11.5](./puzzleslib-neoforge/21.11.5)
+- [21.11.6](./puzzleslib-neoforge/21.11.6)
 </details>
 
 <details open>
@@ -1530,6 +1532,7 @@
 - [21.11.3](./puzzleslib-neoforge/21.11.3)
 - [21.11.4](./puzzleslib-neoforge/21.11.4)
 - [21.11.5](./puzzleslib-neoforge/21.11.5)
+- [21.11.6](./puzzleslib-neoforge/21.11.6)
 </details>
 
 </details>
