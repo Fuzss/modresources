@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>fuzs.sharedcatalogs</groupId>
+  <artifactId>sharedcatalogs</artifactId>
+  <versioning>
+    <lastUpdated>20260323084935</lastUpdated>
+    <snapshot>
+      <timestamp>20260323.084935</timestamp>
+      <buildNumber>1</buildNumber>
+    </snapshot>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>26.1-20260323.084935-1</value>
+        <updated>20260323084935</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>module</extension>
+        <value>26.1-20260323.084935-1</value>
+        <updated>20260323084935</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>toml</extension>
+        <value>26.1-20260323.084935-1</value>
+        <updated>20260323084935</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+  <version>26.1-SNAPSHOT</version>
+</metadata>
