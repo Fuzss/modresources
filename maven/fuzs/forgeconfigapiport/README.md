@@ -27,7 +27,7 @@
 - [21.9.8](./forgeconfigapiport-common/21.9.8)
 - [21.10.1](./forgeconfigapiport-common/21.10.1)
 - [21.11.1](./forgeconfigapiport-common/21.11.1)
-- [26.1.0.0](./forgeconfigapiport-common/26.1.0.0)
+- [26.1.0.1](./forgeconfigapiport-common/26.1.0.1)
 </details>
 
 <details open>
@@ -117,6 +117,7 @@
 - [21.11.0](./forgeconfigapiport-common/21.11.0)
 - [21.11.1](./forgeconfigapiport-common/21.11.1)
 - [26.1.0.0](./forgeconfigapiport-common/26.1.0.0)
+- [26.1.0.1](./forgeconfigapiport-common/26.1.0.1)
 </details>
 
 ### [`forgeconfigapiport-common-forgeapi`](./forgeconfigapiport-common-forgeapi)
@@ -137,7 +138,7 @@
 - [21.9.8](./forgeconfigapiport-common-forgeapi/21.9.8)
 - [21.10.1](./forgeconfigapiport-common-forgeapi/21.10.1)
 - [21.11.1](./forgeconfigapiport-common-forgeapi/21.11.1)
-- [26.1.0.0](./forgeconfigapiport-common-forgeapi/26.1.0.0)
+- [26.1.0.1](./forgeconfigapiport-common-forgeapi/26.1.0.1)
 </details>
 
 <details open>
@@ -203,6 +204,7 @@
 - [21.11.0](./forgeconfigapiport-common-forgeapi/21.11.0)
 - [21.11.1](./forgeconfigapiport-common-forgeapi/21.11.1)
 - [26.1.0.0](./forgeconfigapiport-common-forgeapi/26.1.0.0)
+- [26.1.0.1](./forgeconfigapiport-common-forgeapi/26.1.0.1)
 </details>
 
 ### [`forgeconfigapiport-common-neoforgeapi`](./forgeconfigapiport-common-neoforgeapi)
@@ -223,7 +225,7 @@
 - [21.9.8](./forgeconfigapiport-common-neoforgeapi/21.9.8)
 - [21.10.1](./forgeconfigapiport-common-neoforgeapi/21.10.1)
 - [21.11.1](./forgeconfigapiport-common-neoforgeapi/21.11.1)
-- [26.1.0.0](./forgeconfigapiport-common-neoforgeapi/26.1.0.0)
+- [26.1.0.1](./forgeconfigapiport-common-neoforgeapi/26.1.0.1)
 </details>
 
 <details open>
@@ -289,6 +291,7 @@
 - [21.11.0](./forgeconfigapiport-common-neoforgeapi/21.11.0)
 - [21.11.1](./forgeconfigapiport-common-neoforgeapi/21.11.1)
 - [26.1.0.0](./forgeconfigapiport-common-neoforgeapi/26.1.0.0)
+- [26.1.0.1](./forgeconfigapiport-common-neoforgeapi/26.1.0.1)
 </details>
 
 ### [`forgeconfigapiport-fabric`](./forgeconfigapiport-fabric)
@@ -315,7 +318,7 @@
 - [21.9.8](./forgeconfigapiport-fabric/21.9.8)
 - [21.10.1](./forgeconfigapiport-fabric/21.10.1)
 - [21.11.1](./forgeconfigapiport-fabric/21.11.1)
-- [26.1.0.0](./forgeconfigapiport-fabric/26.1.0.0)
+- [26.1.0.1](./forgeconfigapiport-fabric/26.1.0.1)
 </details>
 
 <details open>
@@ -406,6 +409,7 @@
 - [21.11.0](./forgeconfigapiport-fabric/21.11.0)
 - [21.11.1](./forgeconfigapiport-fabric/21.11.1)
 - [26.1.0.0](./forgeconfigapiport-fabric/26.1.0.0)
+- [26.1.0.1](./forgeconfigapiport-fabric/26.1.0.1)
 </details>
 
 ### [`forgeconfigapiport-forge`](./forgeconfigapiport-forge)
@@ -496,7 +500,7 @@
 - [21.9.8](./forgeconfigapiport-neoforge/21.9.8)
 - [21.10.1](./forgeconfigapiport-neoforge/21.10.1)
 - [21.11.1](./forgeconfigapiport-neoforge/21.11.1)
-- [26.1.0.0](./forgeconfigapiport-neoforge/26.1.0.0)
+- [26.1.0.1](./forgeconfigapiport-neoforge/26.1.0.1)
 </details>
 
 <details open>
@@ -562,6 +566,7 @@
 - [21.11.0](./forgeconfigapiport-neoforge/21.11.0)
 - [21.11.1](./forgeconfigapiport-neoforge/21.11.1)
 - [26.1.0.0](./forgeconfigapiport-neoforge/26.1.0.0)
+- [26.1.0.1](./forgeconfigapiport-neoforge/26.1.0.1)
 </details>
 
 </details>
