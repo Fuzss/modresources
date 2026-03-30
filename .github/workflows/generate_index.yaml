@@ -27,5 +27,5 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add ./maven/README.md ./maven/**/README.md
-          git commit -m "Update index [skip ci]" || echo "No changes"
+          git diff-index --quiet HEAD || git commit -m "Auto-update index [skip ci]"
           git push
