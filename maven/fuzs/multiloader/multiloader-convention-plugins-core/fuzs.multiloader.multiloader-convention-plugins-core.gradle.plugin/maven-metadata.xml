@@ -3,8 +3,8 @@
   <groupId>fuzs.multiloader.multiloader-convention-plugins-core</groupId>
   <artifactId>fuzs.multiloader.multiloader-convention-plugins-core.gradle.plugin</artifactId>
   <versioning>
-    <latest>1.0-SNAPSHOT</latest>
-    <release>1.0.17</release>
+    <latest>1.1-SNAPSHOT</latest>
+    <release>1.1.0</release>
     <versions>
       <version>1.0-SNAPSHOT</version>
       <version>1.0.3</version>
@@ -22,7 +22,9 @@
       <version>1.0.15</version>
       <version>1.0.16</version>
       <version>1.0.17</version>
+      <version>1.1.0</version>
+      <version>1.1-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20260104083437</lastUpdated>
+    <lastUpdated>20260331085428</lastUpdated>
   </versioning>
 </metadata>
