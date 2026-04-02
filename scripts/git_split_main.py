@@ -96,7 +96,7 @@ def main():
     os.chdir(repo_path)
 
     # Pattern for version directories
-    version_pattern = re.compile(r"^\d+\.\d+\.\d+$")
+    version_pattern = re.compile(r"^\d+\.\d+\.(\d+|x)$")
 
     # Find all version directories
     version_dirs = [d.name for d in repo_path.iterdir() if d.is_dir() and version_pattern.match(d.name)]
