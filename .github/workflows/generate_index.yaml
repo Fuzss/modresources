@@ -20,7 +20,7 @@ jobs:
           python-version: '3.x'
 
       - name: Run index generator
-        run: python3 scripts/generate_index.py
+        run: python3 .github/scripts/generate_index.py
 
       - name: Commit changes
         run: |
