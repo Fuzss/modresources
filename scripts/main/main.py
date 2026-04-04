@@ -23,26 +23,27 @@ UPLOADING_SITES = {"curseforge", "modrinth", "github"}
 def parse_args():
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('--path', type=str, default=None, metavar="ROOT_PATH", help="Override default root path. Example: --path /absolute/path/to/project.")
-    parser.add_argument('--copy', type=str, default=None, metavar="LEGACY_GAME_VERSION", help="Copy from existing game version. Example: --copy 1.21.5.")
-    parser.add_argument('--move', type=str, default=None, metavar="LEGACY_GAME_VERSION", help="Move existing game version. Example: --move 1.21.7.")
-    parser.add_argument('--upgrade', default=False, action="store_true", help="Run workspace upgrade.")
-    parser.add_argument('--legacy', default=False, action="store_true", help="Use legacy Gradle task names.")
-    parser.add_argument('--sources', default=False, action="store_true", help="Generate common sources.")
-    parser.add_argument('--gradle', type=str, default=None, metavar="GRADLE_VERSION", help="Gradle wrapper version. Example: --gradle 8.14.3.")
-    parser.add_argument('--id', type=str, required=True, metavar="MOD_ID", help="Mod id. Example: --id examplemod.")
-    parser.add_argument('--version', type=str, default=None, metavar="PROJECT_VERSION", help="Mod version. Example: --version 21.8.0.")
-    parser.add_argument('--minecraft', type=str, required=True, metavar="GAME_VERSION", help="Game version. Example: --minecraft 1.21.8.")
-    parser.add_argument('--catalog', type=str, default=None, metavar="VERSION_CATALOG", help="Version catalog version. Example: --catalog v1.")
-    parser.add_argument('--data', default=False, action="store_true", help="Generate data.")
-    parser.add_argument('--launch', default=[], action="append", nargs="*", metavar=("MOD_LOADER", "DISTRIBUTION"), help="Launch the game. Format: --launch MOD_LOADER DISTRIBUTION. Can be used multiple times.")
+    parser.add_argument('--catalog', type=str, default=None, metavar="VERSION_CATALOG", help="Version catalog version. Example: --catalog v1")
+    parser.add_argument("--changelog", default=None, action="append", nargs=2, metavar=("SECTION", "LINE"), help="Add a changelog line, can be used multiple times.. Format: --changelog SECTION LINE")
     parser.add_argument('--commit', default=False, action="store_true", help="Commit to GitHub.")
-    parser.add_argument('--upload', default=None, nargs="*", metavar=("MOD_LOADER", "WEBSITE"), help="Upload to CurseForge, Modrinth, or GitHub. Format: --upload MOD_LOADER WEBSITE.")
-    parser.add_argument('--open', default=None, nargs="*", metavar="ENVIRONMENT", help="Open in Finder, or Idea. Format: --open ENVIRONMENT.")
-    parser.add_argument('--publish', default=False, action="store_true", help="Publish to Maven.")
+    parser.add_argument('--copy', type=str, default=None, metavar="LEGACY_GAME_VERSION", help="Copy from existing game version. Example: --copy 1.21.5")
+    parser.add_argument('--data', default=False, action="store_true", help="Generate data.")
+    parser.add_argument('--gradle', nargs='?', type=str, const="latest", default=None, metavar="GRADLE_VERSION", help="Gradle wrapper version. Example: --gradle [9.4.1]")
+    parser.add_argument('--id', type=str, required=True, metavar="MOD_ID", help="Mod id. Example: --id examplemod")
+    parser.add_argument('--init', default=False, action="store_true", help="Setup git repository and version branch.")
+    parser.add_argument('--launch', default=[], action="append", nargs="*", metavar=("MOD_LOADER", "DISTRIBUTION"), help="Launch the game, can be used multiple times. Format: --launch MOD_LOADER DISTRIBUTION")
+    parser.add_argument('--legacy', default=False, action="store_true", help="Use legacy Gradle task names.")
+    parser.add_argument('--minecraft', type=str, required=True, metavar="GAME_VERSION", help="Game version. Example: --minecraft 1.21.8")
+    parser.add_argument('--move', type=str, default=None, metavar="LEGACY_GAME_VERSION", help="Move existing game version. Example: --move 1.21.7")
     parser.add_argument('--notify', default=False, action="store_true", help="Notify via Discord webhook.")
-    parser.add_argument("--changelog", default=None, action="append", nargs=2, metavar=("SECTION", "LINE"), help="Add a changelog line. Format: --changelog SECTION LINE. Can be used multiple times.")
-    parser.add_argument("--properties", default=None, action="append", nargs=2, metavar=("KEY", "VALUE"), help="Set a gradle.properties value. Format: --properties KEY VALUE. Can be used multiple times.")
+    parser.add_argument('--open', default=None, nargs="*", metavar="ENVIRONMENT", help="Open in Finder, or Idea. Format: --open ENVIRONMENT")
+    parser.add_argument('--path', type=str, default=None, metavar="ROOT_PATH", help="Override default root path. Example: --path /absolute/path/to/project")
+    parser.add_argument("--properties", default=None, action="append", nargs=2, metavar=("KEY", "VALUE"), help="Set a gradle.properties value, can be used multiple times.. Format: --properties KEY VALUE")
+    parser.add_argument('--publish', default=False, action="store_true", help="Publish to Maven.")
+    parser.add_argument('--sources', default=False, action="store_true", help="Generate common sources.")
+    parser.add_argument('--upgrade', nargs='?', const=True, default=None, help="Run workspace upgrade, potentially for a specific version. Example: --upgrade [1.21.11]")
+    parser.add_argument('--upload', default=None, nargs="*", metavar=("MOD_LOADER", "WEBSITE"), help="Upload to CurseForge, Modrinth, or GitHub. Format: --upload MOD_LOADER WEBSITE")
+    parser.add_argument('--version', type=str, default=None, metavar="PROJECT_VERSION", help="Mod version. Example: --version 21.8.0")
 
     args = parser.parse_args()
     
@@ -71,47 +72,6 @@ def warn2(message):
 def error2(message):
     log2("ERROR", "31", message)   # red
     sys.exit(1)
-
-def parse_semver(version):
-    # split build metadata if present
-    version = version.split("+", 1)[0]
-
-    if "-" in version:
-        core, prerelease = version.split("-", 1)
-        prerelease_parts = prerelease.split(".")
-    else:
-        core = version
-        prerelease_parts = []
-
-    core_parts = [int(x) for x in core.split(".")]
-
-    def normalize_prerelease(parts):
-        out = []
-        for part in parts:
-            if part.isdigit():
-                out.append((0, int(part)))  # numeric identifiers sort lower
-            else:
-                out.append((1, part))       # textual identifiers sort higher
-        return out
-
-    return core_parts, normalize_prerelease(prerelease_parts)
-
-def semver_less(a, b):
-    ac, ap = parse_semver(a)
-    bc, bp = parse_semver(b)
-
-    # compare numeric core
-    if ac != bc:
-        return ac < bc
-
-    # final version is higher than prerelease
-    if not ap and bp:
-        return False
-    if ap and not bp:
-        return True
-
-    # compare prerelease
-    return ap < bp
 
 def copy_from_template(source_path, destination_path, only_if_absent=False):
     if only_if_absent and os.path.exists(destination_path):
@@ -340,7 +300,7 @@ def string_in_file_if_exists(file_path, target):
         return target in f.read()
 
 def create_gradle_properties(args):
-    if args.upgrade and semver_less(args.minecraft, "1.21.11"):
+    if args.upgrade == "1.21.10":
         gradle_properties = {
             "dependenciesPuzzlesLibVersion": None,
             "dependenciesMinPuzzlesLibVersion": None,
@@ -630,6 +590,12 @@ def add_line_after_target(file_path, target_text, new_text):
 
     print(f"Updated {file_path}")
 
+def run_26_1_upgrade(args, template_path, project_path):
+    move_directory_or_file(f"{project_path}/Common/src/main/resources/mod_logo.png", f"{project_path}/Common/src/main/resources/pack.png")
+    replace_text_block(f"{project_path}/Common/build.gradle.kts", "(libs.", "(sharedLibs.", use_regex=False)
+    replace_text_block(f"{project_path}/Fabric/build.gradle.kts", "(libs.", "(sharedLibs.", use_regex=False)
+    replace_text_block(f"{project_path}/NeoForge/build.gradle.kts", "(libs.", "(sharedLibs.", use_regex=False)
+
 def run_1_21_11_upgrade(args, template_path, project_path):
     copy_from_template(f"{template_path}/settings.gradle.kts", f"{project_path}/settings.gradle.kts")
     copy_from_template(f"{template_path}/build.gradle.kts", f"{project_path}/build.gradle.kts")
@@ -706,12 +672,14 @@ def run_workspace_upgrade(args, base_path, root_path, project_path):
     remove_directory_or_file(f"{project_path}/Common/src/main/resources/pack.mcmeta")
     remove_directory_or_file(f"{project_path}/Common/src/main/resources/mod_banner.png")
 
-    if semver_less("1.21.10", args.minecraft):
-        print("Running 1.21.11 workspace upgrades")
-        run_1_21_11_upgrade(args, f"{template_path}/{args.minecraft}", project_path)
-    elif False and semver_less(args.minecraft, "1.21.11"):
-        print("Running 1.21.10 workspace upgrades")
-        run_1_21_10_upgrade(args, f"{template_path}/{args.minecraft}", project_path)
+    if isinstance(args.upgrade, str):
+        print(f"Running {args.upgrade} workspace upgrades")
+        if args.upgrade == "26.1":
+            run_26_1_upgrade(args, f"{template_path}/{args.minecraft}", project_path)
+        elif args.upgrade == "1.21.11":
+            run_1_21_11_upgrade(args, f"{template_path}/{args.minecraft}", project_path)
+        elif args.upgrade == "1.21.10":
+            run_1_21_10_upgrade(args, f"{template_path}/{args.minecraft}", project_path)
 
     if args.commit:
         if git_push_all(f"{root_path}", args.id, f"upgrade {args.minecraft} workspace"):
@@ -720,7 +688,7 @@ def run_workspace_upgrade(args, base_path, root_path, project_path):
 def main():
     args = parse_args()
     base_path = find_gradle_property("fuzs.multiloader.project.root")
-    root_path = args.path or f"{base_path}/{args.id}"
+    root_path = args.path or f"{base_path}/mods/{args.id}"
     project_path = f"{root_path}/{args.minecraft}"
     environment = validate_open_parameters(args.open, "finder")
     changelog_section_data = parse_changelog_sections(args.changelog)
@@ -729,6 +697,11 @@ def main():
         for launch in args.launch 
     ]
     upload_parameters = validate_upload_parameters(args.upload)
+
+    if args.init:
+        info2(f"Running init at {root_path}...")
+        root_path.mkdir(parents=True, exist_ok=True)
+        # TODO expand on this
 
     if args.version and args.catalog and (args.move or args.copy):
         info2(f"Preparing Minecraft version {args.minecraft}...")
@@ -759,7 +732,7 @@ def main():
 
     if args.version:
         changelog_path = f"{project_path}/CHANGELOG.md"
-        full_version = f"v{args.version}-{args.minecraft}"
+        full_version = f"v{args.version}-mc{args.minecraft}"
 
         if changelog_section_data:
             info2(f"Updating CHANGELOG.md...")
@@ -784,8 +757,10 @@ def main():
 
     if args.upgrade:
         info2("Applying Spotless...")
-        if semver_less("1.21.10", args.minecraft) and semver_less(args.minecraft, "1.21.12"):
+        if args.upgrade == "1.21.11":
             subprocess.run(["./gradlew", "all-mountsofmayhem-apply"], cwd=project_path, check=True)
+        elif args.upgrade == "1.21.10":
+            subprocess.run(["./gradlew", "all-thecopperage-apply"], cwd=project_path, check=True)
 
         subprocess.run(["./gradlew", "all-java-apply"], cwd=project_path, check=True)
 
