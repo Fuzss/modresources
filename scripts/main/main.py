@@ -26,28 +26,30 @@ def parse_args():
     parser.add_argument('--catalog', type=str, default=None, metavar="VERSION_CATALOG", help="Version catalog version. Example: --catalog v1")
     parser.add_argument("--changelog", default=None, action="append", nargs=2, metavar=("SECTION", "LINE"), help="Add a changelog line, can be used multiple times.. Format: --changelog SECTION LINE")
     parser.add_argument('--commit', default=False, action="store_true", help="Commit to GitHub.")
-    parser.add_argument('--copy', type=str, default=None, metavar="LEGACY_GAME_VERSION", help="Copy from existing game version. Example: --copy 1.21.5")
     parser.add_argument('--data', default=False, action="store_true", help="Generate data.")
     parser.add_argument('--gradle', nargs='?', type=str, const="latest", default=None, metavar="GRADLE_VERSION", help="Gradle wrapper version. Example: --gradle [9.4.1]")
-    parser.add_argument('--id', type=str, required=True, metavar="MOD_ID", help="Mod id. Example: --id examplemod")
-    parser.add_argument('--init', default=False, action="store_true", help="Setup git repository and version branch.")
+    parser.add_argument('--id', type=str, default=None, metavar="MOD_ID", help="Mod id. Example: --id examplemod")
+    parser.add_argument('--init', nargs='?', const=True, default=None, metavar="SOURCE_BRANCH", help="Setup git repository and version branch. Example: --init [1.21.11]")
     parser.add_argument('--launch', default=[], action="append", nargs="*", metavar=("MOD_LOADER", "DISTRIBUTION"), help="Launch the game, can be used multiple times. Format: --launch MOD_LOADER DISTRIBUTION")
     parser.add_argument('--legacy', default=False, action="store_true", help="Use legacy Gradle task names.")
     parser.add_argument('--minecraft', type=str, required=True, metavar="GAME_VERSION", help="Game version. Example: --minecraft 1.21.8")
-    parser.add_argument('--move', type=str, default=None, metavar="LEGACY_GAME_VERSION", help="Move existing game version. Example: --move 1.21.7")
+    parser.add_argument('--name', type=str, required=True, metavar="REPOSITORY_NAME", help="Repository name. Example: --name example-mod")
     parser.add_argument('--notify', default=False, action="store_true", help="Notify via Discord webhook.")
     parser.add_argument('--open', default=None, nargs="*", metavar="ENVIRONMENT", help="Open in Finder, or Idea. Format: --open ENVIRONMENT")
     parser.add_argument('--path', type=str, default=None, metavar="ROOT_PATH", help="Override default root path. Example: --path /absolute/path/to/project")
     parser.add_argument("--properties", default=None, action="append", nargs=2, metavar=("KEY", "VALUE"), help="Set a gradle.properties value, can be used multiple times.. Format: --properties KEY VALUE")
     parser.add_argument('--publish', default=False, action="store_true", help="Publish to Maven.")
     parser.add_argument('--sources', default=False, action="store_true", help="Generate common sources.")
-    parser.add_argument('--upgrade', nargs='?', const=True, default=None, help="Run workspace upgrade, potentially for a specific version. Example: --upgrade [1.21.11]")
+    parser.add_argument('--upgrade', nargs='?', const=True, default=None, metavar="PATCHES_NAME", help="Run workspace upgrade, potentially for a specific version. Example: --upgrade [1.21.11]")
     parser.add_argument('--upload', default=None, nargs="*", metavar=("MOD_LOADER", "WEBSITE"), help="Upload to CurseForge, Modrinth, or GitHub. Format: --upload MOD_LOADER WEBSITE")
     parser.add_argument('--version', type=str, default=None, metavar="PROJECT_VERSION", help="Mod version. Example: --version 21.8.0")
 
     args = parser.parse_args()
+
+    if not args.id:
+        args.id = args.name.replace("-", "")
     
-    if args.move or args.copy:
+    if args.init is True:
         if not args.data:
             args.data = True
         if not args.upgrade:
@@ -164,9 +166,12 @@ def find_gradle_property(prop, default=None):
     else:
         error2(f"Missing property {prop} in ~/.gradle/gradle.properties")
 
-def git_push_all(repo_path, project_name, commit_message):
+def get_remote_url(args):
     token = find_gradle_property("fuzs.multiloader.project.github.token")
-    remote_url = f"https://{token}@github.com/Fuzss/{project_name}.git"
+    return f"https://{token}@github.com/Fuzss/{args.name}.git"
+
+def git_push_all(args, repo_path, commit_message):
+    remote_url = get_remote_url(args)
     commands = [
         ["git", "remote", "set-url", "origin", remote_url],
         ["git", "add", "."]
@@ -524,28 +529,53 @@ def update_toml_file(file_path, updates: dict):
     print(f"Updated {file_path}")
 
 def prepare_new_version(args, root_path, project_path):
-    if args.move:
-        projectSource = f"{root_path}/{args.move}"
-        if os.path.isdir(projectSource):
-            shutil.move(projectSource, project_path)
-            print(f"Moved {projectSource} -> {project_path}")
-        else:
-            error2(f"Failed to move: {projectSource} -> {project_path}")
+    remote_url = get_remote_url(args)
+    new_branch = args.minecraft
+    source_branch = args.init
 
-    if args.copy:
-        projectSource = f"{root_path}/{args.copy}"
-        if os.path.isdir(projectSource):
-            shutil.copytree(projectSource, project_path)
-            print(f"Copied {projectSource} -> {project_path}")
-        else:
-            error2(f"Failed to copy: {projectSource} -> {project_path}")
+    # check if remote branch exists
+    result = subprocess.run(
+        ["git", "ls-remote", "--heads", remote_url, new_branch],
+        capture_output=True,
+        text=True,
+        check=True
+    )
+
+    branch_exists = bool(result.stdout.strip())
+
+    if branch_exists:
+        # clone existing branch
+        subprocess.run(
+            ["git", "clone", "--branch", new_branch, "--single-branch", remote_url, new_branch],
+            cwd=root_path,
+            check=True
+        )
+    else:
+        # clone default then create branch
+        subprocess.run(
+            ["git", "clone", remote_url, new_branch],
+            cwd=root_path,
+            check=True
+        )
+
+        subprocess.run(
+            ["git", "checkout", "-B", new_branch, f"origin/{source_branch}"],
+            cwd=project_path,
+            check=True
+        )
+
+        subprocess.run(
+            ["git", "push", "-u", "origin", new_branch],
+            cwd=project_path,
+            check=True
+        )
 
     remove_directory_or_file(f"{project_path}/.idea")
     remove_directory_or_file(f"{project_path}/.gradle")
     remove_directory_or_file(f"{project_path}/CHANGELOG.md")
 
     if args.commit:
-        if git_push_all(f"{root_path}", args.id, f"prepare {args.minecraft} port"):
+        if git_push_all(args, project_path, f"prepare {args.minecraft} port"):
             print("Committed new version preparations")
 
 def replace_text_block(file_path, pattern, replacement, use_regex=True):
@@ -682,7 +712,7 @@ def run_workspace_upgrade(args, base_path, root_path, project_path):
             run_1_21_10_upgrade(args, f"{template_path}/{args.minecraft}", project_path)
 
     if args.commit:
-        if git_push_all(f"{root_path}", args.id, f"upgrade {args.minecraft} workspace"):
+        if git_push_all(args, project_path, f"upgrade {args.minecraft} workspace"):
             print("Committed workspace upgrades")
 
 def main():
@@ -700,12 +730,11 @@ def main():
 
     if args.init:
         info2(f"Running init at {root_path}...")
-        root_path.mkdir(parents=True, exist_ok=True)
-        # TODO expand on this
+        clone_versions.setup_git(args.name)
 
-    if args.version and args.catalog and (args.move or args.copy):
-        info2(f"Preparing Minecraft version {args.minecraft}...")
-        prepare_new_version(args, root_path, project_path)
+        if args.version and args.catalog and isinstance(args.init, str):
+            info2(f"Preparing Minecraft version {args.minecraft}...")
+            prepare_new_version(args, root_path, project_path)
 
     if not os.path.isdir(project_path):
         error2(f"Directory not found: {project_path}")
@@ -784,7 +813,7 @@ def main():
 
     if args.version and args.commit:
         info2(f"Commiting version v{args.version}...")
-        git_push_all(f"{root_path}", args.id, f"release v{args.version}")
+        git_push_all(args, project_path, f"release v{args.version}")
 
     if args.version and args.publish:
         info2(f"Publishing version v{args.version}...")
