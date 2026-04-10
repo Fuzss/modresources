@@ -12,6 +12,8 @@ DEFAULT_BRANCHES = {
         "1.20.1": "fixes"
     }
 
+VERSIONS_FILE = "versions.json"
+
 
 def run(command, cwd=None, capture=False):
     if capture:
@@ -51,44 +53,56 @@ def get_remote_branches(repo_dir):
     return branches
 
 
-def ensure_versions_file(main_dir):
-    versions_file = main_dir / "versions.json"
+def load_versions_file(main_path, versions_file, branch_overrides=None):
+    data = {}
 
     if versions_file.exists():
-        return
+        with versions_file.open("r", encoding="utf-8") as f:
+            data = json.load(f)
 
-    print("versions.json missing, creating from defaults")
+    if data:
+        if not branch_overrides:
+            return data
 
-    remote_branches = get_remote_branches(main_dir)
+    else:
+        print("versions.json missing, creating from defaults")
 
-    filtered_branches = {
-        version: state
-        for version, state in DEFAULT_BRANCHES.items()
-        if version in remote_branches
-    }
+        remote_branches = get_remote_branches(main_path)
 
-    data = {"branches": filtered_branches}
+        filtered_branches = {
+            version: state
+            for version, state in DEFAULT_BRANCHES.items()
+            if version in remote_branches
+        }
+
+        data = {"branches": filtered_branches}
+
+    branches = data.setdefault("branches", {})
+
+    for version, state in (branch_overrides or {}).items():
+        if state:
+            branches[version] = state
+        else:
+            branches.pop(version, None)
 
     with versions_file.open("w", encoding="utf-8") as f:
         json.dump(data, f, indent=2)
         f.write("\n")
 
-    run(["git", "add", "versions.json"], cwd=main_dir)
-    run(["git", "commit", "-m", "Add default versions.json"], cwd=main_dir)
-    run(["git", "push", "origin", "main"], cwd=main_dir)
+    run(["git", "add", VERSIONS_FILE], cwd=main_path)
+    run(["git", "commit", "-m", "Add default versions.json"], cwd=main_path)
+    run(["git", "push", "origin", "main"], cwd=main_path)
+
+    return data
 
 
-def load_versions(main_dir):
-    ensure_versions_file(main_dir)
-
-    versions_file = main_dir / "versions.json"
-
-    with versions_file.open("r", encoding="utf-8") as f:
-        data = json.load(f)
-
+def load_versions(main_path):
+    versions_file = main_path / VERSIONS_FILE
+    
+    data = load_versions_file(main_path, versions_file)
     versions = data.get("branches", {})
 
-    remote_branches = get_remote_branches(main_dir)
+    remote_branches = get_remote_branches(main_path)
 
     missing = [v for v in versions if v not in remote_branches]
     if missing:
@@ -103,24 +117,22 @@ def load_versions(main_dir):
     ]
 
 
-def setup_git(repo_name):
+def setup_git(root_path, repo_name):
     repo_url = f"{REMOTE_BASE_URL}{repo_name}.git"
+    main_path = root_path / "main"
 
-    root_dir = Path.cwd() / repo_name
-    main_dir = root_dir / "main"
+    root_path.mkdir(parents=True, exist_ok=True)
 
-    root_dir.mkdir(parents=True, exist_ok=True)
-
-    if is_git_repo(main_dir):
+    if is_git_repo(main_path):
         print("main already cloned, skipping")
     else:
-        print(f"Cloning main branch into {main_dir}")
-        clone_branch(repo_url, "main", main_dir)
+        print(f"Cloning main branch into {main_path}")
+        clone_branch(repo_url, "main", main_path)
 
-    versions = load_versions(main_dir)
+    versions = load_versions(main_path)
 
     for version in versions:
-        target_dir = root_dir / version
+        target_dir = root_path / version
 
         if is_git_repo(target_dir):
             print(f"{version} already cloned, skipping")
@@ -132,11 +144,13 @@ def setup_git(repo_name):
 
 def main():
     if len(sys.argv) != 2:
-        print("Usage: clone_versions.py <repo-url>")
+        print("Usage: clone_versions.py <repo-name>")
         sys.exit(1)
 
     repo_name = sys.argv[1]
-    setup_git(repo_name)
+    root_path = Path.cwd() / repo_name
+
+    setup_git(root_path, repo_name)
 
 
 if __name__ == "__main__":
