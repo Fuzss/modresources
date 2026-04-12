@@ -1,59 +1,78 @@
 #!/usr/bin/env python3
 
+"""
+Clone and prepare version based git repositories.
+
+- Reads versions.json from main repository
+- Optionally creates it from defaults if missing
+- Clones all enabled version branches into local folders
+"""
+
 import json
 import subprocess
 import sys
 from pathlib import Path
 
-REMOTE_BASE_URL = "https://github.com/Fuzss/"
-DEFAULT_BRANCHES = {
-        "1.21.11": "primary",
-        "1.21.1": "maintained",
-        "1.20.1": "fixes"
-    }
 
+REMOTE_BASE_URL = "https://github.com/Fuzss/"
 VERSIONS_FILE = "versions.json"
 
+SUPPORT_TYPES = ["primary", "maintained", "fixes", "archived"]
+DEFAULT_BRANCHES = {
+    "1.21.11": "primary",
+    "1.21.1": "maintained",
+    "1.20.1": "fixes"
+}
 
-def run(command, cwd=None, capture=False):
-    if capture:
-        return subprocess.check_output(command, cwd=cwd, text=True).strip()
-    subprocess.run(command, cwd=cwd, check=True)
 
-
-def is_git_repo(path):
+def is_git_repo(path: Path) -> bool:
+    """Check if a directory is a git repository."""
     return (path / ".git").exists()
 
 
-def clone_branch(repo_url, branch, target_dir):
-    run([
+def clone_branch(repo_url: str, branch: str, target_dir: Path):
+    """Clone a single branch into target directory."""
+    subprocess.run([
         "git",
         "clone",
         "--branch", branch,
         repo_url,
         str(target_dir)
-    ])
+    ], check=True)
 
 
-def get_remote_branches(repo_dir):
-    output = run(
-        ["git", "branch", "-r"],
-        cwd=repo_dir,
-        capture=True
-    )
+def get_remote_branches(repo_dir: Path) -> set[str]:
+    """Return set of remote branch names."""
+    output = subprocess.check_output(
+        ["git", "branch", "-r"], 
+        cwd=repo_dir, 
+        text=True
+    ).strip()
 
     branches = set()
+
     for line in output.splitlines():
         line = line.strip()
-        if line.startswith("origin/"):
-            name = line.removeprefix("origin/")
-            if name != "HEAD":
-                branches.add(name)
+
+        if not line.startswith("origin/"):
+            continue
+
+        name = line.removeprefix("origin/")
+
+        if name != "HEAD":
+            branches.add(name)
 
     return branches
 
 
-def load_versions_file(main_path, versions_file, branch_overrides=None):
+def load_versions_file(main_path: Path, branch_overrides=None):
+    """
+    Load or create versions.json and apply optional overrides.
+
+    Also commits and pushes changes if file is created or modified.
+    """
+
+    versions_file = main_path / VERSIONS_FILE
     data = {}
 
     if versions_file.exists():
@@ -79,27 +98,53 @@ def load_versions_file(main_path, versions_file, branch_overrides=None):
 
     branches = data.setdefault("branches", {})
 
-    for version, state in (branch_overrides or {}).items():
-        if state:
-            branches[version] = state
-        else:
-            branches.pop(version, None)
+    if branch_overrides:
+        for version, state in branch_overrides.items():
+            if state:
+                state = state.strip().lower()
+                if state in SUPPORT_TYPES:
+                    branches[version] = state
+                else:
+                    print(f"Warning: Unkown support type {state}")
+            else:
+                branches.pop(version, None)
 
     with versions_file.open("w", encoding="utf-8") as f:
         json.dump(data, f, indent=2)
         f.write("\n")
 
-    run(["git", "add", VERSIONS_FILE], cwd=main_path)
-    run(["git", "commit", "-m", "Add default versions.json"], cwd=main_path)
-    run(["git", "push", "origin", "main"], cwd=main_path)
+    subprocess.run(
+        ["git", "add", versions_file.name],
+        cwd=main_path
+    )
+
+    result = subprocess.run(
+        ["git", "diff", "--cached", "--quiet"],
+        cwd=main_path
+    )
+
+    if result.returncode == 0:
+        print("No changes to commit, skipping commit and push.")
+        return False
+    
+    subprocess.run(
+        ["git", "commit", "-m", "Update versions.json"],
+        cwd=main_path,
+        check=True
+    )
+
+    subprocess.run(
+        ["git", "push"],
+        cwd=main_path,
+        check=True
+    )
 
     return data
 
 
-def load_versions(main_path):
-    versions_file = main_path / VERSIONS_FILE
-    
-    data = load_versions_file(main_path, versions_file)
+def load_versions(main_path: Path):
+    """Validate and return active version branches."""
+    data = load_versions_file(main_path)
     versions = data.get("branches", {})
 
     remote_branches = get_remote_branches(main_path)
@@ -117,7 +162,8 @@ def load_versions(main_path):
     ]
 
 
-def setup_git(root_path, repo_name):
+def setup_git(root_path: Path, repo_name: str):
+    """Clone main repo and all enabled version branches."""
     repo_url = f"{REMOTE_BASE_URL}{repo_name}.git"
     main_path = root_path / "main"
 

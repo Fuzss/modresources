@@ -23,25 +23,26 @@ UPLOADING_SITES = {"curseforge", "modrinth", "github"}
 def parse_args():
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('--branch', type=str, required=True, metavar="BRANCH_NAME", help="Branch name. Example: --branch 26.1.x")
+    parser.add_argument("--branches", default=None, action="append", nargs=2, metavar=("BRANCH_NAME", "SUPPORT_STATUS"), help="Updates branch status in versions.json, can be used multiple times. Format: --branches <branch_name> <support_status>")
     parser.add_argument('--catalog', type=str, default=None, metavar="VERSION_CATALOG", help="Version-based catalog. Example: --catalog 26.1-SNAPSHOT")
-    parser.add_argument("--changelog", default=None, action="append", nargs=2, metavar=("SECTION", "LINE"), help="Add a changelog line, can be used multiple times.. Format: --changelog SECTION LINE")
+    parser.add_argument("--changelog", default=None, action="append", nargs=2, metavar=("SECTION_NAME", "TEXT"), help="Add a changelog line, can be used multiple times. Format: --changelog <section_name> <text>")
     parser.add_argument('--commit', default=False, action="store_true", help="Commit to GitHub.")
     parser.add_argument('--data', default=False, action="store_true", help="Generate data.")
-    parser.add_argument('--gradle', nargs='?', type=str, const="latest", default=None, metavar="GRADLE_VERSION", help="Gradle wrapper version. Example: --gradle [9.4.1]")
+    parser.add_argument('--gradle', nargs='?', type=str, const="latest", default=None, metavar="GRADLE_VERSION", help="Gradle wrapper version, with optional argument. Example: --gradle [9.4.1]")
     parser.add_argument('--id', type=str, default=None, metavar="MOD_ID", help="Mod id. Example: --id examplemod")
-    parser.add_argument('--init', nargs='?', const=True, default=None, metavar="SOURCE_BRANCH", help="Setup git repository and version branch. Example: --init [1.21.11]")
-    parser.add_argument('--launch', default=[], action="append", nargs="*", metavar=("MOD_LOADER", "DISTRIBUTION"), help="Launch the game, can be used multiple times. Format: --launch MOD_LOADER DISTRIBUTION")
+    parser.add_argument('--init', nargs='?', const=True, default=None, metavar="SOURCE_BRANCH", help="Setup git repository and version branch, with optional argument. Example: --init [1.21.11]")
+    parser.add_argument('--launch', default=[], action="append", nargs="*", metavar=("MOD_LOADER", "DISTRIBUTION"), help="Launch the game, can be used multiple times. Format: --launch <mod_loader> <distribution>")
     parser.add_argument('--legacy', default=False, action="store_true", help="Use legacy Gradle task names.")
+    parser.add_argument('--minecraft', type=str, required=True, metavar="MINECRAFT_VERSION", help="Minecraft name. Example: --minecraft 26.1.x")
     parser.add_argument('--name', type=str, required=True, metavar="REPOSITORY_NAME", help="Repository name. Example: --name example-mod")
     parser.add_argument('--notify', default=False, action="store_true", help="Notify via Discord webhook.")
-    parser.add_argument('--open', default=None, nargs="*", metavar="ENVIRONMENT", help="Open in Finder, or Idea. Format: --open ENVIRONMENT")
+    parser.add_argument('--open', default=None, nargs="*", metavar="ENVIRONMENT", help="Open in Finder, or Idea. Format: --open <environment>")
     parser.add_argument('--path', type=str, default=None, metavar="ROOT_PATH", help="Override default root path. Example: --path /absolute/path/to/project")
-    parser.add_argument("--properties", default=None, action="append", nargs=2, metavar=("KEY", "VALUE"), help="Set a gradle.properties value, can be used multiple times.. Format: --properties KEY VALUE")
+    parser.add_argument("--properties", default=None, action="append", nargs=2, metavar=("KEY", "VALUE"), help="Set a gradle.properties value, can be used multiple times. Format: --properties <key> <value>")
     parser.add_argument('--publish', default=False, action="store_true", help="Publish to Maven.")
     parser.add_argument('--sources', default=False, action="store_true", help="Generate common sources.")
-    parser.add_argument('--upgrade', nargs='?', const=True, default=None, metavar="PATCHES_NAME", help="Run workspace upgrade, potentially for a specific version. Example: --upgrade [1.21.11]")
-    parser.add_argument('--upload', default=None, nargs="*", metavar=("MOD_LOADER", "WEBSITE"), help="Upload to CurseForge, Modrinth, or GitHub. Format: --upload MOD_LOADER WEBSITE")
+    parser.add_argument('--upgrade', nargs='?', const=True, default=None, metavar="PATCHES_NAME", help="Run workspace upgrade, potentially for a specific version, with optional argument. Example: --upgrade [1.21.11]")
+    parser.add_argument('--upload', default=None, nargs="*", metavar=("MOD_LOADER", "WEBSITE"), help="Upload to CurseForge, Modrinth, or GitHub. Format: --upload <mod_loader> <website>")
     parser.add_argument('--version', type=str, default=None, metavar="PROJECT_VERSION", help="Mod version. Example: --version 21.8.0")
 
     args = parser.parse_args()
@@ -55,7 +56,7 @@ def parse_args():
         if not args.upgrade:
             args.upgrade = True
         if not args.changelog:
-            args.changelog = [["changed", f"Update to Minecraft {args.branch}"]]
+            args.changelog = [["changed", f"Update to Minecraft {args.minecraft}"]]
 
     return args
 
@@ -170,15 +171,19 @@ def get_remote_url(args):
 
 def git_push_all(args, repo_path, commit_message):
     remote_url = get_remote_url(args)
-    commands = [
-        ["git", "remote", "set-url", "origin", remote_url],
-        ["git", "add", "."]
-    ]
 
-    for cmd in commands:
-        subprocess.run(cmd, cwd=repo_path, check=True)
+    subprocess.run(
+        ["git", "remote", "set-url", "origin", remote_url], 
+        cwd=repo_path, 
+        check=True
+    )
 
-    # Check if there are staged changes
+    subprocess.run(
+        ["git", "add", "."], 
+        cwd=repo_path, 
+        check=True
+    )
+
     result = subprocess.run(
         ["git", "diff", "--cached", "--quiet"],
         cwd=repo_path
@@ -188,13 +193,17 @@ def git_push_all(args, repo_path, commit_message):
         print("No changes to commit, skipping commit and push.")
         return False
     
-    commands = [
+    subprocess.run(
         ["git", "commit", "-m", commit_message],
-        ["git", "push"]
-    ]
+        cwd=repo_path,
+        check=True
+    )
 
-    for cmd in commands:
-        subprocess.run(cmd, cwd=repo_path, check=True)
+    subprocess.run(
+        ["git", "push"],
+        cwd=repo_path,
+        check=True
+    )
 
     return True
 
@@ -528,7 +537,7 @@ def update_toml_file(file_path, updates: dict):
 
 def prepare_new_version(args, root_path, project_path):
     remote_url = get_remote_url(args)
-    new_branch = args.branch
+    new_branch = args.minecraft
     source_branch = args.init
 
     # check if remote branch exists
@@ -573,7 +582,7 @@ def prepare_new_version(args, root_path, project_path):
     remove_directory_or_file(f"{project_path}/CHANGELOG.md")
 
     if args.commit:
-        if git_push_all(args, project_path, f"prepare {args.branch} port"):
+        if git_push_all(args, project_path, f"prepare {args.minecraft} port"):
             print("Committed new version preparations")
 
 def replace_text_block(file_path, pattern, replacement, use_regex=True):
@@ -695,12 +704,12 @@ def run_1_21_10_upgrade(args, template_path, project_path):
 def run_workspace_upgrade(args, base_path, main_path, project_path):
     template_root_path = f"{base_path}/multiloader-workspace-template"
     template_main_path = f"{template_root_path}/main"
-    template_project_path = f"{template_root_path}/{args.branch}"
+    template_project_path = f"{template_root_path}/{args.minecraft}"
     copy_from_template(f"{template_main_path}/.gitignore", f"{main_path}/.gitignore")
     copy_from_template(f"{template_main_path}/.github", f"{main_path}/.github")
     update_license_year(f"{main_path}/LICENSE-ASSETS.md")
 
-    if args.commit and git_push_all(args, main_path, f"upgrade {args.branch} workspace"):
+    if args.commit and git_push_all(args, main_path, f"upgrade {args.minecraft} workspace"):
         print(f"Committed workspace upgrades on main")
     
     remove_directory_or_file(f"{project_path}/Common/src/main/resources/pack.mcmeta")
@@ -715,15 +724,15 @@ def run_workspace_upgrade(args, base_path, main_path, project_path):
         elif args.upgrade == "1.21.10":
             run_1_21_10_upgrade(args, f"{template_project_path}", project_path)
 
-    if args.commit and git_push_all(args, project_path, f"upgrade {args.branch} workspace"):
-        print(f"Committed workspace upgrades on {args.branch}")
+    if args.commit and git_push_all(args, project_path, f"upgrade {args.minecraft} workspace"):
+        print(f"Committed workspace upgrades on {args.minecraft}")
 
 def main():
     args = parse_args()
     base_path = find_gradle_property("fuzs.multiloader.project.root")
     root_path = args.path or f"{base_path}/mods/{args.name}"
     main_path = f"{root_path}/main"
-    project_path = f"{root_path}/{args.branch}"
+    project_path = f"{root_path}/{args.minecraft}"
     environment = validate_open_parameters(args.open, "finder")
     changelog_section_data = parse_changelog_sections(args.changelog)
     launch_parameters = [ 
@@ -737,7 +746,7 @@ def main():
         clone_versions.setup_git(root_path, args.name)
 
         if args.version and args.catalog and isinstance(args.init, str):
-            info2(f"Preparing Minecraft version {args.branch}...")
+            info2(f"Preparing Minecraft version {args.minecraft}...")
             prepare_new_version(args, root_path, project_path)
 
     if not os.path.isdir(project_path):
@@ -759,13 +768,20 @@ def main():
                 warn2("Could not launch IntelliJ:", e)
         sys.exit(1)
 
+    if args.branches:
+        branch_overrides = {
+            key.strip(): value.strip()
+            for key, value in args.branches.items()
+        }
+        clone_versions.load_versions_file(main_path, branch_overrides)
+
     if args.upgrade:
         info2("Upgrading workspace...")
         run_workspace_upgrade(args, base_path, main_path, project_path)
 
     if args.version:
         changelog_path = f"{project_path}/CHANGELOG.md"
-        full_version = f"v{args.version}-mc{args.branch}"
+        full_version = f"v{args.version}-mc{args.minecraft}"
 
         if changelog_section_data:
             info2(f"Updating CHANGELOG.md...")
