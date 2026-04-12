@@ -6,6 +6,7 @@ import subprocess
 import argparse
 import re
 import json
+import clone_versions
 import migrate_mod_properties
 import migrate_mixins
 from collections import defaultdict
@@ -23,12 +24,12 @@ UPLOADING_SITES = {"curseforge", "modrinth", "github"}
 def parse_args():
     parser = argparse.ArgumentParser()
 
-    parser.add_argument("--branches", default=None, action="append", nargs=2, metavar=("BRANCH_NAME", "SUPPORT_STATUS"), help="Updates branch status in versions.json, can be used multiple times. Format: --branches <branch_name> <support_status>")
+    parser.add_argument("--branch", default=[], action="append", nargs=2, metavar=("BRANCH_NAME", "SUPPORT_STATUS"), help="Updates branch status in versions.json, can be used multiple times. Format: --branch <branch_name> <support_status>")
     parser.add_argument('--catalog', type=str, default=None, metavar="VERSION_CATALOG", help="Version-based catalog. Example: --catalog 26.1-SNAPSHOT")
     parser.add_argument("--changelog", default=None, action="append", nargs=2, metavar=("SECTION_NAME", "TEXT"), help="Add a changelog line, can be used multiple times. Format: --changelog <section_name> <text>")
     parser.add_argument('--commit', default=False, action="store_true", help="Commit to GitHub.")
     parser.add_argument('--data', default=False, action="store_true", help="Generate data.")
-    parser.add_argument('--gradle', nargs='?', type=str, const="latest", default=None, metavar="GRADLE_VERSION", help="Gradle wrapper version, with optional argument. Example: --gradle [9.4.1]")
+    parser.add_argument('--gradle', type=str, default=None, metavar="GRADLE_VERSION", help="Gradle wrapper version. Example: --gradle 9.4.1")
     parser.add_argument('--id', type=str, default=None, metavar="MOD_ID", help="Mod id. Example: --id examplemod")
     parser.add_argument('--init', nargs='?', const=True, default=None, metavar="SOURCE_BRANCH", help="Setup git repository and version branch, with optional argument. Example: --init [1.21.11]")
     parser.add_argument('--launch', default=[], action="append", nargs="*", metavar=("MOD_LOADER", "DISTRIBUTION"), help="Launch the game, can be used multiple times. Format: --launch <mod_loader> <distribution>")
@@ -50,11 +51,19 @@ def parse_args():
     if not args.id:
         args.id = args.name.replace("-", "")
     
-    if args.init is True:
+    if isinstance(args.init, str):
+        if not any(version == args.minecraft for version, _ in args.branch):
+            args.branch.append((args.minecraft, "primary"))
+
+        if not any(version == args.init for version, _ in args.branch):
+            args.branch.append((args.init, ""))
+
         if not args.data:
             args.data = True
+
         if not args.upgrade:
-            args.upgrade = True
+            args.upgrade = args.minecraft
+
         if not args.changelog:
             args.changelog = [["changed", f"Update to Minecraft {args.minecraft}"]]
 
@@ -76,6 +85,13 @@ def error2(message):
 
 def copy_from_template(source_path, destination_path, only_if_absent=False):
     if only_if_absent and os.path.exists(destination_path):
+        return
+    
+    if (
+        os.path.exists(source_path)
+        and os.path.exists(destination_path)
+        and os.path.samefile(source_path, destination_path)
+    ):
         return
 
     if os.path.isfile(source_path):
@@ -540,6 +556,9 @@ def prepare_new_version(args, root_path, project_path):
     new_branch = args.minecraft
     source_branch = args.init
 
+    if os.path.isdir(project_path):
+        error2(f"Failed to create new branch {new_branch}: directory already exists")
+
     # check if remote branch exists
     result = subprocess.run(
         ["git", "ls-remote", "--heads", remote_url, new_branch],
@@ -548,34 +567,29 @@ def prepare_new_version(args, root_path, project_path):
         check=True
     )
 
-    branch_exists = bool(result.stdout.strip())
+    if bool(result.stdout.strip()):
+        error2(f"Failed to create new branch {new_branch}: branch already exists")
 
-    if branch_exists:
-        # clone existing branch
-        subprocess.run(
-            ["git", "clone", "--branch", new_branch, "--single-branch", remote_url, new_branch],
-            cwd=root_path,
-            check=True
-        )
-    else:
-        # clone default then create branch
-        subprocess.run(
-            ["git", "clone", remote_url, new_branch],
-            cwd=root_path,
-            check=True
-        )
+    # clone default then create branch
+    subprocess.run(
+        ["git", "clone", remote_url, new_branch],
+        cwd=root_path,
+        check=True
+    )
 
-        subprocess.run(
-            ["git", "checkout", "-B", new_branch, f"origin/{source_branch}"],
-            cwd=project_path,
-            check=True
-        )
+    subprocess.run(
+        ["git", "checkout", "-B", new_branch, f"origin/{source_branch}"],
+        cwd=project_path,
+        check=True
+    )
 
-        subprocess.run(
-            ["git", "push", "-u", "origin", new_branch],
-            cwd=project_path,
-            check=True
-        )
+    subprocess.run(
+        ["git", "push", "-u", "origin", new_branch],
+        cwd=project_path,
+        check=True
+    )
+    
+    print(f"Created new branch {new_branch} from {source_branch}")
 
     remove_directory_or_file(f"{project_path}/.idea")
     remove_directory_or_file(f"{project_path}/.gradle")
@@ -628,10 +642,42 @@ def add_line_after_target(file_path, target_text, new_text):
     print(f"Updated {file_path}")
 
 def run_26_1_upgrade(args, template_path, project_path):
-    move_directory_or_file(f"{project_path}/Common/src/main/resources/mod_logo.png", f"{project_path}/Common/src/main/resources/pack.png")
-    replace_text_block(f"{project_path}/Common/build.gradle.kts", "(libs.", "(sharedLibs.", use_regex=False)
-    replace_text_block(f"{project_path}/Fabric/build.gradle.kts", "(libs.", "(sharedLibs.", use_regex=False)
-    replace_text_block(f"{project_path}/NeoForge/build.gradle.kts", "(libs.", "(sharedLibs.", use_regex=False)
+    move_directory_or_file(
+        os.path.join(project_path, "Common", "src", "main", "resources", "mod_logo.png"),
+        os.path.join(project_path, "Common", "src", "main", "resources", "pack.png")
+    )
+
+    move_directory_or_file(
+        os.path.join(project_path, "Common", "src", "main", "resources", f"{args.id}.accesswidener"),
+        os.path.join(project_path, "Common", "src", "main", "resources", f"{args.id}.classtweaker")
+    )
+
+    replace_text_block(
+        os.path.join(project_path, "Common", "src", "main", "resources", f"{args.id}.classtweaker"),
+        "^accessWidener\s+v[12]\s+\w+\s*$",
+        "classTweaker    v1  official"
+    )
+
+    replace_text_block(
+        os.path.join(project_path, "Common", "build.gradle.kts"),
+        "(libs.",
+        "(sharedLibs.",
+        use_regex=False
+    )
+
+    replace_text_block(
+        os.path.join(project_path, "Fabric", "build.gradle.kts"),
+        "(libs.",
+        "(sharedLibs.",
+        use_regex=False
+    )
+
+    replace_text_block(
+        os.path.join(project_path, "NeoForge", "build.gradle.kts"),
+        "(libs.",
+        "(sharedLibs.",
+        use_regex=False
+    )
 
 def run_1_21_11_upgrade(args, template_path, project_path):
     copy_from_template(f"{template_path}/settings.gradle.kts", f"{project_path}/settings.gradle.kts")
@@ -702,22 +748,38 @@ def run_1_21_10_upgrade(args, template_path, project_path):
     )
 
 def run_workspace_upgrade(args, base_path, main_path, project_path):
-    template_root_path = f"{base_path}/multiloader-workspace-template"
-    template_main_path = f"{template_root_path}/main"
-    template_project_path = f"{template_root_path}/{args.minecraft}"
-    copy_from_template(f"{template_main_path}/.gitignore", f"{main_path}/.gitignore")
-    copy_from_template(f"{template_main_path}/.github", f"{main_path}/.github")
-    update_license_year(f"{main_path}/LICENSE-ASSETS.md")
+    template_root_path = os.path.join(base_path, "mods", "multiloader-workspace-template")
+    template_main_path = os.path.join(template_root_path, "main")
+    template_project_path = os.path.join(template_root_path, args.minecraft)
+
+    copy_from_template(
+        os.path.join(template_main_path, ".gitignore"),
+        os.path.join(main_path, ".gitignore"),
+    )
+
+    copy_from_template(
+        os.path.join(template_main_path, ".github"),
+        os.path.join(main_path, ".github"),
+    )
+
+    update_license_year(
+        os.path.join(main_path, "LICENSE-ASSETS.md")
+    )
 
     if args.commit and git_push_all(args, main_path, f"upgrade {args.minecraft} workspace"):
         print(f"Committed workspace upgrades on main")
     
-    remove_directory_or_file(f"{project_path}/Common/src/main/resources/pack.mcmeta")
-    remove_directory_or_file(f"{project_path}/Common/src/main/resources/mod_banner.png")
+    remove_directory_or_file(
+        os.path.join(project_path, "Common", "src", "main", "resources", "pack.mcmeta")
+    )
+
+    remove_directory_or_file(
+        os.path.join(project_path, "Common", "src", "main", "resources", "mod_banner.png")
+    )
 
     if isinstance(args.upgrade, str):
         print(f"Running {args.upgrade} workspace upgrades")
-        if args.upgrade == "26.1":
+        if args.upgrade == "26.1.x":
             run_26_1_upgrade(args, f"{template_project_path}", project_path)
         elif args.upgrade == "1.21.11":
             run_1_21_11_upgrade(args, f"{template_project_path}", project_path)
@@ -730,9 +792,9 @@ def run_workspace_upgrade(args, base_path, main_path, project_path):
 def main():
     args = parse_args()
     base_path = find_gradle_property("fuzs.multiloader.project.root")
-    root_path = args.path or f"{base_path}/mods/{args.name}"
-    main_path = f"{root_path}/main"
-    project_path = f"{root_path}/{args.minecraft}"
+    root_path = args.path or os.path.join(base_path, "mods", args.name)
+    main_path = os.path.join(root_path, "main")
+    project_path = os.path.join(root_path, args.minecraft)
     environment = validate_open_parameters(args.open, "finder")
     changelog_section_data = parse_changelog_sections(args.changelog)
     launch_parameters = [ 
@@ -768,10 +830,11 @@ def main():
                 warn2("Could not launch IntelliJ:", e)
         sys.exit(1)
 
-    if args.branches:
+    if args.branch:
+        info2(f"Updating versions.json...")
         branch_overrides = {
             key.strip(): value.strip()
-            for key, value in args.branches.items()
+            for key, value in args.branch
         }
         clone_versions.load_versions_file(main_path, branch_overrides)
 

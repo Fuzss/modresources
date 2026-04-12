@@ -9,6 +9,7 @@ Clone and prepare version based git repositories.
 """
 
 import json
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -25,9 +26,9 @@ DEFAULT_BRANCHES = {
 }
 
 
-def is_git_repo(path: Path) -> bool:
+def is_git_repo(path: str) -> bool:
     """Check if a directory is a git repository."""
-    return (path / ".git").exists()
+    return os.path.isdir(os.path.join(path, ".git"))
 
 
 def clone_branch(repo_url: str, branch: str, target_dir: Path):
@@ -36,12 +37,13 @@ def clone_branch(repo_url: str, branch: str, target_dir: Path):
         "git",
         "clone",
         "--branch", branch,
+        "--single-branch",
         repo_url,
         str(target_dir)
     ], check=True)
 
 
-def get_remote_branches(repo_dir: Path) -> set[str]:
+def get_remote_branches(repo_dir: str) -> set[str]:
     """Return set of remote branch names."""
     output = subprocess.check_output(
         ["git", "branch", "-r"], 
@@ -65,19 +67,19 @@ def get_remote_branches(repo_dir: Path) -> set[str]:
     return branches
 
 
-def load_versions_file(main_path: Path, branch_overrides=None):
+def load_versions_file(main_path: str, branch_overrides=None):
     """
     Load or create versions.json and apply optional overrides.
 
     Also commits and pushes changes if file is created or modified.
     """
 
-    versions_file = main_path / VERSIONS_FILE
+    versions_file = os.path.join(main_path, VERSIONS_FILE)
     data = {}
 
-    if versions_file.exists():
-        with versions_file.open("r", encoding="utf-8") as f:
-            data = json.load(f)
+    if os.path.isfile(versions_file):
+        with open(versions_file, "r", encoding="utf-8") as file:
+            data = json.load(file)
 
     if data:
         if not branch_overrides:
@@ -109,12 +111,12 @@ def load_versions_file(main_path: Path, branch_overrides=None):
             else:
                 branches.pop(version, None)
 
-    with versions_file.open("w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2)
-        f.write("\n")
+    with open(versions_file, "w", encoding="utf-8") as file:
+        json.dump(data, file, indent=2)
+        file.write("\n")
 
     subprocess.run(
-        ["git", "add", versions_file.name],
+        ["git", "add", os.path.basename(versions_file)],
         cwd=main_path
     )
 
@@ -142,7 +144,7 @@ def load_versions_file(main_path: Path, branch_overrides=None):
     return data
 
 
-def load_versions(main_path: Path):
+def load_versions(main_path: str):
     """Validate and return active version branches."""
     data = load_versions_file(main_path)
     versions = data.get("branches", {})
@@ -162,12 +164,11 @@ def load_versions(main_path: Path):
     ]
 
 
-def setup_git(root_path: Path, repo_name: str):
-    """Clone main repo and all enabled version branches."""
+def setup_git(root_path: str, repo_name: str):
     repo_url = f"{REMOTE_BASE_URL}{repo_name}.git"
-    main_path = root_path / "main"
+    main_path = os.path.join(root_path, "main")
 
-    root_path.mkdir(parents=True, exist_ok=True)
+    os.makedirs(root_path, exist_ok=True)
 
     if is_git_repo(main_path):
         print("main already cloned, skipping")
@@ -178,7 +179,7 @@ def setup_git(root_path: Path, repo_name: str):
     versions = load_versions(main_path)
 
     for version in versions:
-        target_dir = root_path / version
+        target_dir = os.path.join(root_path, version)
 
         if is_git_repo(target_dir):
             print(f"{version} already cloned, skipping")
@@ -194,7 +195,7 @@ def main():
         sys.exit(1)
 
     repo_name = sys.argv[1]
-    root_path = Path.cwd() / repo_name
+    root_path = os.path.join(os.getcwd(), repo_name)
 
     setup_git(root_path, repo_name)
 
