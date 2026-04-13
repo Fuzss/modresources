@@ -1,0 +1,20 @@
+{
+  "version": "26.1.0",
+  "init": "1.21.11",
+  "catalog": "26.1-SNAPSHOT",
+  "plugins": "1.1-SNAPSHOT",
+  "changelog": [
+    ["changed", "Update to Minecraft 26.1.x"]
+  ],
+  "branch": [
+    ["1.21.11", "archived"],
+    ["26.1.x", "primary"]
+  ],
+  "gradle": "9.4.1",
+  "upgrade": "26.1.x",
+  "commit": true,
+  "data": true,
+  "launch": [],
+  "upload": [],
+  "notify": true
+}

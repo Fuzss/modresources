@@ -12,7 +12,6 @@ import json
 import os
 import subprocess
 import sys
-from pathlib import Path
 
 
 REMOTE_BASE_URL = "https://github.com/Fuzss/"
@@ -31,20 +30,24 @@ def is_git_repo(path: str) -> bool:
     return os.path.isdir(os.path.join(path, ".git"))
 
 
-def clone_branch(repo_url: str, branch: str, target_dir: Path):
+def clone_branch(repo_url: str, branch: str, target_dir: str, single_branch=False):
     """Clone a single branch into target directory."""
     subprocess.run([
         "git",
         "clone",
         "--branch", branch,
-        "--single-branch",
+        *(["--single-branch"] if single_branch else []),
         repo_url,
-        str(target_dir)
-    ], check=True)
+        target_dir
+    ], check=True
+    )
 
 
 def get_remote_branches(repo_dir: str) -> set[str]:
-    """Return set of remote branch names."""
+    """Return set of remote branch names.
+    
+    This only works when the repository has been cloned without the --single-branch flag.
+    """
     output = subprocess.check_output(
         ["git", "branch", "-r"], 
         cwd=repo_dir, 
@@ -76,6 +79,12 @@ def load_versions_file(main_path: str, branch_overrides=None):
 
     versions_file = os.path.join(main_path, VERSIONS_FILE)
     data = {}
+
+    subprocess.run(
+        ["git", "pull"],
+        cwd=main_path,
+        check=True
+    )
 
     if os.path.isfile(versions_file):
         with open(versions_file, "r", encoding="utf-8") as file:
@@ -117,7 +126,8 @@ def load_versions_file(main_path: str, branch_overrides=None):
 
     subprocess.run(
         ["git", "add", os.path.basename(versions_file)],
-        cwd=main_path
+        cwd=main_path,
+        check=True
     )
 
     result = subprocess.run(
@@ -186,7 +196,7 @@ def setup_git(root_path: str, repo_name: str):
             continue
 
         print(f"Cloning branch {version} into {target_dir}")
-        clone_branch(repo_url, version, target_dir)
+        clone_branch(repo_url, version, target_dir, single_branch=True)
 
 
 def main():
