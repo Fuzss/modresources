@@ -14,7 +14,6 @@
   "upgrade": "26.1.x",
   "commit": true,
   "data": true,
-  "launch": [],
-  "upload": [],
-  "notify": true
+  "launch": [[]],
+  "upload": []
 }
