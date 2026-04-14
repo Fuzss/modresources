@@ -59,6 +59,7 @@
 - [21.9.7](./fuzs/bettermodsbutton/bettermodsbutton-common/21.9.7)
 - [21.10.1](./fuzs/bettermodsbutton/bettermodsbutton-common/21.10.1)
 - [21.11.0](./fuzs/bettermodsbutton/bettermodsbutton-common/21.11.0)
+- [26.1.1](./fuzs/bettermodsbutton/bettermodsbutton-common/26.1.1)
 </details>
 
 <details>
@@ -84,6 +85,7 @@
 - [21.10.0](./fuzs/bettermodsbutton/bettermodsbutton-common/21.10.0)
 - [21.10.1](./fuzs/bettermodsbutton/bettermodsbutton-common/21.10.1)
 - [21.11.0](./fuzs/bettermodsbutton/bettermodsbutton-common/21.11.0)
+- [26.1.1](./fuzs/bettermodsbutton/bettermodsbutton-common/26.1.1)
 </details>
 
 ### [`bettermodsbutton-forge`](./fuzs/bettermodsbutton/bettermodsbutton-forge)
@@ -150,6 +152,7 @@
 - [21.9.7](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/21.9.7)
 - [21.10.1](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/21.10.1)
 - [21.11.0](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/21.11.0)
+- [26.1.1](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/26.1.1)
 </details>
 
 <details>
@@ -178,6 +181,7 @@
 - [21.10.0](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/21.10.0)
 - [21.10.1](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/21.10.1)
 - [21.11.0](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/21.11.0)
+- [26.1.1](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/26.1.1)
 </details>
 
 </details>
@@ -2645,6 +2649,7 @@
 - [21.1.0](./fuzs/multiloaderaccesswideners/multiloaderaccesswideners-common/21.1.0)
 - [21.10.0](./fuzs/multiloaderaccesswideners/multiloaderaccesswideners-common/21.10.0)
 - [21.11.0](./fuzs/multiloaderaccesswideners/multiloaderaccesswideners-common/21.11.0)
+- [26.1.0](./fuzs/multiloaderaccesswideners/multiloaderaccesswideners-common/26.1.0)
 </details>
 
 <details>
@@ -2653,6 +2658,7 @@
 - [21.1.0](./fuzs/multiloaderaccesswideners/multiloaderaccesswideners-common/21.1.0)
 - [21.10.0](./fuzs/multiloaderaccesswideners/multiloaderaccesswideners-common/21.10.0)
 - [21.11.0](./fuzs/multiloaderaccesswideners/multiloaderaccesswideners-common/21.11.0)
+- [26.1.0](./fuzs/multiloaderaccesswideners/multiloaderaccesswideners-common/26.1.0)
 </details>
 
 </details>
