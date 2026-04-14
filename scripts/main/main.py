@@ -69,7 +69,6 @@ def parse_args():
     parser.add_argument('--plugins', type=str, default=None, metavar="PLUGINS_VERSION", help="Multiloader convention plugins version. Example: --plugins 1.1-SNAPSHOT")
     parser.add_argument("--properties", default=None, action="append", nargs=2, metavar=("KEY", "VALUE"), help="Set a gradle.properties value, can be used multiple times. Format: --properties <key> <value>")
     parser.add_argument('--publish', default=False, action="store_true", help="Publish to Maven.")
-    parser.add_argument('--sources', default=False, action="store_true", help="Generate common sources.")
     parser.add_argument('--upgrade', nargs='?', const=True, default=None, metavar="PATCHES_NAME", help="Run workspace upgrade, potentially for a specific version, with optional argument. Example: --upgrade [1.21.11]")
     parser.add_argument('--upload', default=None, nargs="*", metavar=("MOD_LOADER", "WEBSITE"), help="Upload to CurseForge, Modrinth, or GitHub. Format: --upload <mod_loader> <website>")
     parser.add_argument('--version', type=str, default=None, metavar="PROJECT_VERSION", help="Mod version. Example: --version 21.8.0")
@@ -930,10 +929,10 @@ def main():
         elif not string_in_file_if_exists(changelog_path, full_version):
             error2(f"Missing changelog version: {full_version}")
     
-    if args.version or args.properties or args.catalog:
+    gradle_properties_path = f"{project_path}/gradle.properties"
+    gradle_properties = create_gradle_properties(args)
+    if gradle_properties:
         info2(f"Updating gradle.properties...")
-        gradle_properties_path = f"{project_path}/gradle.properties"
-        gradle_properties = create_gradle_properties(args)
         update_gradle_properties(gradle_properties_path, gradle_properties)
 
     if args.gradle:
@@ -954,16 +953,10 @@ def main():
         subprocess.run(["./gradlew", "all-java-apply"], cwd=project_path, check=True)
 
     info2("Refreshing project...")
-
     subprocess.run(["git", "pull"], cwd=project_path, check=True)
     subprocess.run(["./gradlew"], cwd=project_path, check=True)
-
     if has_subproject(project_path, "Fabric"):
         subprocess.run(["./gradlew", ":Fabric:all-validate"], cwd=project_path, check=True)
-
-    if args.sources:
-        info2("Generating sources...")
-        subprocess.run(["./gradlew", "commonGenSources" if args.legacy else "common-sources"], cwd=project_path, check=True)
 
     if args.data:
         info2("Running data generation...")
@@ -986,7 +979,7 @@ def main():
         run_upload(upload_parameters[0], upload_parameters[1], project_path, args.legacy)
 
     if args.version and args.notify:
-        info2(f"Notifying version v{args.version}...")
+        info2(f"Announcing version v{args.version}...")
         subprocess.run(["./gradlew", "notifyDiscord" if args.legacy else "all-discord"], cwd=project_path, check=True)
 
 if __name__ == "__main__":
