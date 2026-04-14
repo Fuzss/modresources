@@ -85,22 +85,6 @@ def parse_args():
 
     if not args.id:
         args.id = args.name.replace("-", "")
-    
-    if isinstance(args.init, str):
-        if not any(version == args.minecraft for version, _ in args.branch):
-            args.branch.append((args.minecraft, "primary"))
-
-        if not any(version == args.init for version, _ in args.branch):
-            args.branch.append((args.init, ""))
-
-        if not args.data:
-            args.data = True
-
-        if not args.upgrade:
-            args.upgrade = args.minecraft
-
-        if not args.changelog:
-            args.changelog = [["changed", f"Update to Minecraft {args.minecraft}"]]
 
     print(json.dumps(vars(args), indent=2, sort_keys=True))
 
@@ -329,7 +313,8 @@ def generate_changelog_block(full_version, changelog_section_data):
             body.extend(changelog_section_data[section])
             body.append("")
 
-    return header + "\n\n" + "\n".join(body).rstrip() + "\n"
+    full_body = "\n".join(body).rstrip()
+    return (header + "\n\n" + full_body + "\n", full_body)
 
 def prepend_to_changelog(changelog_path, new_entry, full_version):
     try:
@@ -345,16 +330,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
         """
 
     if full_version in existing:
-        if new_entry in existing:
+        if new_entry[1] in existing:
             return
         else:
             error2(f"Duplicate changelog version: {full_version}")
 
     if "## [" in existing:
         preamble, rest = existing.split("## [", 1)
-        updated = preamble.rstrip() + "\n\n" + new_entry + "\n## [" + rest
+        updated = preamble.rstrip() + "\n\n" + new_entry[0] + "\n## [" + rest
     else:
-        updated = existing.rstrip() + "\n\n" + new_entry
+        updated = existing.rstrip() + "\n\n" + new_entry[0]
 
     with open(changelog_path, "w", encoding="utf-8") as f:
         f.write(updated)
@@ -902,6 +887,7 @@ def main():
                 warn2("Could not launch IntelliJ:", e)
         sys.exit(1)
 
+    versions_updated = False
     if args.branch:
         info2(f"Updating versions.json...")
         branch_overrides = {
@@ -909,13 +895,13 @@ def main():
             for key, value in args.branch
         }
 
-        clone_versions.load_versions_file(main_path, branch_overrides)
+        versions_updated = clone_versions.load_versions_file(main_path, branch_overrides)
 
     if args.upgrade:
         info2("Upgrading workspace...")
         run_workspace_upgrade(args, base_path, main_path, project_path)
 
-    if args.branch:
+    if versions_updated and args.branch:
         subprocess.run(["gh", "workflow", "run", "generate_readme.yaml"], cwd=main_path, check=True)
 
     if args.version:
