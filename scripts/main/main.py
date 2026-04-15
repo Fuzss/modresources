@@ -852,13 +852,6 @@ def main():
     root_path = args.path or os.path.join(base_path, "mods", args.name)
     main_path = os.path.join(root_path, "main")
     project_path = os.path.join(root_path, args.minecraft)
-    environment = validate_open_parameters(args.open, "finder")
-    changelog_section_data = parse_changelog_sections(args.changelog)
-    launch_parameters = [ 
-        validate_launch_parameters(project_path, launch) 
-        for launch in args.launch 
-    ]
-    upload_parameters = validate_upload_parameters(args.upload)
 
     if args.init:
         info2(f"Running init at {root_path}...")
@@ -870,6 +863,8 @@ def main():
 
     if not os.path.isdir(project_path):
         error2(f"Directory not found: {project_path}")
+
+    environment = validate_open_parameters(args.open, "finder")
 
     if environment:
         info2(f"Opening in {environment.capitalize()}...")
@@ -907,6 +902,7 @@ def main():
     if args.version:
         changelog_path = f"{project_path}/CHANGELOG.md"
         full_version = f"v{args.version}-mc{args.minecraft}"
+        changelog_section_data = parse_changelog_sections(args.changelog)
 
         if changelog_section_data:
             info2(f"Updating CHANGELOG.md...")
@@ -942,12 +938,16 @@ def main():
     subprocess.run(["git", "pull"], cwd=project_path, check=True)
     subprocess.run(["./gradlew"], cwd=project_path, check=True)
     if has_subproject(project_path, "Fabric"):
-        subprocess.run(["./gradlew", ":Fabric:all-validate"], cwd=project_path, check=True)
+        subprocess.run(["./gradlew", ":Fabric:fabric-validate"], cwd=project_path, check=True)
 
     if args.data:
         info2("Running data generation...")
         subprocess.run(["./gradlew", "neoForgeData" if args.legacy else "neoforge-data"], cwd=project_path, check=True)
 
+    launch_parameters = [ 
+        validate_launch_parameters(project_path, launch) 
+        for launch in args.launch 
+    ]
     for parameter_set in launch_parameters:
         info2(f"Launching {parameter_set[0].capitalize()} {parameter_set[1].capitalize()}...")
         run_launch(parameter_set[0], parameter_set[1], project_path, args.legacy)
@@ -960,6 +960,7 @@ def main():
         info2(f"Publishing version v{args.version}...")
         subprocess.run(["./gradlew", "allPublish" if args.legacy else "all-publish"], cwd=project_path, check=True)
 
+    upload_parameters = validate_upload_parameters(args.upload)
     if args.version and upload_parameters:
         info2(f"Uploading version v{args.version}{f" for {upload_parameters[0].capitalize()}" if upload_parameters[0] else ""}{f" to {upload_parameters[1].capitalize()}" if upload_parameters[1] else ""}...")
         run_upload(upload_parameters[0], upload_parameters[1], project_path, args.legacy)
