@@ -8,7 +8,7 @@
 <summary>Latest</summary>
 
 - [1.1-SNAPSHOT](./fuzs.multiloader.multiloader-convention-plugins-neoforge-like.gradle.plugin/1.1-SNAPSHOT)
-- [1.1.4](./fuzs.multiloader.multiloader-convention-plugins-neoforge-like.gradle.plugin/1.1.4)
+- [1.1.5](./fuzs.multiloader.multiloader-convention-plugins-neoforge-like.gradle.plugin/1.1.5)
 </details>
 
 <details open>
@@ -20,6 +20,7 @@
 - [1.1.2](./fuzs.multiloader.multiloader-convention-plugins-neoforge-like.gradle.plugin/1.1.2)
 - [1.1.3](./fuzs.multiloader.multiloader-convention-plugins-neoforge-like.gradle.plugin/1.1.3)
 - [1.1.4](./fuzs.multiloader.multiloader-convention-plugins-neoforge-like.gradle.plugin/1.1.4)
+- [1.1.5](./fuzs.multiloader.multiloader-convention-plugins-neoforge-like.gradle.plugin/1.1.5)
 </details>
 
 </details>
