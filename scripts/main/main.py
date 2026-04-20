@@ -927,7 +927,9 @@ def main():
 
     if args.upgrade:
         info2("Applying Spotless...")
-        if args.upgrade == "1.21.11":
+        if args.upgrade == "26.1.x":
+            subprocess.run(["./gradlew", "all-tinytakeover-apply"], cwd=project_path, check=True)
+        elif args.upgrade == "1.21.11":
             subprocess.run(["./gradlew", "all-mountsofmayhem-apply"], cwd=project_path, check=True)
         elif args.upgrade == "1.21.10":
             subprocess.run(["./gradlew", "all-thecopperage-apply"], cwd=project_path, check=True)
