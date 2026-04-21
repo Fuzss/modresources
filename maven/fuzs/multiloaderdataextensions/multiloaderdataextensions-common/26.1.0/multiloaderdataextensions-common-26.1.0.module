@@ -1,0 +1,147 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "fuzs.multiloaderdataextensions",
+    "module": "multiloaderdataextensions-common",
+    "version": "26.1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.4.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "fuzs.multiloaderaccesswideners",
+          "module": "multiloaderaccesswideners-common",
+          "version": {
+            "requires": "26.1.1"
+          },
+          "excludes": [
+            {
+              "group": "*",
+              "module": "*"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "multiloaderdataextensions-common-26.1.0.jar",
+          "url": "multiloaderdataextensions-common-26.1.0.jar",
+          "size": 23257,
+          "sha512": "714091bb0f1edc3558b332d3251b0fb95062984dc72b2c6db2f523fbc094ca9ea8d41c032f0eb4a2f545c54fbcc0ee4da612bf767c0ab351a2201183b97ca9a2",
+          "sha256": "76222aa72273b6ad2fd1337d41583cfa5dc7a68d4449293932b55f5ad48a7053",
+          "sha1": "c2b91f7d5209ca251cacdb3cec1a293ae5ba3cd0",
+          "md5": "ed56753d01ea1374d72ae16088d30b8a"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "fuzs.multiloaderaccesswideners",
+          "module": "multiloaderaccesswideners-common",
+          "version": {
+            "requires": "26.1.1"
+          },
+          "excludes": [
+            {
+              "group": "*",
+              "module": "*"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "multiloaderdataextensions-common-26.1.0.jar",
+          "url": "multiloaderdataextensions-common-26.1.0.jar",
+          "size": 23257,
+          "sha512": "714091bb0f1edc3558b332d3251b0fb95062984dc72b2c6db2f523fbc094ca9ea8d41c032f0eb4a2f545c54fbcc0ee4da612bf767c0ab351a2201183b97ca9a2",
+          "sha256": "76222aa72273b6ad2fd1337d41583cfa5dc7a68d4449293932b55f5ad48a7053",
+          "sha1": "c2b91f7d5209ca251cacdb3cec1a293ae5ba3cd0",
+          "md5": "ed56753d01ea1374d72ae16088d30b8a"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "multiloaderdataextensions-common-26.1.0-sources.jar",
+          "url": "multiloaderdataextensions-common-26.1.0-sources.jar",
+          "size": 20392,
+          "sha512": "f15ddbc8e000c7b5da37d4b9680fb7ea98f10603441190198d42180f862bd3165d2fab7b26a12f4837922c483f900a77871fcc0f14b2e539ccddcfa3bbaf9e1a",
+          "sha256": "fcc85846d3764639c14e280873045cb91b6db9469654002708af5c8dad2ec87b",
+          "sha1": "7f831b1db53cd847c8a6ed6713d65ebd6fa934ec",
+          "md5": "3e57ff66699fc95d482cd35a2fa252d0"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "multiloaderdataextensions-common-26.1.0-javadoc.jar",
+          "url": "multiloaderdataextensions-common-26.1.0-javadoc.jar",
+          "size": 4188074,
+          "sha512": "ff0f6777a8224ee8a6e764e74a24206b46b223cc81eaf0a328538098327089be9e4e14516d9a0a52252507062649a3a956beab71b8c5dd81bc5198bb8c54545f",
+          "sha256": "6e533d56f976ba13b50699e2590e28c0420a133ce5dc3c4e95c446018adb8595",
+          "sha1": "acac049bc2ff37d01e534bf120f087523730c011",
+          "md5": "6a7c24ffe5b15d1e7d466d767908e59c"
+        }
+      ]
+    },
+    {
+      "name": "accessTransformersElements",
+      "attributes": {
+        "org.gradle.category": "accesstransformer"
+      },
+      "files": [
+        {
+          "name": "multiloaderdataextensions-common-26.1.0-accesstransformer.cfg",
+          "url": "multiloaderdataextensions-common-26.1.0-accesstransformer.cfg",
+          "size": 0,
+          "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+          "md5": "d41d8cd98f00b204e9800998ecf8427e"
+        }
+      ]
+    }
+  ]
+}
