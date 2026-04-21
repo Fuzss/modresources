@@ -195,12 +195,8 @@ def find_gradle_property(prop, default=None):
     else:
         error2(f"Missing property {prop} in ~/.gradle/gradle.properties")
 
-def get_remote_url(args):
-    token = find_gradle_property("fuzs.multiloader.project.github.token")
-    return f"https://{token}@github.com/Fuzss/{args.name}.git"
-
 def git_push_all(args, repo_path, commit_message):
-    remote_url = get_remote_url(args)
+    remote_url = f"git@github.com:Fuzss/{args.name}.git"
 
     subprocess.run(
         ["git", "remote", "set-url", "origin", remote_url], 
@@ -578,7 +574,7 @@ def update_toml_file(file_path, updates: dict):
     print(f"Updated {file_path}")
 
 def prepare_new_version(args, root_path, project_path):
-    remote_url = get_remote_url(args)
+    remote_url = f"git@github.com:Fuzss/{args.name}.git"
     new_branch = args.minecraft
     source_branch = args.init
 
