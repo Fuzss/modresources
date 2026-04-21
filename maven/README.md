@@ -2682,6 +2682,52 @@
 
 </details>
 
+## [`fuzs/multiloaderdataextensions`](./fuzs/multiloaderdataextensions)
+
+<details>
+<summary>Artifacts</summary>
+
+### [`multiloaderdataextensions-common`](./fuzs/multiloaderdataextensions/multiloaderdataextensions-common)
+<details>
+<summary>Latest</summary>
+
+- [26.1.0](./fuzs/multiloaderdataextensions/multiloaderdataextensions-common/26.1.0)
+</details>
+
+<details>
+<summary>Versions</summary>
+
+- [26.1.0](./fuzs/multiloaderdataextensions/multiloaderdataextensions-common/26.1.0)
+</details>
+
+### [`multiloaderdataextensions-fabric`](./fuzs/multiloaderdataextensions/multiloaderdataextensions-fabric)
+<details>
+<summary>Latest</summary>
+
+- [26.1.0](./fuzs/multiloaderdataextensions/multiloaderdataextensions-fabric/26.1.0)
+</details>
+
+<details>
+<summary>Versions</summary>
+
+- [26.1.0](./fuzs/multiloaderdataextensions/multiloaderdataextensions-fabric/26.1.0)
+</details>
+
+### [`multiloaderdataextensions-neoforge`](./fuzs/multiloaderdataextensions/multiloaderdataextensions-neoforge)
+<details>
+<summary>Latest</summary>
+
+- [26.1.0](./fuzs/multiloaderdataextensions/multiloaderdataextensions-neoforge/26.1.0)
+</details>
+
+<details>
+<summary>Versions</summary>
+
+- [26.1.0](./fuzs/multiloaderdataextensions/multiloaderdataextensions-neoforge/26.1.0)
+</details>
+
+</details>
+
 ## [`fuzs/multiloaderruntimefixes`](./fuzs/multiloaderruntimefixes)
 
 <details>
