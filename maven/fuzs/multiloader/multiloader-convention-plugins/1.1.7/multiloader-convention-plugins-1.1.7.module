@@ -1,0 +1,135 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "fuzs.multiloader",
+    "module": "multiloader-convention-plugins",
+    "version": "1.1.7",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.4.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "files": [
+        {
+          "name": "multiloader-convention-plugins-1.1.7.jar",
+          "url": "multiloader-convention-plugins-1.1.7.jar",
+          "size": 1488940,
+          "sha512": "b8be6567602b0e655596314a8d17f5017d4606f706faa95b3c7f402ab2ecda52c79ef8a0afac1814325a44a8fcf6fc80ae05a14902254afa42650f92ada0ab65",
+          "sha256": "5f07c314b7ca05af5fe193cf5c2ed6a4b4fbd11f8705bbd51c00cada9f357971",
+          "sha1": "7c95cb586dd05637cafdeb3eeb432dd6564d8a6c",
+          "md5": "7d7afa3cadfa68703b3a847e6a03bd99"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.gradle.toolchains.foojay-resolver-convention",
+          "module": "org.gradle.toolchains.foojay-resolver-convention.gradle.plugin",
+          "version": {
+            "requires": "1.0.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-serialization-json",
+          "version": {
+            "requires": "1.10.0"
+          }
+        },
+        {
+          "group": "com.akuleshov7",
+          "module": "ktoml-core",
+          "version": {
+            "requires": "0.7.1"
+          }
+        },
+        {
+          "group": "net.fabricmc.fabric-loom",
+          "module": "net.fabricmc.fabric-loom.gradle.plugin",
+          "version": {
+            "requires": "1.16-SNAPSHOT"
+          }
+        },
+        {
+          "group": "net.neoforged.moddev",
+          "module": "net.neoforged.moddev.gradle.plugin",
+          "version": {
+            "requires": "2.0.141"
+          }
+        },
+        {
+          "group": "me.modmuss50.mod-publish-plugin",
+          "module": "me.modmuss50.mod-publish-plugin.gradle.plugin",
+          "version": {
+            "requires": "1.1.0"
+          }
+        },
+        {
+          "group": "com.diffplug.spotless",
+          "module": "com.diffplug.spotless.gradle.plugin",
+          "version": {
+            "requires": "8.4.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "multiloader-convention-plugins-1.1.7.jar",
+          "url": "multiloader-convention-plugins-1.1.7.jar",
+          "size": 1488940,
+          "sha512": "b8be6567602b0e655596314a8d17f5017d4606f706faa95b3c7f402ab2ecda52c79ef8a0afac1814325a44a8fcf6fc80ae05a14902254afa42650f92ada0ab65",
+          "sha256": "5f07c314b7ca05af5fe193cf5c2ed6a4b4fbd11f8705bbd51c00cada9f357971",
+          "sha1": "7c95cb586dd05637cafdeb3eeb432dd6564d8a6c",
+          "md5": "7d7afa3cadfa68703b3a847e6a03bd99"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "multiloader-convention-plugins-1.1.7-sources.jar",
+          "url": "multiloader-convention-plugins-1.1.7-sources.jar",
+          "size": 589958,
+          "sha512": "5596f3756999d0528698fabd6d7ca08cd3aaadd977a472ebfc1408a6ab6f46e7e57ef8d229370d9fe7d369e0ee72514a1ae87dd48954c342dad11b619cc177d9",
+          "sha256": "2e586a6f672e52be74bd6b0c32aeffa5f7b84b59002d1e2a3bcb663aff790e40",
+          "sha1": "b2f8cfe7a79925f8d8a730cc23aea2e82ce398c4",
+          "md5": "f716ce5e4e133323c6ea1d235fdef406"
+        }
+      ]
+    }
+  ]
+}
