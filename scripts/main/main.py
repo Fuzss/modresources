@@ -684,7 +684,7 @@ def run_26_1_upgrade(args, template_path, project_path):
     replace_text_block(
         os.path.join(project_path, "Common", "src", "main", "resources", f"{args.id}.classtweaker"),
         r"^accessWidener\s+v[12]\s+\w+\s*$",
-        "classTweaker    v1  official"
+        "classTweaker    v2  official"
     )
 
     replace_text_block(
