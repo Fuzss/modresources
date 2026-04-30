@@ -1,0 +1,139 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "fuzs.limitlesscontainers",
+    "module": "limitlesscontainers-fabric",
+    "version": "26.1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.4.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "net.fabricmc.fabric-api",
+          "module": "fabric-api",
+          "version": {
+            "requires": "0.146.1+26.1.2"
+          }
+        },
+        {
+          "group": "fuzs.puzzleslib",
+          "module": "puzzleslib-fabric",
+          "version": {
+            "requires": "26.1.2"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "limitlesscontainers-fabric-26.1.0.jar",
+          "url": "limitlesscontainers-fabric-26.1.0.jar",
+          "size": 73552,
+          "sha512": "a0e4b8bfc4f048bfa9f54ca76a69e172932d35d2e6a10416e63c43e6f0ce78aa97b52ff3194199318db3d2f5ee3bf69cdfce0faeb89229872d2a33d4d4ee9aac",
+          "sha256": "8fdfe7d22d0b889c3f70efe8fd6e2b9f72c20913a50aa9c9f03a1e60987f022c",
+          "sha1": "506355d5a205f252c4a7344861a56be6cb831c75",
+          "md5": "12f58fee5b2b3bac77c30838e266a61d"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "net.fabricmc",
+          "module": "fabric-loader",
+          "version": {
+            "requires": "0.19.2"
+          }
+        },
+        {
+          "group": "net.fabricmc.fabric-api",
+          "module": "fabric-api",
+          "version": {
+            "requires": "0.146.1+26.1.2"
+          }
+        },
+        {
+          "group": "fuzs.puzzleslib",
+          "module": "puzzleslib-fabric",
+          "version": {
+            "requires": "26.1.2"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "limitlesscontainers-fabric-26.1.0.jar",
+          "url": "limitlesscontainers-fabric-26.1.0.jar",
+          "size": 73552,
+          "sha512": "a0e4b8bfc4f048bfa9f54ca76a69e172932d35d2e6a10416e63c43e6f0ce78aa97b52ff3194199318db3d2f5ee3bf69cdfce0faeb89229872d2a33d4d4ee9aac",
+          "sha256": "8fdfe7d22d0b889c3f70efe8fd6e2b9f72c20913a50aa9c9f03a1e60987f022c",
+          "sha1": "506355d5a205f252c4a7344861a56be6cb831c75",
+          "md5": "12f58fee5b2b3bac77c30838e266a61d"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "limitlesscontainers-fabric-26.1.0-sources.jar",
+          "url": "limitlesscontainers-fabric-26.1.0-sources.jar",
+          "size": 46390,
+          "sha512": "6306e8e5e4e0380ab8b24d68bf98684928bb912c5160d8b92190fe4dbffe9f729761fc82352c8e7a67d5e8bae22831f142ecea718397b95c613623e473a05372",
+          "sha256": "78238c6a0b617f2f7af3172d809a597a7c8589152580a68ca9d87ffcba921519",
+          "sha1": "27ed50b1de690555674f7f1bc980bc6bbeab594c",
+          "md5": "f02300fb2f36a340f8022fe2274ffc7a"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "limitlesscontainers-fabric-26.1.0-javadoc.jar",
+          "url": "limitlesscontainers-fabric-26.1.0-javadoc.jar",
+          "size": 4292528,
+          "sha512": "26a3b5d79cfd5b4db9a0574a6f290bc1a38eb7f390439e308f7b2e5f328d0c6bfade80f7d4190e4133d10c3c338af077aa35b70510f4517c72e5f13768751547",
+          "sha256": "32510920eeb0d51fddc4818afd6e7c76c9b8a71b7c90ba82376de7f350925b56",
+          "sha1": "f53ac12274d544b405d3f587c14c9fa1c3b6081a",
+          "md5": "935b1afe3618d1e1507e9f1753bc8087"
+        }
+      ]
+    }
+  ]
+}

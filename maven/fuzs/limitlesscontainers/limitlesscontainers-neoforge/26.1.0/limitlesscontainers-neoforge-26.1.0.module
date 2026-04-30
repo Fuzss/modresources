@@ -1,0 +1,135 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "fuzs.limitlesscontainers",
+    "module": "limitlesscontainers-neoforge",
+    "version": "26.1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.4.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "fuzs.puzzleslib",
+          "module": "puzzleslib-neoforge",
+          "version": {
+            "requires": "26.1.2"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "limitlesscontainers-neoforge-26.1.0.jar",
+          "url": "limitlesscontainers-neoforge-26.1.0.jar",
+          "size": 72690,
+          "sha512": "272bc9d01cf5aa1e1a552f2406f7dc620727a27fb46df972235335e295bcd96a542f23251fa53e995ebff609e8efd9c319c7c107cb2237ab99a9e92326f20e99",
+          "sha256": "83929ed717a2a2fc48d9753b9ac9a92095f430de088dfc4c0a9601a51e9a8aac",
+          "sha1": "f79d505460d545b9304c2fe231f46538ab42cfaa",
+          "md5": "786da207bd285afa52ca887ceef4a1ac"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "fuzs.puzzleslib",
+          "module": "puzzleslib-neoforge",
+          "version": {
+            "requires": "26.1.2"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "limitlesscontainers-neoforge-26.1.0.jar",
+          "url": "limitlesscontainers-neoforge-26.1.0.jar",
+          "size": 72690,
+          "sha512": "272bc9d01cf5aa1e1a552f2406f7dc620727a27fb46df972235335e295bcd96a542f23251fa53e995ebff609e8efd9c319c7c107cb2237ab99a9e92326f20e99",
+          "sha256": "83929ed717a2a2fc48d9753b9ac9a92095f430de088dfc4c0a9601a51e9a8aac",
+          "sha1": "f79d505460d545b9304c2fe231f46538ab42cfaa",
+          "md5": "786da207bd285afa52ca887ceef4a1ac"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "limitlesscontainers-neoforge-26.1.0-sources.jar",
+          "url": "limitlesscontainers-neoforge-26.1.0-sources.jar",
+          "size": 46413,
+          "sha512": "b6e2d07cd47e359b54a8f27861c06a920e7d53b483b674a87db959fbb139173d3b5c2006c161f0df90526420a55133c9f1e78e89533d42255dd259059e246872",
+          "sha256": "161949d769459f319c0319605c52e63a57d4b4e161be304127232a2888dbf718",
+          "sha1": "2478f633fb6bbf5403095668ca48311201d16164",
+          "md5": "aa1d961b7624834e624d0f22f33a6280"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "limitlesscontainers-neoforge-26.1.0-javadoc.jar",
+          "url": "limitlesscontainers-neoforge-26.1.0-javadoc.jar",
+          "size": 4292374,
+          "sha512": "bbec726273a39bd6de7ff3aaf99ab8ae72dc116033a593d04c2accf6c7a306545cdce56b954f479d3d1cea5351bfdd0e4721b967c11074f1f38be9d9dbe0a753",
+          "sha256": "1dde59ee878b92cc4f6fee5d6f67d6582b6f0a47bcabe814ec11bfb7c4e980bb",
+          "sha1": "43b453c25a19a046fb1f53b78302578819f7c490",
+          "md5": "f3c782ca2f6510d54059e9d13be3acec"
+        }
+      ]
+    },
+    {
+      "name": "accessTransformersElements",
+      "attributes": {
+        "org.gradle.category": "accesstransformer"
+      },
+      "files": [
+        {
+          "name": "limitlesscontainers-neoforge-26.1.0-accesstransformer.cfg",
+          "url": "limitlesscontainers-neoforge-26.1.0-accesstransformer.cfg",
+          "size": 2473,
+          "sha512": "9d0ba82f7a7bbe2a303d1f3402ed15141af3016d719c33ece27db06dee7e5a7cde8a5a0e8313fd630733bac047795350e14c382e9bbdfd1b9f84f9d64e8e40a9",
+          "sha256": "fbe6c2afbdf1dcb79ed13f4d22d481b0ab4c935f09a2b5b23b5a04a2fd2ab60a",
+          "sha1": "eb3dba58e84daf4d59b8b15b755272e10e1954c5",
+          "md5": "44913da2ed698f56c1ee8282eb9a77b5"
+        }
+      ]
+    }
+  ]
+}
