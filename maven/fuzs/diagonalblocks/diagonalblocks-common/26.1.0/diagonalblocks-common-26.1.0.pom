@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!-- This module was also published with a richer model, Gradle metadata,  -->
+  <!-- which should be used instead. Do not delete the following line which  -->
+  <!-- is to indicate to Gradle or any Gradle module metadata file consumer  -->
+  <!-- that they should prefer consuming it instead. -->
+  <!-- do_not_remove: published-with-gradle-metadata -->
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>fuzs.diagonalblocks</groupId>
+  <artifactId>diagonalblocks-common</artifactId>
+  <version>26.1.0</version>
+  <name>Diagonal Blocks [Common]</name>
+  <description>The core library behind the diagonal blocks mod series.</description>
+  <url>https://github.com/Fuzss/diagonal-blocks</url>
+  <licenses>
+    <license>
+      <name>MPL-2.0</name>
+      <url>https://spdx.org/licenses/MPL-2.0.html</url>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <id>fuzs</id>
+      <name>Fuzs</name>
+    </developer>
+    <developer>
+      <id>xfacthd</id>
+      <name>XFactHD</name>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:git:git://github.com/Fuzss/diagonal-blocks.git</connection>
+    <developerConnection>scm:git:git@github.com:Fuzss/diagonal-blocks.git</developerConnection>
+    <url>https://github.com/Fuzss/diagonal-blocks</url>
+  </scm>
+  <issueManagement>
+    <system>github</system>
+    <url>https://github.com/Fuzss/diagonal-blocks/issues</url>
+  </issueManagement>
+  <dependencies>
+    <dependency>
+      <groupId>fuzs.puzzleslib</groupId>
+      <artifactId>puzzleslib-common</artifactId>
+      <version>26.1.2</version>
+      <scope>compile</scope>
+    </dependency>
+  </dependencies>
+</project>
