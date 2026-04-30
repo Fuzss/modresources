@@ -1,0 +1,126 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "fuzs.limitlesscontainers",
+    "module": "limitlesscontainers-common",
+    "version": "26.1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.4.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "fuzs.puzzleslib",
+          "module": "puzzleslib-common",
+          "version": {
+            "requires": "26.1.2"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "limitlesscontainers-common-26.1.0.jar",
+          "url": "limitlesscontainers-common-26.1.0.jar",
+          "size": 63465,
+          "sha512": "8fe3441cb05be6e291338b65da34a35314ad46069ad2d672fd0297dde00b7d055a093b03fdcaaa04918a2e1928f43b91334d3af4a4a87b7d89018e4e58af776a",
+          "sha256": "b985b81429e84ae586937b9deae8d12492740cf1c0fbfbf659d4d0c3955e1d8a",
+          "sha1": "f83e3ffdc57d7dd838bc82e7b905d3833d7dd5d6",
+          "md5": "ecf2d3f8ebc1573cddd49fb3f99680a8"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "limitlesscontainers-common-26.1.0.jar",
+          "url": "limitlesscontainers-common-26.1.0.jar",
+          "size": 63465,
+          "sha512": "8fe3441cb05be6e291338b65da34a35314ad46069ad2d672fd0297dde00b7d055a093b03fdcaaa04918a2e1928f43b91334d3af4a4a87b7d89018e4e58af776a",
+          "sha256": "b985b81429e84ae586937b9deae8d12492740cf1c0fbfbf659d4d0c3955e1d8a",
+          "sha1": "f83e3ffdc57d7dd838bc82e7b905d3833d7dd5d6",
+          "md5": "ecf2d3f8ebc1573cddd49fb3f99680a8"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "limitlesscontainers-common-26.1.0-sources.jar",
+          "url": "limitlesscontainers-common-26.1.0-sources.jar",
+          "size": 41200,
+          "sha512": "0247955d6e222d3e6f6398415cac2f62dc1042673cd22fa7ce8d478006254341180e7a256b783aefb26e97becd019a23ec4e246836a7bc004f8139c12a4d2794",
+          "sha256": "3119fa1cbfaaeb9be044e88fb67ac4dd0fed1a42ab2d93b2123dfa1d6cc416b2",
+          "sha1": "82268188f93d940b4e9e851ca14cb50f111a81d8",
+          "md5": "9ab89896d114269801156045ae5c1a55"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "limitlesscontainers-common-26.1.0-javadoc.jar",
+          "url": "limitlesscontainers-common-26.1.0-javadoc.jar",
+          "size": 4263000,
+          "sha512": "4cbfb9bea6fca60e52383178076ff91439d31fecf9b65a4ac0dc0af4b1dd89c0f4ddf6963aa93a56eba1b29fa08fcca84d237fef2f8f41f901f1a1273ee70a20",
+          "sha256": "ac9e705130e47997a62ac14b3eee2fb9663526b0768dee7036274579e965de9e",
+          "sha1": "bd6c879e05cc2f467de8bc3e36ee8f1dc5ca0da8",
+          "md5": "bbfd9b2d9b41ff4cde8d98b2b10b9040"
+        }
+      ]
+    },
+    {
+      "name": "accessTransformersElements",
+      "attributes": {
+        "org.gradle.category": "accesstransformer"
+      },
+      "files": [
+        {
+          "name": "limitlesscontainers-common-26.1.0-accesstransformer.cfg",
+          "url": "limitlesscontainers-common-26.1.0-accesstransformer.cfg",
+          "size": 2473,
+          "sha512": "9d0ba82f7a7bbe2a303d1f3402ed15141af3016d719c33ece27db06dee7e5a7cde8a5a0e8313fd630733bac047795350e14c382e9bbdfd1b9f84f9d64e8e40a9",
+          "sha256": "fbe6c2afbdf1dcb79ed13f4d22d481b0ab4c935f09a2b5b23b5a04a2fd2ab60a",
+          "sha1": "eb3dba58e84daf4d59b8b15b755272e10e1954c5",
+          "md5": "44913da2ed698f56c1ee8282eb9a77b5"
+        }
+      ]
+    }
+  ]
+}
