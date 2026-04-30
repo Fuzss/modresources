@@ -1627,6 +1627,7 @@
 - [21.9.0](./fuzs/limitlesscontainers/limitlesscontainers-common/21.9.0)
 - [21.10.0](./fuzs/limitlesscontainers/limitlesscontainers-common/21.10.0)
 - [21.11.0](./fuzs/limitlesscontainers/limitlesscontainers-common/21.11.0)
+- [26.1.0](./fuzs/limitlesscontainers/limitlesscontainers-common/26.1.0)
 </details>
 
 <details>
@@ -1645,6 +1646,7 @@
 - [21.9.0](./fuzs/limitlesscontainers/limitlesscontainers-common/21.9.0)
 - [21.10.0](./fuzs/limitlesscontainers/limitlesscontainers-common/21.10.0)
 - [21.11.0](./fuzs/limitlesscontainers/limitlesscontainers-common/21.11.0)
+- [26.1.0](./fuzs/limitlesscontainers/limitlesscontainers-common/26.1.0)
 </details>
 
 ### [`limitlesscontainers-fabric`](./fuzs/limitlesscontainers/limitlesscontainers-fabric)
@@ -1663,6 +1665,7 @@
 - [21.9.0](./fuzs/limitlesscontainers/limitlesscontainers-fabric/21.9.0)
 - [21.10.0](./fuzs/limitlesscontainers/limitlesscontainers-fabric/21.10.0)
 - [21.11.0](./fuzs/limitlesscontainers/limitlesscontainers-fabric/21.11.0)
+- [26.1.0](./fuzs/limitlesscontainers/limitlesscontainers-fabric/26.1.0)
 </details>
 
 <details>
@@ -1681,6 +1684,7 @@
 - [21.9.0](./fuzs/limitlesscontainers/limitlesscontainers-fabric/21.9.0)
 - [21.10.0](./fuzs/limitlesscontainers/limitlesscontainers-fabric/21.10.0)
 - [21.11.0](./fuzs/limitlesscontainers/limitlesscontainers-fabric/21.11.0)
+- [26.1.0](./fuzs/limitlesscontainers/limitlesscontainers-fabric/26.1.0)
 </details>
 
 ### [`limitlesscontainers-forge`](./fuzs/limitlesscontainers/limitlesscontainers-forge)
@@ -1712,6 +1716,7 @@
 - [21.9.0](./fuzs/limitlesscontainers/limitlesscontainers-neoforge/21.9.0)
 - [21.10.0](./fuzs/limitlesscontainers/limitlesscontainers-neoforge/21.10.0)
 - [21.11.0](./fuzs/limitlesscontainers/limitlesscontainers-neoforge/21.11.0)
+- [26.1.0](./fuzs/limitlesscontainers/limitlesscontainers-neoforge/26.1.0)
 </details>
 
 <details>
@@ -1730,6 +1735,7 @@
 - [21.9.0](./fuzs/limitlesscontainers/limitlesscontainers-neoforge/21.9.0)
 - [21.10.0](./fuzs/limitlesscontainers/limitlesscontainers-neoforge/21.10.0)
 - [21.11.0](./fuzs/limitlesscontainers/limitlesscontainers-neoforge/21.11.0)
+- [26.1.0](./fuzs/limitlesscontainers/limitlesscontainers-neoforge/26.1.0)
 </details>
 
 </details>
