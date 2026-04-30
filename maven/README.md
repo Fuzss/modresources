@@ -5330,6 +5330,7 @@
 - [21.9.0](./fuzs/tooltipinsights/tooltipinsights-common/21.9.0)
 - [21.10.1](./fuzs/tooltipinsights/tooltipinsights-common/21.10.1)
 - [21.11.0](./fuzs/tooltipinsights/tooltipinsights-common/21.11.0)
+- [26.1.0](./fuzs/tooltipinsights/tooltipinsights-common/26.1.0)
 </details>
 
 <details>
@@ -5343,6 +5344,7 @@
 - [21.10.0](./fuzs/tooltipinsights/tooltipinsights-common/21.10.0)
 - [21.10.1](./fuzs/tooltipinsights/tooltipinsights-common/21.10.1)
 - [21.11.0](./fuzs/tooltipinsights/tooltipinsights-common/21.11.0)
+- [26.1.0](./fuzs/tooltipinsights/tooltipinsights-common/26.1.0)
 </details>
 
 ### [`tooltipinsights-fabric`](./fuzs/tooltipinsights/tooltipinsights-fabric)
@@ -5353,6 +5355,7 @@
 - [21.9.0](./fuzs/tooltipinsights/tooltipinsights-fabric/21.9.0)
 - [21.10.1](./fuzs/tooltipinsights/tooltipinsights-fabric/21.10.1)
 - [21.11.0](./fuzs/tooltipinsights/tooltipinsights-fabric/21.11.0)
+- [26.1.0](./fuzs/tooltipinsights/tooltipinsights-fabric/26.1.0)
 </details>
 
 <details>
@@ -5366,6 +5369,7 @@
 - [21.10.0](./fuzs/tooltipinsights/tooltipinsights-fabric/21.10.0)
 - [21.10.1](./fuzs/tooltipinsights/tooltipinsights-fabric/21.10.1)
 - [21.11.0](./fuzs/tooltipinsights/tooltipinsights-fabric/21.11.0)
+- [26.1.0](./fuzs/tooltipinsights/tooltipinsights-fabric/26.1.0)
 </details>
 
 ### [`tooltipinsights-neoforge`](./fuzs/tooltipinsights/tooltipinsights-neoforge)
@@ -5376,6 +5380,7 @@
 - [21.9.0](./fuzs/tooltipinsights/tooltipinsights-neoforge/21.9.0)
 - [21.10.1](./fuzs/tooltipinsights/tooltipinsights-neoforge/21.10.1)
 - [21.11.0](./fuzs/tooltipinsights/tooltipinsights-neoforge/21.11.0)
+- [26.1.0](./fuzs/tooltipinsights/tooltipinsights-neoforge/26.1.0)
 </details>
 
 <details>
@@ -5389,6 +5394,7 @@
 - [21.10.0](./fuzs/tooltipinsights/tooltipinsights-neoforge/21.10.0)
 - [21.10.1](./fuzs/tooltipinsights/tooltipinsights-neoforge/21.10.1)
 - [21.11.0](./fuzs/tooltipinsights/tooltipinsights-neoforge/21.11.0)
+- [26.1.0](./fuzs/tooltipinsights/tooltipinsights-neoforge/26.1.0)
 </details>
 
 </details>
