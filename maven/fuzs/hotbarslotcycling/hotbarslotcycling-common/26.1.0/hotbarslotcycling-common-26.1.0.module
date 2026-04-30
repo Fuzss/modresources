@@ -1,0 +1,126 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "fuzs.hotbarslotcycling",
+    "module": "hotbarslotcycling-common",
+    "version": "26.1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.4.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "fuzs.puzzleslib",
+          "module": "puzzleslib-common",
+          "version": {
+            "requires": "26.1.2"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "hotbarslotcycling-common-26.1.0.jar",
+          "url": "hotbarslotcycling-common-26.1.0.jar",
+          "size": 44021,
+          "sha512": "a672e72f633cf6946ea9e6d974e1410f17601c902ac671820c6e13c874879c05c41f25fbaa289d9f34e3f19dabb4aefbad026c926654f9fea39f35d514a3586e",
+          "sha256": "13dbd2b73685f667b0bd4ec9b9c4d111481bb3bf3c5f16a83d97f3a6b18ad83a",
+          "sha1": "3d10ab609a1f7459c8ffeb618d8a36dcd6297dcd",
+          "md5": "6dd41c60df322ff9e6ce506d36f56d82"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "hotbarslotcycling-common-26.1.0.jar",
+          "url": "hotbarslotcycling-common-26.1.0.jar",
+          "size": 44021,
+          "sha512": "a672e72f633cf6946ea9e6d974e1410f17601c902ac671820c6e13c874879c05c41f25fbaa289d9f34e3f19dabb4aefbad026c926654f9fea39f35d514a3586e",
+          "sha256": "13dbd2b73685f667b0bd4ec9b9c4d111481bb3bf3c5f16a83d97f3a6b18ad83a",
+          "sha1": "3d10ab609a1f7459c8ffeb618d8a36dcd6297dcd",
+          "md5": "6dd41c60df322ff9e6ce506d36f56d82"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "hotbarslotcycling-common-26.1.0-sources.jar",
+          "url": "hotbarslotcycling-common-26.1.0-sources.jar",
+          "size": 32785,
+          "sha512": "e5b62de8842028f0643e039bafd87efdf8708f29f6584c98bbda62b0a409ade35fe2f3fb9eec68593c635c0ecac854a2676b6ef5207010497b950fa3c47e2eb4",
+          "sha256": "af64e36b8864af2e56f2a615ad721beaf8bfd528241c4b61dafafc94b19b196e",
+          "sha1": "6ddc30eef1df20b3ccbe9bf2db76bce2b8d9defe",
+          "md5": "3be7b3a38176757d25eec364e83b74ba"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "hotbarslotcycling-common-26.1.0-javadoc.jar",
+          "url": "hotbarslotcycling-common-26.1.0-javadoc.jar",
+          "size": 4225351,
+          "sha512": "8db51450e1e0acd5d3cd444031b4443932891d4321944c4b5e0cc0bed7af5bb9dd88eb1474471de712a917828b9b01e184d47ab40928101538e95d366a9bff5b",
+          "sha256": "29a726ebf3ffc50a1e967638d719a718a95adc3ac285ee95025b1590635645ac",
+          "sha1": "e00166105ccf92c847f656d5695c12a429958d99",
+          "md5": "7d17bde760e9fc4ccc5919f46f472fbf"
+        }
+      ]
+    },
+    {
+      "name": "accessTransformersElements",
+      "attributes": {
+        "org.gradle.category": "accesstransformer"
+      },
+      "files": [
+        {
+          "name": "hotbarslotcycling-common-26.1.0-accesstransformer.cfg",
+          "url": "hotbarslotcycling-common-26.1.0-accesstransformer.cfg",
+          "size": 0,
+          "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+          "md5": "d41d8cd98f00b204e9800998ecf8427e"
+        }
+      ]
+    }
+  ]
+}
