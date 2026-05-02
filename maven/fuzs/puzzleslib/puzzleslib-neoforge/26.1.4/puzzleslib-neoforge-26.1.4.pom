@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!-- This module was also published with a richer model, Gradle metadata,  -->
+  <!-- which should be used instead. Do not delete the following line which  -->
+  <!-- is to indicate to Gradle or any Gradle module metadata file consumer  -->
+  <!-- that they should prefer consuming it instead. -->
+  <!-- do_not_remove: published-with-gradle-metadata -->
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>fuzs.puzzleslib</groupId>
+  <artifactId>puzzleslib-neoforge</artifactId>
+  <version>26.1.4</version>
+  <name>Puzzles Lib [NeoForge]</name>
+  <description>Why it's called Puzzles, you ask? That's the puzzle!</description>
+  <url>https://github.com/Fuzss/puzzles-lib</url>
+  <licenses>
+    <license>
+      <name>MPL-2.0</name>
+      <url>https://spdx.org/licenses/MPL-2.0.html</url>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <id>fuzs</id>
+      <name>Fuzs</name>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:git:git://github.com/Fuzss/puzzles-lib.git</connection>
+    <developerConnection>scm:git:git@github.com:Fuzss/puzzles-lib.git</developerConnection>
+    <url>https://github.com/Fuzss/puzzles-lib</url>
+  </scm>
+  <issueManagement>
+    <system>github</system>
+    <url>https://github.com/Fuzss/puzzles-lib/issues</url>
+  </issueManagement>
+</project>
