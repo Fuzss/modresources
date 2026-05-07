@@ -1,0 +1,126 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "fuzs.statuemenus",
+    "module": "statuemenus-common",
+    "version": "26.1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.4.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "fuzs.puzzleslib",
+          "module": "puzzleslib-common",
+          "version": {
+            "requires": "26.1.5"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "statuemenus-common-26.1.0.jar",
+          "url": "statuemenus-common-26.1.0.jar",
+          "size": 273460,
+          "sha512": "a3d3f89eb92b96904d9f227d64b4f8bc16fb06815d202ff953472059312dd8f0aa6dd2cc765b2faf5fe4bf1ca660c7d4846dd8f6747be3e88fdeb40aeeba0b42",
+          "sha256": "d9d6e41edcab87c9eb47a7ddcc12d59dd4687f666f1bb9ed7f4ef61f45be3b9d",
+          "sha1": "fdd5c69e29dd22305d2468d7c4f5f44ee1857ac7",
+          "md5": "ae8d4be5aab9e0bd343908eb38a4f97d"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "statuemenus-common-26.1.0.jar",
+          "url": "statuemenus-common-26.1.0.jar",
+          "size": 273460,
+          "sha512": "a3d3f89eb92b96904d9f227d64b4f8bc16fb06815d202ff953472059312dd8f0aa6dd2cc765b2faf5fe4bf1ca660c7d4846dd8f6747be3e88fdeb40aeeba0b42",
+          "sha256": "d9d6e41edcab87c9eb47a7ddcc12d59dd4687f666f1bb9ed7f4ef61f45be3b9d",
+          "sha1": "fdd5c69e29dd22305d2468d7c4f5f44ee1857ac7",
+          "md5": "ae8d4be5aab9e0bd343908eb38a4f97d"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "statuemenus-common-26.1.0-sources.jar",
+          "url": "statuemenus-common-26.1.0-sources.jar",
+          "size": 171081,
+          "sha512": "6fd83d87d4d15850eaaf01efe134b3da60a497541746d1c56d5dd58d5243b4c3afbc68724335b91f6b230ccfa02b886233dd11e425cdf9c7f97d4d3589ca362a",
+          "sha256": "58b5a344d38b39b391d88260e5bb29aa8ddcfe842e87e9e93f8d52b4ee341195",
+          "sha1": "6880e074e2a2ecd018dfea66f2665050e67effae",
+          "md5": "be9cabd4096bac4222dc2c847228f745"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "statuemenus-common-26.1.0-javadoc.jar",
+          "url": "statuemenus-common-26.1.0-javadoc.jar",
+          "size": 4490338,
+          "sha512": "87243bfb5b854e4c245276affa9dbc059fa8469384bbf3ec360da319f8ffd92027a72a4af910dd6088e16888d4945fa46baed54ea4fa17fe3ee8cf4a8eb82253",
+          "sha256": "54bcfb384079ab43ad1dc4de82c1e208bf57952045a6a8831f60bb8eb9759d0b",
+          "sha1": "dbb8d27f5f609efae90b745f7d66ea68145154f9",
+          "md5": "263df408017adade120c8cd4bb3a66e5"
+        }
+      ]
+    },
+    {
+      "name": "accessTransformersElements",
+      "attributes": {
+        "org.gradle.category": "accesstransformer"
+      },
+      "files": [
+        {
+          "name": "statuemenus-common-26.1.0-accesstransformer.cfg",
+          "url": "statuemenus-common-26.1.0-accesstransformer.cfg",
+          "size": 227,
+          "sha512": "25656f2876fe18b38d80a08cc7b08c64710afb00e45d8ddc6562ec4a262daaeaceb8f6a9af40cdcc6d2c168b188a00f1aef58fbb613c0da4b9fb3733876e5463",
+          "sha256": "e46f6167ccb4f5391253fc7e013f668e8ac86a90a15469ae64d6f0f73a34864a",
+          "sha1": "4b1139dc5520d4aa1cceeac340a152704c319ad4",
+          "md5": "11eb011e01d508d2787287bacda3e46a"
+        }
+      ]
+    }
+  ]
+}

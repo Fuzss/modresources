@@ -1,0 +1,139 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "fuzs.statuemenus",
+    "module": "statuemenus-fabric",
+    "version": "26.1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.4.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "net.fabricmc.fabric-api",
+          "module": "fabric-api",
+          "version": {
+            "requires": "0.148.0+26.1.2"
+          }
+        },
+        {
+          "group": "fuzs.puzzleslib",
+          "module": "puzzleslib-fabric",
+          "version": {
+            "requires": "26.1.5"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "statuemenus-fabric-26.1.0.jar",
+          "url": "statuemenus-fabric-26.1.0.jar",
+          "size": 279472,
+          "sha512": "2048f23750a8150f46eb151ad0ba00f4cea62384f886afd68e1f5566c56ac92579e23a10189bbb51904b094d70df6d2b463441c32c526cb5573bfe280005ae19",
+          "sha256": "990354c1e659fe83cd5b0fbd01281d241e5bfa30dc1b2bfb7fa220c2d726b68f",
+          "sha1": "25d67184d3b8daf542012b914b2fec7cd69717b2",
+          "md5": "403d5ee103302d80aa0f78e2bd895006"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "net.fabricmc",
+          "module": "fabric-loader",
+          "version": {
+            "requires": "0.19.2"
+          }
+        },
+        {
+          "group": "net.fabricmc.fabric-api",
+          "module": "fabric-api",
+          "version": {
+            "requires": "0.148.0+26.1.2"
+          }
+        },
+        {
+          "group": "fuzs.puzzleslib",
+          "module": "puzzleslib-fabric",
+          "version": {
+            "requires": "26.1.5"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "statuemenus-fabric-26.1.0.jar",
+          "url": "statuemenus-fabric-26.1.0.jar",
+          "size": 279472,
+          "sha512": "2048f23750a8150f46eb151ad0ba00f4cea62384f886afd68e1f5566c56ac92579e23a10189bbb51904b094d70df6d2b463441c32c526cb5573bfe280005ae19",
+          "sha256": "990354c1e659fe83cd5b0fbd01281d241e5bfa30dc1b2bfb7fa220c2d726b68f",
+          "sha1": "25d67184d3b8daf542012b914b2fec7cd69717b2",
+          "md5": "403d5ee103302d80aa0f78e2bd895006"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "statuemenus-fabric-26.1.0-sources.jar",
+          "url": "statuemenus-fabric-26.1.0-sources.jar",
+          "size": 172840,
+          "sha512": "1b67a615883f635e2deca4abcec36acc668101bf1a6b7ff642ce43bd495f0a5eaaadead3ab68ef06b7e47f03d785462918b488d47850d3cac3b4c7170724bd18",
+          "sha256": "b40ac492b4ae45b1734a132c0f57c8e86c0a707d32aa36cd5dac478786f3f4fd",
+          "sha1": "cacb5cfd40ec3c2c76efeef1ca0b86ba7f4f446a",
+          "md5": "6b9ecaf9e67a671151bccc74720a5ecb"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "statuemenus-fabric-26.1.0-javadoc.jar",
+          "url": "statuemenus-fabric-26.1.0-javadoc.jar",
+          "size": 4503270,
+          "sha512": "ba557a5064850611e1d647a79661ebe7528f8c208b88036ba5c4d663cf12eeee8fbefee4a34f36af9b6d77a1f02d5d97cc57320a1c1d96dc27a912fc8e3efe3b",
+          "sha256": "2771e74dcfb11bce15b2b4a817362a3202017103e702434f6bcfc5f7ed8f1aa6",
+          "sha1": "e3e372806b404a51f358be29392c3efb262d65da",
+          "md5": "5684ce49003c8b7fadfcbc9540b1409b"
+        }
+      ]
+    }
+  ]
+}
