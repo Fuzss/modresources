@@ -1364,6 +1364,7 @@
 - [21.9.0](./fuzs/iteminteractions/iteminteractions-common/21.9.0)
 - [21.10.1](./fuzs/iteminteractions/iteminteractions-common/21.10.1)
 - [21.11.0](./fuzs/iteminteractions/iteminteractions-common/21.11.0)
+- [26.1.0](./fuzs/iteminteractions/iteminteractions-common/26.1.0)
 </details>
 
 <details>
@@ -1406,6 +1407,7 @@
 - [21.10.0](./fuzs/iteminteractions/iteminteractions-common/21.10.0)
 - [21.10.1](./fuzs/iteminteractions/iteminteractions-common/21.10.1)
 - [21.11.0](./fuzs/iteminteractions/iteminteractions-common/21.11.0)
+- [26.1.0](./fuzs/iteminteractions/iteminteractions-common/26.1.0)
 </details>
 
 ### [`iteminteractions-fabric`](./fuzs/iteminteractions/iteminteractions-fabric)
@@ -1424,6 +1426,7 @@
 - [21.9.0](./fuzs/iteminteractions/iteminteractions-fabric/21.9.0)
 - [21.10.1](./fuzs/iteminteractions/iteminteractions-fabric/21.10.1)
 - [21.11.0](./fuzs/iteminteractions/iteminteractions-fabric/21.11.0)
+- [26.1.0](./fuzs/iteminteractions/iteminteractions-fabric/26.1.0)
 </details>
 
 <details>
@@ -1466,6 +1469,7 @@
 - [21.10.0](./fuzs/iteminteractions/iteminteractions-fabric/21.10.0)
 - [21.10.1](./fuzs/iteminteractions/iteminteractions-fabric/21.10.1)
 - [21.11.0](./fuzs/iteminteractions/iteminteractions-fabric/21.11.0)
+- [26.1.0](./fuzs/iteminteractions/iteminteractions-fabric/26.1.0)
 </details>
 
 ### [`iteminteractions-forge`](./fuzs/iteminteractions/iteminteractions-forge)
@@ -1502,6 +1506,7 @@
 - [21.9.0](./fuzs/iteminteractions/iteminteractions-neoforge/21.9.0)
 - [21.10.1](./fuzs/iteminteractions/iteminteractions-neoforge/21.10.1)
 - [21.11.0](./fuzs/iteminteractions/iteminteractions-neoforge/21.11.0)
+- [26.1.0](./fuzs/iteminteractions/iteminteractions-neoforge/26.1.0)
 </details>
 
 <details>
@@ -1544,6 +1549,7 @@
 - [21.10.0](./fuzs/iteminteractions/iteminteractions-neoforge/21.10.0)
 - [21.10.1](./fuzs/iteminteractions/iteminteractions-neoforge/21.10.1)
 - [21.11.0](./fuzs/iteminteractions/iteminteractions-neoforge/21.11.0)
+- [26.1.0](./fuzs/iteminteractions/iteminteractions-neoforge/26.1.0)
 </details>
 
 </details>
