@@ -851,7 +851,7 @@ def main():
 
     if args.init:
         info2(f"Running init at {root_path}...")
-        clone_versions.setup_git(root_path, args.name)
+        clone_versions.setup_git(root_path, args.name, args.minecraft)
 
         if args.version and isinstance(args.init, str):
             info2(f"Preparing Minecraft version {args.minecraft}...")
