@@ -851,11 +851,12 @@ def main():
 
     if args.init:
         info2(f"Running init at {root_path}...")
-        clone_versions.setup_git(root_path, args.name, args.minecraft)
-
         if args.version and isinstance(args.init, str):
+            clone_versions.setup_git(root_path, args.name)
             info2(f"Preparing Minecraft version {args.minecraft}...")
             prepare_new_version(args, root_path, project_path)
+        else:
+            clone_versions.setup_git(root_path, args.name, [args.minecraft])
 
     if not os.path.isdir(project_path):
         error2(f"Directory not found: {project_path}")

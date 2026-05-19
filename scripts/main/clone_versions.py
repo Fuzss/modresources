@@ -174,7 +174,7 @@ def load_versions(main_path: str):
     ]
 
 
-def setup_git(root_path: str, repo_name: str, single_version: str = None):
+def setup_git(root_path: str, repo_name: str, versions_override: list[str] = []):
     repo_url = f"{REMOTE_BASE_URL}{repo_name}.git"
     main_path = os.path.join(root_path, "main")
 
@@ -186,7 +186,7 @@ def setup_git(root_path: str, repo_name: str, single_version: str = None):
         print(f"Cloning main branch into {main_path}")
         clone_branch(repo_url, "main", main_path)
 
-    versions = [single_version] if single_version else load_versions(main_path)
+    versions = versions_override or load_versions(main_path)
 
     for version in versions:
         target_dir = os.path.join(root_path, version)
