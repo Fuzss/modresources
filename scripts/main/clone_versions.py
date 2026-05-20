@@ -196,7 +196,7 @@ def setup_git(root_path: str, repo_name: str, versions_override: list[str] = [])
             continue
 
         print(f"Cloning branch {version} into {target_dir}")
-        clone_branch(repo_url, version, target_dir, single_branch=True)
+        clone_branch(repo_url, version, target_dir)
 
 
 def main():
