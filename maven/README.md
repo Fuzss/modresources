@@ -5384,6 +5384,7 @@
 <details>
 <summary>Latest</summary>
 
+- [21.1.0](./fuzs/tooltipinsights/tooltipinsights-common/21.1.0)
 - [21.8.3](./fuzs/tooltipinsights/tooltipinsights-common/21.8.3)
 - [21.9.0](./fuzs/tooltipinsights/tooltipinsights-common/21.9.0)
 - [21.10.1](./fuzs/tooltipinsights/tooltipinsights-common/21.10.1)
@@ -5394,6 +5395,7 @@
 <details>
 <summary>Versions</summary>
 
+- [21.1.0](./fuzs/tooltipinsights/tooltipinsights-common/21.1.0)
 - [21.8.0](./fuzs/tooltipinsights/tooltipinsights-common/21.8.0)
 - [21.8.1](./fuzs/tooltipinsights/tooltipinsights-common/21.8.1)
 - [21.8.2](./fuzs/tooltipinsights/tooltipinsights-common/21.8.2)
@@ -5409,6 +5411,7 @@
 <details>
 <summary>Latest</summary>
 
+- [21.1.0](./fuzs/tooltipinsights/tooltipinsights-fabric/21.1.0)
 - [21.8.3](./fuzs/tooltipinsights/tooltipinsights-fabric/21.8.3)
 - [21.9.0](./fuzs/tooltipinsights/tooltipinsights-fabric/21.9.0)
 - [21.10.1](./fuzs/tooltipinsights/tooltipinsights-fabric/21.10.1)
@@ -5419,6 +5422,7 @@
 <details>
 <summary>Versions</summary>
 
+- [21.1.0](./fuzs/tooltipinsights/tooltipinsights-fabric/21.1.0)
 - [21.8.0](./fuzs/tooltipinsights/tooltipinsights-fabric/21.8.0)
 - [21.8.1](./fuzs/tooltipinsights/tooltipinsights-fabric/21.8.1)
 - [21.8.2](./fuzs/tooltipinsights/tooltipinsights-fabric/21.8.2)
@@ -5434,6 +5438,7 @@
 <details>
 <summary>Latest</summary>
 
+- [21.1.0](./fuzs/tooltipinsights/tooltipinsights-neoforge/21.1.0)
 - [21.8.3](./fuzs/tooltipinsights/tooltipinsights-neoforge/21.8.3)
 - [21.9.0](./fuzs/tooltipinsights/tooltipinsights-neoforge/21.9.0)
 - [21.10.1](./fuzs/tooltipinsights/tooltipinsights-neoforge/21.10.1)
@@ -5444,6 +5449,7 @@
 <details>
 <summary>Versions</summary>
 
+- [21.1.0](./fuzs/tooltipinsights/tooltipinsights-neoforge/21.1.0)
 - [21.8.0](./fuzs/tooltipinsights/tooltipinsights-neoforge/21.8.0)
 - [21.8.1](./fuzs/tooltipinsights/tooltipinsights-neoforge/21.8.1)
 - [21.8.2](./fuzs/tooltipinsights/tooltipinsights-neoforge/21.8.2)
