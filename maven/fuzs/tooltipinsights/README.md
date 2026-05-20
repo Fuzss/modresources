@@ -7,6 +7,7 @@
 <details open>
 <summary>Latest</summary>
 
+- [21.1.0](./tooltipinsights-common/21.1.0)
 - [21.8.3](./tooltipinsights-common/21.8.3)
 - [21.9.0](./tooltipinsights-common/21.9.0)
 - [21.10.1](./tooltipinsights-common/21.10.1)
@@ -17,6 +18,7 @@
 <details open>
 <summary>Versions</summary>
 
+- [21.1.0](./tooltipinsights-common/21.1.0)
 - [21.8.0](./tooltipinsights-common/21.8.0)
 - [21.8.1](./tooltipinsights-common/21.8.1)
 - [21.8.2](./tooltipinsights-common/21.8.2)
@@ -32,6 +34,7 @@
 <details open>
 <summary>Latest</summary>
 
+- [21.1.0](./tooltipinsights-fabric/21.1.0)
 - [21.8.3](./tooltipinsights-fabric/21.8.3)
 - [21.9.0](./tooltipinsights-fabric/21.9.0)
 - [21.10.1](./tooltipinsights-fabric/21.10.1)
@@ -42,6 +45,7 @@
 <details open>
 <summary>Versions</summary>
 
+- [21.1.0](./tooltipinsights-fabric/21.1.0)
 - [21.8.0](./tooltipinsights-fabric/21.8.0)
 - [21.8.1](./tooltipinsights-fabric/21.8.1)
 - [21.8.2](./tooltipinsights-fabric/21.8.2)
@@ -57,6 +61,7 @@
 <details open>
 <summary>Latest</summary>
 
+- [21.1.0](./tooltipinsights-neoforge/21.1.0)
 - [21.8.3](./tooltipinsights-neoforge/21.8.3)
 - [21.9.0](./tooltipinsights-neoforge/21.9.0)
 - [21.10.1](./tooltipinsights-neoforge/21.10.1)
@@ -67,6 +72,7 @@
 <details open>
 <summary>Versions</summary>
 
+- [21.1.0](./tooltipinsights-neoforge/21.1.0)
 - [21.8.0](./tooltipinsights-neoforge/21.8.0)
 - [21.8.1](./tooltipinsights-neoforge/21.8.1)
 - [21.8.2](./tooltipinsights-neoforge/21.8.2)
