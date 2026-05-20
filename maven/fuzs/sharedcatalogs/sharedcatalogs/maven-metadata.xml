@@ -3,8 +3,8 @@
   <groupId>fuzs.sharedcatalogs</groupId>
   <artifactId>sharedcatalogs</artifactId>
   <versioning>
-    <latest>1.21.1-SNAPSHOT</latest>
-    <release>1.21.1-v22</release>
+    <latest>1.20.1-SNAPSHOT</latest>
+    <release>1.20.1-v47</release>
     <versions>
       <version>1.20-v1</version>
       <version>1.20-v2</version>
@@ -326,7 +326,8 @@
       <version>26.1-v13</version>
       <version>26.1-v14</version>
       <version>1.21.1-v22</version>
+      <version>1.20.1-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20260520134015</lastUpdated>
+    <lastUpdated>20260520134642</lastUpdated>
   </versioning>
 </metadata>
