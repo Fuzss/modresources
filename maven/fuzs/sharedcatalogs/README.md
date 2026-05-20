@@ -84,6 +84,7 @@
 - [1.19.2-v27](./sharedcatalogs/1.19.2-v27)
 - [1.20-v1](./sharedcatalogs/1.20-v1)
 - [1.20-v2](./sharedcatalogs/1.20-v2)
+- [1.20.1-SNAPSHOT](./sharedcatalogs/1.20.1-SNAPSHOT)
 - [1.20.1-v1](./sharedcatalogs/1.20.1-v1)
 - [1.20.1-v2](./sharedcatalogs/1.20.1-v2)
 - [1.20.1-v3](./sharedcatalogs/1.20.1-v3)
