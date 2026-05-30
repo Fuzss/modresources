@@ -1,1 +1,5 @@
-Visual Workbench makes items put into a crafting table stay inside. Breaking the block drops everything on the ground, just like you'd expect. Oh, and crafting ingredients as well as the resulting item are also rendered on top. Really fancy if you ask me!
+**Visual Workbench** makes crafting tables feel more alive by keeping items inside the grid while you work. 🧰 No more disappearing ingredients. Everything stays visible and organized as you craft.
+
+If you break the block, all contents drop on the ground just as you would expect. 📦 Crafting ingredients and the resulting item are also rendered directly on top, giving the table a clean and satisfying visual touch.
+
+Simple, intuitive, and a nice visual upgrade to a familiar block. ✨

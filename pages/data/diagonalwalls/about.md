@@ -1,7 +1,7 @@
-Diagonal Walls is the final addition to the diagonal blocks mod serires: At last not just fences and glass panes, but also walls are able to connect when placed diagonally. Finally you can build the castle of your dreams without limits.
+**Diagonal Walls** completes the Diagonal Blocks family, allowing walls to connect diagonally for more natural shapes and more freedom in your builds. 🧱 Castles, ruins, and city walls can now be designed without being locked to rigid angles.
 
-Please note that for technical reasons when installing the Diagonal Walls mod walls are no longer able to connect upwards and will once again show gaps when stacked vertically (like they used to in Minecraft 1.15.2 and before). Adding that feature back is unfortunatly not technically feasible and is not planned.
+Please note that for technical reasons, installing this mod removes vertical wall connections. Walls will no longer connect upwards and will show gaps when stacked, similar to Minecraft 1.15.2 and earlier. This behavior is not a bug, and restoring vertical connections is not technically feasible and is therefore not planned.
 
-Blocks added by other mods are dynamically supported whenever possible. Blocks that are affected unintentionally can be prevented from being so by adding them to the `diagonalwalls:non_diagonal_walls` block tag.
+Blocks added by other mods are supported dynamically whenever possible, and any unintended behavior can be controlled using the `diagonalwalls:non_diagonal_walls` block tag. ⚙️ It also works seamlessly with most resource packs without extra setup.
 
-Check out the two other projects from the diagonal blocks mod family: [Diagonal Fences](https://www.curseforge.com/minecraft/mc-mods/diagonal-fences) and [Diagonal Windows](https://www.curseforge.com/minecraft/mc-mods/diagonal-windows).
+Part of the Diagonal Blocks family, alongside [Diagonal Fences](https://www.curseforge.com/minecraft/mc-mods/diagonal-fences) and [Diagonal Windows](https://www.curseforge.com/minecraft/mc-mods/diagonal-windows), expanding diagonal building in multiple directions. ✨

@@ -1,7 +1,5 @@
-Diagonal Fences makes all kinds of fences able to connect diagonally. Works just like you would expect it to, so not much more to say really.
+**Diagonal Fences** allows fences to connect diagonally, making builds feel more natural and flexible. 🧱 It behaves exactly as you would expect, adding smoother connections without changing the core feel of fences.
 
-Blocks added by other mods are dynamically supported whenever possible. Blocks that are affected unintentionally can be prevented from being so by adding them to the `diagonalfences:non_diagonal_fences` block tag.
+Blocks added by other mods are supported dynamically whenever possible, and any unintended behavior can be controlled using the `diagonalfences:non_diagonal_fences` block tag. ⚙️ It also works seamlessly with most resource packs without extra setup.
 
-Check out the two other projects from the diagonal blocks mod family: [Diagonal Windows](https://www.curseforge.com/minecraft/mc-mods/diagonal-windows) and [Diagonal Walls](https://www.curseforge.com/minecraft/mc-mods/diagonal-walls).
-
-Works great in combination with mods such as [MrCrayfish's Furniture Mod](https://www.curseforge.com/minecraft/mc-mods/mrcrayfish-furniture-mod) by [MrCrayfish](https://www.curseforge.com/members/mrcrayfish) and [Macaw's Fences and Walls](https://www.curseforge.com/minecraft/mc-mods/macaws-fences-and-walls) by [Sketch_Macaw](https://www.curseforge.com/members/sketch_macaw).
+Part of the Diagonal Blocks family, alongside [Diagonal Windows](https://www.curseforge.com/minecraft/mc-mods/diagonal-windows) and [Diagonal Walls](https://www.curseforge.com/minecraft/mc-mods/diagonal-walls). ✨ More ways to make your builds feel smoother, cleaner, and more natural.
