@@ -19,6 +19,7 @@ configureddefaults: 0
 convenienteffects: 20
 cutthrough: 35
 deathfinder: 5
+deleteworldstotrash: 5
 diagonalfences: 50
 diagonalwalls: 30
 diagonalwindows: 30
