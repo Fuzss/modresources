@@ -103,6 +103,11 @@ deathfinder:
   distributions:
     curseforge: death-finder
     modrinth: death-finder
+deleteworldstotrash:
+  weight: 5
+  distributions:
+    curseforge: delete-worlds-to-trash
+    modrinth: delete-worlds-to-trash
 diagonalfences:
   weight: 50
   distributions:
