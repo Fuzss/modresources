@@ -1,4 +1,4 @@
-Say goodbye to ugly, out-of-place rivers! 🌊 Climate Rivers replaces Minecraft’s default river biome with beautiful, biome-specific rivers that actually make sense. Explore three new river types — warm 🏜️, lukewarm 🌴, and cold ❄️ — each bringing unique visuals that fit right into their surrounding climates.
+Say goodbye to ugly, out-of-place rivers! 🌊 **Climate Rivers** replaces Minecraft’s default river biome with beautiful, biome-specific rivers that actually make sense. Explore three new river types — warm 🏜️, lukewarm 🌴, and cold ❄️ — each bringing unique visuals that fit right into their surrounding climates.
 
 No more grass blocks 🌱 ruining the look of your desert rivers, or taigas stuck with bland, grassy banks 🪨. Rivers now feel natural, immersive, and perfectly blended into the terrain around them. Ideal for builders 🧱, explorers 🧭, and anyone who wants a better-looking Minecraft world. It’s time to make your world generation smarter and more beautiful — one river at a time. 💧
 
