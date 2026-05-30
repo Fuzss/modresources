@@ -1,0 +1,1 @@
++ Thanks to [K3nchikka00](https://www.reddit.com/user/K3nchikka00) for suggesting this feature on [Reddit](https://www.reddit.com/r/minecraftsuggestions/comments/mvaahq/if_a_minecraft_world_gets_deleted_it_goes_into/).
