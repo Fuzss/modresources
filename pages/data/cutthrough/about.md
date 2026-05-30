@@ -1,1 +1,5 @@
-Cut Through allows you to swing your weapon through tall grass and all other blocks without a collision shape when fighting an enemy. No longer are you forced to break the grass in your way to hit your target. Additionally Cut Through is extremly efficient with a negligible amount of additional calculations over vanilla compared to similar mods and works great with many other mods that rely on Minecraft's hit target implementation.
+**Cut Through** lets you swing your weapon through tall grass and other blocks without a collision shape while fighting enemies. ⚔️ No more breaking grass just to land a hit on your target.
+
+It is built to be highly efficient, adding only a negligible amount of extra calculations compared to vanilla. ⚙️ It also plays nicely with other mods that rely on Minecraft’s hit targeting system.
+
+Clean combat, fewer interruptions, and smoother fights. ✨
