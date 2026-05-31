@@ -243,6 +243,11 @@ leavemybarsalone:
   distributions:
     curseforge: leave-my-bars-alone
     modrinth: leave-my-bars-alone
+letmesleep:
+  weight: 10
+  distributions:
+    curseforge: let-me-sleep
+    modrinth: new-let-me-sleep
 linkedchests:
   weight: 25
   distributions:
