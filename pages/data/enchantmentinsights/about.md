@@ -1,3 +1,5 @@
-**Enchantment Insights** adds enchantment descriptions directly to your item tooltips, so you always know what each enchantment does. Enchantment entries look great too: dyed names, max levels, and fancy formatting with clean indentation make tooltips both clear and stylish. The enchanting table isn’t left behind either: its hints include the same descriptions, so you know exactly what you’re getting.  
+**Enchantment Insights** makes enchantments easier to understand by adding clear descriptions directly to your item tooltips. ✨ No more guessing what an enchantment actually does before applying it.
 
-Looking for neat effect descriptions too? Check out the wonderful [Effect Insights](https://www.curseforge.com/minecraft/mc-mods/effect-insights) mod!
+Tooltips also receive a stylish upgrade with dyed enchantment names, visible max levels, and clean formatting that keeps everything easy to read at a glance. 📚 The enchanting table is not left behind either, with enchantment hints showing the same helpful descriptions so you know exactly what you are getting.
+
+Looking for neat effect descriptions too? Check out the wonderful [Effect Insights](https://www.curseforge.com/minecraft/mc-mods/effect-insights) mod! 🧪

@@ -1,3 +1,5 @@
-**Effect Insights** adds simple explanations to status effects from potions and food items, so you always know exactly what each one does. Effects on items show their descriptions directly in the tooltip, and the active effects on your player? Just hover over them in your inventory to see what they do. Everything looks neat and consistent, with clean formatting for quick understanding.  
+**Effect Insights** makes status effects easier to understand by adding simple and clear explanations directly to the game. 💡 No more guessing what a potion or suspicious stew might do before taking a sip.
 
-Looking for enchantment descriptions too? Check out the wonderful [Enchantment Insights](https://www.curseforge.com/minecraft/mc-mods/enchantment-insights) mod!
+Effects shown on food and potion items include their descriptions right inside the tooltip, while active effects on your player can be viewed by simply hovering over them in your inventory. 🧪 Everything is presented with clean and consistent formatting for quick understanding at a glance.
+
+Looking for enchantment descriptions too? Check out the wonderful [Enchantment Insights](https://www.curseforge.com/minecraft/mc-mods/enchantment-insights) mod! ✨

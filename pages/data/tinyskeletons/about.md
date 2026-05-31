@@ -1,1 +1,3 @@
-Ever wondered why baby zombies are a thing, but baby skeletons are nowhere to be found? Wonder no more, Tiny Skeletons is here to change just that! A baby variant is added for normal skeletons, strays, and wither skeletons. And they all have unique behaviors to stand out from their adult variants!
+**Tiny Skeletons** brings baby skeletons to Minecraft at last! 💀 If baby zombies exist, why not skeletons too? Normal skeletons, strays, bogged, parched, and even wither skeletons can now spawn as tiny variants, each with their own unique behaviors, attacks, and rewards.
+
+Cute? Sometimes. Harmless? Absolutely not. ✨
