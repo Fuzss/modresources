@@ -1,0 +1,1 @@
++ Big thanks to [AaronBlader12](https://www.minecraftforum.net/members/AaronBlader12) and their [Potion Visual Revamp](https://www.minecraftforum.net/forums/minecraft-java-edition/suggestions/2974948-potion-visual-revamp-make-potions-more-pleasing-to) suggestion on the Minecraft Forum, which some parts of this mod are based on.  

@@ -123,6 +123,11 @@ diagonalwindows:
   distributions:
     curseforge: diagonal-windows
     modrinth: diagonal-windows
+distinctpotions:
+  weight: 10
+  distributions:
+    curseforge: distinct-potions
+    modrinth: distinct-potions
 dyedflames:
   weight: 20
   distributions:
