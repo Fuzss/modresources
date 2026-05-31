@@ -1,4 +1,7 @@
-+ Baby skeleton variants spawn just like baby zombies: Every time an adult skeleton spawns there is a 5% chance it will spawn as a baby instead.
-+ Baby Skeletons use their bow for ranged combat. As soon as their target comes close enough, they will quickly switch to the wooden sword on their back, and turn to melee combat. Quite the challenge!
-+ Baby Strays are equipped with snowballs and will throw those right in your face whenever they have the chance. But be careful: The snowballs have pebbles mixed in, so they deal a tiny amount of damage and knock you back on impact!
-+ Baby Wither Skeletons are not aggressive at all! The complete opposite is the case: They are quite scared you will steal the wither skeleton skull they always carry with them. So they will try to flee as fast as they can when you come even a little bit close. When killed the skull is guaranteed to drop. If you do not want to kill such a cute creature to get the skull, give it a wither rose in exchange!
++ 💀 **Natural Spawning:** Baby skeleton variants spawn naturally with a 5% chance, just like baby zombies.
++ 🏹 **Baby Skeletons:** Fight with bows at range, then quickly switch to melee combat with a wooden sword when you get too close.
++ ❄️ **Baby Strays:** Throw icy snowballs mixed with pebbles that deal a small amount of damage and knock targets back. They may even drop blue ice when defeated.
++ 🍄 **Baby Bogged:** Toss mushrooms at their enemies from a distance, dealing light damage while providing unique mushroom themed drops.
++ 🏜️ **Baby Parched:** Throw chunks of sand at nearby targets and can provide a handy source of sand.
++ 🖤 **Baby Wither Skeletons:** Surprisingly timid creatures that flee when approached, terrified you might steal the wither skeleton skull they always carry. Defeat one for a guaranteed skull drop, or trade it a wither rose instead. 🌹
++ 🎁 **Unique Rewards:** Several baby skeleton variants offer special drops and alternate ways to obtain useful resources.
