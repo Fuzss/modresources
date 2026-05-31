@@ -1,0 +1,1 @@
++ Thanks to [VikeStep](https://www.curseforge.com/members/vikestep) and their now outdated [Nearby Mob Finder](https://www.curseforge.com/minecraft/mc-mods/nearby-mob-finder) mod for inspiring the glowing feature.
