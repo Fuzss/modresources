@@ -383,6 +383,11 @@ spikyspikes:
   distributions:
     curseforge: spiky-spikes
     modrinth: spiky-spikes
+stonecuttingupgrade:
+  weight: 20
+  distributions:
+    curseforge: stonecutting-upgrade
+    modrinth: stonecutting-upgrade
 stoneworks:
   weight: 45
   distributions:

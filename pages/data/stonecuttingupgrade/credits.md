@@ -1,0 +1,1 @@
++ Thanks to [weirdbrackets](https://www.curseforge.com/members/weirdbrackets/projects) and their [Portable Stonecutter](https://www.curseforge.com/minecraft/mc-mods/portable-stonecutter) mod for inspiring the improved stonecutter menu.
