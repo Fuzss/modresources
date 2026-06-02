@@ -283,6 +283,11 @@ mutantmonsters:
   distributions:
     curseforge: mutant-monsters
     modrinth: mutant-monsters
+nametagupgrade:
+  weight: 35
+  distributions:
+    curseforge: name-tag-upgrade
+    modrinth: name-tag-upgrade
 naturalwaters:
   weight: 15
   distributions:
