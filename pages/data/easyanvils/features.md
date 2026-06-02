@@ -1,6 +1,9 @@
-+ Items stay inside the interface after closing and are beautifully rendered on the block itself.
-+ Anvil costs scale a lot less agressively when an item has been worked on multiple times.
-+ Use an iron block on a damaged anvil to repair it by one stage!
-+ Renaming a name tag in an anvil can be done for free and cannot damage the anvil!
-+ Name tags have a handy interface for changing the name without any anvil and without cost. Open the interface by shift right-clicking a name tag held in your hand.
-+ The name text field for anvils and name tags accepts formatting codes, providing great control over text styles. Check the [Minecraft Wiki](https://www.curseforge.com/linkout?remoteUrl=https%253a%252f%252fminecraft.fandom.com%252fwiki%252fFormatting_codes%2523Usage) to find out more about formatting codes!
+- 🔨 **Persistent Anvils:** Items remain inside the anvil after closing the interface instead of popping back into your inventory.
+- 👀 **Visible Contents:** Items placed in an anvil are rendered directly on the block in the world.
+- 📉 **Reduced Prior Work Penalties:** Repairing and renaming no longer suffer from rapidly escalating prior work costs.
+- ✨ **More Affordable Enchanting:** Enchanted book application costs are reduced and expensive operations are far less restrictive.
+- 🏷️ **Free Renaming:** Renaming items can be performed without spending experience levels.
+- 🎨 **Formatting Support:** Item names support formatting codes for custom colors and text styles.
+- 🛠️ **Repair Damaged Anvils:** Use iron blocks to restore anvils and extend their lifespan.
+- 💪 **More Durable Anvils:** Anvils are less likely to become damaged or break during use.
+- ⚙️ **Highly Configurable:** Fine tune repair costs, prior work penalties, durability, and many other mechanics.

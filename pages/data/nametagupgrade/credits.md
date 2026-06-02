@@ -1,0 +1,1 @@
++ Thanks to [tfarecnim](https://www.curseforge.com/members/tfarecnim) and their [Nametags Without Anvils](https://www.curseforge.com/minecraft/mc-mods/nametags-without-anvils) mod, which parts of this mod are largely inspired by.
