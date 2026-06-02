@@ -29,7 +29,7 @@ armorstatues:
     curseforge: armor-statues
     modrinth: armor-statues
 azaleagrowthcontrol:
-  weight: 5
+  weight: 0
   distributions:
     curseforge: azalea-growth-control
     modrinth: azalea-growth-control
