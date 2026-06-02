@@ -454,7 +454,7 @@ visualworkbench:
     curseforge: visual-workbench
     modrinth: visual-workbench
 ytones:
-  weight: 15
+  weight: 0
   distributions:
     curseforge: ytones
     modrinth: ytones
