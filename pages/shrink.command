@@ -18,6 +18,7 @@ then
 mkdir -p ../../out/$i
 convert ./logo.png -resize 25% +dither -colors 256 -depth 8 ../../out/$i/mod_logo.png
 pngout ../../out/$i/mod_logo.png
+cp ../../out/$i/mod_logo.png ../../out/$i/pack.png
 fi
 cd -
 done

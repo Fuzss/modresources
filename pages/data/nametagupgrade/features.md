@@ -1,0 +1,7 @@
+- 🏷️ **Instant Name Tag Editing:** Rename name tags directly and on the go from a dedicated screen without anvils or experience costs.  
+- ✨ **Formatting Support:** Use formatting codes to add colors, bold text, italics, and other styling to names.  
+- ♻️ **No More Wasted Name Tags:** Using a tag with an identical name will no longer consume it.  
+- ✂️ **Remove Custom Names:** Use shears on named mobs to remove their custom name and recover the matching name tag.  
+- 💀 **Named Mob Drops:** Named mobs can drop their name tag when they die, preserving custom names.  
+- 🔁 **Return Old Name Tags:** Renaming an already named mob returns the previous name tag instead of deleting it.  
+- 🔊 **Extra Feedback:** Applying a name tag plays a satisfying sound effect.  
