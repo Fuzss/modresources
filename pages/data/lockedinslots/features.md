@@ -1,0 +1,9 @@
+- 🔒 **Quick Slot Locking:** Lock or unlock inventory slots with a configurable key while hovering them.
+- 🎯 **Hotbar Support:** Lock the selected hotbar slot even when no inventory screen is open.
+- 🛡️ **Prevent Item Pickup:** Locked items cannot be picked up or moved out of their slot.
+- 🚫 **No Accidental Drops:** Pressing *Q* will no longer drop items from locked slots.
+- 🔄 **Prevent Item Swapping:** Locked slots cannot be replaced with other items.
+- 📦 **Allow Stack Growth:** Stackable items can still receive additional matching items while remaining protected.
+- 💡 **Helpful Unlock Hints:** Optional tooltips remind you how to unlock protected slots.
+- ⚙️ **Flexible Configuration:** Customize lock timing, slot restrictions, supported slot types, and more.
+- 🌍 **Fully Client Side:** Works seamlessly in singleplayer and on servers without requiring installation on the server.
