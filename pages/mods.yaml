@@ -253,6 +253,11 @@ linkedchests:
   distributions:
     curseforge: linked-chests
     modrinth: new-linked-chests
+lockedinslots:
+  weight: 10
+  distributions:
+    curseforge: locked-in-slots
+    modrinth: locked-in-slots
 magnumtorch:
   weight: 35
   distributions:
