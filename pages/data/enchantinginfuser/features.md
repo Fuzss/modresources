@@ -1,10 +1,10 @@
-+ Select which enchantments you want to put on your gear, no more randomness involved!
-+ Offers all enchantments you would find at an enchanting table, treasure enchantments like mending can be enabled via a built-in data pack.
-+ Use the basic enchanting infuser to choose which enchantments to put on your gear.
-+ Use the advanced enchanting infuser to additionally modify enchantments on already enchanted items. Also supports repairing an item using levels instead of materials. Costs are considerably lower compared to the basic infuser.
-+ Receive back experience points when disenchanting gear on the advanced infuser, similar to vanilla's gindstone.
-+ Place bookshelves like you would for an enchanting table to unlock better enchantments and higher levels.
-+ Configure all costs and available enchantments as you wish!
-+ Install [Enchantment Descriptions](https://www.curseforge.com/minecraft/mc-mods/enchantment-descriptions) by [Darkhax](https://www.curseforge.com/members/darkhaxdev) to see descriptions directly in the infuser's interface!
-+ Fully integrates with [Apotheosis](https://www.curseforge.com/minecraft/mc-mods/apotheosis) by [Shadows_of_Fire](https://www.curseforge.com/members/shadows_of_fire), requiring special bookshelves to make better enchantments available, while also scaling all level costs.
-+ Looking for different textures? Check out [Familiar Infusing Tables](https://www.curseforge.com/minecraft/texture-packs/familiar-infusing-tables) by [theskycloud](https://www.curseforge.com/members/theskycloud)!
+* ✨ **Choose Your Enchantments:** Select exactly which enchantments to apply instead of relying on random enchanting rolls.
+* 📚 **Bookshelf Progression:** Build an enchanting setup around the infuser to unlock stronger enchantments and higher levels.
+* 🔮 **Two Infuser Tiers:** Use the basic infuser for straightforward enchanting, or upgrade to the advanced infuser for additional functionality and lower costs.
+* 🛠️ **Modify Existing Gear:** Upgrade, remove, and adjust enchantments on already enchanted items using the advanced infuser.
+* ❤️ **Repair With Experience:** Restore durability directly using levels instead of consuming repair materials.
+* ♻️ **Recover Experience:** Disenchant unwanted items and receive experience back, similar to a grindstone.
+* 📖 **Enchant Books Too:** Create enchanted books directly through the infuser and build your perfect library.
+* ⚔️ **Expanded Enchantment Options:** Optionally allow enchantments normally restricted to anvils, such as applying Sharpness to axes.
+* 🎛️ **Highly Configurable:** Customize costs, bookshelf requirements, repairs, available enchantments, and much more.
+* 💡 **Enchantment Descriptions:** Install the [Enchantment Insights](https://www.curseforge.com/minecraft/mc-mods/enchantment-insights) mod to view enchantment descriptions directly inside the infuser interface.

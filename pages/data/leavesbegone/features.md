@@ -1,4 +1,7 @@
-+ You might have seen similar mods adding fast leaf decay before, but here is what makes Leaves Be Gone really stand out:
-+ Out Of The Box Mod Compat: All mods that register their leaves in the `minecraft:leaves` tag are automatically supported, even when their leaves don't extend vanilla Minecraft's leaves block (e.g. some of the large trees in the [Terrestria](https://www.curseforge.com/minecraft/mc-mods/terrestria) mod by [coderbot](https://www.curseforge.com/members/coderbot)).
-+ No Additional Block Updates / Block State Checks: Leaves Be Gone is extremely efficient when determining which leaves blocks to accelerate decay for. It hooks in just where vanilla decides when a leaves block is able to decay, so it doesn't have to do any calculations on it's own. Also no additional calculations are made elsewhere, like when harvesting logs or when other leaves blocks decay as similar mods do.
-+ Works Properly Across Chunk / Level Reloads: Scheduled leaf decays are stored using Minecraft's native system for scheduling ticks, so when unloading and reloading the area leaf decay continues as it should without having to repeat any calculations or being interrupted.
+* 🍃 **Rapid Leaf Decay:** Leaves begin decaying almost immediately after a tree is cut down and are typically gone within about a second.
+* ⚡ **Built for Performance:** Hooks directly into Minecraft's existing leaf decay system without performing unnecessary extra calculations.
+* 🧩 **Automatic Mod Compatibility:** Supports most modded leaves out of the box through the standard `minecraft:leaves` tag.
+* 🌳 **Works With Custom Trees:** Compatible even with many leaves implementations that do not directly extend vanilla leaf blocks.
+* 💾 **Reliable Across Reloads:** Uses Minecraft's native scheduled tick system, allowing leaf decay to continue correctly after chunk unloads and reloads.
+* ⚙️ **Configurable Timing:** Customize how quickly leaves start decaying and how long the process takes.
+* 🍂 **Flexible Decay Rules:** Optionally allow leaves to decay even when connected to different leaf types.

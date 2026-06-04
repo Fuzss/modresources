@@ -1,0 +1,7 @@
+- 🧍 **Bedrock-Style Display:** Shows a miniature version of your player directly on the HUD.
+- 🏃 **Action-Based Visibility:** Display the paper doll while sprinting, swimming, crouching, crawling, flying, gliding, and more.
+- 🎯 **Custom Positioning:** Place the display anywhere on the screen using configurable anchor points and offsets.
+- 🔍 **Adjustable Scale:** Resize the paper doll to fit your preferred HUD layout.
+- 👀 **Head Tracking:** Configure head movement to follow yaw, pitch, or both.
+- ⏱️ **Smart Display Timing:** Keep the paper doll visible briefly after an action ends or display it continuously.
+- ⚙️ **Fully Configurable:** Customize exactly which actions trigger the display and how it behaves.
