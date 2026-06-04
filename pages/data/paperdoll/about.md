@@ -1,1 +1,5 @@
-Paper Doll shows a small little display of yourself in a corner of the screen while you are performing certain actions, just like on the Bedrock Edition of Minecraft. The doll is shown for actions such as: sprinting, swimming, crouching, crawling, flying, and gliding. Many more actions are available in the config along with many display setting for the paper doll.
+**Paper Doll** adds the familiar Bedrock Edition paper doll to *Minecraft: Java Edition*, showing a small model of your character on screen while performing various actions. 🧍
+
+The paper doll can appear while sprinting, swimming, crouching, crawling, flying, gliding, and more, giving you a quick visual overview of your character without opening any menus. ✨
+
+Everything is highly customizable. Adjust its position, size, display duration, head movement, and exactly which actions should make it appear. Whether you want a faithful Bedrock experience or your own custom setup, this mod lets you tailor the display to your liking. ⚙️
