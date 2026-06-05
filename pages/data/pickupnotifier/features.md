@@ -5,4 +5,3 @@
 * 🎨 **Fully Customizable Display:** Adjust screen position, scale, colors, backgrounds, spacing, and more.
 * ⏱️ **Configurable Behavior:** Control how long entries remain visible, how many can be shown, and how they are grouped.
 * 🌐 **Client-Side Friendly:** Works in singleplayer, on modded servers, and even on vanilla servers without requiring installation.
-* ⚙️ **Flexible Filtering:** Hide specific items or entire groups of items from the notification list.

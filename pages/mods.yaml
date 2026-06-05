@@ -223,6 +223,11 @@ hoppergadgetry:
   distributions:
     curseforge: hopper-gadgetry
     modrinth: hopper-gadgetry
+hoveringhotbar:
+  weight: 10
+  distributions:
+    curseforge: hovering-hotbar
+    modrinth: hovering-hotbar
 horseexpert:
   weight: 15
   distributions:
