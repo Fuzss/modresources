@@ -1,0 +1,109 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "fuzs.forgeconfigapiport",
+    "module": "forgeconfigapiport-forge",
+    "version": "26.1.5",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.4.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "forgeconfigapiport-forge-26.1.5.jar",
+          "url": "forgeconfigapiport-forge-26.1.5.jar",
+          "size": 79703,
+          "sha512": "fc6478abd9d21e886fe635cfa9cc16740d3a49f0794110e3d2067a4fa1674e7f34ffa040e4365d4e7542bc2f7813856f58b810db94073b6e435aa70c1f73559f",
+          "sha256": "8dbbd02d82908bbf1157ee190545ed38e04a3d01a1ee9c6de0bb8f6de9f9cc44",
+          "sha1": "257e12ed69085cd902505becc5b74926d400c76d",
+          "md5": "0196c99b4ef607926283f9d3d09db8c5"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "net.minecraftforge",
+          "module": "forge",
+          "version": {
+            "requires": "26.1.2-64.0.4"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "forgeconfigapiport-forge-26.1.5.jar",
+          "url": "forgeconfigapiport-forge-26.1.5.jar",
+          "size": 79703,
+          "sha512": "fc6478abd9d21e886fe635cfa9cc16740d3a49f0794110e3d2067a4fa1674e7f34ffa040e4365d4e7542bc2f7813856f58b810db94073b6e435aa70c1f73559f",
+          "sha256": "8dbbd02d82908bbf1157ee190545ed38e04a3d01a1ee9c6de0bb8f6de9f9cc44",
+          "sha1": "257e12ed69085cd902505becc5b74926d400c76d",
+          "md5": "0196c99b4ef607926283f9d3d09db8c5"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "forgeconfigapiport-forge-26.1.5-sources.jar",
+          "url": "forgeconfigapiport-forge-26.1.5-sources.jar",
+          "size": 49059,
+          "sha512": "c75ae456871c609b5c6ff74882f55ab97ccf50fbbe14f0e13806a9a3c537d1414b11abdbe59352f43c0236072d55591cd49ed7c69d5a30930be29b1e3f78e189",
+          "sha256": "9caf77075bb80d38eb9af8b2a64f4b8ee1350d1b4d4250177c9ad549fc00b206",
+          "sha1": "2a9ca3855d3dde7d1de22abac9fb40eeb8548447",
+          "md5": "01c7343db46c7b822f95c25cbac1d0d0"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "forgeconfigapiport-forge-26.1.5-javadoc.jar",
+          "url": "forgeconfigapiport-forge-26.1.5-javadoc.jar",
+          "size": 4290468,
+          "sha512": "9a10e20589aa730ac71cf9c1517ae4310f2eb746031ef69e8e7771a2b3ab7ceb418756ae07dc24ba9d672f2782b05c57ecfc5b599a2ed41d8b267e5c0434fe2d",
+          "sha256": "8d98325df438179dc1b9a42b23a5cbad3055adb1df829bac36141bd596515f7a",
+          "sha1": "4bce6161ae8dea93869ea3560ac975d8b42c3759",
+          "md5": "4abd777618ec094eadd3f630247bba9a"
+        }
+      ]
+    }
+  ]
+}
