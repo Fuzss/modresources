@@ -1,5 +1,5 @@
 + Adds new tiers of bundles: Leather, Copper, Iron, Gold, Diamond, Netherite with a much improved way to use all of them!
-+ Upgrade your old bundle to the next tier in a smithing table, no smithing template required!
++ Upgrade your old bundle from one tier to the next one, it's that simple!
 + And now the juicy stuff, the new ways of using your bundles!
 + Like with the original bundles, click other items on the bundle item in your inventory or the other way around to insert and extract contents to / from the bundle.
 + Nicely see what's inside a bundle item on the tooltip. Hold the `Alt` key to force the bundle tooltip to render, even when your cursor is carrying another item or the bundle itself. Great when interacting to keep track of the bundle contents you are inserting into / extracting from.
