@@ -1,3 +1,5 @@
-**Fast Item Frames** completely redesigns item frames to make them work much better and faster while adding new features.
+**Fast Item Frames** completely redesigns item frames to make them faster, more responsive, and more useful than ever before. 🚀
 
-The new system reduces lag, shows particles when broken, and reacts instantly when the supporting block is removed. But that’s not all! You can now dye the frame’s background and even hide the frame itself, leaving only the item inside visible.
+Instead of relying on entities, item frames become lightweight blocks that perform significantly better, especially in builds containing large numbers of frames. They react instantly to world changes, support proper block interactions, and include several quality of life improvements that vanilla item frames are missing. ⚡
+
+Beyond performance, this mod adds powerful customization options. Dye frames in millions of colors 🎨, hide the frame itself to showcase only the item 🫥, wax frames to prevent accidental changes 🍯, and fine tune the appearance of invisible frames to perfectly fit your builds and resource packs. ✨
