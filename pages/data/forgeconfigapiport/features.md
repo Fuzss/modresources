@@ -1,5 +1,6 @@
-+ Allows developers to continue using the same code for creating their configs as they do on NeoForge & Forge.
-+ Same package and class names as NeoForge & Forge, no refactoring required when porting!
-+ Built for a multiloader architecture: Simply setup your configs in a common module!
-+ Users don't need to install any additional library on the mod loader the chosen config system is native to (NeoForge / Forge), everything is built in there!
-+ Check out the developer wiki for instructions on how to use Forge Config API Port in your project!
+* 📦 **Configuration Library:** Brings the Forge and NeoForge configuration systems to additional mod loaders while preserving their familiar APIs.
+* 🔄 **Cross Loader Config Support:** Use Forge configs on Fabric and NeoForge, or NeoForge configs on Fabric and Forge.
+* 🧩 **No Refactoring Required:** Preserves original package names and class names, allowing existing config implementations to be ported with little to no code changes.
+* 🏗️ **Built for Multiloader Projects:** Define and register configs in a shared common module instead of maintaining separate platform specific implementations.
+* ♻️ **Shared Configuration Code:** Keep a single configuration setup across supported loaders, reducing duplication and simplifying maintenance.
+* ⚡ **Native Where Available:** No additional library is required on loaders where the chosen configuration system is already built in, keeping dependencies to a minimum for users.

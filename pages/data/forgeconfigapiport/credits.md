@@ -1,1 +1,1 @@
-+ Thanks to the Forge team for putting the config api together in the first place!
++ Thanks to the Forge & NeoForge teams for creating and maintaining the configuration API this project is based on!

@@ -1,3 +1,3 @@
-Resource Pack Overrides is configured via a single config file located at `.minecraft/config/resourcepackoverrides.json`. The file generates as blank when absent.
+The whole mod is configured through a single config file located at `.minecraft/config/resourcepackoverrides.json`. A minimal configuration is generated automatically when the file is missing.
 
-Find out all the details on the [GitHub repository](https://github.com/Fuzss/resourcepackoverrides)!
+Detailed documentation, configuration examples, and all available options can be found in the `README.md` on GitHub.
