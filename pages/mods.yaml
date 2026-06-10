@@ -369,7 +369,7 @@ sealife:
     curseforge: sea-life
     modrinth: sea-life
 sheepvariety:
-  weight: 0
+  weight: 5
   distributions:
     curseforge: sheep-variety
     modrinth: sheep-variety

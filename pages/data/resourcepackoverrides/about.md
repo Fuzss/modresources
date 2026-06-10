@@ -1,1 +1,5 @@
-Resource Pack Overrides exists to help mod pack makers with managing pre-installed resource packs. It's especially useful for making sure important resource packs always stay enabled no matter what and also allows for cleaning up the resource pack selection screen to give users less of a chance to accidentially mess with important packs.
+**Resource Pack Overrides** gives mod pack creators full control over how preinstalled resource packs are presented and managed in Minecraft. It helps ensure important packs stay configured exactly as intended while keeping the resource pack screen clean and easy to use. 🎨
+
+Unlike shipping a predefined resource pack configuration, this mod can automatically restore your preferred pack setup after failed resource reloads, helping maintain a consistent experience for players. 🔄
+
+The mod also allows resource packs to be hidden, locked, reordered, or marked as compatible, making it easy to build polished mod packs where players see only the options they are meant to interact with. 🧰
