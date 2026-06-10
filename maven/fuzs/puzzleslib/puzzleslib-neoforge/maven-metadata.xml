@@ -3,8 +3,8 @@
   <groupId>fuzs.puzzleslib</groupId>
   <artifactId>puzzleslib-neoforge</artifactId>
   <versioning>
-    <latest>21.1.51</latest>
-    <release>21.1.51</release>
+    <latest>26.1.10</latest>
+    <release>26.1.10</release>
     <versions>
       <version>20.4.0</version>
       <version>20.4.1</version>
@@ -256,7 +256,8 @@
       <version>21.11.13</version>
       <version>26.1.9</version>
       <version>21.1.51</version>
+      <version>26.1.10</version>
     </versions>
-    <lastUpdated>20260530072311</lastUpdated>
+    <lastUpdated>20260610051412</lastUpdated>
   </versioning>
 </metadata>
