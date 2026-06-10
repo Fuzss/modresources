@@ -1,2 +1,2 @@
 cd "$(dirname "$0")"
-java -jar ../../modpagebuilder/build/libs/ModPageBuilder-v1.1.2.jar $PWD
+java -jar ../../mod-page-builder/build/libs/ModPageBuilder-v1.1.3.jar $PWD
