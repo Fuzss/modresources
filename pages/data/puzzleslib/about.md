@@ -1,3 +1,5 @@
-Puzzles Lib is the core library that all my mods need to run. What does it do you ask? Most importantly it offers a bunch of abstractions for mod loader-specific code, which makes it very easy for me to develop all of my mods on multiple mod loaders simultaneously.
+**Puzzles Lib** is a library mod required by many of *@heyitsfuzs* Minecraft mods. It does not add new blocks, items, mobs, or gameplay on its own; instead, it provides the shared systems those mods need to run properly. 🧩
 
-Note that Puzzles Lib is specifically designed for my own needs, it is not intended to be used by other developers. Other developers are welcome to adapt my implementations for their own needs though.
+For players, this means simpler installation and more consistent behaviour across supported mods. If another mod lists this mod as required, install it alongside that mod and leave it enabled. ✅
+
+The mod is built mainly for *@heyitsfuzs* own projects and is not intended as a general-purpose library for other mod developers. Its focus is keeping those mods reliable, maintainable, and available across supported mod loaders. 🔧
