@@ -1,8 +1,11 @@
-+ Like with the vanilla's bundles, click other items on a shulker box item in your inventory or the other way around to insert and extract contents to / from the shulker box.
-+ Nicely see what's inside a shulker box item on the tooltip. Hold the `Alt` key to force the shulker box tooltip to render, even when your cursor is carrying another item or the shulker box itself. Great when interacting to keep track of the shulker box contents you are inserting into / extracting from.
-+ While hovering over a shulker box item, use your scroll wheel to select to slot you want to interact with. You are no longer bound to extracting the last item first.
-+ When scrolling through the shulker box tooltip like that, a second tooltip will appear to the left side of the shulker box item for the slot in the shulker box tooltip you have currently selected. Great for e.g. distinguishing enchanted tools from each other!
-+ While carrying a shulker box item with your cursor, right-click + drag across multiple slots to insert items into the shulker box or extract items from it when the dragged across slots are empty.
-+ Hold the `Ctrl` key (`Cmd` on Mac) to enter precision mode; instead of inserting / extracting whole stacks only a single item will be moved. Use the scroll wheel to quickly get to a specific amount.
-+ Observe a tiny indicator on shulker box items when your cursor is holding an item, telling you if the item can be added and if the shulker box already contains items of that type.
-+ Check out the GitHub repository to learn how to add all those unique item interactions to any item from any mod you like, such as backpacks and modded shulker boxes!
+* 📦 **Inventory Based Storage Access:** Insert and extract items directly from supported storage items without placing them in the world.
+* 🔍 **Detailed Content Preview:** View stored contents directly in item tooltips, making it easy to see what each storage item contains at a glance.
+* 🎯 **Select Any Stored Item:** Use the scroll wheel or keyboard arrow keys to choose exactly which stored item you want to interact with instead of being limited to the most recently inserted one.
+* 📝 **Selected Item Details:** Instantly see additional information about the currently selected item while browsing storage contents.
+* ↔️ **Fast Item Transfer:** Click items onto storage items, or storage items onto inventory slots, to quickly move contents in and out.
+* 🖱️ **Drag Across Multiple Slots:** Click and drag across inventory slots to insert or extract items in bulk for much faster inventory management.
+* 🎚️ **Precise Item Movement:** Hold `Control` (`Command` on Mac) to move individual items instead of full stacks and precisely control transfer amounts.
+* 📊 **Storage Fill Indicators:** Optionally display bundle style fill bars directly on supported storage items to monitor capacity at a glance.
+* 💡 **Smart Compatibility Indicators:** Visual hints show whether held items can be inserted and whether matching items are already present inside.
+* ⚙️ **Highly Configurable:** Customize interactions, controls, tooltip behavior, and visual features to match your preferred playstyle.
+* 🔗 **Data Pack Driven Compatibility:** Support for additional storage items can be added through data packs, allowing integration with many modded backpacks and storage solutions.

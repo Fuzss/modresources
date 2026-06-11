@@ -1,3 +1,7 @@
-Easy Shulker Boxes brings some extremely useful changes to shulker boxes, making them usable from directly within your inventory. No need for placing the whole box on the ground for checking contents or adding a few item stacks! When you want to extract an item, easily scroll through all items in the box to get what you want.
+**Easy Shulker Boxes** lets you fully interact with shulker boxes directly from your inventory. Insert items, remove items, browse contents, and manage storage without placing boxes on the ground. 📦
 
-And believe it or not, this whole system is driven by data packs! This allows essentially any item to be supported, by default this is the case for ender chests, as well as some selected backpacks and shulker boxes from other mods.
+Inspired by Minecraft's modern bundle mechanics, the mod makes portable storage feel natural and intuitive. Scroll through stored contents 🖱️, select exactly which item you want 🎯, move items in or out with simple clicks, transfer items across multiple slots using mouse dragging, or use single-item mode for precise inventory management. ✨
+
+Beyond vanilla shulker boxes, the mod also supports ender chests and can be extended to work with storage items from other mods through data packs. 🔗
+
+Unlike simple tooltip mods, this is not a client-only mod. It adds real inventory interactions and must be installed on both the client and server. If you only want to preview shulker box contents in tooltips, check out the client-side alternative: [Shulker Box Tooltip](https://www.curseforge.com/minecraft/mc-mods/shulkerboxtooltip) by [MisterPeModder](https://www.curseforge.com/members/misterpemodder). 💡
