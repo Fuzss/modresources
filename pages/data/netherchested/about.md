@@ -1,5 +1,7 @@
-**Nether Chested** adds a truly unique new chest with storage taken to the next level. 📦 This single chest holds as many slots as a full double chest while also massively increasing how much each slot can store.
+**Nether Chested** adds a powerful Nether-themed chest designed for bulk storage, letting each slot hold far more items than a normal chest. 🔥
 
-Every slot can hold up to 8 times the normal stack size for stackable items. 🔥 Instead of stopping at 64 items, a single slot can store up to 512 items, giving you enormous storage without filling your base with countless chests.
+Instead of spreading resources across rows of ordinary containers, this mod gives you a compact 54-slot storage block where stacks can hold 8 times the usual amount by default. It is ideal for bases, farms, mining sessions, and any setup that produces large amounts of items. 📦
 
-Compact, powerful, and perfect for serious storage enthusiasts. ✨
+The mod keeps the feel of vanilla storage while adding a distinct Nether identity, complete with fitting visuals, sounds, particles, and piglin behaviour. Server-side options also allow the storage multiplier and Nether interaction behaviour to be adjusted to fit different playstyles. ⚙️
+
+This mod is a simple, focused storage upgrade for players who want more capacity without turning their base into a wall of chests. 🌍
