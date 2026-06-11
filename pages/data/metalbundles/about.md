@@ -1,3 +1,5 @@
-Metal Bundles adds new types of bundles with bigger storage space. Very original, isn't it? Not like there's already half a dozen mods doing the exact same thing out there... haha
+**Metal Bundles** expands Minecraft's bundle progression with larger bundle tiers crafted from increasingly valuable materials. Upgrade your bundle through leather, copper, iron, gold, diamond, and netherite variants to carry more items wherever your adventures take you. 📦
 
-But wait, that's not even close to all of it! Metal Bundles also completely overhauls how you use bundles by adding many intuitive interactions, check them out further below!
+Bigger bundles are only part of the story. The mod also enhances how bundles are used, making inventory management faster and more intuitive. Browse stored contents, select exactly which item you want, and move items in or out without constantly opening dedicated interfaces. 🎯
+
+Built upon Minecraft's modern bundle mechanics, the mod preserves the familiar vanilla experience while adding more powerful navigation, improved visibility, and additional inventory interactions. Whether you're organizing building materials, carrying loot, or preparing for long journeys, larger bundles become far more practical to use. ✨

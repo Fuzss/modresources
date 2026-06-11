@@ -1,10 +1,11 @@
-+ Adds new tiers of bundles: Leather, Copper, Iron, Gold, Diamond, Netherite with a much improved way to use all of them!
-+ Upgrade your old bundle from one tier to the next one, it's that simple!
-+ And now the juicy stuff, the new ways of using your bundles!
-+ Like with the original bundles, click other items on the bundle item in your inventory or the other way around to insert and extract contents to / from the bundle.
-+ Nicely see what's inside a bundle item on the tooltip. Hold the `Alt` key to force the bundle tooltip to render, even when your cursor is carrying another item or the bundle itself. Great when interacting to keep track of the bundle contents you are inserting into / extracting from.
-+ While hovering over a bundle item, use your scroll wheel to select to slot you want to interact with. You are no longer bound to extracting the last item first.
-+ When scrolling through the bundle tooltip like that, a second tooltip will appear to the left side of the bundle item for the slot in the bundle tooltip you have currently selected. Great for e.g. distinguishing enchanted tools from each other!
-+ While carrying a bundle item with your cursor, right-click + drag across multiple slots to insert items into the bundle or extract items from it when the dragged across slots are empty.
-+ Hold the `Ctrl` key (`Cmd` on Mac) to enter precision mode; instead of inserting / extracting whole stacks only a single item will be moved. Use the scroll wheel to quickly get to a specific amount.
-+ Observe a tiny indicator on bundle items when your cursor is holding an item, telling you if the item can be added and if the bundle already contains items of that type.
+* 📦 **Six New Bundle Tiers:** Craft leather, copper, iron, gold, diamond, and netherite bundles with increasing storage capacity.
+* 🔨 **Upgradeable Progression:** Upgrade existing bundles from one tier to the next instead of crafting entirely new ones.
+* 👀 **View Every Stored Item:** See all contents directly in bundle tooltips, making large bundles much easier to navigate.
+* 🎯 **Select Any Stored Item:** Use the scroll wheel or keyboard arrow keys to choose exactly which stored item you want to interact with.
+* 📝 **Selected Item Details:** Instantly see information about the currently selected item while browsing bundle contents.
+* ↔️ **Fast Item Transfer:** Quickly insert and extract items using intuitive inventory interactions.
+* 🖱️ **Drag Across Multiple Slots:** Click and drag across inventory slots to insert or extract items in bulk for much faster inventory management.
+* 🎚️ **Precise Item Movement:** Hold `Control` (`Command` on Mac) to move individual items instead of full stacks and precisely control transfer amounts.
+* 💡 **Smart Compatibility Indicators:** Visual hints show whether held items can be inserted and whether matching items are already present inside.
+* 📊 **Improved Fill Indicators:** Enhanced bundle capacity indicators help you monitor storage usage at a glance.
+* ⚙️ **Highly Configurable:** Customize storage capacity, interactions, controls, tooltip behavior, and visual features to match your preferred playstyle.
