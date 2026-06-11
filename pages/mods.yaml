@@ -68,6 +68,11 @@ bloomcraft:
   distributions:
     curseforge: bloomcraft
     modrinth: bloomcraft
+bundleupgrade:
+  weight: 30
+  distributions:
+    curseforge: bundle-upgrade
+    modrinth: bundle-upgrade
 climaterivers:
   weight: 25
   distributions:
