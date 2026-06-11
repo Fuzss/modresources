@@ -1,5 +1,7 @@
-**Echo Chest** adds a brand new type of chest with a clever twist. 📦 Any nearby dropped items within an 8 block radius are quickly pulled in and safely stored for you.
+**Echo Chest** adds a special chest that automatically collects dropped items nearby, helping keep farms, mob grinders, mining areas, and busy bases clean without constant manual pickup. 📦
 
-It does not stop there either. Mobs that die nearby leave their experience behind in the chest, ready to be turned into Bottles o' Enchanting for later use. ✨
+The mod is especially useful for automation-focused players: nearby item drops are pulled into the chest, while experience from defeated mobs can be stored inside instead of scattering across the floor. ✨
 
-Powered by nearby vibrations, this chest even works through blocks and can be blocked using wool, just like a vanilla sculk sensor. 🎵 Smart, convenient, and perfect for farms, storage systems, or keeping your base tidy.
+Stored experience can be turned into *Bottles o’ Enchanting* by supplying glass bottles, making mob farms and XP setups easier to manage. The chest also supports familiar Minecraft behaviours like hopper interaction and comparator output, so it fits naturally into redstone and storage systems. ⚙️
+
+This mod is a compact quality-of-life addition that feels close to vanilla while adding a powerful new utility block. 🔧
