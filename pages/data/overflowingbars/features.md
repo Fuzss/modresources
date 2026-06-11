@@ -1,7 +1,8 @@
-+ Only ever uses two colors: the vanilla base color + orange / light blue. A tiny number to the side tells you how many layers are stacked on top instead of making you guess from the current color.
-+ Stacks hearts on top of each other when you have more than 10 hearts. The stacked layer will always show as orange.
-+ Stack armor points on top of each other when you have more than 20 points. The stacked layer shows light blue. Only as many armor icons as necessary are shown.
-+ Adds a display for armor toughness right above the food bar, behaves just like the armor bar (can be moved left if you prefer).
-+ Also fixes incoming chat messages to no longer hide the armor bar.
-+ Fully configurable! Change stacking behavior, number display and so much more!
-+ Install [AttributeFix](https://www.curseforge.com/minecraft/mc-mods/attributefix) by [DarkhaxDev](https://www.curseforge.com/members/DarkhaxDev) to properly support armor and toughness values above 20.
+* ❤️ **Compact Health Display:** Stack health beyond ten hearts without adding extra rows to the HUD.
+* 🛡️ **Armor Beyond Vanilla Limits:** Display high armor values while using only as much space as necessary.
+* 💎 **Armor Toughness Bar:** Adds a dedicated toughness display so you can always see this important defensive stat.
+* 🔢 **Clear Layer Counters:** Every stacked bar can display a numeric indicator showing exactly how many layers are present.
+* 🎨 **Easy to Read Colors:** Uses vanilla colors as the base layer and a single highlight color for stacked layers, avoiding confusing rainbow style displays.
+* 📏 **Space Efficient HUD:** Stays compact even with very high health, armor, or toughness values.
+* 💬 **Chat Compatibility Fix:** Prevents chat messages from covering armor related HUD elements.
+* ⚙️ **Customizable Layout:** Adjust positioning, stacking behavior, counters, and display options to suit your preferred HUD setup.

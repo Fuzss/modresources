@@ -1,0 +1,9 @@
+environments:
+  client: required
+loaders:
+  - forge
+  - fabric
+dependencies:
+  puzzleslib: required
+  fabricapi: required
+  forgeconfigapiport: required

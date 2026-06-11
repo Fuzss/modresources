@@ -244,12 +244,12 @@ illagerinvasion:
     curseforge: illager-invasion
     modrinth: illager-invasion
 leavesbegone:
-  weight: 40
+  weight: 50
   distributions:
     curseforge: leaves-be-gone
     modrinth: leaves-be-gone
 leavemybarsalone:
-  weight: 25
+  weight: 35
   distributions:
     curseforge: leave-my-bars-alone
     modrinth: leave-my-bars-alone

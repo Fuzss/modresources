@@ -1,0 +1,1 @@
++ Thanks to [DouweKoopmans](https://www.curseforge.com/members/_ForgeUser7726936) for creating the original [Better Horse Hud](https://www.curseforge.com/minecraft/mc-mods/better-horse-hud) mod that inspired this project.
