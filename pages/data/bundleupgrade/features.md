@@ -4,7 +4,7 @@
 * 📝 **Selected Item Details:** Instantly see additional information about the currently selected item while browsing bundle contents.
 * ↔️ **Fast Item Transfer:** Quickly insert and extract items using intuitive inventory interactions.
 * 🖱️ **Drag Across Multiple Slots:** Click and drag across inventory slots to insert or extract items in bulk for much faster inventory management.
-* 🎚️ **Precision Item Movement:** Hold `Control` (`Command` on Mac) to move individual items instead of full stacks and precisely control transfer amounts.
+* 🎚️ **Precise Item Movement:** Hold `Control` (`Command` on Mac) to move individual items instead of full stacks and precisely control transfer amounts.
 * 📊 **Improved Fill Indicators:** Enhanced bundle capacity indicators help you monitor storage usage at a glance.
 * 💡 **Smart Compatibility Indicators:** Visual hints show whether held items can be inserted and whether matching items are already present inside.
 * ⚙️ **Highly Configurable:** Customize interactions, controls, tooltip behavior, and visual features to match your preferred playstyle.
