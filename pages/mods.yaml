@@ -318,6 +318,11 @@ nightconfigfixes:
   distributions:
     curseforge: night-config-fixes
     modrinth: night-config-fixes
+opentogether:
+  weight: 50
+  distributions:
+    curseforge: open-together
+    modrinth: open-together
 overflowingbars:
   weight: 40
   distributions:
@@ -358,6 +363,11 @@ puzzleslib:
   distributions:
     curseforge: puzzles-lib
     modrinth: puzzles-lib
+reachbehind:
+  weight: 30
+  distributions:
+    curseforge: reach-behind
+    modrinth: reach-behind
 resourcepackoverrides:
   weight: 0
   distributions:

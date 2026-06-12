@@ -62,6 +62,7 @@ nametagupgrade: 35
 naturalwaters: 15
 netherchested: 30
 nightconfigfixes: 0
+opentogether: 50
 overflowingbars: 40
 paperdoll: 20
 partycreepers: 10
@@ -70,6 +71,7 @@ pickupnotifier: 50
 pixelshot: 20
 portablehole: 10
 puzzleslib: 0
+reachbehind: 30
 resourcepackoverrides: 0
 respawninganimals: 5
 sealife: 35
