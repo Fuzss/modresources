@@ -1,5 +1,4 @@
-* **📦 Nearby Item Collection:** Automatically gathers dropped items in range, reducing clutter and missed drops.
-* **✨ Experience Storage:** Captures experience from nearby mob deaths and stores it inside the chest.
-* **🧪 Bottle Conversion:** Converts stored experience into *Bottles o’ Enchanting* when supplied with glass bottles.
-* **🧰 Dedicated Storage Layout:** Includes regular storage space plus a dedicated bottle slot for easy use.
-* **⚙️ Automation Friendly:** Works with hoppers for item input and output, making it useful in farms and storage builds.
+* 📦 **Automatic Item Collection:** Pulls nearby dropped items into the chest, reducing clutter and preventing missed loot.
+* ✨ **Experience Gathering:** Captures experience from nearby mob deaths and stores it safely inside.
+* 🧪 **Instant Bottling:** Converts stored experience into *Bottles o’ Enchanting* when supplied with glass bottles.
+* 🏡 **Perfect for Farms and Bases:** Centralizes item and XP collection in mob farms, mining operations, and other high activity areas.

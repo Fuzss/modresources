@@ -15,27 +15,45 @@ General style:
 
 About section:
 
-* Usually 2 to 4 short paragraphs.
-* Start by clearly explaining the mod's core purpose.
-* Follow with the main benefits and gameplay impact.
-* Highlight major strengths such as performance, compatibility, customization, or quality of life improvements when relevant.
-* Use a few fitting emoji throughout the text (typically one per paragraph).
+* Usually 2 to 3 short paragraphs.
+* Focus on the overall purpose, value, and identity of the mod.
+* Give readers a clear understanding of what the mod adds and why they might want it.
+* Mention only the most important or standout features.
+* Do not attempt to describe every major feature.
+* Avoid turning the About section into a prose version of the Features list.
+* Keep details and feature breakdowns for the Features section.
+* Use a small number of fitting emojis within sentences (typically one per paragraph).
+* Emojis should be used to emphasize standout features or benefits, similar to phrases like "millions of colors 🎨", "showcase only the item 🫥", or "perform significantly better 🚀".
+* Never place emojis at the beginning of paragraphs.
 
 Features section:
 
-* Only include a Features section when the mod has enough functionality to justify one.
+* Only include a Features section when the mod has enough meaningful functionality to justify one.
+
+* It is acceptable to omit the Features section entirely for small or simple mods.
+
 * Use concise bullet points in the format:
 
   * 🚀 **Feature Name:** Explanation.
-* Focus on player facing features and benefits.
+
+* Focus on the most important player facing features and benefits.
+
+* Include only features that help sell or define the mod.
+
+* Prefer 3 to 8 meaningful features rather than many minor ones.
+
+* Do not include mundane details, crafting recipes, mod loader support, technical implementation details, or every available option.
+
+* Summarize customization and configuration as capabilities rather than listing settings.
+
 * Order features from most important to least important.
-* Prefer 5 to 10 meaningful features rather than many small ones.
+
 * Use fitting emoji as visual anchors for each feature.
 
 Additional guidelines:
 
-* Mention configuration options only as summarized capabilities, not by listing individual settings.
-* Mention compatibility when it is a notable strength.
+* Mention configuration only as a summarized capability when relevant.
+* Mention compatibility only when it is a notable strength or selling point.
 * Mention integrations with other mods only when they provide significant value.
-* If the mod's main appeal is performance, make that a major focus in both the About and Features sections.
+* If the mod's primary appeal is performance, make performance a major focus in both sections.
 * Preserve the style and tone commonly used across polished CurseForge and Modrinth mod pages.
