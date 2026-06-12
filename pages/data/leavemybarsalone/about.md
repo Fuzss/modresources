@@ -4,4 +4,3 @@ The mod keeps your food bar visible at all times and moves the mount's health di
 
 It also restores the experience bar whenever the jump charge meter is not in use, ensuring valuable screen space isn't left empty. ✨
 
-Simple, lightweight, and focused on quality of life, this mod makes mounted gameplay feel much more natural. ⚙️
