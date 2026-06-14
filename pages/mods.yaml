@@ -19,7 +19,7 @@ armoredfoes:
     curseforge: armored-foes
     modrinth: armored-foes
 armorquickswap:
-  weight: 15
+  weight: 20
   distributions:
     curseforge: armor-quick-swap
     modrinth: armor-quick-swap
@@ -59,7 +59,7 @@ bettertridents:
     curseforge: better-tridents
     modrinth: better-tridents
 blockrunner:
-  weight: 15
+  weight: 20
   distributions:
     curseforge: block-runner
     modrinth: block-runner
@@ -74,12 +74,12 @@ bundleupgrade:
     curseforge: bundle-upgrade
     modrinth: bundle-upgrade
 climaterivers:
-  weight: 25
+  weight: 40
   distributions:
     curseforge: climate-rivers
     modrinth: climate-rivers
 combatnouveau:
-  weight: 15
+  weight: 20
   distributions:
     curseforge: combat-nouveau
     modrinth: combat-nouveau
@@ -129,20 +129,15 @@ diagonalwindows:
     curseforge: diagonal-windows
     modrinth: diagonal-windows
 distinctpotions:
-  weight: 10
+  weight: 15
   distributions:
     curseforge: distinct-potions
     modrinth: distinct-potions
 dyedflames:
-  weight: 20
+  weight: 25
   distributions:
     curseforge: dyed-flames
     modrinth: dyed-flames
-echochest:
-  weight: 20
-  distributions:
-    curseforge: echo-chest
-    modrinth: echo-chest
 easyanvils:
   weight: 50
   distributions:
@@ -158,8 +153,13 @@ easyshulkerboxes:
   distributions:
     curseforge: easy-shulker-boxes
     modrinth: easy-shulker-boxes
+echochest:
+  weight: 20
+  distributions:
+    curseforge: echo-chest
+    modrinth: echo-chest
 effectinsights:
-  weight: 30
+  weight: 40
   distributions:
     curseforge: effect-insights
     modrinth: effect-insights
@@ -169,7 +169,7 @@ enchantinginfuser:
     curseforge: enchanting-infuser
     modrinth: enchanting-infuser
 enchantmentinsights:
-  weight: 35
+  weight: 40
   distributions:
     curseforge: enchantment-insights
     modrinth: enchantment-insights
@@ -179,7 +179,7 @@ enchantmentswitch:
     curseforge: new-enchantment-switch
     modrinth: enchantment-switch
 enderzoology:
-  weight: 20
+  weight: 25
   distributions:
     curseforge: ender-zoology
     modrinth: ender-zoology
@@ -194,7 +194,7 @@ fantasticwings:
     curseforge: fantastic-wings
     modrinth: fantastic-wings
 fastitemframes:
-  weight: 25
+  weight: 35
   distributions:
     curseforge: fast-item-frames
     modrinth: fast-item-frames
@@ -224,7 +224,7 @@ helditemtooltips:
     curseforge: held-item-tooltips
     modrinth: held-item-tooltips
 hoppergadgetry:
-  weight: 25
+  weight: 20
   distributions:
     curseforge: hopper-gadgetry
     modrinth: hopper-gadgetry
@@ -234,7 +234,7 @@ hoveringhotbar:
     curseforge: hovering-hotbar
     modrinth: hovering-hotbar
 horseexpert:
-  weight: 15
+  weight: 10
   distributions:
     curseforge: horse-expert
     modrinth: horse-expert
@@ -249,7 +249,7 @@ leavesbegone:
     curseforge: leaves-be-gone
     modrinth: leaves-be-gone
 leavemybarsalone:
-  weight: 35
+  weight: 25
   distributions:
     curseforge: leave-my-bars-alone
     modrinth: leave-my-bars-alone
@@ -259,7 +259,7 @@ letmesleep:
     curseforge: let-me-sleep
     modrinth: new-let-me-sleep
 linkedchests:
-  weight: 25
+  weight: 20
   distributions:
     curseforge: linked-chests
     modrinth: new-linked-chests
@@ -279,17 +279,17 @@ metalbundles:
     curseforge: metal-bundles
     modrinth: metal-bundles
 mindfuldarkness:
-  weight: 25
+  weight: 35
   distributions:
     curseforge: mindful-darkness
     modrinth: mindful-darkness
 moblassos:
-  weight: 20
+  weight: 15
   distributions:
     curseforge: mob-lassos
     modrinth: mob-lassos
 mobplaques:
-  weight: 20
+  weight: 15
   distributions:
     curseforge: mob-plaques
     modrinth: mob-plaques
@@ -304,7 +304,7 @@ nametagupgrade:
     curseforge: name-tag-upgrade
     modrinth: name-tag-upgrade
 naturalwaters:
-  weight: 15
+  weight: 25
   distributions:
     curseforge: natural-waters
     modrinth: natural-waters
@@ -324,7 +324,7 @@ opentogether:
     curseforge: open-together
     modrinth: open-together
 overflowingbars:
-  weight: 40
+  weight: 55
   distributions:
     curseforge: overflowing-bars
     modrinth: overflowing-bars
@@ -339,17 +339,17 @@ partycreepers:
     curseforge: party-creepers
     modrinth: party-creepers
 permanentsponges:
-  weight: 15
+  weight: 10
   distributions:
     curseforge: permanent-sponges
     modrinth: permanent-sponges
 pickupnotifier:
-  weight: 50
+  weight: 70
   distributions:
     curseforge: pick-up-notifier
     modrinth: pick-up-notifier
 pixelshot:
-  weight: 20
+  weight: 10
   distributions:
     curseforge: pixelshot
     modrinth: pixelshot
@@ -364,7 +364,7 @@ puzzleslib:
     curseforge: puzzles-lib
     modrinth: puzzles-lib
 reachbehind:
-  weight: 30
+  weight: 20
   distributions:
     curseforge: reach-behind
     modrinth: reach-behind
@@ -379,7 +379,7 @@ respawninganimals:
     curseforge: respawning-animals
     modrinth: respawning-animals
 sealife:
-  weight: 30
+  weight: 35
   distributions:
     curseforge: sea-life
     modrinth: sea-life
@@ -394,12 +394,12 @@ shroomcraft:
     curseforge: new-shroomcraft
     modrinth: shroomcraft
 skeletonaifix:
-  weight: 5
+  weight: 10
   distributions:
     curseforge: skeleton-ai-fix
     modrinth: skeleton-ai-fix
 sneakycurses:
-  weight: 0
+  weight: 5
   distributions:
     curseforge: sneaky-curses
     modrinth: sneaky-curses
@@ -429,12 +429,12 @@ strawstatues:
     curseforge: straw-statues
     modrinth: straw-statues
 stylisheffects:
-  weight: 25
+  weight: 35
   distributions:
     curseforge: stylish-effects
     modrinth: stylish-effects
 swordblockingmechanics:
-  weight: 10
+  weight: 5
   distributions:
     curseforge: sword-blocking-mechanics
     modrinth: sword-blocking-mechanics
@@ -444,7 +444,7 @@ thinair:
     curseforge: thin-air
     modrinth: thin-air
 tinyskeletons:
-  weight: 20
+  weight: 25
   distributions:
     curseforge: tiny-skeletons
     modrinth: tiny-skeletons
@@ -454,7 +454,7 @@ tradingpost:
     curseforge: trading-post
     modrinth: trading-post
 universalbonemeal:
-  weight: 25
+  weight: 30
   distributions:
     curseforge: universal-bone-meal
     modrinth: universal-bone-meal
@@ -464,12 +464,12 @@ universalenchants:
     curseforge: universal-enchants
     modrinth: universal-enchants
 vehicleupgrade:
-  weight: 30
+  weight: 40
   distributions:
     curseforge: vehicle-upgrade
     modrinth: vehicle-upgrade
 villagemasquerade:
-  weight: 20
+  weight: 15
   distributions:
     curseforge: village-masquerade
     modrinth: village-masquerade
