@@ -1,0 +1,1 @@
+* Thanks to [Zabi94](https://www.curseforge.com/members/zabi94) for creating [Curse Silence](https://www.curseforge.com/minecraft/mc-mods/curse-silence) and [NoMoreGlowingPots](https://www.curseforge.com/minecraft/mc-mods/nomoreglowingpots), whose ideas inspired the creation of this mod.
