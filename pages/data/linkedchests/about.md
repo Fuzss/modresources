@@ -1,3 +1,5 @@
-**Linked Chests** is your new best friend for storing and moving items—across any distance, instantly! 🌍 With thousands of 🎨 color-coded channels, access to your items from anywhere, and personalized per-player storage, this mod makes inventory management feel like magic (but with dyes instead of spellbooks). ✨
+**Linked Chests** adds shared storage channels that can be accessed from matching chests placed anywhere in the world. Set a chest’s channel with three dye colours, then open any chest using the same combination to reach the same inventory. 🎨
 
-Perfect for builders 🧱, hoarders 📦, and redstone masterminds 🧠, this mod keeps your gear right where you need it—no matter where you are.
+The mod is useful for bases, outposts, mines, farms, and multiplayer storage networks where travelling back to one storage room slows everything down. For private storage, channels can also be locked to a player, giving you a larger personal inventory space that only follows you. 🔒
+
+A linked pouch lets you access a chosen channel directly from your inventory, making the system practical while exploring, building, or moving items between locations. 🎒

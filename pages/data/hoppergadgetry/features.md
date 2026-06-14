@@ -1,21 +1,5 @@
-**⛓️ Grated Hopper**
-- Like a hopper, but way smarter!  
-- Lets you filter what goes in using up to 5 slots.  
-- No filters? No problem—it works like a regular hopper.  
-- Also shows off some stylish iron bars on top—function and fashion in one.
-
-**📦 Duct**
-- It's a wooden pipe for your items!  
-- Sends items into connected containers, but won’t pull from them.  
-- Ignores dropped items on the ground.  
-- Connects in chains and works in any direction, even upwards!  
-
-**👇 Chute**
-- A super basic hopper variant made from wood!  
-- Grabs items from the ground only.  
-- Doesn't store anything—instantly passes items down to a container.  
-- Direction? Just down. That’s all it knows.
-
-**🚂 Hopper Minecarts**
-- **Grated Hopper Minecart**: All the filtering power of the Grated Hopper, now on wheels.  
-- **Chute Minecart**: Rolls around transferring picked-up items directly to containers below. Great for cleanup duty!
+* ⛓️ **Grated Hopper:** Filter items so only matching types are collected when slots are set.
+* 📦 **Duct:** Move items into connected containers. Do not pull items or interact with drops. Works in any direction and can be chained.
+* ⬇️ **Chute:** Drop items straight into the container below. No storage, no input, only downward transfer.
+* 🚂 **Grated Hopper Minecart:** Mobile version of the grated hopper with full filtering while moving.
+* 🚋 **Chute Minecart:** Picks up items and deposits them into containers below while moving. Useful for automated cleanup paths.
