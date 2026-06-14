@@ -1,3 +1,3 @@
-**Convenient Effects** makes Minecraft's potion effects smoother, smarter, and a lot more satisfying to use — without changing how you brew them! ✨
+**Convenient Effects** improves several vanilla potion effects with practical quality of life enhancements while staying true to Minecraft's original design. It feels like something that could have been part of the game all along. 🎮
 
-No new items, no complicated systems — just better effects. 💡 Feels like it should be part of Minecraft! 🎮
+*Fire Resistance* becomes easier to play with in lava, *Night Vision* fades out instead of flashing, and *Slow Falling* lets you descend normally while sneaking without losing its safety. 🪂 The mod also polishes visual clutter from effect particles and makes effects like *Blindness* and *Jump Boost* feel more consistent and practical.
