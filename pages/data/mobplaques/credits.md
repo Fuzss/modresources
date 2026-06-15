@@ -1,0 +1,2 @@
+* Thanks to [satyrnidae](https://www.curseforge.com/members/satyrnidae) for creating [Wolf Armor and Storage](https://www.curseforge.com/minecraft/mc-mods/wolf-armor-and-storage), whose wolf information display inspired the creation of this mod.
+* Several configuration options and customization ideas were inspired by [Vazkii's](https://www.curseforge.com/members/vazkii) excellent [Neat](https://www.curseforge.com/minecraft/mc-mods/neat) mod.

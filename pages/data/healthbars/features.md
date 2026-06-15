@@ -1,8 +1,9 @@
-- ❤️ **HUD Health Bars:** See mob name, health, armor, and damage values in the corner of your screen.  
-- 👁️ **In-World Bars:** Show health directly above entities for a more immersive experience.  
-- 🎨 **Beautiful & Clear:** Smooth animations, bright colors, and crisp layout make it easy to read at a glance.  
-- ⚙️ **Highly Configurable:** Choose where bars appear, how wide they scale, and which mobs display them.  
-- 💥 **Damage Numbers:** Watch live damage and healing values float alongside each bar.  
-- 🌈 **Custom Colors:** Assign unique colors for monsters, animals, aquatic mobs, and more.  
-- 🪄 **Smart Scaling:** Bars grow with mob health for bosses or scale with distance for readability.  
-- 🧩 **Full Compatibility:** Works seamlessly with both vanilla and modded entities.  
+* ❤️ **HUD Health Bars:** See mob name, health, armor, and damage values in a compact on-screen display.
+* 👁️ **In-World Bars:** Show health bars directly above entities while exploring and fighting.
+* 💥 **Damage Numbers:** Watch damage and healing values appear in real time.
+* 🐺 **Flexible Entity Support:** Choose exactly which entities should display health bars.
+* 🎨 **Beautiful & Clear:** Smooth animations and colorful visuals make information easy to read at a glance.
+* 🌈 **Custom Colors:** Assign unique colors to monsters, animals, bosses, aquatic mobs, and more.
+* 🪄 **Distance Scaling:** Scale bars based on proximity or mob health for better readability.
+* ⚙️ **Highly Configurable:** Customize appearance, positioning, scaling, colors, and behavior to fit your preferred UI.
+* ⌨️ **Quick Toggle Keybind:** Enable or disable all bars at any time with a configurable keybind.
