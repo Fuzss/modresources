@@ -1,0 +1,4 @@
+* Huge thanks to [SixFootBlue](https://www.curseforge.com/members/sixfootblue) for the original [TransMobifier](https://www.curseforge.com/minecraft/texture-packs/transmobifier-16x) resource pack, whose colorful parrot variants served as the foundation for this mod.
+* Thanks to [Vazkii](https://www.curseforge.com/members/vazkii) for creating [Quark](https://www.curseforge.com/minecraft/mc-mods/quark), which inspired the parrot breeding and egg mechanics in this mod.
+* Thanks to [MisterHyacinth](https://modrinth.com/user/MisterHyacinth) for creating [Psittacine](https://modrinth.com/mod/psittacine), which inspired the bird cage feature in this mod.
+* Special thanks to [L200](https://www.curseforge.com/members/l200) for creating the item textures used throughout this mod, including the bird cage and colored parrot eggs.
