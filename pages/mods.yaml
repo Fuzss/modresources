@@ -293,11 +293,6 @@ mobplaques:
   distributions:
     curseforge: mob-plaques
     modrinth: mob-plaques
-mobplaques:
-  weight: 15
-  distributions:
-    curseforge: mob-plaques
-    modrinth: mob-plaques
 mutantmonsters:
   weight: 45
   distributions:
