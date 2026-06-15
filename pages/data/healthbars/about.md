@@ -1,3 +1,5 @@
-**Health Bars** adds smooth, colorful health displays for every mob around you. A clear, animated bar shows each mob’s name, health, and armor right on your screen, with floating damage numbers when they lose or regain health. It’s stylish, easy to read, and fully configurable to fit your setup.  
+**Health Bars** adds smooth, colorful health displays that make it easy to track the condition of every mob around you. A clear, animated bar shows each mob's name, health, armor, and damage taken right on your screen, helping you stay informed during combat and exploration. ❤️
 
-Health bars also appear directly in-world above mobs, showing their status as you fight or explore. From friendly animals to powerful bosses, everything stays consistent, bright, and beautifully clear.  
+The mod also supports in-world health bars that appear directly above entities, providing quick visual feedback. From passive animals to powerful bosses, important information is always easy to read at a glance. 👁️
+
+With extensive customization options, flexible display modes, and support for all kinds of mobs, this mod can be tailored to fit almost any UI style or gameplay experience. ⚙️
