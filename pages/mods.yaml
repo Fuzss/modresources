@@ -468,6 +468,11 @@ vehicleupgrade:
   distributions:
     curseforge: vehicle-upgrade
     modrinth: vehicle-upgrade
+vibrantparrots:
+  weight: 15
+  distributions:
+    curseforge: vibrant-parrots
+    modrinth: vibrant-parrots
 villagemasquerade:
   weight: 15
   distributions:
@@ -478,8 +483,3 @@ visualworkbench:
   distributions:
     curseforge: visual-workbench
     modrinth: visual-workbench
-ytones:
-  weight: 0
-  distributions:
-    curseforge: ytones
-    modrinth: ytones
