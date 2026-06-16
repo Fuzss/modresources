@@ -15,5 +15,6 @@
   "commit": true,
   "data": true,
   "launch": [[]],
+  "upload": [],
   "publish": true
 }
