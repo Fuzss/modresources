@@ -1,0 +1,133 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "fuzs.forgeconfigapiport",
+    "module": "forgeconfigapiport-common-neoforgeapi",
+    "version": "26.2.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.5.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "com.electronwill.night-config",
+          "module": "core",
+          "version": {
+            "requires": "3.8.4"
+          }
+        },
+        {
+          "group": "com.electronwill.night-config",
+          "module": "toml",
+          "version": {
+            "requires": "3.8.4"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "forgeconfigapiport-common-neoforgeapi-26.2.0.jar",
+          "url": "forgeconfigapiport-common-neoforgeapi-26.2.0.jar",
+          "size": 66179,
+          "sha512": "301791c00836a3ae8999d1e16996cbea6d6e460418bbb4f1d4cb19a3b84ccfac1b3343de541a656e6473532c3d364d447c747d174bdeafcea59ae8452ad4d679",
+          "sha256": "964c3c78a2cd6d62373916526d14b13a551fa8ce87554e48a0559ec5c7e411ad",
+          "sha1": "2819e38b057cde4984d16f92d33b376dccdde351",
+          "md5": "382a99d91910d7b37a1764770bff207d"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "forgeconfigapiport-common-neoforgeapi-26.2.0.jar",
+          "url": "forgeconfigapiport-common-neoforgeapi-26.2.0.jar",
+          "size": 66179,
+          "sha512": "301791c00836a3ae8999d1e16996cbea6d6e460418bbb4f1d4cb19a3b84ccfac1b3343de541a656e6473532c3d364d447c747d174bdeafcea59ae8452ad4d679",
+          "sha256": "964c3c78a2cd6d62373916526d14b13a551fa8ce87554e48a0559ec5c7e411ad",
+          "sha1": "2819e38b057cde4984d16f92d33b376dccdde351",
+          "md5": "382a99d91910d7b37a1764770bff207d"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "forgeconfigapiport-common-neoforgeapi-26.2.0-sources.jar",
+          "url": "forgeconfigapiport-common-neoforgeapi-26.2.0-sources.jar",
+          "size": 41378,
+          "sha512": "ed8905e55c7337bc1243f623ac81136e279c64747dfec28a11890c8e248494a8b0f1d06c75c53b760234dd83eef16ba4a49076241b86696211c16247452fbef0",
+          "sha256": "d1a925f4881971c24acdb62d62928f596068f54b05e84adcedb475b8904c070a",
+          "sha1": "641823c8db0f45bc3f6a29198f41d2970938cceb",
+          "md5": "6fa94d0caee58501518c4ed8f06ed6f0"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "forgeconfigapiport-common-neoforgeapi-26.2.0-javadoc.jar",
+          "url": "forgeconfigapiport-common-neoforgeapi-26.2.0-javadoc.jar",
+          "size": 4252226,
+          "sha512": "b6445730f553016c8de5e0b98b9fa895182752d4cf054e7ac97401807f0e3b47a59125c3330dab7da29973346cbdc5238de03875dbe27893dc7655740551177e",
+          "sha256": "9956928701818755f87f0b42b0a6e793121c8a8f7e490128a24dd373a0828ba0",
+          "sha1": "f29153ec820592deecbb82d3fe00ebbcb50a9a0c",
+          "md5": "69ed9f135c03aac45fb778b49c56d7e0"
+        }
+      ]
+    },
+    {
+      "name": "accessTransformersElements",
+      "attributes": {
+        "org.gradle.category": "accesstransformer"
+      },
+      "files": [
+        {
+          "name": "forgeconfigapiport-common-neoforgeapi-26.2.0-accesstransformer.cfg",
+          "url": "forgeconfigapiport-common-neoforgeapi-26.2.0-accesstransformer.cfg",
+          "size": 0,
+          "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+          "md5": "d41d8cd98f00b204e9800998ecf8427e"
+        }
+      ]
+    }
+  ]
+}
