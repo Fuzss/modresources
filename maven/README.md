@@ -584,6 +584,7 @@
 - [21.11.1](./fuzs/forgeconfigapiport/forgeconfigapiport-common/21.11.1)
 - [26.1.0.2](./fuzs/forgeconfigapiport/forgeconfigapiport-common/26.1.0.2)
 - [26.1.5](./fuzs/forgeconfigapiport/forgeconfigapiport-common/26.1.5)
+- [26.2.0](./fuzs/forgeconfigapiport/forgeconfigapiport-common/26.2.0)
 </details>
 
 <details>
@@ -673,6 +674,7 @@
 - [26.1.3](./fuzs/forgeconfigapiport/forgeconfigapiport-common/26.1.3)
 - [26.1.4](./fuzs/forgeconfigapiport/forgeconfigapiport-common/26.1.4)
 - [26.1.5](./fuzs/forgeconfigapiport/forgeconfigapiport-common/26.1.5)
+- [26.2.0](./fuzs/forgeconfigapiport/forgeconfigapiport-common/26.2.0)
 </details>
 
 ### [`forgeconfigapiport-common-forgeapi`](./fuzs/forgeconfigapiport/forgeconfigapiport-common-forgeapi)
@@ -695,6 +697,7 @@
 - [21.11.1](./fuzs/forgeconfigapiport/forgeconfigapiport-common-forgeapi/21.11.1)
 - [26.1.0.2](./fuzs/forgeconfigapiport/forgeconfigapiport-common-forgeapi/26.1.0.2)
 - [26.1.5](./fuzs/forgeconfigapiport/forgeconfigapiport-common-forgeapi/26.1.5)
+- [26.2.0](./fuzs/forgeconfigapiport/forgeconfigapiport-common-forgeapi/26.2.0)
 </details>
 
 <details>
@@ -765,6 +768,7 @@
 - [26.1.3](./fuzs/forgeconfigapiport/forgeconfigapiport-common-forgeapi/26.1.3)
 - [26.1.4](./fuzs/forgeconfigapiport/forgeconfigapiport-common-forgeapi/26.1.4)
 - [26.1.5](./fuzs/forgeconfigapiport/forgeconfigapiport-common-forgeapi/26.1.5)
+- [26.2.0](./fuzs/forgeconfigapiport/forgeconfigapiport-common-forgeapi/26.2.0)
 </details>
 
 ### [`forgeconfigapiport-common-neoforgeapi`](./fuzs/forgeconfigapiport/forgeconfigapiport-common-neoforgeapi)
@@ -787,6 +791,7 @@
 - [21.11.1](./fuzs/forgeconfigapiport/forgeconfigapiport-common-neoforgeapi/21.11.1)
 - [26.1.0.2](./fuzs/forgeconfigapiport/forgeconfigapiport-common-neoforgeapi/26.1.0.2)
 - [26.1.5](./fuzs/forgeconfigapiport/forgeconfigapiport-common-neoforgeapi/26.1.5)
+- [26.2.0](./fuzs/forgeconfigapiport/forgeconfigapiport-common-neoforgeapi/26.2.0)
 </details>
 
 <details>
@@ -857,6 +862,7 @@
 - [26.1.3](./fuzs/forgeconfigapiport/forgeconfigapiport-common-neoforgeapi/26.1.3)
 - [26.1.4](./fuzs/forgeconfigapiport/forgeconfigapiport-common-neoforgeapi/26.1.4)
 - [26.1.5](./fuzs/forgeconfigapiport/forgeconfigapiport-common-neoforgeapi/26.1.5)
+- [26.2.0](./fuzs/forgeconfigapiport/forgeconfigapiport-common-neoforgeapi/26.2.0)
 </details>
 
 ### [`forgeconfigapiport-fabric`](./fuzs/forgeconfigapiport/forgeconfigapiport-fabric)
@@ -885,6 +891,7 @@
 - [21.11.1](./fuzs/forgeconfigapiport/forgeconfigapiport-fabric/21.11.1)
 - [26.1.0.2](./fuzs/forgeconfigapiport/forgeconfigapiport-fabric/26.1.0.2)
 - [26.1.5](./fuzs/forgeconfigapiport/forgeconfigapiport-fabric/26.1.5)
+- [26.2.0](./fuzs/forgeconfigapiport/forgeconfigapiport-fabric/26.2.0)
 </details>
 
 <details>
@@ -980,6 +987,7 @@
 - [26.1.3](./fuzs/forgeconfigapiport/forgeconfigapiport-fabric/26.1.3)
 - [26.1.4](./fuzs/forgeconfigapiport/forgeconfigapiport-fabric/26.1.4)
 - [26.1.5](./fuzs/forgeconfigapiport/forgeconfigapiport-fabric/26.1.5)
+- [26.2.0](./fuzs/forgeconfigapiport/forgeconfigapiport-fabric/26.2.0)
 </details>
 
 ### [`forgeconfigapiport-forge`](./fuzs/forgeconfigapiport/forgeconfigapiport-forge)
@@ -1078,6 +1086,7 @@
 - [21.11.1](./fuzs/forgeconfigapiport/forgeconfigapiport-neoforge/21.11.1)
 - [26.1.0.2](./fuzs/forgeconfigapiport/forgeconfigapiport-neoforge/26.1.0.2)
 - [26.1.5](./fuzs/forgeconfigapiport/forgeconfigapiport-neoforge/26.1.5)
+- [26.2.0](./fuzs/forgeconfigapiport/forgeconfigapiport-neoforge/26.2.0)
 </details>
 
 <details>
@@ -1148,6 +1157,7 @@
 - [26.1.3](./fuzs/forgeconfigapiport/forgeconfigapiport-neoforge/26.1.3)
 - [26.1.4](./fuzs/forgeconfigapiport/forgeconfigapiport-neoforge/26.1.4)
 - [26.1.5](./fuzs/forgeconfigapiport/forgeconfigapiport-neoforge/26.1.5)
+- [26.2.0](./fuzs/forgeconfigapiport/forgeconfigapiport-neoforge/26.2.0)
 </details>
 
 </details>
