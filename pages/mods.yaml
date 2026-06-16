@@ -188,6 +188,11 @@ eternalnether:
   distributions:
     curseforge: eternal-nether
     modrinth: eternal-nether
+fallingleavesplus:
+  weight: 35
+  distributions:
+    curseforge: falling-leaves-plus
+    modrinth: falling-leaves-plus
 fantasticwings:
   weight: 35
   distributions:
