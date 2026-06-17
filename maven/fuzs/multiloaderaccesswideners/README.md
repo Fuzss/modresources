@@ -11,6 +11,7 @@
 - [21.10.0](./multiloaderaccesswideners-common/21.10.0)
 - [21.11.0](./multiloaderaccesswideners-common/21.11.0)
 - [26.1.2](./multiloaderaccesswideners-common/26.1.2)
+- [26.2.0](./multiloaderaccesswideners-common/26.2.0)
 </details>
 
 <details open>
@@ -22,6 +23,7 @@
 - [26.1.0](./multiloaderaccesswideners-common/26.1.0)
 - [26.1.1](./multiloaderaccesswideners-common/26.1.1)
 - [26.1.2](./multiloaderaccesswideners-common/26.1.2)
+- [26.2.0](./multiloaderaccesswideners-common/26.2.0)
 </details>
 
 </details>
