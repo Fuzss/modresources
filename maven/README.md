@@ -2658,6 +2658,7 @@
 - [21.10.0](./fuzs/multiloaderaccesswideners/multiloaderaccesswideners-common/21.10.0)
 - [21.11.0](./fuzs/multiloaderaccesswideners/multiloaderaccesswideners-common/21.11.0)
 - [26.1.2](./fuzs/multiloaderaccesswideners/multiloaderaccesswideners-common/26.1.2)
+- [26.2.0](./fuzs/multiloaderaccesswideners/multiloaderaccesswideners-common/26.2.0)
 </details>
 
 <details>
@@ -2669,6 +2670,7 @@
 - [26.1.0](./fuzs/multiloaderaccesswideners/multiloaderaccesswideners-common/26.1.0)
 - [26.1.1](./fuzs/multiloaderaccesswideners/multiloaderaccesswideners-common/26.1.1)
 - [26.1.2](./fuzs/multiloaderaccesswideners/multiloaderaccesswideners-common/26.1.2)
+- [26.2.0](./fuzs/multiloaderaccesswideners/multiloaderaccesswideners-common/26.2.0)
 </details>
 
 </details>
