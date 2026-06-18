@@ -1,0 +1,117 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "fuzs.multiloaderdataextensions",
+    "module": "multiloaderdataextensions-common",
+    "version": "26.2.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.5.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "multiloaderdataextensions-common-26.2.0.jar",
+          "url": "multiloaderdataextensions-common-26.2.0.jar",
+          "size": 23307,
+          "sha512": "2a5eefe444f0c952a08674304fb4cd22ea87e961c8177148bc0b6a8c4bfcd0bc3addd354f708515ea8cd90aa372d6a0e8b6eef9e90d4cb231d1aa3d03c4b1174",
+          "sha256": "e6d0734028b34eaf829cafbe2dfbeec78dfde415d87ca09598343c8b9f1ce396",
+          "sha1": "7815776f766c21d6db807f1728a84f28e3b8acae",
+          "md5": "beabcfa18d6db7a949e94667b145cbd3"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "multiloaderdataextensions-common-26.2.0.jar",
+          "url": "multiloaderdataextensions-common-26.2.0.jar",
+          "size": 23307,
+          "sha512": "2a5eefe444f0c952a08674304fb4cd22ea87e961c8177148bc0b6a8c4bfcd0bc3addd354f708515ea8cd90aa372d6a0e8b6eef9e90d4cb231d1aa3d03c4b1174",
+          "sha256": "e6d0734028b34eaf829cafbe2dfbeec78dfde415d87ca09598343c8b9f1ce396",
+          "sha1": "7815776f766c21d6db807f1728a84f28e3b8acae",
+          "md5": "beabcfa18d6db7a949e94667b145cbd3"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "multiloaderdataextensions-common-26.2.0-sources.jar",
+          "url": "multiloaderdataextensions-common-26.2.0-sources.jar",
+          "size": 20555,
+          "sha512": "15afaf1ecaff2ae04627b9dd6c4b07d21a73ba770113de8486105c46018023ffb35478be473fff76229a70739e2f498c07425e0c8f2e773ce1d11c105dd9f516",
+          "sha256": "4733ecfa1fb85f8676754c71815c9812d6f88e76690153b1bbae746d4dd3f34a",
+          "sha1": "4da5e4d8d6333ce5feaced523372b7fcdcaf34e7",
+          "md5": "770887374436493c44a887899ecd65eb"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "multiloaderdataextensions-common-26.2.0-javadoc.jar",
+          "url": "multiloaderdataextensions-common-26.2.0-javadoc.jar",
+          "size": 4188195,
+          "sha512": "0d401578de7f70eac95ce12bc316d7e40b3fcde19e79563b0d5bc93a9410d5469ab0d530e04c7d96b9ad466d4582e76ebec1447607af95cb030cdd7cfc8ef76b",
+          "sha256": "e31c1bc7cf1c63a3f133910f1605be66819db0688b98dbea7a35fbfe2f4b566f",
+          "sha1": "a78daafd6bce3d462c5cea1db505df89e87ed7ba",
+          "md5": "c55fcd4a21c54a3671df3d6dc1c7206d"
+        }
+      ]
+    },
+    {
+      "name": "accessTransformersElements",
+      "attributes": {
+        "org.gradle.category": "accesstransformer"
+      },
+      "files": [
+        {
+          "name": "multiloaderdataextensions-common-26.2.0-accesstransformer.cfg",
+          "url": "multiloaderdataextensions-common-26.2.0-accesstransformer.cfg",
+          "size": 3,
+          "sha512": "ff9f010b5bdd7591d052fdb8cfc6e7b842f8f973ab37a91ea5e16449c17e9278d9f95f265b0508f083348376aeb16d7f02b7b86cde634e8c9f875287049360de",
+          "sha256": "6a3cf5192354f71615ac51034b3e97c20eda99643fcaf5bbe6d41ad59bd12167",
+          "sha1": "7c338ed2840d2bf55f9f5e4eed04f66c80840eb3",
+          "md5": "2228e977ebea8966e27929f43e39cb67"
+        }
+      ]
+    }
+  ]
+}
