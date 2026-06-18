@@ -10,7 +10,7 @@
 - [1.0-SNAPSHOT](./fuzs.multiloader.multiloader-convention-plugins-settings.gradle.plugin/1.0-SNAPSHOT)
 - [1.0.17](./fuzs.multiloader.multiloader-convention-plugins-settings.gradle.plugin/1.0.17)
 - [1.1-SNAPSHOT](./fuzs.multiloader.multiloader-convention-plugins-settings.gradle.plugin/1.1-SNAPSHOT)
-- [1.1.13](./fuzs.multiloader.multiloader-convention-plugins-settings.gradle.plugin/1.1.13)
+- [1.1.14](./fuzs.multiloader.multiloader-convention-plugins-settings.gradle.plugin/1.1.14)
 </details>
 
 <details open>
@@ -47,6 +47,7 @@
 - [1.1.11](./fuzs.multiloader.multiloader-convention-plugins-settings.gradle.plugin/1.1.11)
 - [1.1.12](./fuzs.multiloader.multiloader-convention-plugins-settings.gradle.plugin/1.1.12)
 - [1.1.13](./fuzs.multiloader.multiloader-convention-plugins-settings.gradle.plugin/1.1.13)
+- [1.1.14](./fuzs.multiloader.multiloader-convention-plugins-settings.gradle.plugin/1.1.14)
 </details>
 
 </details>
