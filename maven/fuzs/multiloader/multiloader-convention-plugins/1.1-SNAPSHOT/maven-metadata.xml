@@ -3,27 +3,27 @@
   <groupId>fuzs.multiloader</groupId>
   <artifactId>multiloader-convention-plugins</artifactId>
   <versioning>
-    <lastUpdated>20260618091936</lastUpdated>
+    <lastUpdated>20260618155618</lastUpdated>
     <snapshot>
-      <timestamp>20260618.091936</timestamp>
-      <buildNumber>14</buildNumber>
+      <timestamp>20260618.155618</timestamp>
+      <buildNumber>15</buildNumber>
     </snapshot>
     <snapshotVersions>
       <snapshotVersion>
         <extension>pom</extension>
-        <value>1.1-20260618.091936-14</value>
-        <updated>20260618091936</updated>
+        <value>1.1-20260618.155618-15</value>
+        <updated>20260618155618</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>sources</classifier>
         <extension>jar</extension>
-        <value>1.1-20260618.091936-14</value>
-        <updated>20260618091936</updated>
+        <value>1.1-20260618.155618-15</value>
+        <updated>20260618155618</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>jar</extension>
-        <value>1.1-20260618.091936-14</value>
-        <updated>20260618091936</updated>
+        <value>1.1-20260618.155618-15</value>
+        <updated>20260618155618</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>
