@@ -209,6 +209,7 @@
 - [21.10.0](./fuzs/diagonalblocks/diagonalblocks-common/21.10.0)
 - [21.11.1](./fuzs/diagonalblocks/diagonalblocks-common/21.11.1)
 - [26.1.0](./fuzs/diagonalblocks/diagonalblocks-common/26.1.0)
+- [26.2.0](./fuzs/diagonalblocks/diagonalblocks-common/26.2.0)
 </details>
 
 <details>
@@ -243,6 +244,7 @@
 - [21.11.0](./fuzs/diagonalblocks/diagonalblocks-common/21.11.0)
 - [21.11.1](./fuzs/diagonalblocks/diagonalblocks-common/21.11.1)
 - [26.1.0](./fuzs/diagonalblocks/diagonalblocks-common/26.1.0)
+- [26.2.0](./fuzs/diagonalblocks/diagonalblocks-common/26.2.0)
 </details>
 
 ### [`diagonalblocks-fabric`](./fuzs/diagonalblocks/diagonalblocks-fabric)
@@ -263,6 +265,7 @@
 - [21.10.0](./fuzs/diagonalblocks/diagonalblocks-fabric/21.10.0)
 - [21.11.1](./fuzs/diagonalblocks/diagonalblocks-fabric/21.11.1)
 - [26.1.0](./fuzs/diagonalblocks/diagonalblocks-fabric/26.1.0)
+- [26.2.0](./fuzs/diagonalblocks/diagonalblocks-fabric/26.2.0)
 </details>
 
 <details>
@@ -297,6 +300,7 @@
 - [21.11.0](./fuzs/diagonalblocks/diagonalblocks-fabric/21.11.0)
 - [21.11.1](./fuzs/diagonalblocks/diagonalblocks-fabric/21.11.1)
 - [26.1.0](./fuzs/diagonalblocks/diagonalblocks-fabric/26.1.0)
+- [26.2.0](./fuzs/diagonalblocks/diagonalblocks-fabric/26.2.0)
 </details>
 
 ### [`diagonalblocks-forge`](./fuzs/diagonalblocks/diagonalblocks-forge)
@@ -341,6 +345,7 @@
 - [21.10.0](./fuzs/diagonalblocks/diagonalblocks-neoforge/21.10.0)
 - [21.11.1](./fuzs/diagonalblocks/diagonalblocks-neoforge/21.11.1)
 - [26.1.0](./fuzs/diagonalblocks/diagonalblocks-neoforge/26.1.0)
+- [26.2.0](./fuzs/diagonalblocks/diagonalblocks-neoforge/26.2.0)
 </details>
 
 <details>
@@ -368,6 +373,7 @@
 - [21.11.0](./fuzs/diagonalblocks/diagonalblocks-neoforge/21.11.0)
 - [21.11.1](./fuzs/diagonalblocks/diagonalblocks-neoforge/21.11.1)
 - [26.1.0](./fuzs/diagonalblocks/diagonalblocks-neoforge/26.1.0)
+- [26.2.0](./fuzs/diagonalblocks/diagonalblocks-neoforge/26.2.0)
 </details>
 
 </details>
