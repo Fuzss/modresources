@@ -1,0 +1,135 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "fuzs.hotbarslotcycling",
+    "module": "hotbarslotcycling-neoforge",
+    "version": "26.2.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.5.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "fuzs.puzzleslib",
+          "module": "puzzleslib-neoforge",
+          "version": {
+            "requires": "26.2.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "hotbarslotcycling-neoforge-26.2.0.jar",
+          "url": "hotbarslotcycling-neoforge-26.2.0.jar",
+          "size": 47973,
+          "sha512": "7f5b93c4459adca37a683ade91cca36520e8463ee8fe4fd4b660e25e9664cdde4ea2d9e09c9203f2e078e7a7363965569579daa81c90aa6496fd480570d4fa09",
+          "sha256": "ac103ec07a736551f26916e18cb85caaf01a05cf2027dd43effe20b7b8b07fd4",
+          "sha1": "34a6891c01e22e2692e757dd0ad68f2b3a712f39",
+          "md5": "098190349c2ca69f5ce2b06cb5725bb6"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "fuzs.puzzleslib",
+          "module": "puzzleslib-neoforge",
+          "version": {
+            "requires": "26.2.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "hotbarslotcycling-neoforge-26.2.0.jar",
+          "url": "hotbarslotcycling-neoforge-26.2.0.jar",
+          "size": 47973,
+          "sha512": "7f5b93c4459adca37a683ade91cca36520e8463ee8fe4fd4b660e25e9664cdde4ea2d9e09c9203f2e078e7a7363965569579daa81c90aa6496fd480570d4fa09",
+          "sha256": "ac103ec07a736551f26916e18cb85caaf01a05cf2027dd43effe20b7b8b07fd4",
+          "sha1": "34a6891c01e22e2692e757dd0ad68f2b3a712f39",
+          "md5": "098190349c2ca69f5ce2b06cb5725bb6"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "hotbarslotcycling-neoforge-26.2.0-sources.jar",
+          "url": "hotbarslotcycling-neoforge-26.2.0-sources.jar",
+          "size": 34681,
+          "sha512": "275220f810cb335c592c1feb2661687e4ba61ee003bad05ae85373ea8e653255e77302255c3a0f70d95c72ed80e9caa2bd18b870b6ac5a8a9604829240e4497c",
+          "sha256": "f9aacfb6c05a1083bb30a64d3a60a3e67ce78e004936352856be809291d2a363",
+          "sha1": "4c3c6c1964e08bd6b0e5959d406d6d7e23645c97",
+          "md5": "4cee0a0e4982bf6ef9635ff5c7a32939"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "hotbarslotcycling-neoforge-26.2.0-javadoc.jar",
+          "url": "hotbarslotcycling-neoforge-26.2.0-javadoc.jar",
+          "size": 4237604,
+          "sha512": "e005a79a6d985cb064b313e92f4c6e871fc28afed35a16ea6d5da88a94a5925fd8663f6e92be57e1a270c4de0ffae08cc0eb5962ac8e789bcb02bfe94a29a007",
+          "sha256": "94a151fae6f660a98de6462737b095a1a1e0d15be09480f04471bbb7923affa3",
+          "sha1": "db113b431567b8236df2c71529f23fee816d539b",
+          "md5": "2ea53627472433f7637f866e18204698"
+        }
+      ]
+    },
+    {
+      "name": "accessTransformersElements",
+      "attributes": {
+        "org.gradle.category": "accesstransformer"
+      },
+      "files": [
+        {
+          "name": "hotbarslotcycling-neoforge-26.2.0-accesstransformer.cfg",
+          "url": "hotbarslotcycling-neoforge-26.2.0-accesstransformer.cfg",
+          "size": 0,
+          "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+          "md5": "d41d8cd98f00b204e9800998ecf8427e"
+        }
+      ]
+    }
+  ]
+}
