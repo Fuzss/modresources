@@ -1,0 +1,135 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "fuzs.statuemenus",
+    "module": "statuemenus-neoforge",
+    "version": "26.2.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.5.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "fuzs.puzzleslib",
+          "module": "puzzleslib-neoforge",
+          "version": {
+            "requires": "26.2.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "statuemenus-neoforge-26.2.0.jar",
+          "url": "statuemenus-neoforge-26.2.0.jar",
+          "size": 277454,
+          "sha512": "21334fe2045b1e9e22778bb1c470b083cc760ec93dcf4ddd0cc4a101b7348ac2dac370bd5d32f3f494b8e1981b02e151480d6a93152e06fa83c222f641743f2b",
+          "sha256": "cfb781f5a9392acab05820cdcea13718afe095ee85e1cd4f3fda8aff471cecbe",
+          "sha1": "26cbf543d1146cd79ac8e1268ce3608f71addef1",
+          "md5": "913277e9e6abd3cfb42d19ccb1c65907"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "fuzs.puzzleslib",
+          "module": "puzzleslib-neoforge",
+          "version": {
+            "requires": "26.2.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "statuemenus-neoforge-26.2.0.jar",
+          "url": "statuemenus-neoforge-26.2.0.jar",
+          "size": 277454,
+          "sha512": "21334fe2045b1e9e22778bb1c470b083cc760ec93dcf4ddd0cc4a101b7348ac2dac370bd5d32f3f494b8e1981b02e151480d6a93152e06fa83c222f641743f2b",
+          "sha256": "cfb781f5a9392acab05820cdcea13718afe095ee85e1cd4f3fda8aff471cecbe",
+          "sha1": "26cbf543d1146cd79ac8e1268ce3608f71addef1",
+          "md5": "913277e9e6abd3cfb42d19ccb1c65907"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "statuemenus-neoforge-26.2.0-sources.jar",
+          "url": "statuemenus-neoforge-26.2.0-sources.jar",
+          "size": 172935,
+          "sha512": "bb454909d6860741b99f4e6165b162a2271d999a79e382f151120003d4d04e8dff7358d4f1be2e34fe41e2e22b77d24912d284b21e2f99ac47c5f49e83daa546",
+          "sha256": "bc52ebae081c03c8bdf5e4e72dbec97bc224a7ef991404bd9f52ef4810b5752e",
+          "sha1": "288d6d8a790387269b0ab9389b79b7df4e648dc0",
+          "md5": "e252df9005395b638b5e67e51c287cfb"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "statuemenus-neoforge-26.2.0-javadoc.jar",
+          "url": "statuemenus-neoforge-26.2.0-javadoc.jar",
+          "size": 4503184,
+          "sha512": "7b94073810bf2ca97305f0cf9982636595fdc48ff128e9e0e7176231fc0e571febcbc81d99bec67683e4e4fcc39e8a08ad9db1c64c1c5456f775a507bd748aa5",
+          "sha256": "75358f30e288fde2d17721d3b12fdcfecd177fa3ae77519d4af0197aef2a429e",
+          "sha1": "a6c411a6928ede7dede281e24da7042570d265a8",
+          "md5": "9e55f306e3d6e027c246418128834ba8"
+        }
+      ]
+    },
+    {
+      "name": "accessTransformersElements",
+      "attributes": {
+        "org.gradle.category": "accesstransformer"
+      },
+      "files": [
+        {
+          "name": "statuemenus-neoforge-26.2.0-accesstransformer.cfg",
+          "url": "statuemenus-neoforge-26.2.0-accesstransformer.cfg",
+          "size": 227,
+          "sha512": "25656f2876fe18b38d80a08cc7b08c64710afb00e45d8ddc6562ec4a262daaeaceb8f6a9af40cdcc6d2c168b188a00f1aef58fbb613c0da4b9fb3733876e5463",
+          "sha256": "e46f6167ccb4f5391253fc7e013f668e8ac86a90a15469ae64d6f0f73a34864a",
+          "sha1": "4b1139dc5520d4aa1cceeac340a152704c319ad4",
+          "md5": "11eb011e01d508d2787287bacda3e46a"
+        }
+      ]
+    }
+  ]
+}
