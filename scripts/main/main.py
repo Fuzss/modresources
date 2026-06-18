@@ -879,7 +879,6 @@ def main():
                 warn2("Could not launch IntelliJ:", e)
         sys.exit(1)
 
-    versions_updated = False
     if args.branch:
         info2(f"Updating versions.json...")
         branch_overrides = {
@@ -887,14 +886,11 @@ def main():
             for key, value in args.branch
         }
 
-        versions_updated = clone_versions.load_versions_file(main_path, branch_overrides)
+        clone_versions.load_versions_file(main_path, branch_overrides)
 
     if args.upgrade:
         info2("Upgrading workspace...")
         run_workspace_upgrade(args, base_path, main_path, project_path)
-
-    if versions_updated and args.branch:
-        subprocess.run(["gh", "workflow", "run", "generate_readme.yaml"], cwd=main_path, check=True)
 
     if args.version:
         changelog_path = f"{project_path}/CHANGELOG.md"
