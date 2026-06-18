@@ -1,0 +1,139 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "fuzs.diagonalblocks",
+    "module": "diagonalblocks-fabric",
+    "version": "26.2.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.5.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "net.fabricmc.fabric-api",
+          "module": "fabric-api",
+          "version": {
+            "requires": "0.152.1+26.2"
+          }
+        },
+        {
+          "group": "fuzs.puzzleslib",
+          "module": "puzzleslib-fabric",
+          "version": {
+            "requires": "26.2.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "diagonalblocks-fabric-26.2.0.jar",
+          "url": "diagonalblocks-fabric-26.2.0.jar",
+          "size": 122647,
+          "sha512": "31addee960e30834b822061caedaba9881b3b30ad5640bf749ca03d6d2862dd929909b9180cac922356598213f5b8e7a93493e880589d8a5859be8d81beaf4ac",
+          "sha256": "ef2fc49de90018c022b63d36a871f64ecf1744e81183cca494976e9f5729d36b",
+          "sha1": "c9a0bd2e2307894febc1577522fa974f98e42dda",
+          "md5": "07931348e160a3d4b2dd344f10eedf15"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "net.fabricmc",
+          "module": "fabric-loader",
+          "version": {
+            "requires": "0.19.3"
+          }
+        },
+        {
+          "group": "net.fabricmc.fabric-api",
+          "module": "fabric-api",
+          "version": {
+            "requires": "0.152.1+26.2"
+          }
+        },
+        {
+          "group": "fuzs.puzzleslib",
+          "module": "puzzleslib-fabric",
+          "version": {
+            "requires": "26.2.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "diagonalblocks-fabric-26.2.0.jar",
+          "url": "diagonalblocks-fabric-26.2.0.jar",
+          "size": 122647,
+          "sha512": "31addee960e30834b822061caedaba9881b3b30ad5640bf749ca03d6d2862dd929909b9180cac922356598213f5b8e7a93493e880589d8a5859be8d81beaf4ac",
+          "sha256": "ef2fc49de90018c022b63d36a871f64ecf1744e81183cca494976e9f5729d36b",
+          "sha1": "c9a0bd2e2307894febc1577522fa974f98e42dda",
+          "md5": "07931348e160a3d4b2dd344f10eedf15"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "diagonalblocks-fabric-26.2.0-sources.jar",
+          "url": "diagonalblocks-fabric-26.2.0-sources.jar",
+          "size": 74429,
+          "sha512": "7aceda897367363b64fefac788a023081358f8cd755d47fea2eb02efcd3279cd6921014c6781ff80e5eb64626cfeb2d2975b25d331569cef7b5f3d4c92a66272",
+          "sha256": "6c76f2f600b54a27f2bc91742e951a15375e2c05041188197068f62d3df6c860",
+          "sha1": "15744ad798e28d1f77b58ddc3d2949058f291622",
+          "md5": "7ec7da8f9baa46976bb7b1043635572e"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "diagonalblocks-fabric-26.2.0-javadoc.jar",
+          "url": "diagonalblocks-fabric-26.2.0-javadoc.jar",
+          "size": 4363926,
+          "sha512": "333f91ea8c01cf03af77fdf6ac75b01a9411f228fa8a417d26afe794776c22838f14b28f3f9749b109ee516e4b0cccf4ddc570a7ec9db14edf3db7b38d8e78c4",
+          "sha256": "a70f6062c764b928be17aa15a24241adbe93c036d7a337b7790310e1e45ef36e",
+          "sha1": "f8d629867c807a4c8e1a52e0bcfddcb28db7544d",
+          "md5": "a9d5a0440c4cdfe64587e96469a6ceed"
+        }
+      ]
+    }
+  ]
+}
