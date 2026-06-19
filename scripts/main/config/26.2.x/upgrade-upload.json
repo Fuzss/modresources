@@ -9,7 +9,7 @@
     ["26.2.x", "primary"],
     ["26.1.x", "maintained"]
   ],
-  "gradle": "9.5.1",
+  "gradle": "9.6.0",
   "upgrade": true,
   "commit": true,
   "data": true,
