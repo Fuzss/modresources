@@ -1,0 +1,153 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "fuzs.forgeconfigapiport",
+    "module": "forgeconfigapiport-fabric",
+    "version": "26.2.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.5.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "com.electronwill.night-config",
+          "module": "core",
+          "version": {
+            "requires": "3.8.4"
+          }
+        },
+        {
+          "group": "com.electronwill.night-config",
+          "module": "toml",
+          "version": {
+            "requires": "3.8.4"
+          }
+        },
+        {
+          "group": "net.fabricmc.fabric-api",
+          "module": "fabric-api",
+          "version": {
+            "requires": "0.152.2+26.2"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "forgeconfigapiport-fabric-26.2.1.jar",
+          "url": "forgeconfigapiport-fabric-26.2.1.jar",
+          "size": 609551,
+          "sha512": "957d065db6c432afec22122e855b0a09e91a1179823357747ce13f2a4731ad815e3e81d55976b08b3b418e722fb52bec8c3aa78b07c6655f982313be5094b7d9",
+          "sha256": "da7919ffc777d4f2d66bba820ea5ec3c76bc3ca09eb6ccc099956357c501a556",
+          "sha1": "6ccf27f2ef8842a61d91a053ff79d7908a00ee99",
+          "md5": "950947bee6d16b47d7f61fe7ab74a84b"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "net.fabricmc",
+          "module": "fabric-loader",
+          "version": {
+            "requires": "0.19.3"
+          }
+        },
+        {
+          "group": "com.electronwill.night-config",
+          "module": "core",
+          "version": {
+            "requires": "3.8.4"
+          }
+        },
+        {
+          "group": "com.electronwill.night-config",
+          "module": "toml",
+          "version": {
+            "requires": "3.8.4"
+          }
+        },
+        {
+          "group": "net.fabricmc.fabric-api",
+          "module": "fabric-api",
+          "version": {
+            "requires": "0.152.2+26.2"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "forgeconfigapiport-fabric-26.2.1.jar",
+          "url": "forgeconfigapiport-fabric-26.2.1.jar",
+          "size": 609551,
+          "sha512": "957d065db6c432afec22122e855b0a09e91a1179823357747ce13f2a4731ad815e3e81d55976b08b3b418e722fb52bec8c3aa78b07c6655f982313be5094b7d9",
+          "sha256": "da7919ffc777d4f2d66bba820ea5ec3c76bc3ca09eb6ccc099956357c501a556",
+          "sha1": "6ccf27f2ef8842a61d91a053ff79d7908a00ee99",
+          "md5": "950947bee6d16b47d7f61fe7ab74a84b"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "forgeconfigapiport-fabric-26.2.1-sources.jar",
+          "url": "forgeconfigapiport-fabric-26.2.1-sources.jar",
+          "size": 109715,
+          "sha512": "f48d73828c5660d01559930f9cf58311bc6e6d4de703fddd1d34a091e1451b7a75a421dd769ee8e9ba0aa5803ca69f9b0554c73e974116930b25ded5841594b2",
+          "sha256": "8e792f8d96353330c96cbe203d827427a86a5a2173b168fae01b83abe8a872af",
+          "sha1": "80f8be13808ec613ffa7ad4ddcfb9e301a3ad654",
+          "md5": "838fb58dc48c38ef509b3c8eae42ee59"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "forgeconfigapiport-fabric-26.2.1-javadoc.jar",
+          "url": "forgeconfigapiport-fabric-26.2.1-javadoc.jar",
+          "size": 4548962,
+          "sha512": "0fa6008cd2448f68b77a878641ecd798af7f0c59fe28398b5666736e8986945f8ee2005aad7ed3c60c76ef5b93c2c9295da5b2bd87f423ecb8b0ab25882ade3e",
+          "sha256": "31d9ff1aea8814c0170bc73724afcdcb2e9e979c8c6d7939896f29041000968c",
+          "sha1": "dc0ebd1f7cdd0d05f3de874143b9e6b808dc5d48",
+          "md5": "eb1ef538fb55b5b590e7db5336c15970"
+        }
+      ]
+    }
+  ]
+}
