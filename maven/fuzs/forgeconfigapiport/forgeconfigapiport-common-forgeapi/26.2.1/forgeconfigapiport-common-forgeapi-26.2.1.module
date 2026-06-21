@@ -1,0 +1,133 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "fuzs.forgeconfigapiport",
+    "module": "forgeconfigapiport-common-forgeapi",
+    "version": "26.2.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.5.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "com.electronwill.night-config",
+          "module": "core",
+          "version": {
+            "requires": "3.8.4"
+          }
+        },
+        {
+          "group": "com.electronwill.night-config",
+          "module": "toml",
+          "version": {
+            "requires": "3.8.4"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "forgeconfigapiport-common-forgeapi-26.2.1.jar",
+          "url": "forgeconfigapiport-common-forgeapi-26.2.1.jar",
+          "size": 66662,
+          "sha512": "5f4c67203ca67c0f93720d7c89ec3271d3f179d139c16c0bb8394047cef3c263180446876f38f5960017bbc94ec3f552e441cd273e6aca8ddfe9d7457b37787d",
+          "sha256": "3e48c47b971d5e1a687a781a9e75374214ae67eebd8066b9b38efe780f8dbb6c",
+          "sha1": "f9b6ee3f392bbc74521d1261387de68bd8519f5e",
+          "md5": "55aca5675caf003151f490112238dbb4"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "forgeconfigapiport-common-forgeapi-26.2.1.jar",
+          "url": "forgeconfigapiport-common-forgeapi-26.2.1.jar",
+          "size": 66662,
+          "sha512": "5f4c67203ca67c0f93720d7c89ec3271d3f179d139c16c0bb8394047cef3c263180446876f38f5960017bbc94ec3f552e441cd273e6aca8ddfe9d7457b37787d",
+          "sha256": "3e48c47b971d5e1a687a781a9e75374214ae67eebd8066b9b38efe780f8dbb6c",
+          "sha1": "f9b6ee3f392bbc74521d1261387de68bd8519f5e",
+          "md5": "55aca5675caf003151f490112238dbb4"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "forgeconfigapiport-common-forgeapi-26.2.1-sources.jar",
+          "url": "forgeconfigapiport-common-forgeapi-26.2.1-sources.jar",
+          "size": 37521,
+          "sha512": "0c883040359d591bfd8c0e68ad6f22d32267cff187e9ada685fe73fed96c6702c6fb5dc31f7e78d32421b590571a4aae06a2fa6f188956965ea458c4207d74f5",
+          "sha256": "4a755775451dff6d16293edc50ae1b1dd9e8779c8204f03b4357d3e6fc2bcf47",
+          "sha1": "72741dc0aa1dfb62d9978d20b165b5f537e70e6e",
+          "md5": "81064dc5a6ba7c15673a1fefa4e9933f"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "forgeconfigapiport-common-forgeapi-26.2.1-javadoc.jar",
+          "url": "forgeconfigapiport-common-forgeapi-26.2.1-javadoc.jar",
+          "size": 4242344,
+          "sha512": "d6ae593c83ef980bcb1d3cc8a68bdefa2e019bd020acd4b6fcc54da7edcd56516d833b44ab484f6671119ee7491a2648d657794cd7c0504e82656f39cdbe6d12",
+          "sha256": "1a65245584b8d9182aa85f706db70f9e86c4560889bb7f8a8b0deadb9087f392",
+          "sha1": "bba9d2048915eb19025da699e01ab053d8140f5c",
+          "md5": "338cc4d59aa2ab81c8c7b404097ace20"
+        }
+      ]
+    },
+    {
+      "name": "accessTransformersElements",
+      "attributes": {
+        "org.gradle.category": "accesstransformer"
+      },
+      "files": [
+        {
+          "name": "forgeconfigapiport-common-forgeapi-26.2.1-accesstransformer.cfg",
+          "url": "forgeconfigapiport-common-forgeapi-26.2.1-accesstransformer.cfg",
+          "size": 0,
+          "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+          "md5": "d41d8cd98f00b204e9800998ecf8427e"
+        }
+      ]
+    }
+  ]
+}
