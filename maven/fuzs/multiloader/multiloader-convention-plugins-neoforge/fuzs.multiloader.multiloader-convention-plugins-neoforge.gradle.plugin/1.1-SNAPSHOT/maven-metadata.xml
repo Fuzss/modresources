@@ -3,16 +3,16 @@
   <groupId>fuzs.multiloader.multiloader-convention-plugins-neoforge</groupId>
   <artifactId>fuzs.multiloader.multiloader-convention-plugins-neoforge.gradle.plugin</artifactId>
   <versioning>
-    <lastUpdated>20260619051204</lastUpdated>
+    <lastUpdated>20260621084035</lastUpdated>
     <snapshot>
-      <timestamp>20260619.051204</timestamp>
-      <buildNumber>16</buildNumber>
+      <timestamp>20260621.084035</timestamp>
+      <buildNumber>17</buildNumber>
     </snapshot>
     <snapshotVersions>
       <snapshotVersion>
         <extension>pom</extension>
-        <value>1.1-20260619.051204-16</value>
-        <updated>20260619051204</updated>
+        <value>1.1-20260621.084035-17</value>
+        <updated>20260621084035</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>
