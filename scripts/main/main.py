@@ -143,7 +143,6 @@ def remove_directory_or_file(file_path, only_if_empty=False):
     print(f"Removed {file_path}")
 
 def update_gradle_properties(file_path, updates: dict):
-    print(updates)
     with open(file_path, 'r') as f:
         lines = f.readlines()
 
@@ -190,6 +189,14 @@ def update_gradle_properties(file_path, updates: dict):
     if updated_lines:
         with open(file_path, 'w') as f:
             f.writelines(updated_lines)
+
+    updated_properties = {
+        key: value
+        for key, value in properties.items()
+        if key in updates
+    }
+
+    print(json.dumps(updated_properties, indent=2, sort_keys=True))
 
     return properties
 
@@ -410,7 +417,7 @@ def create_gradle_properties(args):
         version = args.version.lower()
 
         if version in {"patch", "minor", "major"}:
-            properties[version_key] = lambda version: bump_version(version, value)
+            properties[version_key] = lambda property: bump_version(property, version)
         elif version == "latest":
             pass
         elif SEMANTIC_VERSION_PATTERN.fullmatch(version):
@@ -953,7 +960,7 @@ def main():
     
     gradle_properties_path = f"{project_path}/gradle.properties"
     gradle_properties = update_gradle_properties(gradle_properties_path, updated_gradle_properties)
-    if args.version and args.version.lower() == "latest":
+    if args.version:
         version_key = "modVersion" if args.legacy else "mod.version"
         args.version = gradle_properties[version_key]
 
