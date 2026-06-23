@@ -17,10 +17,14 @@ from pathlib import Path
 _GRADLE_PROPS = None
 ORDERED_CHANGELOG_SECTIONS = ["added", "changed", "deprecated", "removed", "fixed", "security"]
 VALID_CHANGELOG_SECTIONS = set(ORDERED_CHANGELOG_SECTIONS)
+
 ENVIRONMENTS = {"finder", "idea"}
 MOD_LOADERS = {"fabric", "neoforge"}
 DISTRIBUTIONS = {"client", "server"}
 UPLOADING_SITES = {"curseforge", "modrinth", "github"}
+
+SEMANTIC_VERSION_PATTERN = re.compile(r"^\d+\.\d+\.\d+$")
+VERSION_KEYWORDS = {"latest", "patch", "minor", "major"}
 
 def log2(level, color, message):
     now = datetime.now().strftime("%H:%M:%S")
@@ -159,26 +163,33 @@ def update_gradle_properties(file_path, updates: dict):
 
         key, value = content.split('=', 1)
         key = key.strip()
-        if key in updates:
-            updated_value = updates[key]
-            if updated_value == "#":
-                comment = True
-            elif updated_value is not None:
-                comment = False
-                value = updated_value
+        value = value.strip()
+        if updates:
+            if key in updates:
+                updated_value = updates[key]
+
+                if callable(updated_value):
+                    updated_value = updated_value(value)
+
+                if updated_value == "#":
+                    comment = True
+                elif updated_value is not None:
+                    comment = False
+                    value = updated_value
+                else:
+                    value = None
+                
+                if value is not None:
+                    updated_lines.append(f'{"#" if comment else ""}{key}={value}\n')
             else:
-                value = None
-            
-            if value is not None:
-                updated_lines.append(f'{"#" if comment else ""}{key}={value}\n')
-        else:
-            updated_lines.append(line)
+                updated_lines.append(line)
 
         if not comment and value is not None:
             properties[key] = value
 
-    with open(file_path, 'w') as f:
-        f.writelines(updated_lines)
+    if updated_lines:
+        with open(file_path, 'w') as f:
+            f.writelines(updated_lines)
 
     return properties
 
@@ -357,10 +368,28 @@ def string_in_file_if_exists(file_path, target):
         return False
     with open(file_path, 'r', encoding='utf-8') as f:
         return target in f.read()
+    
+def bump_version(version, component):
+    if not SEMANTIC_VERSION_PATTERN.fullmatch(version):
+        raise ValueError(
+            f"Cannot bump version '{version}', expected semantic version x.y.z"
+        )
+
+    major, minor, patch = map(int, version.split("."))
+
+    if component == "major":
+        # Minecraft version numbers begin at minor update 1, not 0
+        return f"{major + 1}.1.0"
+    if component == "minor":
+        return f"{major}.{minor + 1}.0"
+    if component == "patch":
+        return f"{major}.{minor}.{patch + 1}"
+
+    raise ValueError(component)
 
 def create_gradle_properties(args):
     if args.upgrade == "1.21.10":
-        gradle_properties = {
+        properties = {
             "dependenciesPuzzlesLibVersion": None,
             "dependenciesMinPuzzlesLibVersion": None,
             "dependenciesRequiredForgeCurseForge": None,
@@ -373,22 +402,36 @@ def create_gradle_properties(args):
             "dependenciesOptionalForgeModrinth": None
         }
     else:
-        gradle_properties = {}
+        properties = {}
 
     if args.version:
-        gradle_properties["modVersion" if args.legacy else "mod.version"] = args.version
+        version_key = "modVersion" if args.legacy else "mod.version"
+
+        version = args.version.lower()
+
+        if version in {"patch", "minor", "major"}:
+            properties[version_key] = lambda version: bump_version(version, value)
+        elif version == "latest":
+            pass
+        elif SEMANTIC_VERSION_PATTERN.fullmatch(version):
+            properties[version_key] = version
+        else:
+            raise ValueError(
+                f"Invalid version '{args.version}'. Expected semantic version "
+                f"(e.g. 26.1.0) or one of: {', '.join(sorted(VERSION_KEYWORDS))}"
+            )
 
     if args.catalog:
-        gradle_properties["dependenciesVersionCatalog" if args.legacy else "project.libs"] = args.catalog
+        properties["dependenciesVersionCatalog" if args.legacy else "project.libs"] = args.catalog
 
     if args.plugins:
-        gradle_properties["project.plugins"] = args.plugins
+        properties["project.plugins"] = args.plugins
 
     if args.properties:
         for key, value in args.properties:
-            gradle_properties[key.strip()] = value.strip()
+            properties[key.strip()] = value.strip()
 
-    return gradle_properties
+    return properties
 
 def run_launch(mod_loader, distribution, project_path, legacy_task_names=False):
     if mod_loader == "fabric":
@@ -903,6 +946,24 @@ def main():
     if args.upgrade:
         info2("Upgrading workspace...")
         run_workspace_upgrade(args, base_path, main_path, project_path)
+    
+    updated_gradle_properties = create_gradle_properties(args)
+    if updated_gradle_properties:
+        info2(f"Updating gradle.properties...")
+    
+    gradle_properties_path = f"{project_path}/gradle.properties"
+    gradle_properties = update_gradle_properties(gradle_properties_path, updated_gradle_properties)
+    if args.version and args.version.lower() == "latest":
+        version_key = "modVersion" if args.legacy else "mod.version"
+        args.version = gradle_properties[version_key]
+
+    if args.gradle:
+        info2(f"Updating gradle-wrapper.properties...")
+        gradle_wrapper_properties_path = f"{project_path}/gradle/wrapper/gradle-wrapper.properties"
+        update_gradle_properties(gradle_wrapper_properties_path, {
+            "distributionUrl": f"https\\://services.gradle.org/distributions/gradle-{args.gradle}-bin.zip"
+        })
+        subprocess.run(["./gradlew", "wrapper", "--gradle-version", args.gradle], cwd=project_path, check=True)
 
     if args.version:
         changelog_path = f"{project_path}/CHANGELOG.md"
@@ -915,20 +976,6 @@ def main():
             prepend_to_changelog(changelog_path, new_block, full_version)
         elif not string_in_file_if_exists(changelog_path, full_version):
             error2(f"Missing changelog version: {full_version}")
-    
-    gradle_properties_path = f"{project_path}/gradle.properties"
-    gradle_properties = create_gradle_properties(args)
-    if gradle_properties:
-        info2(f"Updating gradle.properties...")
-        update_gradle_properties(gradle_properties_path, gradle_properties)
-
-    if args.gradle:
-        info2(f"Updating gradle-wrapper.properties...")
-        gradle_wrapper_properties_path = f"{project_path}/gradle/wrapper/gradle-wrapper.properties"
-        update_gradle_properties(gradle_wrapper_properties_path, {
-            "distributionUrl": f"https\\://services.gradle.org/distributions/gradle-{args.gradle}-bin.zip"
-        })
-        subprocess.run(["./gradlew", "wrapper", "--gradle-version", args.gradle], cwd=project_path, check=True)
 
     if args.upgrade:
         info2("Applying Spotless...")
