@@ -30,15 +30,21 @@ def is_git_repo(path: str) -> bool:
     return os.path.isdir(os.path.join(path, ".git"))
 
 
-def clone_branch(repo_url: str, branch: str, target_dir: str, single_branch=False):
+def clone_branch(repo_url: str, branch: str, target_dir: str):
     """Clone a single branch into target directory."""
     subprocess.run([
         "git",
         "clone",
         "--branch", branch,
-        *(["--single-branch"] if single_branch else []),
         repo_url,
         target_dir
+    ], check=True
+    )
+
+    subprocess.run([
+        "git",
+        "fetch",
+        "--all"
     ], check=True
     )
 
