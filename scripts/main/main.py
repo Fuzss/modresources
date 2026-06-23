@@ -143,32 +143,44 @@ def update_gradle_properties(file_path, updates: dict):
     with open(file_path, 'r') as f:
         lines = f.readlines()
 
-    new_lines = []
+    properties = {}
+    updated_lines = []
 
     for line in lines:
         content = line.strip()
-        if not content or '=' not in line:
-            new_lines.append(line)
+        if "=" not in line:
+            updated_lines.append(line)
             continue
 
-        prefix = ""
+        comment = False
         if content.startswith('#'):
             content = content[1:].strip()
-            prefix = "#"
+            comment = True
 
-        key, _ = content.split('=', 1)
+        key, value = content.split('=', 1)
         key = key.strip()
         if key in updates:
-            new_value = updates[key]
-            if new_value == "#":
-                new_lines.append(f"#{line}")
-            elif new_value is not None:
-                new_lines.append(f"{prefix}{key}={new_value}\n")
+            updated_value = updates[key]
+            if updated_value == "#":
+                comment = True
+            elif updated_value is not None:
+                comment = False
+                value = updated_value
+            else:
+                value = None
+            
+            if value is not None:
+                updated_lines.append(f'{"#" if comment else ""}{key}={value}\n')
         else:
-            new_lines.append(line)
+            updated_lines.append(line)
+
+        if not comment and value is not None:
+            properties[key] = value
 
     with open(file_path, 'w') as f:
-        f.writelines(new_lines)
+        f.writelines(updated_lines)
+
+    return properties
 
 def load_gradle_properties():
     path = os.path.expanduser("~/.gradle/gradle.properties")
