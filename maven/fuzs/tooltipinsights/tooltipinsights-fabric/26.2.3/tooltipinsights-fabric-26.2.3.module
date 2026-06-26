@@ -1,0 +1,139 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "fuzs.tooltipinsights",
+    "module": "tooltipinsights-fabric",
+    "version": "26.2.3",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.5.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "net.fabricmc.fabric-api",
+          "module": "fabric-api",
+          "version": {
+            "requires": "0.152.2+26.2"
+          }
+        },
+        {
+          "group": "fuzs.puzzleslib",
+          "module": "puzzleslib-fabric",
+          "version": {
+            "requires": "26.2.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "tooltipinsights-fabric-26.2.3.jar",
+          "url": "tooltipinsights-fabric-26.2.3.jar",
+          "size": 83142,
+          "sha512": "29337f4385774d33de47dceb51b28625ccfd397c4bf98cc67c1f8262c9630c20df2e1e40ed00d9686ab7308af6ce1f1489449cebffdbb8eab11f58861034d6d4",
+          "sha256": "e3d7b76c894341ca953931353347105ce1f2206e8222184e8389920664474aff",
+          "sha1": "f7fc63e778fb47dc9eee0e866c20437ba53bf69d",
+          "md5": "1b72f39aa4d9c125f73b1b639207c7db"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "net.fabricmc",
+          "module": "fabric-loader",
+          "version": {
+            "requires": "0.19.3"
+          }
+        },
+        {
+          "group": "net.fabricmc.fabric-api",
+          "module": "fabric-api",
+          "version": {
+            "requires": "0.152.2+26.2"
+          }
+        },
+        {
+          "group": "fuzs.puzzleslib",
+          "module": "puzzleslib-fabric",
+          "version": {
+            "requires": "26.2.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "tooltipinsights-fabric-26.2.3.jar",
+          "url": "tooltipinsights-fabric-26.2.3.jar",
+          "size": 83142,
+          "sha512": "29337f4385774d33de47dceb51b28625ccfd397c4bf98cc67c1f8262c9630c20df2e1e40ed00d9686ab7308af6ce1f1489449cebffdbb8eab11f58861034d6d4",
+          "sha256": "e3d7b76c894341ca953931353347105ce1f2206e8222184e8389920664474aff",
+          "sha1": "f7fc63e778fb47dc9eee0e866c20437ba53bf69d",
+          "md5": "1b72f39aa4d9c125f73b1b639207c7db"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "tooltipinsights-fabric-26.2.3-sources.jar",
+          "url": "tooltipinsights-fabric-26.2.3-sources.jar",
+          "size": 48150,
+          "sha512": "2314ee9ae6a73e108176813c766e327c4e3a68bd7f6ddcf59f9a6b7811533946df174657d1194a7c447e425f0ea18058c1269ae143692a92b0518aaba184834c",
+          "sha256": "7d34ecbe196b04e1c0ac239fa903ae60872c3579e18d29a4937cb3b424d6ede6",
+          "sha1": "8955aa84bba049c79dbab39065db276729b5d2f8",
+          "md5": "9070f3951f8edb6392fdc10090e2be9f"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "tooltipinsights-fabric-26.2.3-javadoc.jar",
+          "url": "tooltipinsights-fabric-26.2.3-javadoc.jar",
+          "size": 4267705,
+          "sha512": "14404e1537c96133e866a24c53a53d7fa80944974e86c594706e4ed7b69a0bb608efec3908d6d77642150a11414c403c28ec4a9701b4f34d7a010cb313c33575",
+          "sha256": "f2ddfba7d24525609ba518b4922e4bdc74e65d8b31c3d0e6ac465f7001c79eec",
+          "sha1": "f713add6eda6d1bd6e24471226f22c87ce8b6b3e",
+          "md5": "2c54a01956d1176e9ed4477f271fd6b1"
+        }
+      ]
+    }
+  ]
+}
