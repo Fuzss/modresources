@@ -163,30 +163,30 @@ def update_gradle_properties(file_path, updates: dict):
         key, value = content.split('=', 1)
         key = key.strip()
         value = value.strip()
-        if updates:
-            if key in updates:
-                updated_value = updates[key]
+        
+        if key in updates:
+            updated_value = updates[key]
 
-                if callable(updated_value):
-                    updated_value = updated_value(value)
+            if callable(updated_value):
+                updated_value = updated_value(value)
 
-                if updated_value == "#":
-                    comment = True
-                elif updated_value is not None:
-                    comment = False
-                    value = updated_value
-                else:
-                    value = None
-                
-                if value is not None:
-                    updated_lines.append(f'{"#" if comment else ""}{key}={value}\n')
+            if updated_value == "#":
+                comment = True
+            elif updated_value is not None:
+                comment = False
+                value = updated_value
             else:
-                updated_lines.append(line)
+                value = None
+            
+            if value is not None:
+                updated_lines.append(f'{"#" if comment else ""}{key}={value}\n')
+        else:
+            updated_lines.append(line)
 
         if not comment and value is not None:
             properties[key] = value
 
-    if updated_lines:
+    if updates:
         with open(file_path, 'w') as f:
             f.writelines(updated_lines)
 
