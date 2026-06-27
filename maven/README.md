@@ -5592,7 +5592,7 @@
 - [21.9.0](./fuzs/tooltipinsights/tooltipinsights-common/21.9.0)
 - [21.10.1](./fuzs/tooltipinsights/tooltipinsights-common/21.10.1)
 - [21.11.0](./fuzs/tooltipinsights/tooltipinsights-common/21.11.0)
-- [26.1.1](./fuzs/tooltipinsights/tooltipinsights-common/26.1.1)
+- [26.1.2](./fuzs/tooltipinsights/tooltipinsights-common/26.1.2)
 - [26.2.4](./fuzs/tooltipinsights/tooltipinsights-common/26.2.4)
 </details>
 
@@ -5612,6 +5612,7 @@
 - [21.11.0](./fuzs/tooltipinsights/tooltipinsights-common/21.11.0)
 - [26.1.0](./fuzs/tooltipinsights/tooltipinsights-common/26.1.0)
 - [26.1.1](./fuzs/tooltipinsights/tooltipinsights-common/26.1.1)
+- [26.1.2](./fuzs/tooltipinsights/tooltipinsights-common/26.1.2)
 - [26.2.0](./fuzs/tooltipinsights/tooltipinsights-common/26.2.0)
 - [26.2.1](./fuzs/tooltipinsights/tooltipinsights-common/26.2.1)
 - [26.2.2](./fuzs/tooltipinsights/tooltipinsights-common/26.2.2)
@@ -5628,7 +5629,7 @@
 - [21.9.0](./fuzs/tooltipinsights/tooltipinsights-fabric/21.9.0)
 - [21.10.1](./fuzs/tooltipinsights/tooltipinsights-fabric/21.10.1)
 - [21.11.0](./fuzs/tooltipinsights/tooltipinsights-fabric/21.11.0)
-- [26.1.1](./fuzs/tooltipinsights/tooltipinsights-fabric/26.1.1)
+- [26.1.2](./fuzs/tooltipinsights/tooltipinsights-fabric/26.1.2)
 - [26.2.4](./fuzs/tooltipinsights/tooltipinsights-fabric/26.2.4)
 </details>
 
@@ -5648,6 +5649,7 @@
 - [21.11.0](./fuzs/tooltipinsights/tooltipinsights-fabric/21.11.0)
 - [26.1.0](./fuzs/tooltipinsights/tooltipinsights-fabric/26.1.0)
 - [26.1.1](./fuzs/tooltipinsights/tooltipinsights-fabric/26.1.1)
+- [26.1.2](./fuzs/tooltipinsights/tooltipinsights-fabric/26.1.2)
 - [26.2.0](./fuzs/tooltipinsights/tooltipinsights-fabric/26.2.0)
 - [26.2.1](./fuzs/tooltipinsights/tooltipinsights-fabric/26.2.1)
 - [26.2.2](./fuzs/tooltipinsights/tooltipinsights-fabric/26.2.2)
@@ -5664,7 +5666,7 @@
 - [21.9.0](./fuzs/tooltipinsights/tooltipinsights-neoforge/21.9.0)
 - [21.10.1](./fuzs/tooltipinsights/tooltipinsights-neoforge/21.10.1)
 - [21.11.0](./fuzs/tooltipinsights/tooltipinsights-neoforge/21.11.0)
-- [26.1.1](./fuzs/tooltipinsights/tooltipinsights-neoforge/26.1.1)
+- [26.1.2](./fuzs/tooltipinsights/tooltipinsights-neoforge/26.1.2)
 - [26.2.4](./fuzs/tooltipinsights/tooltipinsights-neoforge/26.2.4)
 </details>
 
@@ -5684,6 +5686,7 @@
 - [21.11.0](./fuzs/tooltipinsights/tooltipinsights-neoforge/21.11.0)
 - [26.1.0](./fuzs/tooltipinsights/tooltipinsights-neoforge/26.1.0)
 - [26.1.1](./fuzs/tooltipinsights/tooltipinsights-neoforge/26.1.1)
+- [26.1.2](./fuzs/tooltipinsights/tooltipinsights-neoforge/26.1.2)
 - [26.2.0](./fuzs/tooltipinsights/tooltipinsights-neoforge/26.2.0)
 - [26.2.1](./fuzs/tooltipinsights/tooltipinsights-neoforge/26.2.1)
 - [26.2.2](./fuzs/tooltipinsights/tooltipinsights-neoforge/26.2.2)
