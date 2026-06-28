@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>fuzs.multiloader.multiloader-convention-plugins-fabric-loom-remap</groupId>
+  <artifactId>fuzs.multiloader.multiloader-convention-plugins-fabric-loom-remap.gradle.plugin</artifactId>
+  <versioning>
+    <latest>1.1-SNAPSHOT</latest>
+    <release>1.1.19</release>
+    <versions>
+      <version>1.1.19</version>
+      <version>1.1-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20260628155145</lastUpdated>
+  </versioning>
+</metadata>
