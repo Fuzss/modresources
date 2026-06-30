@@ -1,0 +1,117 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "fuzs.multiloaderaccesswideners",
+    "module": "multiloaderaccesswideners-common",
+    "version": "21.1.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.6.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "multiloaderaccesswideners-common-21.1.1.jar",
+          "url": "multiloaderaccesswideners-common-21.1.1.jar",
+          "size": 16321,
+          "sha512": "7aec7bc42534d1560667c5b7c030d2a3575c778d1d07df4c805653f2dae0691b33cf3ff2291c6803a0fdac126326223094e4fa049bff992abc4b90c4f4a74116",
+          "sha256": "a6f29dbb4b34d6da7ad5928ff6e1366d1e4581367a47e6f9e2f12be692000b85",
+          "sha1": "6056648df9b5a56beea9820580edd6a68da759ae",
+          "md5": "cf486e9ebdfb0de8739126bd7bf4b60c"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "multiloaderaccesswideners-common-21.1.1.jar",
+          "url": "multiloaderaccesswideners-common-21.1.1.jar",
+          "size": 16321,
+          "sha512": "7aec7bc42534d1560667c5b7c030d2a3575c778d1d07df4c805653f2dae0691b33cf3ff2291c6803a0fdac126326223094e4fa049bff992abc4b90c4f4a74116",
+          "sha256": "a6f29dbb4b34d6da7ad5928ff6e1366d1e4581367a47e6f9e2f12be692000b85",
+          "sha1": "6056648df9b5a56beea9820580edd6a68da759ae",
+          "md5": "cf486e9ebdfb0de8739126bd7bf4b60c"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "multiloaderaccesswideners-common-21.1.1-sources.jar",
+          "url": "multiloaderaccesswideners-common-21.1.1-sources.jar",
+          "size": 15959,
+          "sha512": "bede7795eba8645620af43ffa104db7d9335a2541fa3f99ab08b8999b1c74d8c444c5595828b608682966dd93f546700e2c08ce998392ad1364f0aa42aa0f3fe",
+          "sha256": "e67c0069efc068b31f32bb4473234aa07d097a6a1614953a56a9c0f5bf46ad48",
+          "sha1": "966b96883d3bb6fad9d13357c7cd68729000e600",
+          "md5": "dae7affcaf8d1fad6bf3f5fe3f9ba65e"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "multiloaderaccesswideners-common-21.1.1-javadoc.jar",
+          "url": "multiloaderaccesswideners-common-21.1.1-javadoc.jar",
+          "size": 6885,
+          "sha512": "ef4ac79b676201e2e37f054d55feac314881605c361f26ae43f331b2a8077c04b6cf62f78a2d5fd59018d78c99eb861b0848830024e192baddf036ff7a7c570f",
+          "sha256": "77c9e3371a9e40838335ecfd6ba936fcac86a5dd42897eb735e9e781ea7fcd4c",
+          "sha1": "a1832a65bca3b084be131ec471fad8624ce12c58",
+          "md5": "77c21c977048ad001a9ce71dff01efff"
+        }
+      ]
+    },
+    {
+      "name": "accessTransformersElements",
+      "attributes": {
+        "org.gradle.category": "accesstransformer"
+      },
+      "files": [
+        {
+          "name": "multiloaderaccesswideners-common-21.1.1-accesstransformer.cfg",
+          "url": "multiloaderaccesswideners-common-21.1.1-accesstransformer.cfg",
+          "size": 21729,
+          "sha512": "3ce1bf4d764876db8311598ff3a8eaf117569f383d08fe6558f50738b90b470d063b66a07f4c78a5cc64e8a698377285550e4e908c7b7de50306e8dda9e93322",
+          "sha256": "01672ba61b4280bb3a48675cac4a62a95338989928d9a4fb2d316028e33a64bd",
+          "sha1": "8a323f1c92f07ff1ab4d0479df153973cf737931",
+          "md5": "8d6ba6e489ffd08f47e021ed1b30396d"
+        }
+      ]
+    }
+  ]
+}
