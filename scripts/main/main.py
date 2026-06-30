@@ -55,17 +55,17 @@ def parse_args():
     parser = argparse.ArgumentParser()
 
     parser.add_argument("--branch", default=[], action="append", nargs=2, metavar=("BRANCH_NAME", "SUPPORT_STATUS"), help="Updates branch status in versions.json, can be used multiple times. Format: --branch <branch_name> <support_status>")
-    parser.add_argument('--catalog', type=str, default=None, metavar="VERSION_CATALOG", help="Version-based catalog. Example: --catalog 26.1-SNAPSHOT")
+    parser.add_argument('--catalog', type=str, default=None, metavar="VERSION_CATALOG", help="Version-based catalog. Example: --catalog 26.2-SNAPSHOT")
     parser.add_argument("--changelog", default=None, action="append", nargs=2, metavar=("SECTION_NAME", "TEXT"), help="Add a changelog line, can be used multiple times. Format: --changelog <section_name> <text>")
     parser.add_argument('--commit', default=False, action="store_true", help="Commit to GitHub.")
-    parser.add_argument("--config", type=str, metavar="CONFIG_NAME", help="Args as JSON config file. Example: --config upgrade")
+    parser.add_argument("--config", type=str, metavar="CONFIG_NAME", help="Args as JSON config file. Example: --config upgrade-upload")
     parser.add_argument('--data', default=False, action="store_true", help="Generate data.")
-    parser.add_argument('--gradle', type=str, default=None, metavar="GRADLE_VERSION", help="Gradle wrapper version. Example: --gradle 9.4.1")
+    parser.add_argument('--gradle', type=str, default=None, metavar="GRADLE_VERSION", help="Gradle wrapper version. Example: --gradle 9.6.0")
     parser.add_argument('--id', type=str, default=None, metavar="MOD_ID", help="Mod id. Example: --id examplemod")
-    parser.add_argument('--init', nargs='?', const=True, default=None, metavar="SOURCE_BRANCH", help="Setup git repository and version branch, with optional argument. Example: --init [1.21.11]")
+    parser.add_argument('--init', nargs='?', const=True, default=None, metavar="SOURCE_BRANCH", help="Setup git repository and version branch, with optional argument. Example: --init [26.2.x]")
     parser.add_argument('--launch', default=[], action="append", nargs="*", metavar=("MOD_LOADER", "DISTRIBUTION"), help="Launch the game, can be used multiple times. Format: --launch <mod_loader> <distribution>")
     parser.add_argument('--legacy', default=False, action="store_true", help="Use legacy Gradle task names.")
-    parser.add_argument('--minecraft', type=str, required=True, metavar="MINECRAFT_VERSION", help="Minecraft name. Example: --minecraft 26.1.x")
+    parser.add_argument('--minecraft', type=str, required=True, metavar="MINECRAFT_VERSION", help="Minecraft name. Example: --minecraft 26.2.x")
     parser.add_argument('--name', type=str, required=True, metavar="REPOSITORY_NAME", help="Repository name. Example: --name example-mod")
     parser.add_argument('--notify', default=False, action="store_true", help="Notify via Discord webhook.")
     parser.add_argument('--open', default=None, nargs="*", metavar="ENVIRONMENT", help="Open in Finder, or Idea. Format: --open <environment>")
@@ -73,9 +73,10 @@ def parse_args():
     parser.add_argument('--plugins', type=str, default=None, metavar="PLUGINS_VERSION", help="Multiloader convention plugins version. Example: --plugins 1.1-SNAPSHOT")
     parser.add_argument("--properties", default=None, action="append", nargs=2, metavar=("KEY", "VALUE"), help="Set a gradle.properties value, can be used multiple times. Format: --properties <key> <value>")
     parser.add_argument('--publish', default=False, action="store_true", help="Publish to Maven.")
-    parser.add_argument('--upgrade', nargs='?', const=True, default=None, metavar="PATCHES_NAME", help="Run workspace upgrade, potentially for a specific version, with optional argument. Example: --upgrade [1.21.11]")
+    parser.add_argument('--spotless', type=str, default=None, metavar="TASK_NAME", help="Run spotless upgrade tasks for a specific game update. Example: --spotless tinytakeover")
+    parser.add_argument('--upgrade', nargs='?', const=True, default=None, metavar="PATCHES_NAME", help="Run workspace upgrade, potentially for a specific version, with optional argument. Example: --upgrade [26.1.x]")
     parser.add_argument('--upload', default=None, nargs="*", metavar=("MOD_LOADER", "WEBSITE"), help="Upload to CurseForge, Modrinth, or GitHub. Format: --upload <mod_loader> <website>")
-    parser.add_argument('--version', type=str, default=None, metavar="PROJECT_VERSION", help="Mod version. Example: --version 21.8.0")
+    parser.add_argument('--version', type=str, default=None, metavar="PROJECT_VERSION", help="Mod version. Example: --version 26.2.0")
 
     args = parser.parse_args()
 
@@ -676,16 +677,8 @@ def prepare_new_version(args, root_path, project_path):
     
     print(f"Created new branch {new_branch} from {source_branch}")
 
-    remove_directory_or_file(f"{project_path}/.idea")
-    remove_directory_or_file(f"{project_path}/.gradle")
-    remove_directory_or_file(f"{project_path}/CHANGELOG.md")
-
     source_path = os.path.join(root_path, args.init)
     copy_from_template(os.path.join(source_path, "run"), os.path.join(project_path, "run"), only_if_absent=True, throw_when_not_found=False)
-
-    if args.commit:
-        if git_push_all(args, project_path, f"prepare {args.minecraft} port"):
-            print("Committed new version preparations")
 
 def replace_text_block(file_path, pattern, replacement, use_regex=True):
     if not os.path.exists(file_path):
@@ -703,7 +696,9 @@ def replace_text_block(file_path, pattern, replacement, use_regex=True):
         with open(file_path, "w", encoding="utf-8") as file:
             file.write(new_text)
 
-    print(f"Updated {file_path}")
+        print(f"Updated {file_path}")
+    else:
+        print(f"No change to {file_path}")
 
 def add_line_after_target(file_path, target_text, new_text):
     """
@@ -883,6 +878,8 @@ def run_workspace_upgrade(args, base_path, main_path, project_path):
         error2("Worktree not clean, unable to run upgrade")
 
     subprocess.run(["git", "pull"], cwd=project_path, check=True)
+
+    remove_directory_or_file(f"{project_path}/CHANGELOG.md")
     
     remove_directory_or_file(
         os.path.join(project_path, "Common", "src", "main", "resources", "pack.mcmeta")
@@ -984,13 +981,15 @@ def main():
         elif not string_in_file_if_exists(changelog_path, full_version):
             error2(f"Missing changelog version: {full_version}")
 
-    if args.upgrade:
-        info2("Applying Spotless...")
-        if args.upgrade == "26.1.x":
+    if args.spotless:
+        if args.spotless == "tinytakeover":
+            info2("Applying Spotless for Tiny Takeover...")
             subprocess.run(["./gradlew", "all-tinytakeover-apply"], cwd=project_path, check=True)
-        elif args.upgrade == "1.21.11":
+        elif args.spotless == "mountsofmayhem":
+            info2("Applying Spotless for Mounts Of Mayhem...")
             subprocess.run(["./gradlew", "all-mountsofmayhem-apply"], cwd=project_path, check=True)
-        elif args.upgrade == "1.21.10":
+        elif args.spotless == "thecopperage":
+            info2("Applying Spotless for The Copper Age...")
             subprocess.run(["./gradlew", "all-thecopperage-apply"], cwd=project_path, check=True)
 
         subprocess.run(["./gradlew", "all-java-apply"], cwd=project_path, check=True)
