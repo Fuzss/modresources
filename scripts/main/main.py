@@ -396,21 +396,7 @@ def bump_version(version, component):
     raise ValueError(component)
 
 def create_gradle_properties(args):
-    if args.upgrade == "1.21.10":
-        properties = {
-            "dependenciesPuzzlesLibVersion": None,
-            "dependenciesMinPuzzlesLibVersion": None,
-            "dependenciesRequiredForgeCurseForge": None,
-            "dependenciesRequiredForgeModrinth": None,
-            "dependenciesOptionalFabricCurseForge": None,
-            "dependenciesOptionalNeoForgeCurseForge": None,
-            "dependenciesOptionalForgeCurseForge": None,
-            "dependenciesOptionalFabricModrinth": None,
-            "dependenciesOptionalNeoForgeModrinth": None,
-            "dependenciesOptionalForgeModrinth": None
-        }
-    else:
-        properties = {}
+    properties = {}
 
     if args.version:
         version_key = "modVersion" if args.legacy else "mod.version"
@@ -488,67 +474,6 @@ def run_upload(mod_loader, website, project_path, legacy_task_names=False):
         else:
             subprocess.run(["./gradlew", "allUploadEverywhere" if legacy_task_names else "all-all"], cwd=project_path, check=True)
 
-def update_json_object(edits: dict):
-    def _update_json_object(match):
-        prefix, block = match.groups()
-        obj = json.loads(block)
-
-        # Apply edits
-        for key, value in edits.items():
-            if value is None:
-                obj.pop(key, None)
-            else:
-                obj[key] = value
-
-        # Rebuild with preserved order
-        formatted = json.dumps(obj, indent=2)
-
-        # Determine base indentation from the block in the file
-        base_indent = re.match(r'^\s*', block).group(0)
-        inner_indent = base_indent + "  "  # 2 spaces more for inner keys
-
-        # Add correct indentation to each line
-        lines = formatted.splitlines()
-        formatted = "\n".join([base_indent + lines[0]] +
-                              [inner_indent + line for line in lines[1:-1]] +
-                              [inner_indent + lines[-1]])
-
-        return prefix + formatted
-    return _update_json_object
-
-def update_json_file(file_path, edits: dict, json_object_name):
-    if not os.path.isfile(file_path):
-        return
-    
-    json_object_pattern = re.compile(rf'("{json_object_name}"\s*:\s*)(\{{.*?\}})(?=[,\n])', re.DOTALL)
-
-    with open(file_path, "r", encoding="utf-8") as f:
-        text = f.read()
-
-    new_text = json_object_pattern.sub(update_json_object(edits), text, count=1)
-
-    with open(file_path, "w", encoding="utf-8") as f:
-        f.write(new_text)
-
-    print(f"Updated {file_path}")
-
-def add_simple_json_field(json_file, key, value):
-    if not os.path.isfile(json_file):
-        return
-    
-    with open(json_file, "r", encoding="utf-8") as f:
-        data = json.load(f)
-
-    if key in data:
-        return
-    
-    data[key] = value
-
-    with open(json_file, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2)
-
-    print(f"Added {key}: {value} to {json_file}")
-
 def update_license_year(file_path):
     current_year = datetime.now().year
 
@@ -580,61 +505,6 @@ def update_license_year(file_path):
         f.write(new_line)
 
     print(f"Updated copyright year in {file_path}")
-
-def update_toml_file(file_path, updates: dict):
-    if not os.path.isfile(file_path):
-        return
-    
-    # Update key-value pairs
-    with open(file_path, "r", encoding="utf-8") as f:
-        lines = f.readlines()
-
-    text = ""
-    inside_minecraft_block = False
-    block_header = re.compile(r'^\s*\[{1,2}[^\]]+\]{1,2}\s*$')
-    replaced_counts = {k: 0 for k, v in updates.items() if v is not None}
-
-    for line in lines:
-        # Reset context when a block header is found
-        if block_header.match(line.strip()):
-            inside_minecraft_block = False
-
-        if '=' in line:
-            key, value = map(str.strip, line.split('=', 1))
-
-            if key == "modId" and value == '"minecraft"':
-                inside_minecraft_block = True
-            
-            if key in updates:
-                if key == "versionRange" and not inside_minecraft_block:
-                    pass  # only update versionRange in minecraft block
-                else:
-                    value = updates[key]
-
-                    if value is None:
-                        continue  # remove line
-                    else:
-                        replaced_counts[key] += 1
-
-            line = f"{key} = {value}\n"
-
-        text += line
-
-    # Remove empty blocks
-    text = re.sub(
-        r'^\s*\[{1,2}[^\]]+\]\s*\n(?=\n|\[{1,2}[^\]]+\]|\Z)',
-        '',
-        text,
-        flags=re.MULTILINE,
-    )
-
-    # Remove duplicate blank lines
-    text = re.sub(r'\n{3,}', '\n\n', text)
-
-    with open(file_path, "w", encoding="utf-8") as f:
-        f.write(text)
-
-    print(f"Updated {file_path}")
 
 def prepare_new_version(args, root_path, project_path):
     remote_url = f"git@github.com:Fuzss/{args.name}.git"
@@ -699,33 +569,6 @@ def replace_text_block(file_path, pattern, replacement, use_regex=True):
         print(f"Updated {file_path}")
     else:
         print(f"No change to {file_path}")
-
-def add_line_after_target(file_path, target_text, new_text):
-    """
-    Adds new_text after the first occurrence of target_text in gradle_file,
-    matching indentation. Does nothing if new_text already exists.
-    """
-    with open(file_path, "r", encoding="utf-8") as f:
-        lines = f.readlines()
-
-    # Check if the line already exists anywhere (ignoring leading/trailing whitespace)
-    if any(line.strip() == new_text.strip() for line in lines):
-        return  # Already present, nothing to do
-
-    for i, line in enumerate(lines):
-        stripped = line.strip()
-        if stripped == new_text:
-            # already present, nothing to do
-            return
-        if stripped == target_text:
-            indent = line[:line.index(stripped)]
-            lines.insert(i + 1, f"{indent}{new_text}\n")
-            break
-
-    with open(file_path, "w", encoding="utf-8") as f:
-        f.writelines(lines)
-
-    print(f"Updated {file_path}")
 
 def run_26_1_upgrade(args, template_path, project_path):
     move_directory_or_file(
@@ -796,43 +639,6 @@ def run_1_21_11_upgrade(args, template_path, project_path):
     remove_directory_or_file(f"{project_path}/NeoForge/src/main/resources/neoforge.mixins.json")
     remove_directory_or_file(f"{project_path}/NeoForge/src/main/resources/{args.id}.neoforge.mixins.json")
 
-def run_1_21_10_upgrade(args, template_path, project_path):
-    move_directory_or_file(f"{project_path}/Common/src/main/resources/{args.id}.common.mixins.json", f"{project_path}/Common/src/main/resources/common.mixins.json")
-    move_directory_or_file(f"{project_path}/Fabric/src/main/resources/{args.id}.fabric.mixins.json", f"{project_path}/Fabric/src/main/resources/fabric.mixins.json")
-    move_directory_or_file(f"{project_path}/NeoForge/src/main/resources/{args.id}.neoforge.mixins.json", f"{project_path}/NeoForge/src/main/resources/neoforge.mixins.json")
-    add_simple_json_field(f"{project_path}/Fabric/src/main/resources/fabric.mixins.json", "refmap", "${modId}.fabric.refmap.json")
-
-    update_json_file(f"{project_path}/Fabric/src/main/resources/fabric.mod.json", {
-        "java": None,
-        "minecraft": ">=${minecraftVersion}- <${upcomingMinecraftVersion}-"
-    }, "depends")
-
-    update_toml_file(f"{project_path}/NeoForge/src/main/resources/META-INF/neoforge.mods.toml", {
-        "logoFile": '"mod_logo.png"',
-        "versionRange": '"[${minecraftVersion},${upcomingMinecraftVersion})"',
-        "catalogueImageIcon": None
-    })
-
-    replace_text_block(
-        f"{project_path}/Common/build.gradle", 
-        r"""
-^[ \t]*tasks\.withType\(net\.fabricmc\.loom\.task\.AbstractRemapJarTask\)\.configureEach\s*\{
-[^}]*?
-\}[ \t]*\n?
-""", "")
-    replace_text_block(
-        f"{project_path}/settings.gradle", 
-        "https://raw.githubusercontent.com/Fuzss/modresources/main/gradle/v2/settings.gradle", 
-        "https://raw.githubusercontent.com/Fuzss/modresources/main/gradle/v3/settings.gradle", 
-        False
-    )
-    
-    add_line_after_target(
-        f"{project_path}/build.gradle", 
-        "alias libs.plugins.minotaur apply false", 
-        "alias libs.plugins.modpublishplugin apply false"
-    )
-
 def run_workspace_upgrade(args, base_path, main_path, project_path):
     template_root_path = os.path.join(base_path, "mods", "multiloader-workspace-template")
     template_main_path = os.path.join(template_root_path, "main")
@@ -895,8 +701,6 @@ def run_workspace_upgrade(args, base_path, main_path, project_path):
             run_26_1_upgrade(args, f"{template_project_path}", project_path)
         elif args.upgrade == "1.21.11":
             run_1_21_11_upgrade(args, f"{template_project_path}", project_path)
-        elif args.upgrade == "1.21.10":
-            run_1_21_10_upgrade(args, f"{template_project_path}", project_path)
 
     if args.commit and git_push_all(args, project_path, f"upgrade {args.minecraft} workspace"):
         print(f"Committed workspace upgrades on {args.minecraft}")
