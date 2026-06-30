@@ -7,7 +7,7 @@
 <details open>
 <summary>Latest</summary>
 
-- [21.1.0](./multiloaderaccesswideners-common/21.1.0)
+- [21.1.1](./multiloaderaccesswideners-common/21.1.1)
 - [21.10.0](./multiloaderaccesswideners-common/21.10.0)
 - [21.11.0](./multiloaderaccesswideners-common/21.11.0)
 - [26.1.2](./multiloaderaccesswideners-common/26.1.2)
@@ -18,6 +18,7 @@
 <summary>Versions</summary>
 
 - [21.1.0](./multiloaderaccesswideners-common/21.1.0)
+- [21.1.1](./multiloaderaccesswideners-common/21.1.1)
 - [21.10.0](./multiloaderaccesswideners-common/21.10.0)
 - [21.11.0](./multiloaderaccesswideners-common/21.11.0)
 - [26.1.0](./multiloaderaccesswideners-common/26.1.0)
