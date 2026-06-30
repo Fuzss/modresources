@@ -54,6 +54,7 @@ def merge_config_into_args(parser, args, config_data):
 def parse_args():
     parser = argparse.ArgumentParser()
 
+    parser.add_argument('--bare', default=False, action="store_true", help="Skip any Gradle setup.")
     parser.add_argument("--branch", default=[], action="append", nargs=2, metavar=("BRANCH_NAME", "SUPPORT_STATUS"), help="Updates branch status in versions.json, can be used multiple times. Format: --branch <branch_name> <support_status>")
     parser.add_argument('--catalog', type=str, default=None, metavar="VERSION_CATALOG", help="Version-based catalog. Example: --catalog 26.2-SNAPSHOT")
     parser.add_argument("--changelog", default=None, action="append", nargs=2, metavar=("SECTION_NAME", "TEXT"), help="Add a changelog line, can be used multiple times. Format: --changelog <section_name> <text>")
@@ -707,6 +708,12 @@ def run_workspace_upgrade(args, base_path, main_path, project_path):
     if args.commit and git_push_all(args, project_path, f"upgrade {args.minecraft} workspace"):
         print(f"Committed workspace upgrades on {args.minecraft}")
 
+def update_directory(path):
+    if os.path.isdir(path):
+        subprocess.run(["git", "pull"], cwd=path, check=True)
+    else:
+        error2(f"Directory not found: {path}")
+
 def main():
     args = parse_args()
     base_path = find_gradle_property("fuzs.multiloader.project.root")
@@ -723,11 +730,10 @@ def main():
         else:
             clone_versions.setup_git(root_path, args.name, [args.minecraft])
 
-    if not os.path.isdir(project_path):
-        error2(f"Directory not found: {project_path}")
+    update_directory(main_path)
+    update_directory(project_path)
 
     environment = validate_open_parameters(args.open, "finder")
-
     if environment:
         info2(f"Opening in {environment.capitalize()}...")
         if environment == "finder":
@@ -790,9 +796,11 @@ def main():
         update_gradle_properties(gradle_wrapper_properties_path, {
             "distributionUrl": f"https\\://services.gradle.org/distributions/gradle-{args.gradle}-bin.zip"
         })
-        subprocess.run(["./gradlew", "wrapper", "--gradle-version", args.gradle], cwd=project_path, check=True)
 
-    if args.spotless:
+        if not args.bare:
+            subprocess.run(["./gradlew", "wrapper", "--gradle-version", args.gradle], cwd=project_path, check=True)
+
+    if args.spotless and not args.bare:
         if args.spotless == "tinytakeover":
             info2("Applying Spotless for Tiny Takeover...")
             subprocess.run(["./gradlew", "all-tinytakeover-apply"], cwd=project_path, check=True)
@@ -805,38 +813,40 @@ def main():
 
         subprocess.run(["./gradlew", "all-java-apply"], cwd=project_path, check=True)
 
-    info2("Refreshing project...")
-    subprocess.run(["git", "pull"], cwd=project_path, check=True)
-    subprocess.run(["./gradlew"], cwd=project_path, check=True)
-    if has_subproject(project_path, "Fabric"):
-        subprocess.run(["./gradlew", ":Fabric:fabric-validate"], cwd=project_path, check=True)
+    if not args.bare:
+        info2("Refreshing project...")
+        subprocess.run(["./gradlew"], cwd=project_path, check=True)
+        if has_subproject(project_path, "Fabric"):
+            subprocess.run(["./gradlew", ":Fabric:fabric-validate"], cwd=project_path, check=True)
 
-    if args.data:
+    if args.data and not args.bare:
         info2("Running data generation...")
         subprocess.run(["./gradlew", "neoForgeData" if args.legacy else "neoforge-data"], cwd=project_path, check=True)
 
-    launch_parameters = [ 
-        validate_launch_parameters(project_path, launch) 
-        for launch in args.launch 
-    ]
-    for parameter_set in launch_parameters:
-        info2(f"Launching {parameter_set[0].capitalize()} {parameter_set[1].capitalize()}...")
-        run_launch(parameter_set[0], parameter_set[1], project_path, args.legacy)
+    if not args.bare:
+        launch_parameters = [ 
+            validate_launch_parameters(project_path, launch) 
+            for launch in args.launch 
+        ]
+        for parameter_set in launch_parameters:
+            info2(f"Launching {parameter_set[0].capitalize()} {parameter_set[1].capitalize()}...")
+            run_launch(parameter_set[0], parameter_set[1], project_path, args.legacy)
 
     if args.version and args.commit:
         info2(f"Commiting version v{args.version}...")
         git_push_all(args, project_path, f"release v{args.version}")
 
-    if args.version and args.publish:
+    if args.version and not args.bare and args.publish:
         info2(f"Publishing version v{args.version}...")
         subprocess.run(["./gradlew", "allPublish" if args.legacy else "all-publish"], cwd=project_path, check=True)
 
-    upload_parameters = validate_upload_parameters(args.upload)
-    if args.version and upload_parameters:
-        info2(f"Uploading version v{args.version}{f" for {upload_parameters[0].capitalize()}" if upload_parameters[0] else ""}{f" to {upload_parameters[1].capitalize()}" if upload_parameters[1] else ""}...")
-        run_upload(upload_parameters[0], upload_parameters[1], project_path, args.legacy)
+    if not args.bare:
+        upload_parameters = validate_upload_parameters(args.upload)
+        if args.version and upload_parameters:
+            info2(f"Uploading version v{args.version}{f" for {upload_parameters[0].capitalize()}" if upload_parameters[0] else ""}{f" to {upload_parameters[1].capitalize()}" if upload_parameters[1] else ""}...")
+            run_upload(upload_parameters[0], upload_parameters[1], project_path, args.legacy)
 
-    if args.version and args.notify:
+    if args.version and not args.bare and args.notify:
         info2(f"Announcing version v{args.version}...")
         subprocess.run(["./gradlew", "notifyDiscord" if args.legacy else "all-discord"], cwd=project_path, check=True)
 
