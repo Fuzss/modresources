@@ -8,7 +8,7 @@
 <summary>Latest</summary>
 
 - [1.1-SNAPSHOT](./fuzs.multiloader.multiloader-convention-plugins-fabric-like-remap.gradle.plugin/1.1-SNAPSHOT)
-- [1.1.23](./fuzs.multiloader.multiloader-convention-plugins-fabric-like-remap.gradle.plugin/1.1.23)
+- [1.1.24](./fuzs.multiloader.multiloader-convention-plugins-fabric-like-remap.gradle.plugin/1.1.24)
 </details>
 
 <details open>
@@ -16,6 +16,7 @@
 
 - [1.1-SNAPSHOT](./fuzs.multiloader.multiloader-convention-plugins-fabric-like-remap.gradle.plugin/1.1-SNAPSHOT)
 - [1.1.23](./fuzs.multiloader.multiloader-convention-plugins-fabric-like-remap.gradle.plugin/1.1.23)
+- [1.1.24](./fuzs.multiloader.multiloader-convention-plugins-fabric-like-remap.gradle.plugin/1.1.24)
 </details>
 
 </details>
