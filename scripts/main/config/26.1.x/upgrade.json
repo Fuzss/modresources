@@ -10,11 +10,11 @@
     ["1.21.11", "archived"],
     ["26.1.x", "primary"]
   ],
-  "gradle": "9.4.1",
+  "gradle": "9.6.0",
   "upgrade": "26.1.x",
+  "spotless": "tinytakeover",
   "commit": true,
   "data": true,
   "launch": [[]],
-  "upload": [],
-  "publish": true
+  "upload": []
 }
