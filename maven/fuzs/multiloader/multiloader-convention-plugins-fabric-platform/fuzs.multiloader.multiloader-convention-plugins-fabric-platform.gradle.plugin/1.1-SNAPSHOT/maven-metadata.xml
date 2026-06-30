@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>fuzs.multiloader.multiloader-convention-plugins-fabric-platform</groupId>
+  <artifactId>fuzs.multiloader.multiloader-convention-plugins-fabric-platform.gradle.plugin</artifactId>
+  <versioning>
+    <lastUpdated>20260630194814</lastUpdated>
+    <snapshot>
+      <timestamp>20260630.194814</timestamp>
+      <buildNumber>1</buildNumber>
+    </snapshot>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>1.1-20260630.194814-1</value>
+        <updated>20260630194814</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+  <version>1.1-SNAPSHOT</version>
+</metadata>
