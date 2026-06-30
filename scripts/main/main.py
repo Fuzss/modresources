@@ -765,14 +765,6 @@ def main():
         version_key = "modVersion" if args.legacy else "mod.version"
         args.version = gradle_properties[version_key]
 
-    if args.gradle:
-        info2(f"Updating gradle-wrapper.properties...")
-        gradle_wrapper_properties_path = f"{project_path}/gradle/wrapper/gradle-wrapper.properties"
-        update_gradle_properties(gradle_wrapper_properties_path, {
-            "distributionUrl": f"https\\://services.gradle.org/distributions/gradle-{args.gradle}-bin.zip"
-        })
-        subprocess.run(["./gradlew", "wrapper", "--gradle-version", args.gradle], cwd=project_path, check=True)
-
     if args.version:
         changelog_path = f"{project_path}/CHANGELOG.md"
         full_version = f"v{args.version}-mc{args.minecraft}"
@@ -784,6 +776,14 @@ def main():
             prepend_to_changelog(changelog_path, new_block, full_version)
         elif not string_in_file_if_exists(changelog_path, full_version):
             error2(f"Missing changelog version: {full_version}")
+
+    if args.gradle:
+        info2(f"Updating gradle-wrapper.properties...")
+        gradle_wrapper_properties_path = f"{project_path}/gradle/wrapper/gradle-wrapper.properties"
+        update_gradle_properties(gradle_wrapper_properties_path, {
+            "distributionUrl": f"https\\://services.gradle.org/distributions/gradle-{args.gradle}-bin.zip"
+        })
+        subprocess.run(["./gradlew", "wrapper", "--gradle-version", args.gradle], cwd=project_path, check=True)
 
     if args.spotless:
         if args.spotless == "tinytakeover":
