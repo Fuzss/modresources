@@ -10,7 +10,7 @@
 - [1.0-SNAPSHOT](./multiloader-convention-plugins/1.0-SNAPSHOT)
 - [1.0.17](./multiloader-convention-plugins/1.0.17)
 - [1.1-SNAPSHOT](./multiloader-convention-plugins/1.1-SNAPSHOT)
-- [1.1.20](./multiloader-convention-plugins/1.1.20)
+- [1.1.21](./multiloader-convention-plugins/1.1.21)
 </details>
 
 <details open>
@@ -54,6 +54,7 @@
 - [1.1.18](./multiloader-convention-plugins/1.1.18)
 - [1.1.19](./multiloader-convention-plugins/1.1.19)
 - [1.1.20](./multiloader-convention-plugins/1.1.20)
+- [1.1.21](./multiloader-convention-plugins/1.1.21)
 </details>
 
 ### [`multiloader-conventions`](./multiloader-conventions)
