@@ -143,7 +143,7 @@ def remove_directory_or_file(file_path, only_if_empty=False):
 
     print(f"Removed {file_path}")
 
-def update_gradle_properties(file_path, updates: dict):
+def update_gradle_properties(file_path, updates: dict, remove_predicate=None):
     with open(file_path, 'r') as f:
         lines = f.readlines()
 
@@ -164,7 +164,7 @@ def update_gradle_properties(file_path, updates: dict):
         key, value = content.split('=', 1)
         key = key.strip()
         value = value.strip()
-        
+
         if key in updates:
             updated_value = updates[key]
 
@@ -173,14 +173,16 @@ def update_gradle_properties(file_path, updates: dict):
 
             if updated_value == "#":
                 comment = True
-            elif updated_value is not None:
+            elif updated_value is None:
+                value = None
+            else:
                 comment = False
                 value = updated_value
-            else:
-                value = None
             
             if value is not None:
                 updated_lines.append(f'{"#" if comment else ""}{key}={value}\n')
+        elif remove_predicate and remove_predicate(key):
+            value = None
         else:
             updated_lines.append(line)
 
@@ -760,7 +762,12 @@ def main():
         info2(f"Updating gradle.properties...")
     
     gradle_properties_path = f"{project_path}/gradle.properties"
-    gradle_properties = update_gradle_properties(gradle_properties_path, updated_gradle_properties)
+    gradle_properties_remove_predicate = lambda key: key.startswith("project.libs.") if args.upgrade else None
+    gradle_properties = update_gradle_properties(
+        gradle_properties_path,
+        updated_gradle_properties,
+        remove_predicate=gradle_properties_remove_predicate
+    )
     if args.version:
         version_key = "modVersion" if args.legacy else "mod.version"
         args.version = gradle_properties[version_key]
