@@ -7,9 +7,13 @@
     ["changed", "Update to Minecraft 1.21.1"]
   ],
   "branch": [
-    ["1.21.1", "archived"]
+    ["1.21.1", "maintained"]
   ],
-  "gradle": "9.6.0",
-  "upgrade": "1.21.11",
-  "bare": "true"
+  "gradle": "9.6.1",
+  "upgrade": "1.21.1",
+  "spotless": "thecopperage",
+  "commit": true,
+  "data": true,
+  "launch": [[]],
+  "upload": []
 }
