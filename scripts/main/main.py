@@ -573,19 +573,19 @@ def replace_text_block(file_path, pattern, replacement, use_regex=True):
     else:
         print(f"No change to {file_path}")
 
-def run_26_1_upgrade(args, template_path, project_path):
+def run_26_1_upgrade(id, template_path, project_path):
     move_directory_or_file(
         os.path.join(project_path, "Common", "src", "main", "resources", "mod_logo.png"),
         os.path.join(project_path, "Common", "src", "main", "resources", "pack.png")
     )
 
     move_directory_or_file(
-        os.path.join(project_path, "Common", "src", "main", "resources", f"{args.id}.accesswidener"),
-        os.path.join(project_path, "Common", "src", "main", "resources", f"{args.id}.classtweaker")
+        os.path.join(project_path, "Common", "src", "main", "resources", f"{id}.accesswidener"),
+        os.path.join(project_path, "Common", "src", "main", "resources", f"{id}.classtweaker")
     )
 
     replace_text_block(
-        os.path.join(project_path, "Common", "src", "main", "resources", f"{args.id}.classtweaker"),
+        os.path.join(project_path, "Common", "src", "main", "resources", f"{id}.classtweaker"),
         r"^accessWidener\s+v[12]\s+\w+\s*$",
         "classTweaker    v2  official"
     )
@@ -611,7 +611,7 @@ def run_26_1_upgrade(args, template_path, project_path):
         use_regex=False
     )
 
-def run_1_21_11_upgrade(args, template_path, project_path):
+def run_1_21_11_upgrade(id, template_path, project_path):
     copy_from_template(f"{template_path}/settings.gradle.kts", f"{project_path}/settings.gradle.kts")
     copy_from_template(f"{template_path}/build.gradle.kts", f"{project_path}/build.gradle.kts")
     copy_from_template(f"{template_path}/Common/build.gradle.kts", f"{project_path}/Common/build.gradle.kts", only_if_absent=True)
@@ -622,11 +622,11 @@ def run_1_21_11_upgrade(args, template_path, project_path):
     copy_from_template(f"{template_path}/NeoForge/gradle.properties", f"{project_path}/NeoForge/gradle.properties")
 
     migrate_mixins.convert_mixins(f"{project_path}/Common/src/main/resources/common.mixins.json", f"{project_path}/Common/build.gradle.kts")
-    migrate_mixins.convert_mixins(f"{project_path}/Common/src/main/resources/{args.id}.common.mixins.json", f"{project_path}/Common/build.gradle.kts")
+    migrate_mixins.convert_mixins(f"{project_path}/Common/src/main/resources/{id}.common.mixins.json", f"{project_path}/Common/build.gradle.kts")
     migrate_mixins.convert_mixins(f"{project_path}/Fabric/src/main/resources/fabric.mixins.json", f"{project_path}/Fabric/build.gradle.kts")
-    migrate_mixins.convert_mixins(f"{project_path}/Fabric/src/main/resources/{args.id}.fabric.mixins.json", f"{project_path}/Fabric/build.gradle.kts")
+    migrate_mixins.convert_mixins(f"{project_path}/Fabric/src/main/resources/{id}.fabric.mixins.json", f"{project_path}/Fabric/build.gradle.kts")
     migrate_mixins.convert_mixins(f"{project_path}/NeoForge/src/main/resources/neoforge.mixins.json", f"{project_path}/NeoForge/build.gradle.kts")    
-    migrate_mixins.convert_mixins(f"{project_path}/NeoForge/src/main/resources/{args.id}.neoforge.mixins.json", f"{project_path}/NeoForge/build.gradle.kts")
+    migrate_mixins.convert_mixins(f"{project_path}/NeoForge/src/main/resources/{id}.neoforge.mixins.json", f"{project_path}/NeoForge/build.gradle.kts")
     migrate_mod_properties.migrate_properties(f"{project_path}/gradle.properties", f"{project_path}/gradle.properties")
 
     remove_directory_or_file(f"{project_path}/settings.gradle")
@@ -634,16 +634,20 @@ def run_1_21_11_upgrade(args, template_path, project_path):
     remove_directory_or_file(f"{project_path}/Common/build.gradle")
     remove_directory_or_file(f"{project_path}/Common/src/main/resources/architectury.common.json")
     remove_directory_or_file(f"{project_path}/Common/src/main/resources/common.mixins.json")
-    remove_directory_or_file(f"{project_path}/Common/src/main/resources/{args.id}.common.mixins.json")
+    remove_directory_or_file(f"{project_path}/Common/src/main/resources/{id}.common.mixins.json")
     remove_directory_or_file(f"{project_path}/Fabric/build.gradle")
     remove_directory_or_file(f"{project_path}/Fabric/src/main/resources/fabric.mod.json")
     remove_directory_or_file(f"{project_path}/Fabric/src/main/resources/fabric.mixins.json")
-    remove_directory_or_file(f"{project_path}/Fabric/src/main/resources/{args.id}.fabric.mixins.json")
+    remove_directory_or_file(f"{project_path}/Fabric/src/main/resources/{id}.fabric.mixins.json")
     remove_directory_or_file(f"{project_path}/NeoForge/build.gradle")
     remove_directory_or_file(f"{project_path}/NeoForge/src/main/resources/META-INF/neoforge.mods.toml")
     remove_directory_or_file(f"{project_path}/NeoForge/src/main/resources/META-INF", only_if_empty=True)
     remove_directory_or_file(f"{project_path}/NeoForge/src/main/resources/neoforge.mixins.json")
-    remove_directory_or_file(f"{project_path}/NeoForge/src/main/resources/{args.id}.neoforge.mixins.json")
+    remove_directory_or_file(f"{project_path}/NeoForge/src/main/resources/{id}.neoforge.mixins.json")
+
+def run_1_21_1_upgrade(id, template_path, project_path):
+    run_1_21_11_upgrade(id, template_path, project_path)
+    run_26_1_upgrade(id, template_path, project_path)
 
 def run_workspace_upgrade(args, base_path, main_path, project_path):
     template_root_path = os.path.join(base_path, "mods", "multiloader-workspace-template")
@@ -704,9 +708,11 @@ def run_workspace_upgrade(args, base_path, main_path, project_path):
     if isinstance(args.upgrade, str):
         print(f"Running {args.upgrade} workspace upgrades")
         if args.upgrade == "26.1.x":
-            run_26_1_upgrade(args, f"{template_project_path}", project_path)
+            run_26_1_upgrade(args.id, f"{template_project_path}", project_path)
         elif args.upgrade == "1.21.11":
-            run_1_21_11_upgrade(args, f"{template_project_path}", project_path)
+            run_1_21_11_upgrade(args.id, f"{template_project_path}", project_path)
+        elif args.upgrade == "1.21.1":
+            run_1_21_1_upgrade(args.id, f"{template_project_path}", project_path)
 
     if args.commit and git_push_all(args, project_path, f"upgrade {args.minecraft} workspace"):
         print(f"Committed workspace upgrades on {args.minecraft}")
