@@ -4,12 +4,13 @@
   <artifactId>fuzs.multiloader.multiloader-convention-plugins-fabric-platform.gradle.plugin</artifactId>
   <versioning>
     <latest>1.1-SNAPSHOT</latest>
-    <release>1.1.24</release>
+    <release>1.1.25</release>
     <versions>
       <version>1.1.23</version>
       <version>1.1-SNAPSHOT</version>
       <version>1.1.24</version>
+      <version>1.1.25</version>
     </versions>
-    <lastUpdated>20260630195939</lastUpdated>
+    <lastUpdated>20260701082227</lastUpdated>
   </versioning>
 </metadata>
