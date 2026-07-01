@@ -44,7 +44,11 @@ def convert_mixins(json_path, gradle_path):
 
     plugin_class = mixin_config.get("plugin")
     if plugin_class:
-        lines.append(f'        plugin.set("{plugin_class}")')
+        lines.append(f'        plugin.set("{plugin_class
+                                            .replace("modGroup", "project.group")
+                                            .replace("fabric", "${project.packageName}")
+                                            .replace("neoforge", "${project.packageName}")
+                                            }")')
 
     if common_mixins:
         joined = ", ".join(f'"{name}"' for name in common_mixins)

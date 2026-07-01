@@ -62,15 +62,15 @@ def convert_dependencies(props):
 def convert_distributions(props):
     result = {}
     mod_name_slug = slugify(props.get("modName", "mod"))
-    github_slug = props.get("modSourceUrl", "").rstrip("/").split("/")[-1]
 
     curseforge_id = props.get("projectCurseForgeId", "")
     if curseforge_id and curseforge_id != "0":
         result["distributions.curseforge.id"] = curseforge_id
         result["distributions.curseforge.slug"] = mod_name_slug
 
-    if github_slug:
-        result["distributions.github.slug"] = github_slug
+    github_url = props.get("modSourceUrl", "")
+    if github_url:
+        result["distributions.github.slug"] = mod_name_slug
 
     modrinth_id = props.get("projectModrinthId", "")
     if modrinth_id and modrinth_id != "0":

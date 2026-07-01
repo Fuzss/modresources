@@ -622,8 +622,11 @@ def run_1_21_11_upgrade(args, template_path, project_path):
     copy_from_template(f"{template_path}/NeoForge/gradle.properties", f"{project_path}/NeoForge/gradle.properties")
 
     migrate_mixins.convert_mixins(f"{project_path}/Common/src/main/resources/common.mixins.json", f"{project_path}/Common/build.gradle.kts")
+    migrate_mixins.convert_mixins(f"{project_path}/Common/src/main/resources/{args.id}.common.mixins.json", f"{project_path}/Common/build.gradle.kts")
     migrate_mixins.convert_mixins(f"{project_path}/Fabric/src/main/resources/fabric.mixins.json", f"{project_path}/Fabric/build.gradle.kts")
-    migrate_mixins.convert_mixins(f"{project_path}/NeoForge/src/main/resources/neoforge.mixins.json", f"{project_path}/NeoForge/build.gradle.kts")
+    migrate_mixins.convert_mixins(f"{project_path}/Fabric/src/main/resources/{args.id}.fabric.mixins.json", f"{project_path}/Fabric/build.gradle.kts")
+    migrate_mixins.convert_mixins(f"{project_path}/NeoForge/src/main/resources/neoforge.mixins.json", f"{project_path}/NeoForge/build.gradle.kts")    
+    migrate_mixins.convert_mixins(f"{project_path}/NeoForge/src/main/resources/{args.id}.neoforge.mixins.json", f"{project_path}/NeoForge/build.gradle.kts")
     migrate_mod_properties.migrate_properties(f"{project_path}/gradle.properties", f"{project_path}/gradle.properties")
 
     remove_directory_or_file(f"{project_path}/settings.gradle")
@@ -655,7 +658,7 @@ def run_workspace_upgrade(args, base_path, main_path, project_path):
         check=True
     )
     if result.stdout.strip() != "":
-        error2("Worktree not clean, unable to run upgrade")
+        error2("Worktree main not clean, unable to run upgrade")
 
     subprocess.run(["git", "pull"], cwd=main_path, check=True)
 
@@ -684,7 +687,7 @@ def run_workspace_upgrade(args, base_path, main_path, project_path):
         check=True
     )
     if result.stdout.strip() != "":
-        error2("Worktree not clean, unable to run upgrade")
+        error2(f"Worktree {args.minecraft} not clean, unable to run upgrade")
 
     subprocess.run(["git", "pull"], cwd=project_path, check=True)
 
@@ -708,9 +711,10 @@ def run_workspace_upgrade(args, base_path, main_path, project_path):
     if args.commit and git_push_all(args, project_path, f"upgrade {args.minecraft} workspace"):
         print(f"Committed workspace upgrades on {args.minecraft}")
 
-def update_directory(path):
+def update_directory(args, path):
     if os.path.isdir(path):
-        subprocess.run(["git", "pull"], cwd=path, check=True)
+        if not args.bare:
+            subprocess.run(["git", "pull"], cwd=path, check=True)
     else:
         error2(f"Directory not found: {path}")
 
@@ -730,8 +734,8 @@ def main():
         else:
             clone_versions.setup_git(root_path, args.name, [args.minecraft])
 
-    update_directory(main_path)
-    update_directory(project_path)
+    update_directory(args, main_path)
+    update_directory(args, project_path)
 
     environment = validate_open_parameters(args.open, "finder")
     if environment:
