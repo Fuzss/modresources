@@ -719,7 +719,7 @@ def run_workspace_upgrade(args, base_path, main_path, project_path):
 
 def update_directory(args, path):
     if os.path.isdir(path):
-        if not args.bare:
+        if not args.open and not args.bare:
             subprocess.run(["git", "pull"], cwd=path, check=True)
     else:
         error2(f"Directory not found: {path}")
