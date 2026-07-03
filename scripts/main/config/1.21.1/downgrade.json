@@ -1,6 +1,6 @@
 {
   "version": "21.1.0",
-  "init": "26.2.x",
+  "init": "26.1.x",
   "catalog": "1.21.1-SNAPSHOT",
   "plugins": "1.1-SNAPSHOT",
   "changelog": [
