@@ -1,7 +1,7 @@
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'org.spongepowered.mixin'
 apply plugin: 'org.parchmentmc.librarian.forgegradle'
-apply plugin: 'de.maxhenkel.cursegradle'
+apply plugin: 'io.github.CDAGaming.cursegradle'
 apply plugin: 'com.modrinth.minotaur'
 
 archivesBaseName = "${modName.replaceAll("[^a-zA-Z]", "")}"
@@ -271,23 +271,23 @@ curseforge {
             addGameVersion "Server"
         }
 
-        mainArtifact(tasks.jarJar) {
-            displayName = "[FORGE] [${libs.versions.minecraft.get()}] ${archivesBaseName}-v${modVersion}"
+        mainArtifact(tasks.jarJar) { artifact ->
+            artifact.displayName = "[FORGE] [${libs.versions.minecraft.get()}] ${archivesBaseName}-v${modVersion}"
             if (project.hasProperty("dependenciesRequiredForgeCurseForge") || project.hasProperty("dependenciesEmbeddedForgeCurseForge") || project.hasProperty("dependenciesOptionalForgeCurseForge")) {
-                relations {
+                artifact.relations { relation ->
                     if (project.hasProperty("dependenciesRequiredForgeCurseForge")) {
-                        (project.findProperty("dependenciesRequiredForgeCurseForge") as String).split(",").each {
-                            requiredDependency it.trim()
+                        (project.findProperty("dependenciesRequiredForgeCurseForge") as String).split(",").each { slug ->
+                            relation.requiredDependency slug.trim()
                         }
                     }
                     if (project.hasProperty("dependenciesEmbeddedForgeCurseForge")) {
-                        (project.findProperty("dependenciesEmbeddedForgeCurseForge") as String).split(",").each {
-                            embeddedLibrary it.trim()
+                        (project.findProperty("dependenciesEmbeddedForgeCurseForge") as String).split(",").each { slug ->
+                            relation.embeddedLibrary slug.trim()
                         }
                     }
                     if (project.hasProperty("dependenciesOptionalForgeCurseForge")) {
-                        (project.findProperty("dependenciesOptionalForgeCurseForge") as String).split(",").each {
-                            optionalDependency it.trim()
+                        (project.findProperty("dependenciesOptionalForgeCurseForge") as String).split(",").each { slug ->
+                            relation.optionalDependency slug.trim()
                         }
                     }
                 }
@@ -317,18 +317,18 @@ modrinth {
     if (project.hasProperty("dependenciesRequiredForgeModrinth") || project.hasProperty("dependenciesEmbeddedForgeModrinth") || project.hasProperty("dependenciesOptionalForgeModrinth")) {
         dependencies {
             if (project.hasProperty("dependenciesRequiredForgeModrinth")) {
-                (project.findProperty("dependenciesRequiredForgeModrinth") as String).split(",").each {
-                    required.project it.trim()
+                (project.findProperty("dependenciesRequiredForgeModrinth") as String).split(",").each { slug ->
+                    required.project slug.trim()
                 }
             }
             if (project.hasProperty("dependenciesEmbeddedForgeModrinth")) {
-                (project.findProperty("dependenciesEmbeddedForgeModrinth") as String).split(",").each {
-                    embedded.project it.trim()
+                (project.findProperty("dependenciesEmbeddedForgeModrinth") as String).split(",").each { slug ->
+                    embedded.project slug.trim()
                 }
             }
             if (project.hasProperty("dependenciesOptionalForgeModrinth")) {
-                (project.findProperty("dependenciesOptionalForgeModrinth") as String).split(",").each {
-                    optional.project it.trim()
+                (project.findProperty("dependenciesOptionalForgeModrinth") as String).split(",").each { slug ->
+                    optional.project slug.trim()
                 }
             }
         }
