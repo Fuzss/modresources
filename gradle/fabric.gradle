@@ -1,6 +1,5 @@
 apply plugin: 'fabric-loom'
-apply plugin: 'io.github.juuxel.loom-quiltflower'
-apply plugin: 'de.maxhenkel.cursegradle'
+apply plugin: 'io.github.CDAGaming.cursegradle'
 apply plugin: 'com.modrinth.minotaur'
 
 archivesBaseName = "${modName.replaceAll("[^a-zA-Z]", "")}"
@@ -227,23 +226,23 @@ curseforge {
             addGameVersion "Server"
         }
 
-        mainArtifact(remapJar) {
-            displayName = "[FABRIC] [${libs.versions.minecraft.get()}] ${archivesBaseName}-v${modVersion}"
+        mainArtifact(remapJar) { artifact ->
+            artifact.displayName = "[FABRIC] [${libs.versions.minecraft.get()}] ${archivesBaseName}-v${modVersion}"
             if (project.hasProperty("dependenciesRequiredFabricCurseForge") || project.hasProperty("dependenciesEmbeddedFabricCurseForge") || project.hasProperty("dependenciesOptionalFabricCurseForge")) {
-                relations {
+                artifact.relations { relation ->
                     if (project.hasProperty("dependenciesRequiredFabricCurseForge")) {
-                        (project.findProperty("dependenciesRequiredFabricCurseForge") as String).split(",").each {
-                            requiredDependency it.trim()
+                        (project.findProperty("dependenciesRequiredFabricCurseForge") as String).split(",").each { slug ->
+                            relation.requiredDependency slug.trim()
                         }
                     }
                     if (project.hasProperty("dependenciesEmbeddedFabricCurseForge")) {
-                        (project.findProperty("dependenciesEmbeddedFabricCurseForge") as String).split(",").each {
-                            embeddedLibrary it.trim()
+                        (project.findProperty("dependenciesEmbeddedFabricCurseForge") as String).split(",").each { slug ->
+                            relation.embeddedLibrary slug.trim()
                         }
                     }
                     if (project.hasProperty("dependenciesOptionalFabricCurseForge")) {
-                        (project.findProperty("dependenciesOptionalFabricCurseForge") as String).split(",").each {
-                            optionalDependency it.trim()
+                        (project.findProperty("dependenciesOptionalFabricCurseForge") as String).split(",").each { slug ->
+                            relation.optionalDependency slug.trim()
                         }
                     }
                 }
@@ -273,18 +272,18 @@ modrinth {
     if (project.hasProperty("dependenciesRequiredFabricModrinth") || project.hasProperty("dependenciesEmbeddedFabricModrinth") || project.hasProperty("dependenciesOptionalFabricModrinth")) {
         dependencies {
             if (project.hasProperty("dependenciesRequiredFabricModrinth")) {
-                (project.findProperty("dependenciesRequiredFabricModrinth") as String).split(",").each {
-                    required.project it.trim()
+                (project.findProperty("dependenciesRequiredFabricModrinth") as String).split(",").each { slug ->
+                    required.project slug.trim()
                 }
             }
             if (project.hasProperty("dependenciesEmbeddedFabricModrinth")) {
-                (project.findProperty("dependenciesEmbeddedFabricModrinth") as String).split(",").each {
-                    embedded.project it.trim()
+                (project.findProperty("dependenciesEmbeddedFabricModrinth") as String).split(",").each { slug ->
+                    embedded.project slug.trim()
                 }
             }
             if (project.hasProperty("dependenciesOptionalFabricModrinth")) {
-                (project.findProperty("dependenciesOptionalFabricModrinth") as String).split(",").each {
-                    optional.project it.trim()
+                (project.findProperty("dependenciesOptionalFabricModrinth") as String).split(",").each { slug ->
+                    optional.project slug.trim()
                 }
             }
         }
