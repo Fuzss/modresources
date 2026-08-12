@@ -186,7 +186,7 @@ allprojects {
 
 subprojects {
     apply plugin: "dev.architectury.loom"
-    apply plugin: "me.hypherionmc.cursegradle"
+    apply plugin: "io.github.CDAGaming.cursegradle"
     apply plugin: "com.modrinth.minotaur"
 
     loom {
@@ -335,26 +335,35 @@ subprojects {
             releaseType = projectReleaseType
             addGameVersion project.name
             addGameVersion libs.versions.minecraft.get()
-            mainArtifact(remapJar) {
-                displayName = "[${project.name.toUpperCase()}] [${libs.versions.minecraft.get()}] ${archivesBaseName}-v${modVersion}"
+
+            if (!"server".equalsIgnoreCase(modFabricEnvironment)) {
+                addGameVersion "Client"
+            }
+
+            if (!"client".equalsIgnoreCase(modFabricEnvironment)) {
+                addGameVersion "Server"
+            }
+
+            mainArtifact(remapJar) { artifact ->
+                artifact.displayName = "[${project.name.toUpperCase()}] [${libs.versions.minecraft.get()}] ${archivesBaseName}-v${modVersion}"
                 var requiredDependencies = "dependenciesRequired${project.name}CurseForge"
                 var embeddedDependencies = "dependenciesEmbedded${project.name}CurseForge"
                 var optionalDependencies = "dependenciesOptional${project.name}CurseForge"
                 if (project.hasProperty(requiredDependencies) || project.hasProperty(embeddedDependencies) || project.hasProperty(optionalDependencies)) {
-                    relations {
+                    artifact.relations { relation ->
                         if (project.hasProperty(requiredDependencies)) {
-                            (project.findProperty(requiredDependencies) as String).split(",").each {
-                                requiredDependency it.trim()
+                            (project.findProperty(requiredDependencies) as String).split(",").each { slug ->
+                                relation.requiredDependency slug.trim()
                             }
                         }
                         if (project.hasProperty(embeddedDependencies)) {
-                            (project.findProperty(embeddedDependencies) as String).split(",").each {
-                                embeddedLibrary it.trim()
+                            (project.findProperty(embeddedDependencies) as String).split(",").each { slug ->
+                                relation.embeddedLibrary slug.trim()
                             }
                         }
                         if (project.hasProperty(optionalDependencies)) {
-                            (project.findProperty(optionalDependencies) as String).split(",").each {
-                                optionalDependency it.trim()
+                            (project.findProperty(optionalDependencies) as String).split(",").each { slug ->
+                                relation.optionalDependency slug.trim()
                             }
                         }
                     }
@@ -389,18 +398,18 @@ subprojects {
         if (project.hasProperty(requiredDependencies) || project.hasProperty(embeddedDependencies) || project.hasProperty(optionalDependencies)) {
             dependencies {
                 if (project.hasProperty(requiredDependencies)) {
-                    (project.findProperty(requiredDependencies) as String).split(",").each {
-                        required.project it.trim()
+                    (project.findProperty(requiredDependencies) as String).split(",").each { slug ->
+                        required.project slug.trim()
                     }
                 }
                 if (project.hasProperty(embeddedDependencies)) {
-                    (project.findProperty(embeddedDependencies) as String).split(",").each {
-                        embedded.project it.trim()
+                    (project.findProperty(embeddedDependencies) as String).split(",").each { slug ->
+                        embedded.project slug.trim()
                     }
                 }
                 if (project.hasProperty(optionalDependencies)) {
-                    (project.findProperty(optionalDependencies) as String).split(",").each {
-                        optional.project it.trim()
+                    (project.findProperty(optionalDependencies) as String).split(",").each { slug ->
+                        optional.project slug.trim()
                     }
                 }
             }
