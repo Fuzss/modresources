@@ -227,7 +227,7 @@ curseforge {
         }
 
         mainArtifact(remapJar) { artifact ->
-            artifact.displayName = "[FABRIC] [${libs.versions.minecraft.get()}] ${archivesBaseName}-v${modVersion}"
+            artifact.displayName = "[FABRIC] [${libs.versions.minecraft.get()}] v${modVersion}"
             if (project.hasProperty("dependenciesRequiredFabricCurseForge") || project.hasProperty("dependenciesEmbeddedFabricCurseForge") || project.hasProperty("dependenciesOptionalFabricCurseForge")) {
                 artifact.relations { relation ->
                     if (project.hasProperty("dependenciesRequiredFabricCurseForge")) {
@@ -262,8 +262,8 @@ modrinth {
     }
     token = project.hasProperty('modrinthApiToken') ? project.findProperty('modrinthApiToken') : ''
     projectId = projectModrinthId
-    versionNumber = project.version
-    versionName = "[FABRIC] [${libs.versions.minecraft.get()}] ${archivesBaseName}-v${modVersion}"
+    versionNumber = modVersion
+    versionName = "[FABRIC] [${libs.versions.minecraft.get()}] v${modVersion}"
     changelog = file('../CHANGELOG.md').text
     versionType = projectReleaseType
     uploadFile = remapJar

@@ -272,7 +272,7 @@ curseforge {
         }
 
         mainArtifact(tasks.jarJar) { artifact ->
-            artifact.displayName = "[FORGE] [${libs.versions.minecraft.get()}] ${archivesBaseName}-v${modVersion}"
+            artifact.displayName = "[FORGE] [${libs.versions.minecraft.get()}] v${modVersion}"
             if (project.hasProperty("dependenciesRequiredForgeCurseForge") || project.hasProperty("dependenciesEmbeddedForgeCurseForge") || project.hasProperty("dependenciesOptionalForgeCurseForge")) {
                 artifact.relations { relation ->
                     if (project.hasProperty("dependenciesRequiredForgeCurseForge")) {
@@ -307,8 +307,8 @@ modrinth {
     }
     token = project.hasProperty('modrinthApiToken') ? project.findProperty('modrinthApiToken') : ''
     projectId = projectModrinthId
-    versionNumber = project.version
-    versionName = "[FORGE] [${libs.versions.minecraft.get()}] ${archivesBaseName}-v${modVersion}"
+    versionNumber = modVersion
+    versionName = "[FORGE] [${libs.versions.minecraft.get()}] v${modVersion}"
     changelog = file('../CHANGELOG.md').text
     versionType = projectReleaseType
     uploadFile = tasks.jarJar
