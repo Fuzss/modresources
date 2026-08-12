@@ -1,7 +1,7 @@
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'org.spongepowered.mixin'
 apply plugin: 'org.parchmentmc.librarian.forgegradle'
-apply plugin: 'me.hypherionmc.cursegradle'
+apply plugin: 'de.maxhenkel.cursegradle'
 apply plugin: 'com.modrinth.minotaur'
 
 archivesBaseName = "${modName.replaceAll("[^a-zA-Z]", "")}"
@@ -262,6 +262,15 @@ curseforge {
         releaseType = projectReleaseType
         addGameVersion 'Forge'
         addGameVersion libs.versions.minecraft.get()
+
+        if (!"server".equalsIgnoreCase(modFabricEnvironment)) {
+            addGameVersion "Client"
+        }
+
+        if (!"client".equalsIgnoreCase(modFabricEnvironment)) {
+            addGameVersion "Server"
+        }
+
         mainArtifact(tasks.jarJar) {
             displayName = "[FORGE] [${libs.versions.minecraft.get()}] ${archivesBaseName}-v${modVersion}"
             if (project.hasProperty("dependenciesRequiredForgeCurseForge") || project.hasProperty("dependenciesEmbeddedForgeCurseForge") || project.hasProperty("dependenciesOptionalForgeCurseForge")) {
