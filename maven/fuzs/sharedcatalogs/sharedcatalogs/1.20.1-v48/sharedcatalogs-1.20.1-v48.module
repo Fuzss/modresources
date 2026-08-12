@@ -1,0 +1,36 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "fuzs.sharedcatalogs",
+    "module": "sharedcatalogs",
+    "version": "1.20.1-v48",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.5.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "versionCatalogElements",
+      "attributes": {
+        "org.gradle.category": "platform",
+        "org.gradle.usage": "version-catalog"
+      },
+      "files": [
+        {
+          "name": "sharedcatalogs-1.20.1-v48.toml",
+          "url": "sharedcatalogs-1.20.1-v48.toml",
+          "size": 10724,
+          "sha512": "c3aec17c10350439146b0d677e319b7dd0730fb30744156e4b39a786932892adf0e04dd3b5fd0a08ae15e85b24631ea488ef258976cd77081f86a76cd6416ef1",
+          "sha256": "d9dd8e0f362bfde2d3a6ed82d120645dc522d9d9e012c4bb4967928c808ffadb",
+          "sha1": "000f7b67572a41315d7741fd6262a65ca543543a",
+          "md5": "68e443bfd506060479dba04db2f4cb58"
+        }
+      ]
+    }
+  ]
+}
