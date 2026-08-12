@@ -144,6 +144,43 @@ def remove_directory_or_file(file_path, only_if_empty=False):
 
     print(f"Removed {file_path}")
 
+def get_properties_key(line: str) -> tuple[str, ...]:
+    key = line.split("=", 1)[0].strip()
+    return tuple(key.split("."))
+
+def get_matching_parts(first: tuple[str, ...], second: tuple[str, ...]) -> int:
+    matching_parts = 0
+
+    for first_part, second_part in zip(first, second):
+        if first_part != second_part:
+            break
+
+        matching_parts += 1
+
+    return matching_parts
+
+def find_insertion_index(lines: list[str], new_key: str) -> int:
+    new_key_parts = get_properties_key(new_key)
+
+    previous_matching_parts = 0
+
+    for index, line in enumerate(lines):
+        if not line.strip() or line.lstrip().startswith("#"):
+            continue
+
+        current_key = get_properties_key(line)
+        matching_parts = get_matching_parts(current_key, new_key_parts)
+
+        if matching_parts < previous_matching_parts:
+            return index
+
+        if matching_parts > 0 and current_key > new_key_parts:
+            return index
+
+        previous_matching_parts = matching_parts
+
+    return -1
+
 def update_gradle_properties(file_path, updates: dict, remove_predicate=None):
     with open(file_path, 'r') as f:
         lines = f.readlines()
@@ -188,6 +225,18 @@ def update_gradle_properties(file_path, updates: dict, remove_predicate=None):
             updated_lines.append(line)
 
         if not comment and value is not None:
+            properties[key] = value
+
+    for key, value in updates.items():
+        if key not in properties and value is not None and value != "#":
+            line = f"{key}={value}\n"
+            index = find_insertion_index(updated_lines, key)
+            if index == -1:
+                updated_lines.append("\n")
+                updated_lines.append(line)
+            else:
+                updated_lines.insert(index, line)
+            
             properties[key] = value
 
     if updates:
