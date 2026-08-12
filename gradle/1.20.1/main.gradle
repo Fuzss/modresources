@@ -312,7 +312,7 @@ subprojects {
             }
 
             mainArtifact(remapJar) { artifact ->
-                artifact.displayName = "[${project.name.toUpperCase()}] [${libs.versions.minecraft.get()}] ${archivesBaseName}-v${modVersion}"
+                artifact.displayName = "[${project.name.toUpperCase()}] [${libs.versions.minecraft.get()}] v${modVersion}"
                 var requiredDependencies = "dependenciesRequired${project.name}CurseForge"
                 var embeddedDependencies = "dependenciesEmbedded${project.name}CurseForge"
                 var optionalDependencies = "dependenciesOptional${project.name}CurseForge"
@@ -352,8 +352,8 @@ subprojects {
         }
         token = project.hasProperty("modrinthPersonalAccessToken") ? project.findProperty("modrinthPersonalAccessToken") : ""
         projectId = projectModrinthId
-        versionNumber = project.version
-        versionName = "[${project.name.toUpperCase()}] [${libs.versions.minecraft.get()}] ${archivesBaseName}-v${modVersion}"
+        versionNumber = modVersion
+        versionName = "[${project.name.toUpperCase()}] [${libs.versions.minecraft.get()}] v${modVersion}"
         changelog = file("../CHANGELOG.md").text
         versionType = projectReleaseType
         uploadFile = remapJar

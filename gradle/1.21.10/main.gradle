@@ -376,7 +376,7 @@ subprojects {
         changelog = changelogFile.text
         type = STABLE
         version = modVersion
-        displayName = "[${project.name.toUpperCase()}] [${libs.versions.minecraft.get()}] ${base.archivesName.get()} v${modVersion}"
+        displayName = "[${project.name.toUpperCase()}] [${libs.versions.minecraft.get()}] v${modVersion}"
         modLoaders.add(project.name.toLowerCase())
 //        dryRun = true
 
