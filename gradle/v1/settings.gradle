@@ -22,12 +22,22 @@ dependencyResolutionManagement {
                         library(key.substring("project.libs.libraries.".length()).replace(".", "-"), value)
                         break
 
+                    case { it.startsWith("project.libs.plugins.") }:
+                        def (id, version) = value.toString().split(":")
+                        plugin(key.substring("project.libs.plugins.".length()).replace(".", "-"), id).version(version)
+                        break
+
                     case { it.startsWith("libs.versions.") }:
                         version(key.substring("libs.versions.".length()).replace(".", "-"), value)
                         break
 
                     case { it.startsWith("libs.libraries.") }:
                         library(key.substring("libs.libraries.".length()).replace(".", "-"), value)
+                        break
+
+                    case { it.startsWith("libs.plugins.") }:
+                        def (id, version) = value.toString().split(":")
+                        plugin(key.substring("libs.plugins.".length()).replace(".", "-"), id).version(version)
                         break
                 }
             }
