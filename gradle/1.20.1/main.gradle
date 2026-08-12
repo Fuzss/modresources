@@ -341,8 +341,6 @@ subprojects {
 //            debug = true
             javaVersionAutoDetect = false
             forgeGradleIntegration = false
-            fabricIntegration = false
-            detectFabricApi = false
         }
     }
 
