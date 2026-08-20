@@ -10,6 +10,7 @@ def parse_metadata_files(root: Path):
     """Return dict: group_path -> {artifact_id -> [versions]}"""
     metadata_files = sorted(root.rglob("maven-metadata.xml"))
     groups = {}
+
     for meta_file in metadata_files:
         artifact_dir = meta_file.parent
         artifact_id = artifact_dir.name
@@ -19,10 +20,9 @@ def parse_metadata_files(root: Path):
         versions_el = tree.find("versioning/versions")
         versions = [v.text for v in versions_el.findall("version")] if versions_el is not None else []
 
-        if not versions:
-            continue
+        if versions:
+            groups.setdefault(group_path, {})[artifact_id] = versions
 
-        groups.setdefault(group_path, {})[artifact_id] = versions
     return groups
 
 def natural_key(s):
@@ -32,9 +32,11 @@ def append_versions_section(lines, title, versions, artifact_link, root_dir, det
     """Append a collapsible section of versions to lines."""
     lines.append(f"<details{' open' if details_open else ''}>")
     lines.append(f"<summary>{title}</summary>\n")
+
     for version in sorted(versions, key=natural_key):
         version_link = f"{root_dir}/{artifact_link}/{version}"
         lines.append(f"- [{version}]({version_link})")
+
     lines.append("</details>\n")
 
 def generate_artifacts_block(group_path, artifacts, header_level=2, details_open=False, root_dir=None):
@@ -48,15 +50,16 @@ def generate_artifacts_block(group_path, artifacts, header_level=2, details_open
     lines.append("<summary>Artifacts</summary>\n")
 
     for artifact_id in sorted(artifacts.keys()):
-
         artifact_link = f"{root_dir}/{artifact_id}"
         lines.append(f"{'#' * (header_level + 1)} [`{artifact_id}`]({artifact_link})")
 
         versions = artifacts[artifact_id]
         latest_versions = []
         base_versions = set()
+        
         for version in sorted(versions, key=natural_key, reverse=True):
             base = re.sub(r'(-\w+|\.\d+)$', '', version)
+
             if base not in base_versions:
                 latest_versions.append(version)
                 base_versions.add(base)
@@ -79,13 +82,15 @@ def write_group_readmes(groups):
         print(f"Wrote {readme_file}")
 
 def write_root_readme(groups):
-    lines = ["# Maven Repository Index\n"]  # top-level header
+    lines = ["# Maven Repository Index\n"]
+    
     for group_path, artifacts in sorted(groups.items()):
         block = generate_artifacts_block(group_path, artifacts, header_level=2, details_open=False, root_dir=group_path)
         lines.extend(block)
 
     root_file = maven_root / readme_filename
     root_file.write_text("\n".join(lines))
+
     print(f"Wrote {root_file}")
 
 if __name__ == "__main__":
