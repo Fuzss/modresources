@@ -7,7 +7,6 @@
 <details open>
 <summary>Latest</summary>
 
-- [1.1-SNAPSHOT](./fuzs.multiloader.multiloader-convention-plugins-neoforge-like.gradle.plugin/1.1-SNAPSHOT)
 - [1.1.27](./fuzs.multiloader.multiloader-convention-plugins-neoforge-like.gradle.plugin/1.1.27)
 </details>
 
