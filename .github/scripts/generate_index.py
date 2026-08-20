@@ -19,6 +19,9 @@ def parse_metadata_files(root: Path):
         versions_el = tree.find("versioning/versions")
         versions = [v.text for v in versions_el.findall("version")] if versions_el is not None else []
 
+        if not versions:
+            continue
+
         groups.setdefault(group_path, {})[artifact_id] = versions
     return groups
 
@@ -53,7 +56,7 @@ def generate_artifacts_block(group_path, artifacts, header_level=2, details_open
         latest_versions = []
         base_versions = set()
         for version in sorted(versions, key=natural_key, reverse=True):
-            base = re.sub(r'(\w+)$', '', version)  # remove the last part after any dash or dot for "base"
+            base = re.sub(r'(-\w+|\.\d+)$', '', version)
             if base not in base_versions:
                 latest_versions.append(version)
                 base_versions.add(base)
