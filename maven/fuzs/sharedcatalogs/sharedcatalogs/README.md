@@ -14,6 +14,28 @@
 
 </details>
 
+### [`1.20.4-SNAPSHOT`](./1.20.4-SNAPSHOT)
+<details open>
+<summary>Latest</summary>
+
+</details>
+
+<details open>
+<summary>Versions</summary>
+
+</details>
+
+### [`1.20.6-SNAPSHOT`](./1.20.6-SNAPSHOT)
+<details open>
+<summary>Latest</summary>
+
+</details>
+
+<details open>
+<summary>Versions</summary>
+
+</details>
+
 ### [`1.21.1-SNAPSHOT`](./1.21.1-SNAPSHOT)
 <details open>
 <summary>Latest</summary>
@@ -37,6 +59,50 @@
 </details>
 
 ### [`1.21.11-SNAPSHOT`](./1.21.11-SNAPSHOT)
+<details open>
+<summary>Latest</summary>
+
+</details>
+
+<details open>
+<summary>Versions</summary>
+
+</details>
+
+### [`1.21.3-SNAPSHOT`](./1.21.3-SNAPSHOT)
+<details open>
+<summary>Latest</summary>
+
+</details>
+
+<details open>
+<summary>Versions</summary>
+
+</details>
+
+### [`1.21.4-SNAPSHOT`](./1.21.4-SNAPSHOT)
+<details open>
+<summary>Latest</summary>
+
+</details>
+
+<details open>
+<summary>Versions</summary>
+
+</details>
+
+### [`1.21.5-SNAPSHOT`](./1.21.5-SNAPSHOT)
+<details open>
+<summary>Latest</summary>
+
+</details>
+
+<details open>
+<summary>Versions</summary>
+
+</details>
+
+### [`1.21.8-SNAPSHOT`](./1.21.8-SNAPSHOT)
 <details open>
 <summary>Latest</summary>
 
