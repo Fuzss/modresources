@@ -5210,19 +5210,19 @@
 - [1.20-v2](./fuzs/sharedcatalogs/sharedcatalogs/1.20-v2)
 - [1.20.1-v48](./fuzs/sharedcatalogs/sharedcatalogs/1.20.1-v48)
 - [1.20.2-v1](./fuzs/sharedcatalogs/sharedcatalogs/1.20.2-v1)
-- [1.20.4-v40](./fuzs/sharedcatalogs/sharedcatalogs/1.20.4-v40)
-- [1.20.6-v6](./fuzs/sharedcatalogs/sharedcatalogs/1.20.6-v6)
+- [1.20.4-v41](./fuzs/sharedcatalogs/sharedcatalogs/1.20.4-v41)
+- [1.20.6-v7](./fuzs/sharedcatalogs/sharedcatalogs/1.20.6-v7)
 - [1.21-v30](./fuzs/sharedcatalogs/sharedcatalogs/1.21-v30)
 - [1.21.1-v27](./fuzs/sharedcatalogs/sharedcatalogs/1.21.1-v27)
-- [1.21.3-v22](./fuzs/sharedcatalogs/sharedcatalogs/1.21.3-v22)
-- [1.21.4-v12](./fuzs/sharedcatalogs/sharedcatalogs/1.21.4-v12)
-- [1.21.5-v11](./fuzs/sharedcatalogs/sharedcatalogs/1.21.5-v11)
+- [1.21.3-v23](./fuzs/sharedcatalogs/sharedcatalogs/1.21.3-v23)
+- [1.21.4-v13](./fuzs/sharedcatalogs/sharedcatalogs/1.21.4-v13)
+- [1.21.5-v12](./fuzs/sharedcatalogs/sharedcatalogs/1.21.5-v12)
 - [1.21.6-v11](./fuzs/sharedcatalogs/sharedcatalogs/1.21.6-v11)
 - [1.21.7-v1](./fuzs/sharedcatalogs/sharedcatalogs/1.21.7-v1)
-- [1.21.8-v10](./fuzs/sharedcatalogs/sharedcatalogs/1.21.8-v10)
+- [1.21.8-v11](./fuzs/sharedcatalogs/sharedcatalogs/1.21.8-v11)
 - [1.21.9-v21](./fuzs/sharedcatalogs/sharedcatalogs/1.21.9-v21)
-- [1.21.10-v7](./fuzs/sharedcatalogs/sharedcatalogs/1.21.10-v7)
-- [1.21.11-v8](./fuzs/sharedcatalogs/sharedcatalogs/1.21.11-v8)
+- [1.21.10-v8](./fuzs/sharedcatalogs/sharedcatalogs/1.21.10-v8)
+- [1.21.11-v9](./fuzs/sharedcatalogs/sharedcatalogs/1.21.11-v9)
 - [26.1-v16](./fuzs/sharedcatalogs/sharedcatalogs/26.1-v16)
 - [26.2-v8](./fuzs/sharedcatalogs/sharedcatalogs/26.2-v8)
 </details>
@@ -5333,6 +5333,7 @@
 - [1.20.1-v47](./fuzs/sharedcatalogs/sharedcatalogs/1.20.1-v47)
 - [1.20.1-v48](./fuzs/sharedcatalogs/sharedcatalogs/1.20.1-v48)
 - [1.20.2-v1](./fuzs/sharedcatalogs/sharedcatalogs/1.20.2-v1)
+- [1.20.4-SNAPSHOT](./fuzs/sharedcatalogs/sharedcatalogs/1.20.4-SNAPSHOT)
 - [1.20.4-v1](./fuzs/sharedcatalogs/sharedcatalogs/1.20.4-v1)
 - [1.20.4-v2](./fuzs/sharedcatalogs/sharedcatalogs/1.20.4-v2)
 - [1.20.4-v3](./fuzs/sharedcatalogs/sharedcatalogs/1.20.4-v3)
@@ -5373,12 +5374,15 @@
 - [1.20.4-v38](./fuzs/sharedcatalogs/sharedcatalogs/1.20.4-v38)
 - [1.20.4-v39](./fuzs/sharedcatalogs/sharedcatalogs/1.20.4-v39)
 - [1.20.4-v40](./fuzs/sharedcatalogs/sharedcatalogs/1.20.4-v40)
+- [1.20.4-v41](./fuzs/sharedcatalogs/sharedcatalogs/1.20.4-v41)
+- [1.20.6-SNAPSHOT](./fuzs/sharedcatalogs/sharedcatalogs/1.20.6-SNAPSHOT)
 - [1.20.6-v1](./fuzs/sharedcatalogs/sharedcatalogs/1.20.6-v1)
 - [1.20.6-v2](./fuzs/sharedcatalogs/sharedcatalogs/1.20.6-v2)
 - [1.20.6-v3](./fuzs/sharedcatalogs/sharedcatalogs/1.20.6-v3)
 - [1.20.6-v4](./fuzs/sharedcatalogs/sharedcatalogs/1.20.6-v4)
 - [1.20.6-v5](./fuzs/sharedcatalogs/sharedcatalogs/1.20.6-v5)
 - [1.20.6-v6](./fuzs/sharedcatalogs/sharedcatalogs/1.20.6-v6)
+- [1.20.6-v7](./fuzs/sharedcatalogs/sharedcatalogs/1.20.6-v7)
 - [1.21-v1](./fuzs/sharedcatalogs/sharedcatalogs/1.21-v1)
 - [1.21-v2](./fuzs/sharedcatalogs/sharedcatalogs/1.21-v2)
 - [1.21-v3](./fuzs/sharedcatalogs/sharedcatalogs/1.21-v3)
@@ -5437,6 +5441,7 @@
 - [1.21.1-v25](./fuzs/sharedcatalogs/sharedcatalogs/1.21.1-v25)
 - [1.21.1-v26](./fuzs/sharedcatalogs/sharedcatalogs/1.21.1-v26)
 - [1.21.1-v27](./fuzs/sharedcatalogs/sharedcatalogs/1.21.1-v27)
+- [1.21.3-SNAPSHOT](./fuzs/sharedcatalogs/sharedcatalogs/1.21.3-SNAPSHOT)
 - [1.21.3-v1](./fuzs/sharedcatalogs/sharedcatalogs/1.21.3-v1)
 - [1.21.3-v2](./fuzs/sharedcatalogs/sharedcatalogs/1.21.3-v2)
 - [1.21.3-v3](./fuzs/sharedcatalogs/sharedcatalogs/1.21.3-v3)
@@ -5459,6 +5464,8 @@
 - [1.21.3-v20](./fuzs/sharedcatalogs/sharedcatalogs/1.21.3-v20)
 - [1.21.3-v21](./fuzs/sharedcatalogs/sharedcatalogs/1.21.3-v21)
 - [1.21.3-v22](./fuzs/sharedcatalogs/sharedcatalogs/1.21.3-v22)
+- [1.21.3-v23](./fuzs/sharedcatalogs/sharedcatalogs/1.21.3-v23)
+- [1.21.4-SNAPSHOT](./fuzs/sharedcatalogs/sharedcatalogs/1.21.4-SNAPSHOT)
 - [1.21.4-v1](./fuzs/sharedcatalogs/sharedcatalogs/1.21.4-v1)
 - [1.21.4-v2](./fuzs/sharedcatalogs/sharedcatalogs/1.21.4-v2)
 - [1.21.4-v3](./fuzs/sharedcatalogs/sharedcatalogs/1.21.4-v3)
@@ -5471,6 +5478,8 @@
 - [1.21.4-v10](./fuzs/sharedcatalogs/sharedcatalogs/1.21.4-v10)
 - [1.21.4-v11](./fuzs/sharedcatalogs/sharedcatalogs/1.21.4-v11)
 - [1.21.4-v12](./fuzs/sharedcatalogs/sharedcatalogs/1.21.4-v12)
+- [1.21.4-v13](./fuzs/sharedcatalogs/sharedcatalogs/1.21.4-v13)
+- [1.21.5-SNAPSHOT](./fuzs/sharedcatalogs/sharedcatalogs/1.21.5-SNAPSHOT)
 - [1.21.5-v1](./fuzs/sharedcatalogs/sharedcatalogs/1.21.5-v1)
 - [1.21.5-v2](./fuzs/sharedcatalogs/sharedcatalogs/1.21.5-v2)
 - [1.21.5-v3](./fuzs/sharedcatalogs/sharedcatalogs/1.21.5-v3)
@@ -5482,6 +5491,7 @@
 - [1.21.5-v9](./fuzs/sharedcatalogs/sharedcatalogs/1.21.5-v9)
 - [1.21.5-v10](./fuzs/sharedcatalogs/sharedcatalogs/1.21.5-v10)
 - [1.21.5-v11](./fuzs/sharedcatalogs/sharedcatalogs/1.21.5-v11)
+- [1.21.5-v12](./fuzs/sharedcatalogs/sharedcatalogs/1.21.5-v12)
 - [1.21.6-v1](./fuzs/sharedcatalogs/sharedcatalogs/1.21.6-v1)
 - [1.21.6-v2](./fuzs/sharedcatalogs/sharedcatalogs/1.21.6-v2)
 - [1.21.6-v3](./fuzs/sharedcatalogs/sharedcatalogs/1.21.6-v3)
@@ -5494,6 +5504,7 @@
 - [1.21.6-v10](./fuzs/sharedcatalogs/sharedcatalogs/1.21.6-v10)
 - [1.21.6-v11](./fuzs/sharedcatalogs/sharedcatalogs/1.21.6-v11)
 - [1.21.7-v1](./fuzs/sharedcatalogs/sharedcatalogs/1.21.7-v1)
+- [1.21.8-SNAPSHOT](./fuzs/sharedcatalogs/sharedcatalogs/1.21.8-SNAPSHOT)
 - [1.21.8-v1](./fuzs/sharedcatalogs/sharedcatalogs/1.21.8-v1)
 - [1.21.8-v2](./fuzs/sharedcatalogs/sharedcatalogs/1.21.8-v2)
 - [1.21.8-v3](./fuzs/sharedcatalogs/sharedcatalogs/1.21.8-v3)
@@ -5504,6 +5515,7 @@
 - [1.21.8-v8](./fuzs/sharedcatalogs/sharedcatalogs/1.21.8-v8)
 - [1.21.8-v9](./fuzs/sharedcatalogs/sharedcatalogs/1.21.8-v9)
 - [1.21.8-v10](./fuzs/sharedcatalogs/sharedcatalogs/1.21.8-v10)
+- [1.21.8-v11](./fuzs/sharedcatalogs/sharedcatalogs/1.21.8-v11)
 - [1.21.9-v1](./fuzs/sharedcatalogs/sharedcatalogs/1.21.9-v1)
 - [1.21.9-v2](./fuzs/sharedcatalogs/sharedcatalogs/1.21.9-v2)
 - [1.21.9-v3](./fuzs/sharedcatalogs/sharedcatalogs/1.21.9-v3)
@@ -5533,6 +5545,7 @@
 - [1.21.10-v5](./fuzs/sharedcatalogs/sharedcatalogs/1.21.10-v5)
 - [1.21.10-v6](./fuzs/sharedcatalogs/sharedcatalogs/1.21.10-v6)
 - [1.21.10-v7](./fuzs/sharedcatalogs/sharedcatalogs/1.21.10-v7)
+- [1.21.10-v8](./fuzs/sharedcatalogs/sharedcatalogs/1.21.10-v8)
 - [1.21.11-SNAPSHOT](./fuzs/sharedcatalogs/sharedcatalogs/1.21.11-SNAPSHOT)
 - [1.21.11-v1](./fuzs/sharedcatalogs/sharedcatalogs/1.21.11-v1)
 - [1.21.11-v2](./fuzs/sharedcatalogs/sharedcatalogs/1.21.11-v2)
@@ -5542,6 +5555,7 @@
 - [1.21.11-v6](./fuzs/sharedcatalogs/sharedcatalogs/1.21.11-v6)
 - [1.21.11-v7](./fuzs/sharedcatalogs/sharedcatalogs/1.21.11-v7)
 - [1.21.11-v8](./fuzs/sharedcatalogs/sharedcatalogs/1.21.11-v8)
+- [1.21.11-v9](./fuzs/sharedcatalogs/sharedcatalogs/1.21.11-v9)
 - [26.1-SNAPSHOT](./fuzs/sharedcatalogs/sharedcatalogs/26.1-SNAPSHOT)
 - [26.1-v1](./fuzs/sharedcatalogs/sharedcatalogs/26.1-v1)
 - [26.1-v2](./fuzs/sharedcatalogs/sharedcatalogs/26.1-v2)
@@ -5588,6 +5602,28 @@
 
 </details>
 
+### [`1.20.4-SNAPSHOT`](./fuzs/sharedcatalogs/sharedcatalogs/1.20.4-SNAPSHOT)
+<details>
+<summary>Latest</summary>
+
+</details>
+
+<details>
+<summary>Versions</summary>
+
+</details>
+
+### [`1.20.6-SNAPSHOT`](./fuzs/sharedcatalogs/sharedcatalogs/1.20.6-SNAPSHOT)
+<details>
+<summary>Latest</summary>
+
+</details>
+
+<details>
+<summary>Versions</summary>
+
+</details>
+
 ### [`1.21.1-SNAPSHOT`](./fuzs/sharedcatalogs/sharedcatalogs/1.21.1-SNAPSHOT)
 <details>
 <summary>Latest</summary>
@@ -5611,6 +5647,50 @@
 </details>
 
 ### [`1.21.11-SNAPSHOT`](./fuzs/sharedcatalogs/sharedcatalogs/1.21.11-SNAPSHOT)
+<details>
+<summary>Latest</summary>
+
+</details>
+
+<details>
+<summary>Versions</summary>
+
+</details>
+
+### [`1.21.3-SNAPSHOT`](./fuzs/sharedcatalogs/sharedcatalogs/1.21.3-SNAPSHOT)
+<details>
+<summary>Latest</summary>
+
+</details>
+
+<details>
+<summary>Versions</summary>
+
+</details>
+
+### [`1.21.4-SNAPSHOT`](./fuzs/sharedcatalogs/sharedcatalogs/1.21.4-SNAPSHOT)
+<details>
+<summary>Latest</summary>
+
+</details>
+
+<details>
+<summary>Versions</summary>
+
+</details>
+
+### [`1.21.5-SNAPSHOT`](./fuzs/sharedcatalogs/sharedcatalogs/1.21.5-SNAPSHOT)
+<details>
+<summary>Latest</summary>
+
+</details>
+
+<details>
+<summary>Versions</summary>
+
+</details>
+
+### [`1.21.8-SNAPSHOT`](./fuzs/sharedcatalogs/sharedcatalogs/1.21.8-SNAPSHOT)
 <details>
 <summary>Latest</summary>
 
