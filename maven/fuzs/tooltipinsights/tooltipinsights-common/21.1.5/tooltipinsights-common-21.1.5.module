@@ -1,0 +1,126 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "fuzs.tooltipinsights",
+    "module": "tooltipinsights-common",
+    "version": "21.1.5",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.7.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "fuzs.puzzleslib",
+          "module": "puzzleslib-common",
+          "version": {
+            "requires": "21.1.54"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "tooltipinsights-common-21.1.5.jar",
+          "url": "tooltipinsights-common-21.1.5.jar",
+          "size": 54380,
+          "sha512": "66feb9bc6af156fe0ef4cd3efb5ece45246ecead31a08aa450359e9d1b63ce1985980665aa75c87399585af5efae4f1fce2664aa4628424f210481686ecf6cc8",
+          "sha256": "0f06d1ccad72bfedf9a215563aa864dd9c2b283ab8e6e60cca1ed54d8c948684",
+          "sha1": "0dfbeb7b379632de2d4103733ee579f0f2d78acd",
+          "md5": "94dff130b1cfc7a3f632ef18bc580d6b"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "tooltipinsights-common-21.1.5.jar",
+          "url": "tooltipinsights-common-21.1.5.jar",
+          "size": 54380,
+          "sha512": "66feb9bc6af156fe0ef4cd3efb5ece45246ecead31a08aa450359e9d1b63ce1985980665aa75c87399585af5efae4f1fce2664aa4628424f210481686ecf6cc8",
+          "sha256": "0f06d1ccad72bfedf9a215563aa864dd9c2b283ab8e6e60cca1ed54d8c948684",
+          "sha1": "0dfbeb7b379632de2d4103733ee579f0f2d78acd",
+          "md5": "94dff130b1cfc7a3f632ef18bc580d6b"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "tooltipinsights-common-21.1.5-sources.jar",
+          "url": "tooltipinsights-common-21.1.5-sources.jar",
+          "size": 31518,
+          "sha512": "8260ace27ba1ce1af25585ae7e6e0f992a9f4554089803e691ac7ad8ad1f350928535362335f0c484968e0c07573850ab385f454af44250777cd61715bfab751",
+          "sha256": "1b87c997bebd25e263ea3b93cad289722b26697f8f838451e34023f957e233cc",
+          "sha1": "7dbfc2755ebbf81ad1fda37d883b1a8582d11ad9",
+          "md5": "c47b9dd05d78cbca3220b223596a74a9"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "tooltipinsights-common-21.1.5-javadoc.jar",
+          "url": "tooltipinsights-common-21.1.5-javadoc.jar",
+          "size": 173265,
+          "sha512": "6bf75bd2e4d4122c4e7beb8ccc75f6b5a814feb62bd4e6a62cfe85935cc8a1cf14103cefafbf7157f37878203ce712a4e092f50f7b70c9bc41ba8c6529025804",
+          "sha256": "e0178a52891db4b830ecdebef2608ac01af4479578305ace898c37cddfa0882d",
+          "sha1": "819433e272a69935e034aceffd847656d06b2385",
+          "md5": "4a34592a738e169accf99d324814f279"
+        }
+      ]
+    },
+    {
+      "name": "accessTransformersElements",
+      "attributes": {
+        "org.gradle.category": "accesstransformer"
+      },
+      "files": [
+        {
+          "name": "tooltipinsights-common-21.1.5-accesstransformer.cfg",
+          "url": "tooltipinsights-common-21.1.5-accesstransformer.cfg",
+          "size": 0,
+          "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+          "md5": "d41d8cd98f00b204e9800998ecf8427e"
+        }
+      ]
+    }
+  ]
+}
