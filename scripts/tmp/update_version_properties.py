@@ -88,7 +88,7 @@ python3 update_versions_properties.py <mods-directory>
 Example:
 
 ```
-python3 update_versions_properties.py /Users/henning/Lokal/GitHub/mods
+python3 update_versions_properties.py /Users/user/Lokal/GitHub/mods
 ```
 
 Restarting from a specific mod:
@@ -98,7 +98,7 @@ mod folder name as the optional second argument:
 
 ```
 python3 update_versions_properties.py \
-    /Users/henning/Lokal/GitHub/mods \
+    /Users/user/Lokal/GitHub/mods \
     air-hop
 ```
 

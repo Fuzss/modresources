@@ -12,7 +12,7 @@ def format_size(bytes_val):
     else:
         return f"{bytes_val} bytes"
 
-main_path = '/Users/henning/Lokal/GitHub'
+main_path = '/Users/user/Lokal/GitHub'
 result = []
 
 for entry in os.listdir(main_path):
