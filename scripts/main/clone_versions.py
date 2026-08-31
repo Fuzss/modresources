@@ -127,7 +127,7 @@ def load_versions_file(main_path: str, branch_overrides=None):
                 branches.pop(version, None)
 
     with open(versions_file, "w", encoding="utf-8") as file:
-        json.dump(data, file, indent=2)
+        json.dump(data, file, indent=2, sort_keys=True)
         file.write("\n")
 
     subprocess.run(
