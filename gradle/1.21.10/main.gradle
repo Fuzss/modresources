@@ -384,6 +384,15 @@ subprojects {
             accessToken = project.findProperty("curseApiToken") ?: ""
             projectId = projectCurseForgeId
             minecraftVersions.add(libs.versions.minecraft.get())
+
+            if (!"server".equalsIgnoreCase(modFabricEnvironment)) {
+                client = true
+            }
+
+            if (!"client".equalsIgnoreCase(modFabricEnvironment)) {
+                server = true
+            }
+
             var requiredDependencies = "dependenciesRequired${project.name}CurseForge"
             var embeddedDependencies = "dependenciesEmbedded${project.name}CurseForge"
             var optionalDependencies = "dependenciesOptional${project.name}CurseForge"
