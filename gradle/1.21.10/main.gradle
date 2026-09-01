@@ -386,11 +386,11 @@ subprojects {
             minecraftVersions.add(libs.versions.minecraft.get())
 
             if (!"server".equalsIgnoreCase(modFabricEnvironment)) {
-                client = true
+                clientRequired = true
             }
 
             if (!"client".equalsIgnoreCase(modFabricEnvironment)) {
-                server = true
+                serverRequired = true
             }
 
             var requiredDependencies = "dependenciesRequired${project.name}CurseForge"
