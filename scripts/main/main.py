@@ -839,7 +839,7 @@ def main():
 
     if args.version:
         changelog_path = f"{project_path}/CHANGELOG.md"
-        full_version = f"v{args.version}-mc{args.minecraft}"
+        full_version = f"v{args.version}-{"" if args.legacy else "mc"}{args.minecraft}"
         changelog_section_data = parse_changelog_sections(args.changelog)
 
         if changelog_section_data:
