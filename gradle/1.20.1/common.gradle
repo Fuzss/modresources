@@ -9,6 +9,11 @@ loom {
 dependencies {
     // Fabric Loader
     modCompileOnly libs.fabricloader.fabric
+    
+    // Multiloader Access Wideners
+    if (libs.hasProperty("multiloaderaccesswideners") && libs.multiloaderaccesswideners.hasProperty("common")) {
+        modCompileOnly(libs.multiloaderaccesswideners.common) { transitive = false }
+    }
 
     // Mixin Extras
     compileOnly libs.mixinextras.common

@@ -11,6 +11,11 @@ loom {
 dependencies {
     // Fabric Loader
     modCompileOnly libs.fabricloader.fabric
+    
+    // Multiloader Access Wideners
+    if (libs.hasProperty("multiloaderaccesswideners") && libs.multiloaderaccesswideners.hasProperty("common")) {
+        modCompileOnly(libs.multiloaderaccesswideners.common) { transitive = false }
+    }
 }
 
 tasks.withType(Class.forName("net.fabricmc.loom.task.AbstractRemapJarTask", true, project.buildscript.classLoader)).configureEach {
