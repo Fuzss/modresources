@@ -1,1 +1,1 @@
-+ Huge thanks to [JOHNM](https://www.reddit.com/user/Key-Orchid8993/) for creating and providing all the awesome new models and textures.
++ Huge thanks to [JOHNM](https://www.reddit.com/user/Key-Orchid8993/) for sharing their original concept on [Reddit](https://www.reddit.com/r/Minecraft/comments/1inpppf/i_made_some_sheep_versions/) and for providing all the awesome new models and textures.
