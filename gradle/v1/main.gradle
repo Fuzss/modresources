@@ -65,9 +65,12 @@ subprojects {
     }
 
     tasks.withType(Jar).configureEach {
-        from rootProject.file("../LICENSE.md")
-        from rootProject.file("../LICENSE-ASSETS.md")
+        duplicatesStrategy DuplicatesStrategy.EXCLUDE
+
+        from rootProject.file("LICENSE.md")
+        from rootProject.file("LICENSE-ASSETS.md")
         from rootProject.file("CHANGELOG.md")
+
         manifest {
             attributes([
                     "Specification-Title"           : modName,
@@ -83,6 +86,7 @@ subprojects {
                     'Built-On-Minecraft'            : libs.versions.minecraft.get()
             ])
         }
+
         group 'jar'
     }
 
