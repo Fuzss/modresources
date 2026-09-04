@@ -1,131 +1,168 @@
-var allSubprojects = rootProject.subprojects.name
-var modLoaderSubprojects = allSubprojects.findAll { !it.toLowerCase().contains("common") }
+def allSubprojects = rootProject.subprojects.name
+def modLoaderSubprojects = allSubprojects.findAll { !it.toLowerCase().contains("common") }
 
 allSubprojects.forEach { projectName ->
-    tasks.register(projectName.substring(0, 1).toLowerCase() + projectName.substring(1).replaceAll("\\W", "") + "Clean", GradleBuild) {
-        group = "_build"
-        tasks = [":" + projectName + ":clean"]
+    tasks.register("${projectName.toLowerCase()}-clean") {
+        group = "multiloader/build"
+        dependsOn(":${projectName}:clean")
     }
+
 }
 
-tasks.register("allClean", GradleBuild) {
-    group = "_build"
-    tasks = allSubprojects.collect { ":" + it + ":clean" }
-}
-
-allSubprojects.forEach { projectName ->
-    tasks.register(projectName.substring(0, 1).toLowerCase() + projectName.substring(1).replaceAll("\\W", "") + "Build", GradleBuild) {
-        group = "_build"
-        tasks = [":Common:clean", ":" + projectName + ":clean", ":" + projectName + ":build"]
-    }
-}
-
-tasks.register("allBuild", GradleBuild) {
-    group = "_build"
-    tasks = allSubprojects.collect { ":" + it + ":clean" } + modLoaderSubprojects.collect { ":" + it + ":build" }
+tasks.register("all-clean") {
+    group = "multiloader/build"
+    dependsOn(allSubprojects.collect { ":${it}:clean" })
 }
 
 allSubprojects.forEach { projectName ->
-    tasks.register(projectName.substring(0, 1).toLowerCase() + projectName.substring(1).replaceAll("\\W", "") + "Publish", GradleBuild) {
-        group = "_publish"
-        tasks = [":Common:clean", ":" + projectName + ":clean", ":" + projectName + ":publishMavenJavaPublicationToFuzsModResourcesRepository"]
+    tasks.register("${projectName.toLowerCase()}-build") {
+        group = "multiloader/build"
+        dependsOn(":Common:clean")
+        dependsOn(":${projectName}:clean")
+        dependsOn(":${projectName}:build")
     }
 }
 
-tasks.register("allPublish", GradleBuild) {
-    group = "_publish"
-    tasks = allSubprojects.collect { ":" + it + ":clean" } + allSubprojects.collect { ":" + it + ":publishMavenJavaPublicationToFuzsModResourcesRepository" }
+tasks.register("all-build") {
+    group = "multiloader/build"
+    dependsOn(allSubprojects.collect { ":${it}:clean" })
+    dependsOn(modLoaderSubprojects.collect { ":${it}:build" })
 }
 
 allSubprojects.forEach { projectName ->
-    tasks.register(projectName.substring(0, 1).toLowerCase() + projectName.substring(1).replaceAll("\\W", "") + "GenSources", GradleBuild) {
-        group = "_setup"
-        tasks = [":" + projectName + ":genSourcesWithVineflower"]
+    tasks.register("${projectName.toLowerCase()}-publish") {
+        group = "multiloader/publish"
+        dependsOn(":Common:clean")
+        dependsOn(":${projectName}:clean")
+        dependsOn(":${projectName}:publishMavenJavaPublicationToFuzsModResourcesRepository")
     }
 }
 
-tasks.register("allGenSources", GradleBuild) {
-    group = "_setup"
-    tasks = allSubprojects.collect { ":" + it + ":genSourcesWithVineflower" }
+tasks.register("all-publish") {
+    group = "multiloader/publish"
+    dependsOn(allSubprojects.collect { ":${it}:clean" })
+    dependsOn(allSubprojects.collect { ":${it}:publishMavenJavaPublicationToFuzsModResourcesRepository" })
 }
 
-modLoaderSubprojects.forEach { projectName ->
-    tasks.register(projectName.substring(0, 1).toLowerCase() + projectName.substring(1).replaceAll("\\W", "") + "UploadCurseForge", GradleBuild) {
-        group = "_upload"
-        tasks = [":Common:clean", ":" + projectName + ":clean", ":" + projectName + ":publishCurseforge"]
+allSubprojects.forEach { projectName ->
+    tasks.register("${projectName.toLowerCase()}-sources") {
+        group = "multiloader/sources"
+        dependsOn(":${projectName}:genSourcesWithVineflower")
     }
 }
 
-tasks.register("allUploadCurseForge", GradleBuild) {
-    group = "_upload"
-    tasks = allSubprojects.collect { ":" + it + ":clean" } + modLoaderSubprojects.collect { ":" + it + ":publishCurseforge" }
+tasks.register("all-sources") {
+    group = "multiloader/sources"
+    dependsOn(allSubprojects.collect { ":${it}:genSourcesWithVineflower" })
 }
 
-modLoaderSubprojects.forEach { projectName ->
-    tasks.register(projectName.substring(0, 1).toLowerCase() + projectName.substring(1).replaceAll("\\W", "") + "UploadModrinth", GradleBuild) {
-        group = "_upload"
-        tasks = [":Common:clean", ":" + projectName + ":clean", ":" + projectName + ":publishModrinth"]
+allSubprojects.forEach { projectName ->
+    tasks.register("${projectName.toLowerCase()}-validate") {
+        group = "multiloader/sources"
+        dependsOn(":${projectName}:validateAccessWidener")
     }
 }
 
-tasks.register("allUploadModrinth", GradleBuild) {
-    group = "_upload"
-    tasks = allSubprojects.collect { ":" + it + ":clean" } + modLoaderSubprojects.collect { ":" + it + ":publishModrinth" }
+tasks.register("all-validate") {
+    group = "multiloader/sources"
+    dependsOn(allSubprojects.collect { ":${it}:validateAccessWidener" })
 }
 
 modLoaderSubprojects.forEach { projectName ->
-    tasks.register(projectName.substring(0, 1).toLowerCase() + projectName.substring(1).replaceAll("\\W", "") + "UploadGitHub", GradleBuild) {
-        group = "_upload"
-        tasks = [":Common:clean", ":" + projectName + ":clean", ":" + projectName + ":publishGithub"]
+    tasks.register("${projectName.toLowerCase()}-curseforge") {
+        group = "multiloader/remote"
+        dependsOn(":Common:clean")
+        dependsOn(":${projectName}:clean")
+        dependsOn(":${projectName}:publishCurseforge")
     }
 }
 
-tasks.register("allUploadGitHub", GradleBuild) {
-    group = "_upload"
-    tasks = allSubprojects.collect { ":" + it + ":clean" } + modLoaderSubprojects.collect { ":" + it + ":publishGithub" }
+tasks.register("all-curseforge") {
+    group = "multiloader/remote"
+    dependsOn(allSubprojects.collect { ":${it}:clean" })
+    dependsOn(modLoaderSubprojects.collect { ":${it}:publishCurseforge" })
+
 }
 
 modLoaderSubprojects.forEach { projectName ->
-    tasks.register(projectName.substring(0, 1).toLowerCase() + projectName.substring(1).replaceAll("\\W", "") + "UploadEverywhere", GradleBuild) {
-        group = "_upload"
-        tasks = [":Common:clean", ":" + projectName + ":clean", ":" + projectName + ":publishCurseforge", ":" + projectName + ":publishModrinth", ":" + projectName + ":publishGithub"]
+    tasks.register("${projectName.toLowerCase()}-modrinth") {
+        group = "multiloader/remote"
+        dependsOn(":Common:clean")
+        dependsOn(":${projectName}:clean")
+        dependsOn(":${projectName}:publishModrinth")
     }
 }
 
-tasks.register("allUploadEverywhere", GradleBuild) {
-    group = "_upload"
-    tasks = allSubprojects.collect { ":" + it + ":clean" } + modLoaderSubprojects.collect { ":" + it + ":publishCurseforge" } + modLoaderSubprojects.collect { ":" + it + ":publishModrinth" } + modLoaderSubprojects.collect { ":" + it + ":publishGithub" }
+tasks.register("all-modrinth") {
+    group = "multiloader/remote"
+    dependsOn(allSubprojects.collect { ":${it}:clean" })
+    dependsOn(modLoaderSubprojects.collect { ":${it}:publishModrinth" })
 }
 
 modLoaderSubprojects.forEach { projectName ->
-    tasks.register(projectName.substring(0, 1).toLowerCase() + projectName.substring(1).replaceAll("\\W", "") + "Client", GradleBuild) {
-        group = "_run"
-        tasks = [":" + projectName + ":runClient"]
+    tasks.register("${projectName.toLowerCase()}-github") {
+        group = "multiloader/remote"
+        dependsOn(":Common:clean")
+        dependsOn(":${projectName}:clean")
+        dependsOn(":${projectName}:publishGithub")
+    }
+}
+
+tasks.register("all-github") {
+    group = "multiloader/remote"
+    dependsOn(allSubprojects.collect { ":${it}:clean" })
+    dependsOn(modLoaderSubprojects.collect { ":${it}:publishGithub" })
+}
+
+modLoaderSubprojects.forEach { projectName ->
+    tasks.register("${projectName.toLowerCase()}-all") {
+        group = "multiloader/remote"
+        dependsOn(":Common:clean")
+        dependsOn(":${projectName}:clean")
+        dependsOn(":${projectName}:publishCurseforge")
+        dependsOn(":${projectName}:publishModrinth")
+        dependsOn(":${projectName}:publishGithub")
+    }
+}
+
+tasks.register("all-all") {
+    group = "multiloader/remote"
+    dependsOn(allSubprojects.collect { ":${it}:clean" })
+    dependsOn(modLoaderSubprojects.collect { ":${it}:publishCurseforge" })
+    dependsOn(modLoaderSubprojects.collect { ":${it}:publishModrinth" })
+    dependsOn(modLoaderSubprojects.collect { ":${it}:publishGithub" })
+    dependsOn(":sendDiscordWebhook")
+}
+
+modLoaderSubprojects.forEach { projectName ->
+    tasks.register("${projectName.toLowerCase()}-client") {
+        group = "multiloader/run"
+        dependsOn(":${projectName}:runClient")
     }
 }
 
 modLoaderSubprojects.forEach { projectName ->
-    tasks.register(projectName.substring(0, 1).toLowerCase() + projectName.substring(1).replaceAll("\\W", "") + "Server", GradleBuild) {
-        group = "_run"
-        tasks = [":" + projectName + ":runServer"]
+    tasks.register("${projectName.toLowerCase()}-server") {
+        group = "multiloader/run"
+        dependsOn(":${projectName}:runServer")
     }
 }
 
 if (modLoaderSubprojects.any { it.toLowerCase().equals("neoforge") }) {
-    tasks.register("neoForgeData", GradleBuild) {
-        group = "_run"
-        tasks = [":NeoForge:runData"]
+    tasks.register("neoforge-data") {
+        group = "multiloader/run"
+        dependsOn(":NeoForge:runData")
     }
 }
 
 if (modLoaderSubprojects.any { it.toLowerCase().equals("forge") }) {
-    tasks.register("forgeData", GradleBuild) {
-        group = "_run"
-        tasks = [":Forge:runData"]
+    tasks.register("forge-data") {
+        group = "multiloader/run"
+        dependsOn(":Forge:runData")
     }
 }
 
-tasks.register("notifyDiscord", GradleBuild) {
-    group = "_upload"
-    tasks = [":sendDiscordWebhook"]
+tasks.register("all-discord") {
+    group = "multiloader/remote"
+    dependsOn(":sendDiscordWebhook")
 }
