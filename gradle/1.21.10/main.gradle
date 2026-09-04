@@ -593,7 +593,10 @@ def parseChangelogFields() {
 }
 
 sendDiscordWebhook {
-    def modUrl = "https://raw.githubusercontent.com/Fuzss/modresources/main/mods/${project.modId}.json"
+    def modUrl = modSourceUrl.replace(
+            "https://github.com/", 
+            "https://raw.githubusercontent.com/"
+        ).concat("/main/versions.json")
     def json
     try {
         def jsonText = new URL(modUrl).text
@@ -613,7 +616,7 @@ sendDiscordWebhook {
     embed {
         title = "[${libs.versions.minecraft.get()}] ${project.modName} v${project.modVersion}"
         description = project.modDescription
-        url = "https://www.curseforge.com/minecraft/mc-mods/${json.distributions.curseforge?.slug}"
+        url = "https://modrinth.com/mod/${json.distributions.modrinth?.slug}"
         timestamp = Instant.now().toString()
         color = 5814783
         addFooter([project.modName, "v${project.modVersion}", libs.versions.minecraft.get()])

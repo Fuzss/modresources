@@ -494,6 +494,9 @@ subprojects {
     }
 }
 
+apply from: "https://raw.githubusercontent.com/Fuzss/modresources/main/gradle/${libs.versions.minecraft.get()}/tasks.gradle"
+apply from: "https://raw.githubusercontent.com/Fuzss/modresources/main/gradle/${libs.versions.minecraft.get()}/discord.gradle"
+
 architectury {
     minecraft = libs.versions.minecraft.get()
 }
@@ -529,4 +532,78 @@ tasks.register("incrementBuildNumber", DefaultTask) {
     }
 }
 
-apply from: "https://raw.githubusercontent.com/Fuzss/modresources/main/gradle/${libs.versions.minecraft.get()}/tasks.gradle"
+def parseChangelogFields() {
+    def changelog = file("CHANGELOG.md").text
+    // Extract most recent section (everything until next "## " or EOF)
+    def matcher = (changelog =~ /## \[.*?] - \d{4}-\d{2}-\d{2}\r?\n(?s)(.*?)(?=\r?\n## |$)/)
+    def latestSection = matcher ? matcher[0][1].trim() : ""
+
+    // Map section titles to emojis
+    def emojiMap = [
+            "Added"     : "✨",
+            "Changed"   : "🔧",
+            "Deprecated": "📉",
+            "Removed"   : "🗑️",
+            "Fixed"     : "🐞",
+            "Security"  : "🔒"
+    ]
+
+    def changelogFields = []
+    def sectionRegex = ~/### (.*?)\r?\n(?s)(.*?)(?=\r?\n### |$)/
+
+    (latestSection =~ sectionRegex).each { sec ->
+        def title = sec[1].trim()
+        def body = sec[2].trim()
+        def emoji = emojiMap.get(title, "📌")
+        def formattedBody = body.readLines()
+                .collect { it.replaceFirst(/^- /, "• ") }
+                .join("\n")
+        changelogFields << [title: "$emoji $title".trim(), body: formattedBody]
+    }
+
+    return changelogFields
+}
+
+sendDiscordWebhook {
+    def modUrl = modSourceUrl.replace(
+            "https://github.com/", 
+            "https://raw.githubusercontent.com/"
+        ).concat("/main/versions.json")
+    def json
+    try {
+        def jsonText = new URL(modUrl).text
+        json = new groovy.json.JsonSlurper().parseText(jsonText)
+    } catch (Exception exception) {
+        println "Discord Webhook: ${exception}"
+        return
+    }
+
+    channel = project.findProperty("discordWebhookChannelId") ?: ""
+    token = project.findProperty("discordWebhookToken") ?: ""
+    def epochSeconds = System.currentTimeMillis() / 1000 as long
+    content = "<t:${epochSeconds}:R>"
+    flags = 4096
+//    debug = true
+
+    embed {
+        title = "[${libs.versions.minecraft.get()}] ${project.modName} v${project.modVersion}"
+        description = project.modDescription
+        url = "https://modrinth.com/mod/${json.distributions.modrinth?.slug}"
+        timestamp = Instant.now().toString()
+        color = 5814783
+        addFooter([project.modName, "v${project.modVersion}", libs.versions.minecraft.get()])
+        addImage("https://raw.githubusercontent.com/Fuzss/modresources/main/pages/data/${project.modId}/banner.png")
+        addThumbnail("https://raw.githubusercontent.com/Fuzss/modresources/main/pages/data/${project.modId}/logo.png")
+        author = [
+                name    : "Fuzs",
+                url     : "https://www.curseforge.com/members/fuzs",
+                icon_url: "https://raw.githubusercontent.com/Fuzss/modresources/main/pages/commons/avatar.png"
+        ]
+
+        def changelogFields = parseChangelogFields()
+        changelogFields.each { addField(it.title, it.body) }
+        addField("\uD83D\uDCE5 Downloads", "<:CurseForge:893088361634471948> [CurseForge](https://www.curseforge.com/minecraft/mc-mods/${json.distributions.curseforge?.slug})\n<:modrinth:1176378033578459206> [Modrinth](https://modrinth.com/mod/${json.distributions.modrinth?.slug})", true)
+        addField("<:github:1422695832951455814> GitHub", "\uD83D\uDC68\u200D\uD83D\uDCBB [Source](https://github.com/Fuzss/${json.distributions.github?.slug})\n\u26A0\uFE0F [Issues](https://github.com/Fuzss/${json.distributions.github?.slug}/issues)", true)
+        addField("\uD83D\uDCAC Support", "<:Fuzs:993195872131235881> <#917550806922846299>", true)
+    }
+}
