@@ -449,10 +449,7 @@ subprojects {
         def incrementBuildNumber = rootProject.tasks.named("incrementBuildNumber")
         dependsOn(incrementBuildNumber)
 
-        def jarTask = tasks.named(
-                net.fabricmc.loom.task.RemapTaskConfiguration.REMAP_JAR_TASK_NAME,
-                AbstractArchiveTask
-        )
+        def jarTask = tasks.named("remapJar", AbstractArchiveTask)
         dependsOn(jarTask)
 
         if (buildOutput.isPresent()) {
@@ -471,8 +468,8 @@ subprojects {
             }
 
             def projectBuildNumber = properties.getProperty("project.build") ?: "1"
-            def oldValue = "v${mod.version}-mc"
-            def newValue = "v${mod.version}-dev.${projectBuildNumber}-mc"
+            def oldValue = "v${modVersion}-mc"
+            def newValue = "v${modVersion}-dev.${projectBuildNumber}-mc"
 
             rename { it.replace(oldValue, newValue) }
         }
