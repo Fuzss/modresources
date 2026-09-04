@@ -6,7 +6,6 @@ allSubprojects.forEach { projectName ->
         group = "multiloader/build"
         dependsOn(":${projectName}:clean")
     }
-
 }
 
 tasks.register("all-clean") {
@@ -81,7 +80,6 @@ tasks.register("all-curseforge") {
     group = "multiloader/remote"
     dependsOn(allSubprojects.collect { ":${it}:clean" })
     dependsOn(modLoaderSubprojects.collect { ":${it}:publishCurseforge" })
-
 }
 
 modLoaderSubprojects.forEach { projectName ->
