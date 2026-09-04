@@ -9,7 +9,7 @@ allprojects {
     apply plugin: "idea"
 
     archivesBaseName = "${modName.replaceAll("[^a-zA-Z]", "")}"
-    version = "v${modVersion}-${libs.versions.minecraft.get()}-${project.name}"
+    version = "v${modVersion}-mc${libs.versions.minecraft.get()}-${project.name}"
     group = modMavenGroup
 
     repositories {
@@ -391,37 +391,80 @@ subprojects {
         }
     }
 
-    task copyJarToDir(type: Copy) {
-        onlyIf { project.hasProperty("buildJarOutputDir") && project.hasProperty("uniqueBuildNumber") }
-        if (project.findProperty("copyBuildJar").toBoolean()) {
-            from remapJar
-            into project.findProperty("buildJarOutputDir")
-            // add build number to be able to distinguish jars when testing thorough official launcher
-            // build number is stored in global gradle.properties
-            rename { fileName -> fileName.replace("v${modVersion}", "v${modVersion}.${uniqueBuildNumber}") }
+    def copyDevelopmentJar = tasks.register("copyDevelopmentJar", Copy) {
+        def buildOutput = providers.gradleProperty("fuzs.multiloader.build.output")
+        onlyIf { buildOutput.isPresent() }
+
+        def incrementBuildNumber = rootProject.tasks.named("incrementBuildNumber")
+        dependsOn(incrementBuildNumber)
+
+        def jarTask = tasks.named(
+                net.fabricmc.loom.task.RemapTaskConfiguration.REMAP_JAR_TASK_NAME,
+                AbstractArchiveTask
+        )
+        dependsOn(jarTask)
+
+        if (buildOutput.isPresent()) {
+            from(jarTask.flatMap { it.archiveFile })
+            into(buildOutput.get())
+
+            // This runs at configuration time before the properties file is updated.
+            // But that is fine as the value from the last run is still unique.
+            def buildPropertiesFile = rootProject.layout.buildDirectory.file("build.properties").get().asFile
+            def properties = new Properties()
+
+            if (buildPropertiesFile.exists()) {
+                buildPropertiesFile.withInputStream {
+                    properties.load(it)
+                }
+            }
+
+            def projectBuildNumber = properties.getProperty("project.build") ?: "1"
+            def oldValue = "v${mod.version}-mc"
+            def newValue = "v${mod.version}-dev.${projectBuildNumber}-mc"
+
+            rename { it.replace(oldValue, newValue) }
         }
     }
 
-    task incrementBuildNumber {
-        onlyIf { project.hasProperty("uniqueBuildNumber") }
-        doLast {
-            var propertiesName = "gradle.properties"
-            // build number is stored in global gradle.properties
-            var propertiesFile = new File(project.gradle.gradleUserHomeDir, propertiesName)
-            if (!propertiesFile.canRead()) { throw new FileNotFoundException("Could not read file ".concat(propertiesName)) }
-            var buildNumberMatcher = java.util.regex.Pattern.compile("uniqueBuildNumber=(\\d+)").matcher(propertiesFile.getText())
-            buildNumberMatcher.find()
-            var versionCode = Integer.parseInt(buildNumberMatcher.group(1))
-            var propertiesContent = buildNumberMatcher.replaceAll("uniqueBuildNumber=" + ++versionCode)
-            propertiesFile.write(propertiesContent)
-        }
+    tasks.named("build") {
+        finalizedBy(copyDevelopmentJar)
     }
-
-    build.finalizedBy project.tasks.copyJarToDir, project.tasks.incrementBuildNumber
 }
 
 architectury {
     minecraft = libs.versions.minecraft.get()
+}
+
+tasks.register("incrementBuildNumber", DefaultTask) {
+    def propertiesFile = layout.buildDirectory.file("build.properties")
+
+    inputs.file(propertiesFile)
+            .optional()
+            .withPathSensitivity(PathSensitivity.RELATIVE)
+
+    outputs.file(propertiesFile)
+
+    outputs.cacheIf { false }
+
+    doLast {
+        def file = propertiesFile.get().asFile
+        def properties = new Properties()
+
+        if (file.exists()) {
+            file.withInputStream {
+                properties.load(it)
+            }
+        }
+
+        def uniqueBuildNumber = properties.getProperty("project.build")?.toInteger() ?: 1
+        properties.setProperty("project.build", (uniqueBuildNumber + 1).toString())
+
+        file.parentFile.mkdirs()
+        file.withOutputStream {
+            properties.store(it, null)
+        }
+    }
 }
 
 apply from: "https://raw.githubusercontent.com/Fuzss/modresources/main/gradle/v2/tasks.gradle"
