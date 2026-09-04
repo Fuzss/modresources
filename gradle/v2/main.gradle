@@ -1,9 +1,9 @@
 println("Java: " + System.getProperty("java.version") + " JVM: " + System.getProperty("java.vm.version") + "(" + System.getProperty("java.vendor") + ") Arch: " + System.getProperty("os.arch"))
 
 allprojects {
-    apply plugin: "architectury-plugin"
     apply plugin: "java"
     apply plugin: "java-library"
+    apply plugin: "architectury-plugin"
     apply plugin: "maven-publish"
     apply plugin: "signing"
     apply plugin: "idea"
@@ -16,8 +16,12 @@ allprojects {
         mavenCentral()
         mavenLocal()
         maven {
-            name = "Sponge"
-            url = "https://repo.spongepowered.org/repository/maven-public/"
+            name = "Fuzs Mod Resources"
+            url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/"
+        }
+        maven {
+            name = "Parchment"
+            url = "https://maven.parchmentmc.org"
         }
         maven {
             name = "Jared"
@@ -32,33 +36,70 @@ allprojects {
             url = "https://maven.shedaniel.me/"
         }
         maven {
-            name = "Parchment"
-            url = "https://maven.parchmentmc.org"
+            name = "Wisp Forest"
+            url "https://maven.wispforest.io/releases/"
         }
         maven {
-            name = "Fuzs Mod Resources"
-            url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/"
+            name = "Su5eD"
+            url "https://maven.su5ed.dev/releases/"
+        }
+        maven {
+            name = "Minecraft Forge"
+            url "https://maven.minecraftforge.net/"
         }
         maven {
             name = "Terraformers"
             url = "https://maven.terraformersmc.com/"
         }
-        maven {
-            name = "ModMaven"
-            url = "https://modmaven.dev"
+        exclusiveContent {
+            forRepository {
+                maven {
+                    name = "AppleSkin"
+                    url = uri("https://maven.ryanliptak.com/")
+                }
+            }
+            filter {
+                includeGroup("squeek.appleskin")
+            }
         }
-        maven {
-            name = "AppleSkin"
-            url "https://maven.ryanliptak.com/"
+        exclusiveContent {
+            forRepository {
+                maven {
+                    name "KosmX"
+                    url "https://maven.kosmx.dev/"
+                }
+            }
+            filter {
+                includeGroup("dev.kosmx.player-anim")
+            }
         }
-        flatDir {
-            dirs "libs"
+        exclusiveContent {
+            forRepository {
+                maven {
+                    name = "GeckoLib"
+                    url = "https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/"
+                }
+            }
+            filter {
+                includeGroup("software.bernie.geckolib")
+            }
+        }
+        exclusiveContent {
+            forRepository {
+                maven {
+                    name = "SmartBrainLib"
+                    url = "https://dl.cloudsmith.io/public/tslat/sbl/maven/"
+                }
+            }
+            filter {
+                includeGroup("net.tslat.smartbrainlib")
+            }
         }
         exclusiveContent {
             forRepository {
                 maven {
                     name = "CurseForge"
-                    url = "https://cursemaven.com"
+                    url = "https://cursemaven.com/"
                 }
             }
             filter {
@@ -69,7 +110,7 @@ allprojects {
             forRepository {
                 maven {
                     name = "Modrinth"
-                    url = "https://api.modrinth.com/maven"
+                    url = "https://api.modrinth.com/maven/"
                 }
             }
             filter {
@@ -85,12 +126,13 @@ allprojects {
         // If Javadoc is generated, this must be specified in that task too.
         options.encoding = "UTF-8"
         options.release = libs.versions.java.get() as Integer
+        options.warnings = false
     }
 
     java {
+        toolchain.languageVersion = JavaLanguageVersion.of(libs.versions.java.get())
         withSourcesJar()
         withJavadocJar()
-        toolchain.languageVersion = JavaLanguageVersion.of(libs.versions.java.get())
     }
 
     // silence missing javadoc comments, we just don't care
@@ -128,6 +170,15 @@ allprojects {
         // other mod developers.
         enabled = false
     }
+
+    // IDEA no longer automatically downloads sources / javadoc jars for dependencies, 
+    // so we need to explicitly enable the behavior.
+    idea {
+        module {
+            downloadSources = true
+            downloadJavadoc = true
+        }
+    }
 }
 
 subprojects {
@@ -147,10 +198,10 @@ subprojects {
     dependencies {
         minecraft "com.mojang:minecraft:${libs.versions.minecraft.get()}"
         mappings loom.layered() {
-            parchment("org.parchmentmc.data:parchment-${libs.versions.parchment.minecraft.get()}:${libs.versions.parchment.version.get()}")
             officialMojangMappings {
                 setNameSyntheticMembers(true)
             }
+            parchment("org.parchmentmc.data:parchment-${libs.versions.parchment.minecraft.get()}:${libs.versions.parchment.version.get()}@zip")
         }
     }
 
@@ -185,12 +236,12 @@ subprojects {
                 "modUpdateUrl": modUpdateUrl,
                 "modAuthor": modAuthor,
                 "modLicense": modLicense,
-                "minFabricVersion": libs.versions.fabricloader.min.get(),
-                "minFabricApiVersion": libs.versions.fabricapi.min.get(),
+                "minFabricVersion": libs.versions.hasProperty("fabricloader") && libs.versions.fabricloader.hasProperty("min") ? libs.versions.fabricloader.min.get() : "1",
+                "minFabricApiVersion": libs.versions.hasProperty("fabricapi") && libs.versions.fabricapi.hasProperty("min") ? libs.versions.fabricapi.min.get() : "1",
                 "minForgeFMLVersion": "1",
-                "minForgeVersion": libs.versions.minecraftforge.min.get(),
+                "minForgeVersion": libs.versions.hasProperty("minecraftforge") && libs.versions.minecraftforge.hasProperty("min") ? libs.versions.minecraftforge.min.get() : "1",
                 "minNeoForgeFMLVersion": "1",
-                "minNeoForgeVersion": libs.versions.neoforge.min.get(),
+                "minNeoForgeVersion": libs.versions.hasProperty("neoforge") && libs.versions.neoforge.hasProperty("min") ? libs.versions.neoforge.min.get() : "1",
                 "minecraftVersion": libs.versions.minecraft.get(),
                 "minPuzzlesVersion": libs.versions.hasProperty("puzzleslib") && libs.versions.puzzleslib.hasProperty("min") ? libs.versions.puzzleslib.min.get() : "1",
                 "resourcePackFormat": libs.versions.resources.get(),
@@ -361,7 +412,7 @@ subprojects {
 //	    debugMode = true
     }
 
-    task refreshUpdateJson {
+    tasks.register("refreshUpdateJson") {
         onlyIf { project.hasProperty("modResources") }
         doLast {
             var updateFile = file(project.findProperty("modResources").concat(File.separator).concat("update").concat(File.separator).concat("${modId}").concat(".json"))
