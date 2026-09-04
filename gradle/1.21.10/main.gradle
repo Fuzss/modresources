@@ -590,19 +590,6 @@ def parseChangelogFields() {
 }
 
 sendDiscordWebhook {
-    def modUrl = modSourceUrl.replace(
-            "https://github.com/", 
-            "https://raw.githubusercontent.com/"
-        ).concat("/main/versions.json")
-    def json
-    try {
-        def jsonText = new URL(modUrl).text
-        json = new groovy.json.JsonSlurper().parseText(jsonText)
-    } catch (Exception exception) {
-        println "Discord Webhook: ${exception}"
-        return
-    }
-
     channel = project.findProperty("discordWebhookChannelId") ?: ""
     token = project.findProperty("discordWebhookToken") ?: ""
     def epochSeconds = System.currentTimeMillis() / 1000 as long
@@ -611,6 +598,19 @@ sendDiscordWebhook {
 //    debug = true
 
     embed {
+        def modUrl = modSourceUrl.replace(
+                "https://github.com/", 
+                "https://raw.githubusercontent.com/"
+            ).concat("/main/versions.json")
+        def json
+        try {
+            def jsonText = new URL(modUrl).text
+            json = new groovy.json.JsonSlurper().parseText(jsonText)
+        } catch (Exception exception) {
+            println "Discord Webhook: ${exception}"
+            return
+        }
+
         title = "[${libs.versions.minecraft.get()}] ${project.modName} v${project.modVersion}"
         description = project.modDescription
         url = "https://modrinth.com/mod/${json.distributions.modrinth?.slug}"
