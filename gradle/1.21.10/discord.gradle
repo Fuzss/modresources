@@ -1,18 +1,23 @@
-import groovy.json.JsonOutput
-
 class DiscordWebhookExtension {
     String channel
     String token
     String content
-    List<Map<String, Object>> embeds = []
+    List<Closure<?>> embeds = []
     int flags
     boolean debug = false
 
     void embed(Closure<?> closure) {
-        closure.delegate = new EmbedBuilder()
-        closure.resolveStrategy = Closure.DELEGATE_FIRST
-        closure.call()
-        embeds.add(closure.delegate.build())
+        embeds.add(closure)
+    }
+
+    List<Map<String, Object>> buildEmbeds() {
+        embeds.collect { closure ->
+            def embedBuilder = new EmbedBuilder()
+            closure.delegate = embedBuilder
+            closure.resolveStrategy = Closure.DELEGATE_FIRST
+            closure.call()
+            embedBuilder.build()
+        }
     }
 
     static class EmbedBuilder {
@@ -71,14 +76,17 @@ tasks.register("sendDiscordWebhook") {
 
         def payload = [:]
         if (ext.content?.trim()) payload.content = ext.content
-        if (ext.embeds) payload.embeds = ext.embeds
+
+        def embeds = ext.buildEmbeds()
+        if (embeds) payload.embeds = embeds
+
         if (ext.flags) payload.flags = ext.flags
 
         if (!payload) {
             throw new GradleException("DiscordWebhookExtension: Payload is empty")
         }
 
-        def json = JsonOutput.toJson(payload)
+        def json = groovy.json.JsonOutput.toJson(payload)
         def url = "https://discord.com/api/webhooks/${ext.channel}/${ext.token}"
 
         if (ext.debug) {
