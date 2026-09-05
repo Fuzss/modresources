@@ -22,6 +22,7 @@ ENVIRONMENTS = {"finder", "idea"}
 MOD_LOADERS = {"fabric", "neoforge"}
 DISTRIBUTIONS = {"client", "server"}
 UPLOADING_SITES = {"curseforge", "modrinth", "github"}
+LEGACY_TYPES = {"properties", "tasks"}
 
 SEMANTIC_VERSION_PATTERN = re.compile(r"^\d+\.\d+\.\d+$")
 VERSION_KEYWORDS = {"latest", "patch", "minor", "major"}
@@ -54,30 +55,30 @@ def merge_config_into_args(parser, args, config_data):
 def parse_args():
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('--bare', default=False, action="store_true", help="Skip any Gradle setup.")
+    parser.add_argument("--bare", default=False, action="store_true", help="Skip any Gradle setup.")
     parser.add_argument("--branch", default=[], action="append", nargs=2, metavar=("BRANCH_NAME", "SUPPORT_STATUS"), help="Updates branch status in versions.json, can be used multiple times. Format: --branch <branch_name> <support_status>")
-    parser.add_argument('--catalog', type=str, default=None, metavar="VERSION_CATALOG", help="Version-based catalog. Example: --catalog 26.2-SNAPSHOT")
+    parser.add_argument("--catalog", type=str, default=None, metavar="VERSION_CATALOG", help="Version-based catalog. Example: --catalog 26.2-SNAPSHOT")
     parser.add_argument("--changelog", default=None, action="append", nargs=2, metavar=("SECTION_NAME", "TEXT"), help="Add a changelog line, can be used multiple times. Format: --changelog <section_name> <text>")
-    parser.add_argument('--commit', default=False, action="store_true", help="Commit to GitHub.")
+    parser.add_argument("--commit", default=False, action="store_true", help="Commit to GitHub.")
     parser.add_argument("--config", type=str, metavar="CONFIG_NAME", help="Args as JSON config file. Example: --config upgrade-upload")
-    parser.add_argument('--data', default=False, action="store_true", help="Generate data.")
-    parser.add_argument('--gradle', type=str, default=None, metavar="GRADLE_VERSION", help="Gradle wrapper version. Example: --gradle 9.6.0")
-    parser.add_argument('--id', type=str, default=None, metavar="MOD_ID", help="Mod id. Example: --id examplemod")
-    parser.add_argument('--init', nargs='?', const=True, default=None, metavar="SOURCE_BRANCH", help="Setup git repository and version branch, with optional argument. Example: --init [26.2.x]")
-    parser.add_argument('--launch', default=[], action="append", nargs="*", metavar=("MOD_LOADER", "DISTRIBUTION"), help="Launch the game, can be used multiple times. Format: --launch <mod_loader> <distribution>")
-    parser.add_argument('--legacy', default=False, action="store_true", help="Use legacy Gradle task names.")
-    parser.add_argument('--minecraft', type=str, required=True, metavar="MINECRAFT_VERSION", help="Minecraft name. Example: --minecraft 26.2.x")
-    parser.add_argument('--name', type=str, required=True, metavar="REPOSITORY_NAME", help="Repository name. Example: --name example-mod")
-    parser.add_argument('--notify', default=False, action="store_true", help="Notify via Discord webhook.")
-    parser.add_argument('--open', default=None, nargs="*", metavar="ENVIRONMENT", help="Open in Finder, or Idea. Format: --open <environment>")
-    parser.add_argument('--path', type=str, default=None, metavar="ROOT_PATH", help="Override default root path. Example: --path /absolute/path/to/project")
-    parser.add_argument('--plugins', type=str, default=None, metavar="PLUGINS_VERSION", help="Multiloader convention plugins version. Example: --plugins 1.1-SNAPSHOT")
+    parser.add_argument("--data", default=False, action="store_true", help="Generate data.")
+    parser.add_argument("--gradle", type=str, default=None, metavar="GRADLE_VERSION", help="Gradle wrapper version. Example: --gradle 9.6.0")
+    parser.add_argument("--id", type=str, default=None, metavar="MOD_ID", help="Mod id. Example: --id examplemod")
+    parser.add_argument("--init", nargs="?", const=True, default=None, metavar="SOURCE_BRANCH", help="Setup git repository and version branch, with optional argument. Example: --init [26.2.x]")
+    parser.add_argument("--launch", default=[], action="append", nargs="*", metavar=("MOD_LOADER", "DISTRIBUTION"), help="Launch the game, can be used multiple times. Format: --launch <mod_loader> <distribution>")
+    parser.add_argument("--legacy", nargs="?", const=True, default=None, metavar="SCOPE", help="Use legacy Gradle property and task names. Format: --legacy <scope>")
+    parser.add_argument("--minecraft", type=str, required=True, metavar="MINECRAFT_VERSION", help="Minecraft name. Example: --minecraft 26.2.x")
+    parser.add_argument("--name", type=str, required=True, metavar="REPOSITORY_NAME", help="Repository name. Example: --name example-mod")
+    parser.add_argument("--notify", default=False, action="store_true", help="Notify via Discord webhook.")
+    parser.add_argument("--open", default=None, nargs="*", metavar="ENVIRONMENT", help="Open in Finder, or Idea. Format: --open <environment>")
+    parser.add_argument("--path", type=str, default=None, metavar="ROOT_PATH", help="Override default root path. Example: --path /absolute/path/to/project")
+    parser.add_argument("--plugins", type=str, default=None, metavar="PLUGINS_VERSION", help="Multiloader convention plugins version. Example: --plugins 1.1-SNAPSHOT")
     parser.add_argument("--properties", default=None, action="append", nargs=2, metavar=("KEY", "VALUE"), help="Set a gradle.properties value, can be used multiple times. Format: --properties <key> <value>")
-    parser.add_argument('--publish', default=False, action="store_true", help="Publish to Maven.")
-    parser.add_argument('--spotless', type=str, default=None, metavar="TASK_NAME", help="Run spotless upgrade tasks for a specific game update. Example: --spotless tinytakeover")
-    parser.add_argument('--upgrade', nargs='?', const=True, default=None, metavar="PATCHES_NAME", help="Run workspace upgrade, potentially for a specific version, with optional argument. Example: --upgrade [26.1.x]")
-    parser.add_argument('--upload', default=None, nargs="*", metavar=("MOD_LOADER", "WEBSITE"), help="Upload to CurseForge, Modrinth, or GitHub. Format: --upload <mod_loader> <website>")
-    parser.add_argument('--version', type=str, default=None, metavar="PROJECT_VERSION", help="Mod version. Example: --version 26.2.0")
+    parser.add_argument("--publish", default=False, action="store_true", help="Publish to Maven.")
+    parser.add_argument("--spotless", type=str, default=None, metavar="TASK_NAME", help="Run spotless upgrade tasks for a specific game update. Example: --spotless tinytakeover")
+    parser.add_argument("--upgrade", nargs="?", const=True, default=None, metavar="PATCHES_NAME", help="Run workspace upgrade, potentially for a specific version, with optional argument. Example: --upgrade [26.1.x]")
+    parser.add_argument("--upload", default=None, nargs="*", metavar=("MOD_LOADER", "WEBSITE"), help="Upload to CurseForge, Modrinth, or GitHub. Format: --upload <mod_loader> <website>")
+    parser.add_argument("--version", type=str, default=None, metavar="PROJECT_VERSION", help="Mod version. Example: --version 26.2.0")
 
     args = parser.parse_args()
 
@@ -367,6 +368,16 @@ def validate_upload_parameters(parameters):
     is_valid_parameter(other_argument, UPLOADING_SITES)
     return (mod_loader, other_argument)
 
+def validate_legacy_parameter(parameter):
+    if parameter is None:
+        return set()
+    elif not isinstance(parameter, str):
+        return set(LEGACY_TYPES)
+    
+    scope = parameter.lower()
+    is_valid_parameter(scope, LEGACY_TYPES)
+    return {scope}
+
 def parse_changelog_sections(section_pairs):
     if not section_pairs:
         return dict()
@@ -447,11 +458,11 @@ def bump_version(version, component):
 
     raise ValueError(component)
 
-def create_gradle_properties(args):
+def create_gradle_properties(args, legacy_properties=False):
     properties = {}
 
     if args.version:
-        version_key = "modVersion" if args.legacy else "mod.version"
+        version_key = "modVersion" if legacy_properties else "mod.version"
 
         version = args.version.lower()
 
@@ -468,7 +479,7 @@ def create_gradle_properties(args):
             )
 
     if args.catalog:
-        properties["dependenciesVersionCatalog" if args.legacy else "project.libs"] = args.catalog
+        properties["dependenciesVersionCatalog" if legacy_properties else "project.libs"] = args.catalog
 
     if args.plugins:
         properties["project.plugins"] = args.plugins
@@ -479,52 +490,52 @@ def create_gradle_properties(args):
 
     return properties
 
-def run_launch(mod_loader, distribution, project_path, legacy_task_names=False):
+def run_launch(mod_loader, distribution, project_path, legacy_tasks=False):
     if mod_loader == "fabric":
         if distribution == "client":
-            subprocess.run(["./gradlew", "fabricClient" if legacy_task_names else "fabric-client"], cwd=project_path, check=True)
+            subprocess.run(["./gradlew", "fabricClient" if legacy_tasks else "fabric-client"], cwd=project_path, check=True)
         elif distribution == "server":
-            subprocess.run(["./gradlew", "fabricServer" if legacy_task_names else "fabric-server"], cwd=project_path, check=True)
+            subprocess.run(["./gradlew", "fabricServer" if legacy_tasks else "fabric-server"], cwd=project_path, check=True)
         else:
             error2(f"Unsupported argument: {distribution}")
     elif mod_loader == "neoforge":
         if distribution == "client":
-            subprocess.run(["./gradlew", "neoForgeClient" if legacy_task_names else "neoforge-client"], cwd=project_path, check=True)
+            subprocess.run(["./gradlew", "neoForgeClient" if legacy_tasks else "neoforge-client"], cwd=project_path, check=True)
         elif distribution == "server":
-            subprocess.run(["./gradlew", "neoForgeServer" if legacy_task_names else "neoforge-server"], cwd=project_path, check=True)
+            subprocess.run(["./gradlew", "neoForgeServer" if legacy_tasks else "neoforge-server"], cwd=project_path, check=True)
         else:
             error2(f"Unsupported argument: {distribution}")
     else:
         error2(f"Unsupported argument: {mod_loader}")
 
-def run_upload(mod_loader, website, project_path, legacy_task_names=False):
+def run_upload(mod_loader, website, project_path, legacy_tasks=False):
     if mod_loader == "fabric":
         if website == "curseforge":
-            subprocess.run(["./gradlew", "fabricUploadCurseForge" if legacy_task_names else "fabric-curseforge"], cwd=project_path, check=True)
+            subprocess.run(["./gradlew", "fabricUploadCurseForge" if legacy_tasks else "fabric-curseforge"], cwd=project_path, check=True)
         elif website == "modrinth":
-            subprocess.run(["./gradlew", "fabricUploadModrinth" if legacy_task_names else "fabric-modrinth"], cwd=project_path, check=True)
+            subprocess.run(["./gradlew", "fabricUploadModrinth" if legacy_tasks else "fabric-modrinth"], cwd=project_path, check=True)
         elif website == "github":
-            subprocess.run(["./gradlew", "fabricUploadGitHub" if legacy_task_names else "fabric-github"], cwd=project_path, check=True)
+            subprocess.run(["./gradlew", "fabricUploadGitHub" if legacy_tasks else "fabric-github"], cwd=project_path, check=True)
         else:
-            subprocess.run(["./gradlew", "fabricUploadEverywhere" if legacy_task_names else "fabric-all"], cwd=project_path, check=True)
+            subprocess.run(["./gradlew", "fabricUploadEverywhere" if legacy_tasks else "fabric-all"], cwd=project_path, check=True)
     elif mod_loader == "neoforge":
         if website == "curseforge":
-            subprocess.run(["./gradlew", "neoForgeUploadCurseForge" if legacy_task_names else "neoforge-curseforge"], cwd=project_path, check=True)
+            subprocess.run(["./gradlew", "neoForgeUploadCurseForge" if legacy_tasks else "neoforge-curseforge"], cwd=project_path, check=True)
         elif website == "modrinth":
-            subprocess.run(["./gradlew", "neoForgeUploadModrinth" if legacy_task_names else "neoforge-modrinth"], cwd=project_path, check=True)
+            subprocess.run(["./gradlew", "neoForgeUploadModrinth" if legacy_tasks else "neoforge-modrinth"], cwd=project_path, check=True)
         elif website == "github":
-            subprocess.run(["./gradlew", "neoForgeUploadGitHub" if legacy_task_names else "neoforge-github"], cwd=project_path, check=True)
+            subprocess.run(["./gradlew", "neoForgeUploadGitHub" if legacy_tasks else "neoforge-github"], cwd=project_path, check=True)
         else:
-            subprocess.run(["./gradlew", "neoForgeUploadEverywhere" if legacy_task_names else "neoforge-all"], cwd=project_path, check=True)
+            subprocess.run(["./gradlew", "neoForgeUploadEverywhere" if legacy_tasks else "neoforge-all"], cwd=project_path, check=True)
     else:
         if website == "curseforge":
-            subprocess.run(["./gradlew", "allUploadCurseForge" if legacy_task_names else "all-curseforge"], cwd=project_path, check=True)
+            subprocess.run(["./gradlew", "allUploadCurseForge" if legacy_tasks else "all-curseforge"], cwd=project_path, check=True)
         elif website == "modrinth":
-            subprocess.run(["./gradlew", "allUploadModrinth" if legacy_task_names else "all-modrinth"], cwd=project_path, check=True)
+            subprocess.run(["./gradlew", "allUploadModrinth" if legacy_tasks else "all-modrinth"], cwd=project_path, check=True)
         elif website == "github":
-            subprocess.run(["./gradlew", "allUploadGitHub" if legacy_task_names else "all-github"], cwd=project_path, check=True)
+            subprocess.run(["./gradlew", "allUploadGitHub" if legacy_tasks else "all-github"], cwd=project_path, check=True)
         else:
-            subprocess.run(["./gradlew", "allUploadEverywhere" if legacy_task_names else "all-all"], cwd=project_path, check=True)
+            subprocess.run(["./gradlew", "allUploadEverywhere" if legacy_tasks else "all-all"], cwd=project_path, check=True)
 
 def update_license_year(file_path):
     current_year = datetime.now().year
@@ -792,7 +803,7 @@ def main():
     update_directory(args, main_path)
     update_directory(args, project_path)
 
-    environment = validate_open_parameters(args.open, "finder")
+    environment = validate_open_parameters(args.open, ENVIRONMENTS[0])
     if environment:
         info2(f"Opening in {environment.capitalize()}...")
         if environment == "finder":
@@ -821,11 +832,15 @@ def main():
     if args.upgrade:
         info2("Upgrading workspace...")
         run_workspace_upgrade(args, base_path, main_path, project_path)
-    
-    updated_gradle_properties = create_gradle_properties(args)
+
+    legacy = validate_legacy_parameter(args.legacy)
+    legacy_properties = "properties" in legacy
+    legacy_tasks = "tasks" in legacy
+
+    updated_gradle_properties = create_gradle_properties(args, legacy_properties)
     if updated_gradle_properties:
         info2(f"Updating gradle.properties...")
-    
+
     gradle_properties_path = f"{project_path}/gradle.properties"
     gradle_properties_remove_predicate = lambda key: key.startswith("project.libs.") if args.upgrade else None
     gradle_properties = update_gradle_properties(
@@ -834,12 +849,12 @@ def main():
         remove_predicate=gradle_properties_remove_predicate
     )
     if args.version:
-        version_key = "modVersion" if args.legacy else "mod.version"
+        version_key = "modVersion" if legacy_properties else "mod.version"
         args.version = gradle_properties[version_key]
 
     if args.version:
         changelog_path = f"{project_path}/CHANGELOG.md"
-        full_version = f"v{args.version}-{"" if args.legacy else "mc"}{args.minecraft}"
+        full_version = f"v{args.version}-mc{args.minecraft}"
         changelog_section_data = parse_changelog_sections(args.changelog)
 
         if changelog_section_data:
@@ -880,7 +895,7 @@ def main():
 
     if args.data and not args.bare:
         info2("Running data generation...")
-        subprocess.run(["./gradlew", "neoForgeData" if args.legacy else "neoforge-data"], cwd=project_path, check=True)
+        subprocess.run(["./gradlew", "neoForgeData" if legacy_tasks else "neoforge-data"], cwd=project_path, check=True)
 
     if not args.bare:
         launch_parameters = [ 
@@ -889,7 +904,7 @@ def main():
         ]
         for parameter_set in launch_parameters:
             info2(f"Launching {parameter_set[0].capitalize()} {parameter_set[1].capitalize()}...")
-            run_launch(parameter_set[0], parameter_set[1], project_path, args.legacy)
+            run_launch(parameter_set[0], parameter_set[1], project_path, legacy_tasks)
 
     if args.version and args.commit:
         info2(f"Commiting version v{args.version}...")
@@ -897,17 +912,17 @@ def main():
 
     if args.version and not args.bare and args.publish:
         info2(f"Publishing version v{args.version}...")
-        subprocess.run(["./gradlew", "allPublish" if args.legacy else "all-publish"], cwd=project_path, check=True)
+        subprocess.run(["./gradlew", "allPublish" if legacy_tasks else "all-publish"], cwd=project_path, check=True)
 
     if not args.bare:
         upload_parameters = validate_upload_parameters(args.upload)
         if args.version and upload_parameters:
             info2(f"Uploading version v{args.version}{f" for {upload_parameters[0].capitalize()}" if upload_parameters[0] else ""}{f" to {upload_parameters[1].capitalize()}" if upload_parameters[1] else ""}...")
-            run_upload(upload_parameters[0], upload_parameters[1], project_path, args.legacy)
+            run_upload(upload_parameters[0], upload_parameters[1], project_path, legacy_tasks)
 
     if args.version and not args.bare and args.notify:
         info2(f"Announcing version v{args.version}...")
-        subprocess.run(["./gradlew", "notifyDiscord" if args.legacy else "all-discord"], cwd=project_path, check=True)
+        subprocess.run(["./gradlew", "notifyDiscord" if legacy_tasks else "all-discord"], cwd=project_path, check=True)
 
 if __name__ == "__main__":
     main()
