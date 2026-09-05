@@ -803,7 +803,7 @@ def main():
     update_directory(args, main_path)
     update_directory(args, project_path)
 
-    environment = validate_open_parameters(args.open, ENVIRONMENTS[0])
+    environment = validate_open_parameters(args.open, "finder")
     if environment:
         info2(f"Opening in {environment.capitalize()}...")
         if environment == "finder":
