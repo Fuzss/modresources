@@ -343,8 +343,8 @@ subprojects {
         repositories {
             maven {
                 name = "FuzsModResources"
-                url = uri(project.hasProperty("modResources") ?
-                        "${project.findProperty("modResources")}/maven" :
+                url = uri(project.hasProperty("fuzs.multiloader.project.resources") ?
+                        "${project.findProperty("fuzs.multiloader.project.resources")}/maven" :
                         System.getenv("local_maven"))
             }
         }
@@ -378,7 +378,7 @@ subprojects {
 //        dryRun = true
 
         curseforge {
-            accessToken = project.findProperty("curseApiToken") ?: ""
+            accessToken = project.findProperty("fuzs.multiloader.remote.curseforge.token") ?: ""
             projectId = projectCurseForgeId
             minecraftVersions.add(libs.versions.minecraft.get())
 
@@ -413,7 +413,7 @@ subprojects {
         }
 
         modrinth {
-            accessToken = project.findProperty("modrinthPersonalAccessToken") ?: ""
+            accessToken = project.findProperty("fuzs.multiloader.remote.modrinth.token") ?: ""
             projectId = projectModrinthId
             minecraftVersions.add(libs.versions.minecraft.get())
             var requiredDependencies = "dependenciesRequired${project.name}Modrinth"
@@ -452,9 +452,9 @@ subprojects {
     }
 
     tasks.register("refreshUpdateJson") {
-        onlyIf { project.hasProperty("modResources") }
+        onlyIf { project.hasProperty("fuzs.multiloader.project.resources") }
         doLast {
-            var updateFile = file(project.findProperty("modResources").concat(File.separator).concat("update").concat(File.separator).concat("${modId}").concat(".json"))
+            var updateFile = file(project.findProperty("fuzs.multiloader.project.resources").concat(File.separator).concat("update").concat(File.separator).concat("${modId}").concat(".json"))
             var updateJson
             if (updateFile.exists() && updateFile.canRead()) {
                 updateJson = new groovy.json.JsonSlurper().parseText(updateFile.text)
@@ -590,8 +590,8 @@ def parseChangelogFields() {
 }
 
 sendDiscordWebhook {
-    channel = project.findProperty("discordWebhookChannelId") ?: ""
-    token = project.findProperty("discordWebhookToken") ?: ""
+    channel = project.findProperty("fuzs.multiloader.remote.discord.channel") ?: ""
+    token = project.findProperty("fuzs.multiloader.remote.discord.token") ?: ""
     def epochSeconds = System.currentTimeMillis() / 1000 as long
     content = "<t:${epochSeconds}:R>"
     flags = 4096
