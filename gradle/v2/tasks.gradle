@@ -72,14 +72,14 @@ modLoaderSubprojects.forEach { projectName ->
         group = "multiloader/remote"
         dependsOn(":Common:clean")
         dependsOn(":${projectName}:clean")
-        dependsOn(":${projectName}:publishCurseforge")
+        dependsOn(":${projectName}:curseforge")
     }
 }
 
 tasks.register("all-curseforge") {
     group = "multiloader/remote"
     dependsOn(allSubprojects.collect { ":${it}:clean" })
-    dependsOn(modLoaderSubprojects.collect { ":${it}:publishCurseforge" })
+    dependsOn(modLoaderSubprojects.collect { ":${it}:curseforge" })
 }
 
 modLoaderSubprojects.forEach { projectName ->
@@ -87,14 +87,14 @@ modLoaderSubprojects.forEach { projectName ->
         group = "multiloader/remote"
         dependsOn(":Common:clean")
         dependsOn(":${projectName}:clean")
-        dependsOn(":${projectName}:publishModrinth")
+        dependsOn(":${projectName}:modrinth")
     }
 }
 
 tasks.register("all-modrinth") {
     group = "multiloader/remote"
     dependsOn(allSubprojects.collect { ":${it}:clean" })
-    dependsOn(modLoaderSubprojects.collect { ":${it}:publishModrinth" })
+    dependsOn(modLoaderSubprojects.collect { ":${it}:modrinth" })
 }
 
 modLoaderSubprojects.forEach { projectName ->
@@ -102,16 +102,16 @@ modLoaderSubprojects.forEach { projectName ->
         group = "multiloader/remote"
         dependsOn(":Common:clean")
         dependsOn(":${projectName}:clean")
-        dependsOn(":${projectName}:publishCurseforge")
-        dependsOn(":${projectName}:publishModrinth")
+        dependsOn(":${projectName}:curseforge")
+        dependsOn(":${projectName}:modrinth")
     }
 }
 
 tasks.register("all-all") {
     group = "multiloader/remote"
     dependsOn(allSubprojects.collect { ":${it}:clean" })
-    dependsOn(modLoaderSubprojects.collect { ":${it}:publishCurseforge" })
-    dependsOn(modLoaderSubprojects.collect { ":${it}:publishModrinth" })
+    dependsOn(modLoaderSubprojects.collect { ":${it}:curseforge" })
+    dependsOn(modLoaderSubprojects.collect { ":${it}:modrinth" })
     dependsOn(":sendDiscordWebhook")
 }
 
