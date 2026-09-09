@@ -7,216 +7,140 @@
 <details open>
 <summary>Latest</summary>
 
-```
-bettermodsbutton-common:fuzs/bettermodsbutton:21.0.2
-```
-```
-bettermodsbutton-common:fuzs/bettermodsbutton:21.1.0
-```
-```
-bettermodsbutton-common:fuzs/bettermodsbutton:21.3.0
-```
-```
-bettermodsbutton-common:fuzs/bettermodsbutton:21.4.1
-```
-```
-bettermodsbutton-common:fuzs/bettermodsbutton:21.5.0
-```
-```
-bettermodsbutton-common:fuzs/bettermodsbutton:21.6.0
-```
-```
-bettermodsbutton-common:fuzs/bettermodsbutton:21.7.0
-```
-```
-bettermodsbutton-common:fuzs/bettermodsbutton:21.8.0
-```
-```
-bettermodsbutton-common:fuzs/bettermodsbutton:21.9.7
-```
-```
-bettermodsbutton-common:fuzs/bettermodsbutton:21.10.1
-```
-```
-bettermodsbutton-common:fuzs/bettermodsbutton:21.11.0
-```
-```
-bettermodsbutton-common:fuzs/bettermodsbutton:26.1.1
-```
+- [21.0.2](./bettermodsbutton-common/21.0.2)
+- [21.1.0](./bettermodsbutton-common/21.1.0)
+- [21.3.0](./bettermodsbutton-common/21.3.0)
+- [21.4.1](./bettermodsbutton-common/21.4.1)
+- [21.5.0](./bettermodsbutton-common/21.5.0)
+- [21.6.0](./bettermodsbutton-common/21.6.0)
+- [21.7.0](./bettermodsbutton-common/21.7.0)
+- [21.8.0](./bettermodsbutton-common/21.8.0)
+- [21.9.7](./bettermodsbutton-common/21.9.7)
+- [21.10.1](./bettermodsbutton-common/21.10.1)
+- [21.11.0](./bettermodsbutton-common/21.11.0)
+- [26.1.1](./bettermodsbutton-common/26.1.1)
 </details>
 
-<details open>
+<details>
 <summary>Versions</summary>
 
-- [21.0.2](./fuzs/bettermodsbutton/21.0.2)
-- [21.1.0](./fuzs/bettermodsbutton/21.1.0)
-- [21.3.0](./fuzs/bettermodsbutton/21.3.0)
-- [21.4.0](./fuzs/bettermodsbutton/21.4.0)
-- [21.4.1](./fuzs/bettermodsbutton/21.4.1)
-- [21.5.0](./fuzs/bettermodsbutton/21.5.0)
-- [21.6.0](./fuzs/bettermodsbutton/21.6.0)
-- [21.7.0](./fuzs/bettermodsbutton/21.7.0)
-- [21.8.0](./fuzs/bettermodsbutton/21.8.0)
-- [21.9.0](./fuzs/bettermodsbutton/21.9.0)
-- [21.9.1](./fuzs/bettermodsbutton/21.9.1)
-- [21.9.2](./fuzs/bettermodsbutton/21.9.2)
-- [21.9.3](./fuzs/bettermodsbutton/21.9.3)
-- [21.9.4](./fuzs/bettermodsbutton/21.9.4)
-- [21.9.5](./fuzs/bettermodsbutton/21.9.5)
-- [21.9.6](./fuzs/bettermodsbutton/21.9.6)
-- [21.9.7](./fuzs/bettermodsbutton/21.9.7)
-- [21.10.0](./fuzs/bettermodsbutton/21.10.0)
-- [21.10.1](./fuzs/bettermodsbutton/21.10.1)
-- [21.11.0](./fuzs/bettermodsbutton/21.11.0)
-- [26.1.1](./fuzs/bettermodsbutton/26.1.1)
+- [21.0.2](./bettermodsbutton-common/21.0.2)
+- [21.1.0](./bettermodsbutton-common/21.1.0)
+- [21.3.0](./bettermodsbutton-common/21.3.0)
+- [21.4.0](./bettermodsbutton-common/21.4.0)
+- [21.4.1](./bettermodsbutton-common/21.4.1)
+- [21.5.0](./bettermodsbutton-common/21.5.0)
+- [21.6.0](./bettermodsbutton-common/21.6.0)
+- [21.7.0](./bettermodsbutton-common/21.7.0)
+- [21.8.0](./bettermodsbutton-common/21.8.0)
+- [21.9.0](./bettermodsbutton-common/21.9.0)
+- [21.9.1](./bettermodsbutton-common/21.9.1)
+- [21.9.2](./bettermodsbutton-common/21.9.2)
+- [21.9.3](./bettermodsbutton-common/21.9.3)
+- [21.9.4](./bettermodsbutton-common/21.9.4)
+- [21.9.5](./bettermodsbutton-common/21.9.5)
+- [21.9.6](./bettermodsbutton-common/21.9.6)
+- [21.9.7](./bettermodsbutton-common/21.9.7)
+- [21.10.0](./bettermodsbutton-common/21.10.0)
+- [21.10.1](./bettermodsbutton-common/21.10.1)
+- [21.11.0](./bettermodsbutton-common/21.11.0)
+- [26.1.1](./bettermodsbutton-common/26.1.1)
 </details>
 
 ### [`bettermodsbutton-forge`](./bettermodsbutton-forge)
 <details open>
 <summary>Latest</summary>
 
-```
-bettermodsbutton-forge:fuzs/bettermodsbutton:3.2.5
-```
-```
-bettermodsbutton-forge:fuzs/bettermodsbutton:4.0.1
-```
-```
-bettermodsbutton-forge:fuzs/bettermodsbutton:4.1.2
-```
-```
-bettermodsbutton-forge:fuzs/bettermodsbutton:4.2.4
-```
-```
-bettermodsbutton-forge:fuzs/bettermodsbutton:5.0.0
-```
-```
-bettermodsbutton-forge:fuzs/bettermodsbutton:6.0.0
-```
-```
-bettermodsbutton-forge:fuzs/bettermodsbutton:7.0.0
-```
-```
-bettermodsbutton-forge:fuzs/bettermodsbutton:8.0.2
-```
-```
-bettermodsbutton-forge:fuzs/bettermodsbutton:20.4.0
-```
-```
-bettermodsbutton-forge:fuzs/bettermodsbutton:21.0.2
-```
-```
-bettermodsbutton-forge:fuzs/bettermodsbutton:21.1.0
-```
-```
-bettermodsbutton-forge:fuzs/bettermodsbutton:21.3.0
-```
-```
-bettermodsbutton-forge:fuzs/bettermodsbutton:21.4.0
-```
+- [3.2.5](./bettermodsbutton-forge/3.2.5)
+- [4.0.1](./bettermodsbutton-forge/4.0.1)
+- [4.1.2](./bettermodsbutton-forge/4.1.2)
+- [4.2.4](./bettermodsbutton-forge/4.2.4)
+- [5.0.0](./bettermodsbutton-forge/5.0.0)
+- [6.0.0](./bettermodsbutton-forge/6.0.0)
+- [7.0.0](./bettermodsbutton-forge/7.0.0)
+- [8.0.2](./bettermodsbutton-forge/8.0.2)
+- [20.4.0](./bettermodsbutton-forge/20.4.0)
+- [21.0.2](./bettermodsbutton-forge/21.0.2)
+- [21.1.0](./bettermodsbutton-forge/21.1.0)
+- [21.3.0](./bettermodsbutton-forge/21.3.0)
+- [21.4.0](./bettermodsbutton-forge/21.4.0)
 </details>
 
-<details open>
+<details>
 <summary>Versions</summary>
 
-- [3.2.4](./fuzs/bettermodsbutton/3.2.4)
-- [3.2.5](./fuzs/bettermodsbutton/3.2.5)
-- [4.0.0](./fuzs/bettermodsbutton/4.0.0)
-- [4.0.1](./fuzs/bettermodsbutton/4.0.1)
-- [4.1.0](./fuzs/bettermodsbutton/4.1.0)
-- [4.1.1](./fuzs/bettermodsbutton/4.1.1)
-- [4.1.2](./fuzs/bettermodsbutton/4.1.2)
-- [4.2.0](./fuzs/bettermodsbutton/4.2.0)
-- [4.2.1](./fuzs/bettermodsbutton/4.2.1)
-- [4.2.2](./fuzs/bettermodsbutton/4.2.2)
-- [4.2.3](./fuzs/bettermodsbutton/4.2.3)
-- [4.2.4](./fuzs/bettermodsbutton/4.2.4)
-- [5.0.0](./fuzs/bettermodsbutton/5.0.0)
-- [6.0.0](./fuzs/bettermodsbutton/6.0.0)
-- [7.0.0](./fuzs/bettermodsbutton/7.0.0)
-- [8.0.0](./fuzs/bettermodsbutton/8.0.0)
-- [8.0.1](./fuzs/bettermodsbutton/8.0.1)
-- [8.0.2](./fuzs/bettermodsbutton/8.0.2)
-- [20.4.0](./fuzs/bettermodsbutton/20.4.0)
-- [21.0.1](./fuzs/bettermodsbutton/21.0.1)
-- [21.0.2](./fuzs/bettermodsbutton/21.0.2)
-- [21.1.0](./fuzs/bettermodsbutton/21.1.0)
-- [21.3.0](./fuzs/bettermodsbutton/21.3.0)
-- [21.4.0](./fuzs/bettermodsbutton/21.4.0)
+- [3.2.4](./bettermodsbutton-forge/3.2.4)
+- [3.2.5](./bettermodsbutton-forge/3.2.5)
+- [4.0.0](./bettermodsbutton-forge/4.0.0)
+- [4.0.1](./bettermodsbutton-forge/4.0.1)
+- [4.1.0](./bettermodsbutton-forge/4.1.0)
+- [4.1.1](./bettermodsbutton-forge/4.1.1)
+- [4.1.2](./bettermodsbutton-forge/4.1.2)
+- [4.2.0](./bettermodsbutton-forge/4.2.0)
+- [4.2.1](./bettermodsbutton-forge/4.2.1)
+- [4.2.2](./bettermodsbutton-forge/4.2.2)
+- [4.2.3](./bettermodsbutton-forge/4.2.3)
+- [4.2.4](./bettermodsbutton-forge/4.2.4)
+- [5.0.0](./bettermodsbutton-forge/5.0.0)
+- [6.0.0](./bettermodsbutton-forge/6.0.0)
+- [7.0.0](./bettermodsbutton-forge/7.0.0)
+- [8.0.0](./bettermodsbutton-forge/8.0.0)
+- [8.0.1](./bettermodsbutton-forge/8.0.1)
+- [8.0.2](./bettermodsbutton-forge/8.0.2)
+- [20.4.0](./bettermodsbutton-forge/20.4.0)
+- [21.0.1](./bettermodsbutton-forge/21.0.1)
+- [21.0.2](./bettermodsbutton-forge/21.0.2)
+- [21.1.0](./bettermodsbutton-forge/21.1.0)
+- [21.3.0](./bettermodsbutton-forge/21.3.0)
+- [21.4.0](./bettermodsbutton-forge/21.4.0)
 </details>
 
 ### [`bettermodsbutton-neoforge`](./bettermodsbutton-neoforge)
 <details open>
 <summary>Latest</summary>
 
-```
-bettermodsbutton-neoforge:fuzs/bettermodsbutton:20.4.0
-```
-```
-bettermodsbutton-neoforge:fuzs/bettermodsbutton:21.0.2
-```
-```
-bettermodsbutton-neoforge:fuzs/bettermodsbutton:21.1.0
-```
-```
-bettermodsbutton-neoforge:fuzs/bettermodsbutton:21.3.0
-```
-```
-bettermodsbutton-neoforge:fuzs/bettermodsbutton:21.4.1
-```
-```
-bettermodsbutton-neoforge:fuzs/bettermodsbutton:21.5.0
-```
-```
-bettermodsbutton-neoforge:fuzs/bettermodsbutton:21.6.0
-```
-```
-bettermodsbutton-neoforge:fuzs/bettermodsbutton:21.7.0
-```
-```
-bettermodsbutton-neoforge:fuzs/bettermodsbutton:21.8.0
-```
-```
-bettermodsbutton-neoforge:fuzs/bettermodsbutton:21.9.7
-```
-```
-bettermodsbutton-neoforge:fuzs/bettermodsbutton:21.10.1
-```
-```
-bettermodsbutton-neoforge:fuzs/bettermodsbutton:21.11.0
-```
-```
-bettermodsbutton-neoforge:fuzs/bettermodsbutton:26.1.1
-```
+- [20.4.0](./bettermodsbutton-neoforge/20.4.0)
+- [21.0.2](./bettermodsbutton-neoforge/21.0.2)
+- [21.1.0](./bettermodsbutton-neoforge/21.1.0)
+- [21.3.0](./bettermodsbutton-neoforge/21.3.0)
+- [21.4.1](./bettermodsbutton-neoforge/21.4.1)
+- [21.5.0](./bettermodsbutton-neoforge/21.5.0)
+- [21.6.0](./bettermodsbutton-neoforge/21.6.0)
+- [21.7.0](./bettermodsbutton-neoforge/21.7.0)
+- [21.8.0](./bettermodsbutton-neoforge/21.8.0)
+- [21.9.7](./bettermodsbutton-neoforge/21.9.7)
+- [21.10.1](./bettermodsbutton-neoforge/21.10.1)
+- [21.11.0](./bettermodsbutton-neoforge/21.11.0)
+- [26.1.1](./bettermodsbutton-neoforge/26.1.1)
 </details>
 
-<details open>
+<details>
 <summary>Versions</summary>
 
-- [20.4.0](./fuzs/bettermodsbutton/20.4.0)
-- [21.0.0](./fuzs/bettermodsbutton/21.0.0)
-- [21.0.1](./fuzs/bettermodsbutton/21.0.1)
-- [21.0.2](./fuzs/bettermodsbutton/21.0.2)
-- [21.1.0](./fuzs/bettermodsbutton/21.1.0)
-- [21.3.0](./fuzs/bettermodsbutton/21.3.0)
-- [21.4.0](./fuzs/bettermodsbutton/21.4.0)
-- [21.4.1](./fuzs/bettermodsbutton/21.4.1)
-- [21.5.0](./fuzs/bettermodsbutton/21.5.0)
-- [21.6.0](./fuzs/bettermodsbutton/21.6.0)
-- [21.7.0](./fuzs/bettermodsbutton/21.7.0)
-- [21.8.0](./fuzs/bettermodsbutton/21.8.0)
-- [21.9.0](./fuzs/bettermodsbutton/21.9.0)
-- [21.9.1](./fuzs/bettermodsbutton/21.9.1)
-- [21.9.2](./fuzs/bettermodsbutton/21.9.2)
-- [21.9.3](./fuzs/bettermodsbutton/21.9.3)
-- [21.9.4](./fuzs/bettermodsbutton/21.9.4)
-- [21.9.5](./fuzs/bettermodsbutton/21.9.5)
-- [21.9.6](./fuzs/bettermodsbutton/21.9.6)
-- [21.9.7](./fuzs/bettermodsbutton/21.9.7)
-- [21.10.0](./fuzs/bettermodsbutton/21.10.0)
-- [21.10.1](./fuzs/bettermodsbutton/21.10.1)
-- [21.11.0](./fuzs/bettermodsbutton/21.11.0)
-- [26.1.1](./fuzs/bettermodsbutton/26.1.1)
+- [20.4.0](./bettermodsbutton-neoforge/20.4.0)
+- [21.0.0](./bettermodsbutton-neoforge/21.0.0)
+- [21.0.1](./bettermodsbutton-neoforge/21.0.1)
+- [21.0.2](./bettermodsbutton-neoforge/21.0.2)
+- [21.1.0](./bettermodsbutton-neoforge/21.1.0)
+- [21.3.0](./bettermodsbutton-neoforge/21.3.0)
+- [21.4.0](./bettermodsbutton-neoforge/21.4.0)
+- [21.4.1](./bettermodsbutton-neoforge/21.4.1)
+- [21.5.0](./bettermodsbutton-neoforge/21.5.0)
+- [21.6.0](./bettermodsbutton-neoforge/21.6.0)
+- [21.7.0](./bettermodsbutton-neoforge/21.7.0)
+- [21.8.0](./bettermodsbutton-neoforge/21.8.0)
+- [21.9.0](./bettermodsbutton-neoforge/21.9.0)
+- [21.9.1](./bettermodsbutton-neoforge/21.9.1)
+- [21.9.2](./bettermodsbutton-neoforge/21.9.2)
+- [21.9.3](./bettermodsbutton-neoforge/21.9.3)
+- [21.9.4](./bettermodsbutton-neoforge/21.9.4)
+- [21.9.5](./bettermodsbutton-neoforge/21.9.5)
+- [21.9.6](./bettermodsbutton-neoforge/21.9.6)
+- [21.9.7](./bettermodsbutton-neoforge/21.9.7)
+- [21.10.0](./bettermodsbutton-neoforge/21.10.0)
+- [21.10.1](./bettermodsbutton-neoforge/21.10.1)
+- [21.11.0](./bettermodsbutton-neoforge/21.11.0)
+- [26.1.1](./bettermodsbutton-neoforge/26.1.1)
 </details>
 
 </details>
