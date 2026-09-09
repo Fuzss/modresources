@@ -28,22 +28,14 @@ def parse_metadata_files(root: Path):
 def natural_key(s):
     return [int(t) if t.isdigit() else t.lower() for t in re.split(r'(\d+)', s)]
 
-def append_versions_section(lines, title, versions, group_path, artifact_id, root_dir, details_open=False, full_coordinates=False):
+def append_versions_section(lines, title, versions, artifact_link, root_dir, details_open=False):
     """Append a collapsible section of versions to lines."""
     lines.append(f"<details{' open' if details_open else ''}>")
     lines.append(f"<summary>{title}</summary>\n")
 
     for version in sorted(versions, key=natural_key):
-        if full_coordinates:
-            group_id = str(group_path).replace("/", ".")
-
-            lines.append("```")
-            lines.append(f"{group_id}:{artifact_id}:{version}")
-            lines.append("```")
-
-        else:
-            version_link = f"{root_dir}/{artifact_id}/{version}"
-            lines.append(f"- [{version}]({version_link})")
+        version_link = f"{root_dir}/{artifact_link}/{version}"
+        lines.append(f"- [{version}]({version_link})")
 
     lines.append("</details>\n")
 
@@ -51,7 +43,8 @@ def generate_artifacts_block(group_path, artifacts, header_level=2, details_open
     """Generate Markdown block for a group, including the group header, latest versions, and all versions."""
     root_dir = root_dir if root_dir and str(root_dir).startswith(".") else (f"./{root_dir}" if root_dir else ".")
 
-    lines = [f"{'#' * header_level} [`{group_path}`]({root_dir})\n"]
+    group_link = f"{root_dir}"
+    lines = [f"{'#' * header_level} [`{group_path}`]({group_link})\n"]
 
     lines.append(f"<details{' open' if details_open else ''}>")
     lines.append("<summary>Artifacts</summary>\n")
@@ -71,26 +64,8 @@ def generate_artifacts_block(group_path, artifacts, header_level=2, details_open
                 latest_versions.append(version)
                 base_versions.add(base)
 
-        append_versions_section(
-            lines,
-            "Latest",
-            latest_versions,
-            artifact_id,
-            group_path,
-            root_dir,
-            details_open,
-            True,
-        )
-
-        append_versions_section(
-            lines,
-            "Versions",
-            versions,
-            artifact_id,
-            group_path,
-            root_dir,
-            details_open,
-        )
+        append_versions_section(lines, "Latest", latest_versions, artifact_id, root_dir, details_open)
+        append_versions_section(lines, "Versions", versions, artifact_id, root_dir, details_open)
 
     lines.append("</details>\n")
     return lines
