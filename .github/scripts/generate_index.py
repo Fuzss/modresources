@@ -43,8 +43,7 @@ def generate_artifacts_block(group_path, artifacts, header_level=2, details_open
     """Generate Markdown block for a group, including the group header, latest versions, and all versions."""
     root_dir = root_dir if root_dir and str(root_dir).startswith(".") else (f"./{root_dir}" if root_dir else ".")
 
-    group_link = f"{root_dir}"
-    lines = [f"{'#' * header_level} [`{group_path}`]({group_link})\n"]
+    lines = [f"{'#' * header_level} [`{group_path}`]({root_dir})\n"]
 
     lines.append(f"<details{' open' if details_open else ''}>")
     lines.append("<summary>Artifacts</summary>\n")
@@ -65,7 +64,7 @@ def generate_artifacts_block(group_path, artifacts, header_level=2, details_open
                 base_versions.add(base)
 
         append_versions_section(lines, "Latest", latest_versions, artifact_id, root_dir, details_open)
-        append_versions_section(lines, "Versions", versions, artifact_id, root_dir, details_open)
+        append_versions_section(lines, "Versions", versions, artifact_id, root_dir)
 
     lines.append("</details>\n")
     return lines
