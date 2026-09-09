@@ -7,30 +7,38 @@
 <details open>
 <summary>Latest</summary>
 
-- [21.1.0](./multiloaderruntimefixes-common/21.1.0)
-- [21.10.1](./multiloaderruntimefixes-common/21.10.1)
+```
+multiloaderruntimefixes-common:fuzs/multiloaderruntimefixes:21.1.0
+```
+```
+multiloaderruntimefixes-common:fuzs/multiloaderruntimefixes:21.10.1
+```
 </details>
 
 <details open>
 <summary>Versions</summary>
 
-- [21.1.0](./multiloaderruntimefixes-common/21.1.0)
-- [21.10.1](./multiloaderruntimefixes-common/21.10.1)
+- [21.1.0](./fuzs/multiloaderruntimefixes/21.1.0)
+- [21.10.1](./fuzs/multiloaderruntimefixes/21.10.1)
 </details>
 
 ### [`multiloaderruntimefixes-neoforge`](./multiloaderruntimefixes-neoforge)
 <details open>
 <summary>Latest</summary>
 
-- [21.1.0](./multiloaderruntimefixes-neoforge/21.1.0)
-- [21.10.1](./multiloaderruntimefixes-neoforge/21.10.1)
+```
+multiloaderruntimefixes-neoforge:fuzs/multiloaderruntimefixes:21.1.0
+```
+```
+multiloaderruntimefixes-neoforge:fuzs/multiloaderruntimefixes:21.10.1
+```
 </details>
 
 <details open>
 <summary>Versions</summary>
 
-- [21.1.0](./multiloaderruntimefixes-neoforge/21.1.0)
-- [21.10.1](./multiloaderruntimefixes-neoforge/21.10.1)
+- [21.1.0](./fuzs/multiloaderruntimefixes/21.1.0)
+- [21.10.1](./fuzs/multiloaderruntimefixes/21.10.1)
 </details>
 
 </details>
