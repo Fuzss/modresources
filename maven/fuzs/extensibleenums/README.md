@@ -7,143 +7,99 @@
 <details open>
 <summary>Latest</summary>
 
-```
-extensibleenums-common:fuzs/extensibleenums:20.1.1
-```
-```
-extensibleenums-common:fuzs/extensibleenums:20.4.1
-```
-```
-extensibleenums-common:fuzs/extensibleenums:21.0.0
-```
-```
-extensibleenums-common:fuzs/extensibleenums:21.1.1
-```
-```
-extensibleenums-common:fuzs/extensibleenums:21.3.0
-```
-```
-extensibleenums-common:fuzs/extensibleenums:21.4.0
-```
+- [20.1.1](./extensibleenums-common/20.1.1)
+- [20.4.1](./extensibleenums-common/20.4.1)
+- [21.0.0](./extensibleenums-common/21.0.0)
+- [21.1.1](./extensibleenums-common/21.1.1)
+- [21.3.0](./extensibleenums-common/21.3.0)
+- [21.4.0](./extensibleenums-common/21.4.0)
 </details>
 
-<details open>
+<details>
 <summary>Versions</summary>
 
-- [20.1.0](./fuzs/extensibleenums/20.1.0)
-- [20.1.1](./fuzs/extensibleenums/20.1.1)
-- [20.4.0](./fuzs/extensibleenums/20.4.0)
-- [20.4.1](./fuzs/extensibleenums/20.4.1)
-- [21.0.0](./fuzs/extensibleenums/21.0.0)
-- [21.1.0](./fuzs/extensibleenums/21.1.0)
-- [21.1.1](./fuzs/extensibleenums/21.1.1)
-- [21.3.0](./fuzs/extensibleenums/21.3.0)
-- [21.4.0](./fuzs/extensibleenums/21.4.0)
+- [20.1.0](./extensibleenums-common/20.1.0)
+- [20.1.1](./extensibleenums-common/20.1.1)
+- [20.4.0](./extensibleenums-common/20.4.0)
+- [20.4.1](./extensibleenums-common/20.4.1)
+- [21.0.0](./extensibleenums-common/21.0.0)
+- [21.1.0](./extensibleenums-common/21.1.0)
+- [21.1.1](./extensibleenums-common/21.1.1)
+- [21.3.0](./extensibleenums-common/21.3.0)
+- [21.4.0](./extensibleenums-common/21.4.0)
 </details>
 
 ### [`extensibleenums-fabric`](./extensibleenums-fabric)
 <details open>
 <summary>Latest</summary>
 
-```
-extensibleenums-fabric:fuzs/extensibleenums:3.1.0
-```
-```
-extensibleenums-fabric:fuzs/extensibleenums:4.0.0
-```
-```
-extensibleenums-fabric:fuzs/extensibleenums:7.0.1
-```
-```
-extensibleenums-fabric:fuzs/extensibleenums:20.1.1
-```
-```
-extensibleenums-fabric:fuzs/extensibleenums:20.4.1
-```
-```
-extensibleenums-fabric:fuzs/extensibleenums:21.0.0
-```
-```
-extensibleenums-fabric:fuzs/extensibleenums:21.1.1
-```
-```
-extensibleenums-fabric:fuzs/extensibleenums:21.3.0
-```
-```
-extensibleenums-fabric:fuzs/extensibleenums:21.4.0
-```
+- [3.1.0](./extensibleenums-fabric/3.1.0)
+- [4.0.0](./extensibleenums-fabric/4.0.0)
+- [7.0.1](./extensibleenums-fabric/7.0.1)
+- [20.1.1](./extensibleenums-fabric/20.1.1)
+- [20.4.1](./extensibleenums-fabric/20.4.1)
+- [21.0.0](./extensibleenums-fabric/21.0.0)
+- [21.1.1](./extensibleenums-fabric/21.1.1)
+- [21.3.0](./extensibleenums-fabric/21.3.0)
+- [21.4.0](./extensibleenums-fabric/21.4.0)
 </details>
 
-<details open>
+<details>
 <summary>Versions</summary>
 
-- [3.1.0](./fuzs/extensibleenums/3.1.0)
-- [4.0.0](./fuzs/extensibleenums/4.0.0)
-- [7.0.0](./fuzs/extensibleenums/7.0.0)
-- [7.0.1](./fuzs/extensibleenums/7.0.1)
-- [20.1.0](./fuzs/extensibleenums/20.1.0)
-- [20.1.1](./fuzs/extensibleenums/20.1.1)
-- [20.4.0](./fuzs/extensibleenums/20.4.0)
-- [20.4.1](./fuzs/extensibleenums/20.4.1)
-- [21.0.0](./fuzs/extensibleenums/21.0.0)
-- [21.1.0](./fuzs/extensibleenums/21.1.0)
-- [21.1.1](./fuzs/extensibleenums/21.1.1)
-- [21.3.0](./fuzs/extensibleenums/21.3.0)
-- [21.4.0](./fuzs/extensibleenums/21.4.0)
+- [3.1.0](./extensibleenums-fabric/3.1.0)
+- [4.0.0](./extensibleenums-fabric/4.0.0)
+- [7.0.0](./extensibleenums-fabric/7.0.0)
+- [7.0.1](./extensibleenums-fabric/7.0.1)
+- [20.1.0](./extensibleenums-fabric/20.1.0)
+- [20.1.1](./extensibleenums-fabric/20.1.1)
+- [20.4.0](./extensibleenums-fabric/20.4.0)
+- [20.4.1](./extensibleenums-fabric/20.4.1)
+- [21.0.0](./extensibleenums-fabric/21.0.0)
+- [21.1.0](./extensibleenums-fabric/21.1.0)
+- [21.1.1](./extensibleenums-fabric/21.1.1)
+- [21.3.0](./extensibleenums-fabric/21.3.0)
+- [21.4.0](./extensibleenums-fabric/21.4.0)
 </details>
 
 ### [`extensibleenums-forge`](./extensibleenums-forge)
 <details open>
 <summary>Latest</summary>
 
-```
-extensibleenums-forge:fuzs/extensibleenums:20.1.1
-```
-```
-extensibleenums-forge:fuzs/extensibleenums:20.4.1
-```
+- [20.1.1](./extensibleenums-forge/20.1.1)
+- [20.4.1](./extensibleenums-forge/20.4.1)
 </details>
 
-<details open>
+<details>
 <summary>Versions</summary>
 
-- [20.1.0](./fuzs/extensibleenums/20.1.0)
-- [20.1.1](./fuzs/extensibleenums/20.1.1)
-- [20.4.0](./fuzs/extensibleenums/20.4.0)
-- [20.4.1](./fuzs/extensibleenums/20.4.1)
+- [20.1.0](./extensibleenums-forge/20.1.0)
+- [20.1.1](./extensibleenums-forge/20.1.1)
+- [20.4.0](./extensibleenums-forge/20.4.0)
+- [20.4.1](./extensibleenums-forge/20.4.1)
 </details>
 
 ### [`extensibleenums-neoforge`](./extensibleenums-neoforge)
 <details open>
 <summary>Latest</summary>
 
-```
-extensibleenums-neoforge:fuzs/extensibleenums:20.4.1
-```
-```
-extensibleenums-neoforge:fuzs/extensibleenums:21.0.0
-```
-```
-extensibleenums-neoforge:fuzs/extensibleenums:21.1.1
-```
-```
-extensibleenums-neoforge:fuzs/extensibleenums:21.3.0
-```
-```
-extensibleenums-neoforge:fuzs/extensibleenums:21.4.0
-```
+- [20.4.1](./extensibleenums-neoforge/20.4.1)
+- [21.0.0](./extensibleenums-neoforge/21.0.0)
+- [21.1.1](./extensibleenums-neoforge/21.1.1)
+- [21.3.0](./extensibleenums-neoforge/21.3.0)
+- [21.4.0](./extensibleenums-neoforge/21.4.0)
 </details>
 
-<details open>
+<details>
 <summary>Versions</summary>
 
-- [20.4.0](./fuzs/extensibleenums/20.4.0)
-- [20.4.1](./fuzs/extensibleenums/20.4.1)
-- [21.0.0](./fuzs/extensibleenums/21.0.0)
-- [21.1.0](./fuzs/extensibleenums/21.1.0)
-- [21.1.1](./fuzs/extensibleenums/21.1.1)
-- [21.3.0](./fuzs/extensibleenums/21.3.0)
-- [21.4.0](./fuzs/extensibleenums/21.4.0)
+- [20.4.0](./extensibleenums-neoforge/20.4.0)
+- [20.4.1](./extensibleenums-neoforge/20.4.1)
+- [21.0.0](./extensibleenums-neoforge/21.0.0)
+- [21.1.0](./extensibleenums-neoforge/21.1.0)
+- [21.1.1](./extensibleenums-neoforge/21.1.1)
+- [21.3.0](./extensibleenums-neoforge/21.3.0)
+- [21.4.0](./extensibleenums-neoforge/21.4.0)
 </details>
 
 </details>

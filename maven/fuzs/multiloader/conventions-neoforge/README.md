@@ -7,17 +7,15 @@
 <details open>
 <summary>Latest</summary>
 
-```
-fuzs.multiloader.conventions-neoforge.gradle.plugin:fuzs/multiloader/conventions-neoforge:1.0.2
-```
+- [1.0.2](./fuzs.multiloader.conventions-neoforge.gradle.plugin/1.0.2)
 </details>
 
-<details open>
+<details>
 <summary>Versions</summary>
 
-- [1.0.0](./fuzs/multiloader/conventions-neoforge/1.0.0)
-- [1.0.1](./fuzs/multiloader/conventions-neoforge/1.0.1)
-- [1.0.2](./fuzs/multiloader/conventions-neoforge/1.0.2)
+- [1.0.0](./fuzs.multiloader.conventions-neoforge.gradle.plugin/1.0.0)
+- [1.0.1](./fuzs.multiloader.conventions-neoforge.gradle.plugin/1.0.1)
+- [1.0.2](./fuzs.multiloader.conventions-neoforge.gradle.plugin/1.0.2)
 </details>
 
 </details>

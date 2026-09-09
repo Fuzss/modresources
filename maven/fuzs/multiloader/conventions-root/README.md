@@ -7,17 +7,15 @@
 <details open>
 <summary>Latest</summary>
 
-```
-fuzs.multiloader.conventions-root.gradle.plugin:fuzs/multiloader/conventions-root:1.0.2
-```
+- [1.0.2](./fuzs.multiloader.conventions-root.gradle.plugin/1.0.2)
 </details>
 
-<details open>
+<details>
 <summary>Versions</summary>
 
-- [1.0.0](./fuzs/multiloader/conventions-root/1.0.0)
-- [1.0.1](./fuzs/multiloader/conventions-root/1.0.1)
-- [1.0.2](./fuzs/multiloader/conventions-root/1.0.2)
+- [1.0.0](./fuzs.multiloader.conventions-root.gradle.plugin/1.0.0)
+- [1.0.1](./fuzs.multiloader.conventions-root.gradle.plugin/1.0.1)
+- [1.0.2](./fuzs.multiloader.conventions-root.gradle.plugin/1.0.2)
 </details>
 
 </details>
