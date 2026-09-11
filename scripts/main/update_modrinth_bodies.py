@@ -1,4 +1,129 @@
 #!/usr/bin/env python3
+"""
+Update Modrinth project descriptions for multiple mods.
+
+The script searches every mod directory inside the configured mods directory.
+
+For each mod, it performs the following steps:
+
+1. Reads <mod>/main/versions.json.
+
+2. Reads the Modrinth project ID from:
+
+   "distributions": {
+       "modrinth": {
+           "id": "..."
+       }
+   }
+
+3. Uses the configured resources directory to locate the generated Modrinth
+   project description:
+
+   <resources>/pages/out/<mod-id>/modrinth.html
+
+   The mod ID is derived from the mod directory name by removing hyphens.
+
+   For example:
+
+   easy-shulker-boxes
+       ->
+   easyshulkerboxes
+
+4. Reads the generated HTML description using UTF-8 encoding.
+
+5. Updates the Modrinth project description through the Modrinth API.
+
+   The request is sent as:
+
+   PATCH https://api.modrinth.com/v2/project/<project-id>
+
+   The generated HTML is supplied as the "body" property of the JSON request
+   body.
+
+6. Authenticates the API request using the Modrinth token configured in the
+   user's Gradle properties.
+
+7. Uses curl instead of a Python HTTP library so that the script does not
+   require any additional Python dependencies.
+
+8. Prints an error when the API request fails and continues processing the
+   remaining projects instead of aborting the entire script.
+
+9. Waits briefly after each successful update to avoid sending requests for
+   multiple projects immediately after one another.
+
+Only projects with all required files and properties are processed. Projects
+without versions.json, a Modrinth project ID, or a generated Modrinth HTML file
+are skipped.
+
+Projects are processed alphabetically.
+
+Restarting from a specific project:
+
+    python3 update_modrinth_bodies.py example-mod
+
+When a starting project is provided, all projects alphabetically before it are
+skipped. The specified project itself is included, allowing the script to
+resume from a previously interrupted project.
+
+Without an argument, all projects are processed:
+
+    python3 update_modrinth_bodies.py
+
+The script reads the following properties from the user's Gradle properties
+file:
+
+    ~/.gradle/gradle.properties
+
+    fuzs.multiloader.project.mods
+    fuzs.multiloader.project.resources
+    fuzs.multiloader.project.modrinth.token
+
+The first property identifies the directory containing the mod repositories.
+The second property identifies the resources repository containing the
+generated project pages. The third property contains the token used to
+authenticate with the Modrinth API.
+
+Expected directory structure:
+
+    mods/
+    ├── easy-shulker-boxes/
+    │   └── main/
+    │       └── versions.json
+    ├── another-mod/
+    │   └── main/
+    │       └── versions.json
+    └── ...
+
+    resources/
+    └── pages/
+        └── out/
+            └── easyshulkerboxes/
+                └── modrinth.html
+
+API request:
+
+The generated description is sent to:
+
+    https://api.modrinth.com/v2/project/<project-id>
+
+with the following headers:
+
+    Authorization: Bearer <modrinth-token>
+    Content-Type: application/json
+
+The request body contains:
+
+    {
+        "body": "<generated HTML>"
+    }
+
+The script uses curl's --fail-with-body option so that HTTP errors result in a
+nonzero exit code while still preserving the response body for error reporting.
+
+The script does not perform any version control operations. It does not run
+git pull, git add, git commit, git push, or any other Git command.
+"""
 
 import json
 import subprocess

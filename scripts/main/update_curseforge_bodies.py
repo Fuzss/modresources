@@ -1,4 +1,125 @@
 #!/usr/bin/env python3
+"""
+Update CurseForge project descriptions for multiple mods.
+
+The script searches every mod directory inside the configured mods directory.
+
+For each mod, it performs the following steps:
+
+1. Reads <mod>/main/versions.json.
+
+2. Reads the CurseForge project slug from:
+
+   "distributions": {
+       "curseforge": {
+           "slug": "..."
+       }
+   }
+
+3. Uses the configured resources directory to locate the generated CurseForge
+   project description:
+
+   <resources>/pages/out/<mod-id>/curseforge.html
+
+   The mod ID is derived from the mod directory name by removing hyphens.
+
+   For example:
+
+   easy-shulker-boxes
+       ->
+   easyshulkerboxes
+
+4. Copies the generated CurseForge HTML description to the macOS clipboard
+   using pbcopy.
+
+   pbcopy is provided by macOS and avoids requiring an additional Python
+   clipboard dependency.
+
+5. Opens the CurseForge project description settings page in Safari:
+
+   https://legacy.curseforge.com/minecraft/mc-mods/<slug>/settings/description
+
+6. Switches the CurseForge editor to its HTML source mode using the configured
+   screen coordinates.
+
+7. Replaces the existing HTML source with the generated description by using
+   Command+A followed by Command+V.
+
+8. Closes the source editor with the configured OK button.
+
+9. Saves the modified project description using the Save Changes button.
+
+10. Prints progress information for each project and each update step.
+
+Only projects with all required files and properties are processed. Projects
+without versions.json, a CurseForge slug, or a generated CurseForge HTML file
+are skipped.
+
+Projects are processed alphabetically.
+
+Restarting from a specific project:
+
+    python3 update_curseforge_bodies.py example-mod
+
+When a starting project is provided, all projects alphabetically before it are
+skipped. The specified project itself is included, allowing the script to
+resume from a previously interrupted project.
+
+Without an argument, all projects are processed:
+
+    python3 update_curseforge_bodies.py
+
+The script reads the following properties from the user's Gradle properties
+file:
+
+    ~/.gradle/gradle.properties
+
+    fuzs.multiloader.project.mods
+    fuzs.multiloader.project.resources
+
+The first property identifies the directory containing the mod repositories.
+The second property identifies the resources repository containing the
+generated project pages.
+
+Expected directory structure:
+
+    mods/
+    ├── easy-shulker-boxes/
+    │   └── main/
+    │       └── versions.json
+    ├── another-mod/
+    │   └── main/
+    │       └── versions.json
+    └── ...
+
+    resources/
+    └── pages/
+        └── out/
+            └── easyshulkerboxes/
+                └── curseforge.html
+
+Browser automation:
+
+The script uses macOS's osascript and System Events to control Safari and
+interact with the CurseForge editor.
+
+The following screen coordinates are used:
+
+    SOURCE_MODE_BUTTON_COORDINATES
+        Opens the HTML source editor.
+
+    OK_BUTTON_COORDINATES
+        Closes the source editor and applies the edited HTML.
+
+    SAVE_CHANGES_BUTTON_COORDINATES
+        Saves the modified project description.
+
+These coordinates depend on the current browser window size and CurseForge page
+layout. They may need to be updated if the layout changes.
+
+The script does not perform any version control operations. It does not run
+git pull, git add, git commit, git push, or any other Git command.
+"""
 
 from pathlib import Path
 import json
