@@ -7,4 +7,8 @@
 * 📖 **Enchant Books Too:** Create enchanted books directly through the infuser and build your perfect library.
 * ⚔️ **Expanded Enchantment Options:** Optionally allow enchantments normally restricted to anvils, such as applying Sharpness to axes.
 * 🎛️ **Highly Configurable:** Customize costs, bookshelf requirements, repairs, available enchantments, and much more.
-* 💡 **Enchantment Descriptions:** Install the [Enchantment Insights](https://www.curseforge.com/minecraft/mc-mods/enchantment-insights) mod to view enchantment descriptions directly inside the infuser interface.
+* 💡 **Enchantment Descriptions:** Install the [Enchantment Insights][enchantment-insights] mod to view enchantment descriptions directly inside the infuser interface.
+
+[enchantment-insights]: https://www.curseforge.com/minecraft/mc-mods/enchantment-insights
+[enchantment-insights-curseforge]: https://www.curseforge.com/minecraft/mc-mods/enchantment-insights
+[enchantment-insights-modrinth]: https://modrinth.com/mod/enchantment-insights

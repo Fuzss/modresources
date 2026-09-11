@@ -4,4 +4,11 @@ Please note that for technical reasons, installing this mod removes vertical wal
 
 Blocks added by other mods are supported dynamically whenever possible, and any unintended behavior can be controlled using the `diagonalwalls:non_diagonal_walls` block tag. ⚙️ It also works seamlessly with most resource packs without extra setup.
 
-Part of the Diagonal Blocks family, alongside [Diagonal Fences](https://www.curseforge.com/minecraft/mc-mods/diagonal-fences) and [Diagonal Windows](https://www.curseforge.com/minecraft/mc-mods/diagonal-windows), expanding diagonal building in multiple directions. ✨
+Part of the Diagonal Blocks family, alongside [Diagonal Fences][diagonal-fences] and [Diagonal Windows][diagonal-windows], expanding diagonal building in multiple directions. ✨
+
+[diagonal-fences]: https://www.curseforge.com/minecraft/mc-mods/diagonal-fences
+[diagonal-fences-curseforge]: https://www.curseforge.com/minecraft/mc-mods/diagonal-fences
+[diagonal-fences-modrinth]: https://modrinth.com/mod/diagonal-fences
+[diagonal-windows]: https://www.curseforge.com/minecraft/mc-mods/diagonal-windows
+[diagonal-windows-curseforge]: https://www.curseforge.com/minecraft/mc-mods/diagonal-windows
+[diagonal-windows-modrinth]: https://modrinth.com/mod/diagonal-windows

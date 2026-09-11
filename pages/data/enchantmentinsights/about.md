@@ -2,4 +2,8 @@
 
 Tooltips also receive a stylish upgrade with dyed enchantment names, visible max levels, and clean formatting that keeps everything easy to read at a glance. 📚 The enchanting table is not left behind either, with enchantment hints showing the same helpful descriptions so you know exactly what you are getting.
 
-Looking for neat effect descriptions too? Check out the wonderful [Effect Insights](https://www.curseforge.com/minecraft/mc-mods/effect-insights) mod! 🧪
+Looking for neat effect descriptions too? Check out the wonderful [Effect Insights][effect-insights] mod! 🧪
+
+[effect-insights]: https://www.curseforge.com/minecraft/mc-mods/effect-insights
+[effect-insights-curseforge]: https://www.curseforge.com/minecraft/mc-mods/effect-insights
+[effect-insights-modrinth]: https://modrinth.com/mod/effect-insights
