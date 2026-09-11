@@ -710,7 +710,7 @@ def run_1_21_1_upgrade(id, template_path, project_path):
     run_26_1_upgrade(id, template_path, project_path)
 
 def run_workspace_upgrade(args, base_path, main_path, project_path):
-    template_root_path = os.path.join(base_path, "mods", "multiloader-workspace-template")
+    template_root_path = os.path.join(base_path, "multiloader-workspace-template")
     template_main_path = os.path.join(template_root_path, "main")
     template_project_path = os.path.join(template_root_path, args.minecraft)
 
@@ -786,8 +786,8 @@ def update_directory(args, path):
 
 def main():
     args = parse_args()
-    base_path = find_gradle_property("fuzs.multiloader.project.root")
-    root_path = args.path or os.path.join(base_path, "mods", args.name)
+    base_path = find_gradle_property("fuzs.multiloader.project.mods")
+    root_path = args.path or os.path.join(base_path, args.name)
     main_path = os.path.join(root_path, "main")
     project_path = os.path.join(root_path, args.minecraft)
 
