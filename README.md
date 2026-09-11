@@ -42,12 +42,6 @@ dependencies {
 
 ---
 
-### `./mods`
-
-Contains data for individual mods, including distributions and installation information.
-
----
-
 ### `./pages`
 
 Content for **@heyitsfuzs** mod pages found on [CurseForge](https://www.curseforge.com/members/fuzs/projects) and [Modrinth](https://modrinth.com/user/Fuzs).  
