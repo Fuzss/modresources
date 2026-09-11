@@ -5,4 +5,8 @@
 * 🤝 **Best With Both Sides Installed:** When installed on both client and server, interactions are handled consistently for all players.
 * ✋ **Empty-Hand Safety Option:** Optionally require an empty hand to help preserve normal decoration interactions such as applying items to signs.
 * ⚙️ **Customisable Support Lists:** Configure which attached blocks and entities allow clicks to pass through.
-* 🔌 **Modded Compatibility Hooks:** Includes support for compatible mods, such as [Fast Item Frames](https://www.curseforge.com/minecraft/mc-mods/fast-item-frames), when present.
+* 🔌 **Modded Compatibility Hooks:** Includes support for compatible mods, such as [Fast Item Frames][fast-item-frames], when present.
+
+[fast-item-frames]: https://www.curseforge.com/minecraft/mc-mods/fast-item-frames
+[fast-item-frames-curseforge]: https://www.curseforge.com/minecraft/mc-mods/fast-item-frames
+[fast-item-frames-modrinth]: https://modrinth.com/mod/fast-item-frames

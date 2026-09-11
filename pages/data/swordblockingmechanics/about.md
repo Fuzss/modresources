@@ -4,4 +4,8 @@ Everything about sword blocking is fully customizable, and there even is a new p
 
 Any item that is to support the sword blocking mechanic must be added to the `swordblockingmechanics:can_perform_sword_blocking` item tag. Items you want to use from your offhand while holding a sword in the mainhand should be added to the `swordblockingmechanics:overrides_sword_blocking_in_offhand` item tag.
 
-For bringing back not the old sword blocking mechanic, but also just fast paced combat, make sure to check out [Golden Age Combat](https://www.curseforge.com/minecraft/mc-mods/golden-age-combat).
+For bringing back not the old sword blocking mechanic, but also just fast paced combat, make sure to check out [Golden Age Combat][golden-age-combat].
+
+[golden-age-combat]: https://www.curseforge.com/minecraft/mc-mods/golden-age-combat
+[golden-age-combat-curseforge]: https://www.curseforge.com/minecraft/mc-mods/golden-age-combat
+[golden-age-combat-modrinth]: https://modrinth.com/mod/golden-age-combat

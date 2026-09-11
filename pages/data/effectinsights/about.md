@@ -2,4 +2,8 @@
 
 Effects shown on food and potion items include their descriptions right inside the tooltip, while active effects on your player can be viewed by simply hovering over them in your inventory. 🧪 Everything is presented with clean and consistent formatting for quick understanding at a glance.
 
-Looking for enchantment descriptions too? Check out the wonderful [Enchantment Insights](https://www.curseforge.com/minecraft/mc-mods/enchantment-insights) mod! ✨
+Looking for enchantment descriptions too? Check out the wonderful [Enchantment Insights][enchantment-insights] mod! ✨
+
+[enchantment-insights]: https://www.curseforge.com/minecraft/mc-mods/enchantment-insights
+[enchantment-insights-curseforge]: https://www.curseforge.com/minecraft/mc-mods/enchantment-insights
+[enchantment-insights-modrinth]: https://modrinth.com/mod/enchantment-insights

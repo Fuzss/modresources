@@ -4,4 +4,11 @@ When your stats exceed vanilla limits, a row counter shows exactly how many laye
 
 The mod also adds a dedicated armor toughness bar, bringing an important defensive stat into the HUD that vanilla doesn't display. 🛡️
 
-For proper support of armor and toughness values beyond vanilla limits, install [AttributeFix](https://www.curseforge.com/minecraft/mc-mods/attributefix) by [DarkhaxDev](https://www.curseforge.com/members/DarkhaxDev). 🌟
+For proper support of armor and toughness values beyond vanilla limits, install [AttributeFix][attributefix] by [Darkhax][darkhax]. 🌟
+
+[attributefix]: https://www.curseforge.com/minecraft/mc-mods/attributefix
+[attributefix-curseforge]: https://www.curseforge.com/minecraft/mc-mods/attributefix
+[attributefix-modrinth]: https://modrinth.com/mod/attributefix
+[darkhax]: https://www.curseforge.com/members/DarkhaxDev
+[darkhax-curseforge]: https://www.curseforge.com/members/DarkhaxDev
+[darkhax-modrinth]: https://modrinth.com/user/Darkhax

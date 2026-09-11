@@ -5,4 +5,11 @@
 + The number of bookshelves required for a maximum level enchantments is configurable down from 15.
 + Simply break and replace your enchanting table after adding this mod to an existing world!
 + Disable the reroll button in the config if it conflicts with your resource pack. All functionality will remain regardless!
-+ Not compatible with [Apotheosis](https://www.curseforge.com/minecraft/mc-mods/apotheosis) and the matrix enchanter from [Quark](https://www.curseforge.com/minecraft/mc-mods/quark).
++ Not compatible with [Apotheosis][apotheosis] and the matrix enchanter from [Quark][quark].
+
+[apotheosis]: https://www.curseforge.com/minecraft/mc-mods/apotheosis
+[apotheosis-curseforge]: https://www.curseforge.com/minecraft/mc-mods/apotheosis
+[apotheosis-modrinth]: https://modrinth.com/mod/apotheosis
+[quark]: https://www.curseforge.com/minecraft/mc-mods/quark
+[quark-curseforge]: https://www.curseforge.com/minecraft/mc-mods/quark
+[quark-modrinth]: https://modrinth.com/mod/quark
