@@ -569,6 +569,21 @@ def update_license_year(file_path):
 
     print(f"Updated copyright year in {file_path}")
 
+def parse_minecraft_version(branch: str) -> tuple[int, ...] | None:
+    try:
+        parts = branch.strip().lower().split(".")
+        numbers = tuple(int(part) for part in parts if part not in ("", "x"))
+        return numbers if numbers else None
+    except (ValueError, AttributeError):
+        return None
+
+def is_version_upgrade(source_branch: str, new_branch: str) -> bool:
+    source_version = parse_minecraft_version(source_branch)
+    target_version = parse_minecraft_version(new_branch)
+    if source_version is None or target_version is None:
+        return False
+    return target_version > source_version
+
 def prepare_new_version(args, root_path, project_path):
     remote_url = f"git@github.com:Fuzss/{args.name}.git"
     new_branch = args.minecraft
@@ -610,8 +625,11 @@ def prepare_new_version(args, root_path, project_path):
     
     print(f"Created new branch {new_branch} from {source_branch}")
 
-    source_path = os.path.join(root_path, args.init)
-    copy_from_template(os.path.join(source_path, "run"), os.path.join(project_path, "run"), only_if_absent=True, throw_when_not_found=False)
+    if is_version_upgrade(source_branch, new_branch):
+        source_path = os.path.join(root_path, args.init)
+        copy_from_template(os.path.join(source_path, "run"), os.path.join(project_path, "run"), only_if_absent=True, throw_when_not_found=False)
+    else:
+        print(f"Skipping run directory copy: {source_branch} -> {new_branch} is not an upgrade")
 
 def replace_text_block(file_path, pattern, replacement, use_regex=True):
     if not os.path.exists(file_path):
