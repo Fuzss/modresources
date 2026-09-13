@@ -17,7 +17,7 @@ fabricapi:
 forgeconfigapiport:
   name: Forge Config API Port
   distributions:
-    curseforge: forge-config-api-port-fabric
+    curseforge: forge-config-api-port
     modrinth: forge-config-api-port
   loaders:
     - fabric
