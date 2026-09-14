@@ -13,7 +13,7 @@ files; you only report.
 ## Inputs
 
 - The paths to an `about.md` and a `features.md` (the task names them). They
-  are usually drafts under `pages/.authoring/<local id>/`; they can also be
+  are usually drafts under `pages/.authoring/<mod>/`; they can also be
   finals under `pages/data/<local id>/` for a last-gate check.
 - `pages/AGENTS.md`, the canonical standard.
 

@@ -24,7 +24,7 @@ this repository's own ``pages/`` directory. The branch directory must exist.
 Usage:
     python3 tools/collect_page_brief.py eternal-nether
     python3 tools/collect_page_brief.py mutant-monsters --branch 26.2.x \
-        --out pages/.authoring/mutantmonsters/brief.md
+        --out pages/.authoring/mutant-monsters/brief.md
     python3 tools/collect_page_brief.py air-hop --json
 """
 
