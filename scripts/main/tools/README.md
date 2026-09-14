@@ -1,15 +1,35 @@
-# `tools/` — standalone description updaters
+# `tools/` — standalone scripts
 
-Two standalone scripts that publish every mod's generated page as its project
-description on Modrinth and CurseForge. Neither is dispatched by `main.py`;
-run them directly. For the core CLI, see [`../README.md`](../README.md).
+Standalone scripts that support the mod page and release workflow. None is
+dispatched by `main.py`; run them directly. For the core CLI, see
+[`../README.md`](../README.md).
 
-| Script | Site | Mechanism |
-| --- | --- | --- |
-| [`update_modrinth_bodies.py`](update_modrinth_bodies.py) | Modrinth | Modrinth API via `curl` (`PATCH`). |
-| [`update_curseforge_bodies.py`](update_curseforge_bodies.py) | CurseForge | macOS Safari UI automation via `osascript`. |
+| Script | Purpose |
+| --- | --- |
+| [`collect_page_brief.py`](collect_page_brief.py) | Build a normalized authoring brief from a mod checkout. |
+| [`update_modrinth_bodies.py`](update_modrinth_bodies.py) | Publish the generated Modrinth page as the project description. |
+| [`update_curseforge_bodies.py`](update_curseforge_bodies.py) | Publish the generated CurseForge page as the project description. |
 
-## Common behavior
+## Authoring brief collector
+
+`collect_page_brief.py` builds the deterministic source document for the page
+writing pipeline (see [`../../pages/AGENTS.md`](../../pages/AGENTS.md)). It does
+not write page text and never touches `pages/data/`.
+
+```sh
+python3 tools/collect_page_brief.py <mod> [--branch 26.2.x] [--out <file>] [--json]
+```
+
+- Reads the checkout at `<fuzs.multiloader.project.mods>/<mod>/<branch>` and
+  gathers `gradle.properties`, `metadata.json`, `README.md`, `CHANGELOG.md`,
+  `@Config` descriptions, `lang/en_us.json`, a source inventory, the existing
+  page text, and the manual-asset inventory.
+- Prints markdown to standard output unless `--out` names a file; `--json`
+  emits the raw structure instead.
+- `--mods-root` and `--pages-root` override the Gradle-derived defaults.
+- No git operations; write and network are not used.
+
+## Common behavior (body updaters)
 
 - Enumerate every directory under the configured mods directory,
   alphabetically.

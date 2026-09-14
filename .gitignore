@@ -63,6 +63,9 @@ __pycache__
 *.txt
 .cache
 
+# Mod page authoring staging (briefs, guidance)
+pages/.authoring/
+
 # Log file
 *.log
 

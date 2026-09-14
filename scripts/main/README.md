@@ -230,6 +230,7 @@ when running `main.py`.
 | `core/workspace_upgrade.py` | Orchestrates version upgrades and the legacy-file cleanup. |
 | `core/migrate_mixins.py` | Converts `mixins.json` into Gradle DSL mixin declarations. |
 | `core/migrate_mod_properties.py` | Migrates the legacy `gradle.properties` layout to current names. |
+| `tools/collect_page_brief.py` | Standalone script that builds a mod page authoring brief from a checkout. |
 | `tools/update_curseforge_bodies.py` | Standalone macOS script that batch-updates CurseForge descriptions. |
 | `tools/update_modrinth_bodies.py` | Standalone script that batch-updates Modrinth descriptions through the API. |
 
@@ -402,6 +403,7 @@ by `main.py`:
 python3 core/clone_versions.py <repo-name>
 python3 core/migrate_mixins.py <mixins.json> <build.gradle>
 python3 core/migrate_mod_properties.py <input> <output> <plugins_version>
+python3 tools/collect_page_brief.py <mod> [--branch 26.2.x]
 python3 tools/update_curseforge_bodies.py [project]
 python3 tools/update_modrinth_bodies.py [project]
 ```

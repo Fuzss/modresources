@@ -1,5 +1,5 @@
-**Mutant Monsters** brings Minecraft’s mobs to terrifying new heights! Battle mutated versions of iconic creatures, each with devastating powers and unique rewards.
+**Mutant Monsters** brings Minecraft's mobs to terrifying new heights, adding mutated versions of iconic creatures with devastating powers and unique rewards. 🤖
 
-Defeat the Mutant Zombie, Skeleton, Creeper, Enderman, and more, each bringing a fresh challenge. Craft powerful items, tame explosive minions, and uncover strange new creatures like the Spider Pig.
+Each mutant is a proper boss fight with its own attacks and drops, so every encounter is worth preparing for. Tame their minions, uncover strange experiments gone wrong, and craft the gear that helps you survive the rematch. 💥
 
-Get ready for epic battles and legendary loot in a world where survival isn’t guaranteed!
+A revival of the classic Mutant Creatures mod for modern Minecraft, built for players who think the base game's mobs have gone soft.
