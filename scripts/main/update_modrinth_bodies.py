@@ -120,6 +120,8 @@ The request body contains:
 
 The script uses curl's --fail-with-body option so that HTTP errors result in a
 nonzero exit code while still preserving the response body for error reporting.
+The authorization header is passed to curl through a config file on standard
+input, so the token never appears in the process argument list.
 
 The script does not perform any version control operations. It does not run
 git pull, git add, git commit, git push, or any other Git command.
@@ -131,27 +133,7 @@ import sys
 import time
 from pathlib import Path
 
-
-def load_gradle_properties():
-    """Load user level Gradle properties from ~/.gradle/gradle.properties."""
-
-    path = Path.home() / ".gradle" / "gradle.properties"
-    properties = {}
-
-    with path.open(encoding="utf-8") as file:
-        for line in file:
-            line = line.strip()
-
-            # Ignore empty lines and comments.
-            if not line or line.startswith("#"):
-                continue
-
-            # Gradle properties use key=value syntax.
-            if "=" in line:
-                key, value = line.split("=", 1)
-                properties[key.strip()] = value.strip()
-
-    return properties
+from gradle_user_properties import load_gradle_properties
 
 
 def get_modrinth_id(versions_file):
@@ -243,23 +225,28 @@ def main():
         # Update the project description through the Modrinth API.
         #
         # curl is used instead of a Python HTTP library so the script has
-        # no additional Python dependencies.
+        # no additional Python dependencies. The authorization header is
+        # supplied through a curl config file on standard input, so the
+        # token never appears in the process argument list.
+        curl_config = f'header = "Authorization: Bearer {modrinth_token}"\n'
+
         result = subprocess.run(
             [
                 "curl",
                 "--fail-with-body",
                 "--silent",
                 "--show-error",
+                "--config",
+                "-",
                 "--request",
                 "PATCH",
                 f"https://api.modrinth.com/v2/project/{modrinth_id}",
-                "--header",
-                f"Authorization: Bearer {modrinth_token}",
                 "--header",
                 "Content-Type: application/json",
                 "--data-binary",
                 json.dumps({"body": body}),
             ],
+            input=curl_config,
             text=True,
             capture_output=True,
         )

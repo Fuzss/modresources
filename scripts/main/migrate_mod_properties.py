@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+"""Migrate a legacy ``gradle.properties`` layout to the current property names."""
+
 import sys
+
+from console import error2
 
 # Environment mapping
 ENV_MAPPING = {
@@ -25,11 +29,11 @@ def parse_old_properties(file_path):
     return props
 
 def convert_slug_to_id(name: str):
-    id = name.strip().replace("-", "").lower()
-    if id == "forgeconfigapiportfabric":
+    mod_id = name.strip().replace("-", "").lower()
+    if mod_id == "forgeconfigapiportfabric":
         return "forgeconfigapiport"
     else:
-        return id
+        return mod_id
 
 def convert_dependencies(props):
     new_deps = {}
@@ -79,12 +83,15 @@ def convert_distributions(props):
 
     return result
 
-def migrate_properties(input_file, output_file):
+def migrate_properties(input_file, output_file, plugins_version):
     props = parse_old_properties(input_file)
 
     if "dependenciesVersionCatalog" not in props:
         print(f"Nothing to migrate in {input_file}")
         return
+
+    if not plugins_version:
+        error2("Missing plugins version for gradle.properties migration")
 
     with open(output_file, "w", encoding="utf-8") as file:
         file.write("org.gradle.caching=true\n")
@@ -98,7 +105,7 @@ def migrate_properties(input_file, output_file):
         new_version = f"{base_version}-SNAPSHOT"  # "1.21.10-SNAPSHOT"
         file.write(f"project.libs={new_version}\n")
         file.write("project.platforms=Common, Fabric, NeoForge\n")
-        file.write("project.plugins=1.0-SNAPSHOT\n\n")
+        file.write(f"project.plugins={plugins_version}\n\n")
         
         file.write(f"mod.authors={props.get('modAuthor', '')}\n")
         file.write(f"mod.description={props.get('modDescription', '')}\n")
@@ -127,11 +134,11 @@ def migrate_properties(input_file, output_file):
     print(f"Successfully migrated properties in {input_file}")
 
 def main():
-    if len(sys.argv) < 3:
-        print("Usage: python3 convert_gradle.py <input_file> <output_file>")
+    if len(sys.argv) != 4:
+        print("Usage: python3 migrate_mod_properties.py <input_file> <output_file> <plugins_version>")
         sys.exit(1)
 
-    migrate_properties(sys.argv[1], sys.argv[2])
+    migrate_properties(sys.argv[1], sys.argv[2], sys.argv[3])
 
 if __name__ == "__main__":
     main()

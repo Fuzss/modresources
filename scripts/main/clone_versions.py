@@ -45,7 +45,7 @@ def clone_branch(repo_url: str, branch: str, target_dir: str):
         "git",
         "fetch",
         "--all"
-    ], check=True
+    ], cwd=target_dir, check=True
     )
 
 
@@ -122,7 +122,7 @@ def load_versions_file(main_path: str, branch_overrides=None):
                 if state in SUPPORT_TYPES:
                     branches[version] = state
                 else:
-                    print(f"Warning: Unkown support type {state}")
+                    print(f"Warning: Unknown support type {state}")
             else:
                 branches.pop(version, None)
 
@@ -143,7 +143,7 @@ def load_versions_file(main_path: str, branch_overrides=None):
 
     if result.returncode == 0:
         print("No changes to commit, skipping commit and push.")
-        return False
+        return data
     
     subprocess.run(
         ["git", "commit", "-m", "Update versions.json"],
@@ -180,7 +180,7 @@ def load_versions(main_path: str):
     ]
 
 
-def setup_git(root_path: str, repo_name: str, versions_override: list[str] = []):
+def setup_git(root_path: str, repo_name: str, versions_override: list[str] | None = None):
     repo_url = f"{REMOTE_BASE_URL}{repo_name}.git"
     main_path = os.path.join(root_path, "main")
 

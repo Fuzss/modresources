@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+"""Convert a ``mixins.json`` configuration into Gradle DSL mixin declarations."""
+
 import json
 import sys
 import os

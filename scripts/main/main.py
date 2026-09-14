@@ -1,799 +1,32 @@
 #!/usr/bin/env python3
-import shutil
-import sys
+"""Core CLI entry point for modresources project management tasks.
+
+Orchestrates version cloning, workspace upgrades, Gradle property updates,
+changelog handling, building, launching, publishing, and uploading. Heavier
+logic lives in the sibling modules; this file owns argument parsing dispatch
+and task ordering.
+"""
+
 import os
 import subprocess
-import argparse
-import re
-import json
+import sys
+
 import clone_versions
-import migrate_mod_properties
-import migrate_mixins
-from collections import defaultdict
-from datetime import date
-from datetime import datetime
-from pathlib import Path
+from changelog import generate_changelog_block, parse_changelog_sections, prepend_to_changelog
+from cli import parse_args
+from console import error2, info2, warn2
+from fs_utils import has_subproject, string_in_file_if_exists
+from git_ops import git_push_all, prepare_new_version
+from gradle_properties import create_gradle_properties, find_gradle_property, update_gradle_properties
+from gradle_tasks import run_launch, run_upload
+from validation import (
+    validate_launch_parameters,
+    validate_legacy_parameter,
+    validate_open_parameters,
+    validate_upload_parameters,
+)
+from workspace_upgrade import run_workspace_upgrade
 
-_GRADLE_PROPS = None
-ORDERED_CHANGELOG_SECTIONS = ["added", "changed", "deprecated", "removed", "fixed", "security"]
-VALID_CHANGELOG_SECTIONS = set(ORDERED_CHANGELOG_SECTIONS)
-
-ENVIRONMENTS = {"finder", "idea"}
-MOD_LOADERS = {"fabric", "neoforge"}
-DISTRIBUTIONS = {"client", "server"}
-UPLOADING_SITES = {"curseforge", "modrinth", "github"}
-LEGACY_TYPES = {"properties", "tasks"}
-
-SEMANTIC_VERSION_PATTERN = re.compile(r"^\d+\.\d+\.\d+$")
-VERSION_KEYWORDS = {"latest", "patch", "minor", "major"}
-
-def log2(level, color, message):
-    now = datetime.now().strftime("%H:%M:%S")
-    print(f"\033[1;{color}m[{now}] [{level}] {message}\033[0m")
-
-def info2(message):
-    log2("INFO", "36", message)   # cyan
-
-def warn2(message):
-    log2("WARN", "33", message)   # yellow
-
-def error2(message):
-    log2("ERROR", "31", message)   # red
-    sys.exit(1)
-
-def merge_config_into_args(parser, args, config_data):
-    defaults = {
-        action.dest: action.default
-        for action in parser._actions
-        if action.dest != "help"
-    }
-
-    for key, value in config_data.items():
-        if getattr(args, key, None) == defaults.get(key):
-            setattr(args, key, value)
-
-def parse_args():
-    parser = argparse.ArgumentParser()
-
-    parser.add_argument("--bare", default=False, action="store_true", help="Skip any Gradle setup.")
-    parser.add_argument("--branch", default=[], action="append", nargs=2, metavar=("BRANCH_NAME", "SUPPORT_STATUS"), help="Updates branch status in versions.json, can be used multiple times. Format: --branch <branch_name> <support_status>")
-    parser.add_argument("--catalog", type=str, default=None, metavar="VERSION_CATALOG", help="Version-based catalog. Example: --catalog 26.2-SNAPSHOT")
-    parser.add_argument("--changelog", default=None, action="append", nargs=2, metavar=("SECTION_NAME", "TEXT"), help="Add a changelog line, can be used multiple times. Format: --changelog <section_name> <text>")
-    parser.add_argument("--commit", default=False, action="store_true", help="Commit to GitHub.")
-    parser.add_argument("--config", type=str, metavar="CONFIG_NAME", help="Args as JSON config file. Example: --config upgrade-upload")
-    parser.add_argument("--data", default=False, action="store_true", help="Generate data.")
-    parser.add_argument("--gradle", type=str, default=None, metavar="GRADLE_VERSION", help="Gradle wrapper version. Example: --gradle 9.6.0")
-    parser.add_argument("--id", type=str, default=None, metavar="MOD_ID", help="Mod id. Example: --id examplemod")
-    parser.add_argument("--init", nargs="?", const=True, default=None, metavar="SOURCE_BRANCH", help="Setup git repository and version branch, with optional argument. Example: --init [26.2.x]")
-    parser.add_argument("--launch", default=[], action="append", nargs="*", metavar=("MOD_LOADER", "DISTRIBUTION"), help="Launch the game, can be used multiple times. Format: --launch <mod_loader> <distribution>")
-    parser.add_argument("--legacy", nargs="?", const=True, default=None, metavar="SCOPE", help="Use legacy Gradle property and task names. Format: --legacy <scope>")
-    parser.add_argument("--minecraft", type=str, required=True, metavar="MINECRAFT_VERSION", help="Minecraft name. Example: --minecraft 26.2.x")
-    parser.add_argument("--name", type=str, required=True, metavar="REPOSITORY_NAME", help="Repository name. Example: --name example-mod")
-    parser.add_argument("--notify", default=False, action="store_true", help="Notify via Discord webhook.")
-    parser.add_argument("--open", default=None, nargs="*", metavar="ENVIRONMENT", help="Open in Finder, or Idea. Format: --open <environment>")
-    parser.add_argument("--path", type=str, default=None, metavar="ROOT_PATH", help="Override default root path. Example: --path /absolute/path/to/project")
-    parser.add_argument("--plugins", type=str, default=None, metavar="PLUGINS_VERSION", help="Multiloader convention plugins version. Example: --plugins 1.1-SNAPSHOT")
-    parser.add_argument("--properties", default=None, action="append", nargs=2, metavar=("KEY", "VALUE"), help="Set a gradle.properties value, can be used multiple times. Format: --properties <key> <value>")
-    parser.add_argument("--publish", default=False, action="store_true", help="Publish to Maven.")
-    parser.add_argument("--spotless", type=str, default=None, metavar="TASK_NAME", help="Run spotless upgrade tasks for a specific game update. Example: --spotless tinytakeover")
-    parser.add_argument("--upgrade", nargs="?", const=True, default=None, metavar="PATCHES_NAME", help="Run workspace upgrade, potentially for a specific version, with optional argument. Example: --upgrade [26.1.x]")
-    parser.add_argument("--upload", default=None, nargs="*", metavar=("MOD_LOADER", "WEBSITE"), help="Upload to CurseForge, Modrinth, or GitHub. Format: --upload <mod_loader> <website>")
-    parser.add_argument("--version", type=str, default=None, metavar="PROJECT_VERSION", help="Mod version. Example: --version 26.2.0")
-
-    args = parser.parse_args()
-
-    if args.config:
-        config_path = Path("config") / args.minecraft / f"{args.config}.json"
-        if config_path.is_file():
-            config_data = json.loads(config_path.read_text())
-            merge_config_into_args(parser, args, config_data)
-        else:
-            error2(f"Config not found at {config_path}")
-
-    if not args.id:
-        args.id = args.name.replace("-", "")
-
-    print(json.dumps(vars(args), indent=2, sort_keys=True))
-
-    return args
-
-def has_subproject(project_path, name):
-    return os.path.exists(os.path.join(project_path, name, "build.gradle.kts"))
-
-def copy_from_template(source_path, destination_path, only_if_absent=False, throw_when_not_found=True):
-    if only_if_absent and os.path.exists(destination_path):
-        return
-    
-    if (
-        os.path.exists(source_path)
-        and os.path.exists(destination_path)
-        and os.path.samefile(source_path, destination_path)
-    ):
-        return
-
-    if os.path.isfile(source_path):
-        shutil.copy(source_path, destination_path)
-
-    elif os.path.isdir(source_path):
-        if os.path.exists(destination_path):
-            shutil.rmtree(destination_path)
-
-        shutil.copytree(source_path, destination_path)
-
-    elif throw_when_not_found:
-        error2(f"Not found: {source_path}")
-
-    else:
-        return
-
-    print(f"Copied {source_path} -> {destination_path}")
-
-def move_directory_or_file(source_path, destination_path):
-    if os.path.isdir(source_path) or os.path.isfile(source_path):
-        shutil.move(source_path, destination_path)
-        print(f"Moved {source_path} -> {destination_path}")
-
-def remove_directory_or_file(file_path, only_if_empty=False):
-    if os.path.isdir(file_path):
-        if only_if_empty and os.listdir(file_path):
-            return
-        shutil.rmtree(file_path)
-    elif os.path.isfile(file_path):
-        os.remove(file_path)
-    else:
-        return
-
-    print(f"Removed {file_path}")
-
-def get_properties_key(line: str) -> tuple[str, ...]:
-    key = line.split("=", 1)[0].strip()
-    return tuple(key.split("."))
-
-def get_matching_parts(first: tuple[str, ...], second: tuple[str, ...]) -> int:
-    matching_parts = 0
-
-    for first_part, second_part in zip(first, second):
-        if first_part != second_part:
-            break
-
-        matching_parts += 1
-
-    return matching_parts
-
-def find_insertion_index(lines: list[str], new_key: str) -> int:
-    new_key_parts = get_properties_key(new_key)
-
-    previous_matching_parts = 0
-
-    for index, line in enumerate(lines):
-        if not line.strip() or line.lstrip().startswith("#"):
-            continue
-
-        current_key = get_properties_key(line)
-        matching_parts = get_matching_parts(current_key, new_key_parts)
-
-        if matching_parts < previous_matching_parts:
-            return index
-
-        if matching_parts > 0 and current_key > new_key_parts:
-            return index
-
-        previous_matching_parts = matching_parts
-
-    return -1
-
-def update_gradle_properties(file_path, updates: dict, remove_predicate=None):
-    with open(file_path, 'r') as f:
-        lines = f.readlines()
-
-    properties = {}
-    updated_lines = []
-
-    for line in lines:
-        content = line.strip()
-        if "=" not in line:
-            updated_lines.append(line)
-            continue
-
-        comment = False
-        if content.startswith('#'):
-            content = content[1:].strip()
-            comment = True
-
-        key, value = content.split('=', 1)
-        key = key.strip()
-        value = value.strip()
-
-        if key in updates:
-            updated_value = updates[key]
-
-            if callable(updated_value):
-                updated_value = updated_value(value)
-
-            if updated_value == "#":
-                comment = True
-            elif updated_value is None:
-                value = None
-            else:
-                comment = False
-                value = updated_value
-            
-            if value is not None:
-                updated_lines.append(f'{"#" if comment else ""}{key}={value}\n')
-        elif remove_predicate and remove_predicate(key):
-            value = None
-        else:
-            updated_lines.append(line)
-
-        if not comment and value is not None:
-            properties[key] = value
-
-    for key, value in updates.items():
-        if key not in properties and value is not None and value != "#":
-            line = f"{key}={value}\n"
-            index = find_insertion_index(updated_lines, key)
-            if index == -1:
-                updated_lines.append("\n")
-                updated_lines.append(line)
-            else:
-                updated_lines.insert(index, line)
-            
-            properties[key] = value
-
-    if updates:
-        with open(file_path, 'w') as f:
-            f.writelines(updated_lines)
-
-    updated_properties = {
-        key: value
-        for key, value in properties.items()
-        if key in updates
-    }
-
-    print(json.dumps(updated_properties, indent=2, sort_keys=True))
-
-    return properties
-
-def load_gradle_properties():
-    path = os.path.expanduser("~/.gradle/gradle.properties")
-    props = {}
-    with open(path, "r", encoding="utf-8") as f:
-        for line in f:
-            line = line.strip()
-            if not line or line.startswith("#"):
-                continue
-            if "=" in line:
-                key, value = line.split("=", 1)
-                props[key.strip()] = value.strip()
-
-    return props
-
-def find_gradle_property(prop, default=None):
-    global _GRADLE_PROPS
-    if _GRADLE_PROPS is None:
-        _GRADLE_PROPS = load_gradle_properties()
-    if prop in _GRADLE_PROPS:
-        return _GRADLE_PROPS[prop]
-    elif default is not None:
-        return default
-    else:
-        error2(f"Missing property {prop} in ~/.gradle/gradle.properties")
-
-def git_push_all(args, repo_path, commit_message):
-    remote_url = f"git@github.com:Fuzss/{args.name}.git"
-
-    subprocess.run(
-        ["git", "remote", "set-url", "origin", remote_url], 
-        cwd=repo_path, 
-        check=True
-    )
-
-    subprocess.run(
-        ["git", "add", "."], 
-        cwd=repo_path, 
-        check=True
-    )
-
-    result = subprocess.run(
-        ["git", "diff", "--cached", "--quiet"],
-        cwd=repo_path
-    )
-
-    if result.returncode == 0:
-        print("No changes to commit, skipping commit and push.")
-        return False
-    
-    subprocess.run(
-        ["git", "commit", "-m", commit_message],
-        cwd=repo_path,
-        check=True
-    )
-
-    subprocess.run(
-        ["git", "push"],
-        cwd=repo_path,
-        check=True
-    )
-
-    return True
-
-def is_valid_parameter(value, allowed_values):
-    if value not in allowed_values:
-        error2(f"Invalid parameter '{value}'. Must be one of: {', '.join(allowed_values)}")
-
-def validate_open_parameters(parameters, fallback_parameter):
-    if parameters is None:
-        return None
-    elif len(parameters) == 0:
-        return fallback_parameter
-    
-    environment = parameters[0].lower()
-    is_valid_parameter(environment, ENVIRONMENTS)
-    return environment
-
-def validate_launch_parameters(project_path, parameters):
-    if parameters is None:
-        return None
-    elif len(parameters) == 0:
-        if has_subproject(project_path, "Fabric"):
-            parameters = ("fabric", "client")
-        elif has_subproject(project_path, "NeoForge"):
-            parameters = ("neoforge", "client")
-        else:
-            error2("Unable to determine launch parameters")
-    elif len(parameters) == 1:
-        parameters = (parameters[0], "client")
-
-    mod_loader = parameters[0].lower()
-    other_argument = parameters[1].lower()
-    is_valid_parameter(mod_loader, MOD_LOADERS)
-    is_valid_parameter(other_argument, DISTRIBUTIONS)
-    return (mod_loader, other_argument)
-
-def validate_upload_parameters(parameters):
-    if parameters is None:
-        return None
-    elif len(parameters) == 0:
-        return (None, None)
-    elif len(parameters) == 1:
-        parameter = parameters[0].lower()
-        if parameter in MOD_LOADERS:
-            return (parameter, None)
-        elif parameter in UPLOADING_SITES:
-            return (None, parameter)
-
-    mod_loader = parameters[0].lower()
-    other_argument = parameters[1].lower()
-    is_valid_parameter(mod_loader, MOD_LOADERS)
-    is_valid_parameter(other_argument, UPLOADING_SITES)
-    return (mod_loader, other_argument)
-
-def validate_legacy_parameter(parameter):
-    if parameter is None:
-        return set()
-    elif not isinstance(parameter, str):
-        return set(LEGACY_TYPES)
-    
-    scope = parameter.lower()
-    is_valid_parameter(scope, LEGACY_TYPES)
-    return {scope}
-
-def parse_changelog_sections(section_pairs):
-    if not section_pairs:
-        return dict()
-
-    changelog_section_data = defaultdict(list)
-
-    for raw_header, line in section_pairs:
-        header = raw_header.strip().lower()
-        is_valid_parameter(header, VALID_CHANGELOG_SECTIONS)
-        changelog_section_data[header].append(f"- {line.strip()}")
-
-    return changelog_section_data
-
-def generate_changelog_block(full_version, changelog_section_data):
-    today = date.today().isoformat()
-    header = f"## [{full_version}] - {today}"
-    body = []
-
-    for section in ORDERED_CHANGELOG_SECTIONS:
-        if section in changelog_section_data:
-            body.append(f"### {section.capitalize()}")
-            body.append("")
-            body.extend(changelog_section_data[section])
-            body.append("")
-
-    full_body = "\n".join(body).rstrip()
-    return (header + "\n\n" + full_body + "\n", full_body)
-
-def prepend_to_changelog(changelog_path, new_entry, full_version):
-    try:
-        with open(changelog_path, encoding="utf-8") as f:
-            existing = f.read()
-    except FileNotFoundError:
-        existing = """# Changelog
-
-All notable changes to this project will be documented in this file.
-
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
-        """
-
-    if full_version in existing:
-        if new_entry[1] in existing:
-            return
-        else:
-            error2(f"Duplicate changelog version: {full_version}")
-
-    if "## [" in existing:
-        preamble, rest = existing.split("## [", 1)
-        updated = preamble.rstrip() + "\n\n" + new_entry[0] + "\n## [" + rest
-    else:
-        updated = existing.rstrip() + "\n\n" + new_entry[0]
-
-    with open(changelog_path, "w", encoding="utf-8") as f:
-        f.write(updated)
-
-def string_in_file_if_exists(file_path, target):
-    if not os.path.isfile(file_path):
-        return False
-    with open(file_path, 'r', encoding='utf-8') as f:
-        return target in f.read()
-    
-def bump_version(version, component):
-    if not SEMANTIC_VERSION_PATTERN.fullmatch(version):
-        raise ValueError(
-            f"Cannot bump version '{version}', expected semantic version x.y.z"
-        )
-
-    major, minor, patch = map(int, version.split("."))
-
-    if component == "major":
-        # Minecraft version numbers begin at minor update 1, not 0
-        return f"{major + 1}.1.0"
-    if component == "minor":
-        return f"{major}.{minor + 1}.0"
-    if component == "patch":
-        return f"{major}.{minor}.{patch + 1}"
-
-    raise ValueError(component)
-
-def create_gradle_properties(args, legacy_properties=False):
-    properties = {}
-
-    if args.version:
-        version_key = "modVersion" if legacy_properties else "mod.version"
-
-        version = args.version.lower()
-
-        if version in {"patch", "minor", "major"}:
-            properties[version_key] = lambda property: bump_version(property, version)
-        elif version == "latest":
-            pass
-        elif SEMANTIC_VERSION_PATTERN.fullmatch(version):
-            properties[version_key] = version
-        else:
-            raise ValueError(
-                f"Invalid version '{args.version}'. Expected semantic version "
-                f"(e.g. 26.1.0) or one of: {', '.join(sorted(VERSION_KEYWORDS))}"
-            )
-
-    if args.catalog:
-        properties["dependenciesVersionCatalog" if legacy_properties else "project.libs"] = args.catalog
-
-    if args.plugins:
-        properties["project.plugins"] = args.plugins
-
-    if args.properties:
-        for key, value in args.properties:
-            properties[key.strip()] = value.strip()
-
-    return properties
-
-def run_launch(mod_loader, distribution, project_path, legacy_tasks=False):
-    if mod_loader == "fabric":
-        if distribution == "client":
-            subprocess.run(["./gradlew", "fabricClient" if legacy_tasks else "fabric-client"], cwd=project_path, check=True)
-        elif distribution == "server":
-            subprocess.run(["./gradlew", "fabricServer" if legacy_tasks else "fabric-server"], cwd=project_path, check=True)
-        else:
-            error2(f"Unsupported argument: {distribution}")
-    elif mod_loader == "neoforge":
-        if distribution == "client":
-            subprocess.run(["./gradlew", "neoForgeClient" if legacy_tasks else "neoforge-client"], cwd=project_path, check=True)
-        elif distribution == "server":
-            subprocess.run(["./gradlew", "neoForgeServer" if legacy_tasks else "neoforge-server"], cwd=project_path, check=True)
-        else:
-            error2(f"Unsupported argument: {distribution}")
-    else:
-        error2(f"Unsupported argument: {mod_loader}")
-
-def run_upload(mod_loader, website, project_path, legacy_tasks=False):
-    if mod_loader == "fabric":
-        if website == "curseforge":
-            subprocess.run(["./gradlew", "fabricUploadCurseForge" if legacy_tasks else "fabric-curseforge"], cwd=project_path, check=True)
-        elif website == "modrinth":
-            subprocess.run(["./gradlew", "fabricUploadModrinth" if legacy_tasks else "fabric-modrinth"], cwd=project_path, check=True)
-        elif website == "github":
-            subprocess.run(["./gradlew", "fabricUploadGitHub" if legacy_tasks else "fabric-github"], cwd=project_path, check=True)
-        else:
-            subprocess.run(["./gradlew", "fabricUploadEverywhere" if legacy_tasks else "fabric-all"], cwd=project_path, check=True)
-    elif mod_loader == "neoforge":
-        if website == "curseforge":
-            subprocess.run(["./gradlew", "neoForgeUploadCurseForge" if legacy_tasks else "neoforge-curseforge"], cwd=project_path, check=True)
-        elif website == "modrinth":
-            subprocess.run(["./gradlew", "neoForgeUploadModrinth" if legacy_tasks else "neoforge-modrinth"], cwd=project_path, check=True)
-        elif website == "github":
-            subprocess.run(["./gradlew", "neoForgeUploadGitHub" if legacy_tasks else "neoforge-github"], cwd=project_path, check=True)
-        else:
-            subprocess.run(["./gradlew", "neoForgeUploadEverywhere" if legacy_tasks else "neoforge-all"], cwd=project_path, check=True)
-    else:
-        if website == "curseforge":
-            subprocess.run(["./gradlew", "allUploadCurseForge" if legacy_tasks else "all-curseforge"], cwd=project_path, check=True)
-        elif website == "modrinth":
-            subprocess.run(["./gradlew", "allUploadModrinth" if legacy_tasks else "all-modrinth"], cwd=project_path, check=True)
-        elif website == "github":
-            subprocess.run(["./gradlew", "allUploadGitHub" if legacy_tasks else "all-github"], cwd=project_path, check=True)
-        else:
-            subprocess.run(["./gradlew", "allUploadEverywhere" if legacy_tasks else "all-all"], cwd=project_path, check=True)
-
-def update_license_year(file_path):
-    current_year = datetime.now().year
-
-    with open(file_path, "r", encoding="utf-8") as f:
-        line = f.readline().rstrip("\n")
-
-    # Match line with the specific holder
-    pattern = re.compile(
-        r"(Copyright \(c\) )(\d{4})(?:-(\d{4}))?( @heyitsfuzs\. All Rights Reserved\.)"
-    )
-
-    match = pattern.fullmatch(line)
-    if not match:
-        return
-
-    start, year_start, year_end, rest = match.groups()
-    year_start = int(year_start)
-    year_end = int(year_end) if year_end else None
-
-    # Check if current year is already included
-    if year_end == current_year or year_start == current_year:
-        return
-
-    # Build new year string
-    new_years = f"{year_start}-{current_year}" if year_start != current_year else str(current_year)
-    new_line = f"{start}{new_years}{rest}\n"
-
-    with open(file_path, "w", encoding="utf-8") as f:
-        f.write(new_line)
-
-    print(f"Updated copyright year in {file_path}")
-
-def parse_minecraft_version(branch: str) -> tuple[int, ...] | None:
-    try:
-        parts = branch.strip().lower().split(".")
-        numbers = tuple(int(part) for part in parts if part not in ("", "x"))
-        return numbers if numbers else None
-    except (ValueError, AttributeError):
-        return None
-
-def is_version_upgrade(source_branch: str, new_branch: str) -> bool:
-    source_version = parse_minecraft_version(source_branch)
-    target_version = parse_minecraft_version(new_branch)
-    if source_version is None or target_version is None:
-        return False
-    return target_version > source_version
-
-def prepare_new_version(args, root_path, project_path):
-    remote_url = f"git@github.com:Fuzss/{args.name}.git"
-    new_branch = args.minecraft
-    source_branch = args.init
-
-    if os.path.isdir(project_path):
-        warn2(f"Branch {new_branch} already exists, skipping")
-        return
-
-    # check if remote branch exists
-    result = subprocess.run(
-        ["git", "ls-remote", "--heads", remote_url, new_branch],
-        capture_output=True,
-        text=True,
-        check=True
-    )
-
-    if bool(result.stdout.strip()):
-        error2(f"Failed to create new branch {new_branch}: branch already exists")
-
-    # clone default then create branch
-    subprocess.run(
-        ["git", "clone", remote_url, new_branch],
-        cwd=root_path,
-        check=True
-    )
-
-    subprocess.run(
-        ["git", "checkout", "-B", new_branch, f"origin/{source_branch}"],
-        cwd=project_path,
-        check=True
-    )
-
-    subprocess.run(
-        ["git", "push", "-u", "origin", new_branch],
-        cwd=project_path,
-        check=True
-    )
-    
-    print(f"Created new branch {new_branch} from {source_branch}")
-
-    if is_version_upgrade(source_branch, new_branch):
-        source_path = os.path.join(root_path, args.init)
-        copy_from_template(os.path.join(source_path, "run"), os.path.join(project_path, "run"), only_if_absent=True, throw_when_not_found=False)
-    else:
-        print(f"Skipping run directory copy: {source_branch} -> {new_branch} is not an upgrade")
-
-def replace_text_block(file_path, pattern, replacement, use_regex=True):
-    if not os.path.exists(file_path):
-        return
-
-    with open(file_path, "r", encoding="utf-8") as file:
-        text = file.read()
-
-    if use_regex:
-        new_text = re.sub(pattern, replacement, text, flags=re.DOTALL | re.VERBOSE | re.MULTILINE)
-    else:
-        new_text = text.replace(pattern, replacement)
-
-    if text != new_text:
-        with open(file_path, "w", encoding="utf-8") as file:
-            file.write(new_text)
-
-        print(f"Updated {file_path}")
-    else:
-        print(f"No change to {file_path}")
-
-def run_26_1_upgrade(id, template_path, project_path):
-    move_directory_or_file(
-        os.path.join(project_path, "Common", "src", "main", "resources", "mod_logo.png"),
-        os.path.join(project_path, "Common", "src", "main", "resources", "pack.png")
-    )
-
-    move_directory_or_file(
-        os.path.join(project_path, "Common", "src", "main", "resources", f"{id}.accesswidener"),
-        os.path.join(project_path, "Common", "src", "main", "resources", f"{id}.classtweaker")
-    )
-
-    replace_text_block(
-        os.path.join(project_path, "Common", "src", "main", "resources", f"{id}.classtweaker"),
-        r"^accessWidener\s+v[12]\s+\w+\s*$",
-        "classTweaker    v2  official"
-    )
-
-    replace_text_block(
-        os.path.join(project_path, "Common", "build.gradle.kts"),
-        "(libs.",
-        "(sharedLibs.",
-        use_regex=False
-    )
-
-    replace_text_block(
-        os.path.join(project_path, "Fabric", "build.gradle.kts"),
-        "(libs.",
-        "(sharedLibs.",
-        use_regex=False
-    )
-
-    replace_text_block(
-        os.path.join(project_path, "NeoForge", "build.gradle.kts"),
-        "(libs.",
-        "(sharedLibs.",
-        use_regex=False
-    )
-
-def run_1_21_11_upgrade(id, template_path, project_path):
-    copy_from_template(f"{template_path}/settings.gradle.kts", f"{project_path}/settings.gradle.kts")
-    copy_from_template(f"{template_path}/build.gradle.kts", f"{project_path}/build.gradle.kts")
-    copy_from_template(f"{template_path}/Common/build.gradle.kts", f"{project_path}/Common/build.gradle.kts", only_if_absent=True)
-    copy_from_template(f"{template_path}/Common/gradle.properties", f"{project_path}/Common/gradle.properties")
-    copy_from_template(f"{template_path}/Fabric/build.gradle.kts", f"{project_path}/Fabric/build.gradle.kts", only_if_absent=True)
-    copy_from_template(f"{template_path}/Fabric/gradle.properties", f"{project_path}/Fabric/gradle.properties")
-    copy_from_template(f"{template_path}/NeoForge/build.gradle.kts", f"{project_path}/NeoForge/build.gradle.kts", only_if_absent=True)
-    copy_from_template(f"{template_path}/NeoForge/gradle.properties", f"{project_path}/NeoForge/gradle.properties")
-
-    migrate_mixins.convert_mixins(f"{project_path}/Common/src/main/resources/common.mixins.json", f"{project_path}/Common/build.gradle.kts")
-    migrate_mixins.convert_mixins(f"{project_path}/Common/src/main/resources/{id}.common.mixins.json", f"{project_path}/Common/build.gradle.kts")
-    migrate_mixins.convert_mixins(f"{project_path}/Fabric/src/main/resources/fabric.mixins.json", f"{project_path}/Fabric/build.gradle.kts")
-    migrate_mixins.convert_mixins(f"{project_path}/Fabric/src/main/resources/{id}.fabric.mixins.json", f"{project_path}/Fabric/build.gradle.kts")
-    migrate_mixins.convert_mixins(f"{project_path}/NeoForge/src/main/resources/neoforge.mixins.json", f"{project_path}/NeoForge/build.gradle.kts")    
-    migrate_mixins.convert_mixins(f"{project_path}/NeoForge/src/main/resources/{id}.neoforge.mixins.json", f"{project_path}/NeoForge/build.gradle.kts")
-    migrate_mod_properties.migrate_properties(f"{project_path}/gradle.properties", f"{project_path}/gradle.properties")
-
-    remove_directory_or_file(f"{project_path}/settings.gradle")
-    remove_directory_or_file(f"{project_path}/build.gradle")
-    remove_directory_or_file(f"{project_path}/Common/build.gradle")
-    remove_directory_or_file(f"{project_path}/Common/src/main/resources/architectury.common.json")
-    remove_directory_or_file(f"{project_path}/Common/src/main/resources/common.mixins.json")
-    remove_directory_or_file(f"{project_path}/Common/src/main/resources/{id}.common.mixins.json")
-    remove_directory_or_file(f"{project_path}/Fabric/build.gradle")
-    remove_directory_or_file(f"{project_path}/Fabric/src/main/resources/fabric.mod.json")
-    remove_directory_or_file(f"{project_path}/Fabric/src/main/resources/fabric.mixins.json")
-    remove_directory_or_file(f"{project_path}/Fabric/src/main/resources/{id}.fabric.mixins.json")
-    remove_directory_or_file(f"{project_path}/NeoForge/build.gradle")
-    remove_directory_or_file(f"{project_path}/NeoForge/src/main/resources/META-INF/neoforge.mods.toml")
-    remove_directory_or_file(f"{project_path}/NeoForge/src/main/resources/META-INF", only_if_empty=True)
-    remove_directory_or_file(f"{project_path}/NeoForge/src/main/resources/neoforge.mixins.json")
-    remove_directory_or_file(f"{project_path}/NeoForge/src/main/resources/{id}.neoforge.mixins.json")
-
-def run_1_21_1_upgrade(id, template_path, project_path):
-    run_1_21_11_upgrade(id, template_path, project_path)
-    run_26_1_upgrade(id, template_path, project_path)
-
-def run_workspace_upgrade(args, base_path, main_path, project_path):
-    template_root_path = os.path.join(base_path, "multiloader-workspace-template")
-    template_main_path = os.path.join(template_root_path, "main")
-    template_project_path = os.path.join(template_root_path, args.minecraft)
-
-    result = subprocess.run(
-        ["git", "status", "--porcelain"],
-        cwd=main_path,
-        capture_output=True,
-        text=True,
-        check=True
-    )
-    if result.stdout.strip() != "":
-        error2("Worktree main not clean, unable to run upgrade")
-
-    subprocess.run(["git", "pull"], cwd=main_path, check=True)
-
-    copy_from_template(
-        os.path.join(template_main_path, ".gitignore"),
-        os.path.join(main_path, ".gitignore"),
-    )
-
-    copy_from_template(
-        os.path.join(template_main_path, ".github"),
-        os.path.join(main_path, ".github"),
-    )
-
-    update_license_year(
-        os.path.join(main_path, "LICENSE-ASSETS.md")
-    )
-
-    if args.commit and git_push_all(args, main_path, f"upgrade {args.minecraft} workspace"):
-        print(f"Committed workspace upgrades on main")
-
-    result = subprocess.run(
-        ["git", "status", "--porcelain"],
-        cwd=project_path,
-        capture_output=True,
-        text=True,
-        check=True
-    )
-    if result.stdout.strip() != "":
-        error2(f"Worktree {args.minecraft} not clean, unable to run upgrade")
-
-    subprocess.run(["git", "pull"], cwd=project_path, check=True)
-
-    remove_directory_or_file(f"{project_path}/CHANGELOG.md")
-    
-    remove_directory_or_file(
-        os.path.join(project_path, "Common", "src", "main", "resources", "pack.mcmeta")
-    )
-
-    remove_directory_or_file(
-        os.path.join(project_path, "Common", "src", "main", "resources", "mod_banner.png")
-    )
-
-    if isinstance(args.upgrade, str):
-        print(f"Running {args.upgrade} workspace upgrades")
-        if args.upgrade == "26.1.x":
-            run_26_1_upgrade(args.id, f"{template_project_path}", project_path)
-        elif args.upgrade == "1.21.11":
-            run_1_21_11_upgrade(args.id, f"{template_project_path}", project_path)
-        elif args.upgrade == "1.21.1":
-            run_1_21_1_upgrade(args.id, f"{template_project_path}", project_path)
-
-    if args.commit and git_push_all(args, project_path, f"upgrade {args.minecraft} workspace"):
-        print(f"Committed workspace upgrades on {args.minecraft}")
 
 def update_directory(args, path):
     if os.path.isdir(path):
@@ -801,6 +34,7 @@ def update_directory(args, path):
             subprocess.run(["git", "pull"], cwd=path, check=True)
     else:
         error2(f"Directory not found: {path}")
+
 
 def main():
     args = parse_args()
@@ -811,6 +45,8 @@ def main():
 
     if args.init:
         info2(f"Running init at {root_path}...")
+        if isinstance(args.init, str) and not args.version:
+            error2(f"--init {args.init} requires --version to prepare a new version branch")
         if args.version and isinstance(args.init, str):
             clone_versions.setup_git(root_path, args.name)
             info2(f"Preparing Minecraft version {args.minecraft}...")
@@ -835,8 +71,8 @@ def main():
                     stderr=subprocess.DEVNULL
                 )
             except FileNotFoundError as e:
-                warn2("Could not launch IntelliJ:", e)
-        sys.exit(1)
+                warn2(f"Could not launch IntelliJ: {e}")
+        sys.exit(0)
 
     if args.branch:
         info2(f"Updating versions.json...")
@@ -868,7 +104,12 @@ def main():
     )
     if args.version:
         version_key = "modVersion" if legacy_properties else "mod.version"
+        if version_key not in gradle_properties:
+            error2(f"Missing property {version_key} in {gradle_properties_path}")
         args.version = gradle_properties[version_key]
+
+    if args.changelog and not args.version:
+        warn2("Skipping changelog: --version is required")
 
     if args.version:
         changelog_path = f"{project_path}/CHANGELOG.md"
@@ -916,32 +157,46 @@ def main():
         subprocess.run(["./gradlew", "neoForgeData" if legacy_tasks else "neoforge-data"], cwd=project_path, check=True)
 
     if not args.bare:
-        launch_parameters = [ 
-            validate_launch_parameters(project_path, launch) 
-            for launch in args.launch 
+        launch_parameters = [
+            validate_launch_parameters(project_path, launch)
+            for launch in args.launch
         ]
         for parameter_set in launch_parameters:
             info2(f"Launching {parameter_set[0].capitalize()} {parameter_set[1].capitalize()}...")
             run_launch(parameter_set[0], parameter_set[1], project_path, legacy_tasks)
 
-    if args.version and args.commit:
-        info2(f"Commiting version v{args.version}...")
-        git_push_all(args, project_path, f"release v{args.version}")
+    if args.commit:
+        if args.version:
+            info2(f"Commiting version v{args.version}...")
+            git_push_all(args, project_path, f"release v{args.version}")
+        else:
+            warn2("Skipping commit: --version is required")
 
-    if args.version and not args.bare and args.publish:
-        info2(f"Publishing version v{args.version}...")
-        subprocess.run(["./gradlew", "allPublish" if legacy_tasks else "all-publish"], cwd=project_path, check=True)
+    if args.publish and not args.bare:
+        if args.version:
+            info2(f"Publishing version v{args.version}...")
+            subprocess.run(["./gradlew", "allPublish" if legacy_tasks else "all-publish"], cwd=project_path, check=True)
+        else:
+            warn2("Skipping publish: --version is required")
 
     if not args.bare:
         upload_parameters = validate_upload_parameters(args.upload)
-        if args.version and upload_parameters:
-            info2(f"Uploading version v{args.version}{f" for {upload_parameters[0].capitalize()}" if upload_parameters[0] else ""}{f" to {upload_parameters[1].capitalize()}" if upload_parameters[1] else ""}...")
-            run_upload(upload_parameters[0], upload_parameters[1], project_path, legacy_tasks)
+        if upload_parameters:
+            if args.version:
+                upload_loader = f" for {upload_parameters[0].capitalize()}" if upload_parameters[0] else ""
+                upload_site = f" to {upload_parameters[1].capitalize()}" if upload_parameters[1] else ""
+                info2(f"Uploading version v{args.version}{upload_loader}{upload_site}...")
+                run_upload(upload_parameters[0], upload_parameters[1], project_path, legacy_tasks)
+            else:
+                warn2("Skipping upload: --version is required")
 
-    if args.version and not args.bare and args.notify:
-        info2(f"Announcing version v{args.version}...")
-        subprocess.run(["./gradlew", "notifyDiscord" if legacy_tasks else "all-discord"], cwd=project_path, check=True)
+    if args.notify and not args.bare:
+        if args.version:
+            info2(f"Announcing version v{args.version}...")
+            subprocess.run(["./gradlew", "notifyDiscord" if legacy_tasks else "all-discord"], cwd=project_path, check=True)
+        else:
+            warn2("Skipping announce: --version is required")
+
 
 if __name__ == "__main__":
     main()
-    

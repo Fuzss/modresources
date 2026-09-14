@@ -127,6 +127,8 @@ import subprocess
 import sys
 import time
 
+from gradle_user_properties import load_gradle_properties
+
 
 # Screen coordinates for the CurseForge description editor.
 #
@@ -135,28 +137,6 @@ import time
 SOURCE_MODE_BUTTON_COORDINATES = (635, 455)
 OK_BUTTON_COORDINATES = (1250, 950)
 SAVE_CHANGES_BUTTON_COORDINATES = (1555, 855)
-
-
-def load_gradle_properties():
-    """Load user level Gradle properties from ~/.gradle/gradle.properties."""
-
-    path = Path.home() / ".gradle" / "gradle.properties"
-    properties = {}
-
-    with path.open(encoding="utf-8") as file:
-        for line in file:
-            line = line.strip()
-
-            # Ignore empty lines and comments.
-            if not line or line.startswith("#"):
-                continue
-
-            # Gradle properties use key=value syntax.
-            if "=" in line:
-                key, value = line.split("=", 1)
-                properties[key.strip()] = value.strip()
-
-    return properties
 
 
 def run_applescript(script):
@@ -286,7 +266,7 @@ def main():
         # The CurseForge slug is required to construct the settings URL.
         curseforge_slug = get_curseforge_slug(versions_file)
 
-        if curseforge_slug is None:
+        if not curseforge_slug:
             continue
 
         # The generated page files use the mod ID as their directory name.
