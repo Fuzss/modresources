@@ -48,8 +48,9 @@ publishing them are handled outside this repository.
 
 ## Features
 
-- Only include Features when the mod has enough meaningful functionality to
-  justify them. It is fine to omit `features.md` entirely for small mods.
+- Only include Features when the list adds information the About does not. If
+  the mod does one thing and the About already says it, omit `features.md`
+  entirely rather than restating the same point as bullets.
 - Always use one flat list. Do not add bold group headings or nested lists.
 - Format every bullet as:
 
@@ -57,9 +58,10 @@ publishing them are handled outside this repository.
   * 🚀 **Feature Name:** Explanation.
   ```
 
-- Aim for 3 to 5 meaningful features for small and quality-of-life mods, and up
-  to roughly 10 to 12 for large content mods. Prefer the strongest features over
-  completeness.
+- Aim for 5 to 8 meaningful features for most mods, and up to roughly 10 to 15
+  for large content mods. These are guidance, not limits: a list is done when
+  every major player-facing selling point is covered and nothing padding
+  remains. Prefer the strongest features over completeness.
 - Order features from most important to least important.
 - Use a fitting emoji as a visual anchor on each feature.
 - Include only features that help define or sell the mod. Exclude mundane
