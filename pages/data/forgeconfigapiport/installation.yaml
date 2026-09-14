@@ -1,7 +1,0 @@
-environments:
-  client: required
-  server: required
-loaders:
-  - fabric
-dependencies:
-  fabricapi: required

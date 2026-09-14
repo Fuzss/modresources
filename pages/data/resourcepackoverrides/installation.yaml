@@ -1,8 +1,0 @@
-environments:
-  client: required
-loaders:
-  - fabric
-  - neoforge
-  - forge
-dependencies:
-  fabricapi: required

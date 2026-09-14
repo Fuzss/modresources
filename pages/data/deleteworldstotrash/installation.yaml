@@ -1,6 +1,0 @@
-environments:
-  client: required
-loaders:
-  - fabric
-  - neoforge
-  
