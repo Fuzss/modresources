@@ -23,26 +23,23 @@ history. `edit` is denied. Your only output is a written report.
 
 ## Scope
 
-Review only the Python scripts directly inside `scripts/main/`:
+Review only these Python scripts:
 
-- `main.py`
-- `clone_versions.py`
-- `migrate_mixins.py`
-- `migrate_mod_properties.py`
-- `update_curseforge_bodies.py`
-- `update_modrinth_bodies.py`
+- `scripts/main/main.py`
+- `scripts/main/core/*.py`
+- `scripts/main/tools/*.py`
 
 Do **not** review `scripts/legacy/**`, anything under a `.venv`, any
 `__pycache__`, or `.github/`. Never read the legacy `.venv` or caches.
 
 ## Non-negotiable context
 
-`scripts/main/main.py` is the single control entry point. It uses bare sibling
-imports and relative paths, so it must be run from `scripts/main/`. A refactor
-may extract logic into sibling modules, but the CLI surface, output text,
-generated file contents, git commands, and Gradle task names must stay
-identical. Flag anything whose "cleanup" would change observable behavior as a
-**behavior risk**, not as a safe fix.
+`scripts/main/main.py` is the single control entry point. It adds `core/` to
+`sys.path` and uses relative paths, so it must be run from `scripts/main/`. A
+refactor may extract logic into the `scripts/main/core/` modules, but the CLI
+surface, output text, generated file contents, git commands, and Gradle task
+names must stay identical. Flag anything whose "cleanup" would change observable
+behavior as a **behavior risk**, not as a safe fix.
 
 ## Review rubric
 

@@ -6,16 +6,19 @@ workspace upgrades, edits Gradle properties and the changelog, and drives the
 Gradle tasks that refresh, generate data, launch, build, publish, upload, and
 notify.
 
-All heavier logic lives in sibling modules in the same directory (see
+All heavier logic lives in the `core/` modules next to it (see
 [Module map](#module-map--architecture)). This README is the canonical CLI
 reference for the tooling.
 
 ## The single-entry contract
 
-- `main.py` owns argument parsing, validation, and dispatch. Do not add a second
-  CLI entry point for the same workflow.
-- The module uses **bare sibling imports** (`import clone_versions`, `from cli
-  import parse_args`, ...) and a **relative** `config/` path, so run it from
+- `main.py` owns argument parsing, validation, and dispatch. It stays at
+  `scripts/main/main.py`; do not add a second CLI entry point for the same
+  workflow.
+- Before importing the workflow modules, `main.py` inserts `<scripts/main>/core`
+  at the front of `sys.path`, so the `core/` modules are imported by bare name
+  (`import clone_versions`, `from cli import parse_args`, ...). The `config/`
+  path is resolved relative to the working directory, so run it from
   `scripts/main/`:
 
   ```sh
@@ -23,31 +26,34 @@ reference for the tooling.
   ./main.py --minecraft 26.2.x --name example-mod
   ```
 
-  `--help` works from any directory because Python adds the script's directory
-  to `sys.path` and argparse exits before any relative path is used.
-- `main.py` is stdlib-only. It never imports third-party packages.
+  `--help` works from any directory because argparse exits before any relative
+  path is used.
+- Each `tools/*.py` script performs the same bootstrap for the core module it
+  needs: it inserts `<scripts/main>/../core` on `sys.path` before importing
+  `gradle_user_properties`.
+- All modules are stdlib-only. They never import third-party packages.
 
 ## Requirements
 
 - Python 3.12 or newer.
 - A working `git` installation with access to `git@github.com:Fuzss/<name>.git`.
 - A project checkout containing the Gradle wrapper (`./gradlew`).
-- macOS for `update_curseforge_bodies.py` (it uses `pbcopy`, `osascript`, and
-  Safari); the core CLI and the Modrinth updater are portable (the latter needs
-  `curl` and network access).
+- macOS for `tools/update_curseforge_bodies.py` (it uses `pbcopy`, `osascript`,
+  and Safari); the core CLI and the Modrinth updater are portable (the latter
+  needs `curl` and network access).
 - User Gradle properties (next section).
 
 ## User Gradle properties
 
 The tooling reads `~/.gradle/gradle.properties`, parsed by
-`gradle_user_properties.load_gradle_properties`. The properties actually read
-are:
+`core/gradle_user_properties.load_gradle_properties`. The properties actually
+read are:
 
 | Property | Required by | Meaning |
 | --- | --- | --- |
-| `fuzs.multiloader.project.mods` | `main.py`, both body-update scripts | Directory containing the individual mod repositories (the project root). |
-| `fuzs.multiloader.project.resources` | `update_curseforge_bodies.py`, `update_modrinth_bodies.py` | Resources repository containing the generated `pages/out/` project pages. |
-| `fuzs.multiloader.project.modrinth.token` | `update_modrinth_bodies.py` | Bearer token used to authenticate the Modrinth API request. |
+| `fuzs.multiloader.project.mods` | `main.py`, both `tools/` body scripts | Directory containing the individual mod repositories (the project root). |
+| `fuzs.multiloader.project.resources` | `tools/update_curseforge_bodies.py`, `tools/update_modrinth_bodies.py` | Resources repository containing the generated `pages/out/` project pages. |
+| `fuzs.multiloader.project.modrinth.token` | `tools/update_modrinth_bodies.py` | Bearer token used to authenticate the Modrinth API request. |
 
 `main.py` calls `find_gradle_property("fuzs.multiloader.project.mods")` and
 aborts with a logged error when the file or the property is missing. The
@@ -197,36 +203,42 @@ override the project root when needed).
 
 ## Module map / architecture
 
-`scripts/main/` is a flat, stdlib-only, package-free directory. Modules import
-each other by bare name (the script's directory is on `sys.path`); the working
-directory matters for the relative `config/` path and for the project-relative
-`git` and `./gradlew` operations.
+`scripts/main/` is a stdlib-only, package-free layout. `main.py` stays at the
+root; the workflow modules live in `core/` and the standalone batch scripts in
+`tools/`.
+
+`main.py` inserts `core/` on `sys.path` before importing its modules, so the
+`core/` modules import each other by bare name. Each `tools/*.py` script
+inserts `<scripts/main>/../core` on `sys.path` before importing
+`gradle_user_properties`. The working directory still matters for the relative
+`config/` path and for the project-relative `git` and `./gradlew` operations
+when running `main.py`.
 
 | Module | Role |
 | --- | --- |
-| `main.py` | CLI entry point. Parses, validates, and dispatches the workflow in a fixed order. |
-| `cli.py` | Argparse definitions and `--config` JSON merging. Source of truth for the CLI surface. |
-| `console.py` | Timestamped, colored `info2` / `warn2` / `error2` logging. `error2` exits with code 1. |
-| `validation.py` | Validates and normalizes parameter sets (`--open`, `--launch`, `--upload`, `--legacy`). |
-| `fs_utils.py` | Filesystem and text helpers: subproject probe, template copy, move/remove, regex replace, license-year bump. |
-| `git_ops.py` | Git commit/push and new-version-branch preparation. |
-| `clone_versions.py` | Reads/creates `versions.json`, clones `main` and version branches. |
-| `gradle_user_properties.py` | Parses `~/.gradle/gradle.properties`. |
-| `gradle_properties.py` | Reads/edits project `gradle.properties` and resolves version bumps. |
-| `gradle_tasks.py` | Maps `(loader, distribution)` and `(loader, site)` to Gradle task names. |
-| `changelog.py` | Parses `--changelog` pairs and prepends a Keep-a-Changelog entry. |
-| `workspace_upgrade.py` | Orchestrates version upgrades and the legacy-file cleanup. |
-| `migrate_mixins.py` | Converts `mixins.json` into Gradle DSL mixin declarations. |
-| `migrate_mod_properties.py` | Migrates the legacy `gradle.properties` layout to current names. |
-| `update_curseforge_bodies.py` | Standalone macOS script that batch-updates CurseForge descriptions. |
-| `update_modrinth_bodies.py` | Standalone script that batch-updates Modrinth descriptions through the API. |
+| `main.py` | CLI entry point. Parses, validates, and dispatches the workflow in a fixed order; adds `core/` to `sys.path`. |
+| `core/cli.py` | Argparse definitions and `--config` JSON merging. Source of truth for the CLI surface. |
+| `core/console.py` | Timestamped, colored `info2` / `warn2` / `error2` logging. `error2` exits with code 1. |
+| `core/validation.py` | Validates and normalizes parameter sets (`--open`, `--launch`, `--upload`, `--legacy`). |
+| `core/fs_utils.py` | Filesystem and text helpers: subproject probe, template copy, move/remove, regex replace, license-year bump. |
+| `core/git_ops.py` | Git commit/push and new-version-branch preparation. |
+| `core/clone_versions.py` | Reads/creates `versions.json`, clones `main` and version branches. |
+| `core/gradle_user_properties.py` | Parses `~/.gradle/gradle.properties`. |
+| `core/gradle_properties.py` | Reads/edits project `gradle.properties` and resolves version bumps. |
+| `core/gradle_tasks.py` | Maps `(loader, distribution)` and `(loader, site)` to Gradle task names. |
+| `core/changelog.py` | Parses `--changelog` pairs and prepends a Keep-a-Changelog entry. |
+| `core/workspace_upgrade.py` | Orchestrates version upgrades and the legacy-file cleanup. |
+| `core/migrate_mixins.py` | Converts `mixins.json` into Gradle DSL mixin declarations. |
+| `core/migrate_mod_properties.py` | Migrates the legacy `gradle.properties` layout to current names. |
+| `tools/update_curseforge_bodies.py` | Standalone macOS script that batch-updates CurseForge descriptions. |
+| `tools/update_modrinth_bodies.py` | Standalone script that batch-updates Modrinth descriptions through the API. |
 
 Dependency sketch:
 
 ```
-main.py
+main.py ──(inserts core/ on sys.path)──> core/
+core/
 ├── cli.py ─────────────── console.py
-├── console.py
 ├── clone_versions.py
 ├── git_ops.py ─────────── fs_utils.py ── console.py
 ├── gradle_properties.py ─ gradle_user_properties.py ── console.py
@@ -238,15 +250,21 @@ main.py
     ├── migrate_mod_properties.py ── console.py
     ├── fs_utils.py
     └── git_ops.py
+
+tools/  (each inserts ../core on sys.path)
+├── update_curseforge_bodies.py ──> core/gradle_user_properties.py
+└── update_modrinth_bodies.py ────> core/gradle_user_properties.py
 ```
 
-The standalone `migrate_*` and `update_*_bodies.py` scripts are not part of the
-`main.py` dispatch (except `migrate_mixins` / `migrate_mod_properties`, which
-`workspace_upgrade` calls). See [Standalone tools](#standalone-tools).
+The `core/migrate_*.py` modules are also runnable standalone, and the
+`tools/update_*_bodies.py` scripts are standalone-only. None are dispatched by
+`main.py` (except `core/migrate_mixins.py` and `core/migrate_mod_properties.py`,
+which `core/workspace_upgrade.py` calls). See
+[Standalone tools](#standalone-tools).
 
 ### `versions.json`
 
-`clone_versions.py` reads and writes `main/versions.json`, which maps version
+`core/clone_versions.py` reads and writes `main/versions.json`, which maps version
 branches to a support status:
 
 ```json
@@ -377,29 +395,30 @@ skip the pulls and every `./gradlew` step.
 
 ## Standalone tools
 
-These scripts can be run directly and are not dispatched by `main.py`:
+These scripts can be run directly (from `scripts/main/`) and are not dispatched
+by `main.py`:
 
 ```sh
-python3 clone_versions.py <repo-name>
-python3 migrate_mixins.py <mixins.json> <build.gradle>
-python3 migrate_mod_properties.py <input> <output> <plugins_version>
-python3 update_curseforge_bodies.py [project]
-python3 update_modrinth_bodies.py [project]
+python3 core/clone_versions.py <repo-name>
+python3 core/migrate_mixins.py <mixins.json> <build.gradle>
+python3 core/migrate_mod_properties.py <input> <output> <plugins_version>
+python3 tools/update_curseforge_bodies.py [project]
+python3 tools/update_modrinth_bodies.py [project]
 ```
 
-`update_curseforge_bodies.py` is macOS-only (it drives Safari through
-`osascript` and uses `pbcopy`); `update_modrinth_bodies.py` only needs `curl`
-and network access. Both require the user properties listed above, process
-projects alphabetically, and accept an optional project name to resume from;
-neither performs git operations. For a detailed description of their behavior,
-see their module docstrings.
+`tools/update_curseforge_bodies.py` is macOS-only (it drives Safari through
+`osascript` and uses `pbcopy`); `tools/update_modrinth_bodies.py` only needs
+`curl` and network access. Both require the user properties listed above,
+process projects alphabetically, and accept an optional project name to resume
+from; neither performs git operations. For a detailed description of their
+behavior, see their module docstrings.
 
 ## Verification
 
 There is no test suite. From the repository root, run:
 
 ```sh
-python3 -m py_compile scripts/main/*.py
+python3 -m py_compile scripts/main/main.py scripts/main/core/*.py scripts/main/tools/*.py
 python3 scripts/main/main.py --help
 ```
 

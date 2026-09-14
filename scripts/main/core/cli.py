@@ -11,8 +11,8 @@ final arguments as sorted JSON, and exits via ``error2`` for an unknown config
 key or a missing config file.
 
 Constraints: standard library only; the argparse definitions are the single
-source of truth for the CLI surface. Run from ``scripts/main`` so the relative
-``config/`` path resolves.
+source of truth for the CLI surface. The CLI entry point runs from
+``scripts/main`` so the relative ``config/`` path resolves.
 """
 
 import argparse

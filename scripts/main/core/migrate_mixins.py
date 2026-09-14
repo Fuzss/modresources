@@ -5,7 +5,8 @@ Purpose: migrate legacy mixin configuration files to the multiloader Gradle
 DSL during the 1.21.11 workspace upgrade.
 
 Entry points: ``workspace_upgrade.run_1_21_11_upgrade``; the module also runs
-standalone as ``python3 migrate_mixins.py <mixins.json> <build.gradle>``.
+standalone as
+``python3 core/migrate_mixins.py <mixins.json> <build.gradle>``.
 
 Side effects: appends a ``multiloader { mixins { ... } }`` block to the Gradle
 file and prints usage on bad arguments.
@@ -134,7 +135,7 @@ def main():
     otherwise converts the given files.
     """
     if len(sys.argv) != 3:
-        print("Usage: python3 migrate_mixins.py <mixins.json> <build.gradle>")
+        print("Usage: python3 core/migrate_mixins.py <mixins.json> <build.gradle>")
         sys.exit(1)
 
     json_path = sys.argv[1]

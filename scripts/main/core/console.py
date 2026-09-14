@@ -2,10 +2,11 @@
 """Timestamped, ANSI-colored console logging.
 
 Purpose: provide the single set of log helpers used across ``scripts/main/``
-so progress and fatal errors are reported consistently.
+(the ``core/`` modules and the ``tools/`` batch scripts) so progress and fatal
+errors are reported consistently.
 
-Entry points: imported by ``main.py`` and the sibling modules as ``info2``,
-``warn2``, ``error2``, and ``log2``.
+Entry points: imported by ``main.py`` and the other ``core/`` modules as
+``info2``, ``warn2``, ``error2``, and ``log2``.
 
 Side effects: every helper writes one line to stdout. ``error2`` additionally
 terminates the process with exit code 1.

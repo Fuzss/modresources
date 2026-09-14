@@ -31,9 +31,9 @@ applying it.
    paths.
 3. Standard library only. Do not add dependencies, `pyproject.toml`, tests, or
    new tooling.
-4. Keep bare sibling imports and the run-from-`scripts/main` contract. Extract
-   logic into sibling modules in `scripts/main/`; do not introduce a package
-   layout.
+4. Keep the `core/` `sys.path` bootstrap and the run-from-`scripts/main`
+   contract. Extract logic into the `scripts/main/core/` modules; do not
+   introduce a package layout.
 5. Never touch `scripts/legacy/**`, any `.venv`, any `__pycache__`, or
    `.github/`.
 6. Do not commit or push unless the user explicitly asks.
@@ -45,7 +45,8 @@ applying it.
 - Make small, incremental edits grouped by concern. Prefer extracting one
   cohesive module at a time.
 - When extracting from `main.py`, keep it thin: parsing, validation, and
-  dispatch stay in `main.py`; cohesive logic moves to sibling modules.
+  dispatch stay in `main.py`; cohesive logic moves to the `scripts/main/core/`
+  modules.
 - Match the surrounding file's idioms (`os.path` vs `pathlib`, quote style,
   logging helpers) rather than imposing a new style. Fatal errors keep going
   through `error2(...)`.
@@ -59,7 +60,7 @@ applying it.
 Run from the repository root, then report the results:
 
 ```sh
-python3 -m py_compile scripts/main/*.py
+python3 -m py_compile scripts/main/main.py scripts/main/core/*.py scripts/main/tools/*.py
 cd scripts/main && ./main.py --help
 ```
 

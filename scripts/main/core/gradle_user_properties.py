@@ -5,12 +5,15 @@ Purpose: parse ``~/.gradle/gradle.properties`` in one place so the core CLI and
 the standalone body-update scripts read the same configuration the same way.
 
 Entry points: ``gradle_properties.find_gradle_property`` and the
-``update_curseforge_bodies`` / ``update_modrinth_bodies`` scripts.
+``tools/update_curseforge_bodies.py`` / ``tools/update_modrinth_bodies.py``
+scripts.
 
 Side effects: reads ``~/.gradle/gradle.properties``.
 
-Constraints: standard library only. The file must exist; a missing file
-propagates ``FileNotFoundError``.
+Constraints: standard library only. The ``core/`` modules import it directly;
+the ``tools/`` scripts add ``<scripts/main>/../core`` to ``sys.path`` first and
+import it by bare name. The file must exist; a missing file propagates
+``FileNotFoundError``.
 """
 
 import os

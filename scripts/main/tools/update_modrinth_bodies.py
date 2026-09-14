@@ -5,23 +5,25 @@ Purpose: for every mod directory, publish the generated Modrinth page to the
 Modrinth API as that project's description.
 
 Entry points: run directly as
-``python3 update_modrinth_bodies.py [project]``; not imported by ``main.py``.
+``python3 tools/update_modrinth_bodies.py [project]``; not imported by
+``main.py``.
 
 Side effects: reads ``versions.json`` and the generated page tree, then sends
 an HTTP ``PATCH`` to ``https://api.modrinth.com/v2/project/<id>`` with
 ``curl``. Performs no git operations.
 
 Constraints: requires ``curl`` and network access; otherwise standard library.
-Projects are processed alphabetically; the optional project argument resumes
-from that project onward. The ``Authorization: Bearer`` header is passed
-through a curl config file on stdin so the token never appears in the process
-argument list, and ``--fail-with-body`` keeps the response body for error
-reporting. A failed request is reported and skipped instead of aborting the
-batch.
+The script adds ``<scripts/main>/../core`` to ``sys.path`` so it can import
+``gradle_user_properties`` by bare name. Projects are processed alphabetically;
+the optional project argument resumes from that project onward. The
+``Authorization: Bearer`` header is passed through a curl config file on stdin
+so the token never appears in the process argument list, and
+``--fail-with-body`` keeps the response body for error reporting. A failed
+request is reported and skipped instead of aborting the batch.
 
 Usage:
-    python3 update_modrinth_bodies.py               # every project
-    python3 update_modrinth_bodies.py example-mod   # resume at example-mod
+    python3 tools/update_modrinth_bodies.py               # every project
+    python3 tools/update_modrinth_bodies.py example-mod   # resume at example-mod
 
 Inputs:
     Reads ``fuzs.multiloader.project.mods``,
@@ -35,10 +37,13 @@ Inputs:
 """
 
 import json
+import os
 import subprocess
 import sys
 import time
 from pathlib import Path
+
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "core"))
 
 from gradle_user_properties import load_gradle_properties
 

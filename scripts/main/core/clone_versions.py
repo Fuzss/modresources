@@ -7,7 +7,8 @@ Purpose: bootstrap a project checkout from the remote repository: clone the
 version branch into its own sibling directory.
 
 Entry points: ``main.py`` imports ``setup_git`` and ``load_versions_file``;
-the module also runs standalone as ``python3 clone_versions.py <repo-name>``.
+the module also runs standalone as
+``python3 core/clone_versions.py <repo-name>``.
 
 Side effects: runs ``git`` subprocesses (pull, clone, fetch, branch, add,
 commit, push) and writes ``versions.json``.

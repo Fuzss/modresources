@@ -7,7 +7,7 @@ distribution keys) as the current ``mod.*``, ``dependencies.*``,
 
 Entry points: ``workspace_upgrade.run_1_21_11_upgrade``; the module also runs
 standalone as
-``python3 migrate_mod_properties.py <input> <output> <plugins_version>``.
+``python3 core/migrate_mod_properties.py <input> <output> <plugins_version>``.
 
 Side effects: overwrites the output file, prints progress, and exits via
 ``error2`` when the plugins version is missing.
@@ -194,7 +194,7 @@ def main():
     otherwise migrates the given files.
     """
     if len(sys.argv) != 4:
-        print("Usage: python3 migrate_mod_properties.py <input_file> <output_file> <plugins_version>")
+        print("Usage: python3 core/migrate_mod_properties.py <input_file> <output_file> <plugins_version>")
         sys.exit(1)
 
     migrate_properties(sys.argv[1], sys.argv[2], sys.argv[3])

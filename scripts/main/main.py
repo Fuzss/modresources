@@ -4,23 +4,27 @@
 Purpose: orchestrate the full mod workflow in order: clone and prepare
 version branches, run workspace upgrades, update Gradle properties and the
 changelog, then build, launch, publish, upload, and notify. Cohesive logic
-lives in the sibling modules; this file owns parsing, validation, and
+lives in the ``core/`` modules; this file owns parsing, validation, and
 dispatch.
 
 Entry points: the ``main()`` function, run directly as ``./main.py ...``;
-it calls ``cli.parse_args`` and then the sibling modules.
+it calls ``cli.parse_args`` and the ``core/`` modules.
 
 Side effects: filesystem edits (``gradle.properties``,
 ``gradle-wrapper.properties``, ``CHANGELOG.md``), git operations, and
 ``./gradlew``/``open`` subprocesses.
 
-Constraints: run from ``scripts/main``, because imports are bare sibling
-names and the ``config/`` path is relative. Standard library only.
+Constraints: stays at ``scripts/main/main.py`` and must be run from
+``scripts/main``; it inserts ``<scripts/main>/core`` on ``sys.path`` so its
+modules import by bare name, and the ``config/`` path is relative. Standard
+library only.
 """
 
 import os
 import subprocess
 import sys
+
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "core"))
 
 import clone_versions
 from changelog import generate_changelog_block, parse_changelog_sections, prepend_to_changelog
@@ -67,7 +71,7 @@ def main():
     ``--version`` warn and skip when it is absent.
 
     Side effects: filesystem writes, git subprocesses, and Gradle/open
-    subprocesses via the sibling modules; exits the process early when
+    subprocesses via the ``core/`` modules; exits the process early when
     ``--open`` is given.
     """
     args = parse_args()

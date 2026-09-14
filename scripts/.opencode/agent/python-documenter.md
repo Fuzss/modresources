@@ -28,12 +28,9 @@ You edit documentation only. You never change behavior.
 
 ## Scope
 
-Phase A (primary) — the active modules in `scripts/main/`:
-`main.py`, `clone_versions.py`, `cli.py`, `console.py`, `fs_utils.py`,
-`git_ops.py`, `gradle_properties.py`, `gradle_user_properties.py`,
-`gradle_tasks.py`, `validation.py`, `changelog.py`, `workspace_upgrade.py`,
-`migrate_mixins.py`, `migrate_mod_properties.py`,
-`update_curseforge_bodies.py`, `update_modrinth_bodies.py`.
+Phase A (primary) — the active tooling: `scripts/main/main.py` (the CLI entry
+point), the workflow modules in `scripts/main/core/*.py`, and the standalone
+batch tools in `scripts/main/tools/*.py`.
 
 Phase B (test / index) — the archival scripts under `scripts/legacy/`
 (read-only). You may read them to stress-test this standard and to write a
@@ -116,7 +113,7 @@ it did.
 After each increment:
 
 ```sh
-python3 -m py_compile scripts/main/*.py
+python3 -m py_compile scripts/main/main.py scripts/main/core/*.py scripts/main/tools/*.py
 python3 scripts/main/main.py --help
 ```
 

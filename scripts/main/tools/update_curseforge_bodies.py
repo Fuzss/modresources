@@ -6,7 +6,8 @@ that project's CurseForge description by driving the web editor through macOS
 UI automation.
 
 Entry points: run directly as
-``python3 update_curseforge_bodies.py [project]``; not imported by ``main.py``.
+``python3 tools/update_curseforge_bodies.py [project]``; not imported by
+``main.py``.
 
 Side effects: reads ``versions.json`` and the generated page tree, copies HTML
 to the macOS clipboard with ``pbcopy``, opens Safari, and clicks/keystrokes the
@@ -14,13 +15,15 @@ CurseForge editor through ``osascript`` and System Events. Performs no git
 operations.
 
 Constraints: macOS only (``pbcopy``, ``osascript``, Safari, and Accessibility
-permissions). Projects are processed alphabetically; the optional project
-argument resumes from that project onward. The fixed screen coordinates below
-depend on the browser window size and page layout and may need updating.
+permissions). The script adds ``<scripts/main>/../core`` to ``sys.path`` so it
+can import ``gradle_user_properties`` by bare name. Projects are processed
+alphabetically; the optional project argument resumes from that project onward.
+The fixed screen coordinates below depend on the browser window size and page
+layout and may need updating.
 
 Usage:
-    python3 update_curseforge_bodies.py               # every project
-    python3 update_curseforge_bodies.py example-mod   # resume at example-mod
+    python3 tools/update_curseforge_bodies.py               # every project
+    python3 tools/update_curseforge_bodies.py example-mod   # resume at example-mod
 
 Inputs:
     Reads ``fuzs.multiloader.project.mods`` and
@@ -36,9 +39,12 @@ Inputs:
 
 from pathlib import Path
 import json
+import os
 import subprocess
 import sys
 import time
+
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "core"))
 
 from gradle_user_properties import load_gradle_properties
 
