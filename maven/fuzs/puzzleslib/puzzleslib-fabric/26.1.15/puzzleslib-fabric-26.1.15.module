@@ -1,0 +1,139 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "fuzs.puzzleslib",
+    "module": "puzzleslib-fabric",
+    "version": "26.1.15",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.5.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "net.fabricmc.fabric-api",
+          "module": "fabric-api",
+          "version": {
+            "requires": "0.152.1+26.1.2"
+          }
+        },
+        {
+          "group": "fuzs.forgeconfigapiport",
+          "module": "forgeconfigapiport-fabric",
+          "version": {
+            "requires": "26.1.4"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "puzzleslib-fabric-26.1.15.jar",
+          "url": "puzzleslib-fabric-26.1.15.jar",
+          "size": 1156932,
+          "sha512": "938ce8ee9bfc39d4b4688ec19dd31b335706e11cefc1cb191d0744013aa9d9f28222a5bae03dfab1a7d841f33f0dd5e121a943b2a45c088af9f0163be18ac8c3",
+          "sha256": "14612c38cfb0b76ad0f74a0f48f608aad104045eb5c92df4a5cde5ee239d9dbe",
+          "sha1": "4cf4c498c5f8db2176467ebf5f0fa139107f3d30",
+          "md5": "4aeedb89932ecb20bbab5d25b48d38ec"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "net.fabricmc",
+          "module": "fabric-loader",
+          "version": {
+            "requires": "0.19.3"
+          }
+        },
+        {
+          "group": "net.fabricmc.fabric-api",
+          "module": "fabric-api",
+          "version": {
+            "requires": "0.152.1+26.1.2"
+          }
+        },
+        {
+          "group": "fuzs.forgeconfigapiport",
+          "module": "forgeconfigapiport-fabric",
+          "version": {
+            "requires": "26.1.4"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "puzzleslib-fabric-26.1.15.jar",
+          "url": "puzzleslib-fabric-26.1.15.jar",
+          "size": 1156932,
+          "sha512": "938ce8ee9bfc39d4b4688ec19dd31b335706e11cefc1cb191d0744013aa9d9f28222a5bae03dfab1a7d841f33f0dd5e121a943b2a45c088af9f0163be18ac8c3",
+          "sha256": "14612c38cfb0b76ad0f74a0f48f608aad104045eb5c92df4a5cde5ee239d9dbe",
+          "sha1": "4cf4c498c5f8db2176467ebf5f0fa139107f3d30",
+          "md5": "4aeedb89932ecb20bbab5d25b48d38ec"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "puzzleslib-fabric-26.1.15-sources.jar",
+          "url": "puzzleslib-fabric-26.1.15-sources.jar",
+          "size": 595933,
+          "sha512": "eadb31eb79a4944f064d4dbf6334c0df5aac336d92d1718ebc6b85a57f556bbfd00d84729453d0047de657ba3cf0690de8191972f2f3cd40083353555c878066",
+          "sha256": "e86054f6c0465d703997f8755a25b50185c6e85da37a1bc9373dc389721baec3",
+          "sha1": "1f7efc12d1f5e82eede868a1fe8426f9526ce3d7",
+          "md5": "562abe20e09f83a2e31ef0780311810a"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "puzzleslib-fabric-26.1.15-javadoc.jar",
+          "url": "puzzleslib-fabric-26.1.15-javadoc.jar",
+          "size": 6927651,
+          "sha512": "5597ad74b9217be616f759799592396cc368967c9f4b8426b4e0808174d7288461238aa7083bbd2203bedf146217b849e3183a5b5fc52d1b2bb067875d1725c8",
+          "sha256": "27dced2f38df74ad2d39fd6c519461c3d8167d6f8782b94da3139091f8286b81",
+          "sha1": "53a6cc69e74c0921b578a870c871373586ae6734",
+          "md5": "ef298c6ce00b93e68488ccda8edeb8ba"
+        }
+      ]
+    }
+  ]
+}
