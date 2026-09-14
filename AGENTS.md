@@ -18,6 +18,7 @@ This repository hosts web content, Maven artifacts, and tooling for **@heyitsfuz
 - Do not commit unless the user explicitly asks.
 - Keep changes scoped to the area you are working in and match its existing conventions.
 - Use the standard library and existing tooling; do not introduce new dependencies or build configuration unless asked.
+- Never write absolute local paths or usernames into committed files; use a placeholder such as `~/...` or `fuzs.multiloader.project.mods`.
 
 ## Area-specific instructions
 

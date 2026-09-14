@@ -1,25 +1,9 @@
-**🏰 New Structures**
-- 🏠 **Piglin Manor**: Hidden deep in the Crimson Forest, this mighty mansion is home to battle-hardened Piglins and the fierce Piglin Hunters.  
-- 🌀 **The Citadel**: Towering over the Warped Forest, this ancient outpost shelters the dangerous, corrupted Warped Endermen.  
-- ☠️ **The Catacombs**: A colossal wither-shaped ruin crawling with deadly Wither Skeleton variants—and secrets waiting to be unearthed.
-
-**⚔️ New Mobs**
-- 🛡️ **Piglin Hunters** wield shields and trophies of their kills.  
-- 🔔 **Piglin Prisoners** can be rescued with gold and the legendary Netherite Bell—and reward heroes with an **unbreakable Netherite Shield**!  
-- 🌱 **Warped Endermen** attack on sight—purify them stage-by-stage with shears!  
-- 🪓 **Corpors**, 🗡️ **Wither Skeleton Knights**, 🌫️ **Wraithers**, and 👻 **Wex** bring new challenges to the Nether’s dark halls.
-
-**🛠️ New Gear and Items**
-- 🔔 **Netherite Bell**: Required to liberate imprisoned Piglins.
-- ⚔️ **Cutlass**: A swift new weapon featuring vintage sword-blocking mechanics.
-- 🛡️ **Netherite Shield**: Unbreakable and cannot be disabled by heavy attacks.
-- 💿 **Wither Waltz Music Disc**: Unearth eerie new sounds for your Nether base.
-- 🧪 **Warped Ender Pearl**: Teleport with buffs like fire resistance, slow falling, and more!
-
-**🧱 New Building Blocks**
-- 🪨 **Withered Blackstone**: Full block family, including cracked and decorative variants.  
-- ☠️ **Withered Bone**, 🪵 **Withered Coal**, 🌋 **Withered Basalt**, and 🥶 **Withered Quartz** block sets.
-- 🧱 **Warped Nether Brick**: A new twist on a Nether classic!
-
-**🌾 Farming Enhancements**
-- 🦴 **Withered Bone Meal**: Supercharge your crops—more effective than normal bone meal!
+* 🏰 **New Structures:** Discover the Piglin Manor, the towering Citadel, and the wither-shaped Catacombs, each with its own mobs, loot, and secrets.
+* 🧟 **New Mobs:** Fight Piglin Hunters, Warped Endermen, Corpors, Wither Skeleton Knights, Wraithers, Wex, and the rideable Wither Skeleton Horse.
+* 🔔 **Piglin Prisoners:** Free caged Piglins with the Netherite Bell and claim a Gilded Netherite Shield as your reward.
+* ⚔️ **Cutlass:** A new sword with vintage sword-blocking behavior for parrying incoming attacks.
+* 🛡️ **Gilded Netherite Shield:** A sturdy, fire-resistant shield that can be dyed and decorated with banner patterns.
+* 🧪 **Warped Ender Pearl:** Teleport with built-in buffs such as fire resistance and slow falling.
+* 🦴 **Withered Bone Meal:** Supercharge your crops with a bone meal that applies growth multiple times instead of once.
+* 🧱 **Withered Building Blocks:** Build with complete Withered Blackstone, Bone, Coal, Basalt, and Quartz sets, plus Warped Nether Brick.
+* 💿 **Wither Waltz Music Disc:** Add an eerie original track from Izofar to your Nether base.
