@@ -1,6 +1,0 @@
-environments:
-  client: optional
-  server: optional
-loaders:
-  - forge
-  - fabric

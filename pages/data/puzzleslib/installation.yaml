@@ -1,9 +1,0 @@
-environments:
-  client: required
-  server: required
-loaders:
-  - forge
-  - fabric
-dependencies:
-  fabricapi: required
-  forgeconfigapiport: required
