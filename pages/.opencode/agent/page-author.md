@@ -65,9 +65,11 @@ separate, explicit step owned by the orchestrator.
   list.
 - **Features** — one flat list, no group headings. Every bullet is
   `* EMOJI **Feature Name:** Explanation.` Order from most to least important.
-  Aim for 3 to 5 for small and quality-of-life mods and up to roughly 10 to 12
-  for large content mods. Exclude recipes, loader support, implementation
-  details, and per-setting config lists.
+  Aim for 5 to 8 for most mods and up to roughly 10 to 15 for large content
+  mods; a list is done when every major selling point is covered and nothing
+  padding remains. Omit the list when it would only restate the About.
+  Exclude recipes, loader support, implementation details, and per-setting
+  config lists.
 - Light enthusiasm is welcome; marketing fluff is not.
 
 ## Workflow
@@ -85,10 +87,17 @@ separate, explicit step owned by the orchestrator.
    vanilla behavior or Java-vs-Bedrock comparisons, and quote exactly.
 5. Draft `about.md`.
 6. Draft `features.md`, or decide to omit it.
-7. Self-check: one bold name, emoji rules, flat bullets, American spelling, no
-   duplicated information, every claim grounded per the hard rules.
+7. Self-check: one bold name, emoji rules, flat bullets, count within 5 to 8
+   (up to roughly 10 to 15 for large content mods) unless justified and
+   recorded, American spelling, no duplicated information, every claim
+   grounded per the hard rules.
 8. Write both draft files.
-9. Write the guidance report.
+9. Write the guidance report, describing only what the drafts contain —
+   never intent or plans.
+10. Verify the guidance against the files: re-read both drafts and confirm
+    every continuity decision, source citation, and review note is true of
+    what is actually written. Fix whichever side is wrong — the draft or the
+    guidance — before reporting done.
 
 ## Guidance report
 

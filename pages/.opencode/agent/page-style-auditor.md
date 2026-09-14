@@ -32,12 +32,13 @@ About:
 
 Features:
 
-- Present only when justified.
+- Present only when the list adds information beyond the About.
 - Exactly one flat list; no bold group headings, no nested lists.
 - Every bullet matches `* EMOJI **Feature Name:** Explanation.` and ends with a
   period.
-- 3 to 5 for small/quality-of-life mods, up to roughly 10 to 12 for large
-  content mods; ordered most to least important.
+- Roughly 5 to 8 bullets for most mods, up to roughly 10 to 15 for large
+  content mods; ordered most to least important. FAIL only clearly outside
+  these bands (fewer than 5, more than 15); borderline counts pass.
 - No recipes, loader support, implementation details, or per-setting config
   lists.
 - No feature duplicated between the two files.
