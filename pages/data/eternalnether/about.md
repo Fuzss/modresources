@@ -1,5 +1,3 @@
-**Eternal Nether** turns Minecraft's hottest dimension into a full adventure of its own, adding fortress-like structures, fierce new mobs, and powerful gear to the Nether. Explore the Piglin Manor, the towering Citadel, and the haunted Catacombs, each built around a different faction and packed with loot worth fighting for. 🔥
+**Eternal Nether** cranks up the heat in Minecraft's hottest dimension - transforming the fiery underworld into a whole new battleground! Explore the fortress-like Piglin Manor, the towering Citadel, and the haunted Catacombs, each crawling with fierce new mobs and powerful treasures hidden in the ashes.
 
-It makes the Nether a place to explore again rather than rush through: raid its castles, outwit its factions, and see how far you get before the lava and the locals catch up. ⚔️
-
-New building blocks, farming tools, and an original music disc round out the experience, so there is plenty to bring home between adventures. A faithful continuation of Bygone Nether by Izofar, it is made for players who want more reasons to brave the lava.
+Rescue allies, defeat corrupted enemies, and shape your destiny in a Nether that's more alive - and more deadly - than ever before. New mobs, new loot, new blocks - and of course, way too much lava. Bring your best gear, your sharpest reflexes, and maybe a few extra fire resistance potions... you're gonna need them!
