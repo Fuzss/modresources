@@ -1,5 +1,21 @@
 #!/usr/bin/env python3
-"""Workspace upgrade routines for individual Minecraft version transitions."""
+"""Workspace upgrade routines for Minecraft version transitions.
+
+Purpose: refresh a project's ``main`` workspace from the multiloader template
+and apply the version-specific migrations needed to move a project branch to a
+newer Minecraft version.
+
+Entry points: ``main.py`` calls ``run_workspace_upgrade`` when ``--upgrade``
+is set.
+
+Side effects: runs git and subprocess commands, copies template files, deletes
+obsolete files, rewrites Gradle files, and optionally commits. Aborts via
+``error2`` when a worktree is dirty.
+
+Constraints: standard library only. The ``main`` and project worktrees must be
+clean before an upgrade starts. Step order matters: templates are copied
+first, then mixin and property migrations run, then legacy files are removed.
+"""
 
 import os
 import subprocess
@@ -23,6 +39,19 @@ GENERIC_UPGRADES = {"26.2.x"}
 
 
 def run_26_1_upgrade(mod_id, project_path):
+    """Apply the 26.1.x resource and build-script renames.
+
+    Renames ``mod_logo.png`` to ``pack.png`` and the ``.accesswidener`` file
+    to ``.classtweaker``, rewrites its header to ``classTweaker v2``, and
+    switches ``libs.`` catalog references to ``sharedLibs.`` in the three
+    build scripts.
+
+    Args:
+        mod_id: Mod ID used in the access-widener file name.
+        project_path: Project branch to rewrite.
+
+    Side effects: moves and rewrites files under ``project_path``.
+    """
     move_directory_or_file(
         os.path.join(project_path, "Common", "src", "main", "resources", "mod_logo.png"),
         os.path.join(project_path, "Common", "src", "main", "resources", "pack.png")
@@ -62,6 +91,23 @@ def run_26_1_upgrade(mod_id, project_path):
 
 
 def run_1_21_11_upgrade(mod_id, template_path, project_path, plugins_version):
+    """Apply the 1.21.11 migration.
+
+    Copies the root Gradle settings and build script and the per-module
+    ``gradle.properties`` from ``template_path`` (per-module
+    ``build.gradle.kts`` only when absent), converts each module's mixin JSON
+    to Gradle DSL, migrates the project properties, then deletes the
+    superseded legacy Gradle and metadata files.
+
+    Args:
+        mod_id: Mod ID used to locate mixin and metadata files.
+        template_path: Multiloader template for the target version.
+        project_path: Project branch to migrate.
+        plugins_version: Convention plugins version for the properties
+            migration.
+
+    Side effects: copies, rewrites, and deletes files under ``project_path``.
+    """
     copy_from_template(f"{template_path}/settings.gradle.kts", f"{project_path}/settings.gradle.kts")
     copy_from_template(f"{template_path}/build.gradle.kts", f"{project_path}/build.gradle.kts")
     copy_from_template(f"{template_path}/Common/build.gradle.kts", f"{project_path}/Common/build.gradle.kts", only_if_absent=True)
@@ -97,11 +143,31 @@ def run_1_21_11_upgrade(mod_id, template_path, project_path, plugins_version):
 
 
 def run_1_21_1_upgrade(mod_id, template_path, project_path, plugins_version):
+    """Apply the 1.21.1 migration by composing the 1.21.11 and 26.1 steps."""
     run_1_21_11_upgrade(mod_id, template_path, project_path, plugins_version)
     run_26_1_upgrade(mod_id, project_path)
 
 
 def run_workspace_upgrade(args, base_path, main_path, project_path):
+    """Refresh ``main`` and migrate the target version branch.
+
+    Validates that both worktrees are clean and pulls them. Refreshes ``main``
+    from the template (``.gitignore``, ``.github``, license year) and commits
+    when ``--commit`` is set. On the project branch it removes the stale
+    ``CHANGELOG.md``, ``pack.mcmeta``, and ``mod_banner.png``, runs the
+    version-specific upgrade named by ``--upgrade``, and commits when
+    ``--commit`` is set.
+
+    Args:
+        args: Parsed CLI arguments (``minecraft``, ``upgrade``, ``plugins``,
+            ``id``, ``commit``).
+        base_path: Root containing the mod repositories.
+        main_path: The project's ``main`` worktree.
+        project_path: The target Minecraft version worktree.
+
+    Side effects: git subprocesses, template copies, file deletions, and
+    commits. Aborts via ``error2`` when a worktree is dirty.
+    """
     template_root_path = os.path.join(base_path, "multiloader-workspace-template")
     template_main_path = os.path.join(template_root_path, "main")
     template_project_path = os.path.join(template_root_path, args.minecraft)

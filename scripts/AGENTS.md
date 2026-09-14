@@ -22,7 +22,7 @@ Sibling modules extracted from `main.py` (`console.py`, `fs_utils.py`,
 `changelog.py`, `git_ops.py`, `gradle_tasks.py`, `workspace_upgrade.py`,
 `cli.py`) are imported by bare name and must stay in `scripts/main/`.
 
-`scripts/legacy/` is archival only. Do not read, modify, lint, or refactor anything there. In particular, never touch the bundled `.venv` under `scripts/legacy/26.2.x/` or any `__pycache__` directory.
+`scripts/legacy/` is archival only. Do not modify, lint, or refactor anything there. In particular, never touch the bundled `.venv` under `scripts/legacy/26.2.x/` or any `__pycache__` directory. Reading legacy scripts is permitted only for the `python-documenter` subagent, which may produce a read-only `scripts/legacy/README.md` index; it must never edit legacy `.py` files.
 
 ### Hard rules
 
@@ -40,6 +40,14 @@ Sibling modules extracted from `main.py` (`console.py`, `fs_utils.py`,
 - Keep `main.py` focused on orchestration: parsing, validation, and dispatch. Extract cohesive, reusable logic into sibling modules when refactoring, but leave a thin, readable CLI in `main.py`.
 - Fatal errors in `main.py` go through `error2(...)`; avoid raising raw exceptions that skip the logging path unless the existing code already does so.
 - Use module and function docstrings for non-trivial logic. Do not add narration comments to obvious code.
+
+### Documentation
+
+- The `python-documenter` subagent owns documentation consistency. Its prompt (`scripts/.opencode/agent/python-documenter.md`) is the source of truth for the docstring and README standard.
+- Module docstrings state purpose, entry points, side effects (filesystem / git / subprocess / network), and constraints. Non-trivial functions document `Args` / `Returns` / `Raises` and side effects.
+- Write for two audiences: humans (readable prose and examples) and agents (stable headings, explicit contracts and invariants).
+- Documentation-only changes must not alter behavior. Verify with `py_compile` and `./main.py --help`.
+- Canonical CLI reference is `scripts/main/README.md`.
 
 ### Verification
 

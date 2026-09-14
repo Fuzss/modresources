@@ -58,8 +58,8 @@ Categories:
 3. **Style** – naming, imports, formatting, dead code, type hints, docstrings.
 4. **Structure** – coupling, file size, duplicated dispatch tables, hardcoded
    values, extractable modules, testability.
-5. **Docs** – drift between scripts and `CHEAT SHEET.txt` / config JSON files,
-   missing module docstrings, stale flags.
+5. **Docs** – drift between scripts, config JSON files, module docstrings, and
+   `scripts/main/README.md`, plus stale flags.
 
 Severity:
 
@@ -75,7 +75,6 @@ the exact lines. Report false leads as "dismissed" only if useful.
 - `--init` uses `nargs="?"`, `const=True`, `default=None`, but
   `prepare_new_version` passes `args.init` as a git branch (`origin/{args.init}`).
   What happens with a bare `--init`?
-- `CHEAT SHEET.txt` documents `--copy`, but `argparse` has no `--copy` flag.
 - `create_gradle_properties` raises a raw `ValueError` instead of `error2(...)`.
 - `merge_config_into_args` only overrides values still equal to parser defaults;
   check interactions with required args and mutable `action="append"` defaults.

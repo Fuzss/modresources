@@ -1,10 +1,21 @@
 #!/usr/bin/env python3
-"""Core CLI entry point for modresources project management tasks.
+"""Core CLI entry point for modresources project-management tasks.
 
-Orchestrates version cloning, workspace upgrades, Gradle property updates,
-changelog handling, building, launching, publishing, and uploading. Heavier
-logic lives in the sibling modules; this file owns argument parsing dispatch
-and task ordering.
+Purpose: orchestrate the full mod workflow in order: clone and prepare
+version branches, run workspace upgrades, update Gradle properties and the
+changelog, then build, launch, publish, upload, and notify. Cohesive logic
+lives in the sibling modules; this file owns parsing, validation, and
+dispatch.
+
+Entry points: the ``main()`` function, run directly as ``./main.py ...``;
+it calls ``cli.parse_args`` and then the sibling modules.
+
+Side effects: filesystem edits (``gradle.properties``,
+``gradle-wrapper.properties``, ``CHANGELOG.md``), git operations, and
+``./gradlew``/``open`` subprocesses.
+
+Constraints: run from ``scripts/main``, because imports are bare sibling
+names and the ``config/`` path is relative. Standard library only.
 """
 
 import os
@@ -29,6 +40,16 @@ from workspace_upgrade import run_workspace_upgrade
 
 
 def update_directory(args, path):
+    """Pull the latest commits in ``path`` unless running bare or open-only.
+
+    Args:
+        args: Parsed CLI arguments; ``--open`` and ``--bare`` suppress the
+            pull.
+        path: Directory expected to be an existing git checkout.
+
+    Side effects: runs ``git pull`` in ``path``; exits via ``error2`` when the
+    directory does not exist.
+    """
     if os.path.isdir(path):
         if not args.open and not args.bare:
             subprocess.run(["git", "pull"], cwd=path, check=True)
@@ -37,6 +58,18 @@ def update_directory(args, path):
 
 
 def main():
+    """Run the requested workflow steps in their fixed order.
+
+    Validates arguments, optionally clones branches and upgrades the
+    workspace, rewrites Gradle properties, updates the changelog, then runs
+    Gradle tasks for the wrapper, spotless, project refresh, data generation,
+    launching, publishing, uploading, and notification. Steps that require
+    ``--version`` warn and skip when it is absent.
+
+    Side effects: filesystem writes, git subprocesses, and Gradle/open
+    subprocesses via the sibling modules; exits the process early when
+    ``--open`` is given.
+    """
     args = parse_args()
     base_path = find_gradle_property("fuzs.multiloader.project.mods")
     root_path = args.path or os.path.join(base_path, args.name)

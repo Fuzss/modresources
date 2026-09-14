@@ -1,5 +1,19 @@
 #!/usr/bin/env python3
-"""Command-line argument parsing and JSON config merging."""
+"""CLI argument parsing and JSON config merging.
+
+Purpose: define the ``main.py`` command-line surface and overlay an optional
+``config/<minecraft>/<name>.json`` file on the parsed arguments.
+
+Entry points: ``main.parse_args`` is the only caller.
+
+Side effects: reads a config JSON file when ``--config`` is given, prints the
+final arguments as sorted JSON, and exits via ``error2`` for an unknown config
+key or a missing config file.
+
+Constraints: standard library only; the argparse definitions are the single
+source of truth for the CLI surface. Run from ``scripts/main`` so the relative
+``config/`` path resolves.
+"""
 
 import argparse
 import json
@@ -9,6 +23,15 @@ from console import error2
 
 
 def merge_config_into_args(parser, args, config_data):
+    """Overlay config values on arguments that still hold their default.
+
+    Args:
+        parser: Argument parser whose action defaults define "unset".
+        args: Namespace to mutate in place.
+        config_data: Parsed config mapping ``dest`` names to values.
+
+    Side effects: mutates ``args``; exits via ``error2`` for an unknown key.
+    """
     defaults = {
         action.dest: action.default
         for action in parser._actions
@@ -24,6 +47,15 @@ def merge_config_into_args(parser, args, config_data):
 
 
 def parse_args():
+    """Parse ``sys.argv``, merge an optional config file, and return the namespace.
+
+    ``--config <name>`` loads ``config/<--minecraft>/<name>.json``. When
+    ``--id`` is omitted it is derived from ``--name`` by removing hyphens. The
+    resolved arguments are printed as JSON before returning.
+
+    Side effects: reads the config file, prints to stdout, and exits via
+    ``error2`` for an unknown config key or a missing config file.
+    """
     parser = argparse.ArgumentParser()
 
     parser.add_argument("--bare", default=False, action="store_true", help="Skip any Gradle setup.")

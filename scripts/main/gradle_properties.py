@@ -1,5 +1,21 @@
 #!/usr/bin/env python3
-"""Gradle properties loading, updating, and version bumping."""
+"""Gradle property-file reading, editing, and version bumping.
+
+Purpose: own everything that reads or rewrites a project's
+``gradle.properties``: locating user properties, inserting/updating/removing
+keys in sorted order, and translating a requested version keyword into a
+concrete semantic version.
+
+Entry points: ``main.py`` calls ``find_gradle_property``,
+``create_gradle_properties``, and ``update_gradle_properties``;
+``clone_versions`` and the body-update scripts use ``find_gradle_property``.
+
+Side effects: reads and rewrites Gradle property files, prints the updated
+properties as JSON, and exits via ``error2`` on missing required values.
+
+Constraints: standard library only. ``find_gradle_property`` caches the user
+properties for the process lifetime.
+"""
 
 import json
 import os
@@ -15,11 +31,13 @@ VERSION_KEYWORDS = {"latest", "patch", "minor", "major"}
 
 
 def get_properties_key(line: str) -> tuple[str, ...]:
+    """Return the dotted key before ``=`` on ``line`` as a tuple of parts."""
     key = line.split("=", 1)[0].strip()
     return tuple(key.split("."))
 
 
 def get_matching_parts(first: tuple[str, ...], second: tuple[str, ...]) -> int:
+    """Return the length of the common prefix of two dotted-key tuples."""
     matching_parts = 0
 
     for first_part, second_part in zip(first, second):
@@ -32,6 +50,12 @@ def get_matching_parts(first: tuple[str, ...], second: tuple[str, ...]) -> int:
 
 
 def find_insertion_index(lines: list[str], new_key: str) -> int:
+    """Return the index at which ``new_key`` keeps the file key-sorted.
+
+    Blank and comment lines are skipped. Ordering follows the dotted key
+    parts, so ``a.b`` sorts before ``a.c``. Returns -1 when the key belongs at
+    the end.
+    """
     new_key_parts = get_properties_key(new_key)
 
     previous_matching_parts = 0
@@ -55,6 +79,27 @@ def find_insertion_index(lines: list[str], new_key: str) -> int:
 
 
 def update_gradle_properties(file_path, updates: dict, remove_predicate=None):
+    """Apply key updates to a Gradle properties file and return all properties.
+
+    For each existing key in ``updates`` the value is replaced; a callable
+    value receives the old value and returns the new one. Setting a value to
+    ``"#"`` comments the line out and ``None`` deletes it. Keys that are
+    still missing are appended or inserted in sorted position; a callable
+    value for a missing key is an error because it cannot be derived. When
+    ``remove_predicate`` is supplied, non-updated keys matching it are
+    dropped. The file is rewritten only when there is something to change.
+
+    Args:
+        file_path: Gradle properties file to edit.
+        updates: ``{key: value | callable | None | "#"}`` mapping.
+        remove_predicate: Optional ``key -> bool`` filter for unrelated keys.
+
+    Returns:
+        Every non-commented property parsed from the file after the update.
+
+    Side effects: rewrites ``file_path`` on change, prints the updated subset
+    as JSON, and exits via ``error2`` for an unsettable callable.
+    """
     with open(file_path, 'r') as f:
         lines = f.readlines()
 
@@ -134,10 +179,24 @@ def update_gradle_properties(file_path, updates: dict, remove_predicate=None):
 
 @lru_cache(maxsize=1)
 def _cached_gradle_properties():
+    """Return the user's Gradle properties, loaded once per process."""
     return load_gradle_properties()
 
 
 def find_gradle_property(prop, default=None):
+    """Look up ``prop`` in ``~/.gradle/gradle.properties``.
+
+    Args:
+        prop: Property name to look up.
+        default: Value returned when ``prop`` is absent, when not None.
+
+    Returns:
+        The property value, or ``default``.
+
+    Side effects: reads (and caches) the user properties file; exits via
+    ``error2`` when the file or the property is missing and no default is
+    given.
+    """
     try:
         gradle_properties = _cached_gradle_properties()
     except FileNotFoundError:
@@ -152,6 +211,14 @@ def find_gradle_property(prop, default=None):
 
 
 def bump_version(version, component):
+    """Return the next semantic version for ``component``.
+
+    ``major`` resets to ``x.1.0`` because Minecraft versions start minor
+    updates at 1 rather than 0; ``minor`` and ``patch`` increment their part.
+
+    Side effects: exits via ``error2`` when ``version`` is not ``x.y.z`` or
+    ``component`` is not ``major``/``minor``/``patch``.
+    """
     if not SEMANTIC_VERSION_PATTERN.fullmatch(version):
         error2(
             f"Cannot bump version '{version}', expected semantic version x.y.z"
@@ -171,6 +238,24 @@ def bump_version(version, component):
 
 
 def create_gradle_properties(args, legacy_properties=False):
+    """Build the property updates requested by the CLI.
+
+    ``args.version`` maps to ``mod.version`` (legacy ``modVersion``); the
+    keywords ``patch``/``minor``/``major`` become callables and ``latest``
+    adds nothing. ``args.catalog`` maps to ``project.libs`` (legacy
+    ``dependenciesVersionCatalog``), ``args.plugins`` to ``project.plugins``,
+    and each ``args.properties`` pair passes through.
+
+    Args:
+        args: Parsed CLI arguments.
+        legacy_properties: Use legacy property names.
+
+    Returns:
+        A ``{key: value_or_callable}`` mapping suitable for
+        ``update_gradle_properties``.
+
+    Side effects: exits via ``error2`` for an invalid version string.
+    """
     properties = {}
 
     if args.version:

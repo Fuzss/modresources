@@ -1,11 +1,19 @@
 #!/usr/bin/env python3
 
-"""
-Clone and prepare version based git repositories.
+"""Clone and prepare version-based git repositories.
 
-- Reads versions.json from main repository
-- Optionally creates it from defaults if missing
-- Clones all enabled version branches into local folders
+Purpose: bootstrap a project checkout from the remote repository: clone the
+``main`` branch, read or create ``versions.json``, and clone each enabled
+version branch into its own sibling directory.
+
+Entry points: ``main.py`` imports ``setup_git`` and ``load_versions_file``;
+the module also runs standalone as ``python3 clone_versions.py <repo-name>``.
+
+Side effects: runs ``git`` subprocesses (pull, clone, fetch, branch, add,
+commit, push) and writes ``versions.json``.
+
+Constraints: standard library only. ``load_versions`` requires a clone with
+fetched remote branches, not ``--single-branch``.
 """
 
 import json
@@ -26,12 +34,15 @@ DEFAULT_BRANCHES = {
 
 
 def is_git_repo(path: str) -> bool:
-    """Check if a directory is a git repository."""
+    """Return True when ``path`` contains a ``.git`` directory."""
     return os.path.isdir(os.path.join(path, ".git"))
 
 
 def clone_branch(repo_url: str, branch: str, target_dir: str):
-    """Clone a single branch into target directory."""
+    """Clone ``branch`` of ``repo_url`` into ``target_dir``, then fetch all refs.
+
+    Side effects: runs ``git clone`` and ``git fetch --all``.
+    """
     subprocess.run([
         "git",
         "clone",
@@ -50,9 +61,12 @@ def clone_branch(repo_url: str, branch: str, target_dir: str):
 
 
 def get_remote_branches(repo_dir: str) -> set[str]:
-    """Return set of remote branch names.
-    
-    This only works when the repository has been cloned without the --single-branch flag.
+    """Return the set of remote branch names in ``repo_dir``.
+
+    ``origin/HEAD`` is excluded. Only works when the repository was cloned
+    without ``--single-branch``.
+
+    Side effects: runs ``git branch -r``.
     """
     output = subprocess.check_output(
         ["git", "branch", "-r"], 
@@ -77,10 +91,23 @@ def get_remote_branches(repo_dir: str) -> set[str]:
 
 
 def load_versions_file(main_path: str, branch_overrides=None):
-    """
-    Load or create versions.json and apply optional overrides.
+    """Load or create ``versions.json`` and apply optional support overrides.
 
-    Also commits and pushes changes if file is created or modified.
+    Pulls ``main_path`` first. A missing file is created from
+    ``DEFAULT_BRANCHES``, keeping only branches that exist remotely. Each
+    ``branch_overrides`` entry sets a support status (an unknown status is
+    ignored with a warning) or removes the branch when its value is empty.
+    The file is committed and pushed only when it changed.
+
+    Args:
+        main_path: The cloned ``main`` repository.
+        branch_overrides: Optional ``{branch: support_status}`` mapping.
+
+    Returns:
+        The full parsed versions data, including its ``branches`` mapping.
+
+    Side effects: runs git subprocesses (pull, add, diff, commit, push) and
+    writes ``versions.json``.
     """
 
     versions_file = os.path.join(main_path, VERSIONS_FILE)
@@ -161,7 +188,13 @@ def load_versions_file(main_path: str, branch_overrides=None):
 
 
 def load_versions(main_path: str):
-    """Validate and return active version branches."""
+    """Return the non-archived version branches declared in ``versions.json``.
+
+    Raises:
+        RuntimeError: when a declared branch is absent from the remote.
+
+    Side effects: reloads ``versions.json`` and lists remote branches.
+    """
     data = load_versions_file(main_path)
     versions = data.get("branches", {})
 
@@ -181,6 +214,19 @@ def load_versions(main_path: str):
 
 
 def setup_git(root_path: str, repo_name: str, versions_override: list[str] | None = None):
+    """Clone the ``main`` branch and each enabled version branch.
+
+    ``main`` is cloned when missing. The version list comes from
+    ``versions_override`` when supplied, otherwise from ``load_versions``.
+    Existing checkouts are left untouched.
+
+    Args:
+        root_path: Directory that receives the project clones.
+        repo_name: Repository name under the ``Fuzss`` owner.
+        versions_override: Explicit version branches to clone.
+
+    Side effects: creates directories and runs ``git clone``/``git fetch``.
+    """
     repo_url = f"{REMOTE_BASE_URL}{repo_name}.git"
     main_path = os.path.join(root_path, "main")
 
@@ -206,6 +252,11 @@ def setup_git(root_path: str, repo_name: str, versions_override: list[str] | Non
 
 
 def main():
+    """Run the standalone ``clone_versions.py <repo-name>`` entry point.
+
+    Side effects: clones repositories under a directory named after the
+    repository in the current working directory.
+    """
     if len(sys.argv) != 2:
         print("Usage: clone_versions.py <repo-name>")
         sys.exit(1)

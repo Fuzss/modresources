@@ -1,5 +1,18 @@
 #!/usr/bin/env python3
-"""Changelog parsing, generation, and insertion."""
+"""Changelog parsing, generation, and insertion.
+
+Purpose: turn ``--changelog`` section/text pairs into a Keep-a-Changelog entry
+and insert it at the top of a project's ``CHANGELOG.md``.
+
+Entry points: ``main.py`` calls ``parse_changelog_sections``,
+``generate_changelog_block``, and ``prepend_to_changelog``.
+
+Side effects: reads and writes ``CHANGELOG.md``; exits via ``error2`` for an
+unknown section or a duplicate version.
+
+Constraints: standard library only. Sections render in the fixed
+``ORDERED_CHANGELOG_SECTIONS`` order regardless of the order supplied.
+"""
 
 from collections import defaultdict
 from datetime import date
@@ -13,6 +26,17 @@ VALID_CHANGELOG_SECTIONS = set(ORDERED_CHANGELOG_SECTIONS)
 
 
 def parse_changelog_sections(section_pairs):
+    """Group ``--changelog`` pairs by lowercased section name.
+
+    Args:
+        section_pairs: Iterable of ``(section, text)`` pairs.
+
+    Returns:
+        A ``{section: ["- text", ...]}`` dict, or an empty dict for no input.
+
+    Side effects: exits via ``error2`` for a section outside
+    ``VALID_CHANGELOG_SECTIONS``.
+    """
     if not section_pairs:
         return dict()
 
@@ -27,6 +51,17 @@ def parse_changelog_sections(section_pairs):
 
 
 def generate_changelog_block(full_version, changelog_section_data):
+    """Render a dated changelog entry.
+
+    Args:
+        full_version: Version label such as ``v26.2.0-mc26.2.x``.
+        changelog_section_data: Output of ``parse_changelog_sections``.
+
+    Returns:
+        A ``(full_entry, body)`` tuple; ``full_entry`` includes the
+        ``## [<version>] - <date>`` header and ``body`` is the section text
+        without it.
+    """
     today = date.today().isoformat()
     header = f"## [{full_version}] - {today}"
     body = []
@@ -43,6 +78,20 @@ def generate_changelog_block(full_version, changelog_section_data):
 
 
 def prepend_to_changelog(changelog_path, new_entry, full_version):
+    """Insert ``new_entry`` after the preamble of ``changelog_path``.
+
+    Creates a Keep-a-Changelog header when the file is missing. Does nothing
+    when the version and body are already present.
+
+    Args:
+        changelog_path: Changelog file to edit.
+        new_entry: ``(full_entry, body)`` tuple from
+            ``generate_changelog_block``.
+        full_version: Version label used to detect duplicates.
+
+    Side effects: writes ``changelog_path``; exits via ``error2`` when the
+    version exists with a different body.
+    """
     try:
         with open(changelog_path, encoding="utf-8") as f:
             existing = f.read()

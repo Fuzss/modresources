@@ -1,22 +1,38 @@
 #!/usr/bin/env python3
-"""Migrate a legacy ``gradle.properties`` layout to the current property names."""
+"""Migrate a legacy ``gradle.properties`` layout to the current property names.
+
+Purpose: rewrite the old flat property file (individual dependency and
+distribution keys) as the current ``mod.*``, ``dependencies.*``,
+``distributions.*``, and ``environments.*`` layout during workspace upgrades.
+
+Entry points: ``workspace_upgrade.run_1_21_11_upgrade``; the module also runs
+standalone as
+``python3 migrate_mod_properties.py <input> <output> <plugins_version>``.
+
+Side effects: overwrites the output file, prints progress, and exits via
+``error2`` when the plugins version is missing.
+
+Constraints: standard library only. An input without
+``dependenciesVersionCatalog`` is treated as already migrated and left alone.
+"""
 
 import sys
 
 from console import error2
 
-# Environment mapping
+# Maps legacy modForgeDisplayTest values to (client, server) support statuses.
 ENV_MAPPING = {
     "IGNORE_ALL_VERSION": ("required", "unsupported"),
     "IGNORE_SERVER_VERSION": ("unsupported", "required"),
     "MATCH_VERSION": ("required", "required")
 }
 
-# Helper functions
 def slugify(name):
+    """Return ``name`` lowercased with spaces replaced by hyphens."""
     return name.lower().replace(" ", "-")
 
 def parse_old_properties(file_path):
+    """Return ``file_path`` as a ``{key: value}`` dict, skipping blanks/comments."""
     props = {}
     with open(file_path, "r", encoding="utf-8") as f:
         for line in f:
@@ -29,6 +45,11 @@ def parse_old_properties(file_path):
     return props
 
 def convert_slug_to_id(name: str):
+    """Return the mod ID for a distribution slug.
+
+    Lowercases, removes hyphens, and normalizes the special
+    ``forgeconfigapiportfabric`` slug to ``forgeconfigapiport``.
+    """
     mod_id = name.strip().replace("-", "").lower()
     if mod_id == "forgeconfigapiportfabric":
         return "forgeconfigapiport"
@@ -36,6 +57,15 @@ def convert_slug_to_id(name: str):
         return mod_id
 
 def convert_dependencies(props):
+    """Convert legacy dependency keys into ``dependencies.<loader>.<id>`` entries.
+
+    Args:
+        props: Parsed legacy properties.
+
+    Returns:
+        A key-sorted ``{dependencies.<loader>.<id>: required|optional|embedded}``
+        dict.
+    """
     new_deps = {}
     dep_map = {
         "dependenciesRequiredFabricCurseForge": ("fabric", "required"),
@@ -58,12 +88,21 @@ def convert_dependencies(props):
             for dependency in dependencies:
                 key = f"dependencies.{platform[0]}.{dependency}"
                 new_deps[key] = platform[1]
-
-    # Sort the dictionary by key
     new_deps = dict(sorted(new_deps.items()))
     return new_deps
 
 def convert_distributions(props):
+    """Convert legacy distribution keys into ``distributions.<site>.*`` entries.
+
+    CurseForge and Modrinth IDs are emitted only when present and non-zero;
+    each present site also receives the mod name slug.
+
+    Args:
+        props: Parsed legacy properties.
+
+    Returns:
+        A ``{distributions.<site>.<field>: value}`` dict.
+    """
     result = {}
     mod_name_slug = slugify(props.get("modName", "mod"))
 
@@ -84,6 +123,21 @@ def convert_distributions(props):
     return result
 
 def migrate_properties(input_file, output_file, plugins_version):
+    """Rewrite a legacy property file at ``output_file``.
+
+    Returns early when the input has no ``dependenciesVersionCatalog`` (already
+    migrated). The catalog ``x.y.z-vN`` becomes ``x.y.z-SNAPSHOT``, and the
+    legacy display-test flag maps to the client and server environment support
+    statuses.
+
+    Args:
+        input_file: Legacy properties file to read.
+        output_file: Properties file to overwrite.
+        plugins_version: Multiloader convention plugins version.
+
+    Side effects: overwrites ``output_file`` and prints progress; exits via
+    ``error2`` when ``plugins_version`` is missing.
+    """
     props = parse_old_properties(input_file)
 
     if "dependenciesVersionCatalog" not in props:
@@ -134,6 +188,11 @@ def migrate_properties(input_file, output_file, plugins_version):
     print(f"Successfully migrated properties in {input_file}")
 
 def main():
+    """Run the standalone ``migrate_mod_properties.py`` entry point.
+
+    Side effects: prints usage and exits with code 1 on bad arguments;
+    otherwise migrates the given files.
+    """
     if len(sys.argv) != 4:
         print("Usage: python3 migrate_mod_properties.py <input_file> <output_file> <plugins_version>")
         sys.exit(1)

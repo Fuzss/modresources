@@ -1,11 +1,38 @@
 #!/usr/bin/env python3
-"""Convert a ``mixins.json`` configuration into Gradle DSL mixin declarations."""
+"""Convert a ``mixins.json`` configuration into Gradle DSL mixin declarations.
+
+Purpose: migrate legacy mixin configuration files to the multiloader Gradle
+DSL during the 1.21.11 workspace upgrade.
+
+Entry points: ``workspace_upgrade.run_1_21_11_upgrade``; the module also runs
+standalone as ``python3 migrate_mixins.py <mixins.json> <build.gradle>``.
+
+Side effects: appends a ``multiloader { mixins { ... } }`` block to the Gradle
+file and prints usage on bad arguments.
+
+Constraints: standard library only. Missing JSON files are ignored. The block
+is appended, so the Gradle file must not already contain one.
+"""
 
 import json
 import sys
 import os
 
 def split_mixins(entries, prefix="", accessor_prefix=""):
+    """Split mixin class names into normal and accessor lists.
+
+    ``$`` is escaped for Gradle string interpolation. Entries starting with
+    ``accessor_prefix`` (or ``prefix``) have that prefix stripped before being
+    placed in the corresponding list.
+
+    Args:
+        entries: Mixin class names from one section of ``mixins.json``.
+        prefix: Optional package prefix for normal mixins.
+        accessor_prefix: Optional package prefix for accessor mixins.
+
+    Returns:
+        A ``(normal, accessor)`` tuple of name lists.
+    """
     normal = []
     accessor = []
     for entry in entries:
@@ -19,6 +46,19 @@ def split_mixins(entries, prefix="", accessor_prefix=""):
     return normal, accessor
 
 def convert_mixins(json_path, gradle_path):
+    """Append the mixin declarations from ``json_path`` to ``gradle_path``.
+
+    Reads the ``mixins``, ``client``, and ``server`` sections plus the
+    ``plugin`` class, then appends a ``multiloader { mixins { ... } }`` block
+    for each non-empty group. Does nothing when the JSON file is missing or
+    yields no declarations.
+
+    Args:
+        json_path: Legacy ``mixins.json`` file.
+        gradle_path: Gradle DSL file the block is appended to.
+
+    Side effects: reads the JSON file and appends to the Gradle file.
+    """
     if not os.path.exists(json_path):
         return
 
@@ -88,6 +128,11 @@ def convert_mixins(json_path, gradle_path):
             file.write("\n".join(lines))
 
 def main():
+    """Run the standalone ``migrate_mixins.py`` entry point.
+
+    Side effects: prints usage and exits with code 1 on bad arguments;
+    otherwise converts the given files.
+    """
     if len(sys.argv) != 3:
         print("Usage: python3 migrate_mixins.py <mixins.json> <build.gradle>")
         sys.exit(1)

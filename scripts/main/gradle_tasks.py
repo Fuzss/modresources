@@ -1,5 +1,19 @@
 #!/usr/bin/env python3
-"""Dispatch to the Gradle tasks for launching and uploading a project."""
+"""Gradle task dispatch for launching and uploading.
+
+Purpose: map validated ``(loader, distribution)`` and ``(loader, site)`` pairs
+to the Gradle task names that launch a game client/server or publish to the
+distribution sites, keeping the legacy task names in one place.
+
+Entry points: ``main.py`` calls ``run_launch`` and ``run_upload``.
+
+Side effects: runs ``./gradlew`` in the project directory and exits via
+``error2`` for unsupported launch values.
+
+Constraints: standard library only; must be invoked from a project containing
+the Gradle wrapper. ``legacy_tasks=True`` selects the old camelCase task
+names.
+"""
 
 import subprocess
 
@@ -7,6 +21,17 @@ from console import error2
 
 
 def run_launch(mod_loader, distribution, project_path, legacy_tasks=False):
+    """Run the Gradle launch task for a loader and distribution.
+
+    Args:
+        mod_loader: ``"fabric"`` or ``"neoforge"``.
+        distribution: ``"client"`` or ``"server"``.
+        project_path: Project directory containing ``gradlew``.
+        legacy_tasks: Use legacy camelCase task names.
+
+    Side effects: runs ``./gradlew``; exits via ``error2`` for unsupported
+    arguments.
+    """
     if mod_loader == "fabric":
         if distribution == "client":
             subprocess.run(["./gradlew", "fabricClient" if legacy_tasks else "fabric-client"], cwd=project_path, check=True)
@@ -26,6 +51,21 @@ def run_launch(mod_loader, distribution, project_path, legacy_tasks=False):
 
 
 def run_upload(mod_loader, website, project_path, legacy_tasks=False):
+    """Run the Gradle upload task for a loader and site.
+
+    A ``mod_loader`` of None selects the aggregate ``all-*`` task; a
+    ``website`` of None selects the loader's "everywhere" task. Unrecognized
+    values fall through to those same aggregate tasks.
+
+    Args:
+        mod_loader: ``"fabric"``, ``"neoforge"``, or None for all loaders.
+        website: ``"curseforge"``, ``"modrinth"``, ``"github"``, or None for
+            all sites.
+        project_path: Project directory containing ``gradlew``.
+        legacy_tasks: Use legacy camelCase task names.
+
+    Side effects: runs ``./gradlew``.
+    """
     if mod_loader == "fabric":
         if website == "curseforge":
             subprocess.run(["./gradlew", "fabricUploadCurseForge" if legacy_tasks else "fabric-curseforge"], cwd=project_path, check=True)
