@@ -30,10 +30,10 @@ overrides any habit you have from other projects.
 
 ## Outputs
 
-1. `pages/.authoring/<local id>/about.md` — draft, write in place.
-2. `pages/.authoring/<local id>/features.md` — draft, write in place. Do not
+1. `pages/.authoring/<mod>/about.md` — draft, write in place.
+2. `pages/.authoring/<mod>/features.md` — draft, write in place. Do not
    create it when the mod does not justify a Features list.
-3. `pages/.authoring/<local id>/guidance.md` — the guidance report described
+3. `pages/.authoring/<mod>/guidance.md` — the guidance report described
    below.
 
 Only these three files are yours. You never write `pages/data/`; promotion is a
@@ -45,7 +45,7 @@ separate, explicit step owned by the orchestrator.
   `installation.yaml`, `sections.yaml`, `credits.md`, `configuration.md`,
   `socials.yaml`, or anything under `commons/`. Those are manual.
 - Never touch `pages/data/` at all, not even to read-and-rewrite. Drafts live
-  under `pages/.authoring/<local id>/` only.
+  under `pages/.authoring/<mod>/` only.
 - Never invent features, numbers, names, or compatibility. Mod behavior comes
   from the brief, the checkout, or the curator's explicit steer. Vanilla
   behavior and Java-vs-Bedrock comparisons may additionally come from

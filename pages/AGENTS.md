@@ -98,9 +98,9 @@ Text is produced by a deterministic collector plus two subagents, with the user
 as the review stopgate:
 
 1. `scripts/main/tools/collect_page_brief.py` builds a normalized brief at
-   `pages/.authoring/<local id>/brief.md`.
+   `pages/.authoring/<mod>/brief.md`.
 2. `pages/.opencode/agent/page-author.md` drafts `about.md` and `features.md`
-   under `pages/.authoring/<local id>/` only. It never writes `pages/data/`.
+   under `pages/.authoring/<mod>/` only. It never writes `pages/data/`.
 3. The user reviews the drafts and requests changes; the author revises them.
 4. `pages/.opencode/agent/page-style-auditor.md` checks the drafts against this
    file. Only `PASS` drafts are promoted.

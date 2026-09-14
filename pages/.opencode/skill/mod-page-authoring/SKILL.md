@@ -1,6 +1,6 @@
 ---
 name: mod-page-authoring
-description: Use when authoring or normalizing the About and Features text for Fuzss Minecraft mod pages, i.e. the files under pages/data/<local id>/about.md and features.md. Covers collecting a source brief, drafting text under pages/.authoring/<local id>/ for review, auditing, and verbatim promotion to pages/data/.
+description: Use when authoring or normalizing the About and Features text for Fuzss Minecraft mod pages, i.e. the files under pages/data/<local id>/about.md and features.md. Covers collecting a source brief, drafting text under pages/.authoring/<mod>/ for review, auditing, and verbatim promotion to pages/data/.
 ---
 
 # Mod page authoring
@@ -17,23 +17,24 @@ The writing standard is `pages/AGENTS.md`; read it before starting.
 ## Single mod
 
 1. Pick the repository name (e.g. `eternal-nether`) and the branch
-   (default `26.2.x`). Derive the local id.
+   (default `26.2.x`). The staging directory uses the repository name as-is;
+   the `pages/data/` directory uses the local id (dashes removed).
 2. Build the authoring brief from the repository root:
 
    ```sh
    python3 scripts/main/tools/collect_page_brief.py <mod> --branch 26.2.x \
-       --out pages/.authoring/<local id>/brief.md
+       --out pages/.authoring/<mod>/brief.md
    ```
 
    Run this from the repository root. From `pages/`, prefix the script path with
    `../`. The collector reads the mods directory from
    `fuzs.multiloader.project.mods`; override with `--mods-root` when needed.
    The collector creates the per-mod directory itself.
-3. Dispatch the `page-author` subagent, giving it the brief path, the local id,
+3. Dispatch the `page-author` subagent, giving it the brief path, the mod id,
    and any curator steer (selling points, must-keep lines, wiki links). It
-   writes **drafts only**: `pages/.authoring/<local id>/about.md` and
+   writes **drafts only**: `pages/.authoring/<mod>/about.md` and
    `features.md`, plus the working notes at
-   `pages/.authoring/<local id>/guidance.md`. It never touches `pages/data/`.
+   `pages/.authoring/<mod>/guidance.md`. It never touches `pages/data/`.
 4. Present the drafts for review. The user is the stopgate: apply their edits
    to the drafts, re-running `page-author` or editing directly as instructed.
 5. Dispatch the `page-style-auditor` subagent with the draft paths. If it
@@ -58,7 +59,7 @@ Normalization across many mods is a separate, deliberate pass:
 1. Read the mod ids from `pages/input`, one per line, ignoring blanks and `#`.
 2. Process them in small batches (about ten mods). For each batch, run steps 1-4
    above, one mod at a time, using a fresh `page-author` invocation per mod so
-   context stays small. Drafts accumulate under `pages/.authoring/<local id>/`;
+   context stays small. Drafts accumulate under `pages/.authoring/<mod>/`;
    review happens per mod or per batch as the user prefers.
 3. Promote each mod only on explicit approval, following step 6.
 4. Collect the guidance reports and summarize what manual assets are missing
