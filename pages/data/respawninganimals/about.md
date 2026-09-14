@@ -1,4 +1,4 @@
-**Respawnable Animals** brings Bedrock Edition style animal spawning to Java Edition. Instead of animals existing forever after world generation, they can naturally disappear when far away and repopulate areas around active players, just like passive mobs do in Bedrock Edition. 🐄
+**Respawning Animals** brings Bedrock Edition style animal spawning to Java Edition. Instead of animals existing forever after world generation, they can naturally disappear when far away and repopulate areas around active players, just like passive mobs do in Bedrock Edition. 🐄
 
 This keeps the world feeling alive and prevents regions from becoming permanently depleted of animals after exploration or hunting. Whether you're gathering resources, breeding livestock, or simply traveling, wildlife can naturally return over time. 🌿
 

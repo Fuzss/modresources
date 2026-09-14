@@ -60,9 +60,10 @@ separate, explicit step owned by the orchestrator.
 
 - **About** — 1 to 3 short paragraphs, scaled to the mod's size. Bold the mod
   name exactly once, at the start of the first paragraph; use "the mod" or "this
-  mod" after that. Focus on purpose, value, and identity. At most one emoji per
-  paragraph, inside a sentence, never at the start. Do not mirror the feature
-  list.
+  mod" after that. Focus on purpose, value, and identity. Use emojis sparingly,
+  each anchored to the standout feature or benefit it marks in the same
+  sentence; never on generic sentences or closers, never at the start of a
+  paragraph. Do not mirror the feature list.
 - **Features** — one flat list, no group headings. Every bullet is
   `* EMOJI **Feature Name:** Explanation.` Order from most to least important.
   Aim for 5 to 8 for most mods and up to roughly 10 to 15 for large content

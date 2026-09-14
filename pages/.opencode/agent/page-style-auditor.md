@@ -26,7 +26,8 @@ About:
 - 1 to 3 paragraphs, scaled to the mod; no padding.
 - Mod name bold exactly once, at the start of the first paragraph.
 - "the mod" / "this mod" for later references.
-- At most one emoji per paragraph, inside a sentence, never paragraph-initial.
+- Every emoji anchored to the feature or benefit it marks in the same sentence
+  (named capabilities, not generic sentences or closers); never paragraph-initial.
 - Purpose and value, not a prose copy of the feature list.
 - No ungrounded claims.
 

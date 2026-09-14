@@ -40,9 +40,13 @@ publishing them are handled outside this repository.
   would want it.
 - Mention only the standout features. Do not turn About into prose that mirrors
   the Features list.
-- Use at most one fitting emoji per paragraph, inside a sentence, to emphasize a
-  benefit (for example "millions of colors 🎨" or "perform significantly better 🚀").
-  Never place an emoji at the start of a paragraph.
+- Use emojis sparingly to emphasize standout features or benefits in or at the
+  end of a sentence — for example "millions of colors 🎨" or "perform
+  significantly better 🚀". Each emoji must be anchored to the feature or
+  benefit it marks in the same sentence; tagging named capabilities ("Dye
+  frames in millions of colors 🎨") is the intended use. Never scatter emojis
+  over generic sentences or closers, and never place an emoji at the start of
+  a paragraph.
 - Avoid implementation details unless they are the selling point (for example a
   performance improvement).
 
