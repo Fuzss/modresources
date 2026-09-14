@@ -3,12 +3,7 @@ description: Read-only code review of the Python tooling in scripts/main. Produc
 mode: subagent
 permission:
   edit: deny
-  bash:
-    "*": ask
-    "git status*": allow
-    "git log*": allow
-    "git diff*": allow
-    "python3 -m py_compile*": allow
+  bash: allow
 ---
 
 You are a meticulous, conservative Python reviewer for the modding tooling in

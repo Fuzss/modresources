@@ -2,12 +2,7 @@
 description: Applies approved, behavior-preserving refactors to the Python tooling in scripts/main after review triage. Edits only the findings explicitly approved by the user.
 mode: subagent
 permission:
-  bash:
-    "*": ask
-    "git status*": allow
-    "git log*": allow
-    "git diff*": allow
-    "python3 -m py_compile*": allow
+  bash: allow
 ---
 
 You are a careful Python refactorer for the modding tooling in

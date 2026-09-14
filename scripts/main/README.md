@@ -410,8 +410,8 @@ python3 tools/update_modrinth_bodies.py [project]
 `osascript` and uses `pbcopy`); `tools/update_modrinth_bodies.py` only needs
 `curl` and network access. Both require the user properties listed above,
 process projects alphabetically, and accept an optional project name to resume
-from; neither performs git operations. For a detailed description of their
-behavior, see their module docstrings.
+from; neither performs git operations. See [`tools/README.md`](tools/README.md)
+for their full usage instructions.
 
 ## Verification
 

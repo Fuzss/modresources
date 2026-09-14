@@ -26,7 +26,7 @@ name. `main.py` inserts `<scripts/main>/core` on `sys.path` before importing
 them; each `tools/*.py` script inserts `<scripts/main>/../core` before importing
 `gradle_user_properties`.
 
-`scripts/legacy/` is archival only. Do not modify, lint, or refactor anything there. In particular, never touch the bundled `.venv` under `scripts/legacy/26.2.x/` or any `__pycache__` directory. Reading legacy scripts is permitted only for the `python-documenter` subagent, which may produce a read-only `scripts/legacy/README.md` index; it must never edit legacy `.py` files.
+`scripts/legacy/` is archival only. Do not read, modify, lint, or refactor anything there. In particular, never touch the bundled `.venv` under `scripts/legacy/26.2.x/` or any `__pycache__` directory.
 
 ### Hard rules
 
