@@ -7,8 +7,9 @@ description: Use when authoring or normalizing the About and Features text for F
 
 This skill drives the text pipeline for the `pages/` subtree. It produces
 exactly two files per mod: `pages/data/<local id>/about.md` and
-`features.md`. Images, `installation.yaml`, `sections.yaml`, `credits.md`,
+`features.md`. Images, `sections`, `credits.md`,
 `configuration.md`, and anything under `commons/` are manual and out of scope.
+Installation is fully derived from `metadata.json`; there is no manual file for it.
 
 The writing standard is `pages/AGENTS.md`; read it before starting.
 `<local id>` is the mod repository name with dashes removed (`air-hop` ->

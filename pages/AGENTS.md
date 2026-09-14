@@ -14,7 +14,7 @@ The text pipeline owns exactly two files per mod:
 `<local id>` is the mod id with dashes removed (`air-hop` -> `airhop`). Everything
 else in `data/<local id>/` and `commons/` is maintained manually: images
 (`banner.png`, `logo.png`, `strip.png`, `media/`), `credits.md`, `configuration.md`,
-`installation.yaml`, `sections.yaml`, and `socials.yaml`.
+`sections`, and `socials`.
 
 This is a writing guide, not a page generator. Rendering the pages and
 publishing them are handled outside this repository.
