@@ -24,7 +24,8 @@ python3 tools/collect_page_brief.py <mod> [--branch 26.2.x] [--out <file>] [--js
   gathers `gradle.properties`, `metadata.json`, `README.md`, `CHANGELOG.md`,
   `@Config` descriptions, `lang/en_us.json`, a source inventory, the existing
   page text, and the manual-asset inventory.
-- Prints markdown to standard output unless `--out` names a file; `--json`
+- Prints markdown to standard output unless `--out` names a file (convention:
+  `pages/.authoring/<local id>/brief.md`); `--json`
   emits the raw structure instead.
 - `--mods-root` and `--pages-root` override the Gradle-derived defaults.
 - No git operations; write and network are not used.

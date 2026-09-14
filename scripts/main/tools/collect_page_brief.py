@@ -23,7 +23,8 @@ this repository's own ``pages/`` directory. The branch directory must exist.
 
 Usage:
     python3 tools/collect_page_brief.py eternal-nether
-    python3 tools/collect_page_brief.py mutant-monsters --branch 26.2.x --out brief.md
+    python3 tools/collect_page_brief.py mutant-monsters --branch 26.2.x \
+        --out pages/.authoring/mutantmonsters/brief.md
     python3 tools/collect_page_brief.py air-hop --json
 """
 
@@ -592,7 +593,9 @@ def main():
     output = json.dumps(brief, indent=2, ensure_ascii=False) if args.json else render_markdown(brief)
 
     if args.out:
-        Path(args.out).expanduser().write_text(output, encoding="utf-8")
+        out_path = Path(args.out).expanduser()
+        out_path.parent.mkdir(parents=True, exist_ok=True)
+        out_path.write_text(output, encoding="utf-8")
     else:
         print(output)
 

@@ -71,23 +71,43 @@ publishing them are handled outside this repository.
 
 ## Grounding
 
-Only state facts that can be derived from the mod repository. Acceptable
+State only facts that can be derived from the mod repository, from the
+curator's explicit direction, or from vanilla context cited below. Acceptable
 sources: `gradle.properties`, `metadata.json`, `README.md`, `CHANGELOG.md`,
-`@Config(description = ...)` strings, language files, and the source tree.
+`@Config(description = ...)` strings, language files, the source tree, the
+curator's review steer, and `minecraft.wiki` for vanilla behavior and
+Java-vs-Bedrock comparisons only (including the framing of such a comparison).
 
 - Do not invent features, numbers, or names.
 - Do not claim compatibility, performance, or behavior that the repository does
   not support.
+- Record the exact wiki URL plus the quoted snippet in the guidance whenever a
+  comparison relies on it.
 - If a fact is uncertain, leave it out and record it in the review notes.
+
+## Continuity
+
+Existing page text is a first-class input. Inventory every claim in the current
+`about.md` and `features.md`: keep, repair, or drop each one, and record the
+decision in the guidance. Never silently drop a lead claim (the About opening,
+the first Features bullet); every drop needs a justification.
 
 ## Pipeline
 
-Text is produced by a deterministic collector plus two subagents:
+Text is produced by a deterministic collector plus two subagents, with the user
+as the review stopgate:
 
-- `scripts/main/tools/collect_page_brief.py` builds a normalized authoring brief.
-- `.opencode/agent/page-author.md` writes `about.md` and `features.md`.
-- `.opencode/agent/page-style-auditor.md` checks finished text against this file.
-- `.opencode/skill/mod-page-authoring/SKILL.md` describes the end-to-end workflow.
+1. `scripts/main/tools/collect_page_brief.py` builds a normalized brief at
+   `pages/.authoring/<local id>/brief.md`.
+2. `pages/.opencode/agent/page-author.md` drafts `about.md` and `features.md`
+   under `pages/.authoring/<local id>/` only. It never writes `pages/data/`.
+3. The user reviews the drafts and requests changes; the author revises them.
+4. `pages/.opencode/agent/page-style-auditor.md` checks the drafts against this
+   file. Only `PASS` drafts are promoted.
+5. On explicit approval, the drafts are copied verbatim to
+   `pages/data/<local id>/`.
+6. `pages/.opencode/skill/mod-page-authoring/SKILL.md` describes the end-to-end
+   workflow.
 
-Briefs and guidance are staged under `pages/.authoring/` and never written into
-`pages/data/`.
+Briefs, drafts, and guidance are staged under `pages/.authoring/` (ignored) and
+never written into `pages/data/` except by verbatim promotion.
