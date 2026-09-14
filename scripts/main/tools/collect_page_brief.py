@@ -277,8 +277,8 @@ def collect_manual_assets(data_dir):
     """
     results = []
 
-    for name in ("banner.png", "logo.png", "strip.png", "installation.yaml", "sections.yaml",
-                 "configuration.md", "credits.md", "socials.yaml"):
+    for name in ("banner.png", "logo.png", "strip.png", "sections",
+                 "configuration.md", "credits.md", "socials"):
         path = data_dir / name
         results.append((name, "present" if path.is_file() else "missing"))
 

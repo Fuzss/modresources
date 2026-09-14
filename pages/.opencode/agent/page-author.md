@@ -42,8 +42,9 @@ separate, explicit step owned by the orchestrator.
 ## Hard rules
 
 - Never touch images (`banner.png`, `logo.png`, `strip.png`, `media/`),
-  `installation.yaml`, `sections.yaml`, `credits.md`, `configuration.md`,
-  `socials.yaml`, or anything under `commons/`. Those are manual.
+  `sections`, `credits.md`, `configuration.md`,
+  `socials`, or anything under `commons/`. Those are manual. Installation has
+  no manual file; it is derived from `metadata.json`.
 - Never touch `pages/data/` at all, not even to read-and-rewrite. Drafts live
   under `pages/.authoring/<mod>/` only.
 - Never invent features, numbers, names, or compatibility. Mod behavior comes
