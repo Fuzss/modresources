@@ -35,7 +35,7 @@ from git_ops import git_push_all
 
 # Upgrade targets that only need the generic workspace refresh and have no
 # version-specific migration steps of their own.
-GENERIC_UPGRADES = {"26.2.x"}
+GENERIC_UPGRADES = {"26.2.x", "26.3.x"}
 
 
 def run_26_1_upgrade(mod_id, project_path):

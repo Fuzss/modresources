@@ -23,7 +23,7 @@ reference for the tooling.
 
   ```sh
   cd scripts/main
-  ./main.py --minecraft 26.2.x --name example-mod
+  ./main.py --minecraft 26.3.x --name example-mod
   ```
 
   `--help` works from any directory because argparse exits before any relative
@@ -114,17 +114,17 @@ Derived from `./main.py --help`. Unless noted, a flag's config key in a
 | `-h`, `--help` | | | Show help and exit. |
 | `--bare` | | off | Skip any Gradle setup. Also suppresses the `git pull` performed in step 4 and all `./gradlew` invocations. |
 | `--branch` | `BRANCH_NAME SUPPORT_STATUS` | `[]` | Update branch status in `versions.json`; repeatable. Format: `--branch <branch_name> <support_status>`. Statuses: `primary`, `maintained`, `fixes`, `archived` (an unknown status warns; an empty status removes the branch). |
-| `--catalog` | `VERSION_CATALOG` | none | Version-based catalog. Example: `--catalog 26.2-SNAPSHOT`. Writes `project.libs` (legacy `dependenciesVersionCatalog`). |
+| `--catalog` | `VERSION_CATALOG` | none | Version-based catalog. Example: `--catalog 26.3-SNAPSHOT`. Writes `project.libs` (legacy `dependenciesVersionCatalog`). |
 | `--changelog` | `SECTION_NAME TEXT` | none | Add a changelog line; repeatable. Format: `--changelog <section_name> <text>`. Sections: `added`, `changed`, `deprecated`, `removed`, `fixed`, `security`. Requires `--version`. |
 | `--commit` | | off | Commit to GitHub. Requires `--version`; not skipped by `--bare`. |
 | `--config` | `CONFIG_NAME` | none | Args as JSON config file. Example: `--config upgrade-upload`. Loads `config/<--minecraft>/<name>.json`. |
 | `--data` | | off | Generate data (`neoforge-data`; legacy `neoForgeData`). Skipped by `--bare`. |
-| `--gradle` | `GRADLE_VERSION` | none | Gradle wrapper version. Example: `--gradle 9.6.0`. Rewrites `distributionUrl` and, unless `--bare`, runs `./gradlew wrapper --gradle-version <version>`. |
+| `--gradle` | `GRADLE_VERSION` | none | Gradle wrapper version. Example: `--gradle 9.7.1`. Rewrites `distributionUrl` and, unless `--bare`, runs `./gradlew wrapper --gradle-version <version>`. |
 | `--id` | `MOD_ID` | derived | Mod id. Example: `--id examplemod`. Defaults to `--name` with hyphens removed. |
 | `--init` | `[SOURCE_BRANCH]` | none | Setup git repository and version branch, with optional argument. Example: `--init [26.2.x]`. Without a value, clones only the `--minecraft` branch. With a source branch (and `--version`), clones the versions listed in `versions.json` and then creates `<--minecraft>` from that source branch; a source branch without `--version` is an error. |
 | `--launch` | `[MOD_LOADER [DISTRIBUTION ...]]` | `[]` | Launch the game; repeatable. Format: `--launch <mod_loader> <distribution>`. Loaders: `fabric`, `neoforge`. Distributions: `client`, `server`. Omit both to auto-detect client (Fabric first, then NeoForge); give only a loader to default to `client`. |
 | `--legacy` | `[SCOPE]` | none | Use legacy Gradle property and task names. Scopes: `properties`, `tasks`. Without a value, both scopes apply. |
-| `--minecraft` | `MINECRAFT_VERSION` | **required** | Minecraft name. Example: `--minecraft 26.2.x`. |
+| `--minecraft` | `MINECRAFT_VERSION` | **required** | Minecraft name. Example: `--minecraft 26.3.x`. |
 | `--name` | `REPOSITORY_NAME` | **required** | Repository name. Example: `--name example-mod`. |
 | `--notify` | | off | Notify via Discord webhook (`all-discord`; legacy `notifyDiscord`). Requires `--version`; skipped by `--bare`. |
 | `--open` | `[ENVIRONMENT ...]` | none | Open in Finder, or Idea. Format: `--open <environment>`. Environments: `finder`, `idea`. Without a value, defaults to `finder`. Resolved after any `--init` work and before every other step; it skips the git pull and exits with code 0. |
@@ -135,7 +135,7 @@ Derived from `./main.py --help`. Unless noted, a flag's config key in a
 | `--spotless` | `TASK_NAME` | none | Run spotless upgrade tasks for a specific game update. Example: `--spotless tinytakeover`. Mapped names: `tinytakeover`, `mountsofmayhem`, `thecopperage`; other values run only `all-java-apply`. Skipped by `--bare`. |
 | `--upgrade` | `[PATCHES_NAME]` | none | Run workspace upgrade, potentially for a specific version, with optional argument. Targets: `26.1.x`, `1.21.11`, `1.21.1`, and the generic `26.2.x`; unknown targets error. Without a value, only the generic refresh runs. Requires clean worktrees. |
 | `--upload` | `[MOD_LOADER [WEBSITE ...]]` | none | Upload to CurseForge, Modrinth, or GitHub. Format: `--upload <mod_loader> <website>`. Loaders: `fabric`, `neoforge`. Sites: `curseforge`, `modrinth`, `github`. Without values, upload everywhere; a single loader or site fills the other slot. Requires `--version`; skipped by `--bare`. |
-| `--version` | `PROJECT_VERSION` | none | Mod version. Example: `--version 26.2.0`. Also accepts `latest`, `patch`, `minor`, `major`; the bump keywords are resolved against `mod.version` (legacy `modVersion`). |
+| `--version` | `PROJECT_VERSION` | none | Mod version. Example: `--version 26.3.0`. Also accepts `latest`, `patch`, `minor`, `major`; the bump keywords are resolved against `mod.version` (legacy `modVersion`). |
 
 Notes:
 
@@ -168,7 +168,7 @@ Unknown keys are rejected with `Unknown config key: <key>`.
 
 ### Bundled examples
 
-All bundled files use the same shape. `config/26.2.x/update.json` is the
+All bundled files use the same shape. `config/26.3.x/update.json` is the
 smallest:
 
 ```json
@@ -188,12 +188,15 @@ launch, and an upload to every site.
 | `config/1.21.1/update.json` | `data`, `commit`, `launch`, `upload` |
 | `config/26.1.x/update.json` | `data`, `commit`, `launch`, `upload` |
 | `config/26.2.x/update.json` | `data`, `commit`, `launch`, `upload` |
+| `config/26.3.x/update.json` | `data`, `commit`, `launch`, `upload` |
 | `config/1.21.1/downgrade.json` | `version`, `init`, `catalog`, `plugins`, `changelog`, `branch`, `gradle`, `upgrade`, `spotless`, `commit`, `data`, `launch`, `upload` |
 | `config/26.1.x/upgrade.json` | `version`, `init`, `catalog`, `plugins`, `changelog`, `branch`, `gradle`, `upgrade`, `spotless`, `commit`, `data`, `launch`, `upload` |
 | `config/26.2.x/upgrade.json` | `version`, `init`, `catalog`, `plugins`, `changelog`, `branch`, `gradle`, `upgrade`, `commit`, `data`, `launch`, `upload` |
+| `config/26.3.x/upgrade.json` | `version`, `init`, `catalog`, `plugins`, `changelog`, `branch`, `gradle`, `upgrade`, `commit`, `data`, `launch`, `upload` |
 
-The port configs (`config/26.1.x/upgrade.json`, `config/26.2.x/upgrade.json`,
-and `config/1.21.1/downgrade.json`) cover a full version port: they set the
+The port configs (`config/26.3.x/upgrade.json`, `config/26.2.x/upgrade.json`,
+`config/26.1.x/upgrade.json`, and `config/1.21.1/downgrade.json`) cover a full
+version port: they set the
 target `version`, the source `init` branch, the `catalog` and `plugins`
 versions, the changelog entry, the `branch` status updates, the Gradle wrapper
 version, and the `upgrade` target. `config/1.21.1/downgrade.json` additionally
@@ -271,9 +274,9 @@ branches to a support status:
 ```json
 {
   "branches": {
-    "26.2.x": "primary",
-    "26.1.x": "maintained",
-    "1.20.1": "fixes"
+    "26.3.x": "primary",
+    "26.2.x": "maintained",
+    "1.21.1": "fixes"
   }
 }
 ```
@@ -288,23 +291,23 @@ All examples run from `scripts/main/`. Replace the names with your projects.
 
 ### Port / upgrade a project to a new version
 
-A full port is driven by a bundled `upgrade` config. For `26.2.x` it sets the
+A full port is driven by a bundled `upgrade` config. For `26.3.x` it sets the
 version, source branch, catalog, plugins, changelog, branch statuses, Gradle
 wrapper, and upgrade target:
 
 ```sh
-./main.py --minecraft 26.2.x --config upgrade --name example-mod
+./main.py --minecraft 26.3.x --config upgrade --name example-mod
 ```
 
 To do the same explicitly (config contents inlined):
 
 ```sh
-./main.py --minecraft 26.2.x --name example-mod \
-  --version 26.2.0 --init 26.1.x --upgrade 26.2.x \
-  --catalog 26.2-SNAPSHOT --plugins 1.1-SNAPSHOT \
-  --changelog changed "Update to Minecraft 26.2.x" \
-  --branch 26.2.x primary --branch 26.1.x maintained \
-  --gradle 9.6.1 --data --launch --commit --upload
+./main.py --minecraft 26.3.x \
+  --version 26.3.0 --init 26.2.x --upgrade 26.3.x \
+  --catalog 26.3-SNAPSHOT --plugins 1.1-SNAPSHOT \
+  --changelog changed "Update to Minecraft 26.3.x" \
+  --branch 26.3.x primary --branch 26.2.x archived \
+  --gradle 9.7.1 --data --launch --commit --upload --name example-mod
 ```
 
 For an existing checkout that only needs the generic refresh without creating a
@@ -316,16 +319,17 @@ Add a changelog entry, bump the version, generate data, launch (smoke test),
 commit, and upload:
 
 ```sh
-./main.py --minecraft 26.2.x --name example-mod \
+./main.py --minecraft 26.3.x \
   --version patch --changelog fixed "Fix broken special item models" \
-  --data --launch --commit --upload
+  --data --launch --commit --upload --name example-mod
 ```
 
 Or reuse the update config and pass only the parts that vary:
 
 ```sh
-./main.py --minecraft 26.2.x --config update --name example-mod \
-  --version patch --changelog changed "Improve leaf particle tint"
+./main.py --minecraft 26.3.x --config update \
+  --version patch --changelog changed "Improve leaf particle tint" \
+  --name example-mod
 ```
 
 `--commit --upload` without `--changelog` is valid when the changelog entry
@@ -335,8 +339,8 @@ missing-version error.
 ### Publish to Maven
 
 ```sh
-./main.py --minecraft 26.2.x --name example-mod \
-  --version 26.2.0 --commit --data --publish
+./main.py --minecraft 26.3.x \
+  --version 26.3.0 --commit --data --publish --name example-mod
 ```
 
 `--publish` runs `all-publish` (legacy `allPublish`) and, like the other
@@ -344,22 +348,38 @@ release steps, requires `--version`.
 
 ### Upload only
 
-Upload one loader to one site, or one loader to every site:
+Upload one loader to one site:
 
 ```sh
-./main.py --minecraft 26.2.x --name example-mod --version 26.2.1 --upload fabric curseforge
-./main.py --minecraft 26.2.x --name example-mod --version 26.2.1 --upload neoforge
-./main.py --minecraft 26.2.x --name example-mod --version 26.2.1 --upload
+./main.py --minecraft 26.3.x --version 26.3.1 --upload fabric curseforge --name example-mod
 ```
 
-The last form uploads every loader to every site. Add `--notify` to announce
-afterwards.
+Upload one loader to every site:
+
+```sh
+./main.py --minecraft 26.3.x --version 26.3.1 --upload neoforge --name example-mod
+```
+
+Upload every loader to every site:
+
+```sh
+./main.py --minecraft 26.3.x --version 26.3.1 --upload --name example-mod
+```
+
+Add `--notify` to announce afterwards.
 
 ### Open a project in an editor
 
+Open in IntelliJ:
+
 ```sh
-./main.py --minecraft 26.1.x --name example-mod --open idea
-./main.py --minecraft 26.2.x --name example-mod --open          # Finder
+./main.py --minecraft 26.3.x --open idea --name example-mod
+```
+
+Open in Finder (the default):
+
+```sh
+./main.py --minecraft 26.3.x --open --name example-mod
 ```
 
 `--open` skips the git pull, launches the environment, and exits with code 0.
@@ -367,10 +387,10 @@ afterwards.
 ### Set a bundled library version
 
 ```sh
-./main.py --minecraft 26.2.x --name example-mod \
-  --properties project.libs.versions.iteminteractions 26.2.2 \
+./main.py --minecraft 26.3.x \
+  --properties project.libs.versions.iteminteractions 26.3.0 \
   --version patch --changelog changed "Bump bundled Item Interactions library" \
-  --commit --upload
+  --commit --upload --name example-mod
 ```
 
 ### Legacy branches
@@ -378,8 +398,8 @@ afterwards.
 On older branches, select the legacy property and task names:
 
 ```sh
-./main.py --minecraft 1.20.4 --name example-mod \
-  --version latest --data --upload --legacy
+./main.py --minecraft 1.21.1 \
+  --version latest --data --upload --legacy --name example-mod
 ```
 
 Use `--legacy properties` or `--legacy tasks` for only one scope.
@@ -387,7 +407,7 @@ Use `--legacy properties` or `--legacy tasks` for only one scope.
 ### Refresh an existing checkout
 
 ```sh
-./main.py --minecraft 26.2.x --name example-mod
+./main.py --minecraft 26.3.x --name example-mod
 ```
 
 This resolves and prints the arguments as JSON, pulls the repositories, updates
@@ -403,7 +423,7 @@ by `main.py`:
 python3 core/clone_versions.py <repo-name>
 python3 core/migrate_mixins.py <mixins.json> <build.gradle>
 python3 core/migrate_mod_properties.py <input> <output> <plugins_version>
-python3 tools/collect_page_brief.py <mod> [--branch 26.2.x]
+python3 tools/collect_page_brief.py <mod> [--branch 26.3.x]
 python3 tools/update_curseforge_bodies.py [project]
 python3 tools/update_modrinth_bodies.py [project]
 ```
