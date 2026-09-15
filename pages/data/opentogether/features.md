@@ -4,6 +4,6 @@
 * ⚡ **Redstone Support:** When installed server-side, supported blocks can open together through vanilla-style interactions, including redstone.
 * 🌐 **Flexible Installation:** Works on client, server, or both, with server installation providing the most complete multiplayer experience.
 * 👤 **Client-Only Multiplayer Use:** Can still help on servers without the mod installed by opening nearby matching blocks.
-* 🛠️ **Configurable Behaviour:** Enable or disable grouped opening for each supported block type and adjust behaviour to suit your preferences.
+* 🛠️ **Configurable Behavior:** Enable or disable grouped opening for each supported block type and adjust behavior to suit your preferences.
 * 🏷️ **Modded Block Support:** Compatible modded doors, trapdoors, and fence gates can be included through block tags.
 * ⌨️ **Quick Toggle:** Includes an optional keybind to temporarily enable or disable grouped opening.

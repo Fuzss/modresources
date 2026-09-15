@@ -1,9 +1,9 @@
-- 🔨 **Persistent Anvils:** Items remain inside the anvil after closing the interface instead of popping back into your inventory.
-- 👀 **Visible Contents:** Items placed in an anvil are rendered directly on the block in the world.
-- 📉 **Reduced Prior Work Penalties:** Repairing and renaming no longer suffer from rapidly escalating prior work costs.
-- ✨ **More Affordable Enchanting:** Enchanted book application costs are reduced and expensive operations are far less restrictive.
-- 🏷️ **Free Renaming:** Renaming items can be performed without spending experience levels.
-- 🎨 **Formatting Support:** Item names support formatting codes for custom colors and text styles.
-- 🛠️ **Repair Damaged Anvils:** Use iron blocks to restore anvils and extend their lifespan.
-- 💪 **More Durable Anvils:** Anvils are less likely to become damaged or break during use.
-- ⚙️ **Highly Configurable:** Fine tune repair costs, prior work penalties, durability, and many other mechanics.
+* 🔨 **Persistent Anvils:** Items remain inside the anvil after closing the interface instead of popping back into your inventory.
+* 👀 **Visible Contents:** Items placed in an anvil are rendered directly on the block in the world.
+* 📉 **Reduced Prior Work Penalties:** Repairing and renaming no longer suffer from rapidly escalating prior work costs.
+* ✨ **More Affordable Enchanting:** Enchanted book application costs are reduced and expensive operations are far less restrictive.
+* 🏷️ **Free Renaming:** Renaming items can be performed without spending experience levels.
+* 🎨 **Formatting Support:** Item names support formatting codes for custom colors and text styles.
+* 🛠️ **Repair Damaged Anvils:** Use iron blocks to restore anvils and extend their lifespan.
+* 💪 **More Durable Anvils:** Anvils are less likely to become damaged or break during use.
+* ⚙️ **Highly Configurable:** Fine tune repair costs, prior work penalties, durability, and many other mechanics.
