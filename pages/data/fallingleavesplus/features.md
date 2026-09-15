@@ -5,5 +5,5 @@
 * 🌧️ **Weather-Reactive Effects:** Rain and thunderstorms can increase particle activity and wind strength for livelier storms.
 * 💨 **Custom Wind and Motion:** Leaves can swirl, drift away, fall at different speeds, and respond to configurable wind direction.
 * 🧱 **Natural Collisions:** Particles can collide with visual block shapes, helping leaves settle more believably on detailed blocks.
-* ⚙️ **Flexible Customisation:** Adjust particle density, size, lifetime, wind, gravity, collisions, affected blocks, and more.
+* ⚙️ **Flexible Customization:** Adjust particle density, size, lifetime, wind, gravity, collisions, affected blocks, and more.
 * 📦 **Resource Pack Driven:** Particle textures and behavior can additionally be customized through resource packs.
