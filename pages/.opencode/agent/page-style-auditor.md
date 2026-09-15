@@ -23,12 +23,20 @@ Read both files and the standard before judging.
 
 About:
 
-- 1 to 3 paragraphs, scaled to the mod; no padding.
-- Mod name bold exactly once, at the start of the first paragraph.
+- Usually 3 short paragraphs (~90 to 110 words total), scaled down for small
+  mods. FAIL only when clearly bloated or padded (over roughly 140 words, or a
+  paragraph that is an interaction or settings list).
+- Mod name bold exactly once, in the first paragraph; an opening hook sentence
+  may precede it.
 - "the mod" / "this mod" for later references.
 - Every emoji anchored to the feature or benefit it marks in the same sentence
-  (named capabilities, not generic sentences or closers); never paragraph-initial.
-- Purpose and value, not a prose copy of the feature list.
+  (named capabilities, not generic sentences or closers); sentence-trailing
+  emojis after the terminal punctuation, never before it; never
+  paragraph-initial. Mid-sentence emojis before commas or colons are fine.
+- Purpose and value, not a prose copy of the feature list: names capabilities
+  rather than walking through mechanics, and concept-level overlap with
+  Features is fine.
+- Configuration may appear as a capability or payoff, not as a settings list.
 - No ungrounded claims.
 
 Features:
