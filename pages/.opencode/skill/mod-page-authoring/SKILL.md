@@ -36,11 +36,14 @@ The writing standard is `pages/AGENTS.md`; read it before starting.
    writes **drafts only**: `pages/.authoring/<mod>/about.md` and
    `features.md`, plus the working notes at
    `pages/.authoring/<mod>/guidance.md`. It never touches `pages/data/`.
-4. Present the drafts for review. The user is the stopgate: apply their edits
-   to the drafts, re-running `page-author` or editing directly as instructed.
-5. Dispatch the `page-style-auditor` subagent with the draft paths. If it
-   reports `FAIL`, fix the drafts and re-run the auditor. Any edit after a
-   `PASS` requires a fresh audit.
+4. Relay the author's full report to the user inline — open questions first,
+   then the draft About and Features in fenced markdown blocks, then the
+   guidance. Do not just point at file paths. The user is the stopgate: on
+   their feedback, resume the same `page-author` session with that feedback and
+   relay the revision diff it returns.
+5. Dispatch the `page-style-auditor` subagent with the draft paths and relay
+   its verdict and violations inline. If it reports `FAIL`, fix the drafts and
+   re-run the auditor. Any edit after a `PASS` requires a fresh audit.
 6. Promote only on explicit user approval ("go ahead", "promote"). Copy the
    passed drafts byte-for-byte to `pages/data/<local id>/`, with no rewording
    and no reformatting:
@@ -48,23 +51,24 @@ The writing standard is `pages/AGENTS.md`; read it before starting.
      deleting; default to leaving `pages/data/` untouched and recording it.
    - verify the copies are identical (or carry only the approved omission),
      then re-run the auditor on the `pages/data/` files as a final gate.
-7. Report: files promoted, feature count, draft and guidance paths, audit
-   verdicts, wiki citations used, curator-kept claims, and any review notes.
-   Suggest a commit message naming the mod, feature count, wiki URLs, and kept
-   claims, but never commit unless explicitly asked.
+7. Report inline: files promoted, feature count, audit verdicts, wiki citations
+   used, curator-kept claims, and any review notes. Suggest a commit message
+   naming the mod, feature count, wiki URLs, and kept claims, but never commit
+   unless explicitly asked.
 
 ## Batch (only when explicitly requested)
 
 Normalization across many mods is a separate, deliberate pass:
 
 1. Read the mod ids from `pages/input`, one per line, ignoring blanks and `#`.
-2. Process them in small batches (about ten mods). For each batch, run steps 1-4
+2. Process them in small batches (about ten mods). For each batch, run steps 1-3
    above, one mod at a time, using a fresh `page-author` invocation per mod so
    context stays small. Drafts accumulate under `pages/.authoring/<mod>/`;
    review happens per mod or per batch as the user prefers.
-3. Promote each mod only on explicit approval, following step 6.
-4. Collect the guidance reports and summarize what manual assets are missing
-   across the batch before reporting back.
+3. After a batch, report a compact table: mod, feature count, whether Features
+   were omitted, missing manual assets, and open questions. Do not paste every
+   mod's drafts; expand a single mod's full report only when the user asks.
+4. Promote each mod only on explicit approval, following step 6.
 
 Do not start a batch unless the user explicitly asks for it.
 

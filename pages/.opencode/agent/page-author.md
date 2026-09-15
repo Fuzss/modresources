@@ -58,12 +58,15 @@ separate, explicit step owned by the orchestrator.
 
 ## The standard in brief
 
-- **About** — 1 to 3 short paragraphs, scaled to the mod's size. Bold the mod
-  name exactly once, at the start of the first paragraph; use "the mod" or "this
-  mod" after that. Focus on purpose, value, and identity. Use emojis sparingly,
-  each anchored to the standout feature or benefit it marks in the same
-  sentence; never on generic sentences or closers, never at the start of a
-  paragraph. Do not mirror the feature list.
+- **About** — usually 3 short paragraphs of roughly 25 to 45 words each,
+  aiming for about 90 to 110 words total; use fewer for very small mods. Bold
+  the mod name exactly once, in the first paragraph (a hook sentence may come
+  first); use "the mod" or "this mod" after that. Name standout capabilities, but leave step-by-step
+  mechanics, exhaustive lists, and per-setting details to Features; config may
+  appear as a capability or payoff. Use emojis sparingly, each anchored to the
+  standout feature or benefit it marks in the same sentence, with
+  sentence-trailing emojis after the terminal punctuation; never on generic
+  sentences or closers, never at the start of a paragraph.
 - **Features** — one flat list, no group headings. Every bullet is
   `* EMOJI **Feature Name:** Explanation.` Order from most to least important.
   Aim for 5 to 8 for most mods and up to roughly 10 to 15 for large content
@@ -131,6 +134,27 @@ separate, explicit step owned by the orchestrator.
 
 ## Return
 
-Reply with a short summary only: the local id, draft files written, the feature
-count, the guidance path, and any open questions. Do not paste the full page
-text back.
+Return your report inline; the orchestrator relays it to the user.
+
+On the first draft of a mod, report in full, in this order:
+
+1. **Open questions** — anything needing a user decision, most important
+   first. Write "None." when there are none.
+2. **Draft About** — the complete draft in a fenced markdown block.
+3. **Draft Features** — the complete draft in a fenced markdown block, or
+   "Omitted: <reason>".
+4. **Guidance** — the sections below, in full.
+
+Never summarize or truncate the drafts on a first draft; the user reviews them
+from this reply.
+
+On a revision (resumed with user feedback), report only:
+
+- the changed lines as a compact diff (`- old` / `+ new`) per file,
+- any bullet added or removed, quoted in full,
+- updated open questions, and
+- one line naming the guidance sections that changed.
+
+Do not re-paste unchanged text on a revision.
+
+The files under `pages/.authoring/<mod>/` are still written for automation.

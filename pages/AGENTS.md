@@ -28,25 +28,37 @@ publishing them are handled outside this repository.
 - Use American English (`color`, `customize`, `armor`).
 - Prefer plain sentences over formatting. Only use `**bold**`, `code`, and links
   where they carry meaning.
-- Never repeat information between the About and Features sections.
+- About and Features may cover the same topics at different resolution: About
+  frames them in prose, Features lists the specifics. Do not restate a Features
+  bullet in the same words.
 
 ## About
 
-- Usually 2 to 3 short paragraphs. Scale down to a single paragraph for small
-  utility mods and up to 3 for large content mods. Never pad.
-- Write the mod name in **bold exactly once**, at the start of the first
-  paragraph. Refer to it as "the mod" or "this mod" afterwards.
+- Usually 3 short paragraphs of roughly 25 to 45 words each (2 to 3 sentences),
+  aiming for about 90 to 110 words total. Use fewer for very small mods; never
+  pad. A paragraph may cover more than one related idea.
+- Three shapes that read well across existing pages: what it is -> how it plays
+  -> the payoff; what it is -> concrete examples and variety -> how far it
+  extends; what it is -> how it lifts the vanilla experience -> the feel and
+  polish it adds.
+- Write the mod name in **bold exactly once**, in the first paragraph. An
+  opening hook sentence may come before it; refer to it as "the mod" or "this
+  mod" afterwards.
 - Focus on purpose, value, and identity: what the mod adds and why a player
   would want it.
-- Mention only the standout features. Do not turn About into prose that mirrors
-  the Features list.
+- Name standout capabilities, but leave step-by-step mechanics, exhaustive
+  lists (interactions, items, settings), and per-setting details to Features.
+  Do not turn About into a prose version of the Features list.
+- Configuration and compatibility may appear as a capability or as part of the
+  payoff; keep the individual settings in Features.
 - Use emojis sparingly to emphasize standout features or benefits in or at the
   end of a sentence — for example "millions of colors 🎨" or "perform
   significantly better 🚀". Each emoji must be anchored to the feature or
   benefit it marks in the same sentence; tagging named capabilities ("Dye
-  frames in millions of colors 🎨") is the intended use. Never scatter emojis
-  over generic sentences or closers, and never place an emoji at the start of
-  a paragraph.
+  frames in millions of colors 🎨") is the intended use. A sentence-trailing
+  emoji goes after the terminal punctuation ("...active players. 🐄", not
+  "...active players 🐄."). Never scatter emojis over generic sentences or
+  closers, and never place an emoji at the start of a paragraph.
 - Avoid implementation details unless they are the selling point (for example a
   performance improvement).
 
