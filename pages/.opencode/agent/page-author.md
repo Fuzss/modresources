@@ -83,6 +83,7 @@ separate, explicit step owned by the orchestrator.
   lowercase common nouns following the Minecraft Wiki ("an eye of ender", "a
   mutant zombie", "the hulk hammer"); capitalize only proper nouns (the Nether,
   the End, the Overworld, Java Edition, Bedrock Edition) and the mod's own name.
+  Keep letters, acronyms, and numerals as written ("chemical X", "TNT", "16K").
 - Light enthusiasm is welcome; marketing fluff is not.
 
 ## Workflow

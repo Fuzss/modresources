@@ -67,7 +67,8 @@ Language:
   names, following the Minecraft Wiki ("an eye of ender", "a mutant zombie",
   "the hulk hammer"). FAIL a capitalized common noun in a sentence unless it is a
   proper noun (the Nether, the End, the Overworld, Java Edition, Bedrock
-  Edition) or starts the sentence.
+  Edition), starts the sentence, or is a letter, acronym, or numeral kept as
+  written ("chemical X", "TNT", "16K").
 - No marketing fluff, exaggerated claims, or invented facts.
 
 ## Output

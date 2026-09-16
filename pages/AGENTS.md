@@ -30,7 +30,8 @@ publishing them are handled outside this repository.
   running text, following the Minecraft Wiki (write "an eye of ender", "a mutant
   zombie", "the hulk hammer", not "Eye of Ender", "Mutant Zombie", "Hulk
   Hammer"). Capitalize only proper nouns such as the Nether, the End, the
-  Overworld, Java Edition, Bedrock Edition, and the mod's own name.
+  Overworld, Java Edition, Bedrock Edition, and the mod's own name. Keep letters,
+  acronyms, and numerals as written: "chemical X", "TNT", "16K".
 - Prefer plain sentences over formatting. Only use `**bold**`, `code`, and links
   where they carry meaning.
 - About and Features may cover the same topics at different resolution: About
