@@ -46,9 +46,9 @@ publishing them are handled outside this repository.
   mod" afterwards.
 - Focus on purpose, value, and identity: what the mod adds and why a player
   would want it.
-- Name standout capabilities, but leave step-by-step mechanics, exhaustive
-  lists (interactions, items, settings), and per-setting details to Features.
-  Do not turn About into a prose version of the Features list.
+- Name standout capabilities. Leave step-by-step mechanics, exhaustive lists
+  (interactions, items, settings), and per-setting details out of About;
+  Features states each capability concisely rather than walking through it.
 - Configuration and compatibility may appear as a capability or as part of the
   payoff; keep the individual settings in Features.
 - Use emojis sparingly to emphasize standout features or benefits in or at the
@@ -74,8 +74,14 @@ publishing them are handled outside this repository.
   * 🚀 **Feature Name:** Explanation.
   ```
 
-- Aim for 5 to 8 meaningful features for most mods, and up to roughly 10 to 15
-  for large content mods. These are guidance, not limits: a list is done when
+- Keep each bullet to one capability in one or two short sentences, roughly 10
+  to 20 words; existing pages average about 15. If a bullet covers several
+  distinct capabilities, split it into separate bullets; if it is one capability
+  padded with mechanics, trim it. A bullet that enumerates examples of a single
+  capability may run a little longer.
+- Aim for 5 to 8 meaningful features for most mods, and up to roughly 20 for
+  large content mods; splitting multi-capability bullets is the normal way to
+  reach a higher count. These are guidance, not limits: a list is done when
   every major player-facing selling point is covered and nothing padding
   remains. Prefer the strongest features over completeness.
 - Order features from most important to least important.

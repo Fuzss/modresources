@@ -45,9 +45,14 @@ Features:
 - Exactly one flat list; no bold group headings, no nested lists.
 - Every bullet matches `* EMOJI **Feature Name:** Explanation.` and ends with a
   period.
-- Roughly 5 to 8 bullets for most mods, up to roughly 10 to 15 for large
-  content mods; ordered most to least important. FAIL only clearly outside
-  these bands (fewer than 5, more than 15); borderline counts pass.
+- Roughly 5 to 8 bullets for most mods, up to roughly 20 for large content
+  mods; ordered most to least important. FAIL only clearly outside these bands
+  (fewer than 5, more than 25); borderline counts pass.
+- Each bullet covers one capability. FAIL a bullet that bundles several distinct
+  capabilities that could stand alone.
+- Bullets stay concise: roughly 10 to 20 words, one or two short sentences.
+  FAIL only clearly long bullets (over roughly 25 words), and exempt bullets
+  that enumerate examples of a single capability.
 - No recipes, loader support, implementation details, or per-setting config
   lists.
 - No feature duplicated between the two files.

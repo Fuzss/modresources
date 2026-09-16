@@ -61,19 +61,22 @@ separate, explicit step owned by the orchestrator.
 - **About** — usually 3 short paragraphs of roughly 25 to 45 words each,
   aiming for about 90 to 110 words total; use fewer for very small mods. Bold
   the mod name exactly once, in the first paragraph (a hook sentence may come
-  first); use "the mod" or "this mod" after that. Name standout capabilities, but leave step-by-step
-  mechanics, exhaustive lists, and per-setting details to Features; config may
-  appear as a capability or payoff. Use emojis sparingly, each anchored to the
+  first); use "the mod" or "this mod" after that. Name standout capabilities;
+  leave step-by-step mechanics, exhaustive lists, and per-setting details out of
+  the page. Config may appear as a capability or payoff. Use emojis sparingly,
+  each anchored to the
   standout feature or benefit it marks in the same sentence, with
   sentence-trailing emojis after the terminal punctuation; never on generic
   sentences or closers, never at the start of a paragraph.
 - **Features** — one flat list, no group headings. Every bullet is
   `* EMOJI **Feature Name:** Explanation.` Order from most to least important.
-  Aim for 5 to 8 for most mods and up to roughly 10 to 15 for large content
-  mods; a list is done when every major selling point is covered and nothing
-  padding remains. Omit the list when it would only restate the About.
-  Exclude recipes, loader support, implementation details, and per-setting
-  config lists.
+  One capability per bullet, roughly 10 to 20 words; split a bullet that bundles
+  several distinct capabilities and trim one that pads a single capability with
+  mechanics. Enumerated examples of one capability may run longer. Aim for 5 to
+  8 for most mods and up to roughly 20 for large content mods; a list is done
+  when every major selling point is covered and nothing padding remains. Omit
+  the list when it would only restate the About. Exclude recipes, loader
+  support, implementation details, and per-setting config lists.
 - Light enthusiasm is welcome; marketing fluff is not.
 
 ## Workflow
@@ -91,10 +94,11 @@ separate, explicit step owned by the orchestrator.
    vanilla behavior or Java-vs-Bedrock comparisons, and quote exactly.
 5. Draft `about.md`.
 6. Draft `features.md`, or decide to omit it.
-7. Self-check: one bold name, emoji rules, flat bullets, count within 5 to 8
-   (up to roughly 10 to 15 for large content mods) unless justified and
-   recorded, American spelling, no duplicated information, every claim
-   grounded per the hard rules.
+7. Self-check: one bold name, emoji rules, flat bullets, one capability per
+   bullet, bullet length roughly 10 to 20 words, count within 5 to 8 (up to
+   roughly 20 for large content mods) unless justified and recorded, American
+   spelling, no duplicated information, every claim grounded per the hard
+   rules.
 8. Write both draft files.
 9. Write the guidance report, describing only what the drafts contain —
    never intent or plans.
