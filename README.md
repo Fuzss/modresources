@@ -49,12 +49,6 @@ Full pages are generated from individual files using a private tool.
 
 ---
 
-### `./scripts`
-
-Python scripts for various modding tasks, including porting and deployment of individual projects.
-
----
-
 ### `./update`
 
 Mod files for NeoForge / Forge [update checker system](https://docs.neoforged.net/docs/misc/updatechecker).  

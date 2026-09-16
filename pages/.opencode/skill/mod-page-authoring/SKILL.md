@@ -23,14 +23,14 @@ The writing standard is `pages/AGENTS.md`; read it before starting.
 2. Build the authoring brief from the repository root:
 
    ```sh
-   python3 scripts/main/tools/collect_page_brief.py <mod> --branch 26.2.x \
+   python3 pages/tools/collect_page_brief.py <mod> --branch 26.2.x \
        --out pages/.authoring/<mod>/brief.md
    ```
 
-   Run this from the repository root. From `pages/`, prefix the script path with
-   `../`. The collector reads the mods directory from
-   `fuzs.multiloader.project.mods`; override with `--mods-root` when needed.
-   The collector creates the per-mod directory itself.
+   Run this from the repository root. From `pages/`, run
+   `python3 tools/collect_page_brief.py ...`. The collector reads the mods
+   directory from `fuzs.multiloader.project.mods`; override with `--mods-root`
+   when needed. The collector creates the per-mod directory itself.
 3. Dispatch the `page-author` subagent, giving it the brief path, the mod id,
    and any curator steer (selling points, must-keep lines, wiki links). It
    writes **drafts only**: `pages/.authoring/<mod>/about.md` and

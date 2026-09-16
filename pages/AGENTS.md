@@ -115,7 +115,7 @@ the first Features bullet); every drop needs a justification.
 Text is produced by a deterministic collector plus two subagents, with the user
 as the review stopgate:
 
-1. `scripts/main/tools/collect_page_brief.py` builds a normalized brief at
+1. `pages/tools/collect_page_brief.py` builds a normalized brief at
    `pages/.authoring/<mod>/brief.md`.
 2. `pages/.opencode/agent/page-author.md` drafts `about.md` and `features.md`
    under `pages/.authoring/<mod>/` only. It never writes `pages/data/`.

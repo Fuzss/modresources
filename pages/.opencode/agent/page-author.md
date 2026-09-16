@@ -18,7 +18,7 @@ overrides any habit you have from other projects.
 ## Inputs
 
 - An authoring brief, produced by
-  `scripts/main/tools/collect_page_brief.py`. Its path is given in the task.
+  `pages/tools/collect_page_brief.py`. Its path is given in the task.
 - The mod checkout. Its absolute path is recorded in the brief as
   `Checkout:`; the collector resolves it from the user's
   `fuzs.multiloader.project.mods` Gradle property, so never hardcode it.

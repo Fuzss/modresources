@@ -9,7 +9,6 @@ This repository hosts web content, Maven artifacts, and tooling for **@heyitsfuz
 - `gradle/` – legacy Gradle build scripts, no longer used on modern versions.
 - `maven/` – published mod API artifacts, indexed by CI.
 - `pages/` – generated mod page content.
-- `scripts/` – Python tooling for modding, porting, and deployment.
 - `update/` – NeoForge / Forge update checker files.
 - `.github/` – GitHub Actions and CI helper scripts.
 
@@ -25,5 +24,4 @@ This repository hosts web content, Maven artifacts, and tooling for **@heyitsfuz
 Subtrees provide their own `AGENTS.md`. The nearest file to the working
 directory takes precedence, so work in a subtree follows that subtree's rules.
 
-- `scripts/AGENTS.md` – Python modding tooling, entry-point contract, and style.
 - `pages/AGENTS.md` – mod page writing style.
