@@ -1,5 +1,5 @@
-**Respawning Animals** brings Bedrock-style animal spawning to Java Edition. Instead of remaining in the world forever after world generation, animals can disappear when far from players and repopulate the land around them. 🐄
+**Respawning Animals** brings Bedrock Edition style animal spawning to Java Edition. Instead of animals existing forever after world generation, they can naturally disappear when far away and repopulate areas around active players, just like passive mobs do in Bedrock Edition. 🐄
 
-Animals that players care about can be made permanent, though. A single interaction keeps them around, so pets and livestock are never lost when you leave the area. 🐕
+This keeps the world feeling alive and prevents regions from becoming permanently depleted of animals after exploration or hunting. Whether you're gathering resources, breeding livestock, or simply traveling, wildlife can naturally return over time. 🌿
 
-The mod is for explorers, hunters, and anyone playing a world for the long haul. New worlds enable animal removal by default, while existing saves keep vanilla behavior until you turn it on. 🌍
+Animals that players care about remain protected. Tamed, bred, named, ridden, and other player associated animals stay where they belong, ensuring pets and livestock are never lost. 🐕
