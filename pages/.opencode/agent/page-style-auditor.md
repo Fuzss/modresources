@@ -45,6 +45,9 @@ Features:
 - Exactly one flat list; no bold group headings, no nested lists.
 - Every bullet matches `* EMOJI **Feature Name:** Explanation.` and ends with a
   period.
+- Feature names are Title Case with lowercase connectors (a, an, and, or, of,
+  the, for, to, in, on, with). FAIL a sentence-case title ("Mutant zombie:") or a
+  capitalized connector ("Repair With Experience").
 - Roughly 5 to 8 bullets for most mods, up to roughly 20 for large content
   mods; ordered most to least important. FAIL only clearly outside these bands
   (fewer than 5, more than 25); borderline counts pass.
@@ -60,6 +63,11 @@ Features:
 Language:
 
 - American English.
+- Running text uses lowercase common nouns for item, block, mob, and mod feature
+  names, following the Minecraft Wiki ("an eye of ender", "a mutant zombie",
+  "the hulk hammer"). FAIL a capitalized common noun in a sentence unless it is a
+  proper noun (the Nether, the End, the Overworld, Java Edition, Bedrock
+  Edition) or starts the sentence.
 - No marketing fluff, exaggerated claims, or invented facts.
 
 ## Output

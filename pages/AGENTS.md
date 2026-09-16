@@ -26,6 +26,11 @@ publishing them are handled outside this repository.
 - Be concise, modern, and benefit focused. Light enthusiasm is welcome;
   marketing fluff and exaggerated claims are not.
 - Use American English (`color`, `customize`, `armor`).
+- Write the names of items, blocks, mobs, and mod features as common nouns in
+  running text, following the Minecraft Wiki (write "an eye of ender", "a mutant
+  zombie", "the hulk hammer", not "Eye of Ender", "Mutant Zombie", "Hulk
+  Hammer"). Capitalize only proper nouns such as the Nether, the End, the
+  Overworld, Java Edition, Bedrock Edition, and the mod's own name.
 - Prefer plain sentences over formatting. Only use `**bold**`, `code`, and links
   where they carry meaning.
 - About and Features may cover the same topics at different resolution: About
@@ -74,6 +79,9 @@ publishing them are handled outside this repository.
   * 🚀 **Feature Name:** Explanation.
   ```
 
+- Write feature names in Title Case, lowercasing short connectors (a, an, and,
+  or, of, the, for, to, in, on, with): "Custom Wind and Motion", not "Custom
+  Wind And Motion".
 - Keep each bullet to one capability in one or two short sentences, roughly 10
   to 20 words; existing pages average about 15. If a bullet covers several
   distinct capabilities, split it into separate bullets; if it is one capability
@@ -100,7 +108,8 @@ curator's explicit direction, or from vanilla context cited below. Acceptable
 sources: `gradle.properties`, `metadata.json`, `README.md`, `CHANGELOG.md`,
 `@Config(description = ...)` strings, language files, the source tree, the
 curator's review steer, and `minecraft.wiki` for vanilla behavior and
-Java-vs-Bedrock comparisons only (including the framing of such a comparison).
+Java-vs-Bedrock comparisons only (including the framing of such a comparison),
+and its style guide for naming and capitalization.
 
 - Do not invent features, numbers, or names.
 - Do not claim compatibility, performance, or behavior that the repository does

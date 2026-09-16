@@ -70,13 +70,19 @@ separate, explicit step owned by the orchestrator.
   sentences or closers, never at the start of a paragraph.
 - **Features** — one flat list, no group headings. Every bullet is
   `* EMOJI **Feature Name:** Explanation.` Order from most to least important.
-  One capability per bullet, roughly 10 to 20 words; split a bullet that bundles
-  several distinct capabilities and trim one that pads a single capability with
-  mechanics. Enumerated examples of one capability may run longer. Aim for 5 to
-  8 for most mods and up to roughly 20 for large content mods; a list is done
-  when every major selling point is covered and nothing padding remains. Omit
-  the list when it would only restate the About. Exclude recipes, loader
-  support, implementation details, and per-setting config lists.
+  Write feature names in Title Case with lowercase connectors (a, an, and, or,
+  of, the, for, to, in, on, with). One capability per bullet, roughly 10 to 20
+  words; split a bullet that bundles several distinct capabilities and trim one
+  that pads a single capability with mechanics. Enumerated examples of one
+  capability may run longer. Aim for 5 to 8 for most mods and up to roughly 20
+  for large content mods; a list is done when every major selling point is
+  covered and nothing padding remains. Omit the list when it would only restate
+  the About. Exclude recipes, loader support, implementation details, and
+  per-setting config lists.
+- **Names** — in running text, write item, block, mob, and mod feature names as
+  lowercase common nouns following the Minecraft Wiki ("an eye of ender", "a
+  mutant zombie", "the hulk hammer"); capitalize only proper nouns (the Nether,
+  the End, the Overworld, Java Edition, Bedrock Edition) and the mod's own name.
 - Light enthusiasm is welcome; marketing fluff is not.
 
 ## Workflow
@@ -90,12 +96,14 @@ separate, explicit step owned by the orchestrator.
 4. Verify anything uncertain or too good to be true against the checkout using
    `Read` and `Grep`. The highest-signal sources are `gradle.properties`,
    `metadata.json`, `README.md`, `@Config(description = ...)` strings, and
-   `lang/en_us.json`. Use `WebFetch`/`WebSearch` on `minecraft.wiki` only for
-   vanilla behavior or Java-vs-Bedrock comparisons, and quote exactly.
+   `lang/en_us.json`. Use `WebFetch`/`WebSearch` on `minecraft.wiki` for vanilla
+   behavior, Java-vs-Bedrock comparisons, and naming/capitalization style; quote
+   facts exactly.
 5. Draft `about.md`.
 6. Draft `features.md`, or decide to omit it.
 7. Self-check: one bold name, emoji rules, flat bullets, one capability per
-   bullet, bullet length roughly 10 to 20 words, count within 5 to 8 (up to
+   bullet, bullet length roughly 10 to 20 words, feature titles Title Case with
+   lowercase connectors, names lowercase in prose, count within 5 to 8 (up to
    roughly 20 for large content mods) unless justified and recorded, American
    spelling, no duplicated information, every claim grounded per the hard
    rules.
