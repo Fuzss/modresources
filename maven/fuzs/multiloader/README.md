@@ -8,7 +8,7 @@
 <summary>Latest</summary>
 
 - [1.0.18](./multiloader-convention-plugins/1.0.18)
-- [1.1.32](./multiloader-convention-plugins/1.1.32)
+- [1.1.33](./multiloader-convention-plugins/1.1.33)
 </details>
 
 <details>
@@ -65,6 +65,7 @@
 - [1.1.30](./multiloader-convention-plugins/1.1.30)
 - [1.1.31](./multiloader-convention-plugins/1.1.31)
 - [1.1.32](./multiloader-convention-plugins/1.1.32)
+- [1.1.33](./multiloader-convention-plugins/1.1.33)
 </details>
 
 ### [`multiloader-conventions`](./multiloader-conventions)
