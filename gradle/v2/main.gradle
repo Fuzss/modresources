@@ -399,7 +399,7 @@ subprojects {
             }
 
             mainArtifact(remapJar) { artifact ->
-                artifact.displayName = "[${project.name.toUpperCase()}] [${libs.versions.minecraft.get()}] v${modVersion}"
+                artifact.displayName = "v${modVersion}-mc${libs.versions.minecraft.get()}+${project.name.toLowerCase()}"
                 var requiredDependencies = "dependenciesRequired${project.name}CurseForge"
                 var embeddedDependencies = "dependenciesEmbedded${project.name}CurseForge"
                 var optionalDependencies = "dependenciesOptional${project.name}CurseForge"
@@ -438,7 +438,7 @@ subprojects {
         token = project.findProperty("fuzs.multiloader.remote.modrinth.token") ?: ""
         projectId = projectModrinthId
         versionNumber = modVersion
-        versionName = "[${project.name.toUpperCase()}] [${libs.versions.minecraft.get()}] v${modVersion}"
+        versionName = "v${modVersion}-mc${libs.versions.minecraft.get()}+${project.name.toLowerCase()}"
         changelog = file("../CHANGELOG.md").text
         versionType = projectReleaseType
         uploadFile = remapJar
