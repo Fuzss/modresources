@@ -45,7 +45,7 @@ dependencies {
 ### `./pages`
 
 Content for **@heyitsfuzs** mod pages found on [CurseForge](https://www.curseforge.com/members/fuzs/projects) and [Modrinth](https://modrinth.com/user/Fuzs).  
-Full pages are generated from individual files using a private tool.
+Full pages are generated from individual files using a private tool. The authoring pipeline and writing standard live in the private [`multiloader-page-authoring`](https://github.com/Fuzss/multiloader-page-authoring) repository.
 
 ---
 
