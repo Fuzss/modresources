@@ -8,8 +8,8 @@ allprojects {
     apply plugin: "signing"
     apply plugin: "idea"
 
-    archivesBaseName = "${modName.replaceAll("[^a-zA-Z]", "")}"
-    version = "v${modVersion}-mc${libs.versions.minecraft.get()}-${project.name}"
+    archivesBaseName = modId
+    version = "v${modVersion}-mc${libs.versions.minecraft.get()}+${project.name}"
     group = modMavenGroup
 
     repositories {
@@ -336,7 +336,7 @@ subprojects {
                 version = modVersion
                 from components.java
                 pom {
-                    name = "${modName} [${project.name}]"
+                    name = "[${project.name}] ${modName}"
                     description = "${modDescription}"
                     url = "${modSourceUrl}"
                     scm {
