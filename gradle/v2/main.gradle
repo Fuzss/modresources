@@ -336,7 +336,7 @@ subprojects {
                 version = modVersion
                 from components.java
                 pom {
-                    name = "[${project.name}] ${modName}"
+                    name = "[${project.name.toUpperCase()}] ${modName}"
                     description = "${modDescription}"
                     url = "${modSourceUrl}"
                     scm {
