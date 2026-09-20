@@ -210,6 +210,7 @@
 - [21.11.1](./fuzs/diagonalblocks/diagonalblocks-common/21.11.1)
 - [26.1.0](./fuzs/diagonalblocks/diagonalblocks-common/26.1.0)
 - [26.2.0](./fuzs/diagonalblocks/diagonalblocks-common/26.2.0)
+- [26.3.0](./fuzs/diagonalblocks/diagonalblocks-common/26.3.0)
 </details>
 
 <details>
@@ -245,6 +246,7 @@
 - [21.11.1](./fuzs/diagonalblocks/diagonalblocks-common/21.11.1)
 - [26.1.0](./fuzs/diagonalblocks/diagonalblocks-common/26.1.0)
 - [26.2.0](./fuzs/diagonalblocks/diagonalblocks-common/26.2.0)
+- [26.3.0](./fuzs/diagonalblocks/diagonalblocks-common/26.3.0)
 </details>
 
 ### [`diagonalblocks-fabric`](./fuzs/diagonalblocks/diagonalblocks-fabric)
@@ -266,6 +268,7 @@
 - [21.11.1](./fuzs/diagonalblocks/diagonalblocks-fabric/21.11.1)
 - [26.1.0](./fuzs/diagonalblocks/diagonalblocks-fabric/26.1.0)
 - [26.2.0](./fuzs/diagonalblocks/diagonalblocks-fabric/26.2.0)
+- [26.3.0](./fuzs/diagonalblocks/diagonalblocks-fabric/26.3.0)
 </details>
 
 <details>
@@ -301,6 +304,7 @@
 - [21.11.1](./fuzs/diagonalblocks/diagonalblocks-fabric/21.11.1)
 - [26.1.0](./fuzs/diagonalblocks/diagonalblocks-fabric/26.1.0)
 - [26.2.0](./fuzs/diagonalblocks/diagonalblocks-fabric/26.2.0)
+- [26.3.0](./fuzs/diagonalblocks/diagonalblocks-fabric/26.3.0)
 </details>
 
 ### [`diagonalblocks-forge`](./fuzs/diagonalblocks/diagonalblocks-forge)
@@ -346,6 +350,7 @@
 - [21.11.1](./fuzs/diagonalblocks/diagonalblocks-neoforge/21.11.1)
 - [26.1.0](./fuzs/diagonalblocks/diagonalblocks-neoforge/26.1.0)
 - [26.2.0](./fuzs/diagonalblocks/diagonalblocks-neoforge/26.2.0)
+- [26.3.0](./fuzs/diagonalblocks/diagonalblocks-neoforge/26.3.0)
 </details>
 
 <details>
@@ -374,6 +379,7 @@
 - [21.11.1](./fuzs/diagonalblocks/diagonalblocks-neoforge/21.11.1)
 - [26.1.0](./fuzs/diagonalblocks/diagonalblocks-neoforge/26.1.0)
 - [26.2.0](./fuzs/diagonalblocks/diagonalblocks-neoforge/26.2.0)
+- [26.3.0](./fuzs/diagonalblocks/diagonalblocks-neoforge/26.3.0)
 </details>
 
 </details>
@@ -1263,6 +1269,7 @@
 - [21.11.0](./fuzs/hotbarslotcycling/hotbarslotcycling-common/21.11.0)
 - [26.1.0](./fuzs/hotbarslotcycling/hotbarslotcycling-common/26.1.0)
 - [26.2.1](./fuzs/hotbarslotcycling/hotbarslotcycling-common/26.2.1)
+- [26.3.0](./fuzs/hotbarslotcycling/hotbarslotcycling-common/26.3.0)
 </details>
 
 <details>
@@ -1286,6 +1293,7 @@
 - [26.1.0](./fuzs/hotbarslotcycling/hotbarslotcycling-common/26.1.0)
 - [26.2.0](./fuzs/hotbarslotcycling/hotbarslotcycling-common/26.2.0)
 - [26.2.1](./fuzs/hotbarslotcycling/hotbarslotcycling-common/26.2.1)
+- [26.3.0](./fuzs/hotbarslotcycling/hotbarslotcycling-common/26.3.0)
 </details>
 
 ### [`hotbarslotcycling-fabric`](./fuzs/hotbarslotcycling/hotbarslotcycling-fabric)
@@ -1306,6 +1314,7 @@
 - [21.11.0](./fuzs/hotbarslotcycling/hotbarslotcycling-fabric/21.11.0)
 - [26.1.0](./fuzs/hotbarslotcycling/hotbarslotcycling-fabric/26.1.0)
 - [26.2.1](./fuzs/hotbarslotcycling/hotbarslotcycling-fabric/26.2.1)
+- [26.3.0](./fuzs/hotbarslotcycling/hotbarslotcycling-fabric/26.3.0)
 </details>
 
 <details>
@@ -1329,6 +1338,7 @@
 - [26.1.0](./fuzs/hotbarslotcycling/hotbarslotcycling-fabric/26.1.0)
 - [26.2.0](./fuzs/hotbarslotcycling/hotbarslotcycling-fabric/26.2.0)
 - [26.2.1](./fuzs/hotbarslotcycling/hotbarslotcycling-fabric/26.2.1)
+- [26.3.0](./fuzs/hotbarslotcycling/hotbarslotcycling-fabric/26.3.0)
 </details>
 
 ### [`hotbarslotcycling-forge`](./fuzs/hotbarslotcycling/hotbarslotcycling-forge)
@@ -1364,6 +1374,7 @@
 - [21.11.0](./fuzs/hotbarslotcycling/hotbarslotcycling-neoforge/21.11.0)
 - [26.1.0](./fuzs/hotbarslotcycling/hotbarslotcycling-neoforge/26.1.0)
 - [26.2.1](./fuzs/hotbarslotcycling/hotbarslotcycling-neoforge/26.2.1)
+- [26.3.0](./fuzs/hotbarslotcycling/hotbarslotcycling-neoforge/26.3.0)
 </details>
 
 <details>
@@ -1387,6 +1398,7 @@
 - [26.1.0](./fuzs/hotbarslotcycling/hotbarslotcycling-neoforge/26.1.0)
 - [26.2.0](./fuzs/hotbarslotcycling/hotbarslotcycling-neoforge/26.2.0)
 - [26.2.1](./fuzs/hotbarslotcycling/hotbarslotcycling-neoforge/26.2.1)
+- [26.3.0](./fuzs/hotbarslotcycling/hotbarslotcycling-neoforge/26.3.0)
 </details>
 
 </details>
