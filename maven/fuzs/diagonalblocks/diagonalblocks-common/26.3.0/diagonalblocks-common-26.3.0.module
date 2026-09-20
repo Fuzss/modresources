@@ -1,0 +1,126 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "fuzs.diagonalblocks",
+    "module": "diagonalblocks-common",
+    "version": "26.3.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.7.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "fuzs.puzzleslib",
+          "module": "puzzleslib-common",
+          "version": {
+            "requires": "26.3.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "diagonalblocks-common-26.3.0.jar",
+          "url": "diagonalblocks-common-26.3.0.jar",
+          "size": 115328,
+          "sha512": "0053aa776026693b08965ca2bb54ee90cd700f5e9bdb5312c4a5067d8741848983edebf257967e87595311e3dc4e1e8418e1dd42f76672cad215d7cd98362420",
+          "sha256": "cdb16da301aea55832294e01bbc0537c958ee27899f1d0a1b1c80c96384a4e30",
+          "sha1": "7c81c345f50ae1484a50fad0993587f174882cfb",
+          "md5": "6910bad8c047719936ce6cc9cd6c6998"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "diagonalblocks-common-26.3.0.jar",
+          "url": "diagonalblocks-common-26.3.0.jar",
+          "size": 115328,
+          "sha512": "0053aa776026693b08965ca2bb54ee90cd700f5e9bdb5312c4a5067d8741848983edebf257967e87595311e3dc4e1e8418e1dd42f76672cad215d7cd98362420",
+          "sha256": "cdb16da301aea55832294e01bbc0537c958ee27899f1d0a1b1c80c96384a4e30",
+          "sha1": "7c81c345f50ae1484a50fad0993587f174882cfb",
+          "md5": "6910bad8c047719936ce6cc9cd6c6998"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "diagonalblocks-common-26.3.0-sources.jar",
+          "url": "diagonalblocks-common-26.3.0-sources.jar",
+          "size": 71046,
+          "sha512": "a5ff8943d3483e362ab6aedf15dffa0a62e05bf4253e707945334bcd16bf45c57cc9aaa33282ec58e2c2fb98c998b07a237f389226daee2389f23fc2b2e9d769",
+          "sha256": "b457dc2ba6aac6df3ba0fb4531296bb2f79cc49bca5e259a32bac9c50aeba446",
+          "sha1": "30b9b2f52678d9039d7b7d80c1b8d7461df46517",
+          "md5": "8c3b04fb08a890f52c437b7c54cb802d"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "diagonalblocks-common-26.3.0-javadoc.jar",
+          "url": "diagonalblocks-common-26.3.0-javadoc.jar",
+          "size": 4350586,
+          "sha512": "9f3d30ecc83d105d2580e1cb374ad098ea16154467738b78bcb5e93029058b3ed987dd19f580915c1bdc491dd2ff84866e32608fa8172142454fd1ee3b0151ff",
+          "sha256": "60425ea3cc1507d15b27bf93f83a587896dbbe74e88bd997438e26911f52ca09",
+          "sha1": "0591113ebfc638b52fbf81f7b74c4c3eb1b3dd44",
+          "md5": "86ed0de9320d9f33013277c68353be40"
+        }
+      ]
+    },
+    {
+      "name": "accessTransformersElements",
+      "attributes": {
+        "org.gradle.category": "accesstransformer"
+      },
+      "files": [
+        {
+          "name": "diagonalblocks-common-26.3.0-accesstransformer.cfg",
+          "url": "diagonalblocks-common-26.3.0-accesstransformer.cfg",
+          "size": 0,
+          "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+          "md5": "d41d8cd98f00b204e9800998ecf8427e"
+        }
+      ]
+    }
+  ]
+}
