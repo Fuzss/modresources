@@ -1,0 +1,139 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "fuzs.hotbarslotcycling",
+    "module": "hotbarslotcycling-fabric",
+    "version": "26.3.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.7.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "net.fabricmc.fabric-api",
+          "module": "fabric-api",
+          "version": {
+            "requires": "0.161.0+26.3"
+          }
+        },
+        {
+          "group": "fuzs.puzzleslib",
+          "module": "puzzleslib-fabric",
+          "version": {
+            "requires": "26.3.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "hotbarslotcycling-fabric-26.3.0.jar",
+          "url": "hotbarslotcycling-fabric-26.3.0.jar",
+          "size": 48109,
+          "sha512": "c22cbd8f6376a60ca8ed30783975921721f181845cbb64d4d1b268453bd6eace0e74fae1551fd7ee8afc367e6113b822e33cbaf00cd8d1200487e26678f337fe",
+          "sha256": "991473e4750b97598f29f2bf872d6a8a411768a9615c2eac624bb9b337e44d1e",
+          "sha1": "f28743eda44e72d757e45103ef48988c3f5606b0",
+          "md5": "86b2d11957cb8eca07fe6712639bf924"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "net.fabricmc",
+          "module": "fabric-loader",
+          "version": {
+            "requires": "0.19.5"
+          }
+        },
+        {
+          "group": "net.fabricmc.fabric-api",
+          "module": "fabric-api",
+          "version": {
+            "requires": "0.161.0+26.3"
+          }
+        },
+        {
+          "group": "fuzs.puzzleslib",
+          "module": "puzzleslib-fabric",
+          "version": {
+            "requires": "26.3.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "hotbarslotcycling-fabric-26.3.0.jar",
+          "url": "hotbarslotcycling-fabric-26.3.0.jar",
+          "size": 48109,
+          "sha512": "c22cbd8f6376a60ca8ed30783975921721f181845cbb64d4d1b268453bd6eace0e74fae1551fd7ee8afc367e6113b822e33cbaf00cd8d1200487e26678f337fe",
+          "sha256": "991473e4750b97598f29f2bf872d6a8a411768a9615c2eac624bb9b337e44d1e",
+          "sha1": "f28743eda44e72d757e45103ef48988c3f5606b0",
+          "md5": "86b2d11957cb8eca07fe6712639bf924"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "hotbarslotcycling-fabric-26.3.0-sources.jar",
+          "url": "hotbarslotcycling-fabric-26.3.0-sources.jar",
+          "size": 34365,
+          "sha512": "dae7f8c7667f348ab5143b7afd8548706e07497b171e5dcabfce0177f80014bf957e0e94df9c7772d91f4c532f9cfe427543a4deffa8e6d2e1ce3b257560fc2c",
+          "sha256": "984de407029736c875740677cd12e2db36f67e2de539458ce749c9081b7625c8",
+          "sha1": "461bc0eb9eeef2c68020c1fbb69485a52938af0d",
+          "md5": "d580e6c1799dcca7ba8478681180c836"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "hotbarslotcycling-fabric-26.3.0-javadoc.jar",
+          "url": "hotbarslotcycling-fabric-26.3.0-javadoc.jar",
+          "size": 4238414,
+          "sha512": "519aff9e8e57b7bfa08c5bd4d930c81354bbd0f1057d0dbb0db3d8411488a2d0d0fae229d23c190ea6e4c0b9e8c12c4af5ec17dc66c7336e92d564c85039a686",
+          "sha256": "3167e641854d855f11c5acf3520688f1a3ce20a632bbe413f01ec38a8e7ac89a",
+          "sha1": "ec39846826a5d3542fbba58505b48ae43418c502",
+          "md5": "09688ac07f77b33281a6287fa09c65ab"
+        }
+      ]
+    }
+  ]
+}
