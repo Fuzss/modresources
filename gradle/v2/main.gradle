@@ -9,7 +9,7 @@ allprojects {
     apply plugin: "idea"
 
     archivesBaseName = modId
-    version = "v${modVersion}-mc${libs.versions.minecraft.get()}+${project.name}"
+    version = "v${modVersion}-mc${libs.versions.minecraft.get()}+${project.name.toLowerCase()}"
     group = modMavenGroup
 
     repositories {
