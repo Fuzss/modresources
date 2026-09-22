@@ -1,0 +1,135 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "fuzs.iteminteractions",
+    "module": "iteminteractions-neoforge",
+    "version": "26.3.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.7.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "fuzs.puzzleslib",
+          "module": "puzzleslib-neoforge",
+          "version": {
+            "requires": "26.3.2"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "iteminteractions-neoforge-26.3.0.jar",
+          "url": "iteminteractions-neoforge-26.3.0.jar",
+          "size": 195082,
+          "sha512": "5f8694bcce0b7e2b44ee57e5e8f5e3c3f8320e3301749ef3f6c43e656b81912c25edae90b630163f154b395a168c1255b285ff51b8b5c0e7d75f6748aa48040f",
+          "sha256": "590f7d28ad335fcb5bded28ae870744e63d17b7b5bde63613d090554769cb24e",
+          "sha1": "9fd628a1f94391818e10bfd36f6efafafcd9a807",
+          "md5": "2d5f4ad3615fb86c1aee83b5967bddd6"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "fuzs.puzzleslib",
+          "module": "puzzleslib-neoforge",
+          "version": {
+            "requires": "26.3.2"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "iteminteractions-neoforge-26.3.0.jar",
+          "url": "iteminteractions-neoforge-26.3.0.jar",
+          "size": 195082,
+          "sha512": "5f8694bcce0b7e2b44ee57e5e8f5e3c3f8320e3301749ef3f6c43e656b81912c25edae90b630163f154b395a168c1255b285ff51b8b5c0e7d75f6748aa48040f",
+          "sha256": "590f7d28ad335fcb5bded28ae870744e63d17b7b5bde63613d090554769cb24e",
+          "sha1": "9fd628a1f94391818e10bfd36f6efafafcd9a807",
+          "md5": "2d5f4ad3615fb86c1aee83b5967bddd6"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "iteminteractions-neoforge-26.3.0-sources.jar",
+          "url": "iteminteractions-neoforge-26.3.0-sources.jar",
+          "size": 103855,
+          "sha512": "2484c70c35130c4af6527060ee0b9579c8ec8f67ec90ad764a680a71400c4e2521d062c5da0bf754f525d3338e609a6dde4fe19fd775a8b09fa443254aa3e9e6",
+          "sha256": "0b02fee1df70823c997a2980649e79dda401e2efec0bd31f6322e836b3ce3793",
+          "sha1": "342a8e823a98ad4b7ecd5b1c8a7ee05c5773db15",
+          "md5": "59462052487809922ba8bf48e16a3067"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "iteminteractions-neoforge-26.3.0-javadoc.jar",
+          "url": "iteminteractions-neoforge-26.3.0-javadoc.jar",
+          "size": 4495472,
+          "sha512": "941b86eff087592618ef9092e83fdf876f6b42d8070f69d7f24bb2f9d3e497f59b5b6005e435c63f9d31ef15934311f1f7afe42d450bd2b0b5607e6bdb09488f",
+          "sha256": "eeb72dda6128dec8a61b9570b15ea697909abb6d32cc3f5c7c6a32c481f58f13",
+          "sha1": "c0bca2ed1d8b586d505731b69b478597100a9568",
+          "md5": "632b2e8eaed04265076cb78bed83e715"
+        }
+      ]
+    },
+    {
+      "name": "accessTransformersElements",
+      "attributes": {
+        "org.gradle.category": "accesstransformer"
+      },
+      "files": [
+        {
+          "name": "iteminteractions-neoforge-26.3.0-accesstransformer.cfg",
+          "url": "iteminteractions-neoforge-26.3.0-accesstransformer.cfg",
+          "size": 0,
+          "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+          "md5": "d41d8cd98f00b204e9800998ecf8427e"
+        }
+      ]
+    }
+  ]
+}
