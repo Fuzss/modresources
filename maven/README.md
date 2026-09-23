@@ -5045,7 +5045,7 @@
 - [1.21.11-v9](./fuzs/sharedcatalogs/sharedcatalogs/1.21.11-v9)
 - [26.1-v17](./fuzs/sharedcatalogs/sharedcatalogs/26.1-v17)
 - [26.2-v9](./fuzs/sharedcatalogs/sharedcatalogs/26.2-v9)
-- [26.3-v6](./fuzs/sharedcatalogs/sharedcatalogs/26.3-v6)
+- [26.3-v7](./fuzs/sharedcatalogs/sharedcatalogs/26.3-v7)
 </details>
 
 <details>
@@ -5413,6 +5413,7 @@
 - [26.3-v4](./fuzs/sharedcatalogs/sharedcatalogs/26.3-v4)
 - [26.3-v5](./fuzs/sharedcatalogs/sharedcatalogs/26.3-v5)
 - [26.3-v6](./fuzs/sharedcatalogs/sharedcatalogs/26.3-v6)
+- [26.3-v7](./fuzs/sharedcatalogs/sharedcatalogs/26.3-v7)
 </details>
 
 </details>
