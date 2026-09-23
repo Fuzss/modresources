@@ -1,0 +1,126 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "fuzs.iteminteractions",
+    "module": "iteminteractions-common",
+    "version": "26.3.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.7.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "fuzs.puzzleslib",
+          "module": "puzzleslib-common",
+          "version": {
+            "requires": "26.3.4"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "iteminteractions-common-26.3.1.jar",
+          "url": "iteminteractions-common-26.3.1.jar",
+          "size": 189838,
+          "sha512": "fda37cad066c1fb0018f2a6e56b555d70680a998cd9ac67474c0202ac06173a731efef08cb756353af1bbb3e9ca11d3f2572f59a6897b846f7ce8a798e360df7",
+          "sha256": "f98f8c0f4bd57a99925a6c6e6b865eeeb059c3db4a050ff0ea2705317f69201f",
+          "sha1": "4e8a5c3e67de6d9429d5cd07e8442c4b8641bba0",
+          "md5": "c18987aee75dea292af6af527ef7f26d"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "iteminteractions-common-26.3.1.jar",
+          "url": "iteminteractions-common-26.3.1.jar",
+          "size": 189838,
+          "sha512": "fda37cad066c1fb0018f2a6e56b555d70680a998cd9ac67474c0202ac06173a731efef08cb756353af1bbb3e9ca11d3f2572f59a6897b846f7ce8a798e360df7",
+          "sha256": "f98f8c0f4bd57a99925a6c6e6b865eeeb059c3db4a050ff0ea2705317f69201f",
+          "sha1": "4e8a5c3e67de6d9429d5cd07e8442c4b8641bba0",
+          "md5": "c18987aee75dea292af6af527ef7f26d"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "iteminteractions-common-26.3.1-sources.jar",
+          "url": "iteminteractions-common-26.3.1-sources.jar",
+          "size": 101750,
+          "sha512": "b235fea70b86b3316670160caca270dbd73dd86c7e728341b2421c231d99f5e68d4cfe930a4dc074022e688bb5ff043216a8d945d6ed9e48c80226bc6c1787bd",
+          "sha256": "927e0b42306684027064120cc7b7f54e534297e4a3f5890e5f935bdac31a9ccf",
+          "sha1": "9e49e70bbd5da866f2f2a833a7dd67fbf9632697",
+          "md5": "3270fc510b73eff40093bb7ba8db84aa"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "iteminteractions-common-26.3.1-javadoc.jar",
+          "url": "iteminteractions-common-26.3.1-javadoc.jar",
+          "size": 4482600,
+          "sha512": "67ea3be7733cbe4690c5b286e1185f4bc268bd67a4b40b8e605e30c7c06f30b2906f00a1f0e8e033310813d5b1cd188b574fd809929d3b0a4dd6fad54c9dd0d5",
+          "sha256": "570267e1d9c1137900cf8bc79ce935196d98009db9d06491f7ddbefaefc4f3ac",
+          "sha1": "fdab2890ce44faa26e769875859eab36dfb30e66",
+          "md5": "463f8f1b2a2ec08a2dbf818998e2cdff"
+        }
+      ]
+    },
+    {
+      "name": "accessTransformersElements",
+      "attributes": {
+        "org.gradle.category": "accesstransformer"
+      },
+      "files": [
+        {
+          "name": "iteminteractions-common-26.3.1-accesstransformer.cfg",
+          "url": "iteminteractions-common-26.3.1-accesstransformer.cfg",
+          "size": 0,
+          "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+          "md5": "d41d8cd98f00b204e9800998ecf8427e"
+        }
+      ]
+    }
+  ]
+}
