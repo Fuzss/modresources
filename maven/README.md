@@ -2928,6 +2928,7 @@
 
 - [26.1.0](./fuzs/multiloaderdataextensions/multiloaderdataextensions-common/26.1.0)
 - [26.2.0](./fuzs/multiloaderdataextensions/multiloaderdataextensions-common/26.2.0)
+- [26.3.0](./fuzs/multiloaderdataextensions/multiloaderdataextensions-common/26.3.0)
 </details>
 
 <details>
@@ -2935,6 +2936,7 @@
 
 - [26.1.0](./fuzs/multiloaderdataextensions/multiloaderdataextensions-common/26.1.0)
 - [26.2.0](./fuzs/multiloaderdataextensions/multiloaderdataextensions-common/26.2.0)
+- [26.3.0](./fuzs/multiloaderdataextensions/multiloaderdataextensions-common/26.3.0)
 </details>
 
 ### [`multiloaderdataextensions-fabric`](./fuzs/multiloaderdataextensions/multiloaderdataextensions-fabric)
@@ -2943,6 +2945,7 @@
 
 - [26.1.0](./fuzs/multiloaderdataextensions/multiloaderdataextensions-fabric/26.1.0)
 - [26.2.0](./fuzs/multiloaderdataextensions/multiloaderdataextensions-fabric/26.2.0)
+- [26.3.0](./fuzs/multiloaderdataextensions/multiloaderdataextensions-fabric/26.3.0)
 </details>
 
 <details>
@@ -2950,6 +2953,7 @@
 
 - [26.1.0](./fuzs/multiloaderdataextensions/multiloaderdataextensions-fabric/26.1.0)
 - [26.2.0](./fuzs/multiloaderdataextensions/multiloaderdataextensions-fabric/26.2.0)
+- [26.3.0](./fuzs/multiloaderdataextensions/multiloaderdataextensions-fabric/26.3.0)
 </details>
 
 ### [`multiloaderdataextensions-neoforge`](./fuzs/multiloaderdataextensions/multiloaderdataextensions-neoforge)
@@ -2958,6 +2962,7 @@
 
 - [26.1.0](./fuzs/multiloaderdataextensions/multiloaderdataextensions-neoforge/26.1.0)
 - [26.2.0](./fuzs/multiloaderdataextensions/multiloaderdataextensions-neoforge/26.2.0)
+- [26.3.0](./fuzs/multiloaderdataextensions/multiloaderdataextensions-neoforge/26.3.0)
 </details>
 
 <details>
@@ -2965,6 +2970,7 @@
 
 - [26.1.0](./fuzs/multiloaderdataextensions/multiloaderdataextensions-neoforge/26.1.0)
 - [26.2.0](./fuzs/multiloaderdataextensions/multiloaderdataextensions-neoforge/26.2.0)
+- [26.3.0](./fuzs/multiloaderdataextensions/multiloaderdataextensions-neoforge/26.3.0)
 </details>
 
 </details>
