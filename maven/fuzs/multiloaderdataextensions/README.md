@@ -9,7 +9,7 @@
 
 - [26.1.0](./multiloaderdataextensions-common/26.1.0)
 - [26.2.0](./multiloaderdataextensions-common/26.2.0)
-- [26.3.0](./multiloaderdataextensions-common/26.3.0)
+- [26.3.1](./multiloaderdataextensions-common/26.3.1)
 </details>
 
 <details>
@@ -18,6 +18,7 @@
 - [26.1.0](./multiloaderdataextensions-common/26.1.0)
 - [26.2.0](./multiloaderdataextensions-common/26.2.0)
 - [26.3.0](./multiloaderdataextensions-common/26.3.0)
+- [26.3.1](./multiloaderdataextensions-common/26.3.1)
 </details>
 
 ### [`multiloaderdataextensions-fabric`](./multiloaderdataextensions-fabric)
@@ -26,7 +27,7 @@
 
 - [26.1.0](./multiloaderdataextensions-fabric/26.1.0)
 - [26.2.0](./multiloaderdataextensions-fabric/26.2.0)
-- [26.3.0](./multiloaderdataextensions-fabric/26.3.0)
+- [26.3.1](./multiloaderdataextensions-fabric/26.3.1)
 </details>
 
 <details>
@@ -35,6 +36,7 @@
 - [26.1.0](./multiloaderdataextensions-fabric/26.1.0)
 - [26.2.0](./multiloaderdataextensions-fabric/26.2.0)
 - [26.3.0](./multiloaderdataextensions-fabric/26.3.0)
+- [26.3.1](./multiloaderdataextensions-fabric/26.3.1)
 </details>
 
 ### [`multiloaderdataextensions-neoforge`](./multiloaderdataextensions-neoforge)
@@ -43,7 +45,7 @@
 
 - [26.1.0](./multiloaderdataextensions-neoforge/26.1.0)
 - [26.2.0](./multiloaderdataextensions-neoforge/26.2.0)
-- [26.3.0](./multiloaderdataextensions-neoforge/26.3.0)
+- [26.3.1](./multiloaderdataextensions-neoforge/26.3.1)
 </details>
 
 <details>
@@ -52,6 +54,7 @@
 - [26.1.0](./multiloaderdataextensions-neoforge/26.1.0)
 - [26.2.0](./multiloaderdataextensions-neoforge/26.2.0)
 - [26.3.0](./multiloaderdataextensions-neoforge/26.3.0)
+- [26.3.1](./multiloaderdataextensions-neoforge/26.3.1)
 </details>
 
 </details>
