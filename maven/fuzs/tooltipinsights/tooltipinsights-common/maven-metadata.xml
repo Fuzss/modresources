@@ -3,8 +3,8 @@
   <groupId>fuzs.tooltipinsights</groupId>
   <artifactId>tooltipinsights-common</artifactId>
   <versioning>
-    <latest>26.3.1</latest>
-    <release>26.3.1</release>
+    <latest>26.3.2</latest>
+    <release>26.3.2</release>
     <versions>
       <version>21.8.0</version>
       <version>21.8.1</version>
@@ -30,7 +30,8 @@
       <version>21.1.5</version>
       <version>26.3.0</version>
       <version>26.3.1</version>
+      <version>26.3.2</version>
     </versions>
-    <lastUpdated>20260926192102</lastUpdated>
+    <lastUpdated>20260926222639</lastUpdated>
   </versioning>
 </metadata>
