@@ -14,7 +14,7 @@
 - [21.11.0](./tooltipinsights-common/21.11.0)
 - [26.1.2](./tooltipinsights-common/26.1.2)
 - [26.2.4](./tooltipinsights-common/26.2.4)
-- [26.3.1](./tooltipinsights-common/26.3.1)
+- [26.3.2](./tooltipinsights-common/26.3.2)
 </details>
 
 <details>
@@ -44,6 +44,7 @@
 - [26.2.4](./tooltipinsights-common/26.2.4)
 - [26.3.0](./tooltipinsights-common/26.3.0)
 - [26.3.1](./tooltipinsights-common/26.3.1)
+- [26.3.2](./tooltipinsights-common/26.3.2)
 </details>
 
 ### [`tooltipinsights-fabric`](./tooltipinsights-fabric)
@@ -57,7 +58,7 @@
 - [21.11.0](./tooltipinsights-fabric/21.11.0)
 - [26.1.2](./tooltipinsights-fabric/26.1.2)
 - [26.2.4](./tooltipinsights-fabric/26.2.4)
-- [26.3.1](./tooltipinsights-fabric/26.3.1)
+- [26.3.2](./tooltipinsights-fabric/26.3.2)
 </details>
 
 <details>
@@ -87,6 +88,7 @@
 - [26.2.4](./tooltipinsights-fabric/26.2.4)
 - [26.3.0](./tooltipinsights-fabric/26.3.0)
 - [26.3.1](./tooltipinsights-fabric/26.3.1)
+- [26.3.2](./tooltipinsights-fabric/26.3.2)
 </details>
 
 ### [`tooltipinsights-neoforge`](./tooltipinsights-neoforge)
@@ -100,7 +102,7 @@
 - [21.11.0](./tooltipinsights-neoforge/21.11.0)
 - [26.1.2](./tooltipinsights-neoforge/26.1.2)
 - [26.2.4](./tooltipinsights-neoforge/26.2.4)
-- [26.3.1](./tooltipinsights-neoforge/26.3.1)
+- [26.3.2](./tooltipinsights-neoforge/26.3.2)
 </details>
 
 <details>
@@ -130,6 +132,7 @@
 - [26.2.4](./tooltipinsights-neoforge/26.2.4)
 - [26.3.0](./tooltipinsights-neoforge/26.3.0)
 - [26.3.1](./tooltipinsights-neoforge/26.3.1)
+- [26.3.2](./tooltipinsights-neoforge/26.3.2)
 </details>
 
 </details>
