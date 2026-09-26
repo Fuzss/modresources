@@ -1,0 +1,117 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "fuzs.multiloaderdataextensions",
+    "module": "multiloaderdataextensions-neoforge",
+    "version": "26.3.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.7.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "multiloaderdataextensions-neoforge-26.3.1.jar",
+          "url": "multiloaderdataextensions-neoforge-26.3.1.jar",
+          "size": 32889,
+          "sha512": "7a6a4a360f2ecddd80e7c9e09aa58bb05539f93f0acde7db71892d9737de6939aaefa1b1fa7b59579824eb6f909fba05bfebc0c40de8170f584852f33fa61346",
+          "sha256": "ac66071e4da7d0fd061324d60a332f8d980275a7252c108a3bc70465b141380d",
+          "sha1": "9101ed79f54e59462be4e07440d55730d105567d",
+          "md5": "4c4057c3df671fb891e9f32735f311ca"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "multiloaderdataextensions-neoforge-26.3.1.jar",
+          "url": "multiloaderdataextensions-neoforge-26.3.1.jar",
+          "size": 32889,
+          "sha512": "7a6a4a360f2ecddd80e7c9e09aa58bb05539f93f0acde7db71892d9737de6939aaefa1b1fa7b59579824eb6f909fba05bfebc0c40de8170f584852f33fa61346",
+          "sha256": "ac66071e4da7d0fd061324d60a332f8d980275a7252c108a3bc70465b141380d",
+          "sha1": "9101ed79f54e59462be4e07440d55730d105567d",
+          "md5": "4c4057c3df671fb891e9f32735f311ca"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "multiloaderdataextensions-neoforge-26.3.1-sources.jar",
+          "url": "multiloaderdataextensions-neoforge-26.3.1-sources.jar",
+          "size": 25761,
+          "sha512": "3ee73e051845caa7cc2d4bfda5a709487a5b8bc4914cff4b5c04e20fd115580a6a320e1a92cff2f989311cb9360b9a70505117255255376e6cf5c8ca7f4612ff",
+          "sha256": "f01865c06df8fffcf9cb3a95ad0b001b177575e380beef9a3081d50855f3d2b7",
+          "sha1": "2b71e384a0b39bac0f5ddddaeea21a1daa4bc445",
+          "md5": "c56e14f6dd068bf759e1f79a802e189b"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "multiloaderdataextensions-neoforge-26.3.1-javadoc.jar",
+          "url": "multiloaderdataextensions-neoforge-26.3.1-javadoc.jar",
+          "size": 4216942,
+          "sha512": "c0a59a8720f5870e7bbfc2554bb24ec3de41362703ccc730859c140006242e9ef8a27dfc66875a9891047f9f033210eba5010451f093e95aa12c3ec10b58823c",
+          "sha256": "05737f3fc8883535cb0faf16b41744b7e366f6dae8cfd325b8c6ca155e8f7f20",
+          "sha1": "c24304203e60f272b6f82c54b599d942a665e272",
+          "md5": "84b458e9293e89bdeb08bc3dcf816ffb"
+        }
+      ]
+    },
+    {
+      "name": "accessTransformersElements",
+      "attributes": {
+        "org.gradle.category": "accesstransformer"
+      },
+      "files": [
+        {
+          "name": "multiloaderdataextensions-neoforge-26.3.1-accesstransformer.cfg",
+          "url": "multiloaderdataextensions-neoforge-26.3.1-accesstransformer.cfg",
+          "size": 0,
+          "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+          "md5": "d41d8cd98f00b204e9800998ecf8427e"
+        }
+      ]
+    }
+  ]
+}
