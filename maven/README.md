@@ -3353,7 +3353,7 @@
 - [21.11.13](./fuzs/puzzleslib/puzzleslib-common/21.11.13)
 - [26.1.15](./fuzs/puzzleslib/puzzleslib-common/26.1.15)
 - [26.2.4](./fuzs/puzzleslib/puzzleslib-common/26.2.4)
-- [26.3.5](./fuzs/puzzleslib/puzzleslib-common/26.3.5)
+- [26.3.6](./fuzs/puzzleslib/puzzleslib-common/26.3.6)
 </details>
 
 <details>
@@ -3869,6 +3869,7 @@
 - [26.3.3](./fuzs/puzzleslib/puzzleslib-common/26.3.3)
 - [26.3.4](./fuzs/puzzleslib/puzzleslib-common/26.3.4)
 - [26.3.5](./fuzs/puzzleslib/puzzleslib-common/26.3.5)
+- [26.3.6](./fuzs/puzzleslib/puzzleslib-common/26.3.6)
 </details>
 
 ### [`puzzleslib-fabric`](./fuzs/puzzleslib/puzzleslib-fabric)
@@ -3901,7 +3902,7 @@
 - [21.11.13](./fuzs/puzzleslib/puzzleslib-fabric/21.11.13)
 - [26.1.15](./fuzs/puzzleslib/puzzleslib-fabric/26.1.15)
 - [26.2.4](./fuzs/puzzleslib/puzzleslib-fabric/26.2.4)
-- [26.3.5](./fuzs/puzzleslib/puzzleslib-fabric/26.3.5)
+- [26.3.6](./fuzs/puzzleslib/puzzleslib-fabric/26.3.6)
 </details>
 
 <details>
@@ -4417,6 +4418,7 @@
 - [26.3.3](./fuzs/puzzleslib/puzzleslib-fabric/26.3.3)
 - [26.3.4](./fuzs/puzzleslib/puzzleslib-fabric/26.3.4)
 - [26.3.5](./fuzs/puzzleslib/puzzleslib-fabric/26.3.5)
+- [26.3.6](./fuzs/puzzleslib/puzzleslib-fabric/26.3.6)
 </details>
 
 ### [`puzzleslib-forge`](./fuzs/puzzleslib/puzzleslib-forge)
@@ -4747,7 +4749,7 @@
 - [21.11.13](./fuzs/puzzleslib/puzzleslib-neoforge/21.11.13)
 - [26.1.15](./fuzs/puzzleslib/puzzleslib-neoforge/26.1.15)
 - [26.2.4](./fuzs/puzzleslib/puzzleslib-neoforge/26.2.4)
-- [26.3.5](./fuzs/puzzleslib/puzzleslib-neoforge/26.3.5)
+- [26.3.6](./fuzs/puzzleslib/puzzleslib-neoforge/26.3.6)
 </details>
 
 <details>
@@ -5030,6 +5032,7 @@
 - [26.3.3](./fuzs/puzzleslib/puzzleslib-neoforge/26.3.3)
 - [26.3.4](./fuzs/puzzleslib/puzzleslib-neoforge/26.3.4)
 - [26.3.5](./fuzs/puzzleslib/puzzleslib-neoforge/26.3.5)
+- [26.3.6](./fuzs/puzzleslib/puzzleslib-neoforge/26.3.6)
 </details>
 
 </details>
@@ -5063,7 +5066,7 @@
 - [1.21.11-v9](./fuzs/sharedcatalogs/sharedcatalogs/1.21.11-v9)
 - [26.1-v17](./fuzs/sharedcatalogs/sharedcatalogs/26.1-v17)
 - [26.2-v9](./fuzs/sharedcatalogs/sharedcatalogs/26.2-v9)
-- [26.3-v8](./fuzs/sharedcatalogs/sharedcatalogs/26.3-v8)
+- [26.3-v9](./fuzs/sharedcatalogs/sharedcatalogs/26.3-v9)
 </details>
 
 <details>
@@ -5433,6 +5436,7 @@
 - [26.3-v6](./fuzs/sharedcatalogs/sharedcatalogs/26.3-v6)
 - [26.3-v7](./fuzs/sharedcatalogs/sharedcatalogs/26.3-v7)
 - [26.3-v8](./fuzs/sharedcatalogs/sharedcatalogs/26.3-v8)
+- [26.3-v9](./fuzs/sharedcatalogs/sharedcatalogs/26.3-v9)
 </details>
 
 </details>
@@ -5800,7 +5804,7 @@
 - [21.11.0](./fuzs/tooltipinsights/tooltipinsights-common/21.11.0)
 - [26.1.2](./fuzs/tooltipinsights/tooltipinsights-common/26.1.2)
 - [26.2.4](./fuzs/tooltipinsights/tooltipinsights-common/26.2.4)
-- [26.3.0](./fuzs/tooltipinsights/tooltipinsights-common/26.3.0)
+- [26.3.1](./fuzs/tooltipinsights/tooltipinsights-common/26.3.1)
 </details>
 
 <details>
@@ -5829,6 +5833,7 @@
 - [26.2.3](./fuzs/tooltipinsights/tooltipinsights-common/26.2.3)
 - [26.2.4](./fuzs/tooltipinsights/tooltipinsights-common/26.2.4)
 - [26.3.0](./fuzs/tooltipinsights/tooltipinsights-common/26.3.0)
+- [26.3.1](./fuzs/tooltipinsights/tooltipinsights-common/26.3.1)
 </details>
 
 ### [`tooltipinsights-fabric`](./fuzs/tooltipinsights/tooltipinsights-fabric)
@@ -5842,7 +5847,7 @@
 - [21.11.0](./fuzs/tooltipinsights/tooltipinsights-fabric/21.11.0)
 - [26.1.2](./fuzs/tooltipinsights/tooltipinsights-fabric/26.1.2)
 - [26.2.4](./fuzs/tooltipinsights/tooltipinsights-fabric/26.2.4)
-- [26.3.0](./fuzs/tooltipinsights/tooltipinsights-fabric/26.3.0)
+- [26.3.1](./fuzs/tooltipinsights/tooltipinsights-fabric/26.3.1)
 </details>
 
 <details>
@@ -5871,6 +5876,7 @@
 - [26.2.3](./fuzs/tooltipinsights/tooltipinsights-fabric/26.2.3)
 - [26.2.4](./fuzs/tooltipinsights/tooltipinsights-fabric/26.2.4)
 - [26.3.0](./fuzs/tooltipinsights/tooltipinsights-fabric/26.3.0)
+- [26.3.1](./fuzs/tooltipinsights/tooltipinsights-fabric/26.3.1)
 </details>
 
 ### [`tooltipinsights-neoforge`](./fuzs/tooltipinsights/tooltipinsights-neoforge)
@@ -5884,7 +5890,7 @@
 - [21.11.0](./fuzs/tooltipinsights/tooltipinsights-neoforge/21.11.0)
 - [26.1.2](./fuzs/tooltipinsights/tooltipinsights-neoforge/26.1.2)
 - [26.2.4](./fuzs/tooltipinsights/tooltipinsights-neoforge/26.2.4)
-- [26.3.0](./fuzs/tooltipinsights/tooltipinsights-neoforge/26.3.0)
+- [26.3.1](./fuzs/tooltipinsights/tooltipinsights-neoforge/26.3.1)
 </details>
 
 <details>
@@ -5913,6 +5919,7 @@
 - [26.2.3](./fuzs/tooltipinsights/tooltipinsights-neoforge/26.2.3)
 - [26.2.4](./fuzs/tooltipinsights/tooltipinsights-neoforge/26.2.4)
 - [26.3.0](./fuzs/tooltipinsights/tooltipinsights-neoforge/26.3.0)
+- [26.3.1](./fuzs/tooltipinsights/tooltipinsights-neoforge/26.3.1)
 </details>
 
 </details>
