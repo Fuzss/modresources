@@ -261,7 +261,8 @@
             "server": "unsupported"
         },
         "platforms": [
-            "fabric"
+            "fabric",
+            "neoforge"
         ]
     },
     "puzzleslib": {
@@ -380,7 +381,8 @@
             "server": "required"
         },
         "platforms": [
-            "fabric"
+            "fabric",
+            "neoforge"
         ]
     }
 }
