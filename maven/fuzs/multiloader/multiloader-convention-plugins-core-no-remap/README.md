@@ -7,7 +7,7 @@
 <details open>
 <summary>Latest</summary>
 
-- [1.1.38](./fuzs.multiloader.multiloader-convention-plugins-core-no-remap.gradle.plugin/1.1.38)
+- [1.1.39](./fuzs.multiloader.multiloader-convention-plugins-core-no-remap.gradle.plugin/1.1.39)
 </details>
 
 <details>
@@ -34,6 +34,7 @@
 - [1.1.36](./fuzs.multiloader.multiloader-convention-plugins-core-no-remap.gradle.plugin/1.1.36)
 - [1.1.37](./fuzs.multiloader.multiloader-convention-plugins-core-no-remap.gradle.plugin/1.1.37)
 - [1.1.38](./fuzs.multiloader.multiloader-convention-plugins-core-no-remap.gradle.plugin/1.1.38)
+- [1.1.39](./fuzs.multiloader.multiloader-convention-plugins-core-no-remap.gradle.plugin/1.1.39)
 </details>
 
 </details>
