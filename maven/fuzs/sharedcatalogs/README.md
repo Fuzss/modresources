@@ -27,7 +27,7 @@
 - [1.21.11-v9](./sharedcatalogs/1.21.11-v9)
 - [26.1-v17](./sharedcatalogs/26.1-v17)
 - [26.2-v9](./sharedcatalogs/26.2-v9)
-- [26.3-v10](./sharedcatalogs/26.3-v10)
+- [26.3-v11](./sharedcatalogs/26.3-v11)
 </details>
 
 <details>
@@ -399,6 +399,7 @@
 - [26.3-v8](./sharedcatalogs/26.3-v8)
 - [26.3-v9](./sharedcatalogs/26.3-v9)
 - [26.3-v10](./sharedcatalogs/26.3-v10)
+- [26.3-v11](./sharedcatalogs/26.3-v11)
 </details>
 
 </details>
