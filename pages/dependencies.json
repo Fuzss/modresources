@@ -206,6 +206,36 @@
             "neoforge"
         ]
     },
+    "lithostitched": {
+        "mod": {
+            "id": "lithostitched",
+            "name": "Lithostitched"
+        },
+        "links": [
+            {
+                "name": "curseforge",
+                "slug": "lithostitched",
+                "id": "936015"
+            },
+            {
+                "name": "github",
+                "slug": "Apollounknowndev/lithostitched"
+            },
+            {
+                "name": "modrinth",
+                "slug": "lithostitched",
+                "id": "XaDC71GB"
+            }
+        ],
+        "environments": {
+            "client": "unsupported",
+            "server": "required"
+        },
+        "platforms": [
+            "fabric",
+            "neoforge"
+        ]
+    },
     "modmenu": {
         "mod": {
             "id": "modmenu",
