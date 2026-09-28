@@ -4,7 +4,7 @@
   <artifactId>fuzs.multiloader.multiloader-convention-plugins-fabric-like-remap.gradle.plugin</artifactId>
   <versioning>
     <latest>1.1-SNAPSHOT</latest>
-    <release>1.1.39</release>
+    <release>1.1.40</release>
     <versions>
       <version>1.1.23</version>
       <version>1.1-SNAPSHOT</version>
@@ -24,7 +24,8 @@
       <version>1.1.37</version>
       <version>1.1.38</version>
       <version>1.1.39</version>
+      <version>1.1.40</version>
     </versions>
-    <lastUpdated>20260927204450</lastUpdated>
+    <lastUpdated>20260928092524</lastUpdated>
   </versioning>
 </metadata>
