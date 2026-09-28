@@ -7,7 +7,7 @@
 <details open>
 <summary>Latest</summary>
 
-- [1.1.39](./fuzs.multiloader.multiloader-convention-plugins-fabric-like.gradle.plugin/1.1.39)
+- [1.1.40](./fuzs.multiloader.multiloader-convention-plugins-fabric-like.gradle.plugin/1.1.40)
 </details>
 
 <details>
@@ -35,6 +35,7 @@
 - [1.1.37](./fuzs.multiloader.multiloader-convention-plugins-fabric-like.gradle.plugin/1.1.37)
 - [1.1.38](./fuzs.multiloader.multiloader-convention-plugins-fabric-like.gradle.plugin/1.1.38)
 - [1.1.39](./fuzs.multiloader.multiloader-convention-plugins-fabric-like.gradle.plugin/1.1.39)
+- [1.1.40](./fuzs.multiloader.multiloader-convention-plugins-fabric-like.gradle.plugin/1.1.40)
 </details>
 
 </details>
