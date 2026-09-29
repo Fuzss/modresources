@@ -57,5 +57,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "${modName.replaceAll("[^a-zA-Z]", "")}-${dependenciesVersionCatalog.replaceAll("-v\\d+", "")}"
+rootProject.name = "${modName.replaceAll("[^a-zA-Z]", "")}-${dependenciesVersionCatalog.substring(0, dependenciesVersionCatalog.lastIndexOf('-'))}"
 include("Common", "Fabric", "Forge")
