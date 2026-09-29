@@ -85,7 +85,7 @@ tasks.withType(Jar).configureEach {
 
 // Merge the classes and resources into the same directory, as Java expects modules to be in a single directory.
 // Aims to avoid issues with classes from the Forge (not Common) subproject occasionally not being included at runtime.
-sourceSets.each {
+sourceSets.named("main") {
     var dir = layout.buildDirectory.dir("sourcesSets/${it.name}")
     it.java.destinationDirectory = dir
     it.output.resourcesDir = dir
