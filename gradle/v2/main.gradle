@@ -280,6 +280,7 @@ subprojects {
 
         fileNames.forEach {from, to -> rename from, to }
 
+        var sanitizedName = project.mod.name.replaceAll("[^a-zA-Z]", "")
         var resourceProperties = [
                 "modId": modId,
                 "modName": modName,
@@ -301,8 +302,8 @@ subprojects {
                 "minPuzzlesVersion": libs.versions.hasProperty("puzzleslib") && libs.versions.puzzleslib.hasProperty("min") ? libs.versions.puzzleslib.min.get() : "1",
                 "resourcePackFormat": libs.versions.resources.get(),
                 "dataPackFormat": libs.versions.data.get(),
-                "mainEntryPoint": "${project.group}.fabric.${archivesBaseName}Fabric",
-                "clientEntryPoint": "${project.group}.fabric.client.${archivesBaseName}FabricClient",
+                "mainEntryPoint": "${project.group}.fabric.${sanitizedName}Fabric",
+                "clientEntryPoint": "${project.group}.fabric.client.${sanitizedName}FabricClient",
                 "modFabricEnvironment": modFabricEnvironment,
                 "modForgeDisplayTest": modForgeDisplayTest
         ]
