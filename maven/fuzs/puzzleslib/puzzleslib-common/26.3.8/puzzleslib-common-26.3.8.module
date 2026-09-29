@@ -1,0 +1,126 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "fuzs.puzzleslib",
+    "module": "puzzleslib-common",
+    "version": "26.3.8",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.7.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "fuzs.forgeconfigapiport",
+          "module": "forgeconfigapiport-common-neoforgeapi",
+          "version": {
+            "requires": "26.3.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "puzzleslib-common-26.3.8.jar",
+          "url": "puzzleslib-common-26.3.8.jar",
+          "size": 762876,
+          "sha512": "9e34b92bb9ff8b70907a72b8c128db79a56c4697fad31c26fe83babb5a7630dfe57a1fa287bf9c07bd6fb23914e978572e1bc5a411f4fb3aea4492c4f748eb5c",
+          "sha256": "d40f84122f716e3ca6c973bf636f5ec141719f6e0cb2b3a657b02989b2f374a5",
+          "sha1": "689c86fb81d40291ba93feca84f082c27fb6725f",
+          "md5": "f36d414cac238e605e6d057fba9883e3"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "puzzleslib-common-26.3.8.jar",
+          "url": "puzzleslib-common-26.3.8.jar",
+          "size": 762876,
+          "sha512": "9e34b92bb9ff8b70907a72b8c128db79a56c4697fad31c26fe83babb5a7630dfe57a1fa287bf9c07bd6fb23914e978572e1bc5a411f4fb3aea4492c4f748eb5c",
+          "sha256": "d40f84122f716e3ca6c973bf636f5ec141719f6e0cb2b3a657b02989b2f374a5",
+          "sha1": "689c86fb81d40291ba93feca84f082c27fb6725f",
+          "md5": "f36d414cac238e605e6d057fba9883e3"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "puzzleslib-common-26.3.8-sources.jar",
+          "url": "puzzleslib-common-26.3.8-sources.jar",
+          "size": 432210,
+          "sha512": "5cc957b648ca0968f78ea33727fdeb6c4e9f000d4a5f27d16f3879599d263ca138d1bc360d7a80f5e47b3cf32c2b12eb76b05a96c198f26fddd0b62ecfdb13be",
+          "sha256": "664e4ab4421e322ae5bc0029ed173011ea7872a8b1fc5f4f965ed250b20ec44a",
+          "sha1": "e295b28616ab0ff4f344db84e40627dcb29f0ced",
+          "md5": "e15800cf9a909b2e41ad41f3151e6d63"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "puzzleslib-common-26.3.8-javadoc.jar",
+          "url": "puzzleslib-common-26.3.8-javadoc.jar",
+          "size": 6364483,
+          "sha512": "a7d4f3dc737832c6bd437757f5914039364f105580dccdeaf555992289576b22a34c71303a7c26c6d9a0d6086439ee54466326fdcce011869e90170f9cc427ac",
+          "sha256": "44097c139ee54e196bb551364c480c77e29f850036a83d6f63d9b9891c087c42",
+          "sha1": "9f77f189a71c5e4710d360c82978f91fe1dd0265",
+          "md5": "f43b68c1d6ebf065ff4700c18a9e0767"
+        }
+      ]
+    },
+    {
+      "name": "accessTransformersElements",
+      "attributes": {
+        "org.gradle.category": "accesstransformer"
+      },
+      "files": [
+        {
+          "name": "puzzleslib-common-26.3.8-accesstransformer.cfg",
+          "url": "puzzleslib-common-26.3.8-accesstransformer.cfg",
+          "size": 105395,
+          "sha512": "157ad95c3c598d628bc75a93487169fce938f48506bb831bd86081eb7f7153d522c650fde7885384206ab38452f4d7973fcac70d1002ad22f84fdc2afcb0f691",
+          "sha256": "11e002124951d63caf75a9dd029e35de04d6942ba93ead138dfef220cc1463e8",
+          "sha1": "630c176931c3a3fbcab5685f8667d7bf95fdd566",
+          "md5": "2ae9e5c248f9f310a3abfee6fecf129c"
+        }
+      ]
+    }
+  ]
+}
