@@ -280,7 +280,7 @@ subprojects {
 
         fileNames.forEach {from, to -> rename from, to }
 
-        var sanitizedName = project.mod.name.replaceAll("[^a-zA-Z]", "")
+        var sanitizedName = modName.replaceAll("[^a-zA-Z]", "")
         var resourceProperties = [
                 "modId": modId,
                 "modName": modName,
