@@ -3,26 +3,26 @@
   <groupId>fuzs.sharedcatalogs</groupId>
   <artifactId>sharedcatalogs</artifactId>
   <versioning>
-    <lastUpdated>20260915104901</lastUpdated>
+    <lastUpdated>20261006072129</lastUpdated>
     <snapshot>
-      <timestamp>20260915.104901</timestamp>
-      <buildNumber>17</buildNumber>
+      <timestamp>20261006.072129</timestamp>
+      <buildNumber>18</buildNumber>
     </snapshot>
     <snapshotVersions>
       <snapshotVersion>
+        <extension>toml</extension>
+        <value>26.1-20261006.072129-18</value>
+        <updated>20261006072129</updated>
+      </snapshotVersion>
+      <snapshotVersion>
         <extension>pom</extension>
-        <value>26.1-20260915.104901-17</value>
-        <updated>20260915104901</updated>
+        <value>26.1-20261006.072129-18</value>
+        <updated>20261006072129</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>module</extension>
-        <value>26.1-20260915.104901-17</value>
-        <updated>20260915104901</updated>
-      </snapshotVersion>
-      <snapshotVersion>
-        <extension>toml</extension>
-        <value>26.1-20260915.104901-17</value>
-        <updated>20260915104901</updated>
+        <value>26.1-20261006.072129-18</value>
+        <updated>20261006072129</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>
