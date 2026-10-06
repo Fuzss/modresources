@@ -3392,7 +3392,7 @@
 - [21.11.13](./fuzs/puzzleslib/puzzleslib-common/21.11.13)
 - [26.1.15](./fuzs/puzzleslib/puzzleslib-common/26.1.15)
 - [26.2.4](./fuzs/puzzleslib/puzzleslib-common/26.2.4)
-- [26.3.9](./fuzs/puzzleslib/puzzleslib-common/26.3.9)
+- [26.3.10](./fuzs/puzzleslib/puzzleslib-common/26.3.10)
 </details>
 
 <details>
@@ -3914,6 +3914,7 @@
 - [26.3.7](./fuzs/puzzleslib/puzzleslib-common/26.3.7)
 - [26.3.8](./fuzs/puzzleslib/puzzleslib-common/26.3.8)
 - [26.3.9](./fuzs/puzzleslib/puzzleslib-common/26.3.9)
+- [26.3.10](./fuzs/puzzleslib/puzzleslib-common/26.3.10)
 </details>
 
 ### [`puzzleslib-fabric`](./fuzs/puzzleslib/puzzleslib-fabric)
@@ -3946,7 +3947,7 @@
 - [21.11.13](./fuzs/puzzleslib/puzzleslib-fabric/21.11.13)
 - [26.1.15](./fuzs/puzzleslib/puzzleslib-fabric/26.1.15)
 - [26.2.4](./fuzs/puzzleslib/puzzleslib-fabric/26.2.4)
-- [26.3.9](./fuzs/puzzleslib/puzzleslib-fabric/26.3.9)
+- [26.3.10](./fuzs/puzzleslib/puzzleslib-fabric/26.3.10)
 </details>
 
 <details>
@@ -4468,6 +4469,7 @@
 - [26.3.7](./fuzs/puzzleslib/puzzleslib-fabric/26.3.7)
 - [26.3.8](./fuzs/puzzleslib/puzzleslib-fabric/26.3.8)
 - [26.3.9](./fuzs/puzzleslib/puzzleslib-fabric/26.3.9)
+- [26.3.10](./fuzs/puzzleslib/puzzleslib-fabric/26.3.10)
 </details>
 
 ### [`puzzleslib-forge`](./fuzs/puzzleslib/puzzleslib-forge)
@@ -4799,7 +4801,7 @@
 - [21.11.13](./fuzs/puzzleslib/puzzleslib-neoforge/21.11.13)
 - [26.1.15](./fuzs/puzzleslib/puzzleslib-neoforge/26.1.15)
 - [26.2.4](./fuzs/puzzleslib/puzzleslib-neoforge/26.2.4)
-- [26.3.9](./fuzs/puzzleslib/puzzleslib-neoforge/26.3.9)
+- [26.3.10](./fuzs/puzzleslib/puzzleslib-neoforge/26.3.10)
 </details>
 
 <details>
@@ -5087,6 +5089,7 @@
 - [26.3.7](./fuzs/puzzleslib/puzzleslib-neoforge/26.3.7)
 - [26.3.8](./fuzs/puzzleslib/puzzleslib-neoforge/26.3.8)
 - [26.3.9](./fuzs/puzzleslib/puzzleslib-neoforge/26.3.9)
+- [26.3.10](./fuzs/puzzleslib/puzzleslib-neoforge/26.3.10)
 </details>
 
 </details>
@@ -5118,7 +5121,7 @@
 - [1.21.9-v21](./fuzs/sharedcatalogs/sharedcatalogs/1.21.9-v21)
 - [1.21.10-v9](./fuzs/sharedcatalogs/sharedcatalogs/1.21.10-v9)
 - [1.21.11-v9](./fuzs/sharedcatalogs/sharedcatalogs/1.21.11-v9)
-- [26.1-v17](./fuzs/sharedcatalogs/sharedcatalogs/26.1-v17)
+- [26.1-v18](./fuzs/sharedcatalogs/sharedcatalogs/26.1-v18)
 - [26.2-v9](./fuzs/sharedcatalogs/sharedcatalogs/26.2-v9)
 - [26.3-v14](./fuzs/sharedcatalogs/sharedcatalogs/26.3-v14)
 </details>
@@ -5471,6 +5474,7 @@
 - [26.1-v15](./fuzs/sharedcatalogs/sharedcatalogs/26.1-v15)
 - [26.1-v16](./fuzs/sharedcatalogs/sharedcatalogs/26.1-v16)
 - [26.1-v17](./fuzs/sharedcatalogs/sharedcatalogs/26.1-v17)
+- [26.1-v18](./fuzs/sharedcatalogs/sharedcatalogs/26.1-v18)
 - [26.2-SNAPSHOT](./fuzs/sharedcatalogs/sharedcatalogs/26.2-SNAPSHOT)
 - [26.2-v1](./fuzs/sharedcatalogs/sharedcatalogs/26.2-v1)
 - [26.2-v2](./fuzs/sharedcatalogs/sharedcatalogs/26.2-v2)
