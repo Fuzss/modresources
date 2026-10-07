@@ -4,7 +4,7 @@
   <artifactId>sharedcatalogs</artifactId>
   <versioning>
     <latest>26.3-SNAPSHOT</latest>
-    <release>26.3-v15</release>
+    <release>26.3-v16</release>
     <versions>
       <version>1.20-v1</version>
       <version>1.20-v2</version>
@@ -378,7 +378,8 @@
       <version>26.3-v14</version>
       <version>26.1-v18</version>
       <version>26.3-v15</version>
+      <version>26.3-v16</version>
     </versions>
-    <lastUpdated>20261006093850</lastUpdated>
+    <lastUpdated>20261007135544</lastUpdated>
   </versioning>
 </metadata>
