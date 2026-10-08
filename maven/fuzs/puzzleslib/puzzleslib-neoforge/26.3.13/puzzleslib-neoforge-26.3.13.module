@@ -1,0 +1,117 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "fuzs.puzzleslib",
+    "module": "puzzleslib-neoforge",
+    "version": "26.3.13",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.7.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "puzzleslib-neoforge-26.3.13.jar",
+          "url": "puzzleslib-neoforge-26.3.13.jar",
+          "size": 1035005,
+          "sha512": "6b001472d44968be6e9e5acab82e138576ccb9d1c2bbbfa76db58eb8e31a1fa737a834ca80409c52c9a4c10150c185742b644a050c577975e870ae11d9f25a25",
+          "sha256": "9a7fb5c72005c241ec243a99b53b665824e1af126ae6b57bb0298a6d529a7f7e",
+          "sha1": "f009ba0c3ad5c3a69769d50ee08d8fd658ef2826",
+          "md5": "e37a3995de3653323880b2c578c05ee0"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "puzzleslib-neoforge-26.3.13.jar",
+          "url": "puzzleslib-neoforge-26.3.13.jar",
+          "size": 1035005,
+          "sha512": "6b001472d44968be6e9e5acab82e138576ccb9d1c2bbbfa76db58eb8e31a1fa737a834ca80409c52c9a4c10150c185742b644a050c577975e870ae11d9f25a25",
+          "sha256": "9a7fb5c72005c241ec243a99b53b665824e1af126ae6b57bb0298a6d529a7f7e",
+          "sha1": "f009ba0c3ad5c3a69769d50ee08d8fd658ef2826",
+          "md5": "e37a3995de3653323880b2c578c05ee0"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "puzzleslib-neoforge-26.3.13-sources.jar",
+          "url": "puzzleslib-neoforge-26.3.13-sources.jar",
+          "size": 540044,
+          "sha512": "c1b37350ee90c737859ec9f5e43fa6c283b0cec7aceea4e40e6d3d048c951a3cdf6fd5558944f2f7b0c3d310465a5d38b37c06353353b8edb7fd6f8c6bd2201d",
+          "sha256": "73fa597f92a4993939b665d35d9e3c9659c131cbfeefd9ca3fdf9e3099b00a8d",
+          "sha1": "160aa07cc0d06dbc2dc6a54fbb63e0e6068f46da",
+          "md5": "faeb8f5d6984d0c2c9d65034908ca467"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "puzzleslib-neoforge-26.3.13-javadoc.jar",
+          "url": "puzzleslib-neoforge-26.3.13-javadoc.jar",
+          "size": 6853389,
+          "sha512": "4cec388c43497c7ff0f16a7608c5d6a77e68095db8a99cc900212d83d8a1adc541a890e33c67f8bb6e46543aa96ba658a2e07ecb978dd4de99179f162b88f5f5",
+          "sha256": "6f11bb937182a7cda75fae0d50e7beb31cbdc892a245be81b767e3267db6801e",
+          "sha1": "8355a4d6d0de3958b839051e00a18038e7ddc57f",
+          "md5": "4d9bc27e4e99ce9f7835f3312cac8d5e"
+        }
+      ]
+    },
+    {
+      "name": "accessTransformersElements",
+      "attributes": {
+        "org.gradle.category": "accesstransformer"
+      },
+      "files": [
+        {
+          "name": "puzzleslib-neoforge-26.3.13-accesstransformer.cfg",
+          "url": "puzzleslib-neoforge-26.3.13-accesstransformer.cfg",
+          "size": 106611,
+          "sha512": "210acb3891471d9633dd8bdfb313aebf98f31754adb4b49b955fac70496a66d4dcad9ad6e490a7305afa70e6c4ef88629b579bd9239ee9722a3aa1ba3234744f",
+          "sha256": "b3cede1db17290b884c8ebfc0719ec811a1168a82fe25110620db3cd40b7c29a",
+          "sha1": "940aa665428265380fb4df4d65349d8025a81988",
+          "md5": "f43e6ade726865c4c96c75b921af63d0"
+        }
+      ]
+    }
+  ]
+}
