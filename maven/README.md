@@ -3392,7 +3392,7 @@
 - [21.10.8](./fuzs/puzzleslib/puzzleslib-common/21.10.8)
 - [21.11.13](./fuzs/puzzleslib/puzzleslib-common/21.11.13)
 - [26.1.16](./fuzs/puzzleslib/puzzleslib-common/26.1.16)
-- [26.2.4](./fuzs/puzzleslib/puzzleslib-common/26.2.4)
+- [26.2.5](./fuzs/puzzleslib/puzzleslib-common/26.2.5)
 - [26.3.14](./fuzs/puzzleslib/puzzleslib-common/26.3.14)
 </details>
 
@@ -3910,6 +3910,7 @@
 - [26.2.2](./fuzs/puzzleslib/puzzleslib-common/26.2.2)
 - [26.2.3](./fuzs/puzzleslib/puzzleslib-common/26.2.3)
 - [26.2.4](./fuzs/puzzleslib/puzzleslib-common/26.2.4)
+- [26.2.5](./fuzs/puzzleslib/puzzleslib-common/26.2.5)
 - [26.3.0](./fuzs/puzzleslib/puzzleslib-common/26.3.0)
 - [26.3.1](./fuzs/puzzleslib/puzzleslib-common/26.3.1)
 - [26.3.2](./fuzs/puzzleslib/puzzleslib-common/26.3.2)
@@ -3956,7 +3957,7 @@
 - [21.10.8](./fuzs/puzzleslib/puzzleslib-fabric/21.10.8)
 - [21.11.13](./fuzs/puzzleslib/puzzleslib-fabric/21.11.13)
 - [26.1.16](./fuzs/puzzleslib/puzzleslib-fabric/26.1.16)
-- [26.2.4](./fuzs/puzzleslib/puzzleslib-fabric/26.2.4)
+- [26.2.5](./fuzs/puzzleslib/puzzleslib-fabric/26.2.5)
 - [26.3.14](./fuzs/puzzleslib/puzzleslib-fabric/26.3.14)
 </details>
 
@@ -4474,6 +4475,7 @@
 - [26.2.2](./fuzs/puzzleslib/puzzleslib-fabric/26.2.2)
 - [26.2.3](./fuzs/puzzleslib/puzzleslib-fabric/26.2.3)
 - [26.2.4](./fuzs/puzzleslib/puzzleslib-fabric/26.2.4)
+- [26.2.5](./fuzs/puzzleslib/puzzleslib-fabric/26.2.5)
 - [26.3.0](./fuzs/puzzleslib/puzzleslib-fabric/26.3.0)
 - [26.3.1](./fuzs/puzzleslib/puzzleslib-fabric/26.3.1)
 - [26.3.2](./fuzs/puzzleslib/puzzleslib-fabric/26.3.2)
@@ -4821,7 +4823,7 @@
 - [21.10.8](./fuzs/puzzleslib/puzzleslib-neoforge/21.10.8)
 - [21.11.13](./fuzs/puzzleslib/puzzleslib-neoforge/21.11.13)
 - [26.1.16](./fuzs/puzzleslib/puzzleslib-neoforge/26.1.16)
-- [26.2.4](./fuzs/puzzleslib/puzzleslib-neoforge/26.2.4)
+- [26.2.5](./fuzs/puzzleslib/puzzleslib-neoforge/26.2.5)
 - [26.3.14](./fuzs/puzzleslib/puzzleslib-neoforge/26.3.14)
 </details>
 
@@ -5103,6 +5105,7 @@
 - [26.2.2](./fuzs/puzzleslib/puzzleslib-neoforge/26.2.2)
 - [26.2.3](./fuzs/puzzleslib/puzzleslib-neoforge/26.2.3)
 - [26.2.4](./fuzs/puzzleslib/puzzleslib-neoforge/26.2.4)
+- [26.2.5](./fuzs/puzzleslib/puzzleslib-neoforge/26.2.5)
 - [26.3.0](./fuzs/puzzleslib/puzzleslib-neoforge/26.3.0)
 - [26.3.1](./fuzs/puzzleslib/puzzleslib-neoforge/26.3.1)
 - [26.3.2](./fuzs/puzzleslib/puzzleslib-neoforge/26.3.2)
