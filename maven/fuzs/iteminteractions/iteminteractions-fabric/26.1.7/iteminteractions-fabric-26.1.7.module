@@ -1,0 +1,139 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "fuzs.iteminteractions",
+    "module": "iteminteractions-fabric",
+    "version": "26.1.7",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.4.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "net.fabricmc.fabric-api",
+          "module": "fabric-api",
+          "version": {
+            "requires": "0.155.3+26.1.2"
+          }
+        },
+        {
+          "group": "fuzs.puzzleslib",
+          "module": "puzzleslib-fabric",
+          "version": {
+            "requires": "26.1.15"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "iteminteractions-fabric-26.1.7.jar",
+          "url": "iteminteractions-fabric-26.1.7.jar",
+          "size": 213917,
+          "sha512": "4819c3787030fd226201759aaaac338632869f0894427dd8f06afa1d3baefbc92debb45fb24f19ba5ae234cf693db34b1959689cd3afc60ac4d807f4400c466a",
+          "sha256": "38492b0f12c746f6de77eeccb62eb277c83c28d9b45cadf14834b39b6bc35b75",
+          "sha1": "59e205bc141fb2ce9322d064c698443fc20f984c",
+          "md5": "704ea24e293d62c298f3c3d5af5be83d"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "net.fabricmc",
+          "module": "fabric-loader",
+          "version": {
+            "requires": "0.19.5"
+          }
+        },
+        {
+          "group": "net.fabricmc.fabric-api",
+          "module": "fabric-api",
+          "version": {
+            "requires": "0.155.3+26.1.2"
+          }
+        },
+        {
+          "group": "fuzs.puzzleslib",
+          "module": "puzzleslib-fabric",
+          "version": {
+            "requires": "26.1.15"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "iteminteractions-fabric-26.1.7.jar",
+          "url": "iteminteractions-fabric-26.1.7.jar",
+          "size": 213917,
+          "sha512": "4819c3787030fd226201759aaaac338632869f0894427dd8f06afa1d3baefbc92debb45fb24f19ba5ae234cf693db34b1959689cd3afc60ac4d807f4400c466a",
+          "sha256": "38492b0f12c746f6de77eeccb62eb277c83c28d9b45cadf14834b39b6bc35b75",
+          "sha1": "59e205bc141fb2ce9322d064c698443fc20f984c",
+          "md5": "704ea24e293d62c298f3c3d5af5be83d"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "iteminteractions-fabric-26.1.7-sources.jar",
+          "url": "iteminteractions-fabric-26.1.7-sources.jar",
+          "size": 110578,
+          "sha512": "7f9ca9497061bd12496ae23d30997674aace6880c7f6fbfd9fb13832b8322f5e9109535d4af299b7969d384fcb7b193f3d2902ea478a3445c82ed7c2b9126194",
+          "sha256": "08540c4e44159fb7a56c2bf125dc10929b926b0f9d418757b8d87d753fe50a62",
+          "sha1": "22157b95d69b4836e5428a9db69dfabf67be2f6f",
+          "md5": "7518eeaa187b029e754ddb81706459dc"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "iteminteractions-fabric-26.1.7-javadoc.jar",
+          "url": "iteminteractions-fabric-26.1.7-javadoc.jar",
+          "size": 4518511,
+          "sha512": "c96503971ebed051a41ca8aa9d18d92c2fa20c2f9b073bec0c6a60f7bcc7c98a774e733f70b338757e38f77762d721ae5867192fc53c6421ac69e82cc75ff0a1",
+          "sha256": "6f4937827ad65a7e77a090440655588112ab62c79c3daa9b18915a873f462373",
+          "sha1": "d361345e7a31c885bbc04af9ddc1967a4d41ba8b",
+          "md5": "ba66733e58c87af5a312510be9f6613e"
+        }
+      ]
+    }
+  ]
+}
