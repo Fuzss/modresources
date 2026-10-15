@@ -1431,9 +1431,9 @@
 - [21.9.0](./fuzs/iteminteractions/iteminteractions-common/21.9.0)
 - [21.10.1](./fuzs/iteminteractions/iteminteractions-common/21.10.1)
 - [21.11.0](./fuzs/iteminteractions/iteminteractions-common/21.11.0)
-- [26.1.7](./fuzs/iteminteractions/iteminteractions-common/26.1.7)
+- [26.1.8](./fuzs/iteminteractions/iteminteractions-common/26.1.8)
 - [26.2.2](./fuzs/iteminteractions/iteminteractions-common/26.2.2)
-- [26.3.2](./fuzs/iteminteractions/iteminteractions-common/26.3.2)
+- [26.3.3](./fuzs/iteminteractions/iteminteractions-common/26.3.3)
 </details>
 
 <details>
@@ -1484,12 +1484,14 @@
 - [26.1.5](./fuzs/iteminteractions/iteminteractions-common/26.1.5)
 - [26.1.6](./fuzs/iteminteractions/iteminteractions-common/26.1.6)
 - [26.1.7](./fuzs/iteminteractions/iteminteractions-common/26.1.7)
+- [26.1.8](./fuzs/iteminteractions/iteminteractions-common/26.1.8)
 - [26.2.0](./fuzs/iteminteractions/iteminteractions-common/26.2.0)
 - [26.2.1](./fuzs/iteminteractions/iteminteractions-common/26.2.1)
 - [26.2.2](./fuzs/iteminteractions/iteminteractions-common/26.2.2)
 - [26.3.0](./fuzs/iteminteractions/iteminteractions-common/26.3.0)
 - [26.3.1](./fuzs/iteminteractions/iteminteractions-common/26.3.1)
 - [26.3.2](./fuzs/iteminteractions/iteminteractions-common/26.3.2)
+- [26.3.3](./fuzs/iteminteractions/iteminteractions-common/26.3.3)
 </details>
 
 ### [`iteminteractions-fabric`](./fuzs/iteminteractions/iteminteractions-fabric)
@@ -1508,9 +1510,9 @@
 - [21.9.0](./fuzs/iteminteractions/iteminteractions-fabric/21.9.0)
 - [21.10.1](./fuzs/iteminteractions/iteminteractions-fabric/21.10.1)
 - [21.11.0](./fuzs/iteminteractions/iteminteractions-fabric/21.11.0)
-- [26.1.7](./fuzs/iteminteractions/iteminteractions-fabric/26.1.7)
+- [26.1.8](./fuzs/iteminteractions/iteminteractions-fabric/26.1.8)
 - [26.2.2](./fuzs/iteminteractions/iteminteractions-fabric/26.2.2)
-- [26.3.2](./fuzs/iteminteractions/iteminteractions-fabric/26.3.2)
+- [26.3.3](./fuzs/iteminteractions/iteminteractions-fabric/26.3.3)
 </details>
 
 <details>
@@ -1561,12 +1563,14 @@
 - [26.1.5](./fuzs/iteminteractions/iteminteractions-fabric/26.1.5)
 - [26.1.6](./fuzs/iteminteractions/iteminteractions-fabric/26.1.6)
 - [26.1.7](./fuzs/iteminteractions/iteminteractions-fabric/26.1.7)
+- [26.1.8](./fuzs/iteminteractions/iteminteractions-fabric/26.1.8)
 - [26.2.0](./fuzs/iteminteractions/iteminteractions-fabric/26.2.0)
 - [26.2.1](./fuzs/iteminteractions/iteminteractions-fabric/26.2.1)
 - [26.2.2](./fuzs/iteminteractions/iteminteractions-fabric/26.2.2)
 - [26.3.0](./fuzs/iteminteractions/iteminteractions-fabric/26.3.0)
 - [26.3.1](./fuzs/iteminteractions/iteminteractions-fabric/26.3.1)
 - [26.3.2](./fuzs/iteminteractions/iteminteractions-fabric/26.3.2)
+- [26.3.3](./fuzs/iteminteractions/iteminteractions-fabric/26.3.3)
 </details>
 
 ### [`iteminteractions-forge`](./fuzs/iteminteractions/iteminteractions-forge)
@@ -1603,9 +1607,9 @@
 - [21.9.0](./fuzs/iteminteractions/iteminteractions-neoforge/21.9.0)
 - [21.10.1](./fuzs/iteminteractions/iteminteractions-neoforge/21.10.1)
 - [21.11.0](./fuzs/iteminteractions/iteminteractions-neoforge/21.11.0)
-- [26.1.7](./fuzs/iteminteractions/iteminteractions-neoforge/26.1.7)
+- [26.1.8](./fuzs/iteminteractions/iteminteractions-neoforge/26.1.8)
 - [26.2.2](./fuzs/iteminteractions/iteminteractions-neoforge/26.2.2)
-- [26.3.2](./fuzs/iteminteractions/iteminteractions-neoforge/26.3.2)
+- [26.3.3](./fuzs/iteminteractions/iteminteractions-neoforge/26.3.3)
 </details>
 
 <details>
@@ -1656,12 +1660,14 @@
 - [26.1.5](./fuzs/iteminteractions/iteminteractions-neoforge/26.1.5)
 - [26.1.6](./fuzs/iteminteractions/iteminteractions-neoforge/26.1.6)
 - [26.1.7](./fuzs/iteminteractions/iteminteractions-neoforge/26.1.7)
+- [26.1.8](./fuzs/iteminteractions/iteminteractions-neoforge/26.1.8)
 - [26.2.0](./fuzs/iteminteractions/iteminteractions-neoforge/26.2.0)
 - [26.2.1](./fuzs/iteminteractions/iteminteractions-neoforge/26.2.1)
 - [26.2.2](./fuzs/iteminteractions/iteminteractions-neoforge/26.2.2)
 - [26.3.0](./fuzs/iteminteractions/iteminteractions-neoforge/26.3.0)
 - [26.3.1](./fuzs/iteminteractions/iteminteractions-neoforge/26.3.1)
 - [26.3.2](./fuzs/iteminteractions/iteminteractions-neoforge/26.3.2)
+- [26.3.3](./fuzs/iteminteractions/iteminteractions-neoforge/26.3.3)
 </details>
 
 </details>
