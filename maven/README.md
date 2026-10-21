@@ -59,7 +59,7 @@
 - [21.9.7](./fuzs/bettermodsbutton/bettermodsbutton-common/21.9.7)
 - [21.10.1](./fuzs/bettermodsbutton/bettermodsbutton-common/21.10.1)
 - [21.11.0](./fuzs/bettermodsbutton/bettermodsbutton-common/21.11.0)
-- [26.1.1](./fuzs/bettermodsbutton/bettermodsbutton-common/26.1.1)
+- [26.1.2](./fuzs/bettermodsbutton/bettermodsbutton-common/26.1.2)
 </details>
 
 <details>
@@ -86,6 +86,7 @@
 - [21.10.1](./fuzs/bettermodsbutton/bettermodsbutton-common/21.10.1)
 - [21.11.0](./fuzs/bettermodsbutton/bettermodsbutton-common/21.11.0)
 - [26.1.1](./fuzs/bettermodsbutton/bettermodsbutton-common/26.1.1)
+- [26.1.2](./fuzs/bettermodsbutton/bettermodsbutton-common/26.1.2)
 </details>
 
 ### [`bettermodsbutton-forge`](./fuzs/bettermodsbutton/bettermodsbutton-forge)
@@ -142,7 +143,7 @@
 
 - [20.4.0](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/20.4.0)
 - [21.0.2](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/21.0.2)
-- [21.1.0](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/21.1.0)
+- [21.1.1](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/21.1.1)
 - [21.3.0](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/21.3.0)
 - [21.4.1](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/21.4.1)
 - [21.5.0](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/21.5.0)
@@ -152,7 +153,7 @@
 - [21.9.7](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/21.9.7)
 - [21.10.1](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/21.10.1)
 - [21.11.0](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/21.11.0)
-- [26.1.1](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/26.1.1)
+- [26.1.2](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/26.1.2)
 </details>
 
 <details>
@@ -163,6 +164,7 @@
 - [21.0.1](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/21.0.1)
 - [21.0.2](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/21.0.2)
 - [21.1.0](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/21.1.0)
+- [21.1.1](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/21.1.1)
 - [21.3.0](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/21.3.0)
 - [21.4.0](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/21.4.0)
 - [21.4.1](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/21.4.1)
@@ -182,6 +184,7 @@
 - [21.10.1](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/21.10.1)
 - [21.11.0](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/21.11.0)
 - [26.1.1](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/26.1.1)
+- [26.1.2](./fuzs/bettermodsbutton/bettermodsbutton-neoforge/26.1.2)
 </details>
 
 </details>
