@@ -1,0 +1,117 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "fuzs.bettermodsbutton",
+    "module": "bettermodsbutton-neoforge",
+    "version": "26.1.2",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.4.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "bettermodsbutton-neoforge-26.1.2.jar",
+          "url": "bettermodsbutton-neoforge-26.1.2.jar",
+          "size": 56462,
+          "sha512": "d62ac9e49419870ddfea5f271412a7445abe44817ad891304a96f87474e07b9547ffd961e087e939d37e547ac5f9607d438be96a1ecdc78537300be9a8d339e6",
+          "sha256": "0712ff2a303a8aa7ce6f61ee20af441a5aa0861b068055e964092b4f4d9b07ba",
+          "sha1": "4064d430deb7760cac8a937264da2edf4d18419c",
+          "md5": "ca3c99e771d4be061d658afc76e76b20"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "bettermodsbutton-neoforge-26.1.2.jar",
+          "url": "bettermodsbutton-neoforge-26.1.2.jar",
+          "size": 56462,
+          "sha512": "d62ac9e49419870ddfea5f271412a7445abe44817ad891304a96f87474e07b9547ffd961e087e939d37e547ac5f9607d438be96a1ecdc78537300be9a8d339e6",
+          "sha256": "0712ff2a303a8aa7ce6f61ee20af441a5aa0861b068055e964092b4f4d9b07ba",
+          "sha1": "4064d430deb7760cac8a937264da2edf4d18419c",
+          "md5": "ca3c99e771d4be061d658afc76e76b20"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "bettermodsbutton-neoforge-26.1.2-sources.jar",
+          "url": "bettermodsbutton-neoforge-26.1.2-sources.jar",
+          "size": 34831,
+          "sha512": "d7e25a405dbe417d0f365a88d9729aefffff69a674cb28faa534ee3bbf5757786aae6a4b9ad8efb2d93b46ba025220b9d14b17827e1e7a611ce4d32bdafe2649",
+          "sha256": "d2835f0d595afea94efaa95de60f45cf085565e7bb715b9636dfde784831b7d7",
+          "sha1": "1a87ab2d360840ac8e97865f7ab996b693cdf12f",
+          "md5": "921c554f821ca80b6bd33e0ce2227e83"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "bettermodsbutton-neoforge-26.1.2-javadoc.jar",
+          "url": "bettermodsbutton-neoforge-26.1.2-javadoc.jar",
+          "size": 4247323,
+          "sha512": "200b16efe6c91851f23f915d2dfce6de813cb3b93e0a2914dfcbf866f57359ec5756805a89ca9682e6fc64cc4cfb70dbeccb631f31dac160cef7f88c01756983",
+          "sha256": "17b66ce491aabe2670817e3fbad1cff07b7f50c80bb23fb7b58b43ce8738f95f",
+          "sha1": "eb5d0266b671c5f2cec08c85268b7a44a43e0bd6",
+          "md5": "2adb0f84b93f80c9994eacac9f374222"
+        }
+      ]
+    },
+    {
+      "name": "accessTransformersElements",
+      "attributes": {
+        "org.gradle.category": "accesstransformer"
+      },
+      "files": [
+        {
+          "name": "bettermodsbutton-neoforge-26.1.2-accesstransformer.cfg",
+          "url": "bettermodsbutton-neoforge-26.1.2-accesstransformer.cfg",
+          "size": 0,
+          "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+          "md5": "d41d8cd98f00b204e9800998ecf8427e"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "fuzs.bettermodsbutton",
+    "module": "bettermodsbutton-common",
+    "version": "26.1.2",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.4.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "bettermodsbutton-common-26.1.2.jar",
+          "url": "bettermodsbutton-common-26.1.2.jar",
+          "size": 32518,
+          "sha512": "007be054b3b771b6a758b5dc0e867fd8c8df5d8949ca74f68d09d212961fa0204e314973dba66c97407edf7d6f385438531b35585b82200e21a9556a3d5307ac",
+          "sha256": "cac614316ad467caa78bdf2e024668b80d802166e9e9bac33b4b88b8997cbbca",
+          "sha1": "9f66a416e6519ce0c1d09a1814ea0e14acb28779",
+          "md5": "6e3db8b3d4eef20f506443369dc00443"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "bettermodsbutton-common-26.1.2.jar",
+          "url": "bettermodsbutton-common-26.1.2.jar",
+          "size": 32518,
+          "sha512": "007be054b3b771b6a758b5dc0e867fd8c8df5d8949ca74f68d09d212961fa0204e314973dba66c97407edf7d6f385438531b35585b82200e21a9556a3d5307ac",
+          "sha256": "cac614316ad467caa78bdf2e024668b80d802166e9e9bac33b4b88b8997cbbca",
+          "sha1": "9f66a416e6519ce0c1d09a1814ea0e14acb28779",
+          "md5": "6e3db8b3d4eef20f506443369dc00443"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "bettermodsbutton-common-26.1.2-sources.jar",
+          "url": "bettermodsbutton-common-26.1.2-sources.jar",
+          "size": 24976,
+          "sha512": "4dae465decc6accf4ae02c49b528d43df7acb287e90cf643760a929be1991be2413322340d8bbe61cdc7c1da1c0d260c519380d0619d6e3fabf30cfbee594f73",
+          "sha256": "bc5257445cb5f28a4eb0744146df4862fb5f2e8a33a5be1d73248a818e024912",
+          "sha1": "490f02babb9449eaeebf40d858c21407f5211584",
+          "md5": "89448a612771296b5177a957121f97c1"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "bettermodsbutton-common-26.1.2-javadoc.jar",
+          "url": "bettermodsbutton-common-26.1.2-javadoc.jar",
+          "size": 4199377,
+          "sha512": "ae14249d1af44c67b0915cd308c28027245bbeac4bd1b31a058c2a5ea4ba95b8a2264841d3c60714e996a621dcd5c45ae70849bd4526cf6f3b0b4f4f2a34e947",
+          "sha256": "91fa9d9786d88c0ca9b12364d44156bb506d2df211ed8f94f8bbf1f1175e93c4",
+          "sha1": "837d09436fc9b5292f8c9ccd8e427e2cc8b7c80c",
+          "md5": "b23f8f3faa852529a19cf5dc595bae38"
+        }
+      ]
+    },
+    {
+      "name": "accessTransformersElements",
+      "attributes": {
+        "org.gradle.category": "accesstransformer"
+      },
+      "files": [
+        {
+          "name": "bettermodsbutton-common-26.1.2-accesstransformer.cfg",
+          "url": "bettermodsbutton-common-26.1.2-accesstransformer.cfg",
+          "size": 0,
+          "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+          "md5": "d41d8cd98f00b204e9800998ecf8427e"
+        }
+      ]
+    }
+  ]
+}

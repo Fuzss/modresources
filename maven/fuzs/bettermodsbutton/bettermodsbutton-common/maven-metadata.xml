@@ -3,8 +3,8 @@
   <groupId>fuzs.bettermodsbutton</groupId>
   <artifactId>bettermodsbutton-common</artifactId>
   <versioning>
-    <latest>26.1.1</latest>
-    <release>26.1.1</release>
+    <latest>26.1.2</latest>
+    <release>26.1.2</release>
     <versions>
       <version>21.0.2</version>
       <version>21.1.0</version>
@@ -27,7 +27,8 @@
       <version>21.10.1</version>
       <version>21.11.0</version>
       <version>26.1.1</version>
+      <version>26.1.2</version>
     </versions>
-    <lastUpdated>20260414110931</lastUpdated>
+    <lastUpdated>20261021155736</lastUpdated>
   </versioning>
 </metadata>
