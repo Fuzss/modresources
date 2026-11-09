@@ -21,7 +21,7 @@
 - [21.11.0](./iteminteractions-common/21.11.0)
 - [26.1.9](./iteminteractions-common/26.1.9)
 - [26.2.2](./iteminteractions-common/26.2.2)
-- [26.3.4](./iteminteractions-common/26.3.4)
+- [26.3.5](./iteminteractions-common/26.3.5)
 </details>
 
 <details>
@@ -82,6 +82,7 @@
 - [26.3.2](./iteminteractions-common/26.3.2)
 - [26.3.3](./iteminteractions-common/26.3.3)
 - [26.3.4](./iteminteractions-common/26.3.4)
+- [26.3.5](./iteminteractions-common/26.3.5)
 </details>
 
 ### [`iteminteractions-fabric`](./iteminteractions-fabric)
@@ -102,7 +103,7 @@
 - [21.11.0](./iteminteractions-fabric/21.11.0)
 - [26.1.9](./iteminteractions-fabric/26.1.9)
 - [26.2.2](./iteminteractions-fabric/26.2.2)
-- [26.3.4](./iteminteractions-fabric/26.3.4)
+- [26.3.5](./iteminteractions-fabric/26.3.5)
 </details>
 
 <details>
@@ -163,6 +164,7 @@
 - [26.3.2](./iteminteractions-fabric/26.3.2)
 - [26.3.3](./iteminteractions-fabric/26.3.3)
 - [26.3.4](./iteminteractions-fabric/26.3.4)
+- [26.3.5](./iteminteractions-fabric/26.3.5)
 </details>
 
 ### [`iteminteractions-forge`](./iteminteractions-forge)
@@ -201,7 +203,7 @@
 - [21.11.0](./iteminteractions-neoforge/21.11.0)
 - [26.1.9](./iteminteractions-neoforge/26.1.9)
 - [26.2.2](./iteminteractions-neoforge/26.2.2)
-- [26.3.4](./iteminteractions-neoforge/26.3.4)
+- [26.3.5](./iteminteractions-neoforge/26.3.5)
 </details>
 
 <details>
@@ -262,6 +264,7 @@
 - [26.3.2](./iteminteractions-neoforge/26.3.2)
 - [26.3.3](./iteminteractions-neoforge/26.3.3)
 - [26.3.4](./iteminteractions-neoforge/26.3.4)
+- [26.3.5](./iteminteractions-neoforge/26.3.5)
 </details>
 
 </details>
